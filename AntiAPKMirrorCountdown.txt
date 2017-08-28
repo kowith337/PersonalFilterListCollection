@@ -1,0 +1,33 @@
+[uBlock Origin 1.13.9]
+! Title: Anti APKMirror Ads and Countdown
+! Version: 201708281250
+! Author: kowith337
+! Homepage: https://gist.github.com/kowith337
+
+||apkmirror.com/wp-content/themes/APKMirror/images/sadkitten.png$important
+
+apkmirror.com##.OUTBRAIN
+apkmirror.com##.appRow:if(.gooWidget)
+apkmirror.com##.advertisement-text
+apkmirror.com##.amazon-ad
+apkmirror.com##.downloadCountdown
+apkmirror.com##.gooWidget
+apkmirror.com##.google-ad-leaderboard
+apkmirror.com##.google-ad-square-sidebar
+
+apkmirror.com##script-inject(abort-on-property-read.js, visibleAds)
+apkmirror.com##script:inject(abort-on-property-write.js, #downloadCountdownBar)
+apkmirror.com##script:inject(abort-on-property-write.js, ranTwice)
+apkmirror.com##script:inject(abort-on-property-write.js, timerInterval)
+
+||amazon-adsystem.com$domain=apkmirror.com,important
+||crsspxl.com$domain=apkmirror.com,important
+||google-analytics.com$domain=apkmirror.com,important
+||googlesyndication.com$domain=apkmirror.com,important
+||outbrain.com$domain=apkmirror.com,important
+||pagefair.com$domain=apkmirror.com,important
+||pagefair.net$domain=apkmirror.com,important
+||pro-market.net$domain=apkmirror.com,important
+||quantserve.com$domain=apkmirror.com,important
+||referrer.disqus.com$domain=apkmirror.com,important
+||scorecardresearch.com$domain=apkmirror.com,important
