@@ -1,8 +1,8 @@
 [uBlock Origin 1.11.0]
 ! Title: GelboLube
-! Version: 201708281250
+! Version: 201709021508
 ! Author: kowith337
-! Homepage: https://github.com/kowith337/GelboLube
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
 
 ! 1. It doesn't matter to have any checksum tools because uBo is now fully support filterlists that created on GitHub
@@ -107,10 +107,17 @@ gelbooru.com##div[style*="width:1000px"]:has(script)
 
 ! - - - - - - - - - - Counter other filterlists - - - - - - - - - - !
 ! 1. Counter uBlock Assets that's block inline-script, the purpose is my filter still block some bad scripts and internal function,
-!    such as prevent ExoLoader to execute and deploy cookie, prevent read abvertDar, block GoogleAnalyticsObject, ...
+!    such as prevent ExoLoader function to execute and deploy cookie, prevent read ILS ads check function, block GoogleAnalyticsObject, ...
 ||gelbooru.com$inline-script,badfilter
 
-! 2. Counter EasyList (What are you doing right now?)
+! 2. Counter uBlock Assets that's allow script from first party domains entirely, I cannot predict the possibility about when they placed
+!    hostile scripts at top level or somewhere else, only allow scripts from '/script/' is still safe for now...
+@@||gelbooru.com^$first-party,script,badfilter
+
+! 3. Counter EasyList and/or Fanboy lists (Esp. Enhanced tracking OR Ultimate / What are they doing right now?)
+! - Block every script at every domains to be loaded, but the main problem is they still whitelist ExoClick, I don't know why?
+! - Resized and/or Full image(s) was blocked, due to Gelbooru move all images to 'gelbooru.com' instead of 'assets.gelbooru.com'
+! - Allowing all '/thumbnails/' images mean also allow ads images that located at same path to be loaded.
 @@||assets.gelbooru.com/thumbnails/$image,badfilter
 |http://$script,domain=gelbooru.com,badfilter
 |https://$script,domain=gelbooru.com,badfilter
@@ -218,7 +225,7 @@ gelbooru.com##script:contains(GoogleAnalyticsObject)
 ! - - - - - - - - - - For TheDouJin - - - - - - - - - - !
 ! Block all script same as Gelbooru, but only allow scripts from /assets because need for unbreak jQuery.
 ||thedoujin.com$script,subdocument
-@@||thedoujin.com/assets$script
+@@||thedoujin.com/assets/$script
 
 ! Currently support to remove ads space leftover for firefox only because most inline-script ads are shared from Gelbooru.
 ! Otherwise, using element hiding rules will be hide something important, e.g. tags.
