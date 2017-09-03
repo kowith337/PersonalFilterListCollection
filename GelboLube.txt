@@ -1,6 +1,6 @@
 [uBlock Origin 1.11.0]
 ! Title: GelboLube
-! Version: 201709021508
+! Version: 201709040000
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -195,9 +195,11 @@ gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, adsbyjuicy)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, adsbyjuicy)
 
 ! - - - - - - - - - - CSS - - - - - - - - - - !
-! Adjusting header menu position to use half screen of each instead of stacking together.
-! This will surely conflict when you request desktop view or when already use desktop browser.
-gelbooru.com##.alert-warning:style(display:none !important)
+! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking
+! because it ate up space almost half of screen from top.
+! This will surely conflict when you request desktop view or when you're already use desktop browser.
+gelbooru.com##.alert-info:has(a[href*="?page=ihnt"])
+gelbooru.com##.alert-warning:has(a[href*="patreon.com"])
 gelbooru.com##.navbar#submenu #navbar2 .navbar-nav:style(direction:rtl !important)
 gelbooru.com##.navbar#submenu #navbar2:style(float: right !important)
 gelbooru.com##.navbar#submenu:style(float: right !important; width: 50% !important)
