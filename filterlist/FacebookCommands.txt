@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.9]
 ! Title: Facebook Bullshit Commands List
-! Version: 201709091514
+! Version: 201709091533
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -117,6 +117,7 @@ facebook.com##script:inject(abort-on-property-read.js, XSetNUXSeenController)
 facebook.com##script:inject(abort-on-property-read.js, XSpokespersonProductChainingController)
 facebook.com##script:inject(abort-on-property-read.js, XVideoQualitySurveyController)
 facebook.com##script:inject(abort-on-property-read.js, XVideoWNSSurveyController)
+facebook.com##script:inject(abort-on-property-read.js, XVideoWnsUpNextAsyncController)
 facebook.com##script:inject(abort-on-property-read.js, ads-lib-formatters)
 facebook.com##script:inject(abort-on-property-read.js, ads-lib-urllib)
 facebook.com##script:inject(abort-on-property-read.js, getEventTarget)
@@ -231,6 +232,7 @@ facebook.com##script:inject(abort-on-property-write.js, XSetNUXSeenController)
 facebook.com##script:inject(abort-on-property-write.js, XSpokespersonProductChainingController)
 facebook.com##script:inject(abort-on-property-write.js, XVideoQualitySurveyController)
 facebook.com##script:inject(abort-on-property-write.js, XVideoWNSSurveyController)
+facebook.com##script:inject(abort-on-property-write.js, XVideoWnsUpNextAsyncController)
 facebook.com##script:inject(abort-on-property-write.js, ads-lib-formatters)
 facebook.com##script:inject(abort-on-property-write.js, ads-lib-urllib)
 facebook.com##script:inject(abort-on-property-write.js, getEventTarget)
@@ -348,6 +350,7 @@ facebook.com##script:inject(abort-on-property-write.js, trackReferrer)
 ||facebook.com/ajax/haste-response/?modules=XSpokespersonProductChainingController$important
 ||facebook.com/ajax/haste-response/?modules=XVideoQualitySurveyController$important
 ||facebook.com/ajax/haste-response/?modules=XVideoWNSSurveyController$important
+||facebook.com/ajax/haste-response/?modules=XVideoWnsUpNextAsyncController$important
 ||facebook.com/ajax/haste-response/?modules=ads-lib-formatters$important
 ||facebook.com/ajax/haste-response/?modules=ads-lib-urllib$important
 ||facebook.com/ajax/haste-response/?modules=getEventTarget$important
