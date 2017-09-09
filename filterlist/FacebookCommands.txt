@@ -1,0 +1,121 @@
+[uBlock Origin 1.14.9]
+! Title: Facebook Bullshit Commands List
+! Version: 201709091347
+! Author: kowith337
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection
+! Expires: 2 days
+
+! Function abort
+facebook.com##script:inject(abort-on-property-read.js, AdBlockerDetectorLogging)
+facebook.com##script:inject(abort-on-property-read.js, AttachmentRelatedShareTimingConstants)
+facebook.com##script:inject(abort-on-property-read.js, EgoUnitSlideInsert)
+facebook.com##script:inject(abort-on-property-read.js, EntstreamAttachmentRelatedShare)
+facebook.com##script:inject(abort-on-property-read.js, ExternalTrackingTag)
+facebook.com##script:inject(abort-on-property-read.js, FeedAdsClickLogger)
+facebook.com##script:inject(abort-on-property-read.js, FeedTrackingAsync)
+facebook.com##script:inject(abort-on-property-read.js, NetEgo)
+facebook.com##script:inject(abort-on-property-read.js, NetEgoShowcase)
+facebook.com##script:inject(abort-on-property-read.js, PageContextualRecommendationsTrigger)
+facebook.com##script:inject(abort-on-property-read.js, PubcontentFeedChainingControllerX)
+facebook.com##script:inject(abort-on-property-read.js, PubcontentFeedChainingInjectionUtils)
+facebook.com##script:inject(abort-on-property-read.js, PubcontentSuggestionsUtil)
+facebook.com##script:inject(abort-on-property-read.js, TrackingPixel)
+facebook.com##script:inject(abort-on-property-read.js, ViewableImpressionTracking)
+facebook.com##script:inject(abort-on-property-read.js, VisibilityTracking)
+facebook.com##script:inject(abort-on-property-read.js, XEgoExpandAsyncController)
+facebook.com##script:inject(abort-on-property-read.js, XEventRelatedEventsPivotController)
+facebook.com##script:inject(abort-on-property-read.js, XFeedAdsChainingController)
+facebook.com##script:inject(abort-on-property-read.js, XFundraiserAttachmentPivotController)
+facebook.com##script:inject(abort-on-property-read.js, XPubcontentCommerceProductChainingController)
+facebook.com##script:inject(abort-on-property-read.js, XPubcontentFeedChainingController)
+facebook.com##script:inject(abort-on-property-read.js, XPubcontentFeedCommentChainingController)
+facebook.com##script:inject(abort-on-property-read.js, XPubcontentGroupRelatedStoriesChainingController)
+facebook.com##script:inject(abort-on-property-read.js, XPubcontentInlinePhotoPivotsEventsController)
+facebook.com##script:inject(abort-on-property-read.js, XPubcontentInlineStoryPivotChainingController)
+facebook.com##script:inject(abort-on-property-read.js, XPubcontentLocalNewsChainingController)
+facebook.com##script:inject(abort-on-property-read.js, XPubcontentPoliticalIssueChainingController)
+facebook.com##script:inject(abort-on-property-read.js, XPubcontentRelatedShareChainingController)
+facebook.com##script:inject(abort-on-property-read.js, XPubcontentRelatedVideoChainingController)
+facebook.com##script:inject(abort-on-property-read.js, XPubcontentTopicChainingController)
+facebook.com##script:inject(abort-on-property-read.js, XQuickPromotionSimpleLoggingController)
+facebook.com##script:inject(abort-on-property-read.js, XRefererFrameController)
+facebook.com##script:inject(abort-on-property-read.js, XRelatedGamesChainingController)
+facebook.com##script:inject(abort-on-property-read.js, XSearchFacebarSurveyController)
+facebook.com##script:inject(abort-on-property-read.js, XSearchRelatedPostsPivotController)
+facebook.com##script:inject(abort-on-property-read.js, XSpokespersonProductChainingController)
+facebook.com##script:inject(abort-on-property-write.js, AdBlockerDetectorLogging)
+facebook.com##script:inject(abort-on-property-write.js, AttachmentRelatedShareTimingConstants)
+facebook.com##script:inject(abort-on-property-write.js, EgoUnitSlideInsert)
+facebook.com##script:inject(abort-on-property-write.js, EntstreamAttachmentRelatedShare)
+facebook.com##script:inject(abort-on-property-write.js, ExternalTrackingTag)
+facebook.com##script:inject(abort-on-property-write.js, FeedAdsClickLogger)
+facebook.com##script:inject(abort-on-property-write.js, FeedTrackingAsync)
+facebook.com##script:inject(abort-on-property-write.js, NetEgo)
+facebook.com##script:inject(abort-on-property-write.js, NetEgoShowcase)
+facebook.com##script:inject(abort-on-property-write.js, PageContextualRecommendationsTrigger)
+facebook.com##script:inject(abort-on-property-write.js, PubcontentFeedChainingControllerX)
+facebook.com##script:inject(abort-on-property-write.js, PubcontentFeedChainingInjectionUtils)
+facebook.com##script:inject(abort-on-property-write.js, PubcontentSuggestionsUtil)
+facebook.com##script:inject(abort-on-property-write.js, TrackingPixel)
+facebook.com##script:inject(abort-on-property-write.js, ViewableImpressionTracking)
+facebook.com##script:inject(abort-on-property-write.js, VisibilityTracking)
+facebook.com##script:inject(abort-on-property-write.js, XEgoExpandAsyncController)
+facebook.com##script:inject(abort-on-property-write.js, XEventRelatedEventsPivotController)
+facebook.com##script:inject(abort-on-property-write.js, XFeedAdsChainingController)
+facebook.com##script:inject(abort-on-property-write.js, XFundraiserAttachmentPivotController)
+facebook.com##script:inject(abort-on-property-write.js, XPubcontentCommerceProductChainingController)
+facebook.com##script:inject(abort-on-property-write.js, XPubcontentFeedChainingController)
+facebook.com##script:inject(abort-on-property-write.js, XPubcontentFeedCommentChainingController)
+facebook.com##script:inject(abort-on-property-write.js, XPubcontentGroupRelatedStoriesChainingController)
+facebook.com##script:inject(abort-on-property-write.js, XPubcontentInlinePhotoPivotsEventsController)
+facebook.com##script:inject(abort-on-property-write.js, XPubcontentInlineStoryPivotChainingController)
+facebook.com##script:inject(abort-on-property-write.js, XPubcontentLocalNewsChainingController)
+facebook.com##script:inject(abort-on-property-write.js, XPubcontentPoliticalIssueChainingController)
+facebook.com##script:inject(abort-on-property-write.js, XPubcontentRelatedShareChainingController)
+facebook.com##script:inject(abort-on-property-write.js, XPubcontentRelatedVideoChainingController)
+facebook.com##script:inject(abort-on-property-write.js, XPubcontentTopicChainingController)
+facebook.com##script:inject(abort-on-property-write.js, XQuickPromotionSimpleLoggingController)
+facebook.com##script:inject(abort-on-property-write.js, XRefererFrameController)
+facebook.com##script:inject(abort-on-property-write.js, XRelatedGamesChainingController)
+facebook.com##script:inject(abort-on-property-write.js, XSearchFacebarSurveyController)
+facebook.com##script:inject(abort-on-property-write.js, XSearchRelatedPostsPivotController)
+facebook.com##script:inject(abort-on-property-write.js, XSpokespersonProductChainingController)
+
+! /haste-response/ request block
+||facebook.com/ajax/haste-response/?modules=AdBlockerDetectorLogging$important
+||facebook.com/ajax/haste-response/?modules=AttachmentRelatedShareTimingConstants$important
+||facebook.com/ajax/haste-response/?modules=EgoUnitSlideInsert$important
+||facebook.com/ajax/haste-response/?modules=EntstreamAttachmentRelatedShare$important
+||facebook.com/ajax/haste-response/?modules=ExternalTrackingTag$important
+||facebook.com/ajax/haste-response/?modules=FeedAdsClickLogger$important
+||facebook.com/ajax/haste-response/?modules=FeedTrackingAsync$important
+||facebook.com/ajax/haste-response/?modules=NetEgo$important
+||facebook.com/ajax/haste-response/?modules=NetEgoShowcase$important
+||facebook.com/ajax/haste-response/?modules=PageContextualRecommendationsTrigger$important
+||facebook.com/ajax/haste-response/?modules=PubcontentFeedChainingControllerX$important
+||facebook.com/ajax/haste-response/?modules=PubcontentFeedChainingInjectionUtils$important
+||facebook.com/ajax/haste-response/?modules=PubcontentSuggestionsUtil$important
+||facebook.com/ajax/haste-response/?modules=TrackingPixel$important
+||facebook.com/ajax/haste-response/?modules=ViewableImpressionTracking$important
+||facebook.com/ajax/haste-response/?modules=VisibilityTracking$important
+||facebook.com/ajax/haste-response/?modules=XEgoExpandAsyncController$important
+||facebook.com/ajax/haste-response/?modules=XEventRelatedEventsPivotController$important
+||facebook.com/ajax/haste-response/?modules=XFeedAdsChainingController$important
+||facebook.com/ajax/haste-response/?modules=XFundraiserAttachmentPivotController$important
+||facebook.com/ajax/haste-response/?modules=XPubcontentCommerceProductChainingController$important
+||facebook.com/ajax/haste-response/?modules=XPubcontentFeedChainingController$important
+||facebook.com/ajax/haste-response/?modules=XPubcontentFeedCommentChainingController$important
+||facebook.com/ajax/haste-response/?modules=XPubcontentGroupRelatedStoriesChainingController$important
+||facebook.com/ajax/haste-response/?modules=XPubcontentInlinePhotoPivotsEventsController$important
+||facebook.com/ajax/haste-response/?modules=XPubcontentInlineStoryPivotChainingController$important
+||facebook.com/ajax/haste-response/?modules=XPubcontentLocalNewsChainingController$important
+||facebook.com/ajax/haste-response/?modules=XPubcontentPoliticalIssueChainingController$important
+||facebook.com/ajax/haste-response/?modules=XPubcontentRelatedShareChainingController$important
+||facebook.com/ajax/haste-response/?modules=XPubcontentRelatedVideoChainingController$important
+||facebook.com/ajax/haste-response/?modules=XPubcontentTopicChainingController$important
+||facebook.com/ajax/haste-response/?modules=XQuickPromotionSimpleLoggingController$important
+||facebook.com/ajax/haste-response/?modules=XRefererFrameController$important
+||facebook.com/ajax/haste-response/?modules=XRelatedGamesChainingController$important
+||facebook.com/ajax/haste-response/?modules=XSearchFacebarSurveyController$important
+||facebook.com/ajax/haste-response/?modules=XSearchRelatedPostsPivotController$important
+||facebook.com/ajax/haste-response/?modules=XSpokespersonProductChainingController$important
