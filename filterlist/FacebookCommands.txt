@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.9]
 ! Title: Facebook Bullshit Commands List
-! Version: 201709091533
+! Version: 201709101349
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -51,6 +51,7 @@ facebook.com##script:inject(abort-on-property-read.js, EgoUnitSlideInsert)
 facebook.com##script:inject(abort-on-property-read.js, EntstreamAttachmentRelatedFBVideo)
 facebook.com##script:inject(abort-on-property-read.js, EntstreamAttachmentRelatedShare)
 facebook.com##script:inject(abort-on-property-read.js, ExternalTrackingTag)
+facebook.com##script:inject(abort-on-property-read.js, FBStoriesLoggingHelper)
 facebook.com##script:inject(abort-on-property-read.js, FbFeedAttachmentRelatedShare)
 facebook.com##script:inject(abort-on-property-read.js, FeedAdsClickLogger)
 facebook.com##script:inject(abort-on-property-read.js, FeedAdsGapRuleViolationDetectionFix)
@@ -166,6 +167,7 @@ facebook.com##script:inject(abort-on-property-write.js, EgoUnitSlideInsert)
 facebook.com##script:inject(abort-on-property-write.js, EntstreamAttachmentRelatedFBVideo)
 facebook.com##script:inject(abort-on-property-write.js, EntstreamAttachmentRelatedShare)
 facebook.com##script:inject(abort-on-property-write.js, ExternalTrackingTag)
+facebook.com##script:inject(abort-on-property-write.js, FBStoriesLoggingHelper)
 facebook.com##script:inject(abort-on-property-write.js, FbFeedAttachmentRelatedShare)
 facebook.com##script:inject(abort-on-property-write.js, FeedAdsClickLogger)
 facebook.com##script:inject(abort-on-property-write.js, FeedAdsGapRuleViolationDetectionFix)
@@ -284,6 +286,7 @@ facebook.com##script:inject(abort-on-property-write.js, trackReferrer)
 ||facebook.com/ajax/haste-response/?modules=EntstreamAttachmentRelatedFBVideo$important
 ||facebook.com/ajax/haste-response/?modules=EntstreamAttachmentRelatedShare$important
 ||facebook.com/ajax/haste-response/?modules=ExternalTrackingTag$important
+||facebook.com/ajax/haste-response/?modules=FBStoriesLoggingHelper$important
 ||facebook.com/ajax/haste-response/?modules=FbFeedAttachmentRelatedShare$important
 ||facebook.com/ajax/haste-response/?modules=FeedAdsClickLogger$important
 ||facebook.com/ajax/haste-response/?modules=FeedAdsGapRuleViolationDetectionFix$important
