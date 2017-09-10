@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.9]
 ! Title: Facebook Bullshit Commands List
-! Version: 201709101454
+! Version: 201709102251
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -15,6 +15,7 @@ facebook.com##script:inject(abort-on-property-read.js, AYMTHomepagePanelTypedLog
 facebook.com##script:inject(abort-on-property-read.js, AdAllocationIntegrityGapsInfo)
 facebook.com##script:inject(abort-on-property-read.js, AdAllocationIntegrityUtils)
 facebook.com##script:inject(abort-on-property-read.js, AdBlockerDetectorLogging)
+facebook.com##script:inject(abort-on-property-read.js, AdImpressionLoggingConfig)
 facebook.com##script:inject(abort-on-property-read.js, AdInterfacesUiLogger)
 facebook.com##script:inject(abort-on-property-read.js, AdPageMessageTypeEnum)
 facebook.com##script:inject(abort-on-property-read.js, AdsCollectionsConstants)
@@ -60,6 +61,7 @@ facebook.com##script:inject(abort-on-property-read.js, ClickRefLogger)
 facebook.com##script:inject(abort-on-property-read.js, CommercialBreakHostStoryComponentType)
 facebook.com##script:inject(abort-on-property-read.js, CommercialBreakMobileEvent)
 facebook.com##script:inject(abort-on-property-read.js, CommercialBreakVideoHide)
+facebook.com##script:inject(abort-on-property-read.js, ControlledReferer)
 facebook.com##script:inject(abort-on-property-read.js, DimensionTracking)
 facebook.com##script:inject(abort-on-property-read.js, DynamicAdsXOutOptionName)
 facebook.com##script:inject(abort-on-property-read.js, EducationPromotionTriggerInfo)
@@ -73,15 +75,31 @@ facebook.com##script:inject(abort-on-property-read.js, FeedAdsClickLogger)
 facebook.com##script:inject(abort-on-property-read.js, FeedAdsGapRuleViolationDetectionFix)
 facebook.com##script:inject(abort-on-property-read.js, FeedStoryOptionMenuTypedLogger)
 facebook.com##script:inject(abort-on-property-read.js, FeedTrackingAsync)
+facebook.com##script:inject(abort-on-property-read.js, FunnelLogger)
+facebook.com##script:inject(abort-on-property-read.js, FunnelLoggerSampler)
 facebook.com##script:inject(abort-on-property-read.js, HomeRHCAdsBasicRefresh)
 facebook.com##script:inject(abort-on-property-read.js, InteractionTracker)
 facebook.com##script:inject(abort-on-property-read.js, ItunesDetector)
 facebook.com##script:inject(abort-on-property-read.js, ItunesPluginLogging)
 facebook.com##script:inject(abort-on-property-read.js, KappaWrapper)
 facebook.com##script:inject(abort-on-property-read.js, LinkshimLogController)
+facebook.com##script:inject(abort-on-property-read.js, MAdsPrefsFeedback)
+facebook.com##script:inject(abort-on-property-read.js, MAdsScrollOnMarginTap)
+facebook.com##script:inject(abort-on-property-read.js, MFeedAdsGapRuleViolationDetection)
+facebook.com##script:inject(abort-on-property-read.js, MFeedChaining)
+facebook.com##script:inject(abort-on-property-read.js, MLinkshim)
 facebook.com##script:inject(abort-on-property-read.js, MNAdsLogMessageUtils)
 facebook.com##script:inject(abort-on-property-read.js, MNAdsLoggerEventEnum)
 facebook.com##script:inject(abort-on-property-read.js, MNAdsMessageUtils)
+facebook.com##script:inject(abort-on-property-read.js, MPymkFunnelLogger)
+facebook.com##script:inject(abort-on-property-read.js, MRecentSearchesUpdater)
+facebook.com##script:inject(abort-on-property-read.js, MSearchTrendingLogger)
+facebook.com##script:inject(abort-on-property-read.js, MSearchTypeaheadLogger)
+facebook.com##script:inject(abort-on-property-read.js, MSearchTypeaheadPerfLoggerUtil)
+facebook.com##script:inject(abort-on-property-read.js, MSearchTypeaheadPerfLoggerV2)
+facebook.com##script:inject(abort-on-property-read.js, MTypeaheadNullstateSource)
+facebook.com##script:inject(abort-on-property-read.js, MViewableImpressionTracking)
+facebook.com##script:inject(abort-on-property-read.js, MobileZeroRewriteURL)
 facebook.com##script:inject(abort-on-property-read.js, NetEgo)
 facebook.com##script:inject(abort-on-property-read.js, NetEgoShowcase)
 facebook.com##script:inject(abort-on-property-read.js, NonBlockingIFrame)
@@ -101,6 +119,7 @@ facebook.com##script:inject(abort-on-property-read.js, UFIOrderingModeSelectorCo
 facebook.com##script:inject(abort-on-property-read.js, VideoAutoplayController)
 facebook.com##script:inject(abort-on-property-read.js, VideoChainingToken)
 facebook.com##script:inject(abort-on-property-read.js, ViewableImpressionTracking)
+facebook.com##script:inject(abort-on-property-read.js, ViewableImpressionUtils)
 facebook.com##script:inject(abort-on-property-read.js, VisibilityTracking)
 facebook.com##script:inject(abort-on-property-read.js, XAYMTPanelSaveSettingsController)
 facebook.com##script:inject(abort-on-property-read.js, XAdPreferencesNUXController)
@@ -111,6 +130,7 @@ facebook.com##script:inject(abort-on-property-read.js, XEducationPromotionTrigge
 facebook.com##script:inject(abort-on-property-read.js, XEgoExpandAsyncController)
 facebook.com##script:inject(abort-on-property-read.js, XEventRelatedEventsPivotController)
 facebook.com##script:inject(abort-on-property-read.js, XFeedAdsChainingController)
+facebook.com##script:inject(abort-on-property-read.js, XFeedChainingAsyncController)
 facebook.com##script:inject(abort-on-property-read.js, XFeedEgoImpressionLoggingController)
 facebook.com##script:inject(abort-on-property-read.js, XFundraiserAttachmentPivotController)
 facebook.com##script:inject(abort-on-property-read.js, XLinkshimLogController)
@@ -128,7 +148,10 @@ facebook.com##script:inject(abort-on-property-read.js, XPubcontentRelatedShareCh
 facebook.com##script:inject(abort-on-property-read.js, XPubcontentRelatedVideoChainingController)
 facebook.com##script:inject(abort-on-property-read.js, XPubcontentRelatedVideoInlineController)
 facebook.com##script:inject(abort-on-property-read.js, XPubcontentTopicChainingController)
+facebook.com##script:inject(abort-on-property-read.js, XPymkFunnelLoggingController)
 facebook.com##script:inject(abort-on-property-read.js, XQuickPromotionSimpleLoggingController)
+facebook.com##script:inject(abort-on-property-read.js, XQuickPromotionSimpleLoggingController)
+facebook.com##script:inject(abort-on-property-read.js, XRefererFrameController)
 facebook.com##script:inject(abort-on-property-read.js, XRefererFrameController)
 facebook.com##script:inject(abort-on-property-read.js, XRelatedGamesChainingController)
 facebook.com##script:inject(abort-on-property-read.js, XSearchFacebarSurveyController)
@@ -148,6 +171,7 @@ facebook.com##script:inject(abort-on-property-write.js, AYMTHomepagePanelTypedLo
 facebook.com##script:inject(abort-on-property-write.js, AdAllocationIntegrityGapsInfo)
 facebook.com##script:inject(abort-on-property-write.js, AdAllocationIntegrityUtils)
 facebook.com##script:inject(abort-on-property-write.js, AdBlockerDetectorLogging)
+facebook.com##script:inject(abort-on-property-write.js, AdImpressionLoggingConfig)
 facebook.com##script:inject(abort-on-property-write.js, AdInterfacesUiLogger)
 facebook.com##script:inject(abort-on-property-write.js, AdPageMessageTypeEnum)
 facebook.com##script:inject(abort-on-property-write.js, AdsCollectionsConstants)
@@ -193,6 +217,7 @@ facebook.com##script:inject(abort-on-property-write.js, ClickRefLogger)
 facebook.com##script:inject(abort-on-property-write.js, CommercialBreakHostStoryComponentType)
 facebook.com##script:inject(abort-on-property-write.js, CommercialBreakMobileEvent)
 facebook.com##script:inject(abort-on-property-write.js, CommercialBreakVideoHide)
+facebook.com##script:inject(abort-on-property-write.js, ControlledReferer)
 facebook.com##script:inject(abort-on-property-write.js, DimensionTracking)
 facebook.com##script:inject(abort-on-property-write.js, DynamicAdsXOutOptionName)
 facebook.com##script:inject(abort-on-property-write.js, EducationPromotionTriggerInfo)
@@ -206,15 +231,31 @@ facebook.com##script:inject(abort-on-property-write.js, FeedAdsClickLogger)
 facebook.com##script:inject(abort-on-property-write.js, FeedAdsGapRuleViolationDetectionFix)
 facebook.com##script:inject(abort-on-property-write.js, FeedStoryOptionMenuTypedLogger)
 facebook.com##script:inject(abort-on-property-write.js, FeedTrackingAsync)
+facebook.com##script:inject(abort-on-property-write.js, FunnelLogger)
+facebook.com##script:inject(abort-on-property-write.js, FunnelLoggerSampler)
 facebook.com##script:inject(abort-on-property-write.js, HomeRHCAdsBasicRefresh)
 facebook.com##script:inject(abort-on-property-write.js, InteractionTracker)
 facebook.com##script:inject(abort-on-property-write.js, ItunesDetector)
 facebook.com##script:inject(abort-on-property-write.js, ItunesPluginLogging)
 facebook.com##script:inject(abort-on-property-write.js, KappaWrapper)
 facebook.com##script:inject(abort-on-property-write.js, LinkshimLogController)
+facebook.com##script:inject(abort-on-property-write.js, MAdsPrefsFeedback)
+facebook.com##script:inject(abort-on-property-write.js, MAdsScrollOnMarginTap)
+facebook.com##script:inject(abort-on-property-write.js, MFeedAdsGapRuleViolationDetection)
+facebook.com##script:inject(abort-on-property-write.js, MFeedChaining)
+facebook.com##script:inject(abort-on-property-write.js, MLinkshim)
 facebook.com##script:inject(abort-on-property-write.js, MNAdsLogMessageUtils)
 facebook.com##script:inject(abort-on-property-write.js, MNAdsLoggerEventEnum)
 facebook.com##script:inject(abort-on-property-write.js, MNAdsMessageUtils)
+facebook.com##script:inject(abort-on-property-write.js, MPymkFunnelLogger)
+facebook.com##script:inject(abort-on-property-write.js, MRecentSearchesUpdater)
+facebook.com##script:inject(abort-on-property-write.js, MSearchTrendingLogger)
+facebook.com##script:inject(abort-on-property-write.js, MSearchTypeaheadLogger)
+facebook.com##script:inject(abort-on-property-write.js, MSearchTypeaheadPerfLoggerUtil)
+facebook.com##script:inject(abort-on-property-write.js, MSearchTypeaheadPerfLoggerV2)
+facebook.com##script:inject(abort-on-property-write.js, MTypeaheadNullstateSource)
+facebook.com##script:inject(abort-on-property-write.js, MViewableImpressionTracking)
+facebook.com##script:inject(abort-on-property-write.js, MobileZeroRewriteURL)
 facebook.com##script:inject(abort-on-property-write.js, NetEgo)
 facebook.com##script:inject(abort-on-property-write.js, NetEgoShowcase)
 facebook.com##script:inject(abort-on-property-write.js, NonBlockingIFrame)
@@ -234,6 +275,7 @@ facebook.com##script:inject(abort-on-property-write.js, UFIOrderingModeSelectorC
 facebook.com##script:inject(abort-on-property-write.js, VideoAutoplayController)
 facebook.com##script:inject(abort-on-property-write.js, VideoChainingToken)
 facebook.com##script:inject(abort-on-property-write.js, ViewableImpressionTracking)
+facebook.com##script:inject(abort-on-property-write.js, ViewableImpressionUtils)
 facebook.com##script:inject(abort-on-property-write.js, VisibilityTracking)
 facebook.com##script:inject(abort-on-property-write.js, XAYMTPanelSaveSettingsController)
 facebook.com##script:inject(abort-on-property-write.js, XAdPreferencesNUXController)
@@ -244,6 +286,7 @@ facebook.com##script:inject(abort-on-property-write.js, XEducationPromotionTrigg
 facebook.com##script:inject(abort-on-property-write.js, XEgoExpandAsyncController)
 facebook.com##script:inject(abort-on-property-write.js, XEventRelatedEventsPivotController)
 facebook.com##script:inject(abort-on-property-write.js, XFeedAdsChainingController)
+facebook.com##script:inject(abort-on-property-write.js, XFeedChainingAsyncController)
 facebook.com##script:inject(abort-on-property-write.js, XFeedEgoImpressionLoggingController)
 facebook.com##script:inject(abort-on-property-write.js, XFundraiserAttachmentPivotController)
 facebook.com##script:inject(abort-on-property-write.js, XLinkshimLogController)
@@ -261,7 +304,10 @@ facebook.com##script:inject(abort-on-property-write.js, XPubcontentRelatedShareC
 facebook.com##script:inject(abort-on-property-write.js, XPubcontentRelatedVideoChainingController)
 facebook.com##script:inject(abort-on-property-write.js, XPubcontentRelatedVideoInlineController)
 facebook.com##script:inject(abort-on-property-write.js, XPubcontentTopicChainingController)
+facebook.com##script:inject(abort-on-property-write.js, XPymkFunnelLoggingController)
 facebook.com##script:inject(abort-on-property-write.js, XQuickPromotionSimpleLoggingController)
+facebook.com##script:inject(abort-on-property-write.js, XQuickPromotionSimpleLoggingController)
+facebook.com##script:inject(abort-on-property-write.js, XRefererFrameController)
 facebook.com##script:inject(abort-on-property-write.js, XRefererFrameController)
 facebook.com##script:inject(abort-on-property-write.js, XRelatedGamesChainingController)
 facebook.com##script:inject(abort-on-property-write.js, XSearchFacebarSurveyController)
@@ -284,6 +330,7 @@ facebook.com##script:inject(abort-on-property-write.js, trackReferrer)
 ||facebook.com/ajax/haste-response/?modules=AdAllocationIntegrityGapsInfo$important
 ||facebook.com/ajax/haste-response/?modules=AdAllocationIntegrityUtils$important
 ||facebook.com/ajax/haste-response/?modules=AdBlockerDetectorLogging$important
+||facebook.com/ajax/haste-response/?modules=AdImpressionLoggingConfig$important
 ||facebook.com/ajax/haste-response/?modules=AdInterfacesUiLogger$important
 ||facebook.com/ajax/haste-response/?modules=AdPageMessageTypeEnum$important
 ||facebook.com/ajax/haste-response/?modules=AdsCollectionsConstants$important
@@ -329,6 +376,7 @@ facebook.com##script:inject(abort-on-property-write.js, trackReferrer)
 ||facebook.com/ajax/haste-response/?modules=CommercialBreakHostStoryComponentType$important
 ||facebook.com/ajax/haste-response/?modules=CommercialBreakMobileEvent$important
 ||facebook.com/ajax/haste-response/?modules=CommercialBreakVideoHide$important
+||facebook.com/ajax/haste-response/?modules=ControlledReferer$important
 ||facebook.com/ajax/haste-response/?modules=DimensionTracking$important
 ||facebook.com/ajax/haste-response/?modules=DynamicAdsXOutOptionName$important
 ||facebook.com/ajax/haste-response/?modules=EducationPromotionTriggerInfo$important
@@ -342,14 +390,30 @@ facebook.com##script:inject(abort-on-property-write.js, trackReferrer)
 ||facebook.com/ajax/haste-response/?modules=FeedAdsGapRuleViolationDetectionFix$important
 ||facebook.com/ajax/haste-response/?modules=FeedStoryOptionMenuTypedLogger$important
 ||facebook.com/ajax/haste-response/?modules=FeedTrackingAsync$important
+||facebook.com/ajax/haste-response/?modules=FunnelLogger$important
+||facebook.com/ajax/haste-response/?modules=FunnelLoggerSampler$important
 ||facebook.com/ajax/haste-response/?modules=HomeRHCAdsBasicRefresh$important
 ||facebook.com/ajax/haste-response/?modules=InteractionTracker$important
 ||facebook.com/ajax/haste-response/?modules=ItunesDetector$important
 ||facebook.com/ajax/haste-response/?modules=ItunesPluginLogging$important
 ||facebook.com/ajax/haste-response/?modules=KappaWrapper$important
+||facebook.com/ajax/haste-response/?modules=MAdsPrefsFeedback$important
+||facebook.com/ajax/haste-response/?modules=MAdsScrollOnMarginTap$important
+||facebook.com/ajax/haste-response/?modules=MFeedAdsGapRuleViolationDetection$important
+||facebook.com/ajax/haste-response/?modules=MFeedChaining$important
+||facebook.com/ajax/haste-response/?modules=MLinkshim$important
 ||facebook.com/ajax/haste-response/?modules=MNAdsLogMessageUtils$important
 ||facebook.com/ajax/haste-response/?modules=MNAdsLoggerEventEnum$important
 ||facebook.com/ajax/haste-response/?modules=MNAdsMessageUtils$important
+||facebook.com/ajax/haste-response/?modules=MPymkFunnelLogger$important
+||facebook.com/ajax/haste-response/?modules=MRecentSearchesUpdater$important
+||facebook.com/ajax/haste-response/?modules=MSearchTrendingLogger$important
+||facebook.com/ajax/haste-response/?modules=MSearchTypeaheadLogger$important
+||facebook.com/ajax/haste-response/?modules=MSearchTypeaheadPerfLoggerUtil$important
+||facebook.com/ajax/haste-response/?modules=MSearchTypeaheadPerfLoggerV2$important
+||facebook.com/ajax/haste-response/?modules=MTypeaheadNullstateSource$important
+||facebook.com/ajax/haste-response/?modules=MViewableImpressionTracking$important
+||facebook.com/ajax/haste-response/?modules=MobileZeroRewriteURL$important
 ||facebook.com/ajax/haste-response/?modules=NetEgo$important
 ||facebook.com/ajax/haste-response/?modules=NetEgoShowcase$important
 ||facebook.com/ajax/haste-response/?modules=NonBlockingIFrame$important
@@ -370,6 +434,7 @@ facebook.com##script:inject(abort-on-property-write.js, trackReferrer)
 ||facebook.com/ajax/haste-response/?modules=VideoAutoplayController$important
 ||facebook.com/ajax/haste-response/?modules=VideoChainingToken$important
 ||facebook.com/ajax/haste-response/?modules=ViewableImpressionTracking$important
+||facebook.com/ajax/haste-response/?modules=ViewableImpressionUtils$important
 ||facebook.com/ajax/haste-response/?modules=VisibilityTracking$important
 ||facebook.com/ajax/haste-response/?modules=XAYMTPanelSaveSettingsController$important
 ||facebook.com/ajax/haste-response/?modules=XAdPreferencesNUXController$important
@@ -380,6 +445,7 @@ facebook.com##script:inject(abort-on-property-write.js, trackReferrer)
 ||facebook.com/ajax/haste-response/?modules=XEgoExpandAsyncController$important
 ||facebook.com/ajax/haste-response/?modules=XEventRelatedEventsPivotController$important
 ||facebook.com/ajax/haste-response/?modules=XFeedAdsChainingController$important
+||facebook.com/ajax/haste-response/?modules=XFeedChainingAsyncController$important
 ||facebook.com/ajax/haste-response/?modules=XFeedEgoImpressionLoggingController$important
 ||facebook.com/ajax/haste-response/?modules=XFundraiserAttachmentPivotController$important
 ||facebook.com/ajax/haste-response/?modules=XLinkshimLogController$important
@@ -397,7 +463,10 @@ facebook.com##script:inject(abort-on-property-write.js, trackReferrer)
 ||facebook.com/ajax/haste-response/?modules=XPubcontentRelatedVideoChainingController$important
 ||facebook.com/ajax/haste-response/?modules=XPubcontentRelatedVideoInlineController$important
 ||facebook.com/ajax/haste-response/?modules=XPubcontentTopicChainingController$important
+||facebook.com/ajax/haste-response/?modules=XPymkFunnelLoggingController$important
 ||facebook.com/ajax/haste-response/?modules=XQuickPromotionSimpleLoggingController$important
+||facebook.com/ajax/haste-response/?modules=XQuickPromotionSimpleLoggingController$important
+||facebook.com/ajax/haste-response/?modules=XRefererFrameController$important
 ||facebook.com/ajax/haste-response/?modules=XRefererFrameController$important
 ||facebook.com/ajax/haste-response/?modules=XRelatedGamesChainingController$important
 ||facebook.com/ajax/haste-response/?modules=XSearchFacebarSurveyController$important
