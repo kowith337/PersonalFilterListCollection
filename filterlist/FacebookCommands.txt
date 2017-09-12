@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.9]
 ! Title: Facebook Bullshit Commands List
-! Version: 201709102251
+! Version: 201709122149
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -85,6 +85,7 @@ facebook.com##script:inject(abort-on-property-read.js, KappaWrapper)
 facebook.com##script:inject(abort-on-property-read.js, LinkshimLogController)
 facebook.com##script:inject(abort-on-property-read.js, MAdsPrefsFeedback)
 facebook.com##script:inject(abort-on-property-read.js, MAdsScrollOnMarginTap)
+facebook.com##script:inject(abort-on-property-read.js, MAdsUtils)
 facebook.com##script:inject(abort-on-property-read.js, MFeedAdsGapRuleViolationDetection)
 facebook.com##script:inject(abort-on-property-read.js, MFeedChaining)
 facebook.com##script:inject(abort-on-property-read.js, MLinkshim)
@@ -92,6 +93,7 @@ facebook.com##script:inject(abort-on-property-read.js, MNAdsLogMessageUtils)
 facebook.com##script:inject(abort-on-property-read.js, MNAdsLoggerEventEnum)
 facebook.com##script:inject(abort-on-property-read.js, MNAdsMessageUtils)
 facebook.com##script:inject(abort-on-property-read.js, MPymkFunnelLogger)
+facebook.com##script:inject(abort-on-property-read.js, MQuickPromotion)
 facebook.com##script:inject(abort-on-property-read.js, MRecentSearchesUpdater)
 facebook.com##script:inject(abort-on-property-read.js, MSearchTrendingLogger)
 facebook.com##script:inject(abort-on-property-read.js, MSearchTypeaheadLogger)
@@ -134,6 +136,7 @@ facebook.com##script:inject(abort-on-property-read.js, XFeedChainingAsyncControl
 facebook.com##script:inject(abort-on-property-read.js, XFeedEgoImpressionLoggingController)
 facebook.com##script:inject(abort-on-property-read.js, XFundraiserAttachmentPivotController)
 facebook.com##script:inject(abort-on-property-read.js, XLinkshimLogController)
+facebook.com##script:inject(abort-on-property-read.js, XMobileSearchTrendingLoggingController)
 facebook.com##script:inject(abort-on-property-read.js, XPubcontentChainedSuggestionsController)
 facebook.com##script:inject(abort-on-property-read.js, XPubcontentCommerceProductChainingController)
 facebook.com##script:inject(abort-on-property-read.js, XPubcontentFeedChainingController)
@@ -241,6 +244,7 @@ facebook.com##script:inject(abort-on-property-write.js, KappaWrapper)
 facebook.com##script:inject(abort-on-property-write.js, LinkshimLogController)
 facebook.com##script:inject(abort-on-property-write.js, MAdsPrefsFeedback)
 facebook.com##script:inject(abort-on-property-write.js, MAdsScrollOnMarginTap)
+facebook.com##script:inject(abort-on-property-write.js, MAdsUtils)
 facebook.com##script:inject(abort-on-property-write.js, MFeedAdsGapRuleViolationDetection)
 facebook.com##script:inject(abort-on-property-write.js, MFeedChaining)
 facebook.com##script:inject(abort-on-property-write.js, MLinkshim)
@@ -248,6 +252,7 @@ facebook.com##script:inject(abort-on-property-write.js, MNAdsLogMessageUtils)
 facebook.com##script:inject(abort-on-property-write.js, MNAdsLoggerEventEnum)
 facebook.com##script:inject(abort-on-property-write.js, MNAdsMessageUtils)
 facebook.com##script:inject(abort-on-property-write.js, MPymkFunnelLogger)
+facebook.com##script:inject(abort-on-property-write.js, MQuickPromotion)
 facebook.com##script:inject(abort-on-property-write.js, MRecentSearchesUpdater)
 facebook.com##script:inject(abort-on-property-write.js, MSearchTrendingLogger)
 facebook.com##script:inject(abort-on-property-write.js, MSearchTypeaheadLogger)
@@ -290,6 +295,7 @@ facebook.com##script:inject(abort-on-property-write.js, XFeedChainingAsyncContro
 facebook.com##script:inject(abort-on-property-write.js, XFeedEgoImpressionLoggingController)
 facebook.com##script:inject(abort-on-property-write.js, XFundraiserAttachmentPivotController)
 facebook.com##script:inject(abort-on-property-write.js, XLinkshimLogController)
+facebook.com##script:inject(abort-on-property-write.js, XMobileSearchTrendingLoggingController)
 facebook.com##script:inject(abort-on-property-write.js, XPubcontentChainedSuggestionsController)
 facebook.com##script:inject(abort-on-property-write.js, XPubcontentCommerceProductChainingController)
 facebook.com##script:inject(abort-on-property-write.js, XPubcontentFeedChainingController)
@@ -399,6 +405,7 @@ facebook.com##script:inject(abort-on-property-write.js, trackReferrer)
 ||facebook.com/ajax/haste-response/?modules=KappaWrapper$important
 ||facebook.com/ajax/haste-response/?modules=MAdsPrefsFeedback$important
 ||facebook.com/ajax/haste-response/?modules=MAdsScrollOnMarginTap$important
+||facebook.com/ajax/haste-response/?modules=MAdsUtils$important
 ||facebook.com/ajax/haste-response/?modules=MFeedAdsGapRuleViolationDetection$important
 ||facebook.com/ajax/haste-response/?modules=MFeedChaining$important
 ||facebook.com/ajax/haste-response/?modules=MLinkshim$important
@@ -406,6 +413,7 @@ facebook.com##script:inject(abort-on-property-write.js, trackReferrer)
 ||facebook.com/ajax/haste-response/?modules=MNAdsLoggerEventEnum$important
 ||facebook.com/ajax/haste-response/?modules=MNAdsMessageUtils$important
 ||facebook.com/ajax/haste-response/?modules=MPymkFunnelLogger$important
+||facebook.com/ajax/haste-response/?modules=MQuickPromotion$important
 ||facebook.com/ajax/haste-response/?modules=MRecentSearchesUpdater$important
 ||facebook.com/ajax/haste-response/?modules=MSearchTrendingLogger$important
 ||facebook.com/ajax/haste-response/?modules=MSearchTypeaheadLogger$important
@@ -449,6 +457,7 @@ facebook.com##script:inject(abort-on-property-write.js, trackReferrer)
 ||facebook.com/ajax/haste-response/?modules=XFeedEgoImpressionLoggingController$important
 ||facebook.com/ajax/haste-response/?modules=XFundraiserAttachmentPivotController$important
 ||facebook.com/ajax/haste-response/?modules=XLinkshimLogController$important
+||facebook.com/ajax/haste-response/?modules=XMobileSearchTrendingLoggingController$important
 ||facebook.com/ajax/haste-response/?modules=XPubcontentChainedSuggestionsController$important
 ||facebook.com/ajax/haste-response/?modules=XPubcontentCommerceProductChainingController$important
 ||facebook.com/ajax/haste-response/?modules=XPubcontentFeedChainingController$important
