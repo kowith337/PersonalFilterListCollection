@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.9]
 ! Title: Facebook Bullshit Commands List
-! Version: 201709122149
+! Version: 201709122210
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -99,6 +99,7 @@ facebook.com##script:inject(abort-on-property-read.js, MSearchTrendingLogger)
 facebook.com##script:inject(abort-on-property-read.js, MSearchTypeaheadLogger)
 facebook.com##script:inject(abort-on-property-read.js, MSearchTypeaheadPerfLoggerUtil)
 facebook.com##script:inject(abort-on-property-read.js, MSearchTypeaheadPerfLoggerV2)
+facebook.com##script:inject(abort-on-property-read.js, MTokenizerWithSuggestions)
 facebook.com##script:inject(abort-on-property-read.js, MTypeaheadNullstateSource)
 facebook.com##script:inject(abort-on-property-read.js, MViewableImpressionTracking)
 facebook.com##script:inject(abort-on-property-read.js, MobileZeroRewriteURL)
@@ -258,6 +259,7 @@ facebook.com##script:inject(abort-on-property-write.js, MSearchTrendingLogger)
 facebook.com##script:inject(abort-on-property-write.js, MSearchTypeaheadLogger)
 facebook.com##script:inject(abort-on-property-write.js, MSearchTypeaheadPerfLoggerUtil)
 facebook.com##script:inject(abort-on-property-write.js, MSearchTypeaheadPerfLoggerV2)
+facebook.com##script:inject(abort-on-property-write.js, MTokenizerWithSuggestions)
 facebook.com##script:inject(abort-on-property-write.js, MTypeaheadNullstateSource)
 facebook.com##script:inject(abort-on-property-write.js, MViewableImpressionTracking)
 facebook.com##script:inject(abort-on-property-write.js, MobileZeroRewriteURL)
@@ -419,6 +421,7 @@ facebook.com##script:inject(abort-on-property-write.js, trackReferrer)
 ||facebook.com/ajax/haste-response/?modules=MSearchTypeaheadLogger$important
 ||facebook.com/ajax/haste-response/?modules=MSearchTypeaheadPerfLoggerUtil$important
 ||facebook.com/ajax/haste-response/?modules=MSearchTypeaheadPerfLoggerV2$important
+||facebook.com/ajax/haste-response/?modules=MTokenizerWithSuggestions$important
 ||facebook.com/ajax/haste-response/?modules=MTypeaheadNullstateSource$important
 ||facebook.com/ajax/haste-response/?modules=MViewableImpressionTracking$important
 ||facebook.com/ajax/haste-response/?modules=MobileZeroRewriteURL$important
