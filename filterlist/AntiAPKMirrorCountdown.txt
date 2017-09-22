@@ -1,6 +1,6 @@
 [uBlock Origin 1.13.9]
 ! Title: Anti APKMirror Ads and Countdown
-! Version: 2017090222347
+! Version: 201709222350
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
