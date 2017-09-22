@@ -1,6 +1,6 @@
-[uBlock Origin 1.11.0]
+[uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201709040000
+! Version: 201709222323
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -194,7 +194,12 @@ gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, GoogleAnal
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, adsbyjuicy)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, adsbyjuicy)
 
-! - - - - - - - - - - CSS - - - - - - - - - - !
+! 6. Experimental, I don't know how it does and how to use properly.
+gelbooru.com##script:inject(abort-current-inline-script.js, document.addEventListener)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.addZone)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.serve)
+
+! - - - - - - - - - - CSS / Mobile Improve - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking
 ! because it ate up space almost half of screen from top.
 ! This will surely conflict when you request desktop view or when you're already use desktop browser.
@@ -208,10 +213,12 @@ gelbooru.com##.navbar.navbar-default .navbar-header button.navbar-toggle:style(f
 gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 gelbooru.com###post-view #right-col div #image[src*="sample"]:style(width: 100% !important)
 
-! - - - - - - - - - - Firefox only - - - - - - - - - - !
+! - - - - - - - - - - Firefox + uBO Legacy Only - - - - - - - - - - !
 ! ##script rules are work only uBlock0 1.2.0 + Firefox 42 or newer (Fennec F-Droid also work, Not sure for IceCat and Pale Moon because it based on ESR build)
-! I can confirmed these inline script filter rules below can collaps space that caused from every immoral ads, for now.
-! Keep in mind because they may rename some function to survive blocking, such as change [advertVar] to [abvertDar]
+! - I can confirmed these inline script filter rules below can collaps space that caused from every immoral ads, for now.
+! - Only the legacy version of uBlock Origin can be used these rules, the legacy version will be no longer release and get updated
+!   when stable version of Firefox 57 released, or maybe need someone to clone and port to keep extended support for legacy version.
+! - Keep in mind because they may rename some function to survive blocking, such as change [advertVar] to [abvertDar]
 gelbooru.com##script:contains(_gaq.push)
 gelbooru.com##script:contains(abvertDar)
 gelbooru.com##script:contains(ad_idzone)
