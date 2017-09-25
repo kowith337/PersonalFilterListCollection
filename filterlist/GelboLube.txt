@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201709222323
+! Version: 201709252337
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -211,7 +211,7 @@ gelbooru.com##.navbar#submenu:style(float: right !important; width: 50% !importa
 gelbooru.com##.navbar.navbar-default .navbar-brand:style(display: none !important)
 gelbooru.com##.navbar.navbar-default .navbar-header button.navbar-toggle:style(float:left !important; margin-left: 10px !important; margin-right: 0px !important)
 gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
-gelbooru.com###post-view #right-col div #image[src*="sample"]:style(width: 100% !important)
+! gelbooru.com###post-view #right-col div #image[src*="sample"]:style(width: 100% !important)
 
 ! - - - - - - - - - - Firefox + uBO Legacy Only - - - - - - - - - - !
 ! ##script rules are work only uBlock0 1.2.0 + Firefox 42 or newer (Fennec F-Droid also work, Not sure for IceCat and Pale Moon because it based on ESR build)
