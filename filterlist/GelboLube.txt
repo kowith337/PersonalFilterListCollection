@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201709252337
+! Version: 201709252344
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -79,7 +79,8 @@ gelbooru.com##div[style*="width:1000px"]:has(script)
 @@||gelbooru.com/script/$script,first-party
 
 ! 3. Actual WebM Videos (Legitmate WebM vids are loaded from /images/ only, otherwise is adverts!)
-@@||gelbooru.com/images$media
+@@||gelbooru.com/images/$media
+@@||gelbooru.com//images/$media
 
 ! 4. Legitmate thumbnails conclusion
 !       a. Blame to Gelbooru's false that place advert images into "/0A/" (now they use "/0C/")
