@@ -1,6 +1,6 @@
 [uBlock Origin 1.13.9]
 ! Title: Anti APKMirror Ads and Countdown
-! Version: 201709222350
+! Version: 201709292059
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -32,7 +32,18 @@ apkmirror.com##.google-ad-square-sidebar
 ||scorecardresearch.com$domain=apkmirror.com,important
 
 ! Scriptlets
+apkmirror.com##script:inject(abort-on-property-read.js, _comscore)
+apkmirror.com##script:inject(abort-on-property-read.js, _qevents)
+apkmirror.com##script:inject(abort-on-property-read.js, aax_getad_mpb)
+apkmirror.com##script:inject(abort-on-property-read.js, adsbygoogle)
+apkmirror.com##script:inject(abort-on-property-read.js, canRunAds)
 apkmirror.com##script:inject(abort-on-property-read.js, visibleAds)
 apkmirror.com##script:inject(abort-on-property-write.js, #downloadCountdownBar)
+apkmirror.com##script:inject(abort-on-property-write.js, _comscore)
+apkmirror.com##script:inject(abort-on-property-write.js, _qevents)
+apkmirror.com##script:inject(abort-on-property-write.js, aax_getad_mpb)
+apkmirror.com##script:inject(abort-on-property-write.js, adsbygoogle)
+apkmirror.com##script:inject(abort-on-property-write.js, canRunAds)
 apkmirror.com##script:inject(abort-on-property-write.js, ranTwice)
 apkmirror.com##script:inject(abort-on-property-write.js, timerInterval)
+apkmirror.com##script:inject(abort-on-property-write.js, visibleAds)
