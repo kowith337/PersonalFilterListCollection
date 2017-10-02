@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.9]
 ! Title: Personal Miscellaneous Annoyance
-! Version: 201709252336
+! Version: 201710021528
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -23,8 +23,8 @@ stackexchange.com,superuser.com##.hero-container:if(#hero-content:has(div a[href
 
 ! Scriplets
 randomnessthing.com##script:contains(Criteo)
-randomnessthing.com##script-inject(abort-on-property-read.js, Criteo)
-randomnessthing.com##script-inject(abort-on-property-write.js, DisplayAcceptableAdIfAdblocked)
+randomnessthing.com##script:inject(abort-on-property-read.js, Criteo)
+randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptableAdIfAdblocked)
 
 ! - - - - - - - - - - Block Page(s) / Redirect annoyance - - - - - - - - - - !
 ! Some extensions that hosted with add0n are show the popup
