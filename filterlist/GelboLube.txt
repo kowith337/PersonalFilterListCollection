@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201710030454
+! Version: 201710030505
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -72,9 +72,9 @@ gelbooru.com##div[style*="width:1000px"]:has(script)
 
 ! - - - - - - - - - - Unbreak - - - - - - - - - - !
 ! 1. Allow jQuery from GoogleAPIs and BootStrap (suggested by toshiya44)
-@@||ajax.googleapis.com/ajax/libs/jquery/$script,domain=gelbooru.com
-@@||bootstrapcdn.com/bootstrap$script,domain=gelbooru.com
-@@||gelbooru.com/script/jquery$script,first-party
+@@||ajax.googleapis.com/ajax/libs/jquery^$script,domain=gelbooru.com
+@@||bootstrapcdn.com/bootstrap^$script,domain=gelbooru.com
+@@||gelbooru.com/script/jquery^$script,first-party
 
 ! 2. Core scripts, but 'application.js' is questionable due to it's have "ExoLoader" function inside that script.
 @@||gelbooru.com/script/application.js?$script,first-party
