@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201709252344
+! Version: 201710030143
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -177,8 +177,8 @@ gelbooru.com##script:inject(abort-on-property-read.js, abvertDar)
 gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
 
 ! 2. Stop exo_zones cookie deploy as first party, the ExoLoader function was called from application.js that whitelisted to unbreak site functional.
-!    maybe need to request the neutured version of this script or copy script then edit and upload here?
-!    because uBO 1.13 and above now support custom resource inject.
+!    Update: due to new update on Gelbooru was using the lazyload function to load all thumbnails, these rules will be halt
+!            until found a better solution to keep preventing ExoLoader wrote cookies on local storage as 1st-party.
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, ExoLoader)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader)
 
@@ -196,11 +196,12 @@ gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, adsbyjuicy)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, adsbyjuicy)
 
 ! 6. Experimental, I don't know how it does and how to use properly.
-gelbooru.com##script:inject(abort-current-inline-script.js, document.addEventListener)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.addZone)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.serve)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, document.addEventListener, abvertDar)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, var, ExoLoader)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader, addZone)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader, serve)
 
-! - - - - - - - - - - CSS / Mobile Improve - - - - - - - - - - !
+! - - - - - - - - - - CSS / Mobile Improvement - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking
 ! because it ate up space almost half of screen from top.
 ! This will surely conflict when you request desktop view or when you're already use desktop browser.
@@ -226,10 +227,7 @@ gelbooru.com##script:contains(ad_idzone)
 gelbooru.com##script:contains(adnOpt)
 gelbooru.com##script:contains(adsbyjuicy)
 gelbooru.com##script:contains(advertVar)
-gelbooru.com##script:contains(exoclick)
-gelbooru.com##script:contains(innerHTML)
 gelbooru.com##script:contains(trw_domain)
-gelbooru.com##script:contains(ExoLoader)
 gelbooru.com##script:contains(GoogleAnalyticsObject)
 
 ! - - - - - - - - - - For TheDouJin - - - - - - - - - - !
@@ -243,5 +241,5 @@ thedoujin.com##noscript
 thedoujin.com##.adnSpot
 thedoujin.com##script:contains(adnOpt)
 thedoujin.com##script:contains(ad_idzone)
-thedoujin.com##script:contains(ExoLoader)
 thedoujin.com##script:contains(_gaq.push)
+! thedoujin.com##script:contains(ExoLoader)
