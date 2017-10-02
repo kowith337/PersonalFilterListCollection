@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201710030156
+! Version: 201710030427
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -170,6 +170,10 @@ gelbooru.com##div[style*="width:1000px"]:has(script)
 ||gelbooru.com/script/application.js?$~script,important
 ||youhate.us/ads.js?$~script,important
 
+! 9. Useless scripts that fooled to seems like it's useful, but the real thing is for using with new method of popunder ads! (for sure)
+||gelbooru.com/script/license$important
+||gelbooru.com/script/miscJs$important
+
 ! - - - - - - - - - - Inject Scriptlets - - - - - - - - - - !
 ! 1. Block attempt to rewrite adverts under paginator via reading some value, doing this also stop advert images requests.
 !    Note: they bypassed this block by rename function like [advertVar > abvertDar], this solution will not be last long enough.
@@ -195,9 +199,17 @@ gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, GoogleAnal
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, adsbyjuicy)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, adsbyjuicy)
 
-! 6. Experimental, I don't know how it does and how to use properly.
+! 6. New BetterJsPop popunder that currently testing to show thedoujin site as popunder
+!    a same method that how ExoClick serving ads with this same method.
+gelbooru.com##script:inject(abort-on-property-read.js, gelcomPoop)
+gelbooru.com##script:inject(abort-on-property-read.js, BetterJsPop)
+gelbooru.com##script:inject(abort-on-property-write.js, gelcomPoop)
+gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop)
+
+! 7. Experimental, I don't know how it does and how to use properly.
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, document.addEventListener, abvertDar)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, var, ExoLoader)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, BetterJsPop.add, gelcomPoop)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader, addZone)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader, serve)
 
@@ -206,7 +218,7 @@ gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoa
 ! because it ate up space almost half of screen from top.
 ! This will surely conflict when you request desktop view or when you're already use desktop browser.
 gelbooru.com##.alert-info:has(a[href*="?page=ihnt"])
-gelbooru.com##.alert-warning:has(a[href*="patreon.com"])
+gelbooru.com##.alert-warning:has(a[href*="javascript"])
 gelbooru.com##.navbar#submenu #navbar2 .navbar-nav:style(direction:rtl !important)
 gelbooru.com##.navbar#submenu #navbar2:style(float: right !important)
 gelbooru.com##.navbar#submenu:style(float: right !important; width: 50% !important)
