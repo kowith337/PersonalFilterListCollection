@@ -1,9 +1,10 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201710030505
+! Version: 201710031226
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
+
 
 ! 1. It doesn't matter to have any checksum tools because uBo is now fully support filterlists that created on GitHub
 !    and regularly auto check itself if something in the list was changed.
@@ -12,6 +13,7 @@
 ! 3. Author/Owner/Contributor of gelbooru.com will frequently update their sites to keep ads appear.
 ! 4. for uB0 1.2.0 + Firefox 42 (and/or both newer) inline-script support can able to collaps space
 !    that caused by inline-script and noscript function.
+
 
 ! - - - - - - - - - - Generic - - - - - - - - - - !
 ! Block external hyperlinks, include CCBill ads and Patreon.
@@ -72,9 +74,9 @@ gelbooru.com##div[style*="width:1000px"]:has(script)
 
 ! - - - - - - - - - - Unbreak - - - - - - - - - - !
 ! 1. Allow jQuery from GoogleAPIs and BootStrap (suggested by toshiya44)
-@@||ajax.googleapis.com/ajax/libs/jquery^$script,domain=gelbooru.com
-@@||bootstrapcdn.com/bootstrap^$script,domain=gelbooru.com
-@@||gelbooru.com/script/jquery^$script,first-party
+@@||ajax.googleapis.com/ajax/libs/jquery/*$script,domain=gelbooru.com
+@@||bootstrapcdn.com/bootstrap/*$script,domain=gelbooru.com
+@@||gelbooru.com/script/jquery*$script,first-party
 
 ! 2. Core scripts, but 'application.js' is questionable due to it's have "ExoLoader" function inside that script.
 @@||gelbooru.com/script/application.js?$script,first-party
@@ -96,6 +98,9 @@ gelbooru.com##div[style*="width:1000px"]:has(script)
 !          while connections is too slow to load image directly from Gelbooru domain.
 @@||gelbooru.com/ads.js?$script
 @@||youhate.us/ads.js?$script
+
+! 6. Allow lazyload script to be loaded because function to load thumbnail is depend on this, since today's update (2017/10/03)
+@@||gelbooru.com/script/lazyload.js?$script,first-party
 
 ! Unused
 ! @@||gelbooru.com/script/jqueryMisc.js|$script
@@ -201,7 +206,7 @@ gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, adsbyjuicy)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, adsbyjuicy)
 
 ! 6. New BetterJsPop popunder that currently testing to show thedoujin site as popunder
-!    a same method that how ExoClick serving ads with this same method.
+!    a same method that how ExoClick serving ads.
 gelbooru.com##script:inject(abort-on-property-read.js, gelcomPoop)
 gelbooru.com##script:inject(abort-on-property-read.js, BetterJsPop)
 gelbooru.com##script:inject(abort-on-property-write.js, gelcomPoop)
@@ -241,6 +246,7 @@ gelbooru.com##script:contains(adnOpt)
 gelbooru.com##script:contains(adsbyjuicy)
 gelbooru.com##script:contains(advertVar)
 gelbooru.com##script:contains(trw_domain)
+gelbooru.com##script:contains(BetterJsPop)
 gelbooru.com##script:contains(GoogleAnalyticsObject)
 
 ! - - - - - - - - - - For TheDouJin - - - - - - - - - - !
