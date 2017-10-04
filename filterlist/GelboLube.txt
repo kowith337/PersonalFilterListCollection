@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201710031226
+! Version: 201710041156
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -13,7 +13,6 @@
 ! 3. Author/Owner/Contributor of gelbooru.com will frequently update their sites to keep ads appear.
 ! 4. for uB0 1.2.0 + Firefox 42 (and/or both newer) inline-script support can able to collaps space
 !    that caused by inline-script and noscript function.
-
 
 ! - - - - - - - - - - Generic - - - - - - - - - - !
 ! Block external hyperlinks, include CCBill ads and Patreon.
@@ -78,8 +77,11 @@ gelbooru.com##div[style*="width:1000px"]:has(script)
 @@||bootstrapcdn.com/bootstrap/*$script,domain=gelbooru.com
 @@||gelbooru.com/script/jquery*$script,first-party
 
-! 2. Core scripts, but 'application.js' is questionable due to it's have "ExoLoader" function inside that script.
+! 2. Functional scripts, but 'application.js' is questionable due to it's have "ExoLoader" function inside that script.
+@@||gelbooru.com/script/application.js|$script,first-party
 @@||gelbooru.com/script/application.js?$script,first-party
+@@||gelbooru.com/script/miscJs.js|$script,first-party
+@@||gelbooru.com/script/miscJs.js?$script,first-party
 
 ! 3. Actual WebM Videos (Legitmate WebM vids are loaded from /images/ only, otherwise is adverts!)
 @@||gelbooru.com/images/$media
@@ -178,7 +180,7 @@ gelbooru.com##div[style*="width:1000px"]:has(script)
 
 ! 9. Useless scripts that fooled to seems like it's useful, but the real thing is for using with new method of popunder ads! (for sure)
 ||gelbooru.com/script/license$important
-||gelbooru.com/script/miscJs$important
+! ||gelbooru.com/script/miscJs$important
 
 ! - - - - - - - - - - Inject Scriptlets - - - - - - - - - - !
 ! 1. Block attempt to rewrite adverts under paginator via reading some value, doing this also stop advert images requests.
@@ -192,9 +194,9 @@ gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
 ! gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, ExoLoader)
 ! gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader)
 
-! 3. Prevent data collector from adnium.com to write script
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, adnOpt)
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, adnOpt)
+! 3. [Deprecated] Prevent data collector from adnium.com to write script
+! gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, adnOpt)
+! gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, adnOpt)
 
 ! 4. Prevent Google Analytics to be executed, but it works only inline script due to they recently add asynchronous script after document loaded.
 !    Tested this injection rules and this won't break the site.
@@ -242,12 +244,12 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 gelbooru.com##script:contains(_gaq.push)
 gelbooru.com##script:contains(abvertDar)
 gelbooru.com##script:contains(ad_idzone)
-gelbooru.com##script:contains(adnOpt)
 gelbooru.com##script:contains(adsbyjuicy)
 gelbooru.com##script:contains(advertVar)
 gelbooru.com##script:contains(trw_domain)
 gelbooru.com##script:contains(BetterJsPop)
 gelbooru.com##script:contains(GoogleAnalyticsObject)
+! gelbooru.com##script:contains(adnOpt)
 
 ! - - - - - - - - - - For TheDouJin - - - - - - - - - - !
 ! Block all script same as Gelbooru, but only allow scripts from /assets because need for unbreak jQuery.
