@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201710041156
+! Version: 201710062221
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -13,6 +13,7 @@
 ! 3. Author/Owner/Contributor of gelbooru.com will frequently update their sites to keep ads appear.
 ! 4. for uB0 1.2.0 + Firefox 42 (and/or both newer) inline-script support can able to collaps space
 !    that caused by inline-script and noscript function.
+
 
 ! - - - - - - - - - - Generic - - - - - - - - - - !
 ! Block external hyperlinks, include CCBill ads and Patreon.
@@ -77,7 +78,7 @@ gelbooru.com##div[style*="width:1000px"]:has(script)
 @@||bootstrapcdn.com/bootstrap/*$script,domain=gelbooru.com
 @@||gelbooru.com/script/jquery*$script,first-party
 
-! 2. Functional scripts, but 'application.js' is questionable due to it's have "ExoLoader" function inside that script.
+! 2. Core scripts, but 'application.js' is questionable due to it's have "ExoLoader" function inside that script.
 @@||gelbooru.com/script/application.js|$script,first-party
 @@||gelbooru.com/script/application.js?$script,first-party
 @@||gelbooru.com/script/miscJs.js|$script,first-party
@@ -147,6 +148,7 @@ gelbooru.com##div[style*="width:1000px"]:has(script)
 ||juicyads.com$domain=gelbooru.com|thedoujin.com,important
 ||mnfclub.com$domain=gelbooru.com|thedoujin.com,important
 ||r18.com$domain=gelbooru.com|thedoujin.com,important
+||tsyndicate.com$domain=gelbooru.com|thedoujin.com,important
 ||twitter.com$domain=gelbooru.com|thedoujin.com,important
 ||verotel.com$domain=gelbooru.com|thedoujin.com,important
 
@@ -156,12 +158,14 @@ gelbooru.com##div[style*="width:1000px"]:has(script)
 ! 3. Block "JabComix" promo, /r19/ strict!
 ||gelbooru.com/r19/$important
 
-! 4. Block "application.js" that not have "?" remark after, in case if they move everything to jQuery.
+! 4. [Deprecated by Unbreak #2] Block "application.js" that not have "?" remark after, in case if they move everything to jQuery.
 !    (But I think they not do it again because of [http://gelbooru.com/index.php?page=forum&s=view&id=3716])
-||gelbooru.com/script/application.js|$script,important
+! ||gelbooru.com/script/application.js|$script,important
 
-! 5. Block "application.js.php", it's an ad script that foolish exception rule and loaded as php doc.
+! 5. Block hostile scripts that load as php, it's an ad script that foolish exception rule and loaded as php doc.
+||gelbooru.com/bed.php$important
 ||gelbooru.com/script/application.js.php$important
+||gelbooru.com/script/bed.php$important
 
 ! 6. Block advert images (currently placed as /thumbnails/0A, they may change location and/or filename, but legitmate thumbnail will have ? referrer after.)
 !    Now reduce priority for [*.jpg] due to it's use for other appearance, such as recent comments that load thumbnail images without ?<PostID> referrer.
@@ -191,8 +195,10 @@ gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
 ! 2. Stop exo_zones cookie deploy as first party, the ExoLoader function was called from application.js that whitelisted to unbreak site functional.
 !    Update: due to new update on Gelbooru was using the lazyload function to load all thumbnails, these rules will be halt
 !            until found a better solution to keep preventing ExoLoader wrote cookies on local storage as 1st-party.
-! gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, ExoLoader)
-! gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, ExoDetector)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, ExoLoader.serve)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.serve)
 
 ! 3. [Deprecated] Prevent data collector from adnium.com to write script
 ! gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, adnOpt)
@@ -246,6 +252,8 @@ gelbooru.com##script:contains(abvertDar)
 gelbooru.com##script:contains(ad_idzone)
 gelbooru.com##script:contains(adsbyjuicy)
 gelbooru.com##script:contains(advertVar)
+gelbooru.com##script:contains(ExoDetector)
+gelbooru.com##script:contains(ExoLoader.serve)
 gelbooru.com##script:contains(trw_domain)
 gelbooru.com##script:contains(BetterJsPop)
 gelbooru.com##script:contains(GoogleAnalyticsObject)
