@@ -1,10 +1,9 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201710062221
+! Version: 201710092123
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
-
 
 ! 1. It doesn't matter to have any checksum tools because uBo is now fully support filterlists that created on GitHub
 !    and regularly auto check itself if something in the list was changed.
@@ -13,7 +12,6 @@
 ! 3. Author/Owner/Contributor of gelbooru.com will frequently update their sites to keep ads appear.
 ! 4. for uB0 1.2.0 + Firefox 42 (and/or both newer) inline-script support can able to collaps space
 !    that caused by inline-script and noscript function.
-
 
 ! - - - - - - - - - - Generic - - - - - - - - - - !
 ! Block external hyperlinks, include CCBill ads and Patreon.
@@ -240,6 +238,13 @@ gelbooru.com##.navbar.navbar-default .navbar-brand:style(display: none !importan
 gelbooru.com##.navbar.navbar-default .navbar-header button.navbar-toggle:style(float:left !important; margin-left: 10px !important; margin-right: 0px !important)
 gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ! gelbooru.com###post-view #right-col div #image[src*="sample"]:style(width: 100% !important)
+
+! Use 'matches-css' to remove placeholder after allowed 'ExoLoader.addZone' to generate advert space
+! that's mean because they hard coded to load that function along with lazyload
+gelbooru.com##center div:matches-css(width: 300px)
+thedoujin.com##.container[style="text-align: center;"] div:matches-css(width: 300px)
+thedoujin.com##.boxTopLocContent center:if(div:matches-css(width: 300px))
+thedoujin.com##.boxTopLocContent center:if(div:matches-css(width: 728px))
 
 ! - - - - - - - - - - Firefox + uBO Legacy Only - - - - - - - - - - !
 ! ##script rules are work only uBlock0 1.2.0 + Firefox 42 or newer (Fennec F-Droid also work, Not sure for IceCat and Pale Moon because it based on ESR build)
