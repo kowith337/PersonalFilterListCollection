@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201710092123
+! Version: 201710102035
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -194,8 +194,14 @@ gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
 !    Update: due to new update on Gelbooru was using the lazyload function to load all thumbnails, these rules will be halt
 !            until found a better solution to keep preventing ExoLoader wrote cookies on local storage as 1st-party.
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, ExoDetector)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, ExoDetector.domain_base)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, ExoLoader)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, ExoLoader.addZone)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, ExoLoader.serve)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector.domain_base)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.addZone)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.serve)
 
 ! 3. [Deprecated] Prevent data collector from adnium.com to write script
@@ -211,7 +217,7 @@ gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, GoogleAnal
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-read.js, adsbyjuicy)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, adsbyjuicy)
 
-! 6. New BetterJsPop popunder that currently testing to show thedoujin site as popunder
+! 6. New BetterJsPop popunder that currently testing to show thedoujin site as popunder,
 !    a same method that how ExoClick serving ads.
 gelbooru.com##script:inject(abort-on-property-read.js, gelcomPoop)
 gelbooru.com##script:inject(abort-on-property-read.js, BetterJsPop)
@@ -219,11 +225,12 @@ gelbooru.com##script:inject(abort-on-property-write.js, gelcomPoop)
 gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop)
 
 ! 7. Experimental, I don't know how it does and how to use properly.
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, document.addEventListener, abvertDar)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, var, ExoLoader)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, BetterJsPop.add, gelcomPoop)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader, addZone)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader, serve)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoDetector.domain_base, ExoLoader.addZone)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.addZone)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.serve)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ad_idzone, ad_width, ad_height, ad_tags)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, document.addEventListener, abvertDar)
 
 ! - - - - - - - - - - CSS / Mobile Improvement - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking
