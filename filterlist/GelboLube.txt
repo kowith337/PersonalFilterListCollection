@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201710171718
+! Version: 201710182230
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -185,7 +185,7 @@ gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector.domain_base)
 ! gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader)
-! gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.addZone)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.addZone)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.serve)
 
 ! 3. [Deprecated] Prevent data collector from adnium.com to write script
@@ -205,7 +205,7 @@ gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop)
 ! 7. Experimental, I don't know how it does and how to use properly.
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, BetterJsPop.add)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoDetector.domain_base)
-! gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.addZone)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.addZone)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.serve)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ad_idzone, ad_width, ad_height, ad_tags)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, document.addEventListener, abvertDar)
