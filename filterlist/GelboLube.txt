@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201710182230
+! Version: 201710190012
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -33,6 +33,9 @@ gelbooru.com##a[rel="nofollow"] video
 
 ! Block ExoClick iFrame (Not sure is it still exist?)
 gelbooru.com##iframe[src*="exoclick"]
+
+! Leftover ad space above of image list / image view
+gelbooru.com##.contain-push .hidden-xs[style*="max-width: 728px"]
 
 ! Trying to block NoScript
 gelbooru.com##noscript
