@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.9]
 ! Title: Facebook Bullshit Commands List
-! Version: 201710202340
+! Version: 201710212216
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -123,9 +123,13 @@ facebook.com##script:inject(abort-on-property-read.js, UFIOrderingModeSelectorCo
 facebook.com##script:inject(abort-on-property-read.js, VideoAutoplayController)
 facebook.com##script:inject(abort-on-property-read.js, VideoChainingToken)
 facebook.com##script:inject(abort-on-property-read.js, VideoWatchAndScrollEndScreen)
+facebook.com##script:inject(abort-on-property-read.js, ViewableImpressionDurationLogger)
+facebook.com##script:inject(abort-on-property-read.js, ViewableImpressionEventHandler)
+facebook.com##script:inject(abort-on-property-read.js, ViewableImpressionHeatmapLogger)
 facebook.com##script:inject(abort-on-property-read.js, ViewableImpressionTracking)
 facebook.com##script:inject(abort-on-property-read.js, ViewableImpressionUtils)
 facebook.com##script:inject(abort-on-property-read.js, VisibilityTracking)
+facebook.com##script:inject(abort-on-property-read.js, VisibilityTrackingHelper)
 facebook.com##script:inject(abort-on-property-read.js, XAYMTPanelSaveSettingsController)
 facebook.com##script:inject(abort-on-property-read.js, XAdPreferencesNUXController)
 facebook.com##script:inject(abort-on-property-read.js, XAdsCMController)
@@ -291,9 +295,13 @@ facebook.com##script:inject(abort-on-property-write.js, UFIOrderingModeSelectorC
 facebook.com##script:inject(abort-on-property-write.js, VideoAutoplayController)
 facebook.com##script:inject(abort-on-property-write.js, VideoChainingToken)
 facebook.com##script:inject(abort-on-property-write.js, VideoWatchAndScrollEndScreen)
+facebook.com##script:inject(abort-on-property-write.js, ViewableImpressionDurationLogger)
+facebook.com##script:inject(abort-on-property-write.js, ViewableImpressionEventHandler)
+facebook.com##script:inject(abort-on-property-write.js, ViewableImpressionHeatmapLogger)
 facebook.com##script:inject(abort-on-property-write.js, ViewableImpressionTracking)
 facebook.com##script:inject(abort-on-property-write.js, ViewableImpressionUtils)
 facebook.com##script:inject(abort-on-property-write.js, VisibilityTracking)
+facebook.com##script:inject(abort-on-property-write.js, VisibilityTrackingHelper)
 facebook.com##script:inject(abort-on-property-write.js, XAYMTPanelSaveSettingsController)
 facebook.com##script:inject(abort-on-property-write.js, XAdPreferencesNUXController)
 facebook.com##script:inject(abort-on-property-write.js, XAdsCMController)
@@ -462,9 +470,13 @@ facebook.com##script:inject(abort-on-property-write.js, trackReferrer)
 ||facebook.com/ajax/haste-response/?modules=VideoAutoplayController$important
 ||facebook.com/ajax/haste-response/?modules=VideoChainingToken$important
 ||facebook.com/ajax/haste-response/?modules=VideoWatchAndScrollEndScreen$important
+||facebook.com/ajax/haste-response/?modules=ViewableImpressionDurationLogger$important
+||facebook.com/ajax/haste-response/?modules=ViewableImpressionEventHandler$important
+||facebook.com/ajax/haste-response/?modules=ViewableImpressionHeatmapLogger$important
 ||facebook.com/ajax/haste-response/?modules=ViewableImpressionTracking$important
 ||facebook.com/ajax/haste-response/?modules=ViewableImpressionUtils$important
 ||facebook.com/ajax/haste-response/?modules=VisibilityTracking$important
+||facebook.com/ajax/haste-response/?modules=VisibilityTrackingHelper$important
 ||facebook.com/ajax/haste-response/?modules=XAYMTPanelSaveSettingsController$important
 ||facebook.com/ajax/haste-response/?modules=XAdPreferencesNUXController$important
 ||facebook.com/ajax/haste-response/?modules=XAdsCMController$important
