@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube (Legacy)
-! Version: 201710190016
+! Version: 201710231333
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -71,6 +71,8 @@ gelbooru.com##div[class^="sidebar"] a[target]:has(img)
 @@||gelbooru.com/script/application.js?$script,first-party
 @@||gelbooru.com/script/miscJs.js|$script,first-party
 @@||gelbooru.com/script/miscJs.js?$script,first-party
+@@||gelbooru.com/script/try.js|$script,first-party
+@@||gelbooru.com/script/try.js?$script,first-party
 
 ! 3. Actual WebM Videos (Legitmate WebM vids are loaded from /images/ only, otherwise is adverts!)
 @@||gelbooru.com/images/$media
@@ -185,6 +187,10 @@ gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
 ! 2. Stop exo_zones cookie deploy as first party, the ExoLoader function was called from application.js that whitelisted to unbreak site functional.
 !    Update: due to new update on Gelbooru was using the lazyload function to load all thumbnails, these rules will be halt
 !            until found a better solution to keep preventing ExoLoader wrote cookies on local storage as 1st-party.
+!    Update 2: They change the script name, likely they do in the fallback ILS to execute and re-deploy ads if some ads value was forbidden
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyy)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyy.addZone)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyy.serve)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector.domain_base)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader)
@@ -206,12 +212,15 @@ gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, adsbyjuicy
 gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop)
 
 ! 7. Experimental, I don't know how it does and how to use properly.
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ad_idzone, ad_width, ad_height, ad_tags)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, document.addEventListener, abvertDar)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, fuckingnormieswryyyy.domain_base)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, fuckingnormieswryyyy.addZone)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, fuckingnormieswryyyy.serve)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, BetterJsPop.add)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoDetector.domain_base)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.addZone)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.serve)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ad_idzone, ad_width, ad_height, ad_tags)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, document.addEventListener, abvertDar)
 
 ! - - - - - - - - - - CSS / Mobile Improvement - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking
@@ -242,6 +251,7 @@ gelbooru.com##script:contains(abvertDar)
 gelbooru.com##script:contains(ad_idzone)
 gelbooru.com##script:contains(adsbyjuicy)
 gelbooru.com##script:contains(advertVar)
+gelbooru.com##script:contains(fuckingnormieswryyyy.serve)
 gelbooru.com##script:contains(ExoDetector)
 gelbooru.com##script:contains(ExoLoader.serve)
 gelbooru.com##script:contains(trw_domain)

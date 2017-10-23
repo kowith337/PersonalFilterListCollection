@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201710190012
+! Version: 201710231333
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -13,6 +13,11 @@
 ! 3. Author/Owner/Contributor of gelbooru.com will frequently update their sites to keep ads appear.
 ! 4. for uB0 1.2.0 + Firefox 42 (and/or both newer) but Firefox <57 and installed uB0 Legacy, please look at 'legacy' branch
 !    for better privacy (because it still prevent ExoClick ads deployment and still load thumbnail without any problem)
+
+
+
+
+
 
 ! - - - - - - - - - - Generic - - - - - - - - - - !
 ! Block external hyperlinks, include CCBill ads and Patreon.
@@ -71,6 +76,8 @@ gelbooru.com##div[class^="sidebar"] a[target]:has(img)
 @@||gelbooru.com/script/application.js?$script,first-party
 @@||gelbooru.com/script/miscJs.js|$script,first-party
 @@||gelbooru.com/script/miscJs.js?$script,first-party
+@@||gelbooru.com/script/try.js|$script,first-party
+@@||gelbooru.com/script/try.js?$script,first-party
 
 ! 3. Actual WebM Videos (Legitmate WebM vids are loaded from /images/ only, otherwise is adverts!)
 @@||gelbooru.com/images/$media
@@ -185,9 +192,15 @@ gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
 ! 2. Stop exo_zones cookie deploy as first party, the ExoLoader function was called from application.js that whitelisted to unbreak site functional.
 !    Update: due to new update on Gelbooru was using the lazyload function to load all thumbnails, these rules will be halt
 !            until found a better solution to keep preventing ExoLoader wrote cookies on local storage as 1st-party.
+!    Update 2: They change the script name, likely they do in the fallback ILS to execute and re-deploy ads if some ads value was forbidden
+
+
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyy.addZone)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyy.serve)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector.domain_base)
-! gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader)
+
+
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.addZone)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.serve)
 
@@ -206,12 +219,16 @@ gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, adsbyjuicy
 gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop)
 
 ! 7. Experimental, I don't know how it does and how to use properly.
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ad_idzone, ad_width, ad_height, ad_tags)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, document.addEventListener, abvertDar)
+
+
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, fuckingnormieswryyyy.addZone)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, fuckingnormieswryyyy.serve)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, BetterJsPop.add)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoDetector.domain_base)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.addZone)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.serve)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ad_idzone, ad_width, ad_height, ad_tags)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, document.addEventListener, abvertDar)
 
 ! - - - - - - - - - - CSS / Mobile Improvement - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking
@@ -231,6 +248,43 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ! that's mean because they hard coded to load that function along with lazyload
 gelbooru.com##center div:matches-css(width: 300px)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ! - - - - - - - - - - For TheDouJin - - - - - - - - - - !
 ! Block all script same as Gelbooru, but only allow scripts from /assets because need for unbreak jQuery.
 ||thedoujin.com$script,subdocument
@@ -243,7 +297,10 @@ thedoujin.com##.boxTopLocContent center:if(div:matches-css(width: 300px))
 thedoujin.com##.boxTopLocContent center:if(div:matches-css(width: 728px))
 thedoujin.com##.container[style="text-align: center;"] div:matches-css(width: 300px)
 thedoujin.com##noscript
-thedoujin.com##script:contains(_gaq.push)
-thedoujin.com##script:contains(ad_idzone)
-thedoujin.com##script:contains(adnOpt)
-! thedoujin.com##script:contains(ExoLoader)
+
+
+
+
+
+
+
