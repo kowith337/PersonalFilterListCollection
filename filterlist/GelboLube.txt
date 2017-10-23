@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201710231333
+! Version: 201710231509
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -11,13 +11,9 @@
 ! 2. This rules not completely to hide ads and collapse space, but it still remove ads and unwanted resources.
 !    (e.g. subdocuments and other scripts file that no need to load them)
 ! 3. Author/Owner/Contributor of gelbooru.com will frequently update their sites to keep ads appear.
-! 4. for uB0 1.2.0 + Firefox 42 (and/or both newer) but Firefox <57 and installed uB0 Legacy, please look at 'legacy' branch
+! 4. for uB0 1.2.0 + Firefox 42 (and/or both newer) but Firefox <57 and installed uB0 Legacy, please look at 'legacy' version
 !    for better privacy (because it still prevent ExoClick ads deployment and still load thumbnail without any problem)
-
-
-
-
-
+!    as long as they didn't update their site to survive blocking so much...
 
 ! - - - - - - - - - - Generic - - - - - - - - - - !
 ! Block external hyperlinks, include CCBill ads and Patreon.
@@ -193,15 +189,8 @@ gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
 !    Update: due to new update on Gelbooru was using the lazyload function to load all thumbnails, these rules will be halt
 !            until found a better solution to keep preventing ExoLoader wrote cookies on local storage as 1st-party.
 !    Update 2: They change the script name, likely they do in the fallback ILS to execute and re-deploy ads if some ads value was forbidden
-
-
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyy.addZone)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyy.serve)
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector.domain_base)
-
-
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.addZone)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.serve)
 
 ! 3. [Deprecated] Prevent data collector from adnium.com to write script
@@ -221,13 +210,9 @@ gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop)
 ! 7. Experimental, I don't know how it does and how to use properly.
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ad_idzone, ad_width, ad_height, ad_tags)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, document.addEventListener, abvertDar)
-
-
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, fuckingnormieswryyyy.addZone)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, fuckingnormieswryyyy.serve)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, BetterJsPop.add)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoDetector.domain_base)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.addZone)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.serve)
 
 ! - - - - - - - - - - CSS / Mobile Improvement - - - - - - - - - - !
@@ -248,43 +233,6 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ! that's mean because they hard coded to load that function along with lazyload
 gelbooru.com##center div:matches-css(width: 300px)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ! - - - - - - - - - - For TheDouJin - - - - - - - - - - !
 ! Block all script same as Gelbooru, but only allow scripts from /assets because need for unbreak jQuery.
 ||thedoujin.com$script,subdocument
@@ -297,10 +245,3 @@ thedoujin.com##.boxTopLocContent center:if(div:matches-css(width: 300px))
 thedoujin.com##.boxTopLocContent center:if(div:matches-css(width: 728px))
 thedoujin.com##.container[style="text-align: center;"] div:matches-css(width: 300px)
 thedoujin.com##noscript
-
-
-
-
-
-
-
