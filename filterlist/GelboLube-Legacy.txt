@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube (Legacy)
-! Version: 201710231333
+! Version: 201711030104
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -13,6 +13,7 @@
 ! 3. Author/Owner/Contributor of gelbooru.com will frequently update their sites to keep ads appear.
 ! 4. for Chromium, uB0 WebExtension, Firefox 57+ users, you can move to normal version at your own risk! because blocking
 !    ExoLoader function is also prevent 'lazyload' to be execute, I've allowed them because I have no choice (right now)
+
 
 ! - - - - - - - - - - Generic - - - - - - - - - - !
 ! Block external hyperlinks, include CCBill ads and Patreon.
@@ -34,8 +35,13 @@ gelbooru.com##a[rel="nofollow"] video
 ! Block ExoClick iFrame (Not sure is it still exist?)
 gelbooru.com##iframe[src*="exoclick"]
 
-! Leftover ad space above of image list / image view
+! Leftover ad space above of image list / image view and below page number
+! Those was hidden already by 3p requests block, such as R18.com banner, ad frame from ContentABC.com
 gelbooru.com##.contain-push .hidden-xs[style*="max-width: 728px"]
+gelbooru.com##.contain-push center .hidden-xs:if(iframe[name^="spot_id"])
+
+! This mean they trying to make an overlay to fire away users who use content blocker, I guess.
+gelbooru.com##body div[style*="z-index"]:matches-css(width: 100%)
 
 ! Trying to block NoScript
 gelbooru.com##noscript
@@ -214,10 +220,10 @@ gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop)
 ! 7. Experimental, I don't know how it does and how to use properly.
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ad_idzone, ad_width, ad_height, ad_tags)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, document.addEventListener, abvertDar)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, fuckingnormieswryyyy.domain_base)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, fuckingnormieswryyyy.addZone)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, fuckingnormieswryyyy.serve)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, BetterJsPop.add)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoDetector)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoDetector.domain_base)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.addZone)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.serve)
