@@ -1,12 +1,12 @@
 [uBlock Origin 1.14.9]
 ! Title: Personal Miscellaneous Annoyance
-! Version: 201710021528
+! Version: 201711052241
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
 
 ! An uncategorized / out of scope of site or topic to create the stand alone filterlists
-! will be stay here until the specific site or catefory are have enough rules.
+! will be stay here until the specific site or category are have enough rules.
 
 ! DOM Generic (Coming Soon)
 
@@ -26,6 +26,15 @@ randomnessthing.com##script:contains(Criteo)
 randomnessthing.com##script:inject(abort-on-property-read.js, Criteo)
 randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptableAdIfAdblocked)
 
+! HOW ABOUT NO
+wallgif.com###overlay:if(img[alt="Loader"])
+wallgif.com##content .big-modal
+wallgif.com##content .big_modal_bg
+wallgif.com##content div[id^=block_modal]
+||bnserving.com$domain=wallgif.com,important
+||cpm10.com$domain=wallgif.com,important
+||newrelic.com$domain=wallgif.com,important
+
 ! - - - - - - - - - - Block Page(s) / Redirect annoyance - - - - - - - - - - !
 ! Some extensions that hosted with add0n are show the popup
 ||add0n.com$document
@@ -33,7 +42,7 @@ randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptable
 ||add0n.com$popup
 
 ! Some extensions at Mozilla (mostly if it have suggest to contribute via donation)
-! is redirect to developer profile after installed.
+! is redirect to developer profile page after installed.
 ||addons.mozilla.org/*/addon/*/developers$document
 
 ! - - - - - - - - - - Minecraft - - - - - - - - - - !
@@ -44,10 +53,12 @@ randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptable
 ! - All download URLs will not have underline an also unble to click, the only way to download is just click the (i) icon beside "Download" text,
 !   that's the way you can get the direct download for this.
 files.minecraftforge.net##.ad-container
-files.minecraftforge.net##.sidebar-right:has(.ad-container)
+files.minecraftforge.net##.ad-container-framed
 files.minecraftforge.net##.download-list-wrapper .download-files .download-links li a[href*="adfoc.us/"]:style(pointer-events: none !important; text-decoration: none !important)
-files.minecraftforge.net##.downloads .download .links .link-left:if(a[href*="adfoc.us/"])
-files.minecraftforge.net##.downloads .download .links .links-right .link:if(a[href*="adfoc.us/"])
+files.minecraftforge.net##.downloads .download .links .link-left:if(a[href*="adfoc.us/"]):style(pointer-events: none !important)
+files.minecraftforge.net##.downloads .download .links .links-right .link:if(a[href*="adfoc.us/"]):style(pointer-events: none !important)
+files.minecraftforge.net##.sidebar-right:if(.ad-container)
+files.minecraftforge.net##.sidebar-right:if(.ad-container-framed)
 
 ! http://chocolateminecraft.com
 ! Use both AdFly and NetBee (Older version of mods)

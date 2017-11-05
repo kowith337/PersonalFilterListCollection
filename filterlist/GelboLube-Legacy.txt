@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube (Legacy)
-! Version: 201711030104
+! Version: 201711052252
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -13,7 +13,6 @@
 ! 3. Author/Owner/Contributor of gelbooru.com will frequently update their sites to keep ads appear.
 ! 4. for Chromium, uB0 WebExtension, Firefox 57+ users, you can move to normal version at your own risk! because blocking
 !    ExoLoader function is also prevent 'lazyload' to be execute, I've allowed them because I have no choice (right now)
-
 
 ! - - - - - - - - - - Generic - - - - - - - - - - !
 ! Block external hyperlinks, include CCBill ads and Patreon.
@@ -98,7 +97,7 @@ gelbooru.com##div[class^="sidebar"] a[target]:has(img)
 @@||gelbooru.com/ads.js?$script
 @@||youhate.us/ads.js?$script
 
-! 6. Allow lazyload script to be loaded because function to load thumbnail is depend on this, since today's update (2017/10/03)
+! 6. Allow lazyload script to be loaded because function to load thumbnail is depend on this, since 2017/10/03
 @@||gelbooru.com/script/lazyload.js?$script,first-party
 
 ! Unused
