@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201711052252
+! Version: 201711091737
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -237,7 +237,9 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 
 ! Use 'matches-css' to remove placeholder after allowed 'ExoLoader.addZone' to generate advert space
 ! that's mean because they hard coded to load that function along with lazyload
-gelbooru.com##center div:matches-css(width: 300px)
+gelbooru.com###searchTags div:matches-css(height: 600px)
+gelbooru.com##.contain-push center center div:matches-css(width: 1000px)
+gelbooru.com##.contain-push center div:matches-css(width: 300px)
 
 ! - - - - - - - - - - For TheDouJin - - - - - - - - - - !
 ! Block all script same as Gelbooru, but only allow scripts from /assets because need for unbreak jQuery.
