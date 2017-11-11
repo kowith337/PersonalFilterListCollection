@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11]
 ! Title: GelboLube
-! Version: 201711091737
+! Version: 201711112041
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -15,7 +15,7 @@
 !    for better privacy (because it still prevent ExoClick ads deployment and still load thumbnail without any problem)
 !    as long as they didn't update their site to survive blocking so much...
 
-! - - - - - - - - - - Generic - - - - - - - - - - !
+! - - - - - - - - - - Element Hiding  - - - - - - - - - - !
 ! Block external hyperlinks, include CCBill ads and Patreon.
 ! gelbooru.com##.content #nup
 ! gelbooru.com##.sidebar #tup
@@ -61,18 +61,28 @@ gelbooru.com##div[class^="sidebar"] a[target]:has(img)
 !    I don't think this rule will be work anymore, but just in case if they re-use this.
 ! gelbooru.com##div[style*="width:1000px"]:has(script)
 
-! Block Every videos, subdocs and scripts (See Unbreak for exception)
+! 4. Use 'matches-css' to remove placeholder after allowed 'ExoLoader.addZone' to generate advert space
+gelbooru.com###searchTags div:matches-css(height: 600px)
+gelbooru.com##.contain-push center center div:matches-css(width: 1000px)
+gelbooru.com##.contain-push center div:matches-css(width: 300px)
+
+! - - - - - - - - - - (Pre-) Unbreak - - - - - - - - - - !
+! 0. [Prequel] Block Every videos, subdocs and scripts (See below for what things could be exclude)
 ||gelbooru.com$media
 ||gelbooru.com$script
 ||gelbooru.com$subdocument
 
-! - - - - - - - - - - Unbreak - - - - - - - - - - !
 ! 1. Allow jQuery from GoogleAPIs and BootStrap (suggested by toshiya44)
 @@||ajax.googleapis.com/ajax/libs/jquery/*$script,domain=gelbooru.com
 @@||bootstrapcdn.com/bootstrap/*$script,domain=gelbooru.com
 @@||gelbooru.com/script/jquery*$script,first-party
 
-! 2. Core scripts, but 'application.js' is questionable due to it's have "ExoLoader" function inside that script.
+! 2. Useful scripts
+! - [application.js] is questionable due to it's have "ExoLoader" function inside that script.
+! - [miscJs.js] is allowed for autocomplete search
+! - [try.js] is exactly to execute function to deploy ads from ExoClick, but if blocked this,
+!   the site and thumbnails will completely broke! But don't worry, some ##script:() rules can
+!   make those functions harmless to you...
 @@||gelbooru.com/script/application.js|$script,first-party
 @@||gelbooru.com/script/application.js?$script,first-party
 @@||gelbooru.com/script/miscJs.js|$script,first-party
@@ -101,7 +111,7 @@ gelbooru.com##div[class^="sidebar"] a[target]:has(img)
 ! 6. Allow lazyload script to be loaded because function to load thumbnail is depend on this, since 2017/10/03
 @@||gelbooru.com/script/lazyload.js?$script,first-party
 
-! Unused
+! [Deprecated jQuery Whitelist]
 ! @@||gelbooru.com/script/jqueryMisc.js|$script
 ! @@||gelbooru.com/script/jqueryNotes.js|$script
 ! @@||gelbooru.com/script/jqueryPools.js|$script
@@ -117,7 +127,8 @@ gelbooru.com##div[class^="sidebar"] a[target]:has(img)
 ||gelbooru.com$inline-script,badfilter
 
 ! 2. Counter uBlock Assets that's allow script from first party domains entirely, I cannot predict the possibility about when they placed
-!    hostile scripts at top level or somewhere else, only allow scripts from '/script/' is still safe for now...
+!    hostile scripts at top level or somewhere else, due to they frequently update their ads code and change the backend script name often
+!    that you can see they use 'bed.php', 'bed2.php', 'bluet.php' and such, current plan is only allow scripts one-by-one is safe for now.
 @@||gelbooru.com^$first-party,script,badfilter
 
 ! 3. Counter EasyList and/or Fanboy lists (Esp. Enhanced tracking OR Ultimate / What are they doing right now?)
@@ -160,10 +171,14 @@ gelbooru.com##div[class^="sidebar"] a[target]:has(img)
 
 ! 5. Block hostile scripts that load as php, it's an ad script that foolish exception rule and loaded as php doc.
 ||gelbooru.com/bed.php$important
+||gelbooru.com/bed2.php$important
+||gelbooru.com/bluet.php$important
 ||gelbooru.com/script/application.js.php$important
 ||gelbooru.com/script/bed.php$important
+||gelbooru.com/script/bed2.php$important
+||gelbooru.com/script/bluet.php$important
 
-! 6. Block advert images (currently placed as /thumbnails/0A, they may change location and/or filename, but legitmate thumbnail will have ? referrer after.)
+! 6. Block ahead to prevent advert images that placed as /thumbnails/0X/, this will supply by Unbreak #4 that actually load legit thumbnails.
 !    Now reduce priority for [*.jpg] due to it's use for other appearance, such as recent comments that load thumbnail images without ?<PostID> referrer.
 !    Also prevent repetitive requests that their currently using, like request as "other" type instead of original one.
 ||gelbooru.com/thumbnails/*.jpg|
@@ -173,16 +188,16 @@ gelbooru.com##div[class^="sidebar"] a[target]:has(img)
 ! 7. Block "v.php" XHR, Don't know what it does, but I think it's maybe the cause of deploying CloudFlare session cookie. (__cfduid)
 ||gelbooru.com/v.php$xmlhttprequest,important
 
-! 8. To preventing resources request abuse that they trying to reload as 'other' for able to re-access blocked JavaScript function.
+! 8. To preventing resources request abuse that they trying to reload blocked resources as 'other' for able to re-access blocked JavaScript function
+!    and/or re-deploy ads and such.
 ||gelbooru.com/ads.js$~script,important
 ||gelbooru.com/script/application.js$~script,important
 ||youhate.us/ads.js$~script,important
 ||gelbooru.com/*.php*$~document,~inline-script,~xmlhttprequest
 ||gelbooru.com/*.php?$~document,~inline-script,~xmlhttprequest
 
-! 9. Useless scripts that fooled to seems like it's useful, but the real thing is for using with new method of popunder ads! (for sure)
+! 9. Useless scripts that fooled to seems like it's useful, but the real thing is for using to silently detect content blocker.
 ||gelbooru.com/script/license$important
-! ||gelbooru.com/script/miscJs$important
 
 ! - - - - - - - - - - Inject Scriptlets - - - - - - - - - - !
 ! 1. Block attempt to rewrite adverts under paginator via reading some value, doing this also stop advert images requests.
@@ -194,10 +209,10 @@ gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
 !    Update: due to new update on Gelbooru was using the lazyload function to load all thumbnails, these rules will be halt
 !            until found a better solution to keep preventing ExoLoader wrote cookies on local storage as 1st-party.
 !    Update 2: They change the script name, likely they do in the fallback ILS to execute and re-deploy ads if some ads value was forbidden
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyy.serve)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, EXoDetector)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector)
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector.domain_base)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.serve)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyy.serve)
 
 ! 3. [Deprecated] Prevent data collector from adnium.com to write script
 ! gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, adnOpt)
@@ -209,19 +224,19 @@ gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, GoogleAnal
 ! 5. Prevent JuicyAds execute, same behavior as Google Analytics
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, adsbyjuicy)
 
-! 6. New BetterJsPop popunder that currently testing to show thedoujin site as popunder,
-!    a same method that how ExoClick serving ads.
+! 6. New BetterJsPop popunder that currently testing to show thedoujin site as popunder.
 gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop)
 
 ! 7. Experimental, I don't know how it does and how to use properly.
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ad_idzone, ad_width, ad_height, ad_tags)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, document.addEventListener, abvertDar)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, addEventListener, abvertDar)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, fuckingnormieswryyyy.serve)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, BetterJsPop.add)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoDetector.domain_base)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, BetterJsPop)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, EXoDetector)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, ExoDetector)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, ad_idzone)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.serve)
 
-! - - - - - - - - - - CSS / Mobile Improvement - - - - - - - - - - !
+! - - - - - - - - - - CSS Re-design / Mobile Improvement - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking
 ! because it ate up space almost half of screen from top.
 ! This will surely conflict when you request desktop view or when you're already use desktop browser.
@@ -234,12 +249,6 @@ gelbooru.com##.navbar.navbar-default .navbar-brand:style(display: none !importan
 gelbooru.com##.navbar.navbar-default .navbar-header button.navbar-toggle:style(float:left !important; margin-left: 10px !important; margin-right: 0px !important)
 gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ! gelbooru.com###post-view #right-col div #image[src*="sample"]:style(width: 100% !important)
-
-! Use 'matches-css' to remove placeholder after allowed 'ExoLoader.addZone' to generate advert space
-! that's mean because they hard coded to load that function along with lazyload
-gelbooru.com###searchTags div:matches-css(height: 600px)
-gelbooru.com##.contain-push center center div:matches-css(width: 1000px)
-gelbooru.com##.contain-push center div:matches-css(width: 300px)
 
 ! - - - - - - - - - - For TheDouJin - - - - - - - - - - !
 ! Block all script same as Gelbooru, but only allow scripts from /assets because need for unbreak jQuery.
