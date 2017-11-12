@@ -1,6 +1,6 @@
-[uBlock Origin 1.14.11]
+[uBlock Origin 1.14.11.0]
 ! Title: GelboLube (Legacy)
-! Version: 201711112041
+! Version: 201711112055
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection

@@ -3,24 +3,24 @@
 
 ### Lists that already available in uBlock, but need to enable manually.
 - [3] [Spyware](https://kb.adguard.com/en/general/adguard-ad-filters#spyware-filter)
+- [11] [Mobile Ads](https://kb.adguard.com/en/general/adguard-ad-filters#mobile-ads-filter) (This will turn on by default if you use Firefox for Android or [other related apps](https://github.com/kowith337/ThaiParanoidBlock/wiki/Other-Firefox-based-browser))
 - [14] [Annoyance](https://kb.adguard.com/en/general/adguard-ad-filters#annoyances-filter) (Branding Nag)
 ```
 https://filters.adtidy.org/extension/ublock/filters/3.txt
+https://filters.adtidy.org/extension/ublock/filters/11.txt
 https://filters.adtidy.org/extension/ublock/filters/14.txt
 ```
 
-### Lists that currently using
+### Useful Lists
 - [2] [English](https://kb.adguard.com/en/general/adguard-ad-filters#english-filter) (Already include AdGuard Base in uBlock, maybe)
 - [4] [Social Network](https://kb.adguard.com/en/general/adguard-ad-filters#social-media-filter)
 - [5] [Experimental](https://kb.adguard.com/en/general/adguard-ad-filters#experimental-filter)
-- [11] [Mobile Ads](https://kb.adguard.com/en/general/adguard-ad-filters#mobile-ads-filter)
 - [12] [Safari](https://kb.adguard.com/en/general/adguard-ad-filters#safari-filter) (Browser)
 - [15] [Simplified DNS](https://kb.adguard.com/en/general/adguard-ad-filters#simplified-domain-names-filter)
 ```
 https://filters.adtidy.org/extension/ublock/filters/2.txt
 https://filters.adtidy.org/extension/ublock/filters/4.txt
 https://filters.adtidy.org/extension/ublock/filters/5.txt
-https://filters.adtidy.org/extension/ublock/filters/11.txt
 https://filters.adtidy.org/extension/ublock/filters/12.txt
 https://filters.adtidy.org/extension/ublock/filters/15.txt
 ```
