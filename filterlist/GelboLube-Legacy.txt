@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11.0]
 ! Title: GelboLube (Legacy)
-! Version: 201711112055
+! Version: 201711172237
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -79,15 +79,15 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ! 2. Useful scripts
 ! - [application.js] is questionable due to it's have "ExoLoader" function inside that script.
 ! - [miscJs.js] is allowed for autocomplete search
-! - [try.js] is exactly to execute function to deploy ads from ExoClick, but if blocked this,
+! - {Deprecated} [try.js] is exactly to execute function to deploy ads from ExoClick, but if blocked this,
 !   the site and thumbnails will completely broke! But don't worry, some ##script:() rules can
 !   make those functions harmless to you...
 @@||gelbooru.com/script/application.js|$script,first-party
 @@||gelbooru.com/script/application.js?$script,first-party
 @@||gelbooru.com/script/miscJs.js|$script,first-party
 @@||gelbooru.com/script/miscJs.js?$script,first-party
-@@||gelbooru.com/script/try.js|$script,first-party
-@@||gelbooru.com/script/try.js?$script,first-party
+! @@||gelbooru.com/script/try.js|$script,first-party
+! @@||gelbooru.com/script/try.js?$script,first-party
 
 ! 3. Actual WebM Videos (Legitmate WebM vids are loaded from /images/ only, otherwise is adverts!)
 @@||gelbooru.com/images/$media
@@ -189,11 +189,12 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 
 ! 8. To preventing resources request abuse that they trying to reload blocked resources as 'other' for able to re-access blocked JavaScript function
 !    and/or re-deploy ads and such.
-||gelbooru.com/ads.js$~script,important
-||gelbooru.com/script/application.js$~script,important
-||youhate.us/ads.js$~script,important
 ||gelbooru.com/*.php*$~document,~inline-script,~xmlhttprequest
 ||gelbooru.com/*.php?$~document,~inline-script,~xmlhttprequest
+||gelbooru.com/ads.js$~script,important
+||gelbooru.com/script/application.js$~script,important
+||gelbooru.com/script/try.js$~script,important
+||youhate.us/ads.js$~script,important
 
 ! 9. Useless scripts that fooled to seems like it's useful, but the real thing is for using to silently detect content blocker.
 ||gelbooru.com/script/license$important
@@ -210,7 +211,8 @@ gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
 !    Update 2: They change the script name, likely they do in the fallback ILS to execute and re-deploy ads if some ads value was forbidden
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, EXoDetector)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector)
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.addZone)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.serve)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyy)
 
 ! 3. [Deprecated] Prevent data collector from adnium.com to write script
@@ -223,7 +225,7 @@ gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, GoogleAnal
 ! 5. Prevent JuicyAds execute, same behavior as Google Analytics
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, adsbyjuicy)
 
-! 6. New BetterJsPop popunder that currently testing to show thedoujin site as popunder,
+! 6. New BetterJsPop popunder that currently testing to show thedoujin site as popunder.
 gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop)
 
 ! 7. Experimental, I don't know how it does and how to use properly.
@@ -232,9 +234,9 @@ gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, fuckin
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, BetterJsPop)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, EXoDetector)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, ExoDetector)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, ExoLoader.addZone)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, ExoLoader.serve)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, ad_idzone)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.addZone)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, ExoLoader.serve)
 
 ! - - - - - - - - - - CSS Re-design / Mobile Improvement - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking
@@ -263,7 +265,7 @@ gelbooru.com##script:contains(adsbyjuicy)
 gelbooru.com##script:contains(advertVar)
 gelbooru.com##script:contains(fuckingnormieswryyyy.serve)
 gelbooru.com##script:contains(ExoDetector)
-gelbooru.com##script:contains(ExoLoader.serve)
+gelbooru.com##script:contains(ExoLoader)
 gelbooru.com##script:contains(trw_domain)
 gelbooru.com##script:contains(BetterJsPop)
 gelbooru.com##script:contains(GoogleAnalyticsObject)
