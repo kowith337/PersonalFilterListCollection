@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11.0]
 ! Title: GelboLube (Legacy)
-! Version: 201711172304
+! Version: 201711172341
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -79,15 +79,15 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ! 2. Useful scripts
 ! - [application.js] is questionable due to it's have "ExoLoader" function inside that script.
 ! - [miscJs.js] is allowed for autocomplete search
-! - [try.js] is exactly to execute function to deploy ads from ExoClick, but if blocked this,
+! - {Halt} [try.js] is exactly to execute function to deploy ads from ExoClick, but if blocked this,
 !   the site and thumbnails will completely broke! But don't worry, some ##script:() rules can
 !   make those functions harmless to you...
 @@||gelbooru.com/script/application.js|$script,first-party
 @@||gelbooru.com/script/application.js?$script,first-party
 @@||gelbooru.com/script/miscJs.js|$script,first-party
 @@||gelbooru.com/script/miscJs.js?$script,first-party
-@@||gelbooru.com/script/try.js|$script,first-party
-@@||gelbooru.com/script/try.js?$script,first-party
+! @@||gelbooru.com/script/try.js|$script,first-party
+! @@||gelbooru.com/script/try.js?$script,first-party
 
 ! 3. Actual WebM Videos (Legitmate WebM vids are loaded from /images/ only, otherwise is adverts!)
 @@||gelbooru.com/images/$media
@@ -193,7 +193,7 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ||gelbooru.com/*.php?$~document,~inline-script,~xmlhttprequest
 ||gelbooru.com/ads.js$~script,important
 ||gelbooru.com/script/application.js$~script,important
-||gelbooru.com/script/try.js$~script,important
+||gelbooru.com/script/try.js$important
 ||youhate.us/ads.js$~script,important
 
 ! 9. Useless scripts that fooled to seems like it's useful, but the real thing is for using to silently detect content blocker.
@@ -274,6 +274,12 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ! - Only the legacy version of uBlock Origin can be used these rules, the legacy version will be no longer release and get updated
 !   when stable version of Firefox 57 released, or maybe need someone to clone and port to keep extended support for legacy version.
 ! - Keep in mind because they may rename some function to survive blocking, such as change [advertVar] to [abvertDar]
+gelbooru.com##script:contains(.addZone)
+gelbooru.com##script:contains(.serve)
+gelbooru.com##script:contains(BetterJsPop)
+gelbooru.com##script:contains(ExoDetector)
+gelbooru.com##script:contains(ExoLoader)
+gelbooru.com##script:contains(GoogleAnalyticsObject)
 gelbooru.com##script:contains(_gaq.push)
 gelbooru.com##script:contains(abvertDar)
 gelbooru.com##script:contains(ad_idzone)
@@ -281,11 +287,7 @@ gelbooru.com##script:contains(adsbyjuicy)
 gelbooru.com##script:contains(advertVar)
 gelbooru.com##script:contains(fuckingnormieswryyyy)
 gelbooru.com##script:contains(fuckingnormieswryyyyy)
-gelbooru.com##script:contains(ExoDetector)
-gelbooru.com##script:contains(ExoLoader)
 gelbooru.com##script:contains(trw_domain)
-gelbooru.com##script:contains(BetterJsPop)
-gelbooru.com##script:contains(GoogleAnalyticsObject)
 ! gelbooru.com##script:contains(adnOpt)
 
 ! - - - - - - - - - - For TheDouJin - - - - - - - - - - !
