@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11.0]
 ! Title: GelboLube (Legacy)
-! Version: 201711172237
+! Version: 201711172304
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -79,15 +79,15 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ! 2. Useful scripts
 ! - [application.js] is questionable due to it's have "ExoLoader" function inside that script.
 ! - [miscJs.js] is allowed for autocomplete search
-! - {Deprecated} [try.js] is exactly to execute function to deploy ads from ExoClick, but if blocked this,
+! - [try.js] is exactly to execute function to deploy ads from ExoClick, but if blocked this,
 !   the site and thumbnails will completely broke! But don't worry, some ##script:() rules can
 !   make those functions harmless to you...
 @@||gelbooru.com/script/application.js|$script,first-party
 @@||gelbooru.com/script/application.js?$script,first-party
 @@||gelbooru.com/script/miscJs.js|$script,first-party
 @@||gelbooru.com/script/miscJs.js?$script,first-party
-! @@||gelbooru.com/script/try.js|$script,first-party
-! @@||gelbooru.com/script/try.js?$script,first-party
+@@||gelbooru.com/script/try.js|$script,first-party
+@@||gelbooru.com/script/try.js?$script,first-party
 
 ! 3. Actual WebM Videos (Legitmate WebM vids are loaded from /images/ only, otherwise is adverts!)
 @@||gelbooru.com/images/$media
@@ -210,10 +210,18 @@ gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
 !            until found a better solution to keep preventing ExoLoader wrote cookies on local storage as 1st-party.
 !    Update 2: They change the script name, likely they do in the fallback ILS to execute and re-deploy ads if some ads value was forbidden
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, EXoDetector)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, EXoDetector.domain_base)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector.domain_base)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.addZone)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.serve)
 gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyy)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyy.addZone)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyy.serve)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyyy)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyyy.addZone)
+gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyyy.serve)
 
 ! 3. [Deprecated] Prevent data collector from adnium.com to write script
 ! gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, adnOpt)
@@ -233,10 +241,18 @@ gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, addEve
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, fuckingnormieswryyyy.serve)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, BetterJsPop)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, EXoDetector)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, EXoDetector.domain_base)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, ExoDetector)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, ExoDetector.domain_base)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, ExoLoader.addZone)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, ExoLoader.serve)
 gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, ad_idzone)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, fuckingnormieswryyyy)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, fuckingnormieswryyyy.addZone)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, fuckingnormieswryyyy.serve)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, fuckingnormieswryyyyy)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, fuckingnormieswryyyyy.addZone)
+gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, fuckingnormieswryyyyy.serve)
 
 ! - - - - - - - - - - CSS Re-design / Mobile Improvement - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking
@@ -263,7 +279,8 @@ gelbooru.com##script:contains(abvertDar)
 gelbooru.com##script:contains(ad_idzone)
 gelbooru.com##script:contains(adsbyjuicy)
 gelbooru.com##script:contains(advertVar)
-gelbooru.com##script:contains(fuckingnormieswryyyy.serve)
+gelbooru.com##script:contains(fuckingnormieswryyyy)
+gelbooru.com##script:contains(fuckingnormieswryyyyy)
 gelbooru.com##script:contains(ExoDetector)
 gelbooru.com##script:contains(ExoLoader)
 gelbooru.com##script:contains(trw_domain)
