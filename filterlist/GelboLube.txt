@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11.0]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201711172313
+! Version: 201711182054
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -14,7 +14,6 @@
 ! 4. for uB0 1.2.0 + Firefox 42 (and/or both newer) but Firefox <57 and installed uB0 Legacy, please look at 'legacy' version
 !    for better privacy (because it still prevent ExoClick ads deployment and still load thumbnail without any problem)
 !    as long as they didn't update their site to survive blocking so much...
-
 
 ! - - - - - - - - - - Element Hiding  - - - - - - - - - - !
 ! Block external hyperlinks, include CCBill ads and Patreon.
@@ -81,15 +80,15 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ! 2. Useful scripts
 ! - [application.js] is questionable due to it's have "ExoLoader" function inside that script.
 ! - [miscJs.js] is allowed for autocomplete search
-! - [try.js] is exactly to execute function to deploy ads from ExoClick, but if blocked this,
+! - {Halt} [try.js] is exactly to execute function to deploy ads from ExoClick, but if blocked this,
 !   the site and thumbnails will completely broke! But don't worry, some ##script:() rules can
 !   make those functions harmless to you...
 @@||gelbooru.com/script/application.js|$script,first-party
 @@||gelbooru.com/script/application.js?$script,first-party
 @@||gelbooru.com/script/miscJs.js|$script,first-party
 @@||gelbooru.com/script/miscJs.js?$script,first-party
-@@||gelbooru.com/script/try.js|$script,first-party
-@@||gelbooru.com/script/try.js?$script,first-party
+! @@||gelbooru.com/script/try.js|$script,first-party
+! @@||gelbooru.com/script/try.js?$script,first-party
 
 ! 3. Actual WebM Videos (Legitmate WebM vids are loaded from /images/ only, otherwise is adverts!)
 @@||gelbooru.com/images/$media
@@ -195,7 +194,7 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ||gelbooru.com/*.php?$~document,~inline-script,~xmlhttprequest
 ||gelbooru.com/ads.js$~script,important
 ||gelbooru.com/script/application.js$~script,important
-||gelbooru.com/script/try.js$~script,important
+||gelbooru.com/script/try.js$important
 ||youhate.us/ads.js$~script,important
 
 ! 9. Useless scripts that fooled to seems like it's useful, but the real thing is for using to silently detect content blocker.
