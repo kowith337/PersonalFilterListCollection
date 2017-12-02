@@ -14,7 +14,13 @@
 - If you curious about CSP report that some sites used this feature to track users and report to home server that user abusing web content (blocking ads or change page appearance), you can checkmark `Block CSP reports` option.
 
 ### 3rd-party filters
-- Recommended to have all of uBlock Filters loaded (may include experimental, if needed)
+- Recommended to have all of **uBlock Filters** loaded
+  - uBlock Filters *(This is the heart of uBlock that enhance the default list supscriptions)*
+  - uBlock Filters - Badware Risks *(Warn and block sits that potentially serve adware while you're trying to find and install popular programs)*
+  - uBlock Filters - Experimental *(for testing new type of blocking, scriptlets and redirect to neutered resources)*
+  - uBlock Filters - Privacy *(this will block more 3rd party ads/tracking hits)*
+  - uBlock Filters - Resource abuse *(this block the resources/domains that use your machine performance, such as cryptomining, peer-to-peer CDN and such...)*
+  - uBlock Filters - Unbreak *(to unbreak mistaken block/hide and also fool the site that can detect content blocking)*
 - *More guide is yet to come...*
 
 ### Whitelist

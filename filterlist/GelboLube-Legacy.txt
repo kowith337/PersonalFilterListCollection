@@ -1,18 +1,18 @@
 [uBlock Origin 1.14.11.0]
-! Title: GelboLube (Legacy)
-! Version: 201711172341
+! Title: GelboLube (Firefox Legacy)
+! Version: 201712021526
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! From: https://github.com/kowith337/GelboLube/raw/legacy/gelbolube.txt
 
-! 1. It doesn't matter to have any checksum tools because uBo is now fully support filterlists that created on GitHub
-!    and regularly auto check itself when it's outdated more than 2 days.
+! 1. It doesn't matter to have any checksum tools because uBo is now fully support filterlists that created on GitHub and regularly
+!    auto check itself when it's outdated more than 2 days.
 ! 2. This rules not completely to hide ads and collapse space, but it still remove ads and unwanted resources.
 !    (e.g. subdocuments and other scripts file that no need to load them)
 ! 3. Author/Owner/Contributor of gelbooru.com will frequently update their sites to keep ads appear.
-! 4. for Chromium, uB0 WebExtension, Firefox 57+ users, you can move to normal version at your own risk! because blocking
-!    ExoLoader function is also prevent 'lazyload' to be execute, I've allowed them because I have no choice (right now)
+! 4. for Chromium, uB0 WebExtension, Firefox 57+ users, you can move to normal version at your own risk! because blocking ExoLoader function
+!    is also prevent 'lazyload' to be execute, I've allowed them because I have no choice (right now)
 
 ! - - - - - - - - - - Element Hiding  - - - - - - - - - - !
 ! Block external hyperlinks, include CCBill ads and Patreon.
@@ -49,7 +49,8 @@ gelbooru.com##noscript
 ! 1. [Deprecated by lazyload] Now they replace all legitmate posts link (clickable image list thumbnails) with tracked/redirected links to
 !    mess the hyperlink blocking, I've adjusted with "if-not" to make sure it doesn't accidentally remove legitmate thumbnails again
 !    to prevent popped out new tab/window to show ads sites separately.
-!    Note: only advert images that not loaded from specific location will be work, e.g. (//assets.gelbooru.com/thumbnails/**/**/thumbnail_...)
+!    Note: only advert images that not loaded from specific location will be work,
+!    e.g. (//assets.gelbooru.com/thumbnails/**/**/thumbnail_<md5>.jpg)
 ! gelbooru.com##a[href*="redirect.php"]:if-not(img[src*="/thumbnail_"])
 ! gelbooru.com###post-list #content a[href*="redirect.php"]:if-not(img[src*="/thumbnail_"])
 
@@ -79,9 +80,8 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ! 2. Useful scripts
 ! - [application.js] is questionable due to it's have "ExoLoader" function inside that script.
 ! - [miscJs.js] is allowed for autocomplete search
-! - {Halt} [try.js] is exactly to execute function to deploy ads from ExoClick, but if blocked this,
-!   the site and thumbnails will completely broke! But don't worry, some ##script:() rules can
-!   make those functions harmless to you...
+! - {Halt} [try.js] is exactly to execute function to deploy ads from ExoClick, but if blocked this, the site and thumbnails will completely
+!   broke! But don't worry, some ##script:() rules can make those functions harmless to you...
 @@||gelbooru.com/script/application.js|$script,first-party
 @@||gelbooru.com/script/application.js?$script,first-party
 @@||gelbooru.com/script/miscJs.js|$script,first-party
@@ -96,7 +96,7 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ! 4. Legitmate thumbnails conclusion
 !       a. Blame to Gelbooru's false that place advert images into "/0A/" (now they use "/0C/")
 !       b. some filterlists blocking part of "/ad/"
-!    Note: all thumbnails are loaded as jpg files and have image id assigned after ?, ex. (thumbnail_8486c668859b0821a69336448abc5340.jpg?3618398)
+!    Note: all thumbnails are loaded as jpg files and have image id assigned after ?, ex. (thumbnail_<md5>.jpg?<postid>)
 @@||gelbooru.com/thumbnails/*/*/thumbnail_*.jpg$image
 @@||gelbooru.com/thumbnails/*/*/thumbnail_*.jpg?$image
 
@@ -142,21 +142,23 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ! - - - - - - - - - - Strict blocking - - - - - - - - - - !
 ! 1. Third party their use to serve ads and track users.
 !    Now using $important tag due to counter EasyList filters that whitelist ExoClick script ads.
-||4uvjosuc.com$domain=gelbooru.com|thedoujin.com,important
-||adnium.com$domain=gelbooru.com|thedoujin.com,important
-||contentabc.com$domain=gelbooru.com|thedoujin.com,important
-||ccbill.com$domain=gelbooru.com|thedoujin.com,important
-||dynsrvaba.com$domain=gelbooru.com|thedoujin.com,important
-||exoclick.com$domain=gelbooru.com|thedoujin.com,important
-||exosrv.com$domain=gelbooru.com|thedoujin.com,important
-||google-analytics.com$domain=gelbooru.com|thedoujin.com,important
-||jabcomix.com$domain=gelbooru.com|thedoujin.com,important
-||juicyads.com$domain=gelbooru.com|thedoujin.com,important
-||mnfclub.com$domain=gelbooru.com|thedoujin.com,important
-||r18.com$domain=gelbooru.com|thedoujin.com,important
-||tsyndicate.com$domain=gelbooru.com|thedoujin.com,important
-||twitter.com$domain=gelbooru.com|thedoujin.com,important
-||verotel.com$domain=gelbooru.com|thedoujin.com,important
+||4uvjosuc.com$domain=gelbooru.com,important
+||adnium.com$domain=gelbooru.com,important
+||atas.io$domain=gelbooru.com,important
+||contentabc.com$domain=gelbooru.com,important
+||ccbill.com$domain=gelbooru.com,important
+||dynsrvaba.com$domain=gelbooru.com,important
+||exoclick.com$domain=gelbooru.com,important
+||exosrv.com$domain=gelbooru.com,important
+||google-analytics.com$domain=gelbooru.com,important
+||jabcomix.com$domain=gelbooru.com,important
+||javhd.com$domain=gelbooru.com,important
+||juicyads.com$domain=gelbooru.com,important
+||mnfclub.com$domain=gelbooru.com,important
+||r18.com$domain=gelbooru.com,important
+||tsyndicate.com$domain=gelbooru.com,important
+||twitter.com$domain=gelbooru.com,important
+||verotel.com$domain=gelbooru.com,important
 
 ! 2. Block "r18.com" promo, /r18/ strict!
 ||gelbooru.com/r18/$important
@@ -177,9 +179,10 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ||gelbooru.com/script/bed2.php$important
 ||gelbooru.com/script/bluet.php$important
 
-! 6. Block ahead to prevent advert images that placed as /thumbnails/0X/, this will supply by Unbreak #4 that actually load legit thumbnails.
-!    Now reduce priority for [*.jpg] due to it's use for other appearance, such as recent comments that load thumbnail images without ?<PostID> referrer.
-!    Also prevent repetitive requests that their currently using, like request as "other" type instead of original one.
+! 6. Pre-blocking images ahead to prevent advert images that placed as /thumbnails/0X/, this will supply by Unbreak #4 that actually load
+!    actual thumbnails, I've reduced priority for [*.jpg] due to it's use for other appearance, such as recent comments that load thumbnail
+!    images without ?<PostID> referrer, also prevent repetitive requests that their currently using, like re-request every images as "other"
+!    instead of $image.
 ||gelbooru.com/thumbnails/*.jpg|
 ||gelbooru.com/thumbnails/*.gif|$important
 ||gelbooru.com/thumbnails/*.png|$important
@@ -187,7 +190,7 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ! 7. Block "v.php" XHR, Don't know what it does, but I think it's maybe the cause of deploying CloudFlare session cookie. (__cfduid)
 ||gelbooru.com/v.php$xmlhttprequest,important
 
-! 8. To preventing resources request abuse that they trying to reload blocked resources as 'other' for able to re-access blocked JavaScript function
+! 8. To preventing resources request abuse that they trying to reload blocked resources as 'other' for able to re-access blocked JS function
 !    and/or re-deploy ads and such.
 ||gelbooru.com/*.php*$~document,~inline-script,~xmlhttprequest
 ||gelbooru.com/*.php?$~document,~inline-script,~xmlhttprequest
@@ -196,7 +199,7 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ||gelbooru.com/script/try.js$important
 ||youhate.us/ads.js$~script,important
 
-! 9. Useless scripts that fooled to seems like it's useful, but the real thing is for using to silently detect content blocker.
+! 9. Useless scripts that use for anti-adblock (license.gelbooru.js is similar to license.<num>.js that used in openload.co)
 ||gelbooru.com/script/license$important
 
 ! - - - - - - - - - - Inject Scriptlets - - - - - - - - - - !
@@ -205,59 +208,51 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 gelbooru.com##script:inject(abort-on-property-read.js, abvertDar)
 gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
 
-! 2. Stop exo_zones cookie deploy as first party, the ExoLoader function was called from application.js that whitelisted to unbreak site functional.
+! 2. Stop exo_zones cookie deploy as first party, the ExoLoader function was called from application.js that whitelisted to unbreak
+!    site functionality.
 !    Update: due to new update on Gelbooru was using the lazyload function to load all thumbnails, these rules will be halt
 !            until found a better solution to keep preventing ExoLoader wrote cookies on local storage as 1st-party.
 !    Update 2: They change the script name, likely they do in the fallback ILS to execute and re-deploy ads if some ads value was forbidden
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, EXoDetector)
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, EXoDetector.domain_base)
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector)
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoDetector.domain_base)
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader)
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.addZone)
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader.serve)
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyy)
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyy.addZone)
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyy.serve)
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyyy)
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyyy.addZone)
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, fuckingnormieswryyyyy.serve)
+!    Update 3: New BetterJsPop function that currently testing to show thedoujin site as popunder.
+gelbooru.com##script:inject(abort-on-property-write.js, AddZone)
+gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop)
+gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop.add)
+gelbooru.com##script:inject(abort-on-property-write.js, EXoDetector)
+gelbooru.com##script:inject(abort-on-property-write.js, ExoDetector)
+gelbooru.com##script:inject(abort-on-property-write.js, ExoLoader)
+gelbooru.com##script:inject(abort-on-property-write.js, ExoLoader.AddZone)
+gelbooru.com##script:inject(abort-on-property-write.js, ExoLoader.serve)
+gelbooru.com##script:inject(abort-on-property-write.js, domain_base)
+gelbooru.com##script:inject(abort-on-property-write.js, addZone)
+gelbooru.com##script:inject(abort-on-property-write.js, serve)
 
 ! 3. [Deprecated] Prevent data collector from adnium.com to write script
-! gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, adnOpt)
+! gelbooru.com.com##script:inject(abort-on-property-write.js, adnOpt)
 
 ! 4. Prevent Google Analytics to be executed, but it works only inline script due to they recently add asynchronous script after document loaded.
 !    Tested this injection rules and this won't break the site.
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, GoogleAnalyticsObject)
+gelbooru.com##script:inject(abort-on-property-write.js, GoogleAnalyticsObject)
 
 ! 5. Prevent JuicyAds execute, same behavior as Google Analytics
-gelbooru.com,thedoujin.com##script:inject(abort-on-property-write.js, adsbyjuicy)
+gelbooru.com##script:inject(abort-on-property-write.js, adsbyjuicy)
 
-! 6. New BetterJsPop popunder that currently testing to show thedoujin site as popunder.
-gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop)
-
-! 7. Experimental, I don't know how it does and how to use properly.
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, addEventListener, abvertDar)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, fuckingnormieswryyyy.serve)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, BetterJsPop)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, EXoDetector)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, EXoDetector.domain_base)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, ExoDetector)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, ExoDetector.domain_base)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, ExoLoader.addZone)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, ExoLoader.serve)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, ad_idzone)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, fuckingnormieswryyyy)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, fuckingnormieswryyyy.addZone)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, fuckingnormieswryyyy.serve)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, fuckingnormieswryyyyy)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, fuckingnormieswryyyyy.addZone)
-gelbooru.com,thedoujin.com##script:inject(abort-current-inline-script.js, setTimeout, fuckingnormieswryyyyy.serve)
+! 6. Experimental, to foil ILS function for Chromium / Firefox WebExt
+gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, AddZone)
+gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, BetterJsPop)
+gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, EXoDetector)
+gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, ExoDetector)
+gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, ExoLoader)
+gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, ExoLoader.AddZone)
+gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, ExoLoader.serve)
+gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, abvertDar)
+gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, ad_idzone)
+gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, addZone)
+gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, domain_base)
+gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, serve)
 
 ! - - - - - - - - - - CSS Re-design / Mobile Improvement - - - - - - - - - - !
-! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking
-! because it ate up space almost half of screen from top.
-! This will surely conflict when you request desktop view or when you're already use desktop browser.
+! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space almost half of
+! screen from top, this will surely conflict when you request desktop view or when you're already use desktop browser.
 gelbooru.com##.alert-info:has(a[href*="?page=ihnt"])
 gelbooru.com##.alert-warning:has(a[href*="javascript"])
 gelbooru.com##.navbar#submenu #navbar2 .navbar-nav:style(direction:rtl !important)
@@ -274,9 +269,11 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ! - Only the legacy version of uBlock Origin can be used these rules, the legacy version will be no longer release and get updated
 !   when stable version of Firefox 57 released, or maybe need someone to clone and port to keep extended support for legacy version.
 ! - Keep in mind because they may rename some function to survive blocking, such as change [advertVar] to [abvertDar]
+gelbooru.com##script:contains(.AddZone)
 gelbooru.com##script:contains(.addZone)
 gelbooru.com##script:contains(.serve)
 gelbooru.com##script:contains(BetterJsPop)
+gelbooru.com##script:contains(EXoDetector)
 gelbooru.com##script:contains(ExoDetector)
 gelbooru.com##script:contains(ExoLoader)
 gelbooru.com##script:contains(GoogleAnalyticsObject)
@@ -285,24 +282,5 @@ gelbooru.com##script:contains(abvertDar)
 gelbooru.com##script:contains(ad_idzone)
 gelbooru.com##script:contains(adsbyjuicy)
 gelbooru.com##script:contains(advertVar)
-gelbooru.com##script:contains(fuckingnormieswryyyy)
-gelbooru.com##script:contains(fuckingnormieswryyyyy)
 gelbooru.com##script:contains(trw_domain)
 ! gelbooru.com##script:contains(adnOpt)
-
-! - - - - - - - - - - For TheDouJin - - - - - - - - - - !
-! Block all script same as Gelbooru, but only allow scripts from /assets because need for unbreak jQuery.
-||thedoujin.com$script,subdocument
-@@||thedoujin.com/assets/$script
-
-! Currently support to remove ads space leftover for firefox only because most inline-script ads are shared from Gelbooru.
-! Otherwise, using element hiding rules will be hide something important, e.g. tags.
-thedoujin.com##.adnSpot
-thedoujin.com##.boxTopLocContent center:if(div:matches-css(width: 300px))
-thedoujin.com##.boxTopLocContent center:if(div:matches-css(width: 728px))
-thedoujin.com##.container[style="text-align: center;"] div:matches-css(width: 300px)
-thedoujin.com##noscript
-thedoujin.com##script:contains(_gaq.push)
-thedoujin.com##script:contains(ad_idzone)
-thedoujin.com##script:contains(adnOpt)
-thedoujin.com##script:contains(ExoLoader)
