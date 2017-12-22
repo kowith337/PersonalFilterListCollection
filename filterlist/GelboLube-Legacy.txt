@@ -1,20 +1,22 @@
 [uBlock Origin 1.14.11.0]
 ! Title: GelboLube (Firefox Legacy)
-! Version: 201712021526
+! Version: 201712222240
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! From: https://github.com/kowith337/GelboLube/raw/legacy/gelbolube.txt
 
-! 1. It doesn't matter to have any checksum tools because uBo is now fully support filterlists that created on GitHub and regularly
-!    auto check itself when it's outdated more than 2 days.
+! 1. It doesn't matter to have any checksum tools because uBo is now fully support filterlists that created on GitHub and
+!    regularly auto check itself when it's outdated more than 2 days.
 ! 2. This rules not completely to hide ads and collapse space, but it still remove ads and unwanted resources.
 !    (e.g. subdocuments and other scripts file that no need to load them)
 ! 3. Author/Owner/Contributor of gelbooru.com will frequently update their sites to keep ads appear.
-! 4. for Chromium, uB0 WebExtension, Firefox 57+ users, you can move to normal version at your own risk! because blocking ExoLoader function
-!    is also prevent 'lazyload' to be execute, I've allowed them because I have no choice (right now)
+! 4. for Chromium, uB0 WebExtension, Firefox 57+ users, you can move to normal version at your own risk! because blocking
+!    ExoLoader function is also prevent 'lazyload' to be execute, I've allowed them because I have no choice (right now)
 
-! - - - - - - - - - - Element Hiding  - - - - - - - - - - !
+! ------------------------------------------------------ GelboLube Core -------------------------------------------------------- !
+
+! Element Hiding - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Block external hyperlinks, include CCBill ads and Patreon.
 ! gelbooru.com##.content #nup
 ! gelbooru.com##.sidebar #tup
@@ -46,42 +48,30 @@ gelbooru.com##body div[style*="z-index"]:matches-css(width: 100%)
 gelbooru.com##noscript
 
 ! - - - - - - - - - - Filtered specific hiding - - - - - - - - - - !
-! 1. [Deprecated by lazyload] Now they replace all legitmate posts link (clickable image list thumbnails) with tracked/redirected links to
-!    mess the hyperlink blocking, I've adjusted with "if-not" to make sure it doesn't accidentally remove legitmate thumbnails again
-!    to prevent popped out new tab/window to show ads sites separately.
-!    Note: only advert images that not loaded from specific location will be work,
-!    e.g. (//assets.gelbooru.com/thumbnails/**/**/thumbnail_<md5>.jpg)
-! gelbooru.com##a[href*="redirect.php"]:if-not(img[src*="/thumbnail_"])
-! gelbooru.com###post-list #content a[href*="redirect.php"]:if-not(img[src*="/thumbnail_"])
-
-! 2. To block hyperlink ads that appear under the tag lists (currently know it's promote r18.com and jabcomix.com)
+! 1. To block hyperlink ads that appear under the tag lists (currently know it's promote r18.com and jabcomix.com)
 gelbooru.com##div[class^="sidebar"] a[target]:has(img)
 
-! 3. [Deprecated by New Ad code] To hide placeholder that reserved for advert banner under the page number.
-!    I don't think this rule will be work anymore, but just in case if they re-use this.
-! gelbooru.com##div[style*="width:1000px"]:has(script)
-
-! 4. Use 'matches-css' to remove placeholder after allowed 'ExoLoader.addZone' to generate advert space
+! 2. Use 'matches-css' to remove placeholder after allowed 'ExoLoader.addZone' to generate advert space
 gelbooru.com###searchTags div:matches-css(height: 600px)
 gelbooru.com##.contain-push center center div:matches-css(width: 1000px)
 gelbooru.com##.contain-push center div:matches-css(width: 300px)
 
-! - - - - - - - - - - (Pre-) Unbreak - - - - - - - - - - !
+! (Pre-) Unbreak - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 0. [Prequel] Block Every videos, subdocs and scripts (See below for what things could be exclude)
 ||gelbooru.com$media
 ||gelbooru.com$script
 ||gelbooru.com$subdocument
 
 ! 1. Allow jQuery from GoogleAPIs and BootStrap (suggested by toshiya44)
-@@||ajax.googleapis.com/ajax/libs/jquery/*$script,domain=gelbooru.com
+@@||ajax.googleapis.com/ajax/libs/jquery*$script,domain=gelbooru.com
 @@||bootstrapcdn.com/bootstrap/*$script,domain=gelbooru.com
 @@||gelbooru.com/script/jquery*$script,first-party
 
 ! 2. Useful scripts
 ! - [application.js] is questionable due to it's have "ExoLoader" function inside that script.
 ! - [miscJs.js] is allowed for autocomplete search
-! - {Halt} [try.js] is exactly to execute function to deploy ads from ExoClick, but if blocked this, the site and thumbnails will completely
-!   broke! But don't worry, some ##script:() rules can make those functions harmless to you...
+! - {Halt} [try.js] is exactly to execute function to deploy ads from ExoClick, but if blocked this, the site and thumbnails will
+!   completely broke! But don't worry, some ##script:() rules can make those functions harmless to you...
 @@||gelbooru.com/script/application.js|$script,first-party
 @@||gelbooru.com/script/application.js?$script,first-party
 @@||gelbooru.com/script/miscJs.js|$script,first-party
@@ -110,24 +100,15 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ! 6. Allow lazyload script to be loaded because function to load thumbnail is depend on this, since 2017/10/03
 @@||gelbooru.com/script/lazyload.js?$script,first-party
 
-! [Deprecated jQuery Whitelist]
-! @@||gelbooru.com/script/jqueryMisc.js|$script
-! @@||gelbooru.com/script/jqueryNotes.js|$script
-! @@||gelbooru.com/script/jqueryPools.js|$script
-! @@||gelbooru.com/script/jqueryPosts.js|$script
-! @@||gelbooru.com/script/jqueryScrollTo.js|$script
-! @@||gelbooru.com/script/jqueryTimeout.js|$script
-! @@||gelbooru.com/script/jquery-ui.min.js|$script
-! Note: inserted `|` to prevent the foolish exception exploit.
-
-! - - - - - - - - - - Counter other filterlists - - - - - - - - - - !
-! 1. Counter uBlock Assets that's block inline-script, the purpose is my filter still block some bad scripts and internal function,
-!    such as prevent ExoLoader function to execute and deploy cookie, prevent read ILS ads check function, block GoogleAnalyticsObject, ...
+! Counter other filterlists - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! 1. Counter uBlock Assets that's block inline-script, the purpose is my filter still block some bad scripts and function,
+!    such as prevent ExoLoader to execute and deploy cookie, prevent read ILS ads check, block GoogleAnalyticsObject, ...
 ||gelbooru.com$inline-script,badfilter
 
-! 2. Counter uBlock Assets that's allow script from first party domains entirely, I cannot predict the possibility about when they placed
-!    hostile scripts at top level or somewhere else, due to they frequently update their ads code and change the backend script name often
-!    that you can see they use 'bed.php', 'bed2.php', 'bluet.php' and such, current plan is only allow scripts one-by-one is safe for now.
+! 2. Counter uBlock Assets that's allow script from first party domains entirely, I cannot predict the possibility about when
+!    they placed hostile scripts at top level or somewhere else, due to they frequently update their ads code and changed
+!    backend script name often that you can see they use 'bed.php', 'bed2.php', 'bluet.php' and such, current plan is only allow
+!    scripts one-by-one is safe for now.
 @@||gelbooru.com^$first-party,script,badfilter
 
 ! 3. Counter EasyList and/or Fanboy lists (Esp. Enhanced tracking OR Ultimate / What are they doing right now?)
@@ -139,7 +120,7 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 |https://$script,domain=gelbooru.com,badfilter
 ||gelbooru.com^$first-party,image,badfilter
 
-! - - - - - - - - - - Strict blocking - - - - - - - - - - !
+! Strict blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Third party their use to serve ads and track users.
 !    Now using $important tag due to counter EasyList filters that whitelist ExoClick script ads.
 ||4uvjosuc.com$domain=gelbooru.com,important
@@ -166,11 +147,7 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ! 3. Block "JabComix" promo, /r19/ strict!
 ||gelbooru.com/r19/$important
 
-! 4. [Deprecated by Unbreak #2] Block "application.js" that not have "?" remark after, in case if they move everything to jQuery.
-!    (But I think they not do it again because of [http://gelbooru.com/index.php?page=forum&s=view&id=3716])
-! ||gelbooru.com/script/application.js|$script,important
-
-! 5. Block hostile scripts that load as php, it's an ad script that foolish exception rule and loaded as php doc.
+! 4. Block hostile scripts that load as php, it's an ad script that foolish exception rule and loaded as php doc.
 ||gelbooru.com/bed.php$important
 ||gelbooru.com/bed2.php$important
 ||gelbooru.com/bluet.php$important
@@ -179,30 +156,26 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ||gelbooru.com/script/bed2.php$important
 ||gelbooru.com/script/bluet.php$important
 
-! 6. Pre-blocking images ahead to prevent advert images that placed as /thumbnails/0X/, this will supply by Unbreak #4 that actually load
-!    actual thumbnails, I've reduced priority for [*.jpg] due to it's use for other appearance, such as recent comments that load thumbnail
-!    images without ?<PostID> referrer, also prevent repetitive requests that their currently using, like re-request every images as "other"
-!    instead of $image.
+! 5. Pre-blocking images ahead to prevent advert images that placed as /thumbnails/0X/, this will supply by Unbreak #4 that
+!    actually load legitmate thumbnails, I've reduced priority for [*.jpg] due to it's use for other appearance, such as
+!    recent comments that load thumbnail images without ?<PostID> referrer, also prevent repetitive requests that their
+!    currently using, like re-request every images as "other" instead of "image"
 ||gelbooru.com/thumbnails/*.jpg|
 ||gelbooru.com/thumbnails/*.gif|$important
 ||gelbooru.com/thumbnails/*.png|$important
 
-! 7. Block "v.php" XHR, Don't know what it does, but I think it's maybe the cause of deploying CloudFlare session cookie. (__cfduid)
-||gelbooru.com/v.php$xmlhttprequest,important
-
-! 8. To preventing resources request abuse that they trying to reload blocked resources as 'other' for able to re-access blocked JS function
-!    and/or re-deploy ads and such.
+! 6. To preventing resources request abuse that they trying to reload blocked resources as 'other' for able to re-access blocked
+!    JS function and/or re-deploy ads and such...
 ||gelbooru.com/*.php*$~document,~inline-script,~xmlhttprequest
-||gelbooru.com/*.php?$~document,~inline-script,~xmlhttprequest
 ||gelbooru.com/ads.js$~script,important
 ||gelbooru.com/script/application.js$~script,important
 ||gelbooru.com/script/try.js$important
 ||youhate.us/ads.js$~script,important
 
-! 9. Useless scripts that use for anti-adblock (license.gelbooru.js is similar to license.<num>.js that used in openload.co)
+! 7. Useless scripts that use for anti-adblock (license.gelbooru.js is similar to license.<num>.js that used in openload.co)
 ||gelbooru.com/script/license$important
 
-! - - - - - - - - - - Inject Scriptlets - - - - - - - - - - !
+! Inject Scriptlets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Block attempt to rewrite adverts under paginator via reading some value, doing this also stop advert images requests.
 !    Note: they bypassed this block by rename function like [advertVar > abvertDar], this solution will not be last long enough.
 gelbooru.com##script:inject(abort-on-property-read.js, abvertDar)
@@ -210,9 +183,10 @@ gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
 
 ! 2. Stop exo_zones cookie deploy as first party, the ExoLoader function was called from application.js that whitelisted to unbreak
 !    site functionality.
-!    Update: due to new update on Gelbooru was using the lazyload function to load all thumbnails, these rules will be halt
-!            until found a better solution to keep preventing ExoLoader wrote cookies on local storage as 1st-party.
-!    Update 2: They change the script name, likely they do in the fallback ILS to execute and re-deploy ads if some ads value was forbidden
+!    Update 1: due to new update on Gelbooru was using the lazyload function to load all thumbnails, these rules will be halt
+!              until found a better solution to keep preventing ExoLoader wrote cookies on local storage as 1st-party.
+!    Update 2: They change the script name, likely they do in the fallback ILS to execute and re-deploy ads if some ads value was
+!              forbidden.
 !    Update 3: New BetterJsPop function that currently testing to show thedoujin site as popunder.
 gelbooru.com##script:inject(abort-on-property-write.js, AddZone)
 gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop)
@@ -226,17 +200,14 @@ gelbooru.com##script:inject(abort-on-property-write.js, domain_base)
 gelbooru.com##script:inject(abort-on-property-write.js, addZone)
 gelbooru.com##script:inject(abort-on-property-write.js, serve)
 
-! 3. [Deprecated] Prevent data collector from adnium.com to write script
-! gelbooru.com.com##script:inject(abort-on-property-write.js, adnOpt)
-
-! 4. Prevent Google Analytics to be executed, but it works only inline script due to they recently add asynchronous script after document loaded.
-!    Tested this injection rules and this won't break the site.
+! 3. Prevent Google Analytics to be executed, but it works only inline script due to they recently add asynchronous script after
+!    document loaded.
 gelbooru.com##script:inject(abort-on-property-write.js, GoogleAnalyticsObject)
 
-! 5. Prevent JuicyAds execute, same behavior as Google Analytics
+! 4. Prevent JuicyAds execute, same behavior as Google Analytics
 gelbooru.com##script:inject(abort-on-property-write.js, adsbyjuicy)
 
-! 6. Experimental, to foil ILS function for Chromium / Firefox WebExt
+! 5. Experimental, to foil ILS function for Chromium / Firefox WebExt
 gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, AddZone)
 gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, BetterJsPop)
 gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, EXoDetector)
@@ -250,7 +221,7 @@ gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, addZone)
 gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, domain_base)
 gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, serve)
 
-! - - - - - - - - - - CSS Re-design / Mobile Improvement - - - - - - - - - - !
+! CSS Re-design / Mobile Improvement - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space almost half of
 ! screen from top, this will surely conflict when you request desktop view or when you're already use desktop browser.
 gelbooru.com##.alert-info:has(a[href*="?page=ihnt"])
@@ -263,8 +234,10 @@ gelbooru.com##.navbar.navbar-default .navbar-header button.navbar-toggle:style(f
 gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ! gelbooru.com###post-view #right-col div #image[src*="sample"]:style(width: 100% !important)
 
-! - - - - - - - - - - Firefox + uBO Legacy Only - - - - - - - - - - !
-! ##script rules are work only uBlock0 1.2.0 + Firefox 42 or newer (Fennec F-Droid also work, Not sure for IceCat and Pale Moon because it based on ESR build)
+! Firefox + uBO Legacy Only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! ##script rules are work only uBlock0 1.2.0 + Firefox 42 or newer, but make sure it's not over than 56, if your Firefox version
+! over than that, you will be forced to install WebExtension version and need to look for "Chromium/WebExt" version...
+! Note: Fennec F-Droid also work, Not sure for IceCat and Pale Moon because it based on ESR build...
 ! - I can confirmed these inline script filter rules below can collaps space that caused from every immoral ads, for now.
 ! - Only the legacy version of uBlock Origin can be used these rules, the legacy version will be no longer release and get updated
 !   when stable version of Firefox 57 released, or maybe need someone to clone and port to keep extended support for legacy version.
@@ -284,3 +257,21 @@ gelbooru.com##script:contains(adsbyjuicy)
 gelbooru.com##script:contains(advertVar)
 gelbooru.com##script:contains(trw_domain)
 ! gelbooru.com##script:contains(adnOpt)
+
+! ---------------------------------------------------- TheDoujin Support ------------------------------------------------------ !
+! This aim to re-support TheDoujin to hide ads and prevent connections to ads and tracking servers, although this site have less
+! connections than Gelbooru and can be easily hide ads by blocking unwanted functions...
+
+||exoclick.com$domain=thedoujin.com,important
+||exosrv.com$domain=thedoujin.com,important
+||google-analytics.com$domain=thedoujin.com,important
+||thedoujin.com/*.php?$~document,~inline-script,~xmlhttprequest
+||thedoujin.com/assets/*/*.js$~script,important
+@@||ajax.googleapis.com/ajax/libs/jquery*$script,domain=thedoujin.com
+@@||bootstrapcdn.com/bootstrap/*$script,domain=thedoujin.com
+@@||thedoujin.com/assets/*/*.js$script,first-party
+thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader)
+thedoujin.com##script:inject(abort-on-property-write.js, addZone)
+thedoujin.com##script:inject(abort-on-property-write.js, serve)
+thedoujin.com##script:contains(ExoLoader.addZone)
+thedoujin.com##script:contains(ExoLoader.serve)
