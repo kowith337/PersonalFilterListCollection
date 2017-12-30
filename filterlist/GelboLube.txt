@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11.0]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201712222240
+! Version: 201712301752
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -138,6 +138,7 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ||juicyads.com$domain=gelbooru.com,important
 ||mnfclub.com$domain=gelbooru.com,important
 ||r18.com$domain=gelbooru.com,important
+||trafficjunky.net$domain=gelbooru.com,important
 ||tsyndicate.com$domain=gelbooru.com,important
 ||twitter.com$domain=gelbooru.com,important
 ||verotel.com$domain=gelbooru.com,important
