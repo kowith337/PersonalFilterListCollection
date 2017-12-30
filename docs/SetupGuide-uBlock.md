@@ -3,7 +3,18 @@
 ### Advance Settings
 - You need enable the advance settings by checkmark the "I am an advanced user ([required reading](https://github.com/gorhill/uBlock/wiki/Advanced-user-features))" box.
 - set `assetFetchTimeout` to 60 if your connections cannot fast enough to fetch filterlist under timeout time. (mostly useful for slow 2G/3G mobile data)
-- set `suspendTabsUntilReady` to `true` to make sure the browsing windows or tab will not be loaded before filterlist cache is initialized.
+- set `suspendTabsUntilReady` to `true` to make sure the browsing windows or tab will not be loaded before filterlists cache is initialized.
+
+### Custom Resources
+#### [Advanced/Optional] Adapt and integrate with [NanoAdBlocker](https://jspenguin2017.github.io/uBlockProtector)
+- In the **Advance Settings** page, change `userResourcesLocation` to pointing at `https://github.com/NanoAdblocker/NanoFilters/raw/master/NanoFilters/NanoResources.txt`
+- Enable `Adblock Warning Removal List` In the **3rd-party filters** tab
+- Parse these filters
+  - Nano defender list (formerly uBlock protector list): `https://github.com/jspenguin2017/uBlockProtector/raw/master/uBlockProtectorList.txt`
+  - Nano base list: `https://github.com/jspenguin2017/uBlockProtector/raw/master/uBlockProtectorList.txt`
+  - [Optional] Nano timer booster: `https://github.com/NanoAdblocker/NanoFilters/raw/master/NanoFilters/NanoTimer.txt`
+
+*Note: The last of two lists will become useless if you didn't provide proper custom resources.*
 
 ### Privacy Settings
 - `Disable pre-fetching` must enabled by default.
@@ -16,6 +27,7 @@
 ### 3rd-party filters
 - Recommended to have all of **uBlock Filters** loaded
   - uBlock Filters *(This is the heart of uBlock that enhance the default list supscriptions)*
+  - uBlock Filters - Annoyances *(Enhanced the shady [or maybe forcefully] interaction blocking, such as register, like/share, etc.)* 
   - uBlock Filters - Badware Risks *(Warn and block sits that potentially serve adware while you're trying to find and install popular programs)*
   - uBlock Filters - Experimental *(for testing new type of blocking, scriptlets and redirect to neutered resources)*
   - uBlock Filters - Privacy *(this will block more 3rd party ads/tracking hits)*
