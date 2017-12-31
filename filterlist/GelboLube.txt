@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11.0]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201712301752
+! Version: 201712312140
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -213,16 +213,18 @@ gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, AddZone)
 gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, BetterJsPop)
 gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, EXoDetector)
 gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, ExoDetector)
-gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, ExoLoader.AddZone)
-gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, ExoLoader.serve)
 gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, abvertDar)
 gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, ad_idzone)
 gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, addZone)
 gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, domain_base)
 gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, serve)
+gelbooru.com##script:inject(abort-current-inline-script.js, AddZone, idzone)
+gelbooru.com##script:inject(abort-current-inline-script.js, add, newTab, cookieName)
+gelbooru.com##script:inject(abort-current-inline-script.js, domain_base, exosrv.com)
+gelbooru.com##script:inject(abort-current-inline-script.js, serve, script_url)
 
 ! CSS Re-design / Mobile Improvement - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space 
+! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space
 ! almost half of screen from top, this will surely conflict when you request desktop view or when you're already use desktop browser.
 gelbooru.com##.alert-info:has(a[href*="?page=ihnt"])
 gelbooru.com##.alert-warning:has(a[href*="javascript"])
