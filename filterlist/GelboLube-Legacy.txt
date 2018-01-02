@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11.0]
 ! Title: GelboLube (Firefox Legacy)
-! Version: 201712312140
+! Version: 201801021249
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -22,12 +22,12 @@
 ! gelbooru.com##.sidebar #tup
 ! gelbooru.com##a#ext
 ! gelbooru.com##a.ext
-gelbooru.com###paginater a:has(img)
-gelbooru.com###pagination a:has(img)
-gelbooru.com###paginator a:has(img)
-gelbooru.com##.paginater a:has(img)
-gelbooru.com##.pagination a:has(img)
-gelbooru.com##.paginator a:has(img)
+gelbooru.com###paginater a:if(img)
+gelbooru.com###pagination a:if(img)
+gelbooru.com###paginator a:if(img)
+gelbooru.com##.paginater a:if(img)
+gelbooru.com##.pagination a:if(img)
+gelbooru.com##.paginator a:if(img)
 gelbooru.com##a[href*="click.php"]
 gelbooru.com##a[href*="media.r18"]
 gelbooru.com##a[href*="mnfclub.com"]
@@ -49,7 +49,7 @@ gelbooru.com##noscript
 
 ! - - - - - - - - - - Filtered specific hiding - - - - - - - - - - !
 ! 1. To block hyperlink ads that appear under the tag lists (currently know it's promote r18.com and jabcomix.com)
-gelbooru.com##div[class^="sidebar"] a[target]:has(img)
+gelbooru.com##div[class^="sidebar"] a[target]:if(img)
 
 ! 2. Use 'matches-css' to remove placeholder after allowed 'ExoLoader.addZone' to generate advert space
 gelbooru.com###searchTags div:matches-css(height: 600px)
@@ -227,8 +227,8 @@ gelbooru.com##script:inject(abort-current-inline-script.js, serve, script_url)
 ! CSS Re-design / Mobile Improvement - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space 
 ! almost half of screen from top, this will surely conflict when you request desktop view or when you're already use desktop browser.
-gelbooru.com##.alert-info:has(a[href*="?page=ihnt"])
-gelbooru.com##.alert-warning:has(a[href*="javascript"])
+gelbooru.com##.alert-info:if(a[href*="?page=ihnt"])
+gelbooru.com##.alert-warning:if(a[href*="javascript"])
 gelbooru.com##.navbar#submenu #navbar2 .navbar-nav:style(direction:rtl !important)
 gelbooru.com##.navbar#submenu #navbar2:style(float: right !important)
 gelbooru.com##.navbar#submenu:style(float: right !important; width: 50% !important)
