@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.11.0]
 ! Title: GelboLube (Firefox Legacy)
-! Version: 201801021249
+! Version: 201801021552
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -46,6 +46,9 @@ gelbooru.com##body div[style*="z-index"]:matches-css(width: 100%)
 
 ! Trying to block NoScript
 gelbooru.com##noscript
+
+! I have no idea about <ins> tag, can uBlock handle it?
+gelbooru.com##ins.adsbytrafficjunky
 
 ! - - - - - - - - - - Filtered specific hiding - - - - - - - - - - !
 ! 1. To block hyperlink ads that appear under the tag lists (currently know it's promote r18.com and jabcomix.com)
@@ -209,16 +212,6 @@ gelbooru.com##script:inject(abort-on-property-write.js, GoogleAnalyticsObject)
 gelbooru.com##script:inject(abort-on-property-write.js, adsbyjuicy)
 
 ! 5. Experimental, to foil ILS function for Chromium / Firefox WebExt
-gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, AddZone)
-gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, BetterJsPop)
-gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, EXoDetector)
-gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, ExoDetector)
-gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, ExoLoader)
-gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, abvertDar)
-gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, ad_idzone)
-gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, addZone)
-gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, domain_base)
-gelbooru.com##script:inject(abort-current-inline-script.js, setTimeout, serve)
 gelbooru.com##script:inject(abort-current-inline-script.js, AddZone, idzone)
 gelbooru.com##script:inject(abort-current-inline-script.js, add, newTab, cookieName)
 gelbooru.com##script:inject(abort-current-inline-script.js, domain_base, exosrv.com)
