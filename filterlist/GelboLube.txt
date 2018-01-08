@@ -1,6 +1,6 @@
-[uBlock Origin 1.14.11.0]
+[uBlock Origin 1.14.23.10]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201801021552
+! Version: 201801082248
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -216,6 +216,18 @@ gelbooru.com##script:inject(abort-current-inline-script.js, AddZone, idzone)
 gelbooru.com##script:inject(abort-current-inline-script.js, add, newTab, cookieName)
 gelbooru.com##script:inject(abort-current-inline-script.js, domain_base, exosrv.com)
 gelbooru.com##script:inject(abort-current-inline-script.js, serve, script_url)
+
+! 6. HTML filtering, able to remove some specific path inside the non-filtered document before it's load
+!    currently require 1.14.23 beta and run on Firefox Quantum (57+)
+gelbooru.com##^ins[class="adsbytrafficjunky"]
+gelbooru.com##^script:has-text(BetterJsPop)
+gelbooru.com##^script:has-text(EXoDetector)
+gelbooru.com##^script:has-text(abvertDar)
+gelbooru.com##^script:has-text(fuckingnormieswry)
+gelbooru.com##^script[async][src^="https://media.trafficjunky.net"]
+gelbooru.com##^script[src^="//gelbooru.com/script/license"]
+gelbooru.com##^script[src^="https://ads.exoclick.com"]
+gelbooru.com##^script[src^="https://gelbooru.com/script/try.js"]
 
 ! CSS Re-design / Mobile Improvement - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space
