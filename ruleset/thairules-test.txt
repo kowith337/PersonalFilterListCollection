@@ -1,11 +1,12 @@
-! [uMatrix Ruleset recipes 1.0]
+! [uMatrix 1.3.3.0]
+! uMatrix: Ruleset recipes 1.0
 ! Title: uMatrix Ruleset for Thai sites (alpha test)
-! Version: 201802011658
+! Version: 201802011734
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 
 ! Note: This ruleset isn't ready yet because the ruleset function is still in beta release (start from 1.3.3b0),
-!       I need to wait until this function is publically releases (or at lease on the release candidate)
+!       I need to wait until this function is publically releases (or at least on the release candidate)
 
 Pantip
 	pantip.com *
@@ -15,6 +16,7 @@ Pantip
 		ads.pantip.com * block
 		ptcdn.info *
 		ptcdn.info image
+		googlevideo.com *
 		googlevideo.com media
 		googlevideo.com xhr
 		youtube.com *
