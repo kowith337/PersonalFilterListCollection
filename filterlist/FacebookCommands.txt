@@ -1,14 +1,13 @@
 [uBlock Origin 1.14.23]
 ! Title: Facebook Bullshit Commands List
-! Version: 201801070028
+! Version: 201802062146
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
 
-! Note: This filter isn't recommended to use publically, it might broke entire Facebook functions because
+! Note: This filter isn't recommended to use publicly, it might broke entire Facebook functions because
 !       these rules below will disable many JavaScript functions and also prevent lots of network requests.
-!       Although, the script blocking may not work as expected, but just a few rules will work, such as
-!       AYMTHomepagePanelTypedLogger, AdBlockerDetectorLogging, etc.
+!       Although, the script blocking may not work as expected, but few rules will work in alphabetically.
 
 ! Function abort
 facebook.com##^script:has-text(AYMTHomepagePanelTypedLogger)
@@ -66,6 +65,7 @@ facebook.com##^script:has-text(ControlledReferer)
 facebook.com##^script:has-text(DimensionTracking)
 facebook.com##^script:has-text(DynamicAdsXOutOptionName)
 facebook.com##^script:has-text(EducationPromotionTriggerInfo)
+facebook.com##^script:has-text(EgoSectionExpander)
 facebook.com##^script:has-text(EgoUnitSlideInsert)
 facebook.com##^script:has-text(EntstreamAttachmentRelatedFBVideo)
 facebook.com##^script:has-text(EntstreamAttachmentRelatedShare)
@@ -241,6 +241,7 @@ facebook.com##^script:has-text(trackReferrer)
 ||facebook.com/*?modules=DimensionTracking$important
 ||facebook.com/*?modules=DynamicAdsXOutOptionName$important
 ||facebook.com/*?modules=EducationPromotionTriggerInfo$important
+||facebook.com/*?modules=EgoSectionExpander$important
 ||facebook.com/*?modules=EgoUnitSlideInsert$important
 ||facebook.com/*?modules=EntstreamAttachmentRelatedFBVideo$important
 ||facebook.com/*?modules=EntstreamAttachmentRelatedShare$important
