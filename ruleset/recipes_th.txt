@@ -1,12 +1,24 @@
-! uMatrix: Ruleset for Thai sites 0.5
+! [uMatrix 1.3.3.0]
+! uMatrix: Ruleset for Thai sites 0.6
 ! Title: Ruleset for Thai sites (alpha test)
-! Version: 201802082315
+! Version: 201802090004
 ! Maintainer: kowith337
-! Requirement: uMatrix 1.3.3.0
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/ruleset
-
+! 
 ! Note: This ruleset isn't ready yet because this function is still in beta release (start from 1.3.3b0),
 !       I need to wait until this function and more document guide is publicly releases (or at least on the RC state)
+
+Bangkok Biz News
+	bangkokbiznews.com *
+		_ 1st-party *
+		_ 1st-party cookie
+		_ 1st-party css
+		_ 1st-party image
+		_ 1st-party script
+		_ 1st-party xhr
+		_ fonts.googleapis.com css
+		_ fonts.gstatic.com css
+		_ now26.tv image
 
 Blognone
 	blognone.com *
@@ -15,6 +27,55 @@ Blognone
 		_ 1st-party css
 		_ 1st-party image
 		_ 1st-party script
+
+DailyNews
+	dailynews.co.th *
+		_ 1st-party *
+		_ 1st-party cookie
+		_ 1st-party css
+		_ 1st-party image
+		_ 1st-party script
+		_ 1st-party xhr
+
+Khaosod
+	khaosod.co.th *
+		_ 1st-party *
+		_ 1st-party cookie
+		_ 1st-party css
+		_ 1st-party image
+		_ 1st-party script
+		_ ads1.matichon.co.th * block
+		_ ads2.matichon.co.th * block
+		_ ads3.matichon.co.th * block
+		_ ads4.matichon.co.th * block
+		_ ads5.matichon.co.th * block
+		_ ads6.matichon.co.th * block
+		_ ads7.matichon.co.th * block
+		_ ads8.matichon.co.th * block
+		_ ads9.matichon.co.th * block
+		_ iconarchive.com image
+		_ stat.matichon.co.th * block
+		_ statmt.matichon.co.th * block
+
+Matichon
+	matichon.co.th *
+		_ 1st-party *
+		_ 1st-party cookie
+		_ 1st-party css
+		_ 1st-party image
+		_ 1st-party script
+		_ ads1.matichon.co.th * block
+		_ ads2.matichon.co.th * block
+		_ ads3.matichon.co.th * block
+		_ ads4.matichon.co.th * block
+		_ ads5.matichon.co.th * block
+		_ ads6.matichon.co.th * block
+		_ ads7.matichon.co.th * block
+		_ ads8.matichon.co.th * block
+		_ ads9.matichon.co.th * block
+		_ iconarchive.com image
+		_ stat.matichon.co.th * block
+		_ statmt.matichon.co.th * block
 
 Pantip
 	pantip.com *
@@ -29,10 +90,79 @@ Pantip
 		_ pantipmarket.com image
 		_ ptcdn.info image
 
+Post Today
+	posttoday.com *
+		_ 1st-party *
+		_ 1st-party cookie
+		_ 1st-party css
+		_ 1st-party image
+		_ 1st-party script
+		_ 1st-party xhr
+		_ ads1.bangkokpost.co.th * block
+		_ ads2.bangkokpost.co.th * block
+		_ ads3.bangkokpost.co.th * block
+		_ ads4.bangkokpost.co.th * block
+		_ ads5.bangkokpost.co.th * block
+		_ ads6.bangkokpost.co.th * block
+		_ ads7.bangkokpost.co.th * block
+		_ ads8.bangkokpost.co.th * block
+		_ ads9.bangkokpost.co.th * block
+		_ bangkokpost.co.th image
+		_ cdnjs.cloudflare.com script
+		_ fonts.googleapis.com css
+		_ fonts.gstatic.com css
+
+Prachachat
+	prachachat.net *
+		_ 1st-party *
+		_ 1st-party cookie
+		_ 1st-party css
+		_ 1st-party image
+		_ 1st-party script
+		_ ads1.matichon.co.th * block
+		_ ads2.matichon.co.th * block
+		_ ads3.matichon.co.th * block
+		_ ads4.matichon.co.th * block
+		_ ads5.matichon.co.th * block
+		_ ads6.matichon.co.th * block
+		_ ads7.matichon.co.th * block
+		_ ads8.matichon.co.th * block
+		_ ads9.matichon.co.th * block
+		_ iconarchive.com image
+		_ stat.matichon.co.th * block
+		_ statmt.matichon.co.th * block
+
+Sanook!
+	sanook.com *
+		_ 1st-party *
+		_ 1st-party cookie
+		_ 1st-party css
+		_ 1st-party frame
+		_ 1st-party image
+		_ 1st-party script
+		_ 1st-party xhr
+		_ dev-sanook.com *
+		_ dev-sanook.com script
+		_ dev-sanook.com xhr
+		_ fsanook.com *
+		_ fsanook.com image
+		_ isanook.com *
+		_ isanook.com css
+		_ isanook.com image
+		_ isanook.com script
+		_ joox.com *
+		_ joox.com media
+		_ joox.com script
+		_ joox-affiliate.sanook.com * block
+		_ qq.com image
+		_ qq.com script
+		_ wechat.com image
+
 Thairath
 	thairath.co.th *
 		_ 1st-party *
 		_ 1st-party cookie
+		_ 1st-party css
 		_ 1st-party image
 		_ 1st-party script
 		_ 1st-party xhr
