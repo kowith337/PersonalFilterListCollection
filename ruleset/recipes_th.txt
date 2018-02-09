@@ -1,7 +1,7 @@
 ! [uMatrix 1.3.3.0]
-! uMatrix: Ruleset recipes for Thai sites 0.7
+! uMatrix: Ruleset recipes for Thai sites 0.8
 ! Title: Rulesets for Thai sites (alpha test)
-! Version: 201802090938
+! Version: 201802100023
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/ruleset
 ! 
@@ -12,8 +12,6 @@ Bangkok Biz News
 	bangkokbiznews.com *
 		_ 1st-party *
 		_ 1st-party cookie
-		_ 1st-party css
-		_ 1st-party image
 		_ 1st-party script
 		_ 1st-party xhr
 		_ fonts.googleapis.com css
@@ -24,16 +22,12 @@ Blognone
 	blognone.com *
 		_ 1st-party *
 		_ 1st-party cookie
-		_ 1st-party css
-		_ 1st-party image
 		_ 1st-party script
 
 DailyNews
 	dailynews.co.th *
 		_ 1st-party *
 		_ 1st-party cookie
-		_ 1st-party css
-		_ 1st-party image
 		_ 1st-party script
 		_ 1st-party xhr
 
@@ -41,9 +35,16 @@ Khaosod
 	khaosod.co.th *
 		_ 1st-party *
 		_ 1st-party cookie
-		_ 1st-party css
-		_ 1st-party image
 		_ 1st-party script
+		_ ads1.matichon.co.th * block
+		_ ads2.matichon.co.th * block
+		_ ads3.matichon.co.th * block
+		_ ads4.matichon.co.th * block
+		_ ads5.matichon.co.th * block
+		_ ads6.matichon.co.th * block
+		_ ads7.matichon.co.th * block
+		_ ads8.matichon.co.th * block
+		_ ads9.matichon.co.th * block
 		_ iconarchive.com image
 		_ stat.matichon.co.th * block
 		_ statmt.matichon.co.th * block
@@ -52,9 +53,16 @@ Matichon
 	matichon.co.th *
 		_ 1st-party *
 		_ 1st-party cookie
-		_ 1st-party css
-		_ 1st-party image
 		_ 1st-party script
+		_ ads1.matichon.co.th * block
+		_ ads2.matichon.co.th * block
+		_ ads3.matichon.co.th * block
+		_ ads4.matichon.co.th * block
+		_ ads5.matichon.co.th * block
+		_ ads6.matichon.co.th * block
+		_ ads7.matichon.co.th * block
+		_ ads8.matichon.co.th * block
+		_ ads9.matichon.co.th * block
 		_ iconarchive.com image
 		_ stat.matichon.co.th * block
 		_ statmt.matichon.co.th * block
@@ -63,10 +71,10 @@ Pantip
 	pantip.com *
 		_ 1st-party *
 		_ 1st-party cookie
-		_ 1st-party css
-		_ 1st-party image
+		_ 1st-party frame block
 		_ 1st-party script
 		_ 1st-party xhr
+		_ ads.pantip.com * block
 		_ bloggang.com image
 		_ pantipmarket.com image
 		_ ptcdn.info image
@@ -75,10 +83,17 @@ Post Today
 	posttoday.com *
 		_ 1st-party *
 		_ 1st-party cookie
-		_ 1st-party css
-		_ 1st-party image
 		_ 1st-party script
 		_ 1st-party xhr
+		_ ads1.bangkokpost.co.th * block
+		_ ads2.bangkokpost.co.th * block
+		_ ads3.bangkokpost.co.th * block
+		_ ads4.bangkokpost.co.th * block
+		_ ads5.bangkokpost.co.th * block
+		_ ads6.bangkokpost.co.th * block
+		_ ads7.bangkokpost.co.th * block
+		_ ads8.bangkokpost.co.th * block
+		_ ads9.bangkokpost.co.th * block
 		_ bangkokpost.co.th image
 		_ cdnjs.cloudflare.com script
 		_ fonts.googleapis.com css
@@ -88,32 +103,37 @@ Prachachat
 	prachachat.net *
 		_ 1st-party *
 		_ 1st-party cookie
-		_ 1st-party css
-		_ 1st-party image
 		_ 1st-party script
+		_ ads1.matichon.co.th * block
+		_ ads2.matichon.co.th * block
+		_ ads3.matichon.co.th * block
+		_ ads4.matichon.co.th * block
+		_ ads5.matichon.co.th * block
+		_ ads6.matichon.co.th * block
+		_ ads7.matichon.co.th * block
+		_ ads8.matichon.co.th * block
+		_ ads9.matichon.co.th * block
 		_ iconarchive.com image
+		_ stat.matichon.co.th * block
+		_ statmt.matichon.co.th * block
 
 Sanook!
 	sanook.com *
 		_ 1st-party *
 		_ 1st-party cookie
-		_ 1st-party css
 		_ 1st-party frame
-		_ 1st-party image
 		_ 1st-party script
 		_ 1st-party xhr
 		_ dev-sanook.com *
 		_ dev-sanook.com script
 		_ dev-sanook.com xhr
 		_ fsanook.com *
-		_ fsanook.com image
 		_ isanook.com *
-		_ isanook.com css
-		_ isanook.com image
 		_ isanook.com script
 		_ joox.com *
 		_ joox.com media
 		_ joox.com script
+		_ joox-affiliate.sanook.com * block
 		_ qq.com image
 		_ qq.com script
 		_ wechat.com image
@@ -122,9 +142,8 @@ Thairath
 	thairath.co.th *
 		_ 1st-party *
 		_ 1st-party cookie
-		_ 1st-party css
-		_ 1st-party image
 		_ 1st-party script
 		_ 1st-party xhr
+		_ byteark-analytics.thairath.co.th * block
 		_ byteark.com css
 		_ byteark.com script
