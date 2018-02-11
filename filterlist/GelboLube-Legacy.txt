@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.23.10]
 ! Title: GelboLube (Firefox Legacy)
-! Version: 201801092227
+! Version: 201802112057
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -58,6 +58,10 @@ gelbooru.com##div[class^="sidebar"] a[target]:if(img)
 gelbooru.com###searchTags div:matches-css(height: 600px)
 gelbooru.com##.contain-push center center div:matches-css(width: 1000px)
 gelbooru.com##.contain-push center div:matches-css(width: 300px)
+
+! 3. Hide some notices (e.g. Change to regular layout when use mobile browser, Pasta notice)
+gelbooru.com##.alert-info:if(a[href*="?page=ihnt"])
+gelbooru.com##.alert-warning:if(a[href*="javascript"])
 
 ! (Pre-) Unbreak - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 0. [Prequel] Block Every videos, subdocs and scripts (See below for what things could be exclude)
@@ -155,10 +159,12 @@ gelbooru.com##.contain-push center div:matches-css(width: 300px)
 ||gelbooru.com/bed.php$important
 ||gelbooru.com/bed2.php$important
 ||gelbooru.com/bluet.php$important
+||gelbooru.com/bluet.wry$important
 ||gelbooru.com/script/application.js.php$important
 ||gelbooru.com/script/bed.php$important
 ||gelbooru.com/script/bed2.php$important
 ||gelbooru.com/script/bluet.php$important
+||gelbooru.com/script/bluet.wry$important
 
 ! 5. Pre-blocking images ahead to prevent advert images that placed as /thumbnails/0X/, this will supply by Unbreak #4 that
 !    actually load legitmate thumbnails, I've reduced priority for [*.jpg] due to it's use for other appearance, such as
@@ -218,14 +224,13 @@ gelbooru.com##script:inject(abort-current-inline-script.js, domain_base, exosrv.
 gelbooru.com##script:inject(abort-current-inline-script.js, serve, script_url)
 
 ! CSS Re-design / Mobile Improvement - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space 
+! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space
 ! almost half of screen from top, this will surely conflict when you request desktop view or when you're already use desktop browser.
-gelbooru.com##.alert-info:if(a[href*="?page=ihnt"])
-gelbooru.com##.alert-warning:if(a[href*="javascript"])
+gelbooru.com###navbar .nav li a:style(padding-left: 5px !important; padding-right: 5px !important)
+gelbooru.com##.navbar #navbar2 li a:style(padding-left: 5px !important; padding-right: 5px !important)
 gelbooru.com##.navbar#submenu #navbar2 .navbar-nav:style(direction:rtl !important)
 gelbooru.com##.navbar#submenu #navbar2:style(float: right !important)
 gelbooru.com##.navbar#submenu:style(float: right !important; width: 50% !important)
-gelbooru.com##.navbar.navbar-default .navbar-brand:style(display: none !important)
 gelbooru.com##.navbar.navbar-default .navbar-header button.navbar-toggle:style(float:left !important; margin-left: 10px !important; margin-right: 0px !important)
 gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ! gelbooru.com###post-view #right-col div #image[src*="sample"]:style(width: 100% !important)
