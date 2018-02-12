@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201802121725
+# Version: 201802121746
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Expires: 2 days
@@ -36,12 +36,16 @@
 0.0.0.0 tracking.services.mozilla.com
 
 # Generic Root
+0.0.0.0 adasiaholdings.com
+0.0.0.0 addthisedge.com
 0.0.0.0 adsoptimal.com
 0.0.0.0 aniview.com
 0.0.0.0 beachfrontmedia.com
 0.0.0.0 bfmio.com
 0.0.0.0 bumq.com
+0.0.0.0 dome.cloud
 0.0.0.0 freebasics.com
+0.0.0.0 gammaplatform.com
 0.0.0.0 genieessp.com
 0.0.0.0 genieesspv.jp
 0.0.0.0 gsspat.jp
@@ -49,12 +53,15 @@
 0.0.0.0 innity.com
 0.0.0.0 innity.net
 0.0.0.0 mathtag.com
+0.0.0.0 onthe.io
 0.0.0.0 openx.net
 0.0.0.0 perfectmarket.com
 0.0.0.0 stats.in.th
 0.0.0.0 storygize.net
+0.0.0.0 synergy-e.com
 0.0.0.0 thstats.com
 0.0.0.0 vidible.tv
+0.0.0.0 visualwebsiteoptimizer.com
 0.0.0.0 yengo.com
 
 # Generic Sublevel
@@ -62,6 +69,7 @@
 0.0.0.0 acds.vidible.tv
 0.0.0.0 ad.doubleclick.net
 0.0.0.0 adaptv.advertising.com
+0.0.0.0 adnetwork.adasiaholdings.com
 0.0.0.0 ads.bumq.com
 0.0.0.0 ads.pantip.com
 0.0.0.0 ads1.bangkokpost.co.th
@@ -85,12 +93,21 @@
 0.0.0.0 adservice.google.co.th
 0.0.0.0 adservice.google.co.uk
 0.0.0.0 api.cxense.com
+0.0.0.0 as.innity.com
+0.0.0.0 as.innity.net
+0.0.0.0 avd.innity.com
+0.0.0.0 avd.innity.net
 0.0.0.0 cdn-ssl.vidible.tv
 0.0.0.0 cdn.adsoptimal.com
+0.0.0.0 cdn.onthe.io
 0.0.0.0 cdn.yengo.com
 0.0.0.0 code.yengo.com
 0.0.0.0 convammp.taboola.com
 0.0.0.0 cs.gssprt.jp
+0.0.0.0 d1.yengo.com
+0.0.0.0 d2.yengo.com
+0.0.0.0 d3.yengo.com
+0.0.0.0 dev.visualwebsiteoptimizer.com
 0.0.0.0 g.doubleclick.net
 0.0.0.0 go1.aniview.com
 0.0.0.0 go2.aniview.com
@@ -112,6 +129,8 @@
 0.0.0.0 ioms.bfmio.com
 0.0.0.0 js.genieessp.com
 0.0.0.0 mathid.mathtag.com
+0.0.0.0 media.innity.com
+0.0.0.0 media.innity.net
 0.0.0.0 mobile.facebook.com
 0.0.0.0 openx.notebookspec.com
 0.0.0.0 opps.taboola.com
@@ -136,14 +155,19 @@
 0.0.0.0 simage9.pubmatic.com
 0.0.0.0 ssl.google-analytics.com
 0.0.0.0 stat.matichon.co.th
+0.0.0.0 static.gammaplatform.com
 0.0.0.0 statmt.matichon.co.th
 0.0.0.0 syndication.twimg.com
 0.0.0.0 syndication.twitter.com
 0.0.0.0 taboola-d.openx.net
+0.0.0.0 tag.gammaplatform.com
+0.0.0.0 tm.zedo.com
 0.0.0.0 track1.aniview.com
 0.0.0.0 track2.aniview.com
 0.0.0.0 track3.aniview.com
+0.0.0.0 tracker.dome.cloud
 0.0.0.0 tracker.stats.in.th
+0.0.0.0 trc.sanook.com
 0.0.0.0 vidstat.taboola.com
 0.0.0.0 web.facebook.com
 0.0.0.0 wf.taboola.com
