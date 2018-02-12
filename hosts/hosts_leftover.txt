@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201802121746
+# Version: 201802122004
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Expires: 2 days
@@ -53,6 +53,7 @@
 0.0.0.0 innity.com
 0.0.0.0 innity.net
 0.0.0.0 mathtag.com
+0.0.0.0 nuffnang.co.th
 0.0.0.0 onthe.io
 0.0.0.0 openx.net
 0.0.0.0 perfectmarket.com
@@ -157,6 +158,9 @@
 0.0.0.0 stat.matichon.co.th
 0.0.0.0 static.gammaplatform.com
 0.0.0.0 statmt.matichon.co.th
+0.0.0.0 synad1.nuffnang.co.th
+0.0.0.0 synad2.nuffnang.co.th
+0.0.0.0 synad3.nuffnang.co.th
 0.0.0.0 syndication.twimg.com
 0.0.0.0 syndication.twitter.com
 0.0.0.0 taboola-d.openx.net
