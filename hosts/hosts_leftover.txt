@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201802121433
+# Version: 201802121725
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Expires: 2 days
@@ -37,18 +37,31 @@
 
 # Generic Root
 0.0.0.0 adsoptimal.com
+0.0.0.0 aniview.com
+0.0.0.0 beachfrontmedia.com
+0.0.0.0 bfmio.com
 0.0.0.0 bumq.com
 0.0.0.0 freebasics.com
-0.0.0.0 s1.thstats.com
-0.0.0.0 s2.thstats.com
-0.0.0.0 s3.thstats.com
+0.0.0.0 genieessp.com
+0.0.0.0 genieesspv.jp
+0.0.0.0 gsspat.jp
+0.0.0.0 gssprt.jp
+0.0.0.0 innity.com
+0.0.0.0 innity.net
+0.0.0.0 mathtag.com
+0.0.0.0 openx.net
+0.0.0.0 perfectmarket.com
 0.0.0.0 stats.in.th
+0.0.0.0 storygize.net
 0.0.0.0 thstats.com
+0.0.0.0 vidible.tv
 0.0.0.0 yengo.com
 
 # Generic Sublevel
 0.0.0.0 0.freebasics.com
+0.0.0.0 acds.vidible.tv
 0.0.0.0 ad.doubleclick.net
+0.0.0.0 adaptv.advertising.com
 0.0.0.0 ads.bumq.com
 0.0.0.0 ads.pantip.com
 0.0.0.0 ads1.bangkokpost.co.th
@@ -69,20 +82,75 @@
 0.0.0.0 ads8.matichon.co.th
 0.0.0.0 ads9.bangkokpost.co.th
 0.0.0.0 ads9.matichon.co.th
+0.0.0.0 adservice.google.co.th
+0.0.0.0 adservice.google.co.uk
+0.0.0.0 api.cxense.com
+0.0.0.0 cdn-ssl.vidible.tv
 0.0.0.0 cdn.adsoptimal.com
+0.0.0.0 cdn.yengo.com
 0.0.0.0 code.yengo.com
+0.0.0.0 convammp.taboola.com
+0.0.0.0 cs.gssprt.jp
 0.0.0.0 g.doubleclick.net
+0.0.0.0 go1.aniview.com
+0.0.0.0 go2.aniview.com
+0.0.0.0 go3.aniview.com
 0.0.0.0 h.facebook.com
+0.0.0.0 ialaddin.genieesspv.jp
+0.0.0.0 id.rlcdn.com
+0.0.0.0 image1.pubmatic.com
+0.0.0.0 image2.pubmatic.com
+0.0.0.0 image3.pubmatic.com
+0.0.0.0 image4.pubmatic.com
+0.0.0.0 image5.pubmatic.com
+0.0.0.0 image6.pubmatic.com
+0.0.0.0 image7.pubmatic.com
+0.0.0.0 image8.pubmatic.com
+0.0.0.0 image9.pubmatic.com
+0.0.0.0 imasdk.googleapis.com
+0.0.0.0 imprammp.taboola.com
+0.0.0.0 ioms.bfmio.com
+0.0.0.0 js.genieessp.com
+0.0.0.0 mathid.mathtag.com
 0.0.0.0 mobile.facebook.com
 0.0.0.0 openx.notebookspec.com
+0.0.0.0 opps.taboola.com
+0.0.0.0 play.aniview.com
+0.0.0.0 player-cdn.beachfrontmedia.com
+0.0.0.0 player.aniview.com
+0.0.0.0 prod.vidible.tv
 0.0.0.0 pubads.g.doubleclick.net
+0.0.0.0 rt.gsspat.jp
+0.0.0.0 s1.thstats.com
+0.0.0.0 s2.thstats.com
+0.0.0.0 s3.thstats.com
 0.0.0.0 securepubads.g.doubleclick.net
+0.0.0.0 simage1.pubmatic.com
+0.0.0.0 simage2.pubmatic.com
+0.0.0.0 simage3.pubmatic.com
+0.0.0.0 simage4.pubmatic.com
+0.0.0.0 simage5.pubmatic.com
+0.0.0.0 simage6.pubmatic.com
+0.0.0.0 simage7.pubmatic.com
+0.0.0.0 simage8.pubmatic.com
+0.0.0.0 simage9.pubmatic.com
 0.0.0.0 ssl.google-analytics.com
 0.0.0.0 stat.matichon.co.th
 0.0.0.0 statmt.matichon.co.th
+0.0.0.0 syndication.twimg.com
+0.0.0.0 syndication.twitter.com
+0.0.0.0 taboola-d.openx.net
+0.0.0.0 track1.aniview.com
+0.0.0.0 track2.aniview.com
+0.0.0.0 track3.aniview.com
 0.0.0.0 tracker.stats.in.th
+0.0.0.0 vidstat.taboola.com
 0.0.0.0 web.facebook.com
+0.0.0.0 wf.taboola.com
+0.0.0.0 widget.perfectmarket.com
+0.0.0.0 ws-adv.ais.co.th
 0.0.0.0 www.adsoptimal.com
+0.0.0.0 www.storygize.net
 
 # Adware Root
 0.0.0.0 360tools.org
