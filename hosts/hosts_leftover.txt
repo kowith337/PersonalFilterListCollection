@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201802171652
+# Version: 201802181306
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Expires: 2 days
@@ -97,6 +97,7 @@
 0.0.0.0 ads9.matichon.co.th
 0.0.0.0 adservice.google.co.th
 0.0.0.0 adservice.google.co.uk
+0.0.0.0 adservice.google.com
 0.0.0.0 api.cxense.com
 0.0.0.0 as.innity.com
 0.0.0.0 as.innity.net
@@ -113,6 +114,7 @@
 0.0.0.0 d2.yengo.com
 0.0.0.0 d3.yengo.com
 0.0.0.0 dev.visualwebsiteoptimizer.com
+0.0.0.0 error.facebook.com
 0.0.0.0 g.doubleclick.net
 0.0.0.0 go1.aniview.com
 0.0.0.0 go2.aniview.com
@@ -139,6 +141,7 @@
 0.0.0.0 mobile.facebook.com
 0.0.0.0 openx.notebookspec.com
 0.0.0.0 opps.taboola.com
+0.0.0.0 pixel.facebook.com
 0.0.0.0 play.aniview.com
 0.0.0.0 player-cdn.beachfrontmedia.com
 0.0.0.0 player.aniview.com
