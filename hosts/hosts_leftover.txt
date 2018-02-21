@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201802211255
+# Version: 201802211643
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Expires: 2 days
@@ -81,22 +81,31 @@
 0.0.0.0 adnetwork.adasiaholdings.com
 0.0.0.0 ads.bumq.com
 0.0.0.0 ads.pantip.com
+0.0.0.0 ads1-adnow.com
 0.0.0.0 ads1.bangkokpost.co.th
 0.0.0.0 ads1.matichon.co.th
+0.0.0.0 ads2-adnow.com
 0.0.0.0 ads2.bangkokpost.co.th
 0.0.0.0 ads2.matichon.co.th
+0.0.0.0 ads3-adnow.com
 0.0.0.0 ads3.bangkokpost.co.th
 0.0.0.0 ads3.matichon.co.th
+0.0.0.0 ads4-adnow.com
 0.0.0.0 ads4.bangkokpost.co.th
 0.0.0.0 ads4.matichon.co.th
+0.0.0.0 ads5-adnow.com
 0.0.0.0 ads5.bangkokpost.co.th
 0.0.0.0 ads5.matichon.co.th
+0.0.0.0 ads6-adnow.com
 0.0.0.0 ads6.bangkokpost.co.th
 0.0.0.0 ads6.matichon.co.th
+0.0.0.0 ads7-adnow.com
 0.0.0.0 ads7.bangkokpost.co.th
 0.0.0.0 ads7.matichon.co.th
+0.0.0.0 ads8-adnow.com
 0.0.0.0 ads8.bangkokpost.co.th
 0.0.0.0 ads8.matichon.co.th
+0.0.0.0 ads9-adnow.com
 0.0.0.0 ads9.bangkokpost.co.th
 0.0.0.0 ads9.matichon.co.th
 0.0.0.0 adservice.google.co.th
@@ -168,6 +177,15 @@
 0.0.0.0 simage8.pubmatic.com
 0.0.0.0 simage9.pubmatic.com
 0.0.0.0 ssl.google-analytics.com
+0.0.0.0 st-n.ads1-adnow.com
+0.0.0.0 st-n.ads2-adnow.com
+0.0.0.0 st-n.ads3-adnow.com
+0.0.0.0 st-n.ads4-adnow.com
+0.0.0.0 st-n.ads5-adnow.com
+0.0.0.0 st-n.ads6-adnow.com
+0.0.0.0 st-n.ads7-adnow.com
+0.0.0.0 st-n.ads8-adnow.com
+0.0.0.0 st-n.ads9-adnow.com
 0.0.0.0 stat.bugaboo.tv
 0.0.0.0 stat.matichon.co.th
 0.0.0.0 static-th.plista.com
