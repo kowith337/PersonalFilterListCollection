@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201802211146
+# Version: 201802211255
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Expires: 2 days
@@ -48,6 +48,7 @@
 0.0.0.0 criteo.net
 0.0.0.0 dome.cloud
 0.0.0.0 effectivemeasure.net
+0.0.0.0 fout.jp
 0.0.0.0 freebasics.com
 0.0.0.0 gammaplatform.com
 0.0.0.0 genieessp.com
@@ -138,6 +139,7 @@
 0.0.0.0 imprammp.taboola.com
 0.0.0.0 ioms.bfmio.com
 0.0.0.0 js.genieessp.com
+0.0.0.0 js.rfp.fout.jp
 0.0.0.0 mathid.mathtag.com
 0.0.0.0 media.innity.com
 0.0.0.0 media.innity.net
@@ -150,6 +152,7 @@
 0.0.0.0 player.aniview.com
 0.0.0.0 prod.vidible.tv
 0.0.0.0 pubads.g.doubleclick.net
+0.0.0.0 rfp.fout.jp
 0.0.0.0 rt.gsspat.jp
 0.0.0.0 s1.thstats.com
 0.0.0.0 s2.thstats.com
