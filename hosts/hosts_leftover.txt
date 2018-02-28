@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201802281511
+# Version: 201802281514
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Expires: 2 days
@@ -58,9 +58,11 @@
 0.0.0.0 googletagmanager.com
 0.0.0.0 gsspat.jp
 0.0.0.0 gssprt.jp
+0.0.0.0 imrworldwide.com
 0.0.0.0 innity.com
 0.0.0.0 innity.net
 0.0.0.0 mathtag.com
+0.0.0.0 nordvpn.com
 0.0.0.0 nuffnang.co.th
 0.0.0.0 onthe.io
 0.0.0.0 openx.net
@@ -74,7 +76,6 @@
 0.0.0.0 vidible.tv
 0.0.0.0 visualwebsiteoptimizer.com
 0.0.0.0 yengo.com
-0.0.0.0 nordvpn.com
 
 # Generic Sublevel
 0.0.0.0 0.freebasics.com
@@ -120,6 +121,7 @@
 0.0.0.0 avd.innity.com
 0.0.0.0 avd.innity.net
 0.0.0.0 byteark-analytics.thairath.co.th
+0.0.0.0 cdn-gl.imrworldwide.com
 0.0.0.0 cdn-ssl.vidible.tv
 0.0.0.0 cdn.adsoptimal.com
 0.0.0.0 cdn.onthe.io
