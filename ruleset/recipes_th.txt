@@ -1,7 +1,7 @@
 ! [uMatrix 1.3.3.0]
-! uMatrix: Ruleset recipes for Thai sites 0.9
+! uMatrix: Ruleset recipes for Thai sites 0.9.1
 ! Title: Rulesets for Thai sites (alpha test)
-! Version: 201802121207
+! Version: 201803141837
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/ruleset
 ! 
@@ -73,14 +73,13 @@ NotebookSpec
 		_ 1st-party cookie
 		_ 1st-party script
 		_ 1st-party xhr
-		_ notebookspec.com image
 		_ openx.notebookspec.com * block
 
 Pantip
 	pantip.com *
 		_ 1st-party *
 		_ 1st-party cookie
-		_ 1st-party frame block
+		_ 1st-party frame
 		_ 1st-party script
 		_ 1st-party xhr
 		_ ads.pantip.com * block
@@ -153,6 +152,7 @@ SpecPhone
 		_ 1st-party cookie
 		_ 1st-party script
 		_ 1st-party xhr
+		_ notebookspec.com image
 		_ openx.notebookspec.com * block
 
 Thairath
@@ -161,6 +161,5 @@ Thairath
 		_ 1st-party cookie
 		_ 1st-party script
 		_ 1st-party xhr
-		_ byteark-analytics.thairath.co.th * block
 		_ byteark.com css
 		_ byteark.com script
