@@ -1,0 +1,315 @@
+[uBlock Origin 1.15.17.0]
+! Title: Facebook Zuckestion Killer (Temporary Name)
+! Version: 201803241413
+! Author: kowith337
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection
+! Expires: 2 days
+
+! These rules below are pulled from "Thai Paranoid Block" that have some rules that I've created for hide and remove zuckestions,
+! ads, related contents, also remove ability to link back to related application from Facebook, such as Instagram, MESSenger,
+! even Facebook Lite.
+
+! Some rules below are too long due to use an xpath, or multiple procedural chaining to make sure it won't accidentally remove
+! something that really need.
+
+! Inspired from report on https://github.com/collinbarrett/FilterLists/issues/282
+
+! Network Blocking (to prevent sending requests to show related contents, determine user action about how users use Facebook)
+||facebook.com/adnw_logging/$important
+||facebook.com/ads/
+||facebook.com/ads/ad_choices$important
+||facebook.com/ads/growth$important
+||facebook.com/ads/manager/ajax/check_tip_qe$important
+||facebook.com/ads/manager/ajax/list_tips$important
+||facebook.com/ads/manager/ajax/megaphone_story$important
+||facebook.com/ads/qe/$important
+||facebook.com/ai.php$subdocument,important
+||facebook.com/ajax/ads/$important
+||facebook.com/ajax/browse/null_state.php$important
+||facebook.com/ajax/haste-response/?modules=*LinkshimLogController$important
+||facebook.com/ajax/haste-response/?modules=ChatImpressionLogger$important
+||facebook.com/ajax/haste-response/?modules=ItunesDetector$important
+||facebook.com/ajax/haste-response/?modules=PhotoSnowliftViewableWithContextMenuLogging$important
+||facebook.com/ajax/haste-response/?modules=PubcontentFeedChainingController$important
+||facebook.com/ajax/haste-response/?modules=ReactComposerFeedSurvey$important
+||facebook.com/ajax/haste-response/?modules=ReactComposerMagicTagSurvey$important
+||facebook.com/ajax/haste-response/?modules=ShareDialogMessageAudience$important
+||facebook.com/ajax/haste-response/?modules=TypeaheadMetricReporter$important
+||facebook.com/ajax/haste-response/?modules=UFIOrderingModeSelectorContainer$important
+||facebook.com/ajax/haste-response/?modules=VideoAutoplayController$important
+||facebook.com/ajax/pagelet/generic.php/WebEgoPane$important
+||facebook.com/ajax/photos/logging$important
+||facebook.com/ajax/react_composer/survey?
+||facebook.com/ajax/typeahead/record_basic_metrics.php$important
+||facebook.com/async/social_good/$xmlhttprequest
+||facebook.com/audience_network/$important
+||facebook.com/common/referer_frame.php$inline-script
+||facebook.com/ego/$important
+||facebook.com/ego/feed$important
+||facebook.com/feed/pivot/$xmlhttprequest
+||facebook.com/feed/pivot/chaining$important
+||facebook.com/feed/pivot/related_articles$important
+||facebook.com/friends/center/suggestions$important
+||facebook.com/impression.php$important
+||facebook.com/network_ads_common$important
+||facebook.com/pages/launchpoint/discover/$document,important
+||facebook.com/pages/qe/$important
+||facebook.com/plugins/likebox.php$important
+||facebook.com/pubcontent/$xmlhttprequest
+||facebook.com/pubcontent/comment_chaining$important
+||facebook.com/pubcontent/feed_chaining$important
+||facebook.com/pubcontent/group_related_stories$important
+||facebook.com/pubcontent/local_news_chaining$important
+||facebook.com/pubcontent/related_share$important
+||facebook.com/pubcontent/related_video$important
+||facebook.com/pubcontent/suggestions$important
+||facebook.com/pymk/funnel_logging$important
+||facebook.com/related-application/?$important
+||facebook.com/relay/bootload/?component=AdsCMChromeRenderer$important
+||facebook.com/requests/interaction_history_logging$important
+||facebook.com/sem_campaigns$important
+||facebook.com/sem_pixel$important
+||facebook.com/suggestions$important
+||facebook.com/tr?$important
+||facebook.com/typeahead/search/facebar/nullstate/?$important
+||facebook.com/video/autoplay$important
+||facebook.com/video/quality_survey$important
+||facebook.com/video/tahoe/upnext/$important
+||facebook.com/xti.php$important
+||facebook.net/*/xfbml.ad.js$script,important
+||fbcdn.net/*?*facebook.com%2Fads%2F$important
+||fbcdn.net/*?*facebook.com%2Fajax%2Fads%2F$important
+||fbcdn.net/hads-ak-*$important
+
+! Unbreak some functional, e.g. If you want to manage advert prefs, you need to allow some requests to let Facebook retrieve
+! information about advert prefs, and let you properly manage them without getting error or auto refresh due to cannot sent xhr
+! to perform delete preference out of your account.
+@@||facebook.com/ads/can_change_business_country_reason/?$domain=www.facebook.com
+@@||facebook.com/ads/can_change_currency_timezone_reason/?$domain=www.facebook.com
+@@||facebook.com/ads/manage/$domain=www.facebook.com
+@@||facebook.com/ads/manager/$domain=www.facebook.com
+@@||facebook.com/ads/preferences/ad_report/$xmlhttprequest
+@@||facebook.com/ads/preferences/advertiser_hideall$first-party
+@@||facebook.com/ads/preferences/edit_interests/?*action=del$first-party
+@@||facebook.com/ads/preferences/edit_sensitive_topics$xmlhttprequest
+@@||facebook.com/ads/preferences/report$xmlhttprequest,first-party
+@@||facebook.com/ads/profile/advertisers$xmlhttprequest,first-party
+@@||facebook.com/ads/profile/interests$xmlhttprequest,first-party
+@@||facebook.com/ads/tax_id_collection_config/?$domain=www.facebook.com
+@@||facebook.com/ads/viewer_permissions/?$domain=www.facebook.com
+@@||facebook.com/ajax/groups/mall/mall_post_menu.php$xmlhttprequest,first-party
+@@||facebook.com/feed/options_menu$xmlhttprequest,first-party
+@@||facebook.com/share/dialog/submit/$xmlhttprequest,first-party
+
+! [Counter] Prevent accidentally (re-)add advert prefs while you're deleting them.
+! Check your advert prefs here [FB Login needed] > https://www.facebook.com/ads/preferences/edit
+||facebook.com/ads/preferences/advertiser_hideall/?*undo=true$important
+||facebook.com/ads/preferences/edit_interests/?action=add$important
+||facebook.com/ads/preferences/edit_sensitive_topics*duration_in_days=0$important
+
+! Facebook Messaging Privacy Aware (is typing, seen message)
+||facebook.com/*/change_read_status.php$important
+||facebook.com/*/mark_seen.php$important
+||facebook.com/*/typ.php$important
+||messenger.com/*/change_read_status.php$important
+||messenger.com/*/mark_seen.php$important
+||messenger.com/*/typ.php$important
+
+! Give the warning if you're using Facebook on some cellular data provider that can redirect to smartphone-focused site,
+! not an actual version of it!
+! e.g. when you want to go 'mbasic.faecbook.com' for super lightweight Facebook mobile version, but you get redirected to
+! 'm.facebook.com' or 'mobile.facebook.com' then show the suggestion page to use Facebook under "Free Basics" campaign,
+! Note: I don't know why it redirected to "h.facebook.com" under non-HTTPS? first before bouncing back to "m.facebook.com"
+! or "mobile.facebook.com" ? so, I will block it until they change the redirection to use over HTTPS, or you need to use
+! HTTPS Everywhere plugins.
+|http://h.facebook.com$important
+||facebook.com/zero/policy$document
+||web.facebook.com$document,important
+
+! Sometime you're able to still use 'm.facebook.com' or 'touch.facebook.com' on mobile data,
+! but it still make xhr to 'mobile.facebook.com', so it's good to block that!
+||mobile.facebook.com$important,domain=~mobile.facebook.com
+
+! I HATE FreakBasics by Facebook, internet.org also...
+||freebasics.com$document,important
+||internet.org$document,important
+
+! [Super lightweight Facebook enhancement]
+! It's no need to load anything that not matter to use, because `mbasic.facebook.com` can work fine without JavaScript,
+! Inline script, iframe and third party resources.
+||$script,domain=mbasic.facebook.com
+||$subdocument,domain=mbasic.facebook.com
+||$inline-script,domain=mbasic.facebook.com
+||$websocket,domain=mbasic.facebook.com
+
+! DOM Hiding - Level 1: Known DOM id and class, some wildcard of element name
+facebook.com###GroupsRHCSuggestionSection
+facebook.com###fbpage_invite_audience_action
+facebook.com###fbpage_invite_audience_action_finch
+facebook.com###feed_optimistic_video
+facebook.com###friend_invites_section
+facebook.com###home_sponsor_nile
+facebook.com###mobile_login_bar
+facebook.com###page_suggestions_on_liking
+facebook.com###pagelet_ads_when_no_friend_list_suggestion
+facebook.com###pagelet_advertiser_panel
+facebook.com###pagelet_ego_pane
+facebook.com###pagelet_explore_feed div[role="article"] .fbUserStory span.uiLikePageButton
+facebook.com###pagelet_games_rhc
+facebook.com###pagelet_group_mall div[id^="group_mall"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
+facebook.com###pagelet_main_column_personal #fbSuggestionsPlaceHolder
+facebook.com###pages_may_like_section
+facebook.com###permalink_related_videos_logged_out
+facebook.com###video_permalink_related_pagelet
+facebook.com##.fbAdUnit
+facebook.com##.fbEmu
+facebook.com##.fbEmuBlock
+facebook.com##.fbEmuComboList
+facebook.com##.fbEmuEgo
+facebook.com##.fbEmuEgoUnit
+facebook.com##.fbEmuLink
+facebook.com##.fbEmuTracking
+facebook.com##.fbPhotoAdsCol
+facebook.com##.fbTimelineSideAds
+facebook.com##div[id^="pagelet_group"] form[action*="nux_type=create_page"]
+facebook.com##div[id^="pagelet_group"] form[action*="nux_type=member_suggesting_tags"]
+facebook.com##div[id^="pagelet_recommendation"]
+facebook.com##div[id^="sponsoredTickerStory"]
+facebook.com##div[role="feed"] .fbUserContent .FriendButton
+facebook.com##div[role="feed"] .fbUserContent .mtm .FriendButton
+facebook.com##div[role="feed"] .fbUserContent .mtm span a[ajaxify^="/ajax/follow/"]
+facebook.com##div[role="feed"] .fbUserContent .mtm span[class*="uiLikePageButton"]
+facebook.com##div[role="feed"] .fbUserContent .mtm span[class*="uiPageLikeButton"]
+facebook.com##div[role="feed"] .fbUserContent a[ajaxify^="/ajax/follow/"]
+facebook.com##div[role="feed"] .fbUserContent span a[ajaxify^="/ajax/follow/"]
+facebook.com##div[role="feed"] .fbUserContent span[class*="uiLikePageButton"]
+facebook.com##div[role="feed"] .fbUserContent span[class*="uiPageLikeButton"]
+facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .mtm .FriendButton
+facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .mtm span a[ajaxify^="/ajax/follow/"]
+facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .mtm span[class*="uiLikePageButton"]
+facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .mtm span[class*="uiPageLikeButton"]
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###bookmarkmenu table td a[href*="freebasics.com"]
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###m_loginbar_login_button
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###m_loginbar_reg_button
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###m_newsfeed_stream div > div[data-ft*="saved_for_later"]
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###root table > div table > a[href*="freebasics.com"]
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[id^="u_0_"][data-ft*="ego_id"]
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##root div[data-ft][data-xt*="sponsored"]
+m.facebook.com,mobile.facebook.com,touch.facebook.com###root .scrollArea[data-sigil*="friends-center-nav"] a[data-ajaxify-href*="/friends/center/suggestions/"]
+m.facebook.com,mobile.facebook.com,touch.facebook.com###root[data-sigil*="context-layer-root"] article div a[href*="/ads/preferences/interest_suggestions/"]
+m.facebook.com,mobile.facebook.com,touch.facebook.com##article[data-ft*="mhpp_ego_service_type"]
+m.facebook.com,mobile.facebook.com,touch.facebook.com##article[data-ft][data-xt*="sponsored"]
+m.facebook.com,mobile.facebook.com,touch.facebook.com##article[data-store*="is_sponsored.1"]
+m.facebook.com,mobile.facebook.com,touch.facebook.com##article[data-xt*="is_sponsored.1"]
+m.facebook.com,mobile.facebook.com,touch.facebook.com##div[data-store*="mobile_page_contextual_recommendations"]
+
+! DOM Hiding - Level 2: contains if/has(-text)/xpath parameter
+! This need at least uBO 1.8.0+, but 1.10.0+ for multiple chaining...
+facebook.com###ads_preferences_desktop_root div[tabindex][role="button"] button[data-hover][data-tooltip-content="Add"]:if(span:has-text(Add))
+facebook.com###contentArea div:if-not(.clearfix):has(a[href*="/login/?"])
+facebook.com###events_dashboard_activity_feed div[role="article"]:if(.fbEventsSuggestionItem)
+facebook.com###fbSearchResultsBox:if(form.friendBrowserForm div:has(li a[href*="?fref=pymk"]))
+facebook.com###globalContainer .uiLayer[data-testid="undefined"] .uiContextualLayer div ul[role="menu"] li:if(a span div:has-text(/^Undo hiding ads/))
+facebook.com###groupsNewMembersLink div:has(li[id^="suggested_member_"])
+facebook.com###headerArea div:if-not(.clearfix):has(a[href*="/login/?"])
+facebook.com###pagelet_group_rhc .groupSkyAux div[class] > div[id][class]:if(.uiList:has(li[id^="suggested_member"]))
+facebook.com###pagelet_group_rhc .groupSkyAux div[class] > div[id][class]:if(div[class]:has(a[id^="group_rhc_see_more"]))
+facebook.com###pagelet_growth_expanding_cta:has(a[id^="expanding_cta_"])
+facebook.com###profile_page_insights_hubble div > table td div:has-text(Suggested Pages to Watch)
+facebook.com###stream_pagelet div.mvm:if(div:has(a[href*="?sk=h_nor"]))
+facebook.com##._4-u8:has(a[data-testid="back_to_top_link"])
+facebook.com##.jewelWithEgoUnits .uiScrollableAreaContent div:if(form.friendBrowserForm:has(input[value="people_you_may_know"]))
+facebook.com##.loggedout_menubar div[data-testid="royal_login_form"] div:if(form[id="login_form"])
+facebook.com##.mtm div[id^="u_0_"] div[id^="u_0_"]:has(span button.PageLikeButton)
+facebook.com##.pagelet.groupSkyAux div:has(a[ajaxify*="/ajax/groups/create_get.php?"])
+facebook.com##:xpath(//div//form[@rel="async"]//div[.//div/text()="Up next"])
+facebook.com##:xpath(//div[@id="pagelet_timeline_main_column"]//div[starts-with(@data-referrer,"id")]//div[starts-with(@id,"u_")]//div//div[.//span/text()="Featured for you"])
+facebook.com##:xpath(//div[@id="stream_pagelet"]//div[starts-with(@data-ownerid,"u_jsonp_")][//div//span/text()="Featured for you"])
+facebook.com##:xpath(//div[@id="stream_pagelet"]//div[starts-with(@data-ownerid,"u_jsonp_")][//div/text()="Related"])
+facebook.com##:xpath(//div[@id="timeline-medley"]//div//span[.//button/text()="Tag Suggestions"])
+facebook.com##div ul[role="menu"] li:has(a[href*="campaign/landing.php?"])
+facebook.com##div[data-referrer="pagelet_side_ads"]
+facebook.com##div[data-referrer="timeline_collections_section_title"] > div:has(div[id^="pagelet_recommendation"])
+facebook.com##div[id^="dialog_"]:has(.dialog_buttons input[name="login"])
+facebook.com##div[id^="hyperfeed_story_id"] .mtm div[id^="u_jsonp"] div[id^="u_jsonp"]:has(a[href*="type=article_author_in_shared_link"])
+facebook.com##div[id^="hyperfeed_story_id"] div[data-gt*="click2canvas"] div[data-ft] .mts .mtm:if(.uiList:has(li a[rel][target="_blank"]))
+facebook.com##div[id^="hyperfeed_story_id"] div[id^="u_fetchstream"]:if(div[role="article"] div[data-ft*="ego_id"]:has(a[href*="?ref=psym_feed"]))
+facebook.com##div[id^="hyperfeed_story_id"]:if(.fbInternPreview)
+facebook.com##div[id^="hyperfeed_story_id"]:if(a[href*="/friends/requests/"])
+facebook.com##div[id^="hyperfeed_story_id"]:if(a[href*="[is_sponsored]=1"])
+facebook.com##div[id^="hyperfeed_story_id"]:if(a[href*="is_sponsored=1"])
+facebook.com##div[id^="hyperfeed_story_id"]:if(a[href="https://www.facebook.com/zuck"])
+facebook.com##div[id^="hyperfeed_story_id"]:if(div[data-ft*="ego_id"]:has(a[href*="ref=group_top_stories_feed"]))
+facebook.com##div[id^="hyperfeed_story_id"]:if(div[data-ft*="ego_id"]:has(a[href*="ref=psym_feed"]))
+facebook.com##div[id^="hyperfeed_story_id"]:if(span a:has-text(/Sponsored/))
+facebook.com##div[id^="hyperfeed_story_id"]:if(span a[href*="[is_sponsored]=1"])
+facebook.com##div[id^="hyperfeed_story_id"]:if(span a[href*="is_sponsored=1"])
+facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .mtm:if(div .uiList:has(li a[href^="/commerce/products/"]))
+facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .userContentWrapper .mtm .mtm:if(ul.uiList:has(a[href*="/services"]))
+facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"]:if(div ul.uiList:has(li[data-ft*="ego_id"]))
+facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###friends_center_main div:if(table tr:has(td a[href*="pymk_funnel_data"]))
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###m_group_stories_container div:if(div a[href*="/findgroups/"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###m_newsfeed_stream div div[data-ft]:if(div:has(a[href^="/qp/action/redirect/"]))
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###m_newsfeed_stream div[data-ft] > div a[href*="/mobile/friends/add_friend.php?"]
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###root #bookmarkmenu table:if(a[href^="/findfriends/browser/"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###root div div:if(div[id^="more_item_"]:has(a[href^="/findfriends/browser/?"]))
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###root div:if(table td a[href*="/collapse/"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###root div[data-ft]:if(a[href*="netego_suggestion"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###root table div:if(div[id^="page_suggestion"]:has(div a[href*="&origin=mobile_page_browser&"]))
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###root table td > div:has-text(/^Suggested/):if(ul li:has(table))
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###sub_profile_pic_content div > div:if(table a[href*="/search/"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root div:if(h3):has(span a[href^="/dd/greeting/mbasic/more/tapped"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root div[data-ft]:if(h3:has-text(Facebook)):has(a[href^="/netego/redirect/"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div > div:if(a[href^="/download.php"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div > div:if(table tbody tr td:has(a[href^="/a/language.php?"]):if-not(a[href*="lref=%2Fsettings%2Flanguage%2F"]))
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div > table[class] td a[href*="lm.facebook.com/l.php?"][target="_blank"]:if(span)
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##:xpath(//div[@data-ft][.//span/text()="Sponsored"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##:xpath(//div[@role="article"][.//span/text()="Sponsored"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[data-ft] > div > div:if(span a[href*="/boosted_post/"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[data-ft] div:if(table a[href*="mbasic_feed_post_like_chaining"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[data-ft] div:if(table a[href*="mbasic_feed_share_like_chaining"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[data-ft]:if(a[href*="[is_sponsored]=1"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[data-ft]:if(a[href*="is_sponsored=1"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[data-ft]:if(div a[href*="/friends/center/"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[data-ft]:if(div a[href*="/groups/?ref=category_discover_landing"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[data-ft]:if(table td div:has(a[href*="origin=feed_pyml"]))
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[id^="u_0_"] table:if(td a[href^="/profilepicframes/"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[role="article"] div:if(table a[href*="mbasic_feed_post_like_chaining"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[role="article"] div:if(table a[href*="mbasic_feed_share_like_chaining"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[role="article"] table[role="presentation"]:if(td a[href^="/profilepicframes"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[role="article"]:if(div a[href*="/friends/center/"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[role="article"]:if(iframe[src^="/xti.php?"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com##table td#mEventsDashboard #events_dashboard_activity_feed:if(a[href*="suggestion_feed_unit"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div div[data-store*="share_id"] .story_body_container div[data-ft] div:if(.scrollArea:has(a[href*="/services?"]))
+m.facebook.com,mobile.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div:if(.scrollArea:has(a[href^="/commerce/products/"]))
+m.facebook.com,mobile.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div[data-store*="share_id"] .story_body_container div div:if(.scrollArea:has(a[href^="/commerce/products/"]))
+m.facebook.com,mobile.facebook.com,touch.facebook.com###MNewsFeed section article:if(.scrollArea:has(a#pyml_infinite_scroll_loading))
+m.facebook.com,mobile.facebook.com,touch.facebook.com###events_dashboard_activity_feed section article:if(.scrollArea:has(.fbEventsEgoScroller))
+m.facebook.com,mobile.facebook.com,touch.facebook.com###mJewelRequestsFlyoutBody div div:if(div[class] div[class]:has(div[data-pymk-id]))
+m.facebook.com,mobile.facebook.com,touch.facebook.com###m_group_stories_container section article:if(.scrollArea .scrollAreaColumn[data-sigil="m-groups-pymi-item"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com###msite-pages-header-contents div[style*="transparent none repeat scroll"]:if(#popup_xout)
+m.facebook.com,mobile.facebook.com,touch.facebook.com###page #root header div div:if(a[href^="/pages/launchpoint/discover/"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com###page div[id^="unit_id_"]:if(.scrollArea:has(.scrollAreaColumn div[data-autoid]))
+m.facebook.com,mobile.facebook.com,touch.facebook.com###root div a.sub[href*="?sk=h_nor"]
+m.facebook.com,mobile.facebook.com,touch.facebook.com###viewport #root div[id^="u_0_"]:if(div #mobile_login_bar strong)
+m.facebook.com,mobile.facebook.com,touch.facebook.com##.mSideMenu .touchable:if(a[href*="/ads/create/"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##.mSideMenu .touchable:if(a[href*="/friends/center/suggestions/"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##.mSideMenu .touchable:if(a[href*="app_id=124024574287414"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##.mSideMenu .touchable:if(a[href*="app_id=1728807357362356"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##.mSideMenu .touchable:if(a[href*="app_id=275254692598279"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##.mSideMenu .touchable:if(a[href*="appcenter/124024574287414"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##.mSideMenu .touchable:if(a[href*="freebasics.com"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##.mSideMenu .touchable:if(a[href*="instagram.com"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##.storyStream section article:if(footer:has(a[data-ajaxify-href^="/qp/action/redirect/?"]))
+m.facebook.com,mobile.facebook.com,touch.facebook.com##:xpath(//section//article[.//header//div//span/text()="Sponsored"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##article:if(.scrollArea div[data-sigil="ego-auto-pager"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##article:if(.scrollArea):has(.scrollAreaBody div[data-ft*="ego_id"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##article:if(a[data-uri*="[is_sponsored]=1"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##article:if(a[data-uri*="is_sponsored=1"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##article:if(a[href*="[is_sponsored]=1"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##article:if(a[href*="is_sponsored=1"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##article:if(div[data-sigil="egoScroller"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##article:if(footer a[href*="/friends/center/"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##article:if(footer a[href*="/saved/"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##article:if(span[data-sigil="pixelContainer"])
