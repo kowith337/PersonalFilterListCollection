@@ -1,7 +1,7 @@
 ! [uMatrix 1.3.3.0]
-! uMatrix: Ruleset recipes for Thai sites 0.9.1
+! uMatrix: Ruleset recipes for Thai sites 0.10.0
 ! Title: Rulesets for Thai sites (alpha test)
-! Version: 201803141837
+! Version: 201803262358
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/ruleset
 ! 
@@ -36,36 +36,14 @@ Khaosod
 		_ 1st-party *
 		_ 1st-party cookie
 		_ 1st-party script
-		_ ads1.matichon.co.th * block
-		_ ads2.matichon.co.th * block
-		_ ads3.matichon.co.th * block
-		_ ads4.matichon.co.th * block
-		_ ads5.matichon.co.th * block
-		_ ads6.matichon.co.th * block
-		_ ads7.matichon.co.th * block
-		_ ads8.matichon.co.th * block
-		_ ads9.matichon.co.th * block
 		_ iconarchive.com image
-		_ stat.matichon.co.th * block
-		_ statmt.matichon.co.th * block
 
 Matichon
 	matichon.co.th *
 		_ 1st-party *
 		_ 1st-party cookie
 		_ 1st-party script
-		_ ads1.matichon.co.th * block
-		_ ads2.matichon.co.th * block
-		_ ads3.matichon.co.th * block
-		_ ads4.matichon.co.th * block
-		_ ads5.matichon.co.th * block
-		_ ads6.matichon.co.th * block
-		_ ads7.matichon.co.th * block
-		_ ads8.matichon.co.th * block
-		_ ads9.matichon.co.th * block
 		_ iconarchive.com image
-		_ stat.matichon.co.th * block
-		_ statmt.matichon.co.th * block
 
 NotebookSpec
 	notebookspec.com *
@@ -73,7 +51,6 @@ NotebookSpec
 		_ 1st-party cookie
 		_ 1st-party script
 		_ 1st-party xhr
-		_ openx.notebookspec.com * block
 
 Pantip
 	pantip.com *
@@ -82,9 +59,7 @@ Pantip
 		_ 1st-party frame
 		_ 1st-party script
 		_ 1st-party xhr
-		_ ads.pantip.com * block
 		_ bloggang.com image
-		_ pantipmarket.com image
 		_ ptcdn.info image
 
 Post Today
@@ -93,15 +68,6 @@ Post Today
 		_ 1st-party cookie
 		_ 1st-party script
 		_ 1st-party xhr
-		_ ads1.bangkokpost.co.th * block
-		_ ads2.bangkokpost.co.th * block
-		_ ads3.bangkokpost.co.th * block
-		_ ads4.bangkokpost.co.th * block
-		_ ads5.bangkokpost.co.th * block
-		_ ads6.bangkokpost.co.th * block
-		_ ads7.bangkokpost.co.th * block
-		_ ads8.bangkokpost.co.th * block
-		_ ads9.bangkokpost.co.th * block
 		_ bangkokpost.co.th image
 		_ cdnjs.cloudflare.com script
 		_ fonts.googleapis.com css
@@ -112,18 +78,7 @@ Prachachat Business
 		_ 1st-party *
 		_ 1st-party cookie
 		_ 1st-party script
-		_ ads1.matichon.co.th * block
-		_ ads2.matichon.co.th * block
-		_ ads3.matichon.co.th * block
-		_ ads4.matichon.co.th * block
-		_ ads5.matichon.co.th * block
-		_ ads6.matichon.co.th * block
-		_ ads7.matichon.co.th * block
-		_ ads8.matichon.co.th * block
-		_ ads9.matichon.co.th * block
 		_ iconarchive.com image
-		_ stat.matichon.co.th * block
-		_ statmt.matichon.co.th * block
 
 Sanook! (Tencent)
 	sanook.com *
@@ -141,7 +96,6 @@ Sanook! (Tencent)
 		_ joox.com *
 		_ joox.com media
 		_ joox.com script
-		_ joox-affiliate.sanook.com * block
 		_ qq.com image
 		_ qq.com script
 		_ wechat.com image
@@ -153,7 +107,6 @@ SpecPhone
 		_ 1st-party script
 		_ 1st-party xhr
 		_ notebookspec.com image
-		_ openx.notebookspec.com * block
 
 Thairath
 	thairath.co.th *
