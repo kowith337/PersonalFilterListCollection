@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.23.10]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201802112057
+! Version: 201803290116
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -242,9 +242,15 @@ gelbooru.com##.navbar #navbar2 li a:style(padding-left: 5px !important; padding-
 gelbooru.com##.navbar#submenu #navbar2 .navbar-nav:style(direction:rtl !important)
 gelbooru.com##.navbar#submenu #navbar2:style(float: right !important)
 gelbooru.com##.navbar#submenu:style(float: right !important; width: 50% !important)
+gelbooru.com##.navbar-header .navbar-brand:style(font-size: 12px !important)
 gelbooru.com##.navbar.navbar-default .navbar-header button.navbar-toggle:style(float:left !important; margin-left: 10px !important; margin-right: 0px !important)
 gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ! gelbooru.com###post-view #right-col div #image[src*="sample"]:style(width: 100% !important)
+
+! Block then Redirect - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Experimental: Testing block intermission.php and redir to dummy frame
+! Blocked network rules for redirect is only affect for specific type of request only.
+||gelbooru.com/intermission.php$subdocument,important,redirect=noopframe
 
 ! ---------------------------------------------------- TheDoujin Support ------------------------------------------------------ !
 ! This aim to re-support TheDoujin to hide ads and prevent connections to ads and tracking servers, although this site have less
