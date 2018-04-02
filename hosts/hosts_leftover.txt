@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201803051323
+# Version: 201804021607
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Expires: 2 days
@@ -8,7 +8,7 @@
 # Note: This use to re-blocking unblocked hosts in common hosts file, it's not recommended to use for workplace or company setup,
 #       just only my opinion and personal bias, you can use this at your own risk!
 
-# Firefox Betrayed Backend
+# Firefox Betrayed Backend Domains (Telemetry, Health Report, Personalize content suggestions)
 0.0.0.0 api.getpocket.com
 0.0.0.0 broker-live.mozillamessaging.com
 0.0.0.0 crash-stats.mozilla.com
@@ -35,7 +35,7 @@
 0.0.0.0 token.services.mozilla.com
 0.0.0.0 tracking.services.mozilla.com
 
-# Generic Root - Recommended for uMatrix to block as top level, regardless of subdomains
+# Generic Root (Recommended for uMatrix to block as top level, regardless of sub-domains)
 0.0.0.0 adasiaholdings.com
 0.0.0.0 addthisedge.com
 0.0.0.0 adsoptimal.com
@@ -76,6 +76,28 @@
 0.0.0.0 vidible.tv
 0.0.0.0 visualwebsiteoptimizer.com
 0.0.0.0 yengo.com
+
+# Adware Root (Same as Generic Root)
+0.0.0.0 360tools.org
+0.0.0.0 555.in.th
+0.0.0.0 baidu.co.th
+0.0.0.0 beedoctor.in.th
+0.0.0.0 default-search.net
+0.0.0.0 hao123.com
+0.0.0.0 joydownload.com
+0.0.0.0 mystart.com
+0.0.0.0 opencandy.com
+0.0.0.0 palikan.com
+0.0.0.0 pcfaster.com
+0.0.0.0 reimageplus.com
+0.0.0.0 snapdo.com
+0.0.0.0 tools1000.com
+0.0.0.0 toptools100.com
+0.0.0.0 v9.com
+0.0.0.0 vosteran.com
+0.0.0.0 vosteransearch.com
+0.0.0.0 yac.mx
+0.0.0.0 wisemana.com
 
 # Generic Sublevel
 0.0.0.0 0.freebasics.com
@@ -192,6 +214,8 @@
 0.0.0.0 simage7.pubmatic.com
 0.0.0.0 simage8.pubmatic.com
 0.0.0.0 simage9.pubmatic.com
+0.0.0.0 ssl-avd.innity.com
+0.0.0.0 ssl-avd.innity.net
 0.0.0.0 ssl.google-analytics.com
 0.0.0.0 st-n.ads1-adnow.com
 0.0.0.0 st-n.ads2-adnow.com
@@ -242,28 +266,6 @@
 0.0.0.0 www.storygize.net
 0.0.0.0 www.traffic-sharing.com
 0.0.0.0 www.yengo.com
-
-# Adware Root
-0.0.0.0 360tools.org
-0.0.0.0 555.in.th
-0.0.0.0 baidu.co.th
-0.0.0.0 beedoctor.in.th
-0.0.0.0 default-search.net
-0.0.0.0 hao123.com
-0.0.0.0 joydownload.com
-0.0.0.0 mystart.com
-0.0.0.0 opencandy.com
-0.0.0.0 palikan.com
-0.0.0.0 pcfaster.com
-0.0.0.0 reimageplus.com
-0.0.0.0 snapdo.com
-0.0.0.0 tools1000.com
-0.0.0.0 toptools100.com
-0.0.0.0 v9.com
-0.0.0.0 vosteran.com
-0.0.0.0 vosteransearch.com
-0.0.0.0 wisemana.com
-0.0.0.0 yac.mx
 
 # Adware Sublevel
 0.0.0.0 antivirus.baidu.com
