@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.23]
 ! Title: Facebook Bullshit Commands List
-! Version: 201802062146
+! Version: 201804031340
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -292,7 +292,6 @@ facebook.com##^script:has-text(trackReferrer)
 ||facebook.com/*?modules=SavedForLaterChromeExtensionToastNux$important
 ||facebook.com/*?modules=ShareDialogMessageAudience$important
 ||facebook.com/*?modules=ShowsPYMFUtils$important
-||facebook.com/*?modules=Tahoe$important
 ||facebook.com/*?modules=TrackingPixel$important
 ||facebook.com/*?modules=TypeaheadMetricReporter$important
 ||facebook.com/*?modules=UFIOrderingModeSelectorContainer$important
