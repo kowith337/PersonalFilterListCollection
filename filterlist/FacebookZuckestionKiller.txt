@@ -1,6 +1,6 @@
 [uBlock Origin 1.15.17.0]
 ! Title: Facebook Zuckestion Killer (Temporary Name)
-! Version: 201804031326
+! Version: 201804101921
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -279,11 +279,11 @@ m.facebook.com,mbasic.facebook.com,mobile.facebook.com###root table td > div:has
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###sub_profile_pic_content div > div:if(table a[href*="/search/"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###sub_profile_pic_content div > div:if(table[role]:has(td div:has-text(/^People also like/)))
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root div:if(h3):has(span a[href^="/dd/greeting/mbasic/more/tapped"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root div:not([id^="MPhoto"]) > table[role] tbody:has(a[href^="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root div[data-ft]:if(h3:has-text(Facebook)):has(a[href^="/netego/redirect/"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root table td div div:if(a[href^="/lite/?loc_ref=menu"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div > div:if(a[href^="/download.php"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div > div:if(table tbody tr td:has(a[href^="/a/language.php?"]):if-not(a[href*="lref=%2Fsettings%2Flanguage%2F"]))
-m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div > div:if(table[role]:has(a[href^="/qp/action/redirect/?"][href*="https%3A%2F%2Fmbasic.facebook.com%2Flite%2F"])):if-not(#objects_container)
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div > table[class] td a[href*="lm.facebook.com/l.php?"][target="_blank"]:if(span)
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com##:xpath(//div[@data-ft][.//span/text()="Sponsored"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com##:xpath(//div[@role="article"][.//span/text()="Sponsored"])
