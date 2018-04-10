@@ -1,6 +1,6 @@
 [uBlock Origin 1.15.17.0]
 ! Title: Facebook Zuckestion Killer (Temporary Name)
-! Version: 201804101921
+! Version: 201804101946
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -283,8 +283,9 @@ m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root div:not(
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root div[data-ft]:if(h3:has-text(Facebook)):has(a[href^="/netego/redirect/"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root table td div div:if(a[href^="/lite/?loc_ref=menu"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div > div:if(a[href^="/download.php"])
-m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div > div:if(table tbody tr td:has(a[href^="/a/language.php?"]):if-not(a[href*="lref=%2Fsettings%2Flanguage%2F"]))
-m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div > table[class] td a[href*="lm.facebook.com/l.php?"][target="_blank"]:if(span)
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div:not(#objects_container) > div:has(table tbody tr td:has(a[href^="/a/language.php?"]):not(a[href*="lref=%2Fsettings%2Flanguage%2F"]))
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div:not(#objects_container) > div:has(table[role] a[href^="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div:not(#objects_container) > table[class] td a[href*="lm.facebook.com/l.php?"][target="_blank"]:has(span)
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com##:xpath(//div[@data-ft][.//span/text()="Sponsored"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com##:xpath(//div[@role="article"][.//span/text()="Sponsored"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[data-ft] > div > div:if(span a[href*="/boosted_post/"])
