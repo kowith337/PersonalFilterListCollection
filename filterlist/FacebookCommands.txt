@@ -1,6 +1,6 @@
-[uBlock Origin 1.14.23]
+[uBlock Origin 1.15.25.1]
 ! Title: Facebook Bullshit Commands List
-! Version: 201804031340
+! Version: 201804141238
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -9,7 +9,8 @@
 !       these rules below will disable many JavaScript functions and also prevent lots of network requests.
 !       Although, the script blocking may not work as expected, but few rules will work in alphabetically.
 
-! Function abort
+!#if ext_firefox
+! Function abort (Only Firefox quantum)
 facebook.com##^script:has-text(AYMTHomepagePanelTypedLogger)
 facebook.com##^script:has-text(AdAllocationIntegrityGapsInfo)
 facebook.com##^script:has-text(AdAllocationIntegrityUtils)
@@ -22,6 +23,8 @@ facebook.com##^script:has-text(AdsCollectionsConstants)
 facebook.com##^script:has-text(AdsEmptyValue)
 facebook.com##^script:has-text(AdsError)
 facebook.com##^script:has-text(AdsGetter)
+facebook.com##^script:has-text(AdsGuidanceUnifiedNavigationTip)
+facebook.com##^script:has-text(AdsIntelligentBlueTipContainer)
 facebook.com##^script:has-text(AdsInterfacesComponentsEventCategory)
 facebook.com##^script:has-text(AdsInterfacesComponentsEventName)
 facebook.com##^script:has-text(AdsInterfacesComponentsLogger)
@@ -183,6 +186,7 @@ facebook.com##^script:has-text(getMaxPossibleAdBreaks)
 facebook.com##^script:has-text(isAdsExcelAddinURI)
 facebook.com##^script:has-text(isLinkshimURI)
 facebook.com##^script:has-text(trackReferrer)
+!#endif
 
 ! ?modules request block
 ||facebook.com/*?modules=*LinkshimLogController$important
@@ -198,6 +202,8 @@ facebook.com##^script:has-text(trackReferrer)
 ||facebook.com/*?modules=AdsEmptyValue$important
 ||facebook.com/*?modules=AdsError$important
 ||facebook.com/*?modules=AdsGetter$important
+||facebook.com/*?modules=AdsGuidanceUnifiedNavigationTip$important
+||facebook.com/*?modules=AdsIntelligentBlueTipContainer$important
 ||facebook.com/*?modules=AdsInterfacesComponentsEventCategory$important
 ||facebook.com/*?modules=AdsInterfacesComponentsEventName$important
 ||facebook.com/*?modules=AdsInterfacesComponentsLogger$important

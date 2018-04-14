@@ -1,6 +1,6 @@
 [uBlock Origin 1.15.17.0]
 ! Title: Facebook Zuckestion Killer (Temporary Name)
-! Version: 201804101946
+! Version: 201804141217
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -84,10 +84,11 @@
 ! Unbreak some functional, e.g. If you want to manage advert prefs, you need to allow some requests to let Facebook retrieve
 ! information about advert prefs, and let you properly manage them without getting error or auto refresh due to cannot sent xhr
 ! to perform delete preference out of your account.
-@@||facebook.com/ads/can_change_business_country_reason/?$domain=www.facebook.com
-@@||facebook.com/ads/can_change_currency_timezone_reason/?$domain=www.facebook.com
-@@||facebook.com/ads/manage/$domain=www.facebook.com
-@@||facebook.com/ads/manager/$domain=www.facebook.com
+@@||facebook.com/ads/advertiser_guidance/server_msg/$xmlhttprequest,first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
+@@||facebook.com/ads/can_change_business_country_reason/?$first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
+@@||facebook.com/ads/can_change_currency_timezone_reason/?$first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
+@@||facebook.com/ads/manage/$first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
+@@||facebook.com/ads/manager/$first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
 @@||facebook.com/ads/preferences/ad_report/$xmlhttprequest
 @@||facebook.com/ads/preferences/advertiser_hideall$first-party
 @@||facebook.com/ads/preferences/edit_interests/?*action=del$first-party
@@ -95,10 +96,12 @@
 @@||facebook.com/ads/preferences/report$xmlhttprequest,first-party
 @@||facebook.com/ads/profile/advertisers$xmlhttprequest,first-party
 @@||facebook.com/ads/profile/interests$xmlhttprequest,first-party
-@@||facebook.com/ads/tax_id_collection_config/?$domain=www.facebook.com
-@@||facebook.com/ads/viewer_permissions/?$domain=www.facebook.com
+@@||facebook.com/ads/tax_id_collection_config/?$first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
+@@||facebook.com/ads/viewer_permissions/?$first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
 @@||facebook.com/ajax/groups/mall/mall_post_menu.php$xmlhttprequest,first-party
+@@||facebook.com/ajax/settings/account/advertising_email.php?$xmlhttprequest
 @@||facebook.com/feed/options_menu$xmlhttprequest,first-party
+@@||facebook.com/settings/advertising_email/$xmlhttprequest
 @@||facebook.com/share/dialog/submit/$xmlhttprequest,first-party
 
 ! [Counter] Prevent accidentally (re-)add advert prefs while you're deleting them.
