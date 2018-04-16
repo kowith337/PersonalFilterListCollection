@@ -1,6 +1,6 @@
 [uBlock Origin 1.14.9]
 ! Title: Personal Miscellaneous Annoyance
-! Version: 201711052241
+! Version: 201804161640
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -8,34 +8,73 @@
 ! An uncategorized / out of scope of site or topic to create the stand alone filterlists
 ! will be stay here until the specific site or category are have enough rules.
 
-! DOM Generic (Coming Soon)
+! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Minecraft] Forge Ads Pane
+files.minecraftforge.net##.ad-container
+files.minecraftforge.net##.ad-container-framed
 
-! DOM Chaining
-randomnessthing.com##.textwidget:if(img[src*="no-adblock-wordpress-plugin"])
-stackoverflow.com##.hero-container:if(.s-signup)
-stackoverflow.com##.js-topbar-dialog-corral:if(.dialog-content:has(a[href^="/jobs/salary/?"]))
-stackexchange.com,superuser.com##.hero-container:if(#hero-content:has(div a[href^="/users/signup?"]))
+! [GreasyFork] (Remove promoted script pane)
+greasyfork.org###install-area .post-install
 
-! Network Requests
-||cloudfront.net/x.js$domain=speedtest.net,important
-||speedtest.net/javascript/jquery-analytics$important
-||speedtest.net/choices/$important
-
-! Scriplets
-randomnessthing.com##script:contains(Criteo)
-randomnessthing.com##script:inject(abort-on-property-read.js, Criteo)
-randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptableAdIfAdblocked)
-
-! HOW ABOUT NO
-wallgif.com###overlay:if(img[alt="Loader"])
+! [WallGif]
 wallgif.com##content .big-modal
 wallgif.com##content .big_modal_bg
+
+! DOM Chaining - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Minecraft Forge]
+files.minecraftforge.net##.sidebar-right:has(.ad-container)
+files.minecraftforge.net##.sidebar-right:has(.ad-container-framed)
+
+! [Randomness Thing]
+randomnessthing.com##.textwidget:has(img[src*="no-adblock-wordpress-plugin"])
+
+! [Stack Network]
+stackoverflow.com##.hero-container:has(.s-signup)
+stackoverflow.com##.js-topbar-dialog-corral:has(.dialog-content:has(a[href^="/jobs/salary/?"]))
+stackexchange.com,superuser.com##.hero-container:has(#hero-content:has(div a[href^="/users/signup?"]))
+
+! [WallGif] Disable AdBlock...? HOW ABOUT NO!!
+wallgif.com###overlay:has(img[alt="Loader"])
 wallgif.com##content div[id^=block_modal]
+
+! CSS Modify - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Minecraft] to prevent clicking the paid links hyperlink, e.g. AdFly, AdFocus, NetBee (by accident or intent)
+! ChocolateMinecraft: http://chocolateminecraft.com (Use both AdFly and NetBee {Older version of mods})
+! - Only "Mirror" links can be clickable, the very old versions may unable to click because it have no mirror links.
+chocolateminecraft.com###content table[style*="width:100%"] td a[href*="adf.ly/"]:style(pointer-events: none !important; text-decoration: none !important)
+chocolateminecraft.com###content table[style*="width:100%"] td a[href*="netb.ee/"]:style(pointer-events: none !important; text-decoration: none !important)
+
+! Forge: http://files.minecraftforge.net
+! It use AdFocus for all installer links (except changelog),
+! - Prevent clicking on all big icon links that appear as latest and/or recommended (because it contains AdFocus hyperlink) and
+!   leave only changelog can be clickable.
+! - All download URLs will not have underline an also unable to click, the only way to download is just click the (i) icon beside
+!   "Download" text, that's only the way you can get the direct download for this.
+files.minecraftforge.net##.download-list-wrapper .download-files .download-links li a[href*="adfoc.us/"]:style(pointer-events: none !important; text-decoration: none !important)
+files.minecraftforge.net##.downloads .download .links .link-left:has(a[href*="adfoc.us/"]):style(pointer-events: none !important)
+files.minecraftforge.net##.downloads .download .links .links-right .link:has(a[href*="adfoc.us/"]):style(pointer-events: none !important)
+
+! Optifine: http://optifine.net/downloads (Use AdFly)
+! - Only "Mirror" links can be clickable.
+optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadLine"] a[href*="adf.ly/"]:style(pointer-events: none !important; text-decoration: none !important)
+
+! Network Requests - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [WallGif]
 ||bnserving.com$domain=wallgif.com,important
 ||cpm10.com$domain=wallgif.com,important
 ||newrelic.com$domain=wallgif.com,important
 
-! - - - - - - - - - - Block Page(s) / Redirect annoyance - - - - - - - - - - !
+! [SpeedTest]
+||cloudfront.net/x.js$domain=speedtest.net,important
+||speedtest.net/choices/$important
+||speedtest.net/javascript/jquery-analytics$important
+
+! Scriplets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+randomnessthing.com##script:contains(Criteo)
+randomnessthing.com##script:inject(abort-on-property-read.js, Criteo)
+randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptableAdIfAdblocked)
+
+! Block Page(s) / Redirect annoyance - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Some extensions that hosted with add0n are show the popup
 ||add0n.com$document
 ||add0n.com$popunder
@@ -44,29 +83,3 @@ wallgif.com##content div[id^=block_modal]
 ! Some extensions at Mozilla (mostly if it have suggest to contribute via donation)
 ! is redirect to developer profile page after installed.
 ||addons.mozilla.org/*/addon/*/developers$document
-
-! - - - - - - - - - - Minecraft - - - - - - - - - - !
-! First: to prevent clicking the paid links hyperlink, e.g. AdFly, AdFocus, NetBee (by accident or intent)
-! [Forge] http://files.minecraftforge.net
-! It use AdFocus for all installer links (except changelog),
-! - Remove all big icon links that appear as latest and recommended (because it contains AdFocus hyperlink) and leave only changelog.
-! - All download URLs will not have underline an also unble to click, the only way to download is just click the (i) icon beside "Download" text,
-!   that's the way you can get the direct download for this.
-files.minecraftforge.net##.ad-container
-files.minecraftforge.net##.ad-container-framed
-files.minecraftforge.net##.download-list-wrapper .download-files .download-links li a[href*="adfoc.us/"]:style(pointer-events: none !important; text-decoration: none !important)
-files.minecraftforge.net##.downloads .download .links .link-left:if(a[href*="adfoc.us/"]):style(pointer-events: none !important)
-files.minecraftforge.net##.downloads .download .links .links-right .link:if(a[href*="adfoc.us/"]):style(pointer-events: none !important)
-files.minecraftforge.net##.sidebar-right:if(.ad-container)
-files.minecraftforge.net##.sidebar-right:if(.ad-container-framed)
-
-! http://chocolateminecraft.com
-! Use both AdFly and NetBee (Older version of mods)
-! - Only "Mirror" links can be clickable, the very old versions may unable to click because it have no mirror links.
-chocolateminecraft.com###content table[style*="width:100%"] td a[href*="adf.ly/"]:style(pointer-events: none !important; text-decoration: none !important)
-chocolateminecraft.com###content table[style*="width:100%"] td a[href*="netb.ee/"]:style(pointer-events: none !important; text-decoration: none !important)
-
-! http://optifine.net/downloads
-! Use AdFly
-! - Only "Mirror" links can be clickable.
-optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadLine"] a[href*="adf.ly/"]:style(pointer-events: none !important; text-decoration: none !important)
