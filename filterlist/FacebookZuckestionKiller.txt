@@ -1,6 +1,6 @@
 [uBlock Origin 1.15.17.0]
 ! Title: Facebook Zuckestion Killer (Temporary Name)
-! Version: 201804161645
+! Version: 201804161721
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -267,8 +267,6 @@ facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .mtm:has(div .uiLis
 facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .userContentWrapper .mtm .mtm:has(ul.uiList:has(a[href*="/services"]))
 facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"]:has(div ul.uiList:has(li[data-ft*="ego_id"]))
 facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
-m.facebook.com###root div > div[data-sigil^="m_login_upsell"]:has(.grouped a[href^="https://m.facebook.com/click.php?redir_url"])
-m.facebook.com###root table[role] div > div:has(a[href^="https://m.facebook.com/click.php?redir_url"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###friends_center_main div:has(table tr:has(td a[href*="pymk_funnel_data"]))
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###m_group_stories_container div:has(div a[href*="/findgroups/"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###m_newsfeed_stream div div[data-ft]:has(div:has(a[href^="/qp/action/redirect/"]))
@@ -279,6 +277,7 @@ m.facebook.com,mbasic.facebook.com,mobile.facebook.com###root div:has(table td a
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###root div[data-ft]:has(a[href*="netego_suggestion"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###root table div:has(div[id^="page_suggestion"]:has(div a[href*="&origin=mobile_page_browser&"]))
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###root table td > div:has-text(/^Suggested/):has(ul li:has(table))
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###root table[role] div > div:has(a[href*="facebook.com/click.php?redir_url"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###sub_profile_pic_content div > div:has(table a[href*="/search/"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###sub_profile_pic_content div > div:has(table[role]:has(td div:has-text(/^People also like/)))
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root div:has(h3):has(span a[href^="/dd/greeting/mbasic/more/tapped"])
@@ -286,9 +285,9 @@ m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root div:not(
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root div[data-ft]:has(h3:has-text(Facebook)):has(a[href^="/netego/redirect/"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root table td div div:has(a[href^="/lite/?loc_ref=menu"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div > div:has(a[href^="/download.php"])
-m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div > div:has(table tbody tr td:has(a[href^="/a/language.php?"]):not(a[href*="lref=%2Fsettings%2Flanguage%2F"]))
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div:not(#objects_container) > div:has(table[role] a[href^="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div:not(#objects_container) > table[class] td a[href*="lm.facebook.com/l.php?"][target="_blank"]:has(span)
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div:not([id]) > table[role]:has(td a[href^="/a/language.php?"][href*="ref_component=mbasic_footer"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com##:xpath(//div[@data-ft][.//span/text()="Sponsored"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com##:xpath(//div[@role="article"][.//span/text()="Sponsored"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[data-ft] > div > div:has(span a[href*="/boosted_post/"])
@@ -316,6 +315,7 @@ m.facebook.com,mobile.facebook.com,touch.facebook.com###m_group_stories_containe
 m.facebook.com,mobile.facebook.com,touch.facebook.com###msite-pages-header-contents div[style*="transparent none repeat scroll"]:has(#popup_xout)
 m.facebook.com,mobile.facebook.com,touch.facebook.com###page #root header div div:has(a[href^="/pages/launchpoint/discover/"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com###page div[id^="unit_id_"]:has(.scrollArea:has(.scrollAreaColumn div[data-autoid]))
+m.facebook.com,mobile.facebook.com,touch.facebook.com###root div > div[data-sigil^="m_login_upsell"]:has(.grouped a[href*="facebook.com/click.php?redir_url"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com###root div a.sub[href*="?sk=h_nor"]
 m.facebook.com,mobile.facebook.com,touch.facebook.com###viewport #root div[id^="u_0_"]:has(div #mobile_login_bar strong)
 m.facebook.com,mobile.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a span:has-text(Instagram)))
@@ -341,7 +341,3 @@ m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(div[data-sigi
 m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(footer a[href*="/friends/center/"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(footer a[href*="/saved/"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(span[data-sigil="pixelContainer"])
-mbasic.facebook.com###root table[role] div > div:has(a[href^="https://mbasic.facebook.com/click.php?redir_url"])
-mobile.facebook.com###root div > div[data-sigil^="m_login_upsell"]:has(.grouped a[href^="https://mobile.facebook.com/click.php?redir_url"])
-mobile.facebook.com###root table[role] div > div:has(a[href^="https://mobile.facebook.com/click.php?redir_url"])
-touch.facebook.com###root div > div[data-sigil^="m_login_upsell"]:has(.grouped a[href^="https://touch.facebook.com/click.php?redir_url"])
