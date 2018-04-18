@@ -1,6 +1,6 @@
 [uBlock Origin 1.15.17.0]
 ! Title: Facebook Zuckestion Killer (Temporary Name)
-! Version: 201804161721
+! Version: 201804181907
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -222,7 +222,7 @@ m.facebook.com,mobile.facebook.com,touch.facebook.com##article[data-store*="is_s
 m.facebook.com,mobile.facebook.com,touch.facebook.com##article[data-xt*="is_sponsored.1"]
 m.facebook.com,mobile.facebook.com,touch.facebook.com##div[data-store*="mobile_page_contextual_recommendations"]
 
-! DOM Hiding - Level 2: contains if/has(-text)/xpath parameter
+! DOM Hiding - Level 2: contains has(-text)/xpath parameter
 ! This need at least uBO 1.8.0+, but 1.10.0+ for multiple chaining...
 facebook.com###ads_preferences_desktop_root div[tabindex][role="button"] button[data-hover][data-tooltip-content="Add"]:has(span:has-text(Add))
 facebook.com###contentArea div:if-not(.clearfix):has(a[href*="/login/?"])
@@ -281,13 +281,9 @@ m.facebook.com,mbasic.facebook.com,mobile.facebook.com###root table[role] div > 
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###sub_profile_pic_content div > div:has(table a[href*="/search/"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###sub_profile_pic_content div > div:has(table[role]:has(td div:has-text(/^People also like/)))
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root div:has(h3):has(span a[href^="/dd/greeting/mbasic/more/tapped"])
-m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root div:not([id^="MPhoto"]) > table[role] tbody:has(a[href^="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root div[data-ft]:has(h3:has-text(Facebook)):has(a[href^="/netego/redirect/"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root table td div div:has(a[href^="/lite/?loc_ref=menu"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div > div:has(a[href^="/download.php"])
-m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div:not(#objects_container) > div:has(table[role] a[href^="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
-m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div:not(#objects_container) > table[class] td a[href*="lm.facebook.com/l.php?"][target="_blank"]:has(span)
-m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div:not([id]) > table[role]:has(td a[href^="/a/language.php?"][href*="ref_component=mbasic_footer"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com##:xpath(//div[@data-ft][.//span/text()="Sponsored"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com##:xpath(//div[@role="article"][.//span/text()="Sponsored"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[data-ft] > div > div:has(span a[href*="/boosted_post/"])
@@ -340,4 +336,13 @@ m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(a[href*="is_s
 m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(div[data-sigil="egoScroller"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(footer a[href*="/friends/center/"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(footer a[href*="/saved/"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(footer a[href^="https://www.instagram.com"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(span[data-sigil="pixelContainer"])
+
+! DOM Hiding - Level 3: Same as level 2, but include :not
+! Note: some rules still results false positive, e.g. remove panel that zuckest to download 'Facebook Lite', but it also
+!       accidentally hide everything when viewing photo at first time of session.
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root div:not([id^="MPhoto"]) > table[role] tbody:has(a[href^="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div:not(#objects_container) > div:has(table[role] a[href^="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div:not(#objects_container) > table[class] td a[href*="lm.facebook.com/l.php?"][target="_blank"]:has(span)
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div:not([id]) > table[role]:has(td a[href^="/a/language.php?"][href*="ref_component=mbasic_footer"])
