@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201804122014
+# Version: 201804232113
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Expires: 2 days
@@ -101,6 +101,48 @@
 0.0.0.0 vosteransearch.com
 0.0.0.0 yac.mx
 0.0.0.0 wisemana.com
+
+# RayBan Scam Root
+0.0.0.0 2015goodsunglasses.com
+0.0.0.0 br-rbso.com
+0.0.0.0 cheapsunglasses.cn
+0.0.0.0 cz-rb.com
+0.0.0.0 esnrb.com
+0.0.0.0 frrbsrbs.com
+0.0.0.0 glasses-sale.com
+0.0.0.0 ok-rb.top
+0.0.0.0 rayban-brand.com
+0.0.0.0 rayban-sk.com
+0.0.0.0 rb-as.com
+0.0.0.0 rb-be.org
+0.0.0.0 rb-cz.com
+0.0.0.0 rb-ff.com
+0.0.0.0 rb-nb.com
+0.0.0.0 rb-rr.com
+0.0.0.0 rb-sk.com
+0.0.0.0 rb-sk.org
+0.0.0.0 rbbuy-se.com
+0.0.0.0 rbbuy-se.com
+0.0.0.0 rbbuy-sk.com
+0.0.0.0 rbcet.com
+0.0.0.0 rbese.com
+0.0.0.0 rbeus.co
+0.0.0.0 rbfr-rbs.com
+0.0.0.0 rbius.co
+0.0.0.0 rbnes.com
+0.0.0.0 rbs-chile.com
+0.0.0.0 rbs-sk.com
+0.0.0.0 rbsave-fr.com
+0.0.0.0 rbshop-il.com
+0.0.0.0 rbstore-cl.com
+0.0.0.0 rbstore-no.com
+0.0.0.0 rbstoreonline.org
+0.0.0.0 rbwap.com
+0.0.0.0 salesunglasses07.pw
+0.0.0.0 sk-rb.com
+0.0.0.0 spain-rb.com
+0.0.0.0 ukrb-uk.com
+0.0.0.0 vt-rbs.com
 
 # Generic Sublevel
 0.0.0.0 0.freebasics.com
