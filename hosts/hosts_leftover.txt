@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201804232120
+# Version: 201804281413
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Expires: 2 days
@@ -141,6 +141,7 @@
 0.0.0.0 rbstore-no.com
 0.0.0.0 rbstoreonline.org
 0.0.0.0 rbwap.com
+0.0.0.0 rbwzu.com
 0.0.0.0 salesunglasses07.pw
 0.0.0.0 sk-rb.com
 0.0.0.0 spain-rb.com
@@ -186,6 +187,7 @@
 0.0.0.0 www.rbstore-no.com
 0.0.0.0 www.rbstoreonline.org
 0.0.0.0 www.rbwap.com
+0.0.0.0 www.rbwzu.com
 0.0.0.0 www.salesunglasses07.pw
 0.0.0.0 www.sk-rb.com
 0.0.0.0 www.spain-rb.com
