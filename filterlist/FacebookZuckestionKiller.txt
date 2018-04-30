@@ -1,6 +1,6 @@
 [uBlock Origin 1.15.17.0]
 ! Title: Facebook Zuckestion Killer (Temporary Name)
-! Version: 201804181907
+! Version: 201804302123
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -73,6 +73,7 @@
 ||facebook.com/tr?$important
 ||facebook.com/typeahead/search/facebar/nullstate/?$important
 ||facebook.com/video/autoplay$important
+||facebook.com/video/instream_video/rapid_feedback$important
 ||facebook.com/video/quality_survey$important
 ||facebook.com/video/tahoe/upnext/$important
 ||facebook.com/xti.php$important
@@ -153,6 +154,7 @@
 ||facebook.com/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
 ||facebook.com/sem_pixel/1/control/0/$subdocument,important,redirect=noopframe
 ||facebook.com/sem_pixel/1/control/1/$subdocument,important,redirect=noopframe
+||facebook.com/video/instream_video/rapid_feedback$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/xti.php$subdocument,important,redirect=noopframe
 ||facebook.net/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
 ||fbcdn.net/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
@@ -215,6 +217,7 @@ m.facebook.com,mbasic.facebook.com,mobile.facebook.com##root div[data-ft][data-x
 m.facebook.com,mobile.facebook.com,touch.facebook.com###root .scrollArea[data-sigil*="friends-center-nav"] a[data-ajaxify-href*="/friends/center/suggestions/"]
 m.facebook.com,mobile.facebook.com,touch.facebook.com###root div > div[data-store*="actor_id"] div[data-sigil^="m-promo"]
 m.facebook.com,mobile.facebook.com,touch.facebook.com###root[data-sigil*="context-layer-root"] article div a[href*="/ads/preferences/interest_suggestions/"]
+m.facebook.com,mobile.facebook.com,touch.facebook.com###viewport #header #mJewelNav #feed_jewel.hasCount a div span[data-sigil="count"]
 m.facebook.com,mobile.facebook.com,touch.facebook.com##.story_body_container header > div a[href*="package=com.facebook.lite"]
 m.facebook.com,mobile.facebook.com,touch.facebook.com##article[data-ft*="mhpp_ego_service_type"]
 m.facebook.com,mobile.facebook.com,touch.facebook.com##article[data-ft][data-xt*="sponsored"]
@@ -310,6 +313,7 @@ m.facebook.com,mobile.facebook.com,touch.facebook.com###mJewelRequestsFlyoutBody
 m.facebook.com,mobile.facebook.com,touch.facebook.com###m_group_stories_container section article:has(.scrollArea .scrollAreaColumn[data-sigil="m-groups-pymi-item"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com###msite-pages-header-contents div[style*="transparent none repeat scroll"]:has(#popup_xout)
 m.facebook.com,mobile.facebook.com,touch.facebook.com###page #root header div div:has(a[href^="/pages/launchpoint/discover/"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com###page article[data-sigil="pma-upsell"]:has(a[href*="com.facebook.pages.app"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com###page div[id^="unit_id_"]:has(.scrollArea:has(.scrollAreaColumn div[data-autoid]))
 m.facebook.com,mobile.facebook.com,touch.facebook.com###root div > div[data-sigil^="m_login_upsell"]:has(.grouped a[href*="facebook.com/click.php?redir_url"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com###root div a.sub[href*="?sk=h_nor"]
@@ -338,6 +342,7 @@ m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(footer a[href
 m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(footer a[href*="/saved/"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(footer a[href^="https://www.instagram.com"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(span[data-sigil="pixelContainer"])
+m.facebook.com,mobile.facebook.com,touch.facebook.com##section article .story_body_container .story_body_container > div > div:has(.scrollArea .scrollAreaColumn)
 
 ! DOM Hiding - Level 3: Same as level 2, but include :not
 ! Note: some rules still results false positive, e.g. remove panel that zuckest to download 'Facebook Lite', but it also
