@@ -1,7 +1,7 @@
 ! [uMatrix 1.3.3.0]
-! uMatrix: Ruleset recipes for Thai sites 0.10.0
-! Title: Rulesets for Thai sites (alpha test)
-! Version: 201803262358
+! uMatrix: Ruleset recipes 1.0
+! Title: Rulesets for Thai sites (alpha test version 0.11.0)
+! Version: 201805200120
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/ruleset
 ! 
