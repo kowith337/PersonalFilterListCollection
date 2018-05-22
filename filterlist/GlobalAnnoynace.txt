@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Personal Miscellaneous Annoyance
-! Version: 201805221400
+! Version: 201805221448
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 1 day
@@ -72,6 +72,11 @@ greasyfork.org###install-area .post-install:style(width: 0px !important; height:
 ||cloudfront.net/x.js$domain=speedtest.net,important
 ||speedtest.net/choices/$important
 ||speedtest.net/javascript/jquery-analytics$important
+
+! Redirect - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! GreasyFork added ping request while installing inside the "Install Script" green button via [data-ping-url] that cause promoted
+! script to be shown and obtain user data, eliminate this requests and fake sent data with `nooptext` can solve this thing also.
+||greasyfork.org/scripts/*/install-ping?$xmlhttprequest,important,redirect=nooptext
 
 ! Block Page(s) / Redirect annoyance - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Some extensions that hosted with add0n are show the popup
