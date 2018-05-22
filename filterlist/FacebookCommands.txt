@@ -1,9 +1,9 @@
-[uBlock Origin 1.15.25.1]
+[uBlock Origin 1.16.7.2]
 ! Title: Facebook Bullshit Commands List
-! Version: 201804141943
+! Version: 201805221400
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
-! Expires: 2 days
+! Expires: 1 day
 
 ! Note: This filter isn't recommended to use publicly, it might broke entire Facebook functions because
 !       these rules below will disable many JavaScript functions and also prevent lots of network requests.

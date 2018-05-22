@@ -1,9 +1,9 @@
-[uBlock Origin 1.14.9]
+[uBlock Origin 1.16.7.2]
 ! Title: Personal Miscellaneous Annoyance
-! Version: 201804161640
+! Version: 201805221400
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
-! Expires: 2 days
+! Expires: 1 day
 
 ! An uncategorized / out of scope of site or topic to create the stand alone filterlists
 ! will be stay here until the specific site or category are have enough rules.
@@ -12,9 +12,6 @@
 ! [Minecraft] Forge Ads Pane
 files.minecraftforge.net##.ad-container
 files.minecraftforge.net##.ad-container-framed
-
-! [GreasyFork] (Remove promoted script pane)
-greasyfork.org###install-area .post-install
 
 ! [WallGif]
 wallgif.com##content .big-modal
@@ -37,6 +34,10 @@ stackexchange.com,superuser.com##.hero-container:has(#hero-content:has(div a[hre
 wallgif.com###overlay:has(img[alt="Loader"])
 wallgif.com##content div[id^=block_modal]
 
+! HTML Filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Note: This work only FF quantum + uB0 WebExt
+greasyfork.org##^.post-install
+
 ! CSS Modify - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Minecraft] to prevent clicking the paid links hyperlink, e.g. AdFly, AdFocus, NetBee (by accident or intent)
 ! ChocolateMinecraft: http://chocolateminecraft.com (Use both AdFly and NetBee {Older version of mods})
@@ -58,6 +59,9 @@ files.minecraftforge.net##.downloads .download .links .links-right .link:has(a[h
 ! - Only "Mirror" links can be clickable.
 optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadLine"] a[href*="adf.ly/"]:style(pointer-events: none !important; text-decoration: none !important)
 
+! GreasyFork: in case if they rewrite CSS style, this will minimize the element at first place.
+greasyfork.org###install-area .post-install:style(width: 0px !important; height: 0px !important; pointer-events: none !important; display: none !important)
+
 ! Network Requests - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [WallGif]
 ||bnserving.com$domain=wallgif.com,important
@@ -69,11 +73,6 @@ optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadL
 ||speedtest.net/choices/$important
 ||speedtest.net/javascript/jquery-analytics$important
 
-! Scriplets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-randomnessthing.com##script:contains(Criteo)
-randomnessthing.com##script:inject(abort-on-property-read.js, Criteo)
-randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptableAdIfAdblocked)
-
 ! Block Page(s) / Redirect annoyance - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Some extensions that hosted with add0n are show the popup
 ||add0n.com$document
@@ -83,3 +82,8 @@ randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptable
 ! Some extensions at Mozilla (mostly if it have suggest to contribute via donation)
 ! is redirect to developer profile page after installed.
 ||addons.mozilla.org/*/addon/*/developers$document
+
+! Scriplets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+randomnessthing.com##script:contains(Criteo)
+randomnessthing.com##script:inject(abort-on-property-read.js, Criteo)
+randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptableAdIfAdblocked)

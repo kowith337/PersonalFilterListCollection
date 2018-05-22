@@ -1,9 +1,10 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201805191036
+# Version: 201805221341
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
-# Expires: 2 days
+# Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
+# Expires: 1 day
 
 # Note: This use to re-blocking unblocked hosts in common hosts file, it's not recommended to use for workplace or company setup,
 #       just only my opinion and personal bias, you can use this at your own risk!
@@ -262,6 +263,8 @@
 0.0.0.0 go3.aniview.com
 0.0.0.0 h.facebook.com
 0.0.0.0 ho.lazada.co.th
+0.0.0.0 hw-cdn.contentabc.com
+0.0.0.0 hw-cdn.trafficjunky.net
 0.0.0.0 ialaddin.genieesspv.jp
 0.0.0.0 id.google.co.jp
 0.0.0.0 id.google.co.th
@@ -361,6 +364,8 @@
 0.0.0.0 tracker.stats.in.th
 0.0.0.0 trc.sanook.com
 0.0.0.0 vidstat.taboola.com
+0.0.0.0 vz-cdn.contentabc.com
+0.0.0.0 vz-cdn.trafficjunky.net
 0.0.0.0 web.facebook.com
 0.0.0.0 wf.taboola.com
 0.0.0.0 widget.perfectmarket.com
