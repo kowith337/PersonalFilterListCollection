@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201805221414
+# Version: 201805232002
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -373,6 +373,7 @@
 0.0.0.0 wf.taboola.com
 0.0.0.0 widget.perfectmarket.com
 0.0.0.0 wikia-d.openx.net
+0.0.0.0 wmdstat.dev-sanook.com
 0.0.0.0 ws-adv.ais.co.th
 0.0.0.0 www.adsoptimal.com
 0.0.0.0 www.cpsee.com

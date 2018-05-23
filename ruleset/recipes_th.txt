@@ -2,8 +2,8 @@
 ! Title: Rulesets for Thai sites (alpha test)
 ! Maintainer: kowith337
 !
-! Version: 201805221357
-! VersionNo: 0.12
+! Version: 201805232002
+! VersionNo: 0.13
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
 ! 
@@ -12,82 +12,59 @@
 
 Bangkok Biz News
 	bangkokbiznews.com *
-		_ 1st-party *
-		_ 1st-party cookie
 		_ 1st-party script
-		_ 1st-party xhr
 		_ fonts.googleapis.com css
 		_ fonts.gstatic.com css
 		_ now26.tv image
 
 Blognone
 	blognone.com *
-		_ 1st-party *
-		_ 1st-party cookie
 		_ 1st-party script
 
 DailyNews
 	dailynews.co.th *
-		_ 1st-party *
-		_ 1st-party cookie
 		_ 1st-party script
-		_ 1st-party xhr
 
 Khaosod
 	khaosod.co.th *
-		_ 1st-party *
-		_ 1st-party cookie
 		_ 1st-party script
 		_ iconarchive.com image
 
 LINE Today
 	today.line.me *
 		_ line-apps.com *
-		_ line-apps.com script
 		_ line-scdn.net *
-		_ line-scdn.net script
 		_ naver.com *
-		_ naver.com script
 		_ pstatic.net *
-		_ pstatic.net script
 
 LINE TV
 	tv.line.me *
 		_ line-apps.com *
-		_ line-apps.com script
 		_ pstatic.net *
-		_ pstatic.net script
 
 Matichon
 	matichon.co.th *
-		_ 1st-party *
-		_ 1st-party cookie
 		_ 1st-party script
 		_ iconarchive.com image
 
+MThai
+	mthai.com *
+		_ 1st-party script
+		_ mthcdn.com image
+
 NotebookSpec
 	notebookspec.com *
-		_ 1st-party *
-		_ 1st-party cookie
 		_ 1st-party script
-		_ 1st-party xhr
 
 Pantip
 	pantip.com *
-		_ 1st-party *
-		_ 1st-party cookie
-		_ 1st-party frame
 		_ 1st-party script
-		_ 1st-party xhr
 		_ bloggang.com image
 		_ ptcdn.info image
 
 Post Today
 	posttoday.com *
-		_ 1st-party *
-		_ 1st-party cookie
 		_ 1st-party script
-		_ 1st-party xhr
 		_ bangkokpost.co.th image
 		_ cdnjs.cloudflare.com script
 		_ fonts.googleapis.com css
@@ -95,44 +72,29 @@ Post Today
 
 Prachachat Business
 	prachachat.net *
-		_ 1st-party *
-		_ 1st-party cookie
 		_ 1st-party script
-		_ iconarchive.com image
 
 Sanook! (Tencent)
 	sanook.com *
-		_ 1st-party *
-		_ 1st-party cookie
-		_ 1st-party frame
 		_ 1st-party script
-		_ 1st-party xhr
-		_ dev-sanook.com *
-		_ dev-sanook.com script
-		_ dev-sanook.com xhr
-		_ fsanook.com *
 		_ isanook.com *
-		_ isanook.com script
-		_ joox.com *
+		_ nlpcaptcha.in script
+
+Sanook! Music (aka. Joox)
+	music.sanook.com *
+		_ 1st-party script
+		_ isanook.com *
 		_ joox.com media
-		_ joox.com script
-		_ qq.com image
 		_ qq.com script
-		_ wechat.com image
+		_ s1sf.com script
 
 SpecPhone
 	specphone.com *
-		_ 1st-party *
-		_ 1st-party cookie
 		_ 1st-party script
-		_ 1st-party xhr
 		_ notebookspec.com image
 
 Thairath
 	thairath.co.th *
-		_ 1st-party *
-		_ 1st-party cookie
 		_ 1st-party script
-		_ 1st-party xhr
 		_ byteark.com css
 		_ byteark.com script
