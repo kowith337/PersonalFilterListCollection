@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201805232002
+# Version: 2018052260852
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -301,6 +301,7 @@
 0.0.0.0 n.ads7-adnow.com
 0.0.0.0 n.ads8-adnow.com
 0.0.0.0 n.ads9-adnow.com
+0.0.0.0 o.freebasics.com
 0.0.0.0 openx.notebookspec.com
 0.0.0.0 opps.taboola.com
 0.0.0.0 pixel.facebook.com
