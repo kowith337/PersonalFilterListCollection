@@ -1,0 +1,24 @@
+! uMatrix: Ruleset recipes 1.0
+! Title: Self Custom Ruleset
+! Maintainer: kowith337
+!
+! Version: 201806022121
+! VersionNo: 0.01
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection
+! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
+
+Gelbooru
+	! Note: You must use with uBlock Origin or Nano, this only allow something that really need and to prevent unwanted connections,
+	! not for unbreak AntiUser tactics that their made.
+	gelbooru.com *
+		_ 1st-party script
+		_ ajax.googleapis.com script
+		_ maxcdn.bootstrapcdn.com script
+
+YouTube Privacy Embed
+	* youtube-nocookie.com
+		_ youtube-nocookie.com *
+		_ youtube-nocookie.com frame
+		_ youtube-nocookie.com script
+		_ googlevideo.com xhr
+		_ ytimg.com script
