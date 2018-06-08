@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201806030746
+# Version: 201806081519
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -312,6 +312,7 @@
 0.0.0.0 player.aniview.com
 0.0.0.0 prod.vidible.tv
 0.0.0.0 pubads.g.doubleclick.net
+0.0.0.0 report-uri.cloudflare.com
 0.0.0.0 rfp.fout.jp
 0.0.0.0 rt.gsspat.jp
 0.0.0.0 s1.thstats.com
