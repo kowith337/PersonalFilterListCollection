@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer (Temporary Name)
-! Version: 201805221400
+! Version: 201806091706
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 1 day
@@ -343,6 +343,7 @@ m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(footer a[href
 m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(footer a[href^="https://www.instagram.com"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com##article:has(span[data-sigil="pixelContainer"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com##section article .story_body_container .story_body_container > div > div:has(.scrollArea .scrollAreaColumn)
+m.facebook.com,mobile.facebook.com,touch.facebook.com##section article:has(.scrollArea):has(a[href*="instagram.com"])
 
 ! DOM Hiding - Level 3: Same as level 2, but include :not
 ! Note: some rules still results false positive, e.g. remove panel that zuckest to download 'Facebook Lite', but it also
