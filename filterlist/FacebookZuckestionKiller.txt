@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer (Temporary Name)
-! Version: 201806162117
+! Version: 201806171057
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 1 day
@@ -150,7 +150,7 @@
 ! This may break sounds in messages, but I have no choice about this, because Facebook Touch site is now play some sounds
 ! when pick reactions (Like, Love, Haha, etc.), and found AdGuard base are whitelist rsrc.php from fbcdn.net, so I've
 ! use some wildcard to make sure it will not block something that not related to "M4A audio"
-||fbcdn.net/rsrc.php/*.m4a?$media,important,domain=m.facebook.com|mobile.facebook.com|touch.facebook.com
+||fbcdn.net/rsrc.php/*.m4a$media,important,domain=m.facebook.com|mobile.facebook.com|touch.facebook.com
 
 ! [Resources Replace] Instead of just blocking, then redirect to neutered resources
 ! Experimental for Facebook security pixels, this may break their functionality and security check.
