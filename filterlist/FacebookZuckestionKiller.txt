@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer (Temporary Name)
-! Version: 201806171057
+! Version: 201806212056
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 1 day
@@ -293,6 +293,7 @@ m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root div:has(
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root div[data-ft]:has(h3:has-text(Facebook)):has(a[href^="/netego/redirect/"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport #root table td div div:has(a[href^="/lite/?loc_ref=menu"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div > div:has(a[href^="/download.php"])
+m.facebook.com,mbasic.facebook.com,mobile.facebook.com###viewport div:has(table[role="presentation"]:has(td a[href^="/qp/action/redirect/?"]))
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com##:xpath(//div[@data-ft][.//span/text()="Sponsored"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com##:xpath(//div[@role="article"][.//span/text()="Sponsored"])
 m.facebook.com,mbasic.facebook.com,mobile.facebook.com##div[data-ft] > div > div:has(span a[href*="/boosted_post/"])
