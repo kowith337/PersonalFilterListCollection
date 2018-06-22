@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer (Temporary Name)
-! Version: 201806212056
+! Version: 201806222034
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 1 day
@@ -319,6 +319,7 @@ m.facebook.com,mobile.facebook.com,touch.facebook.com###events_dashboard_activit
 m.facebook.com,mobile.facebook.com,touch.facebook.com###mJewelRequestsFlyoutBody div div:has(div[class] div[class]:has(div[data-pymk-id]))
 m.facebook.com,mobile.facebook.com,touch.facebook.com###m_group_stories_container section article:has(.scrollArea .scrollAreaColumn[data-sigil="m-groups-pymi-item"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com###msite-pages-header-contents div[style*="transparent none repeat scroll"]:has(#popup_xout)
+m.facebook.com,mobile.facebook.com,touch.facebook.com###page #root div > div[data-store-id] > div[id^="unit_id"]:has-text(/^Related/):has(.scrollArea)
 m.facebook.com,mobile.facebook.com,touch.facebook.com###page #root header > div > div > div:has(a[href^="/pages/launchpoint/discover/"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com###page article[data-sigil="pma-upsell"]:has(a[href*="com.facebook.pages.app"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com###page div[id^="unit_id_"]:has(.scrollArea:has(.scrollAreaColumn div[data-autoid]))
