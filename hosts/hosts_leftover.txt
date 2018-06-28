@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201806211347
+# Version: 201806281313
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -65,7 +65,9 @@
 0.0.0.0 innity.com
 0.0.0.0 innity.net
 0.0.0.0 mathtag.com
+0.0.0.0 newrelic.com
 0.0.0.0 nordvpn.com
+0.0.0.0 nr-data.net
 0.0.0.0 nuffnang.co.th
 0.0.0.0 nytive.com
 0.0.0.0 onesignal.com
@@ -74,6 +76,7 @@
 0.0.0.0 perfectmarket.com
 0.0.0.0 petametrics.com
 0.0.0.0 sharethis.com
+0.0.0.0 silkspan.com
 0.0.0.0 stats.in.th
 0.0.0.0 storygize.net
 0.0.0.0 synergy-e.com
@@ -242,6 +245,7 @@
 0.0.0.0 as.innity.net
 0.0.0.0 avd.innity.com
 0.0.0.0 avd.innity.net
+0.0.0.0 bam.nr-data.net
 0.0.0.0 cdn-gl.imrworldwide.com
 0.0.0.0 cdn-ssl.vidible.tv
 0.0.0.0 cdn.adsoptimal.com
@@ -250,6 +254,7 @@
 0.0.0.0 cdn.yengo.com
 0.0.0.0 code.nytive.com
 0.0.0.0 code.yengo.com
+0.0.0.0 collector.newrelic.com
 0.0.0.0 convammp.taboola.com
 0.0.0.0 cs.gssprt.jp
 0.0.0.0 d1.yengo.com
@@ -257,6 +262,7 @@
 0.0.0.0 d3.yengo.com
 0.0.0.0 dev.visualwebsiteoptimizer.com
 0.0.0.0 error.facebook.com
+0.0.0.0 ftp.silkspan.com
 0.0.0.0 g.doubleclick.net
 0.0.0.0 go.nordvpn.com
 0.0.0.0 go1.aniview.com
@@ -376,6 +382,7 @@
 0.0.0.0 vz-cdn.trafficjunky.net
 0.0.0.0 web.beta.facebook.com
 0.0.0.0 web.facebook.com
+0.0.0.0 webservice.silkspan.com
 0.0.0.0 wf.taboola.com
 0.0.0.0 widget.perfectmarket.com
 0.0.0.0 wikia-d.openx.net
@@ -383,10 +390,12 @@
 0.0.0.0 ws-adv.ais.co.th
 0.0.0.0 www.adsoptimal.com
 0.0.0.0 www.cpsee.com
+0.0.0.0 www.silkspan.com
 0.0.0.0 www.storygize.net
 0.0.0.0 www.traffic-sharing.com
 0.0.0.0 www.ublock.org
 0.0.0.0 www.yengo.com
+0.0.0.0 www2.silkspan.com
 
 # Adware Sublevel
 0.0.0.0 antivirus.baidu.com
