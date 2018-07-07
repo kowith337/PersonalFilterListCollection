@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201807021324
+# Version: 201807071755
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -242,6 +242,7 @@
 0.0.0.0 adservice.google.co.uk
 0.0.0.0 adservice.google.com
 0.0.0.0 api.cxense.com
+0.0.0.0 api.userstyles.org
 0.0.0.0 as.innity.com
 0.0.0.0 as.innity.net
 0.0.0.0 avd.innity.com
