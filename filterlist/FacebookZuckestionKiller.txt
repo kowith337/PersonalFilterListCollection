@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer (Temporary Name)
-! Version: 201806232026
+! Version: 201807091124
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 1 day
@@ -14,7 +14,9 @@
 
 ! Inspired from report on https://github.com/collinbarrett/FilterLists/issues/282
 
-! Network Blocking (to prevent sending requests to show related contents, determine user action about how users use Facebook)
+! Network Blocking
+! to prevent sending requests to show related contents, determine user action about how users use Facebook, nasty redirect,...
+/qp/action/redirect$important,domain=facebook.com
 ||facebook.com/adnw_logging/$important
 ||facebook.com/ads/
 ||facebook.com/ads/ad_choices$important
@@ -64,6 +66,7 @@
 ||facebook.com/pubcontent/related_video$important
 ||facebook.com/pubcontent/suggestions$important
 ||facebook.com/pymk/funnel_logging$important
+||facebook.com/qp/action/redirect$important
 ||facebook.com/related-application/?$important
 ||facebook.com/relay/bootload/?component=AdsCMChromeRenderer$important
 ||facebook.com/requests/interaction_history_logging$important
