@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201807071755
+# Version: 201807091105
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -139,6 +139,7 @@
 0.0.0.0 rbese.com
 0.0.0.0 rbeus.co
 0.0.0.0 rbfr-rbs.com
+0.0.0.0 rbgpb.com
 0.0.0.0 rbius.co
 0.0.0.0 rbnes.com
 0.0.0.0 rbs-chile.com
@@ -185,6 +186,7 @@
 0.0.0.0 www.rbese.com
 0.0.0.0 www.rbeus.co
 0.0.0.0 www.rbfr-rbs.com
+0.0.0.0 www.rbgpb.com
 0.0.0.0 www.rbius.co
 0.0.0.0 www.rbnes.com
 0.0.0.0 www.rbs-chile.com
