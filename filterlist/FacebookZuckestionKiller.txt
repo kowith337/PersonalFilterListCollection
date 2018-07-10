@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer (Temporary Name)
-! Version: 201807091124
+! Version: 201807101417
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 1 day
@@ -138,6 +138,7 @@
 ||mobile.facebook.com$important,domain=~mobile.facebook.com
 
 ! I HATE FreakBasics by Facebook, internet.org also...
+||free.facebook.com$important
 ||freebasics.com$document,important
 ||internet.org$document,important
 
