@@ -2,33 +2,31 @@
 ! Title: Rulesets for Thai sites (alpha test)
 ! Maintainer: kowith337
 !
-! Version: 201805232002
-! VersionNo: 0.13
+! Version: 201807160011
+! VersionNo: 0.14
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
 ! 
 ! Note: This ruleset isn't ready yet because this function is still in beta release (start from 1.3.3b0),
 !       I need to wait until this function and more document guide is publicly releases (or at least on the RC state)
 
+Amarin TV
+	amarintv.com *
+		! Unbreak video player by disable referrer spoofing, JWPlayer cannot play anything if you spoof referrer header.
+		referrer-spoof: _ false
+		_ 203.151.179.100 xhr
+		_ 203.151.179.101 xhr
+		_ 203.151.179.102 xhr
+		_ 203.151.179.103 xhr
+		_ 210.4.150.104 xhr
+		_ amarin2.live14.com xhr
+		_ ssl.p.jwpcdn.com script
+
 Bangkok Biz News
 	bangkokbiznews.com *
-		_ 1st-party script
 		_ fonts.googleapis.com css
 		_ fonts.gstatic.com css
 		_ now26.tv image
-
-Blognone
-	blognone.com *
-		_ 1st-party script
-
-DailyNews
-	dailynews.co.th *
-		_ 1st-party script
-
-Khaosod
-	khaosod.co.th *
-		_ 1st-party script
-		_ iconarchive.com image
 
 LINE Today
 	today.line.me *
@@ -42,59 +40,69 @@ LINE TV
 		_ line-apps.com *
 		_ pstatic.net *
 
-Matichon
-	matichon.co.th *
-		_ 1st-party script
-		_ iconarchive.com image
+MCOT Radio - Active Radio
+	fm99activeradio.com *
+		referrer-spoof: _ false
+		_ cdn.mcot.net script
+		_ cdn.mcot.net xhr
+		_ mcotn-api.simplico.net xhr
+		_ ssl.p.jwcdn.net script
 
-MThai
-	mthai.com *
-		_ 1st-party script
-		_ mthcdn.com image
+MCOT Radio - Mellow
+	mellow975.mcot.net *
+		referrer-spoof: _ false
+		_ cdn.mcot.net script
+		_ cdn.mcot.net xhr
+		_ mcotn-api.simplico.net xhr
+		_ ssl.p.jwcdn.net script
+		! Mellow use FancyBox from jQuery, so I will not add for exception, judging it may show overlay annoyance, I don't know.
 
-NotebookSpec
-	notebookspec.com *
-		_ 1st-party script
+MCOT Radio - MET
+	met107.fm *
+		referrer-spoof: _ false
+		_ cdn.mcot.net script
+		_ cdn.mcot.net xhr
+		_ maxcdn.bootstrapcdn.com script
+		_ mcotn-api.simplico.net xhr
+		_ ssl.p.jwcdn.net script
 
-Pantip
-	pantip.com *
-		_ 1st-party script
-		_ bloggang.com image
-		_ ptcdn.info image
+MCOT Radio - News Network
+	news1005.fm *
+		referrer-spoof: _ false
+		_ cdn.mcot.net script
+		_ cdn.mcot.net xhr
+		_ mcotn-api.simplico.net xhr
+		_ ssl.p.jwcdn.net script
 
-Post Today
-	posttoday.com *
-		_ 1st-party script
-		_ bangkokpost.co.th image
-		_ cdnjs.cloudflare.com script
-		_ fonts.googleapis.com css
-		_ fonts.gstatic.com css
+MCOT Radio - Thinking Radio
+	thinkingradio.net *
+		referrer-spoof: _ false
+		_ cdn.mcot.net script
+		_ cdn.mcot.net xhr
+		_ mcotn-api.simplico.net xhr
+		_ ssl.p.jwcdn.net script
 
-Prachachat Business
-	prachachat.net *
-		_ 1st-party script
+MCOT Radio - Luktung Mahanakorn
+	ltmfm95.mcot.net *
+		referrer-spoof: _ false
+		_ cdn.mcot.net script
+		_ cdn.mcot.net xhr
+		_ mcotn-api.simplico.net xhr
+		_ ssl.p.jwcdn.net script
 
 Sanook! (Tencent)
 	sanook.com *
-		_ 1st-party script
 		_ isanook.com *
 		_ nlpcaptcha.in script
 
 Sanook! Music (aka. Joox)
 	music.sanook.com *
-		_ 1st-party script
 		_ isanook.com *
 		_ joox.com media
 		_ qq.com script
 		_ s1sf.com script
 
-SpecPhone
-	specphone.com *
-		_ 1st-party script
-		_ notebookspec.com image
-
 Thairath
 	thairath.co.th *
-		_ 1st-party script
 		_ byteark.com css
 		_ byteark.com script

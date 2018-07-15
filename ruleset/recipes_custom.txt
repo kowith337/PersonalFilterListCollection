@@ -2,18 +2,24 @@
 ! Title: Self Custom Ruleset
 ! Maintainer: kowith337
 !
-! Version: 201806022121
+! Version: 201807160011
 ! VersionNo: 0.01
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
 
 Gelbooru
-	! Note: You must use with uBlock Origin or Nano, this only allow something that really need and to prevent unwanted connections,
+	! Note: You must use with uBlock Origin or Nano, this only allow something that really need and prevent unwanted connections,
 	! not for unbreak AntiUser tactics that their made.
 	gelbooru.com *
 		_ 1st-party script
 		_ ajax.googleapis.com script
 		_ maxcdn.bootstrapcdn.com script
+
+Radio-Browser
+	radio-browser.info *
+		_ * media
+		_ * xhr
+		_ cdn.jsdelivr.net script
 
 YouTube Privacy Embed
 	* youtube-nocookie.com
