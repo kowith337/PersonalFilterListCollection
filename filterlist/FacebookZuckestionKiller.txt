@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer (Temporary Name)
-! Version: 201807131806
+! Version: 201807240048
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 1 day
@@ -327,6 +327,7 @@ m.facebook.com,mobile.facebook.com,touch.facebook.com###MNewsFeed section articl
 m.facebook.com,mobile.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div[data-store*="share_id"] .story_body_container div div:has(.scrollArea:has(a[href^="/commerce/products/"]))
 m.facebook.com,mobile.facebook.com,touch.facebook.com###MNewsFeed section article:has(.scrollArea:has(a#pyml_infinite_scroll_loading))
 m.facebook.com,mobile.facebook.com,touch.facebook.com###events_dashboard_activity_feed section article:has(.scrollArea:has(.fbEventsEgoScroller))
+m.facebook.com,mobile.facebook.com,touch.facebook.com###mEventsDashboard div > div[data-store-id] > div[data-store-id]:has(div[data-nt^="NT:BOX"]):has(.scrollArea)
 m.facebook.com,mobile.facebook.com,touch.facebook.com###mJewelRequestsFlyoutBody div div:has(div[class] div[class]:has(div[data-pymk-id]))
 m.facebook.com,mobile.facebook.com,touch.facebook.com###m_group_stories_container section article:has(.scrollArea .scrollAreaColumn[data-sigil="m-groups-pymi-item"])
 m.facebook.com,mobile.facebook.com,touch.facebook.com###msite-pages-header-contents div[style*="transparent none repeat scroll"]:has(#popup_xout)
