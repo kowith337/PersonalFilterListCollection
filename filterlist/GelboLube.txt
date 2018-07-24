@@ -1,8 +1,8 @@
 [uBlock Origin 1.16.7.2]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201807172126
+! Version: 201807242209
 ! Author: kowith337
-! Expires: 1 day
+! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
 
@@ -242,6 +242,7 @@ gelbooru.com##^script[src^="https://gelbooru.com/script/try.js"]
 ! CSS Re-design / Mobile Improvement - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space
 ! almost half of screen from top, this will surely conflict when you request desktop view or when you're already use desktop browser.
+gelbooru.com###navbar .nav .active2.strong a:style(background: none transparent !important; color: #ffffff !important; font-weight: normal !important)
 gelbooru.com###navbar .nav li a:style(padding-left: 5px !important; padding-right: 5px !important)
 gelbooru.com##.navbar #navbar2 li a:style(padding-left: 5px !important; padding-right: 5px !important)
 gelbooru.com##.navbar#submenu #navbar2 .navbar-nav:style(direction:rtl !important)
