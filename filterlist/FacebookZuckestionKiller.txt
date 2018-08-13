@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201808132140
+! Version: 201808132207
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 1 day
@@ -159,9 +159,9 @@
 ! [Super lightweight Facebook enhancement]
 ! It's no need to load anything that not matter to use, because `mbasic.facebook.com` can work fine without JavaScript,
 ! Inline script, iframe and third party resources.
+||$inline-script,domain=mbasic.facebook.com
 ||$script,domain=mbasic.facebook.com
 ||$subdocument,domain=mbasic.facebook.com
-||$inline-script,domain=mbasic.facebook.com
 ||$websocket,domain=mbasic.facebook.com
 
 ! SOUND annoyances
@@ -363,6 +363,7 @@ m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=1728807357362356"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="instagram.com"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="/lite/?loc_ref=menu"]))
+m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="/marketplace/?ref=bookmarks"] div span[data-sigil="marketplace_bookmark"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="https://0.freebasics.com/?ref"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="https://free.facebook.com/home.php?ref"]))
 m.facebook.com,touch.facebook.com##.storyStream section article:has(footer:has(a[data-ajaxify-href^="/qp/action/redirect/?"]))
