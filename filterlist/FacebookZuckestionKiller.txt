@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201808051554
+! Version: 201808132140
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 1 day
@@ -24,6 +24,7 @@
 ||facebook.com/ads/manager/ajax/check_tip_qe$important
 ||facebook.com/ads/manager/ajax/list_tips$important
 ||facebook.com/ads/manager/ajax/megaphone_story$important
+||facebook.com/ads/preferences/mobile_log/?$important
 ||facebook.com/ads/qe/$important
 ||facebook.com/ai.php$subdocument,important
 ||facebook.com/ajax/ads/$important
@@ -53,7 +54,12 @@
 ||facebook.com/feed/pivot/$xmlhttprequest
 ||facebook.com/feed/pivot/chaining$important
 ||facebook.com/feed/pivot/related_articles$important
-||facebook.com/friends/center/suggestions$important
+||facebook.com/friends/center/suggestions$important,~xmlhttprequest
+||facebook.com/friends/center/suggestions$xmlhttprequest
+||facebook.com/groups/*suggested*$important,~xmlhttprequest
+||facebook.com/groups/*suggested*$xmlhttprequest
+||facebook.com/groups/membersuggestion$important,~xmlhttprequest
+||facebook.com/groups/membersuggestion$xmlhttprequest
 ||facebook.com/impression.php$important
 ||facebook.com/network_ads_common$important
 ||facebook.com/pages/launchpoint/discover/$document,important
@@ -95,11 +101,13 @@
 @@||facebook.com/ads/can_change_currency_timezone_reason/?$first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
 @@||facebook.com/ads/manage/$first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
 @@||facebook.com/ads/manager/$first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
-@@||facebook.com/ads/preferences/ad_report/$xmlhttprequest
+@@||facebook.com/ads/preferences/*/?__m_async_page__$xmlhttprequest,first-party
+@@||facebook.com/ads/preferences/ad_report/$xmlhttprequest,first-party
 @@||facebook.com/ads/preferences/advertiser_hideall$first-party
 @@||facebook.com/ads/preferences/edit_interests/?*action=del$first-party
 @@||facebook.com/ads/preferences/edit_sensitive_topics$xmlhttprequest
 @@||facebook.com/ads/preferences/report$xmlhttprequest,first-party
+@@||facebook.com/ads/preferences?__m_async_page__$xmlhttprequest,first-party
 @@||facebook.com/ads/profile/advertisers$xmlhttprequest,first-party
 @@||facebook.com/ads/profile/interests$xmlhttprequest,first-party
 @@||facebook.com/ads/tax_id_collection_config/?$first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
@@ -107,7 +115,10 @@
 @@||facebook.com/ajax/groups/mall/mall_post_menu.php$xmlhttprequest,first-party
 @@||facebook.com/ajax/settings/account/advertising_email.php?$xmlhttprequest
 @@||facebook.com/feed/options_menu$xmlhttprequest,first-party
-@@||facebook.com/settings/advertising_email/$xmlhttprequest
+@@||facebook.com/friends/center/suggestions/?ppk$xmlhttprequest,first-party
+@@||facebook.com/groups/membersuggestion/xout/$xmlhttprequest,first-party
+@@||facebook.com/groups/xout_suggested_group_followup/?$xmlhttprequest,first-party
+@@||facebook.com/settings/advertising_email/$xmlhttprequest,first-party
 @@||facebook.com/share/dialog/submit/$xmlhttprequest,first-party
 
 ! [Counter] Prevent accidentally (re-)add advert prefs while you're deleting them.
@@ -130,21 +141,20 @@
 ! 'm.facebook.com' or 'mobile.facebook.com' then show the suggestion page to use Facebook under "Free Basics" campaign,
 ! Note: I don't know why it redirected to "h.facebook.com" under non-HTTPS? first before bouncing back to "m.facebook.com"
 ! or "mobile.facebook.com" ? so, I will blocking it!
-! Update: No matter about it, I will keep blocking this, no matter what, when and why...
-||h.facebook.com$important
-||facebook.com/zero/policy$document
-||web.facebook.com$document,important
-
-! Sometime you're able to still use 'm.facebook.com' or 'touch.facebook.com' on mobile data,
-! but it still make xhr to 'mobile.facebook.com', so it's good to block that!
-||mobile.facebook.com$important
-
-! I HATE FreakBasics by Facebook, internet.org also...
+! Update: I will keep blocking this, no matter what, when and why...
+! Note: Sometime you're able to still use 'm.facebook.com' or 'touch.facebook.com' on mobile data,
+!       but it still make xhr to 'mobile.facebook.com', so it's good to block that!
+! Furthermore: I HATE FreakBasics by Facebook, internet.org also...
 ||0.facebook.com$important
+||facebook.com/zero/policy$document,important
 ||free.facebook.com$important
-||freebasics.com$document,important
-||internet.org$document,important
+||freebasics.com$important
+||h.facebook.com$important
+||internet.org$important
+||mobile.facebook.com$important
 ||o.facebook.com$important
+||web.facebook.com$document,important
+||z-m-static.xx.fbcdn.net$important
 
 ! [Super lightweight Facebook enhancement]
 ! It's no need to load anything that not matter to use, because `mbasic.facebook.com` can work fine without JavaScript,
