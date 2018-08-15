@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201808132207
+! Version: 201808151300
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 1 day
@@ -48,21 +48,21 @@
 ||facebook.com/audience_network/$important
 ||facebook.com/common/referer_frame.php$inline-script
 ||facebook.com/ego/$important,~xmlhttprequest
-||facebook.com/ego/$xmlhttprequest
+||facebook.com/ego/
 ||facebook.com/ego/feed$important,~xmlhttprequest
-||facebook.com/ego/feed$xmlhttprequest
+||facebook.com/ego/feed
 ||facebook.com/feed/pivot/$xmlhttprequest
 ||facebook.com/feed/pivot/chaining$important
 ||facebook.com/feed/pivot/related_articles$important
-||facebook.com/friends/center/suggestions$important,~xmlhttprequest
-||facebook.com/friends/center/suggestions$xmlhttprequest
+||facebook.com/friends/center/suggestions$important,~document,~xmlhttprequest
+||facebook.com/friends/center/suggestions$~document
 ||facebook.com/groups/*suggested*$important,~xmlhttprequest
-||facebook.com/groups/*suggested*$xmlhttprequest
+||facebook.com/groups/*suggested*
 ||facebook.com/groups/membersuggestion$important,~xmlhttprequest
-||facebook.com/groups/membersuggestion$xmlhttprequest
+||facebook.com/groups/membersuggestion
 ||facebook.com/impression.php$important
 ||facebook.com/network_ads_common$important
-||facebook.com/pages/launchpoint/discover/$document,important
+||facebook.com/pages/launchpoint/discover/$document
 ||facebook.com/pages/qe/$important
 ||facebook.com/plugins/likebox.php$important
 ||facebook.com/pubcontent/$xmlhttprequest
