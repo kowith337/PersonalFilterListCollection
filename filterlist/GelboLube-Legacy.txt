@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: GelboLube (Firefox Legacy)
-! Version: 201807242209
+! Version: 201808161422
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -67,12 +67,16 @@ gelbooru.com##.contain-push center div:matches-css(max-width: 750px)
 gelbooru.com##.alert-info:if(a[href*="?page=ihnt"])
 gelbooru.com##.alert-warning:if(a[href*="javascript"])
 
-! (Pre-) Unbreak - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! 0. [Prequel] Block Every videos, subdocs and scripts (See below for what things could be exclude)
+! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! 1. [Prequel] Block Every videos, subdocs and scripts (See below for what things could be exclude)
 ||gelbooru.com$media
 ||gelbooru.com$script
 ||gelbooru.com$subdocument
 
+! Block extra things (Banner images that promote their shirts)
+||gelbooru.com/extras/$image,other
+
+! Unbreak - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ! 
 ! 1. Allow jQuery from GoogleAPIs and BootStrap (suggested by toshiya44)
 @@||ajax.googleapis.com/ajax/libs/jquery*$script,domain=gelbooru.com
 @@||bootstrapcdn.com/bootstrap/*$script,domain=gelbooru.com
