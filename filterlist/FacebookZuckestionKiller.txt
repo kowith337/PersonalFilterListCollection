@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201808161031
+! Version: 201808290154
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 1 day
@@ -243,6 +243,7 @@ m.facebook.com,touch.facebook.com###root div > div[data-store*="actor_id"] div[d
 m.facebook.com,touch.facebook.com###root[data-sigil*="context-layer-root"] article div a[href*="/ads/preferences/interest_suggestions/"]
 m.facebook.com,touch.facebook.com###viewport #header #mJewelNav #feed_jewel.hasCount a div span[data-sigil="count"]
 m.facebook.com,touch.facebook.com##.story_body_container header > div a[href*="package=com.facebook.lite"]
+m.facebook.com,touch.facebook.com##article._mFeedEgoSuggestionsBoatload__list
 m.facebook.com,touch.facebook.com##article[data-ft*="mhpp_ego_service_type"]
 m.facebook.com,touch.facebook.com##article[data-ft][data-xt*="sponsored"]
 m.facebook.com,touch.facebook.com##article[data-store*="is_sponsored.1"]
@@ -369,6 +370,7 @@ m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="htt
 m.facebook.com,touch.facebook.com##.storyStream section article:has(footer:has(a[data-ajaxify-href^="/qp/action/redirect/?"]))
 m.facebook.com,touch.facebook.com##:xpath(//section//article[.//header//div//span/text()="Sponsored"])
 m.facebook.com,touch.facebook.com##article div > div[data-autoid] a[href^="/ads/interest/?"]:has(img[data-sigil="redirect_to_interest"])
+m.facebook.com,touch.facebook.com##article:has(.scrollArea .async_fan)
 m.facebook.com,touch.facebook.com##article:has(.scrollArea div[data-sigil="ego-auto-pager"])
 m.facebook.com,touch.facebook.com##article:has(.scrollArea):has(.scrollAreaBody div[data-ft*="ego_id"])
 m.facebook.com,touch.facebook.com##article:has(a[data-uri*="[is_sponsored]=1"])
@@ -397,3 +399,32 @@ m.facebook.com,touch.facebook.com##article #advertiserhidden div[data-sigil="ad-
 m.facebook.com,touch.facebook.com##article div > div[data-autoid] a[data-sigil="redirect_to_advertiser"]:style(color: red !important; text-decoration: none !important; pointer-events: none !important)
 m.facebook.com,touch.facebook.com##article div > div[data-autoid] a[href^="/ads/interest/?"]:style(color: red !important; text-decoration: none !important; pointer-events: none !important)
 m.facebook.com,touch.facebook.com##section article .story_body_container header div > div a[href*="facebook.com/lite/?"]:style(background: none !important; color: lightsteelblue !important; pointer-events: none !important)
+
+! Experimental
+! This work only for specific platform, to testing out!
+!#if env_mobile
+! This help for opt out zuckestions, you can convert scriptlets below as bookmarklet.
+! var divs = document.querySelectorAll('a[data-sigil*="xout"] i.touched_hide'); for (i = 0; i < divs.length; ++i) {divs[i].click();};
+
+! Rewrite network requests blocking/whitelisting
+||facebook.com/ego/$important,badfilter
+||facebook.com/ego/feed$important,badfilter
+||facebook.com^*/logging/$badfilter
+||facebook.com/ego/
+||facebook.com/ego/feed/
+@@||facebook.com/ego/feed/logging/xout/?$xmlhttprequest
+||facebook.com/friends/center/suggestions$important,badfilter
+||facebook.com/friends/center/suggestions$important,~xmlhttprequest
+||facebook.com/friends/center/suggestions
+@@||facebook.com/friends/center/suggestions/?ppk$xmlhttprequest
+||facebook.com/groups/membersuggestion$important,~xmlhttprequest
+||facebook.com/groups/membersuggestion
+@@||facebook.com/groups/membersuggestion/xout/$xmlhttprequest
+||facebook.com/groups/*suggested*$important,~xmlhttprequest
+||facebook.com/groups/*suggested*
+@@||facebook.com/groups/xout_suggested_group_followup/?$xmlhttprequest
+
+! Hide zuckestions items pane to enforce Facebook fill up their zuckestions, but in fact you see none of any zuckestions at all!
+m.facebook.com,touch.facebook.com###friends_center_main div[data-pymk-id]
+m.facebook.com,touch.facebook.com##.async_fan:has(div div a.darkTouch[href*="pages_nav_discover"])
+!endif
