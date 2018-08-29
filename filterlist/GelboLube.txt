@@ -1,6 +1,6 @@
-[uBlock Origin 1.16.7.2]
+[uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201808161419
+! Version: 201808291847
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -198,8 +198,8 @@ gelbooru.com##.alert-warning:if(a[href*="javascript"])
 ! 1. [Deprecated] Block attempt to rewrite adverts under paginator via reading some value, doing this also stop advert images
 !                 requests.
 !    Note: they bypassed this block by rename function like [advertVar > abvertDar], this solution will not be last long enough.
-! gelbooru.com##script:inject(abort-on-property-read.js, abvertDar)
-! gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
+! gelbooru.com##+js(abort-on-property-read.js, abvertDar)
+! gelbooru.com##+js(abort-on-property-read.js, advertVar)
 
 ! 2. [Deprecated] Stop exo_zones cookie deploy as first party, the ExoLoader function was called from application.js that
 !    whitelisted to unbreak site functionality.
@@ -208,29 +208,29 @@ gelbooru.com##.alert-warning:if(a[href*="javascript"])
 !    Update 2: They change the script name, likely they do in the fallback ILS to execute and re-deploy ads if some ads value was
 !              forbidden.
 !    Update 3: New BetterJsPop function that currently testing to show thedoujin site as popunder.
-! gelbooru.com##script:inject(abort-on-property-write.js, AddZone)
-! gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop)
-! gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop.add)
-! gelbooru.com##script:inject(abort-on-property-write.js, EXoDetector)
-! gelbooru.com##script:inject(abort-on-property-write.js, ExoDetector)
-! gelbooru.com##script:inject(abort-on-property-write.js, ExoLoader.AddZone)
-! gelbooru.com##script:inject(abort-on-property-write.js, ExoLoader.serve)
-! gelbooru.com##script:inject(abort-on-property-write.js, domain_base)
-! gelbooru.com##script:inject(abort-on-property-write.js, addZone)
-! gelbooru.com##script:inject(abort-on-property-write.js, serve)
+! gelbooru.com##+js(abort-on-property-write.js, AddZone)
+! gelbooru.com##+js(abort-on-property-write.js, BetterJsPop)
+! gelbooru.com##+js(abort-on-property-write.js, BetterJsPop.add)
+! gelbooru.com##+js(abort-on-property-write.js, EXoDetector)
+! gelbooru.com##+js(abort-on-property-write.js, ExoDetector)
+! gelbooru.com##+js(abort-on-property-write.js, ExoLoader.AddZone)
+! gelbooru.com##+js(abort-on-property-write.js, ExoLoader.serve)
+! gelbooru.com##+js(abort-on-property-write.js, domain_base)
+! gelbooru.com##+js(abort-on-property-write.js, addZone)
+! gelbooru.com##+js(abort-on-property-write.js, serve)
 
 ! 3. Prevent Google Analytics to be executed, but it works only inline script due to they recently add asynchronous script after
 !    document loaded.
-gelbooru.com##script:inject(abort-on-property-write.js, GoogleAnalyticsObject)
+gelbooru.com##+js(abort-on-property-write.js, GoogleAnalyticsObject)
 
 ! 4. Prevent JuicyAds execute, same behavior as Google Analytics
-gelbooru.com##script:inject(abort-on-property-write.js, adsbyjuicy)
+gelbooru.com##+js(abort-on-property-write.js, adsbyjuicy)
 
 ! 5. Experimental, to foil ILS function for Chromium / Firefox WebExt
-gelbooru.com##script:inject(abort-current-inline-script.js, AddZone, idzone)
-gelbooru.com##script:inject(abort-current-inline-script.js, add, newTab, cookieName)
-gelbooru.com##script:inject(abort-current-inline-script.js, domain_base, exosrv.com)
-gelbooru.com##script:inject(abort-current-inline-script.js, serve, script_url)
+gelbooru.com##+js(abort-current-inline-script.js, AddZone, idzone)
+gelbooru.com##+js(abort-current-inline-script.js, add, newTab, cookieName)
+gelbooru.com##+js(abort-current-inline-script.js, domain_base, exosrv.com)
+gelbooru.com##+js(abort-current-inline-script.js, serve, script_url)
 
 ! 6. HTML filtering, able to remove some specific path inside the non-filtered document before it's load
 !    currently require 1.14.23 beta and run on Firefox Quantum (57+)
@@ -275,6 +275,6 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 @@||ajax.googleapis.com/ajax/libs/jquery*$script,domain=thedoujin.com
 @@||bootstrapcdn.com/bootstrap/*$script,domain=thedoujin.com
 @@||thedoujin.com/assets/*/*.js$script,first-party
-thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader)
-thedoujin.com##script:inject(abort-on-property-write.js, addZone)
-thedoujin.com##script:inject(abort-on-property-write.js, serve)
+thedoujin.com##+js(abort-on-property-write.js, ExoLoader)
+thedoujin.com##+js(abort-on-property-write.js, addZone)
+thedoujin.com##+js(abort-on-property-write.js, serve)
