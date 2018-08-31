@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201808301258
+! Version: 201808311859
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 1 day
@@ -173,11 +173,15 @@
 ! [Resources Replace] Instead of just blocking, then redirect to neutered resources
 ! Experimental for Facebook security pixels, this may break their functionality and security check.
 ||facebook.com/common/referer_frame.php$subdocument,important,redirect=noopframe
+||facebook.com/feed/badge/$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/feed/pivot/$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/pubcontent/$xmlhttprequest,important,redirect=nooptext
+||facebook.com/related-application/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
 ||facebook.com/sem_pixel/1/control/0/$subdocument,important,redirect=noopframe
 ||facebook.com/sem_pixel/1/control/1/$subdocument,important,redirect=noopframe
+||facebook.com/ufi/typing/*/start/?$xmlhttprequest,important,redirect=nooptext
+||facebook.com/ufi/typing/*/stop/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/video/instream_video/rapid_feedback$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/xti.php$subdocument,important,redirect=noopframe
 ||facebook.net/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
@@ -400,30 +404,33 @@ m.facebook.com,touch.facebook.com##article div > div[data-autoid] a[data-sigil="
 m.facebook.com,touch.facebook.com##article div > div[data-autoid] a[href^="/ads/interest/?"]:style(color: red !important; text-decoration: none !important; pointer-events: none !important)
 m.facebook.com,touch.facebook.com##section article .story_body_container header div > div a[href*="facebook.com/lite/?"]:style(background: none !important; color: lightsteelblue !important; pointer-events: none !important)
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 ! Experimental
 ! This work only for specific platform, to testing out!
+
 !#if env_mobile
 ! This help for opt out zuckestions, you can convert scriptlets below as bookmarklet.
 ! var divs = document.querySelectorAll('a[data-sigil*="xout"] i.touched_hide'); for (i = 0; i < divs.length; ++i) {divs[i].click();};
 
 ! Rewrite network requests blocking/whitelisting
-||facebook.com/ego/$important,badfilter
-||facebook.com/ego/feed$important,badfilter
 ||facebook.com/ego/
 ||facebook.com/ego/feed/
-@@||facebook.com/ego/feed/logging/xout/?$xmlhttprequest,first-party,domain=~0.facebook.com|~free.facebook.com|~mobile.facebook.com|~web.facebook.com
-||facebook.com/friends/center/suggestions$important,badfilter
-||facebook.com/friends/center/suggestions$important,~xmlhttprequest
 ||facebook.com/friends/center/suggestions
-@@||facebook.com/friends/center/suggestions/?ppk$xmlhttprequest,first-party,domain=~0.facebook.com|~free.facebook.com|~mobile.facebook.com|~web.facebook.com
-||facebook.com/groups/membersuggestion$important,~xmlhttprequest
-||facebook.com/groups/membersuggestion
-@@||facebook.com/groups/membersuggestion/xout/$xmlhttprequest,first-party,domain=~0.facebook.com|~free.facebook.com|~mobile.facebook.com|~web.facebook.com
-||facebook.com/groups/*suggested*$important,~xmlhttprequest
 ||facebook.com/groups/*suggested*
+||facebook.com/groups/membersuggestion
+@@||facebook.com/ego/feed/logging/xout/?$xmlhttprequest,first-party,domain=~0.facebook.com|~free.facebook.com|~mobile.facebook.com|~web.facebook.com
+@@||facebook.com/friends/center/suggestions/?ppk$xmlhttprequest,first-party,domain=~0.facebook.com|~free.facebook.com|~mobile.facebook.com|~web.facebook.com
+@@||facebook.com/groups/membersuggestion/xout/$xmlhttprequest,first-party,domain=~0.facebook.com|~free.facebook.com|~mobile.facebook.com|~web.facebook.com
 @@||facebook.com/groups/xout_suggested_group_followup/?$xmlhttprequest,first-party,domain=~0.facebook.com|~free.facebook.com|~mobile.facebook.com|~web.facebook.com
 
 ! Hide zuckestions items pane to enforce Facebook fill up their zuckestions, but in fact you see none of any zuckestions at all!
 m.facebook.com,touch.facebook.com###friends_center_main div[data-pymk-id]
 m.facebook.com,touch.facebook.com##.async_fan:has(div div a.darkTouch[href*="pages_nav_discover"])
+!endif
+
+#!if env_firefox
+! Test Cookie Messing
+facebook.com##+js(cookie-remover.js, x-referer)
+facebook.com##+js(nanop-easy-set-cookie.js, m_pixel_ratio=0)
 !endif
