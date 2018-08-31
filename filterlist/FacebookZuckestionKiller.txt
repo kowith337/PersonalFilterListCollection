@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201808311914
+! Version: 201808311931
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 1 day
@@ -324,8 +324,6 @@ m.facebook.com,mbasic.facebook.com###viewport #root table td div div:has(a[href^
 m.facebook.com,mbasic.facebook.com###viewport div > div:has(a[href^="/download.php"])
 m.facebook.com,mbasic.facebook.com###viewport div:has(table[role="presentation"]:has(td a[href^="/qp/action/redirect/?"]))
 m.facebook.com,mbasic.facebook.com###viewport div:not([id]) > div table:has(td a[href^="/a/language.php?"][href*="ref_component=mbasic_footer"])
-m.facebook.com,mbasic.facebook.com##:xpath(//div[@data-ft][.//span/text()="Sponsored"])
-m.facebook.com,mbasic.facebook.com##:xpath(//div[@role="article"][.//span/text()="Sponsored"])
 m.facebook.com,mbasic.facebook.com##div[data-ft] > div > div:has(span a[href*="/boosted_post/"])
 m.facebook.com,mbasic.facebook.com##div[data-ft] div:has(table a[href*="mbasic_feed_post_like_chaining"])
 m.facebook.com,mbasic.facebook.com##div[data-ft] div:has(table a[href*="mbasic_feed_share_like_chaining"])
@@ -333,6 +331,7 @@ m.facebook.com,mbasic.facebook.com##div[data-ft]:has(a[href*="[is_sponsored]=1"]
 m.facebook.com,mbasic.facebook.com##div[data-ft]:has(a[href*="is_sponsored=1"])
 m.facebook.com,mbasic.facebook.com##div[data-ft]:has(div a[href*="/friends/center/"])
 m.facebook.com,mbasic.facebook.com##div[data-ft]:has(div a[href*="/groups/?ref=category_discover_landing"])
+m.facebook.com,mbasic.facebook.com##div[data-ft]:has(span:has-text(/Sponsored/)
 m.facebook.com,mbasic.facebook.com##div[data-ft]:has(table td div:has(a[href*="origin=feed_pyml"]))
 m.facebook.com,mbasic.facebook.com##div[id^="u_0_"] table:has(td a[href^="/profilepicframes/"])
 m.facebook.com,mbasic.facebook.com##div[role="article"] div:has(table a[href*="mbasic_feed_post_like_chaining"])
@@ -340,6 +339,7 @@ m.facebook.com,mbasic.facebook.com##div[role="article"] div:has(table a[href*="m
 m.facebook.com,mbasic.facebook.com##div[role="article"] table[role="presentation"]:has(td a[href^="/profilepicframes"])
 m.facebook.com,mbasic.facebook.com##div[role="article"]:has(div a[href*="/friends/center/"])
 m.facebook.com,mbasic.facebook.com##div[role="article"]:has(iframe[src^="/xti.php?"])
+m.facebook.com,mbasic.facebook.com##div[role="article"]:has(span:has-text(/Sponsored/)
 m.facebook.com,mbasic.facebook.com##table td#mEventsDashboard #events_dashboard_activity_feed:has(a[href*="suggestion_feed_unit"])
 m.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div div[data-store*="share_id"] .story_body_container div[data-ft] div:has(.scrollArea:has(a[href*="/services?"]))
 m.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div:has(.scrollArea:has(a[href^="/commerce/products/"]))
@@ -356,13 +356,16 @@ m.facebook.com,touch.facebook.com###page article[data-sigil="pma-upsell"]:has(a[
 m.facebook.com,touch.facebook.com###page div[id^="unit_id_"]:has(.scrollArea:has(.scrollAreaColumn div[data-autoid]))
 m.facebook.com,touch.facebook.com###root div > div[data-sigil^="m_login_upsell"]:has(.grouped a[href*="facebook.com/click.php?redir_url"])
 m.facebook.com,touch.facebook.com###root div a.sub[href*="?sk=h_nor"]
+m.facebook.com,touch.facebook.com###timelineProfileTiles div > div[data-autoid]:has(a[href*="?v=fun_facts&"])
 m.facebook.com,touch.facebook.com###viewport #root div[id^="u_0_"]:has(div #mobile_login_bar strong)
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a span:has-text(Instagram)))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/ads/create/"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/friends/center/suggestions/"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=124024574287414"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=275254692598279"]))
+m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=343553122467255"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=399711043500146"]))
+m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=456900714360021"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=526732794016279"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=762992637108088"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=1728807357362356"]))
