@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201808311931
+! Version: 201809012236
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 1 day
@@ -278,6 +278,8 @@ facebook.com##:xpath(//div[@id="pagelet_timeline_main_column"]//div[starts-with(
 facebook.com##:xpath(//div[@id="stream_pagelet"]//div[starts-with(@data-ownerid,"u_jsonp_")][//div//span/text()="Featured for you"])
 facebook.com##:xpath(//div[@id="stream_pagelet"]//div[starts-with(@data-ownerid,"u_jsonp_")][//div/text()="Related"])
 facebook.com##:xpath(//div[@id="timeline-medley"]//div//span[.//button/text()="Tag Suggestions"])
+facebook.com##[id^=hyperfeed_story_id_]:has(a[href*="client_token"])
+facebook.com##[id^=hyperfeed_story_id_]:has(a[href*="utm_campaign"])
 facebook.com##div ul[role="menu"] li:has(a[href*="campaign/landing.php?"])
 facebook.com##div[data-referrer="pagelet_side_ads"]
 facebook.com##div[data-referrer="timeline_collections_section_title"] > div:has(div[id^="pagelet_recommendation"])
