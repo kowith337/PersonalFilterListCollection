@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: GelboLube (Firefox Legacy)
-! Version: 201808161422
+! Version: 201809162013
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -147,6 +147,7 @@ gelbooru.com##.alert-warning:if(a[href*="javascript"])
 ||exoclick.com$domain=gelbooru.com,important
 ||exosrv.com$domain=gelbooru.com,important
 ||google-analytics.com$domain=gelbooru.com,important
+||googletagmanager.com$domain=gelbooru.com,important
 ||jabcomix.com$domain=gelbooru.com,important
 ||javhd.com$domain=gelbooru.com,important
 ||juicyads.com$domain=gelbooru.com,important
@@ -216,6 +217,7 @@ gelbooru.com##.alert-warning:if(a[href*="javascript"])
 ! gelbooru.com##script:inject(abort-on-property-write.js, ExoLoader.serve)
 ! gelbooru.com##script:inject(abort-on-property-write.js, domain_base)
 ! gelbooru.com##script:inject(abort-on-property-write.js, addZone)
+! gelbooru.com##script:inject(abort-on-property-write.js, gtag)
 ! gelbooru.com##script:inject(abort-on-property-write.js, serve)
 
 ! 3. Prevent Google Analytics to be executed, but it works only inline script due to they recently add asynchronous script after
@@ -227,9 +229,10 @@ gelbooru.com##script:inject(abort-on-property-write.js, adsbyjuicy)
 
 ! 5. Experimental, to foil ILS function for Chromium / Firefox WebExt
 gelbooru.com##script:inject(abort-current-inline-script.js, AddZone, idzone)
-gelbooru.com##script:inject(abort-current-inline-script.js, add, newTab, cookieName)
+gelbooru.com##script:inject(abort-current-inline-script.js, add, newTab)
 gelbooru.com##script:inject(abort-current-inline-script.js, domain_base, exosrv.com)
 gelbooru.com##script:inject(abort-current-inline-script.js, serve, script_url)
+gelbooru.com##script:inject(abort-current-inline-script.js, window.dataLayer, gtag)
 
 ! CSS Re-design / Mobile Improvement - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space
@@ -270,6 +273,7 @@ gelbooru.com##script:contains(_gaq.push)
 gelbooru.com##script:contains(ad_idzone)
 gelbooru.com##script:contains(adsbyjuicy)
 gelbooru.com##script:contains(advertVar)
+gelbooru.com##script:contains(function gtag)
 gelbooru.com##script:contains(trw_domain)
 ! gelbooru.com##script:contains(abvertDar)
 ! gelbooru.com##script:contains(adnOpt)

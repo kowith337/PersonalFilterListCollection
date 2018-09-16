@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201808291847
+! Version: 201809162013
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -148,6 +148,7 @@ gelbooru.com##.alert-warning:if(a[href*="javascript"])
 ||exoclick.com$domain=gelbooru.com,important
 ||exosrv.com$domain=gelbooru.com,important
 ||google-analytics.com$domain=gelbooru.com,important
+||googletagmanager.com$domain=gelbooru.com,important
 ||jabcomix.com$domain=gelbooru.com,important
 ||javhd.com$domain=gelbooru.com,important
 ||juicyads.com$domain=gelbooru.com,important
@@ -217,6 +218,7 @@ gelbooru.com##.alert-warning:if(a[href*="javascript"])
 ! gelbooru.com##+js(abort-on-property-write.js, ExoLoader.serve)
 ! gelbooru.com##+js(abort-on-property-write.js, domain_base)
 ! gelbooru.com##+js(abort-on-property-write.js, addZone)
+! gelbooru.com##+js(abort-on-property-write.js, gtag)
 ! gelbooru.com##+js(abort-on-property-write.js, serve)
 
 ! 3. Prevent Google Analytics to be executed, but it works only inline script due to they recently add asynchronous script after
@@ -228,9 +230,10 @@ gelbooru.com##+js(abort-on-property-write.js, adsbyjuicy)
 
 ! 5. Experimental, to foil ILS function for Chromium / Firefox WebExt
 gelbooru.com##+js(abort-current-inline-script.js, AddZone, idzone)
-gelbooru.com##+js(abort-current-inline-script.js, add, newTab, cookieName)
+gelbooru.com##+js(abort-current-inline-script.js, add, newTab)
 gelbooru.com##+js(abort-current-inline-script.js, domain_base, exosrv.com)
 gelbooru.com##+js(abort-current-inline-script.js, serve, script_url)
+gelbooru.com##+js(abort-current-inline-script.js, window.dataLayer, gtag)
 
 ! 6. HTML filtering, able to remove some specific path inside the non-filtered document before it's load
 !    currently require 1.14.23 beta and run on Firefox Quantum (57+)
@@ -239,6 +242,7 @@ gelbooru.com##^script:has-text(BetterJsPop)
 gelbooru.com##^script:has-text(EXoDetector)
 gelbooru.com##^script:has-text(fuckingnormieswry)
 gelbooru.com##^script[async][src^="https://media.trafficjunky.net"]
+gelbooru.com##^script[async][src^="https://www.googletagmanager.com"]
 gelbooru.com##^script[src^="//gelbooru.com/script/license"]
 gelbooru.com##^script[src^="https://ads.exoclick.com"]
 gelbooru.com##^script[src^="https://gelbooru.com/script/try.js"]
