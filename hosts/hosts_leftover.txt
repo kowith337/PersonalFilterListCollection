@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201809120043
+# Version: 201809161027
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -300,6 +300,8 @@
 0.0.0.0 ioms.bfmio.com
 0.0.0.0 js.genieessp.com
 0.0.0.0 js.rfp.fout.jp
+0.0.0.0 l.facebook.com
+0.0.0.0 lm.facebook.com
 0.0.0.0 lvs.truehits.in.th
 0.0.0.0 lvs2.truehits.in.th
 0.0.0.0 lvs3.truehits.in.th
