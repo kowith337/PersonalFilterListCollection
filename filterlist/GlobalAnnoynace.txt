@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Personal Miscellaneous Annoyance
-! Version: 201809032031
+! Version: 201809172044
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 1 day
@@ -91,8 +91,8 @@ greasyfork.org###install-area .post-install:style(width: 0px !important; height:
 
 ! Scriplets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 randomnessthing.com##script:contains(Criteo)
-randomnessthing.com##+js(abort-on-property-read.js, Criteo)
-randomnessthing.com##+js(abort-on-property-write.js, DisplayAcceptableAdIfAdblocked)
+randomnessthing.com##script:inject(abort-on-property-read.js, Criteo)
+randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptableAdIfAdblocked)
 
 ! Backup from ThaiParanoidBlock - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! These rules aren't met the original requirement, but still need them (e.g. non-Thai sites)
