@@ -1,7 +1,7 @@
 # This is the filter that target to use on Gelbooru, an image board site that have safe and not safe images.
 
 | **Browser** | **Subscribe** | **Copy Direct Link** |
-| ------------ | ------------- |
+| ------------ | ------------- |  ------------- |
 | Chromium / Firefox Quantum | [:scroll:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fbooru%2FGelboLube.txt&amp;title=GelboLube%20for%20Chromium%20or%20Firefox%20WebExt) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/booru/GelboLube.txt) |
 | Firefox Legacy (XUL) | [:scroll:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fbooru%2FGelboLube-Legacy.txt&amp;title=GelboLube%20for%20Firefox%20Legacy) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/booru/GelboLube-Legacy.txt) |
 
