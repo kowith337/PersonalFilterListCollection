@@ -1,19 +1,19 @@
-[uBlock Origin 1.16.7.2]
-! Title: GelboLube (Firefox Legacy)
-! Version: 201809262117
+[uBlock Origin 1.16.20]
+! Title: GelboLube (Chromium/WebExt)
+! Version: 201809262122
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
-! From: https://github.com/kowith337/GelboLube/raw/legacy/gelbolube.txt
-! Redirect: https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/booru/GelboLube-Legacy.txt
+! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
 
 ! 1. It doesn't matter to have any checksum tools because uBo is now fully support filterlists that created on GitHub and
 !    regularly auto check itself when it's outdated more than 2 days.
 ! 2. This rules not completely to hide ads and collapse space, but it still remove ads and unwanted resources.
 !    (e.g. subdocuments and other scripts file that no need to load them)
 ! 3. Author/Owner/Contributor of gelbooru.com will frequently update their sites to keep ads appear.
-! 4. for Chromium, uB0 WebExtension, Firefox 57+ users, you can move to normal version at your own risk! because blocking
-!    ExoLoader function is also prevent 'lazyload' to be execute, I've allowed them because I have no choice (right now)
+! 4. for uB0 1.2.0 + Firefox 42 (and/or both newer) but Firefox <57 and installed uB0 Legacy, please look at 'legacy' version for
+!    better privacy (because it still prevent ExoClick ads deployment and still load thumbnail without any problem) as long as
+!    they didn't update their site to survive blocking so much...
 
 ! ------------------------------------------------------ GelboLube Core -------------------------------------------------------- !
 
@@ -196,44 +196,57 @@ gelbooru.com##.alert-warning:if(a[href*="javascript"])
 ||gelbooru.com/script/license$important
 
 ! Inject Scriptlets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! 1. Block attempt to rewrite adverts under paginator via reading some value, doing this also stop advert images requests.
+! 1. [Deprecated] Block attempt to rewrite adverts under paginator via reading some value, doing this also stop advert images
+!                 requests.
 !    Note: they bypassed this block by rename function like [advertVar > abvertDar], this solution will not be last long enough.
-! gelbooru.com##script:inject(abort-on-property-read.js, abvertDar)
-! gelbooru.com##script:inject(abort-on-property-read.js, advertVar)
+! gelbooru.com##+js(abort-on-property-read.js, abvertDar)
+! gelbooru.com##+js(abort-on-property-read.js, advertVar)
 
-! 2. Stop exo_zones cookie deploy as first party, the ExoLoader function was called from application.js that whitelisted to unbreak
-!    site functionality.
+! 2. [Deprecated] Stop exo_zones cookie deploy as first party, the ExoLoader function was called from application.js that
+!    whitelisted to unbreak site functionality.
 !    Update 1: due to new update on Gelbooru was using the lazyload function to load all thumbnails, these rules will be halt
 !              until found a better solution to keep preventing ExoLoader wrote cookies on local storage as 1st-party.
 !    Update 2: They change the script name, likely they do in the fallback ILS to execute and re-deploy ads if some ads value was
 !              forbidden.
 !    Update 3: New BetterJsPop function that currently testing to show thedoujin site as popunder.
-! gelbooru.com##script:inject(abort-on-property-write.js, AddZone)
-! gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop)
-! gelbooru.com##script:inject(abort-on-property-write.js, BetterJsPop.add)
-! gelbooru.com##script:inject(abort-on-property-write.js, EXoDetector)
-! gelbooru.com##script:inject(abort-on-property-write.js, ExoDetector)
-! gelbooru.com##script:inject(abort-on-property-write.js, ExoLoader)
-! gelbooru.com##script:inject(abort-on-property-write.js, ExoLoader.AddZone)
-! gelbooru.com##script:inject(abort-on-property-write.js, ExoLoader.serve)
-! gelbooru.com##script:inject(abort-on-property-write.js, domain_base)
-! gelbooru.com##script:inject(abort-on-property-write.js, addZone)
-! gelbooru.com##script:inject(abort-on-property-write.js, gtag)
-! gelbooru.com##script:inject(abort-on-property-write.js, serve)
+! gelbooru.com##+js(abort-on-property-write.js, AddZone)
+! gelbooru.com##+js(abort-on-property-write.js, BetterJsPop)
+! gelbooru.com##+js(abort-on-property-write.js, BetterJsPop.add)
+! gelbooru.com##+js(abort-on-property-write.js, EXoDetector)
+! gelbooru.com##+js(abort-on-property-write.js, ExoDetector)
+! gelbooru.com##+js(abort-on-property-write.js, ExoLoader.AddZone)
+! gelbooru.com##+js(abort-on-property-write.js, ExoLoader.serve)
+! gelbooru.com##+js(abort-on-property-write.js, domain_base)
+! gelbooru.com##+js(abort-on-property-write.js, addZone)
+! gelbooru.com##+js(abort-on-property-write.js, gtag)
+! gelbooru.com##+js(abort-on-property-write.js, serve)
 
 ! 3. Prevent Google Analytics to be executed, but it works only inline script due to they recently add asynchronous script after
 !    document loaded.
-gelbooru.com##script:inject(abort-on-property-write.js, GoogleAnalyticsObject)
+gelbooru.com##+js(abort-on-property-write.js, GoogleAnalyticsObject)
 
 ! 4. Prevent JuicyAds execute, same behavior as Google Analytics
-gelbooru.com##script:inject(abort-on-property-write.js, adsbyjuicy)
+gelbooru.com##+js(abort-on-property-write.js, adsbyjuicy)
 
 ! 5. Experimental, to foil ILS function for Chromium / Firefox WebExt
-gelbooru.com##script:inject(abort-current-inline-script.js, AddZone, idzone)
-gelbooru.com##script:inject(abort-current-inline-script.js, add, newTab)
-gelbooru.com##script:inject(abort-current-inline-script.js, domain_base, exosrv.com)
-gelbooru.com##script:inject(abort-current-inline-script.js, serve, script_url)
-gelbooru.com##script:inject(abort-current-inline-script.js, window.dataLayer, gtag)
+gelbooru.com##+js(abort-current-inline-script.js, AddZone, idzone)
+gelbooru.com##+js(abort-current-inline-script.js, add, newTab)
+gelbooru.com##+js(abort-current-inline-script.js, domain_base, exosrv.com)
+gelbooru.com##+js(abort-current-inline-script.js, serve, script_url)
+gelbooru.com##+js(abort-current-inline-script.js, window.dataLayer, gtag)
+
+! 6. HTML filtering, able to remove some specific path inside the non-filtered document before it's load
+!    currently require 1.14.23 beta and run on Firefox Quantum (57+)
+gelbooru.com##^ins[class="adsbytrafficjunky"]
+gelbooru.com##^script:has-text(BetterJsPop)
+gelbooru.com##^script:has-text(EXoDetector)
+gelbooru.com##^script:has-text(fuckingnormieswry)
+gelbooru.com##^script[async][src^="https://media.trafficjunky.net"]
+gelbooru.com##^script[async][src^="https://www.googletagmanager.com"]
+gelbooru.com##^script[src^="//gelbooru.com/script/license"]
+gelbooru.com##^script[src^="https://ads.exoclick.com"]
+gelbooru.com##^script[src^="https://gelbooru.com/script/try.js"]
+! gelbooru.com##^script:has-text(abvertDar)
 
 ! CSS Re-design / Mobile Improvement - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space
@@ -254,31 +267,6 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ! Blocked network rules for redirect is only affect for specific type of request only.
 ||gelbooru.com/intermission.php$subdocument,important,redirect=noopframe
 
-! Firefox + uBO Legacy Only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! ##script rules are work only uBlock0 1.2.0 + Firefox 42 or newer, but make sure it's not over than 56, if your Firefox version
-! over than that, you will be forced to install WebExtension version and need to look for "Chromium/WebExt" version...
-! Note: Fennec F-Droid also work, Not sure for IceCat and Pale Moon because it based on ESR build...
-! - I can confirmed these inline script filter rules below can collaps space that caused from every immoral ads, for now.
-! - Only the legacy version of uBlock Origin can be used these rules, the legacy version will be no longer release and get updated
-!   when stable version of Firefox 57 released, or maybe need someone to clone and port to keep extended support for legacy version.
-! - Keep in mind because they may rename some function to survive blocking, such as change [advertVar] to [abvertDar]
-gelbooru.com##script:contains(.AddZone)
-gelbooru.com##script:contains(.addZone)
-gelbooru.com##script:contains(.serve)
-gelbooru.com##script:contains(BetterJsPop)
-gelbooru.com##script:contains(EXoDetector)
-gelbooru.com##script:contains(ExoDetector)
-gelbooru.com##script:contains(ExoLoader)
-gelbooru.com##script:contains(GoogleAnalyticsObject)
-gelbooru.com##script:contains(_gaq.push)
-gelbooru.com##script:contains(ad_idzone)
-gelbooru.com##script:contains(adsbyjuicy)
-gelbooru.com##script:contains(advertVar)
-gelbooru.com##script:contains(function gtag)
-gelbooru.com##script:contains(trw_domain)
-! gelbooru.com##script:contains(abvertDar)
-! gelbooru.com##script:contains(adnOpt)
-
 ! ---------------------------------------------------- TheDoujin Support ------------------------------------------------------ !
 ! This aim to re-support TheDoujin to hide ads and prevent connections to ads and tracking servers, although this site have less
 ! connections than Gelbooru and can be easily hide ads by blocking unwanted functions...
@@ -291,8 +279,6 @@ gelbooru.com##script:contains(trw_domain)
 @@||ajax.googleapis.com/ajax/libs/jquery*$script,domain=thedoujin.com
 @@||bootstrapcdn.com/bootstrap/*$script,domain=thedoujin.com
 @@||thedoujin.com/assets/*/*.js$script,first-party
-thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader)
-thedoujin.com##script:inject(abort-on-property-write.js, addZone)
-thedoujin.com##script:inject(abort-on-property-write.js, serve)
-thedoujin.com##script:contains(ExoLoader.addZone)
-thedoujin.com##script:contains(ExoLoader.serve)
+thedoujin.com##+js(abort-on-property-write.js, ExoLoader)
+thedoujin.com##+js(abort-on-property-write.js, addZone)
+thedoujin.com##+js(abort-on-property-write.js, serve)

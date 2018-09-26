@@ -1,11 +1,10 @@
 [uBlock Origin 1.16.7.2]
 ! Title: GelboLube (Firefox Legacy)
-! Version: 201809262117
+! Version: 201809262122
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! From: https://github.com/kowith337/GelboLube/raw/legacy/gelbolube.txt
-! Redirect: https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/booru/GelboLube-Legacy.txt
 
 ! 1. It doesn't matter to have any checksum tools because uBo is now fully support filterlists that created on GitHub and
 !    regularly auto check itself when it's outdated more than 2 days.

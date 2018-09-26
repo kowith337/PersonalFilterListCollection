@@ -1,10 +1,9 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201809262119
+! Version: 201809262121
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
-! Redirect: https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/facebook/FacebookZuckestionKiller.txt
 
 ! These rules below are pulled from "Thai Paranoid Block" that have some rules that I've created for hide and remove zuckestions,
 ! ads, related contents, also remove ability to link back to related application from Facebook, such as Instagram, MESSenger,
