@@ -12,7 +12,7 @@
 - Keep away from any **zuckest** to installing `unfriendly for your privacy` [official apps](https://play.google.com/store/apps/developer?id=Facebook).
 - Make something easier and clearly (e.g. managing adverts preferences)
 - Remove unnecessary things that rarely need (e.g. Fun facts)
-- Also support mobile site version, both...
+- Also (currently mainly) support mobile site version, both...
   - [Basic feature phone](https://mbasic.facebook.com) or
   - [Smart phone](https://touch.facebook.com) (likely official app layout)
 
