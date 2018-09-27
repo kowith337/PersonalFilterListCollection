@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Personal Miscellaneous Annoyance
-! Version: 201809262121
+! Version: 201809272048
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days

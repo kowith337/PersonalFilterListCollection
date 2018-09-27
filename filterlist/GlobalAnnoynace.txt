@@ -1,10 +1,10 @@
 [uBlock Origin 1.16.20]
 ! Title: Personal Miscellaneous Annoyance
-! Version: 201809262118
+! Version: 201809272048
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
-! Redirect: https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/GlobalAnnoynace.txt
+! Redirect: https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/MiscAnnoynace.txt
 
 ! An uncategorized / out of scope of site or topic to create the stand alone filterlists
 ! will be stay here until the specific site or category are have enough rules.
