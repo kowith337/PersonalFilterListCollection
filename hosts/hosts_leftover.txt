@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201809161027
+# Version: 201809272219
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -211,8 +211,6 @@
 0.0.0.0 ad.doubleclick.net
 0.0.0.0 adaptv.advertising.com
 0.0.0.0 adnetwork.adasiaholdings.com
-0.0.0.0 ads.bumq.com
-0.0.0.0 ads.pantip.com
 0.0.0.0 ads1-adnow.com
 0.0.0.0 ads1.bangkokpost.co.th
 0.0.0.0 ads1.matichon.co.th
@@ -240,16 +238,23 @@
 0.0.0.0 ads9-adnow.com
 0.0.0.0 ads9.bangkokpost.co.th
 0.0.0.0 ads9.matichon.co.th
+0.0.0.0 ads.bumq.com
+0.0.0.0 ads.pantip.com
 0.0.0.0 adservice.google.co.jp
 0.0.0.0 adservice.google.co.th
 0.0.0.0 adservice.google.co.uk
 0.0.0.0 adservice.google.com
 0.0.0.0 api.cxense.com
+0.0.0.0 api.freebasics.com
+0.0.0.0 api.internet.org
 0.0.0.0 api.userstyles.org
 0.0.0.0 as.innity.com
 0.0.0.0 as.innity.net
 0.0.0.0 avd.innity.com
 0.0.0.0 avd.innity.net
+0.0.0.0 b-api.facebook.com
+0.0.0.0 b-graph.facebook.com
+0.0.0.0 b-www.facebook.com
 0.0.0.0 bam.nr-data.net
 0.0.0.0 byteark-analytics.thairath.co.th
 0.0.0.0 cdn-gl.imrworldwide.com
@@ -271,10 +276,12 @@
 0.0.0.0 free.facebook.com
 0.0.0.0 ftp.silkspan.com
 0.0.0.0 g.doubleclick.net
-0.0.0.0 go.nordvpn.com
 0.0.0.0 go1.aniview.com
 0.0.0.0 go2.aniview.com
 0.0.0.0 go3.aniview.com
+0.0.0.0 go.nordvpn.com
+0.0.0.0 graph.freebasics.org
+0.0.0.0 graph.internet.org
 0.0.0.0 h.beta.facebook.com
 0.0.0.0 h.facebook.com
 0.0.0.0 ho.lazada.co.th
@@ -302,15 +309,15 @@
 0.0.0.0 js.rfp.fout.jp
 0.0.0.0 l.facebook.com
 0.0.0.0 lm.facebook.com
-0.0.0.0 lvs.truehits.in.th
 0.0.0.0 lvs2.truehits.in.th
 0.0.0.0 lvs3.truehits.in.th
+0.0.0.0 lvs.truehits.in.th
 0.0.0.0 mathid.mathtag.com
 0.0.0.0 media.innity.com
 0.0.0.0 media.innity.net
+0.0.0.0 mobile-collector.newrelic.com
 0.0.0.0 mobile.beta.facebook.com
 0.0.0.0 mobile.facebook.com
-0.0.0.0 mobile-collector.newrelic.com
 0.0.0.0 n.ads1-adnow.com
 0.0.0.0 n.ads2-adnow.com
 0.0.0.0 n.ads3-adnow.com
@@ -401,6 +408,7 @@
 0.0.0.0 wikia-d.openx.net
 0.0.0.0 wmdstat.dev-sanook.com
 0.0.0.0 ws-adv.ais.co.th
+0.0.0.0 www2.silkspan.com
 0.0.0.0 www.adsoptimal.com
 0.0.0.0 www.cpsee.com
 0.0.0.0 www.silkspan.com
@@ -408,7 +416,6 @@
 0.0.0.0 www.traffic-sharing.com
 0.0.0.0 www.ublock.org
 0.0.0.0 www.yengo.com
-0.0.0.0 www2.silkspan.com
 
 # Adware Sublevel
 0.0.0.0 antivirus.baidu.com
