@@ -87,6 +87,7 @@
 0.0.0.0 ublock.org
 0.0.0.0 vidible.tv
 0.0.0.0 visualwebsiteoptimizer.com
+0.0.0.0 waust.at
 0.0.0.0 yengo.com
 
 # Adware Root (Same as Generic Root)
@@ -130,7 +131,6 @@
 0.0.0.0 rb-rr.com
 0.0.0.0 rb-sk.com
 0.0.0.0 rb-sk.org
-0.0.0.0 rbbuy-se.com
 0.0.0.0 rbbuy-se.com
 0.0.0.0 rbbuy-sk.com
 0.0.0.0 rbcet.com
@@ -177,7 +177,6 @@
 0.0.0.0 www.rb-rr.com
 0.0.0.0 www.rb-sk.com
 0.0.0.0 www.rb-sk.org
-0.0.0.0 www.rbbuy-se.com
 0.0.0.0 www.rbbuy-se.com
 0.0.0.0 www.rbbuy-sk.com
 0.0.0.0 www.rbcet.com
