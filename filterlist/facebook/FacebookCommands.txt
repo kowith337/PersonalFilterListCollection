@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Bullshit Commands List
-! Version: 201809262121
+! Version: 201809292101
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -163,8 +163,6 @@
 ! facebook.com##^script:has-text(XPubcontentTopicChainingController)
 ! facebook.com##^script:has-text(XPymkFunnelLoggingController)
 ! facebook.com##^script:has-text(XQuickPromotionSimpleLoggingController)
-! facebook.com##^script:has-text(XQuickPromotionSimpleLoggingController)
-! facebook.com##^script:has-text(XRefererFrameController)
 ! facebook.com##^script:has-text(XRefererFrameController)
 ! facebook.com##^script:has-text(XRelatedGamesChainingController)
 ! facebook.com##^script:has-text(XSearchFacebarSurveyController)
@@ -174,12 +172,10 @@
 ! facebook.com##^script:has-text(XVideoQualitySurveyController)
 ! facebook.com##^script:has-text(XVideoWNSSurveyController)
 ! facebook.com##^script:has-text(XVideoWnsUpNextAsyncController)
-! facebook.com##^script:has-text(XVideoWnsUpNextAsyncController)
 ! facebook.com##^script:has-text(adBreakIndicatorShowing)
 ! facebook.com##^script:has-text(ads-lib-formatters)
 ! facebook.com##^script:has-text(ads-lib-urllib)
 ! facebook.com##^script:has-text(getAdBreakTabState)
-! facebook.com##^script:has-text(getAdBreakTabStateFromDisabledReasons)
 ! facebook.com##^script:has-text(getAdBreakTabStateFromDisabledReasons)
 ! facebook.com##^script:has-text(getEventTarget)
 ! facebook.com##^script:has-text(getMaxPossibleAdBreaks)
@@ -341,8 +337,6 @@
 ||facebook.com/*?modules=XPubcontentTopicChainingController$important
 ||facebook.com/*?modules=XPymkFunnelLoggingController$important
 ||facebook.com/*?modules=XQuickPromotionSimpleLoggingController$important
-||facebook.com/*?modules=XQuickPromotionSimpleLoggingController$important
-||facebook.com/*?modules=XRefererFrameController$important
 ||facebook.com/*?modules=XRefererFrameController$important
 ||facebook.com/*?modules=XRelatedGamesChainingController$important
 ||facebook.com/*?modules=XSearchFacebarSurveyController$important
@@ -351,7 +345,6 @@
 ||facebook.com/*?modules=XSpokespersonProductChainingController$important
 ||facebook.com/*?modules=XVideoQualitySurveyController$important
 ||facebook.com/*?modules=XVideoWNSSurveyController$important
-||facebook.com/*?modules=XVideoWnsUpNextAsyncController$important
 ||facebook.com/*?modules=XVideoWnsUpNextAsyncController$important
 ||facebook.com/*?modules=ads-lib-formatters$important
 ||facebook.com/*?modules=ads-lib-urllib$important

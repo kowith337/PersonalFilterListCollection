@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201809281317
+! Version: 201809292106
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -83,6 +83,7 @@
 ||facebook.com/suggestions$important
 ||facebook.com/tr?$important
 ||facebook.com/typeahead/search/facebar/nullstate/?$important
+||facebook.com/ufi/reaction/?*is_sponsored=1$important
 ||facebook.com/video/autoplay$important
 ||facebook.com/video/instream_video/rapid_feedback$important
 ||facebook.com/video/quality_survey$important
@@ -256,6 +257,7 @@ m.facebook.com,touch.facebook.com###viewport #root[role="main"] div > a[href*="i
 m.facebook.com,touch.facebook.com###viewport #root[role="main"] div > a[href*="o.facebook.com"]
 m.facebook.com,touch.facebook.com###viewport #root[role="main"] div > a[href*="zero.facebook.com"]
 m.facebook.com,touch.facebook.com###viewport #root[role="main"] div > a[href^="/lite/?"]
+m.facebook.com,touch.facebook.com##.appCenterSimilarApps
 m.facebook.com,touch.facebook.com##.story_body_container header > div a[href*="package=com.facebook.lite"]
 m.facebook.com,touch.facebook.com##article._mFeedEgoSuggestionsBoatload__list
 m.facebook.com,touch.facebook.com##article[data-ft*="mhpp_ego_service_type"]
@@ -269,6 +271,7 @@ m.facebook.com,touch.facebook.com##div[data-store*="mobile_page_contextual_recom
 facebook.com###ads_preferences_desktop_root div[tabindex][role="button"] button[data-hover][data-tooltip-content="Add"]:has(span:has-text(Add))
 facebook.com###contentArea div:if-not(.clearfix):has(a[href*="/login/?"])
 facebook.com###events_dashboard_activity_feed div[role="article"]:has(.fbEventsSuggestionItem)
+facebook.com###games_hub_root_content div > span div:has(a[href*="/gyml-similar/?"])
 facebook.com###fbSearchResultsBox:has(form.friendBrowserForm div:has(li a[href*="?fref=pymk"]))
 facebook.com###globalContainer .uiLayer[data-testid="undefined"] .uiContextualLayer div ul[role="menu"] li:has(a span div:has-text(/^Undo hiding ads/))
 facebook.com###groupsNewMembersLink div:has(li[id^="suggested_member_"])
