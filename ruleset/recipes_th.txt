@@ -2,8 +2,8 @@
 ! Title: Rulesets for Thai sites (alpha test)
 ! Maintainer: kowith337
 !
-! Version: 201807160011
-! VersionNo: 0.14
+! Version: 201810021454
+! VersionNumber: 0.15
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
 ! 
@@ -45,17 +45,17 @@ MCOT Radio - Active Radio
 		referrer-spoof: _ false
 		_ cdn.mcot.net script
 		_ cdn.mcot.net xhr
-		_ mcotn-api.simplico.net xhr
-		_ ssl.p.jwcdn.net script
+		_ mcotn-api.mcot.net xhr
+		_ ssl.p.jwpcdn.net script
 
 MCOT Radio - Mellow
 	mellow975.mcot.net *
+		! Mellow use FancyBox from jQuery, so I will not add for exception, judging it may show overlay annoyance, I don't know.
 		referrer-spoof: _ false
 		_ cdn.mcot.net script
 		_ cdn.mcot.net xhr
-		_ mcotn-api.simplico.net xhr
-		_ ssl.p.jwcdn.net script
-		! Mellow use FancyBox from jQuery, so I will not add for exception, judging it may show overlay annoyance, I don't know.
+		_ mcotn-api.mcot.net xhr
+		_ ssl.p.jwpcdn.net script
 
 MCOT Radio - MET
 	met107.fm *
@@ -63,32 +63,32 @@ MCOT Radio - MET
 		_ cdn.mcot.net script
 		_ cdn.mcot.net xhr
 		_ maxcdn.bootstrapcdn.com script
-		_ mcotn-api.simplico.net xhr
-		_ ssl.p.jwcdn.net script
+		_ mcotn-api.mcot.net xhr
+		_ ssl.p.jwpcdn.net script
 
 MCOT Radio - News Network
 	news1005.fm *
 		referrer-spoof: _ false
 		_ cdn.mcot.net script
 		_ cdn.mcot.net xhr
-		_ mcotn-api.simplico.net xhr
-		_ ssl.p.jwcdn.net script
+		_ mcotn-api.mcot.net xhr
+		_ ssl.p.jwpcdn.net script
 
 MCOT Radio - Thinking Radio
 	thinkingradio.net *
 		referrer-spoof: _ false
 		_ cdn.mcot.net script
 		_ cdn.mcot.net xhr
-		_ mcotn-api.simplico.net xhr
-		_ ssl.p.jwcdn.net script
+		_ mcotn-api.mcot.net xhr
+		_ ssl.p.jwpcdn.net script
 
 MCOT Radio - Luktung Mahanakorn
 	ltmfm95.mcot.net *
 		referrer-spoof: _ false
 		_ cdn.mcot.net script
 		_ cdn.mcot.net xhr
-		_ mcotn-api.simplico.net xhr
-		_ ssl.p.jwcdn.net script
+		_ mcotn-api.mcot.net xhr
+		_ ssl.p.jwpcdn.net script
 
 Sanook! (Tencent)
 	sanook.com *
