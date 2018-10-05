@@ -1,9 +1,10 @@
 # Suggestions + Zuck = **ZUCKESTIONS!**
+> It's not a typo, but it's intent!
 
 ## A (probably all) self-made Facebook filters
 
 | List Name | Subscribe via ABP link | Copy raw location |
-| - | - | - |
+| ----- | ----- | ----- |
 | Facebook Zuckestion Killer | [:scroll:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Ffacebook%2FFacebookZuckestionKiller.txt&amp;title=Facebook%20Zuckestions%20Killer) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/facebook/FacebookZuckestionKiller.txt) |
 | Module connections list (Add-ons) | [:scroll:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Ffacebook%2FFacebookCommands.txt&amp;title=Facebook%20modules%20command%20list) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/facebook/FacebookCommands.txt) |
 
@@ -22,4 +23,4 @@
     - For example, if you trying to open `mbasic.facebook.com` for access the minimal version of Facebook mobile site (aka. Feature phone mode), you will get redirect to `h.facebook.com` **without HTTPS connections**, then redirect you back to `mobile.facebook.com` and may force to use the cripped smart phone layout like visiting `m.facebook.com` or `touch.facebook.com`.
 	  > depend on what your browser's user agent that you are...
 
-Please note, due to I have no tolerance against `Free Basics` (aka. `internet.org`) services, somehow you're still got prevented to use Facebook on mobile browser or over mobile data as properly way like regular networks (e.g. home network, workplace or Wi-Fi), I will wrote the guide to setting up for bypassing against related connections to `Free Basics` services later...
+Please note, due to I have no tolerance against `Free Basics` (aka. `internet.org`) services, somehow you're still got prevented to use Facebook on mobile browser or over mobile data as properly way like regular networks (e.g. home network, workplace or Wi-Fi), Here's [a guide that I wrote](https://github.com/kowith337/PersonalFilterListCollection/blob/master/docs/Facebook0-Bypassing.md) to setting up for bypassing against related connections to `Free Basics` services!

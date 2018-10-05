@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201809292106
+! Version: 201810052003
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -43,24 +43,27 @@
 ||facebook.com/ajax/haste-response/?modules=VideoAutoplayController$important
 ||facebook.com/ajax/pagelet/generic.php/WebEgoPane$important
 ||facebook.com/ajax/photos/logging$important
-||facebook.com/ajax/react_composer/survey?
+||facebook.com/ajax/react_composer/survey?$important
 ||facebook.com/ajax/typeahead/record_basic_metrics.php$important
 ||facebook.com/async/social_good/$xmlhttprequest
 ||facebook.com/audience_network/$important
 ||facebook.com/common/referer_frame.php$inline-script
+||facebook.com/common/referer_frame.php$subdocument
 ||facebook.com/ego/$important,~xmlhttprequest
-||facebook.com/ego/
+||facebook.com/ego/$xmlhttprequest
 ||facebook.com/ego/feed$important,~xmlhttprequest
-||facebook.com/ego/feed
+||facebook.com/ego/feed$xmlhttprequest
+||facebook.com/ego/feed/$important,~xmlhttprequest
+||facebook.com/ego/feed/$xmlhttprequest
 ||facebook.com/feed/pivot/$xmlhttprequest
 ||facebook.com/feed/pivot/chaining$important
 ||facebook.com/feed/pivot/related_articles$important
 ||facebook.com/friends/center/suggestions$important,~document,~xmlhttprequest
-||facebook.com/friends/center/suggestions$~document
+||facebook.com/friends/center/suggestions$xmlhttprequest
 ||facebook.com/groups/*suggested*$important,~xmlhttprequest
-||facebook.com/groups/*suggested*
+||facebook.com/groups/*suggested*$xmlhttprequest
 ||facebook.com/groups/membersuggestion$important,~xmlhttprequest
-||facebook.com/groups/membersuggestion
+||facebook.com/groups/membersuggestion$xmlhttprequest
 ||facebook.com/impression.php$important
 ||facebook.com/network_ads_common$important
 ||facebook.com/pages/launchpoint/discover/$document
@@ -73,7 +76,8 @@
 ||facebook.com/pubcontent/local_news_chaining$important
 ||facebook.com/pubcontent/related_share$important
 ||facebook.com/pubcontent/related_video$important
-||facebook.com/pubcontent/suggestions$important
+||facebook.com/pubcontent/suggestions$important,~xmlhttprequest
+||facebook.com/pubcontent/suggestions$xmlhttprequest
 ||facebook.com/pymk/funnel_logging$important
 ||facebook.com/qp/action/redirect$important
 ||facebook.com/related-application/?$important
@@ -98,30 +102,32 @@
 ! Unbreak some functional, e.g. If you want to manage advert prefs, you need to allow some requests to let Facebook retrieve
 ! information about advert prefs, and let you properly manage them without getting error or auto refresh due to cannot sent xhr
 ! to perform delete preference out of your account.
-@@||facebook.com/ads/advertiser_guidance/server_msg/$xmlhttprequest,first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
-@@||facebook.com/ads/can_change_business_country_reason/?$first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
-@@||facebook.com/ads/can_change_currency_timezone_reason/?$first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
-@@||facebook.com/ads/manage/$first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
-@@||facebook.com/ads/manager/$first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
-@@||facebook.com/ads/preferences/*/?__m_async_page__$xmlhttprequest,first-party
-@@||facebook.com/ads/preferences/ad_report/$xmlhttprequest,first-party
+@@||facebook.com/ads/advertiser_guidance/server_msg/$first-party,xmlhttprequest
+@@||facebook.com/ads/can_change_business_country_reason/?$first-party
+@@||facebook.com/ads/can_change_currency_timezone_reason/?$first-party
+@@||facebook.com/ads/manage/$first-party
+@@||facebook.com/ads/manager/$first-party
+@@||facebook.com/ads/preferences/*/?__m_async_page__$first-party,xmlhttprequest
+@@||facebook.com/ads/preferences/ad_report/$first-party,xmlhttprequest
 @@||facebook.com/ads/preferences/advertiser_hideall$first-party
 @@||facebook.com/ads/preferences/edit_interests/?*action=del$first-party
-@@||facebook.com/ads/preferences/edit_sensitive_topics$xmlhttprequest
-@@||facebook.com/ads/preferences/report$xmlhttprequest,first-party
-@@||facebook.com/ads/preferences?__m_async_page__$xmlhttprequest,first-party
-@@||facebook.com/ads/profile/advertisers$xmlhttprequest,first-party
-@@||facebook.com/ads/profile/interests$xmlhttprequest,first-party
-@@||facebook.com/ads/tax_id_collection_config/?$first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
-@@||facebook.com/ads/viewer_permissions/?$first-party,~domain=h.facebook.com|mobile.facebook.com|web.facebook.com
-@@||facebook.com/ajax/groups/mall/mall_post_menu.php$xmlhttprequest,first-party
-@@||facebook.com/ajax/settings/account/advertising_email.php?$xmlhttprequest
-@@||facebook.com/feed/options_menu$xmlhttprequest,first-party
-@@||facebook.com/friends/center/suggestions/?ppk$xmlhttprequest,first-party
-@@||facebook.com/groups/membersuggestion/xout/$xmlhttprequest,first-party
-@@||facebook.com/groups/xout_suggested_group_followup/?$xmlhttprequest,first-party
-@@||facebook.com/settings/advertising_email/$xmlhttprequest,first-party
-@@||facebook.com/share/dialog/submit/$xmlhttprequest,first-party
+@@||facebook.com/ads/preferences/edit_sensitive_topics$first-party,xmlhttprequest
+@@||facebook.com/ads/preferences/report$first-party,xmlhttprequest
+@@||facebook.com/ads/preferences?__m_async_page__$first-party,xmlhttprequest
+@@||facebook.com/ads/profile/advertisers$first-party,xmlhttprequest
+@@||facebook.com/ads/profile/interests$first-party,xmlhttprequest
+@@||facebook.com/ads/tax_id_collection_config/?$first-party
+@@||facebook.com/ads/viewer_permissions/?$first-party
+@@||facebook.com/ajax/groups/mall/mall_post_menu.php$first-party,xmlhttprequest
+@@||facebook.com/ajax/settings/account/advertising_email.php?$first-party,xmlhttprequest
+@@||facebook.com/ego/feed/logging/xout/?$first-party,xmlhttprequest
+@@||facebook.com/feed/options_menu$first-party,xmlhttprequest
+@@||facebook.com/friends/center/suggestions/?ppk$first-party,xmlhttprequest
+@@||facebook.com/groups/membersuggestion/xout/$first-party,xmlhttprequest
+@@||facebook.com/groups/xout_suggested_group_followup/?$first-party,xmlhttprequest
+@@||facebook.com/pubcontent/suggestions/interaction_logging/?dpr=1$first-party,xmlhttprequest
+@@||facebook.com/settings/advertising_email/$first-party,xmlhttprequest
+@@||facebook.com/share/dialog/submit/$first-party,xmlhttprequest
 
 ! [Counter] Prevent accidentally (re-)add advert prefs while you're deleting them.
 ! Check your advert prefs here [FB Login needed] > https://www.facebook.com/ads/preferences/edit
@@ -436,15 +442,6 @@ m.facebook.com,touch.facebook.com##section article .story_body_container header 
 ! var divs = document.querySelectorAll('a[data-sigil*="xout"] i.touched_hide'); for (i = 0; i < divs.length; ++i) {divs[i].click();};
 
 ! Rewrite network requests blocking/whitelisting
-||facebook.com/ego/
-||facebook.com/ego/feed/
-||facebook.com/friends/center/suggestions
-||facebook.com/groups/*suggested*
-||facebook.com/groups/membersuggestion
-@@||facebook.com/ego/feed/logging/xout/?$xmlhttprequest,first-party,domain=~0.facebook.com|~free.facebook.com|~mobile.facebook.com|~web.facebook.com
-@@||facebook.com/friends/center/suggestions/?ppk$xmlhttprequest,first-party,domain=~0.facebook.com|~free.facebook.com|~mobile.facebook.com|~web.facebook.com
-@@||facebook.com/groups/membersuggestion/xout/$xmlhttprequest,first-party,domain=~0.facebook.com|~free.facebook.com|~mobile.facebook.com|~web.facebook.com
-@@||facebook.com/groups/xout_suggested_group_followup/?$xmlhttprequest,first-party,domain=~0.facebook.com|~free.facebook.com|~mobile.facebook.com|~web.facebook.com
 
 ! Hide zuckestions items pane to enforce Facebook fill up their zuckestions, but in fact you see none of any zuckestions at all!
 m.facebook.com,touch.facebook.com###friends_center_main div[data-pymk-id]
@@ -455,6 +452,5 @@ m.facebook.com,touch.facebook.com##.async_fan:has(div div a.darkTouch[href*="pag
 ! Test Cookie Messing
 facebook.com##script:inject(cookie-remover.js, noscript)
 facebook.com##script:inject(cookie-remover.js, x-referer)
-facebook.com##script:inject(nanop-easy-set-cookie.js, m_pixel_ratio=0)
 facebook.com##script:inject(nanop-easy-set-cookie.js, noscript=0)
 !endif
