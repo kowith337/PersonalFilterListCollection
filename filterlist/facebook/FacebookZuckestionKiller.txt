@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201810071504
+! Version: 201810071953
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -276,6 +276,9 @@ m.facebook.com,touch.facebook.com###viewport #root[role="main"] div > a[href*="i
 m.facebook.com,touch.facebook.com###viewport #root[role="main"] div > a[href*="o.facebook.com"]
 m.facebook.com,touch.facebook.com###viewport #root[role="main"] div > a[href*="zero.facebook.com"]
 m.facebook.com,touch.facebook.com###viewport #root[role="main"] div > a[href^="/lite/?"]
+m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=212609529249058"]
+m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=234383826903707"]
+m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=470739743275782"]
 m.facebook.com,touch.facebook.com##.appCenterSimilarApps
 m.facebook.com,touch.facebook.com##.story_body_container header > div a[href*="package=com.facebook.lite"]
 m.facebook.com,touch.facebook.com##article._mFeedEgoSuggestionsBoatload__list
@@ -386,6 +389,9 @@ m.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_contai
 m.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div[data-store*="share_id"] .story_body_container div div:has(.scrollArea:has(a[href^="/commerce/products/"]))
 m.facebook.com,touch.facebook.com###MNewsFeed section article:has(.scrollArea:has(a#pyml_infinite_scroll_loading))
 m.facebook.com,touch.facebook.com###events_dashboard_activity_feed section article:has(.scrollArea:has(.fbEventsEgoScroller))
+m.facebook.com,touch.facebook.com###group-discover-lading-column div:has(div[id^="group-discover-card-"] a[href^="/groups/?"][href*="discover_category_id=212609529249058"])
+m.facebook.com,touch.facebook.com###group-discover-lading-column div:has(div[id^="group-discover-card-"] a[href^="/groups/?"][href*="discover_category_id=234383826903707"])
+m.facebook.com,touch.facebook.com###group-discover-lading-column div:has(div[id^="group-discover-card-"] a[href^="/groups/?"][href*="discover_category_id=470739743275782"])
 m.facebook.com,touch.facebook.com###mEventsDashboard div > div[data-store-id] > div[data-store-id]:has(div[data-nt^="NT:BOX"]):has(.scrollArea)
 m.facebook.com,touch.facebook.com###mJewelRequestsFlyoutBody div div:has(div[class] div[class]:has(div[data-pymk-id]))
 m.facebook.com,touch.facebook.com###m_group_stories_container section article:has(.scrollArea .scrollAreaColumn[data-sigil="m-groups-pymi-item"])
@@ -404,13 +410,13 @@ m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a span:has-t
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/ads/create/"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/friends/center/suggestions/"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=124024574287414"]))
+m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=1728807357362356"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=275254692598279"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=343553122467255"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=399711043500146"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=456900714360021"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=526732794016279"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=762992637108088"]))
-m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=1728807357362356"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="instagram.com"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="/lite/?loc_ref=menu"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="/marketplace/?ref=bookmarks"] div span[data-sigil="marketplace_bookmark"]))
