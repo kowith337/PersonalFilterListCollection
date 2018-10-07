@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201810052003
+! Version: 201810071409
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -55,6 +55,7 @@
 ||facebook.com/ego/feed$xmlhttprequest
 ||facebook.com/ego/feed/$important,~xmlhttprequest
 ||facebook.com/ego/feed/$xmlhttprequest
+||facebook.com/feed/pivot/$important,~xmlhttprequest
 ||facebook.com/feed/pivot/$xmlhttprequest
 ||facebook.com/feed/pivot/chaining$important
 ||facebook.com/feed/pivot/related_articles$important
@@ -69,6 +70,7 @@
 ||facebook.com/pages/launchpoint/discover/$document
 ||facebook.com/pages/qe/$important
 ||facebook.com/plugins/likebox.php$important
+||facebook.com/pubcontent/$important,~xmlhttprequest
 ||facebook.com/pubcontent/$xmlhttprequest
 ||facebook.com/pubcontent/comment_chaining$important
 ||facebook.com/pubcontent/feed_chaining$important
@@ -184,8 +186,6 @@
 ! Experimental for Facebook security pixels, this may break their functionality and security check.
 ||facebook.com/common/referer_frame.php$subdocument,important,redirect=noopframe
 ||facebook.com/feed/badge/$xmlhttprequest,important,redirect=nooptext
-||facebook.com/feed/pivot/$xmlhttprequest,important,redirect=nooptext
-||facebook.com/pubcontent/$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/related-application/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
 ||facebook.com/sem_pixel/1/control/0/$subdocument,important,redirect=noopframe
