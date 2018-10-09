@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201810071953
+! Version: 201810092020
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -109,6 +109,7 @@
 @@||facebook.com/ads/can_change_currency_timezone_reason/?$first-party
 @@||facebook.com/ads/manage/$first-party
 @@||facebook.com/ads/manager/$first-party
+@@||facebook.com/ads/preferences/*/*&__m_async_page__$first-party,xmlhttprequest
 @@||facebook.com/ads/preferences/*/?__m_async_page__$first-party,xmlhttprequest
 @@||facebook.com/ads/preferences/ad_report/$first-party,xmlhttprequest
 @@||facebook.com/ads/preferences/advertiser_hideall$first-party
@@ -186,6 +187,7 @@
 ! Experimental for Facebook security pixels, this may break their functionality and security check.
 ||facebook.com/ads/boosted_components/fetch_ad_account_data/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/ads/coupon/read/offer_data/?$xmlhttprequest,important,redirect=nooptext
+||facebook.com/ads/preferences/mobile_log/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/common/referer_frame.php$subdocument,important,redirect=noopframe
 ||facebook.com/feed/badge/$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/related-application/?$xmlhttprequest,important,redirect=nooptext
@@ -198,13 +200,13 @@
 ||facebook.com/xti.php$image,important,redirect=1x1-transparent.gif
 ||facebook.com/xti.php$subdocument,important,redirect=noopframe
 ||facebook.net/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
+||fbcdn.net/hads-ak-*/*.png$image,important,redirect=2x2-transparent.png
 ||fbcdn.net/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
 ||fbsbx.com/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
 ||messenger.com/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
 
 ! DOM Hiding - Level 1: Known DOM id and class, some wildcard of element name
 facebook.com###GroupDiscoverCard_Local
-facebook.com###GroupDiscoverCard_local
 facebook.com###GroupDiscoverCard_more_suggestions
 facebook.com###GroupDiscoverCard_top_suggestions
 facebook.com###GroupsRHCSuggestionSection
@@ -214,6 +216,8 @@ facebook.com###feed_optimistic_video
 facebook.com###friend_invites_section
 facebook.com###home_sponsor_nile
 facebook.com###mobile_login_bar
+facebook.com###pageInviteNoticeCard
+facebook.com###page_recommendations #recommendations_create_entrypoint_container
 facebook.com###page_suggestions_on_liking
 facebook.com###pagelet_ads_when_no_friend_list_suggestion
 facebook.com###pagelet_advertiser_panel
@@ -266,6 +270,7 @@ m.facebook.com,mbasic.facebook.com###m_newsfeed_stream div > div[data-ft*="saved
 m.facebook.com,mbasic.facebook.com###root table > div table > a[href*="freebasics.com"]
 m.facebook.com,mbasic.facebook.com##div[id^="u_0_"][data-ft*="ego_id"]
 m.facebook.com,mbasic.facebook.com##root div[data-ft][data-xt*="sponsored"]
+m.facebook.com,touch.facebook.com###header #MBackNavBar
 m.facebook.com,touch.facebook.com###root .scrollArea[data-sigil*="friends-center-nav"] a[data-ajaxify-href*="/friends/center/suggestions/"]
 m.facebook.com,touch.facebook.com###root div > div[data-store*="actor_id"] div[data-sigil^="m-promo"]
 m.facebook.com,touch.facebook.com###root[data-sigil*="context-layer-root"] article div a[href*="/ads/preferences/interest_suggestions/"]
@@ -404,6 +409,8 @@ m.facebook.com,touch.facebook.com###page #root div > div[data-store-id] > div[id
 m.facebook.com,touch.facebook.com###page #root header > div > div > div:has(a[href^="/pages/launchpoint/discover/"])
 m.facebook.com,touch.facebook.com###page article[data-sigil="pma-upsell"]:has(a[href*="com.facebook.pages.app"])
 m.facebook.com,touch.facebook.com###page div[id^="unit_id_"]:has(.scrollArea:has(.scrollAreaColumn div[data-autoid]))
+m.facebook.com,touch.facebook.com###pages_msite_body_contents div[data-store-id] > div[data-store-id] > div[data-nt] > div[data-nt]:has(.scrollArea):has(.scrollAreaBody[data-ad-preview])
+m.facebook.com,touch.facebook.com###pages_msite_body_contents div[data-store-id] div[style] div[style^=flex-grow] div:has(button[type="submit"][data-nt*="CHILD"])
 m.facebook.com,touch.facebook.com###root div > div[data-sigil^="m_login_upsell"]:has(.grouped a[href*="facebook.com/click.php?redir_url"])
 m.facebook.com,touch.facebook.com###root div a.sub[href*="?sk=h_nor"]
 m.facebook.com,touch.facebook.com###timelineProfileTiles div > div[data-autoid]:has(a[href*="?v=fun_facts&"])
@@ -411,13 +418,13 @@ m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a span:has-t
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/ads/create/"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/friends/center/suggestions/"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=124024574287414"]))
-m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=1728807357362356"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=275254692598279"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=343553122467255"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=399711043500146"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=456900714360021"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=526732794016279"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=762992637108088"]))
+m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=1728807357362356"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="instagram.com"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="/lite/?loc_ref=menu"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="/marketplace/?ref=bookmarks"] div span[data-sigil="marketplace_bookmark"]))
@@ -452,6 +459,7 @@ m.facebook.com,mbasic.facebook.com###viewport div:not([id]) > table[role]:has(td
 
 ! CSS Modification
 ! This may modify some element instead of hiding
+! m.facebook.com,touch.facebook.com###header #MBackNavBar:style(margin-top: 95% !important)
 m.facebook.com,touch.facebook.com##article #advertiserhidden div[data-sigil="ad-prefs-advertiser-section"] .scrollArea .scrollAreaBody a[data-sigil="ad-prefs-advertiser-preview-link"]:style(pointer-events: none !important)
 m.facebook.com,touch.facebook.com##article div > div[data-autoid] a[data-sigil="redirect_to_advertiser"]:style(color: red !important; text-decoration: none !important; pointer-events: none !important)
 m.facebook.com,touch.facebook.com##article div > div[data-autoid] a[href^="/ads/interest/?"]:style(color: red !important; text-decoration: none !important; pointer-events: none !important)
