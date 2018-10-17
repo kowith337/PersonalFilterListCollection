@@ -23,7 +23,7 @@ And worst things happen if you're trying to access Facebook on the mobile browse
 
 1. It's redirect to `h.facebook.com` on the **normal HTTP protocol**
 2. And then passing to `mobile.facebook.com`, *at least it's back to HTTPS for now.*
-3. It's depend on your browser's user agent, if your mobile browser are modern enought, you will probably trapped and lock down to force use only touchscreen version of Facebook mobile web.
+3. It's depend on your browser's user agent, if your mobile browser are modern enough, you will probably trapped and lock down to force use only touchscreen version of Facebook mobile web.
 4. From the 1., since the connection that made to `h.facebook.com` isn't encrypted, it's an easier way to let the advertisers, local government, military or law enforcement to spy on your data, even it's just a few some readable data. (HECK YEAH!)
 5. From the 1. (Take 2), imaging if some hackers hijack the mobile network and make a replacement of `h.facebook.com` to steal your sensitive data instead (e.g. cookies, login session, unencrypted username, e-mail address, passwords, etc.), then pray for yourself and your account! (finger crossed!!)
 
