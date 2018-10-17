@@ -2,7 +2,7 @@
 ! Title: Facebook Modules Commands List
 ! Version: 201810061737
 ! Author: kowith337
-! Homepage: https://github.com/kowith337/PersonalFilterListCollection
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
 
 ! Note: This filter isn't recommended to use publicly, it might broke entire Facebook functions because

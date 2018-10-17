@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201810140014
+! Version: 201810180120
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -217,6 +217,14 @@ facebook.com###fbpage_invite_audience_action_finch
 facebook.com###feed_optimistic_video
 facebook.com###friend_invites_section
 facebook.com###home_sponsor_nile
+facebook.com###left_nav_section_nodes ul li[id="navItem_124024574287414"]
+facebook.com###left_nav_section_nodes ul li[id="navItem_275254692598279"]
+facebook.com###left_nav_section_nodes ul li[id="navItem_343553122467255"]
+facebook.com###left_nav_section_nodes ul li[id="navItem_399711043500146"]
+facebook.com###left_nav_section_nodes ul li[id="navItem_456900714360021"]
+facebook.com###left_nav_section_nodes ul li[id="navItem_526732794016279"]
+facebook.com###left_nav_section_nodes ul li[id="navItem_762992637108088"]
+facebook.com###left_nav_section_nodes ul li[id="navItem_1728807357362356"]
 facebook.com###mobile_login_bar
 facebook.com###pageInviteNoticeCard
 facebook.com###page_recommendations #recommendations_create_entrypoint_container
@@ -241,6 +249,7 @@ facebook.com##.fbEmuLink
 facebook.com##.fbEmuTracking
 facebook.com##.fbPhotoAdsCol
 facebook.com##.fbTimelineSideAds
+facebook.com##.fb_content[role=main] div > div[seealluri^="/gaming/?section_id"][seealluri*="view=streamer"]
 facebook.com##div[id^="GroupDiscoverCard"] li[id^="GroupDiscoverCard_"] div > a[id^="joinButton"]
 facebook.com##div[id^="GroupDiscoverCard_Local"]
 facebook.com##div[id^="GroupDiscoverCard_Recent"]
@@ -320,6 +329,7 @@ facebook.com##.jewelWithEgoUnits .uiScrollableAreaContent div:has(form.friendBro
 facebook.com##.loggedout_menubar div[data-testid="royal_login_form"] div:has(form[id="login_form"])
 facebook.com##.mtm div[id^="u_0_"] div[id^="u_0_"]:has(span button.PageLikeButton)
 facebook.com##.pagelet.groupSkyAux div:has(a[ajaxify*="/ajax/groups/create_get.php?"])
+facebook.com##.uiLayer:has(div[role="dialog"]:has(div[data-testid="instant-games-list"]))
 facebook.com##:xpath(//div//form[@rel="async"]//div[.//div/text()="Up next"])
 facebook.com##:xpath(//div[@id="pagelet_timeline_main_column"]//div[starts-with(@data-referrer,"id")]//div[starts-with(@id,"u_")]//div//div[.//span/text()="Featured for you"])
 facebook.com##:xpath(//div[@id="stream_pagelet"]//div[starts-with(@data-ownerid,"u_jsonp_")][//div//span/text()="Featured for you"])
@@ -337,8 +347,9 @@ facebook.com##div[id^="hyperfeed_story_id"] div[id^="u_fetchstream"]:has(div[rol
 facebook.com##div[id^="hyperfeed_story_id"]:has(.fbInternPreview)
 facebook.com##div[id^="hyperfeed_story_id"]:has(a[href*="/friends/requests/"])
 facebook.com##div[id^="hyperfeed_story_id"]:has(a[href*="[is_sponsored]=1"])
+facebook.com##div[id^="hyperfeed_story_id"]:has(a[href*="facebook.com/zuck"])
 facebook.com##div[id^="hyperfeed_story_id"]:has(a[href*="is_sponsored=1"])
-facebook.com##div[id^="hyperfeed_story_id"]:has(a[href="https://www.facebook.com/zuck"])
+facebook.com##div[id^="hyperfeed_story_id"]:has(div > a[href*="?ref=fbtips"])
 facebook.com##div[id^="hyperfeed_story_id"]:has(div[data-ft*="ego_id"]:has(a[href*="ref=group_top_stories_feed"]))
 facebook.com##div[id^="hyperfeed_story_id"]:has(div[data-ft*="ego_id"]:has(a[href*="ref=psym_feed"]))
 facebook.com##div[id^="hyperfeed_story_id"]:has(span a:has-text(/Sponsored/))
@@ -407,6 +418,7 @@ m.facebook.com,touch.facebook.com###m_group_stories_container section article:ha
 m.facebook.com,touch.facebook.com###m_group_stories_container section article:has(div[id^="scrollarea"] div[id*="Suggestion"])
 m.facebook.com,touch.facebook.com###m_group_stories_container section article:has(div[id^="scrollarea"] div[id^="GroupMallGYSJSuggestionCard"])
 m.facebook.com,touch.facebook.com###m_group_stories_container section article:has(div[id^="scrollarea"] div[id^="GroupMallPYMISuggestionCard"])
+m.facebook.com,touch.facebook.com###m_newsfeed_stream section article:has(a[href*="source=promotion_feed_story"])
 m.facebook.com,touch.facebook.com###msite-pages-header-contents div[style*="transparent none repeat scroll"]:has(#popup_xout)
 m.facebook.com,touch.facebook.com###page #root div > div[data-store-id] > div[id^="unit_id"]:has-text(/^Related/):has(.scrollArea)
 m.facebook.com,touch.facebook.com###page #root header > div > div > div:has(a[href^="/pages/launchpoint/discover/"])
