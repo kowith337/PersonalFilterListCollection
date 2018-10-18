@@ -1,0 +1,12 @@
+[uBlock Origin 1.16.7.2]
+! Title: iHateCircles :black_circle: :x:
+! Version: 201810182102
+! Author: kowith337
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css
+! Expires: 2 days
+
+! Note: Circles?, Material Design?, All of that is too mainstream! Just Bring Back All Squares!!
+
+facebook.com##*:after:style(border-radius: 0px !important)
+facebook.com##*:before:style(border-radius: 0px !important)
+facebook.com##*:style(border-radius: 0px !important)
