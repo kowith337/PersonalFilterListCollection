@@ -29,6 +29,7 @@ And worst things happen if you're trying to access Facebook on the mobile browse
 
 And not just it have problem that can see on web browser, even Facebook apps and their platform are also in somewhat problematic!
 - If you using their official productivity apps (such as Pages manager, Ads Manager, etc.) certains navigation will not done in each apps itself, instead, it will open your main app or default web browser if you didn't have main app installed.
+- Somehow about any videos that you've got on or share to someone or chat group in Facebook MESSenger, the video will prevent to play and prompt about using data cost, but unfortunately, you're still can't play any videos while using mobile data!
 - If you remember since the first introduce of "Instant Games" in MESSenger, many users who use mobile data are unable to play games unless connect to regular networks (Wi-Fi for example, exclude hotspot share.)
   > I knew that they've resolved this problem at later time, but for me, **I WILL NOT FORGET THIS!**
 - Even third party full game and apps that can integrate with your Facebook account, an API connections will be redirected to an another way, and cause the app sometime cannot retrieve any user informations from Facebook, or even cannot use apps. (As I remember, Disa messenger via App password, for example.)
@@ -67,7 +68,7 @@ You shouldn't expose that you're using on Android, and any phone OS either, also
 - Nagging banner or panel that trick you to download their official app(s)
 - Redirect to unwanted route, since you're using on mobile browser and mobile data, you will not allow to connect other subdomains than `m.facebook.com` or `mobile.facebook.com`, that try to forcing you to apply their `Free Basics` services.
 
-And so,don't point the user agent that you're using `Windows`, otherwise, you cannot even visit any mobile sites and it keep force you to enter `web.facebook.com`!
+And so, don't point the user agent that you're using `Windows`, otherwise, you cannot even visit any mobile sites and it keep force you to enter `web.facebook.com`!
 
 > Somehow, if your browser cannot change user agent but can request desktop sites, you will try turn that options on and then test on your hand.
 
