@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201810201658
+! Version: 201810222053
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -429,6 +429,7 @@ m.facebook.com,touch.facebook.com###page article[data-sigil="pma-upsell"]:has(a[
 m.facebook.com,touch.facebook.com###page div[id^="unit_id_"]:has(.scrollArea:has(.scrollAreaColumn div[data-autoid]))
 m.facebook.com,touch.facebook.com###pages_msite_body_contents div[data-store-id] > div[data-store-id] > div[data-nt] > div[data-nt]:has(.scrollArea):has(.scrollAreaBody[data-ad-preview])
 m.facebook.com,touch.facebook.com###pages_msite_body_contents div[data-store-id] div[style] div[style^=flex-grow] div:has(button[type="submit"][data-nt*="CHILD"])
+m.facebook.com,touch.facebook.com###pages_msite_body_contents div[data-store-id] div[data-store-id] > div[data-nt][data-ntid]:has(.scrollArea .scrollAreaBody[data-ad-preview])
 m.facebook.com,touch.facebook.com###root div > div[data-sigil^="m_login_upsell"]:has(.grouped a[href*="facebook.com/click.php?redir_url"])
 m.facebook.com,touch.facebook.com###root div a.sub[href*="?sk=h_nor"]
 m.facebook.com,touch.facebook.com###timelineProfileTiles div > div[data-autoid]:has(a[href*="?v=fun_facts&"])
@@ -490,14 +491,12 @@ m.facebook.com,touch.facebook.com##section article .story_body_container header 
 ! This work only for specific platform, to testing out!
 
 !#if env_mobile
-! This help for opt out zuckestions, you can convert scriptlets below as bookmarklet.
-! var divs = document.querySelectorAll('a[data-sigil*="xout"] i.touched_hide'); for (i = 0; i < divs.length; ++i) {divs[i].click();};
-
-! Rewrite network requests blocking/whitelisting
-
 ! Hide zuckestions items pane to enforce Facebook fill up their zuckestions, but in fact you see none of any zuckestions at all!
 m.facebook.com,touch.facebook.com###friends_center_main div[data-pymk-id]
 m.facebook.com,touch.facebook.com##.async_fan:has(div div a.darkTouch[href*="pages_nav_discover"])
+
+! Hide some page admin pane to invite, get tips, etc.
+m.facebook.com,touch.facebook.com###pages_msite_body_contents div > div[data-store*="logging_data"][data-sigil="reaction-unit-logging"]:has(div[data-nt][data-ntid] img[data-nt="NT:IMAGE"])
 !endif
 
 !#if env_firefox
@@ -506,3 +505,6 @@ facebook.com##script:inject(cookie-remover.js, noscript)
 facebook.com##script:inject(cookie-remover.js, x-referer)
 facebook.com##script:inject(nanop-easy-set-cookie.js, noscript=0)
 !endif
+
+! This help for opt out zuckestions, you can convert scriptlets below as bookmarklet.
+! var divs = document.querySelectorAll('a[data-sigil*="xout"] i.touched_hide'); for (i = 0; i < divs.length; ++i) {divs[i].click();};
