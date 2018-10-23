@@ -1,9 +1,9 @@
 [uBlock Origin 1.16.7.2]
 ! Title: GelboLube (Firefox Legacy)
-! Version: 201809272042
+! Version: 201810231121
 ! Author: kowith337
 ! Expires: 2 days
-! Homepage: https://github.com/kowith337/PersonalFilterListCollection
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/imageboard
 ! From: https://github.com/kowith337/GelboLube/raw/legacy/gelbolube.txt
 
 ! 1. It doesn't matter to have any checksum tools because uBo is now fully support filterlists that created on GitHub and
@@ -229,10 +229,14 @@ gelbooru.com##script:inject(abort-on-property-write.js, adsbyjuicy)
 
 ! 5. Experimental, to foil ILS function for Chromium / Firefox WebExt
 gelbooru.com##script:inject(abort-current-inline-script.js, AddZone, idzone)
+gelbooru.com##script:inject(abort-current-inline-script.js, ImplicityBreakingSite, debugging)
 gelbooru.com##script:inject(abort-current-inline-script.js, add, newTab)
 gelbooru.com##script:inject(abort-current-inline-script.js, domain_base, exosrv.com)
 gelbooru.com##script:inject(abort-current-inline-script.js, serve, script_url)
 gelbooru.com##script:inject(abort-current-inline-script.js, window.dataLayer, gtag)
+
+! 6. Inject constant value (Only a value that not match to specific string will be applied)
+gelbooru.com##+js(set-constant.js, ExoDetector, noopfunc)
 
 ! CSS Re-design / Mobile Improvement - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space
@@ -249,8 +253,9 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ! gelbooru.com###post-view #right-col div #image[src*="sample"]:style(width: 100% !important)
 
 ! Block then Redirect - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Experimental: Testing block intermission.php and redir to dummy frame
-! Blocked network rules for redirect is only affect for specific type of request only.
+! Experimental for replace a dummy script, frame, text, etc.
+! Redirect rules is only affect for specific type of request only.
+||gelbooru.com/index.php?page=autoDebug$xmlhttprequest,important,redirect=nooptext
 ||gelbooru.com/intermission.php$subdocument,important,redirect=noopframe
 
 ! Firefox + uBO Legacy Only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -269,6 +274,7 @@ gelbooru.com##script:contains(EXoDetector)
 gelbooru.com##script:contains(ExoDetector)
 gelbooru.com##script:contains(ExoLoader)
 gelbooru.com##script:contains(GoogleAnalyticsObject)
+gelbooru.com##script:contains(ImplicityBreakingSite)
 gelbooru.com##script:contains(_gaq.push)
 gelbooru.com##script:contains(ad_idzone)
 gelbooru.com##script:contains(adsbyjuicy)
