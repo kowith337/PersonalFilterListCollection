@@ -8,13 +8,14 @@
 
 # Anti Survived Tracking Link Warning
 I intentionally create this to prevent future problem that common extensions and user scripts created for unfold tracked URL and turn into the real destination.
+
 However, some big company won't play nice and currently produce new problematic that the creator of extensions and user scripts not yet fixed, include...
-- Facebook outbound tracking parameter, tracking parameter was survived after unfold. ([example issue](https://github.com/kowith337/PersonalFilterListCollection/issues/19))
+- Facebook outbound tracking parameter, some parameter was survived after unfold. ([example issue](https://github.com/kowith337/PersonalFilterListCollection/issues/19))
 - New layout of Google Images that broke any extensions and user script that trying to replace real URL instead of tracked link, navigating with keyboard doesn't help anymore!
 
-I let the uBlock0 or Nano block and prevent navigation to be happen, then give the same internal ability to expose real URL under blocked URLs but...
-
-Some URL that have multiple parameters is possibly to be messed and making you confuse and don't know what to do next, you may need to make a manual text selection (don't forget to exclude some path that possibly tracking you), copy and paste to address bar or use the **Go to 'your address'** instead.
+I will let the uBlock0 or Nano for block and prevent navigation before it's follow that way, then give the same internal ability to expose real URL under blocked URLs but...
+- Some URL that have multiple parameters is possibly to be messed and making you confuse and don't know what to do next, you may need to make a manual text selection (don't forget to exclude some path that possibly tracking you), copy and paste to address bar or use the **Go to 'your address'** instead.
+- Some sites that can do the seamless navigations will not prevent tracked URL in the same tab, however, it's work properly if you open it into new tab.
 
 I cannot help you much if you still stuck, but I have no choice, just privacy first!
 
