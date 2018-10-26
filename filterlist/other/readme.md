@@ -1,6 +1,6 @@
 | List Name | Subscribe via ABP link | Copy raw location |
 | ----- | ----- | ----- |
-| Anti Survived Tracking Link Warning | [:scroll:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fother%2FSurvivedTrackedLinkWarning.txt&amp;title=Anti%20Survived%20Tracking%20Link%20Warning) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/SurvivedTrackingLinkWarning.txt) |
+| Anti Survived Tracking Link Warning | [:scroll:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fother%2FSurvivedTrackingLinkWarning.txt&amp;title=Anti%20Survived%20Tracking%20Link%20Warning) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/SurvivedTrackingLinkWarning.txt) |
 | Uncategorized Miscellaneous Annoyance | [:scroll:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fother%2FMiscAnnoynace.txt&amp;title=Miscellaneous%20Annoyance) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/MiscAnnoynace.txt) |
 
 
