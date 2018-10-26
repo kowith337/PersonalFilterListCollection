@@ -1,0 +1,24 @@
+[uBlock Origin 1.16.20]
+! Title: [Borrow Ability] Anti Survived Tracking Link Warning
+! Version: 201810262321
+! Author: kowith337
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection
+! Expires: 2 days
+
+! Note: I recreate this filterlist based on specific sites that I generally using, by borrow ability of strict blocking inside
+!       uBlock0/Nano to warn the sites that you want to go out to the real destination (or source of result) was get re-routing
+!       to go the tracked URLs instead, the internal strict blocking will prevent the navigation to be happen and you can get the
+!       real URL under the yellow triangle warning sign.
+!       However, some URLs will have multiple parameters than the legitimate one (e.g. YouTube), you may need to recombine or
+!       manually select some part of URL text that not wrapped by other things unnecessary.
+
+! Common
+||*&fbclid$document,important
+||*?fbclid$document,important
+||google.*/url?*sa=*ved=*$document,important
+||l.facebook.com$document,important
+||lm.facebook.com$document,important
+
+! Problematic, at your own risk!
+||pantip.com/l/http*$document,important
+||pantip.com/r/http*$document,important
