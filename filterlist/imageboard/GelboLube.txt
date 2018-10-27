@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201810231121
+! Version: 201810271420
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/imageboard
@@ -32,6 +32,7 @@ gelbooru.com##.paginator a:if(img)
 gelbooru.com##a[href*="click.php"]
 gelbooru.com##a[href*="media.r18"]
 gelbooru.com##a[href*="mnfclub.com"]
+gelbooru.com##a[href^="http://"][href*="/track/"]
 gelbooru.com##a[rel="nofollow"] video
 
 ! Block ExoClick iFrame (Not sure is it still exist?)
@@ -270,6 +271,7 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ! Block then Redirect - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Experimental for replace a dummy script, frame, text, etc.
 ! Redirect rules is only affect for specific type of request only.
+||gelbooru.com/autoDebug.js$script,important,redirect=noopjs
 ||gelbooru.com/index.php?page=autoDebug$xmlhttprequest,important,redirect=nooptext
 ||gelbooru.com/intermission.php$subdocument,important,redirect=noopframe
 
