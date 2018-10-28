@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201810232018
+# Version: 201810281749
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -316,6 +316,7 @@
 0.0.0.0 imasdk.googleapis.com
 0.0.0.0 imprammp.taboola.com
 0.0.0.0 improving.duckduckgo.com
+0.0.0.0 info.internet.org
 0.0.0.0 ioms.bfmio.com
 0.0.0.0 js.genieessp.com
 0.0.0.0 js.rfp.fout.jp
@@ -330,6 +331,8 @@
 0.0.0.0 mobile-collector.newrelic.com
 0.0.0.0 mobile.beta.facebook.com
 0.0.0.0 mobile.facebook.com
+0.0.0.0 mobile.freebasics.com
+0.0.0.0 mobile.internet.org
 0.0.0.0 n.ads1-adnow.com
 0.0.0.0 n.ads2-adnow.com
 0.0.0.0 n.ads3-adnow.com
