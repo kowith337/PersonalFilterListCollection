@@ -2,8 +2,8 @@
 ! Title: Self Custom Ruleset
 ! Maintainer: kowith337
 !
-! Version: 201810201741
-! VersionNumber: 0.20
+! Version: 201810281916
+! VersionNumber: 0.21
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
 
@@ -15,8 +15,8 @@ Gelbooru
 		_ ajax.googleapis.com script
 		_ maxcdn.bootstrapcdn.com script
 
-Google Login (Test)
-	* google.com
+Google Login (Custom Test)
+	* accounts.google.com
 		_ google.com cookie
 		_ accounts.google.com *
 		_ accounts.google.com frame

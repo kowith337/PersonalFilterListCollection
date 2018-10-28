@@ -2,8 +2,8 @@
 ! Title: Rulesets for Thai sites (alpha test)
 ! Maintainer: kowith337
 !
-! Version: 201810021454
-! VersionNumber: 0.15
+! Version: 201810281915
+! VersionNumber: 0.16
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
 ! 
@@ -99,7 +99,6 @@ Sanook! Music (aka. Joox)
 	music.sanook.com *
 		_ isanook.com *
 		_ joox.com media
-		_ qq.com script
 		_ s1sf.com script
 
 Thairath
