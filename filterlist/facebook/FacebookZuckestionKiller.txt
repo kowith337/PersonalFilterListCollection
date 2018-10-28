@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201810262333
+! Version: 201810281618
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -222,6 +222,7 @@ facebook.com###left_nav_section_nodes ul li[id="navItem_343553122467255"]
 facebook.com###left_nav_section_nodes ul li[id="navItem_399711043500146"]
 facebook.com###left_nav_section_nodes ul li[id="navItem_456900714360021"]
 facebook.com###left_nav_section_nodes ul li[id="navItem_526732794016279"]
+facebook.com###left_nav_section_nodes ul li[id="navItem_645191315628772"]
 facebook.com###left_nav_section_nodes ul li[id="navItem_762992637108088"]
 facebook.com###left_nav_section_nodes ul li[id="navItem_1728807357362356"]
 facebook.com###mobile_login_bar
@@ -407,6 +408,7 @@ m.facebook.com,mbasic.facebook.com##div[role="article"]:has(div a[href*="/friend
 m.facebook.com,mbasic.facebook.com##div[role="article"]:has(iframe[src^="/xti.php?"])
 m.facebook.com,mbasic.facebook.com##div[role="article"]:has(span:has-text(/Sponsored/))
 m.facebook.com,mbasic.facebook.com##table td#mEventsDashboard #events_dashboard_activity_feed:has(a[href*="suggestion_feed_unit"])
+m.facebook.com,touch.facebook.com###page.-hardstate-local_surface #root[role="main"] > div[data-store-id] div > div[style^="flex-grow"][data-nt]:has(div[style^="flex-grow"][data-nt] > div[data-nt]:has-text(/^Popular /))
 m.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div div[data-store*="share_id"] .story_body_container div[data-ft] div:has(.scrollArea:has(a[href*="/services?"]))
 m.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div:has(.scrollArea:has(a[href^="/commerce/products/"]))
 m.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div[data-store*="share_id"] .story_body_container div div:has(.scrollArea:has(a[href^="/commerce/products/"]))
@@ -427,9 +429,11 @@ m.facebook.com,touch.facebook.com###page #root div > div[data-store-id] > div[id
 m.facebook.com,touch.facebook.com###page #root header > div > div > div:has(a[href^="/pages/launchpoint/discover/"])
 m.facebook.com,touch.facebook.com###page article[data-sigil="pma-upsell"]:has(a[href*="com.facebook.pages.app"])
 m.facebook.com,touch.facebook.com###page div[id^="unit_id_"]:has(.scrollArea:has(.scrollAreaColumn div[data-autoid]))
+m.facebook.com,touch.facebook.com###page.-hardstate-local_surface #root[role="main"] > div[data-store-id] div > div[style^="flex-grow"][data-nt]:has(div[style^="flex-grow"][data-nt] > div[data-nt]:has-text(/^Suggested /))
+m.facebook.com,touch.facebook.com###page[class^="-hardstate"] #pages_msite_body_contents > div[data-store-id] > div[data-store-id]:has(#page_suggestions_on_liking)
 m.facebook.com,touch.facebook.com###pages_msite_body_contents div[data-store-id] > div[data-store-id] > div[data-nt] > div[data-nt]:has(.scrollArea):has(.scrollAreaBody[data-ad-preview])
-m.facebook.com,touch.facebook.com###pages_msite_body_contents div[data-store-id] div[style] div[style^=flex-grow] div:has(button[type="submit"][data-nt*="CHILD"])
 m.facebook.com,touch.facebook.com###pages_msite_body_contents div[data-store-id] div[data-store-id] > div[data-nt][data-ntid]:has(.scrollArea .scrollAreaBody[data-ad-preview])
+m.facebook.com,touch.facebook.com###pages_msite_body_contents div[data-store-id] div[style] div[style^=flex-grow] div:has(button[type="submit"][data-nt*="CHILD"])
 m.facebook.com,touch.facebook.com###root div > div[data-sigil^="m_login_upsell"]:has(.grouped a[href*="facebook.com/click.php?redir_url"])
 m.facebook.com,touch.facebook.com###root div a.sub[href*="?sk=h_nor"]
 m.facebook.com,touch.facebook.com###timelineProfileTiles div > div[data-autoid]:has(a[href*="?v=fun_facts&"])
@@ -442,6 +446,7 @@ m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=399711043500146"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=456900714360021"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=526732794016279"]))
+m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=645191315628772"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=762992637108088"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=1728807357362356"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="instagram.com"]))
