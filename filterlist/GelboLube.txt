@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201810271420
+! Version: 201810292223
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/imageboard
@@ -81,6 +81,7 @@ gelbooru.com##.alert-warning:if(a[href*="javascript"])
 
 ! Unbreak - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ! 
 ! 1. Allow jQuery from GoogleAPIs and BootStrap (suggested by toshiya44)
+@@||*/script/jquery*$script,domain=gelbooru.com
 @@||ajax.googleapis.com/ajax/libs/jquery*$script,domain=gelbooru.com
 @@||bootstrapcdn.com/bootstrap/*$script,domain=gelbooru.com
 @@||gelbooru.com/script/jquery*$script,first-party
@@ -88,14 +89,14 @@ gelbooru.com##.alert-warning:if(a[href*="javascript"])
 ! 2. Useful scripts
 ! - [application.js] is questionable due to it's have "ExoLoader" function inside that script.
 ! - [miscJs.js] is allowed for autocomplete search
-! - {Halt} [try.js] is exactly to execute function to deploy ads from ExoClick, but if blocked this, the site and thumbnails will
-!   completely broke! But don't worry, some ##script:() rules can make those functions harmless to you...
-@@||gelbooru.com/script/application.js|$script,first-party
+@@||*/script/application.js?$script,domain=gelbooru.com
+@@||*/script/application.js|$script,domain=gelbooru.com
+@@||*/script/miscJs.js?$script,domain=gelbooru.com
+@@||*/script/miscJs.js|$script,domain=gelbooru.com
 @@||gelbooru.com/script/application.js?$script,first-party
-@@||gelbooru.com/script/miscJs.js|$script,first-party
+@@||gelbooru.com/script/application.js|$script,first-party
 @@||gelbooru.com/script/miscJs.js?$script,first-party
-! @@||gelbooru.com/script/try.js|$script,first-party
-! @@||gelbooru.com/script/try.js?$script,first-party
+@@||gelbooru.com/script/miscJs.js|$script,first-party
 
 ! 3. Actual WebM Videos (Legitmate WebM vids are loaded from /images/ only, otherwise is adverts!)
 @@||gelbooru.com/images/$media
@@ -116,6 +117,7 @@ gelbooru.com##.alert-warning:if(a[href*="javascript"])
 @@||youhate.us/ads.js?$script
 
 ! 6. Allow lazyload script to be loaded because function to load thumbnail is depend on this, since 2017/10/03
+@@||*/script/lazyload.js?$script,domain=gelbooru.com
 @@||gelbooru.com/script/lazyload.js?$script,first-party
 
 ! Counter other filterlists - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -249,8 +251,8 @@ gelbooru.com##^script:has-text(EXoDetector)
 gelbooru.com##^script:has-text(fuckingnormieswry)
 gelbooru.com##^script[async][src^="https://media.trafficjunky.net"]
 gelbooru.com##^script[async][src^="https://www.googletagmanager.com"]
-gelbooru.com##^script[src*="autoDebug.js"]
-gelbooru.com##^script[src^="//gelbooru.com/script/license"]
+gelbooru.com##^script[src*="/autoDebug.js"]
+gelbooru.com##^script[src*="/script/license"]
 gelbooru.com##^script[src^="https://ads.exoclick.com"]
 gelbooru.com##^script[src^="https://gelbooru.com/script/try.js"]
 ! gelbooru.com##^script:has-text(abvertDar)
