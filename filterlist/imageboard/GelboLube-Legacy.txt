@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: GelboLube (Firefox Legacy)
-! Version: 201810292223
+! Version: 201810292233
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/imageboard
@@ -53,6 +53,9 @@ gelbooru.com##noscript
 
 ! I have no idea about <ins> tag, can uBlock handle it?
 gelbooru.com##ins.adsbytrafficjunky
+
+! Oppsie, I forgot to add berserk rant!
+gelbooru.com##.contain-push center div[style]:not(#paginator)
 
 ! Filtered procedural hiding - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. To block hyperlink ads that appear under the tag lists (currently know it's promote r18.com and jabcomix.com)
