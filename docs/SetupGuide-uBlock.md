@@ -7,14 +7,7 @@
 
 ### Custom Resources
 #### [Advanced/Optional] Adapt and integrate with [NanoAdBlocker](https://jspenguin2017.github.io/uBlockProtector)
-- In the **Advance Settings** page, change `userResourcesLocation` to pointing at `https://github.com/NanoAdblocker/NanoFilters/raw/master/NanoFilters/NanoResources.txt`
-- Enable `Adblock Warning Removal List` In the **3rd-party filters** tab
-- Parse these filters
-  - Nano defender list (formerly uBlock protector list): `https://github.com/jspenguin2017/uBlockProtector/raw/master/uBlockProtectorList.txt`
-  - Nano base list: `https://github.com/jspenguin2017/uBlockProtector/raw/master/uBlockProtectorList.txt`
-  - [Optional] Nano timer booster: `https://github.com/NanoAdblocker/NanoFilters/raw/master/NanoFilters/NanoTimer.txt`
-
-*Note: The last of two lists will become useless if you didn't provide proper custom resources.*
+Please look at the **Extra installation steps for uBlock Origin** section that appear on the site.
 
 ### Privacy Settings
 - `Disable pre-fetching` must enabled by default.

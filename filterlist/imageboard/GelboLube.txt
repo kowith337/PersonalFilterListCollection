@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201810292233
+! Version: 201810311153
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/imageboard
@@ -16,19 +16,12 @@
 !    they didn't update their site to survive blocking so much...
 
 ! ------------------------------------------------------ GelboLube Core -------------------------------------------------------- !
-
 ! Element Hiding - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Block external hyperlinks, include CCBill ads and Patreon.
 ! gelbooru.com##.content #nup
 ! gelbooru.com##.sidebar #tup
 ! gelbooru.com##a#ext
 ! gelbooru.com##a.ext
-gelbooru.com###paginater a:if(img)
-gelbooru.com###pagination a:if(img)
-gelbooru.com###paginator a:if(img)
-gelbooru.com##.paginater a:if(img)
-gelbooru.com##.pagination a:if(img)
-gelbooru.com##.paginator a:if(img)
 gelbooru.com##a[href*="click.php"]
 gelbooru.com##a[href*="media.r18"]
 gelbooru.com##a[href*="mnfclub.com"]
@@ -41,13 +34,8 @@ gelbooru.com##iframe[src*="exoclick"]
 ! Leftover ad space above of image list / image view and below page number
 ! Those was hidden already by 3p requests block, such as R18.com banner, ad frame from ContentABC.com
 gelbooru.com##.contain-push .hidden-xs[style*="max-width: 728px"]
-gelbooru.com##.contain-push a:has(img[src^="/extras/"])
-gelbooru.com##.contain-push center .hidden-xs:if(iframe[name^="spot_id"])
 gelbooru.com##.contain-push div[style^="max-width: 728px"][style*="overflow"]
 gelbooru.com##.contain-push div[style^="max-width: 750px"][style*="Overflow"]
-
-! This mean they trying to make an overlay to fire away users who use content blocker, I guess.
-gelbooru.com##body div[style*="z-index"]:matches-css(width: 100%)
 
 ! Trying to block NoScript
 gelbooru.com##noscript
@@ -55,22 +43,40 @@ gelbooru.com##noscript
 ! I have no idea about <ins> tag, can uBlock handle it?
 gelbooru.com##ins.adsbytrafficjunky
 
-! Oppsie, I forgot to add berserk rant!
-gelbooru.com##.contain-push center div[style]:not(#paginator)
-
 ! Filtered procedural hiding - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! 1. To block hyperlink ads that appear under the tag lists (currently know it's promote r18.com and jabcomix.com)
+! 1. Element hiding in tags list pane that also insert tall banner ads
+gelbooru.com###paginater a:if(img)
+gelbooru.com###pagination a:if(img)
+gelbooru.com###paginator a:if(img)
+gelbooru.com##.paginater a:if(img)
+gelbooru.com##.pagination a:if(img)
+gelbooru.com##.paginator a:if(img)
+
+! 2. To block hyperlink ads that appear under the tag lists (currently know it's promote r18.com and jabcomix.com)
 gelbooru.com##div[class^="sidebar"] a[target]:if(img)
 
-! 2. Use 'matches-css' to remove placeholder after allowed 'ExoLoader.addZone' to generate advert space
+! 3. Hide hyperlink that link to '/extra/', e.g. shirt promo, internal redirect before sent to external ads sites.
+gelbooru.com##.contain-push a:has(img[src^="/extras/"])
+
+! 4. Remove leftover frame that serve ads from 'ContentABC'
+gelbooru.com##.contain-push center .hidden-xs:has(iframe[name^="spot_id"])
+
+! 5. Use 'matches-css' to remove placeholder after allowed 'ExoLoader.addZone' to generate advert space
 gelbooru.com###searchTags div:matches-css(height: 600px)
 gelbooru.com##.contain-push center center div:matches-css(width: 1000px)
 gelbooru.com##.contain-push center div:matches-css(width: 300px)
 gelbooru.com##.contain-push center div:matches-css(max-width: 750px)
 
-! 3. Hide some notices (e.g. Change to regular layout when use mobile browser, Pasta notice)
+! 6. They trying to make a full screen transparent overlay to guaranteed that popup ads will be show when user start to click
+!    (anywhere of site)
+gelbooru.com##body div[style*="z-index"]:matches-css(width: 100%)
+
+! 7. Hide some notices (e.g. Change to regular layout when use mobile browser, Pasta notice)
 gelbooru.com##.alert-info:if(a[href*="?page=ihnt"])
 gelbooru.com##.alert-warning:if(a[href*="javascript"])
+
+! 8. Remove berserk rant!
+gelbooru.com##.contain-push center div[style]:not(#paginator)
 
 ! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. [Prequel] Block Every videos, subdocs and scripts (See below for what things could be exclude)
@@ -283,7 +289,6 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ! ---------------------------------------------------- TheDoujin Support ------------------------------------------------------ !
 ! This aim to re-support TheDoujin to hide ads and prevent connections to ads and tracking servers, although this site have less
 ! connections than Gelbooru and can be easily hide ads by blocking unwanted functions...
-
 ||exoclick.com$domain=thedoujin.com,important
 ||exosrv.com$domain=thedoujin.com,important
 ||google-analytics.com$domain=thedoujin.com,important
