@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201811010949
+! Version: 201811011000
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -275,6 +275,7 @@ facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .mtm span[class*="u
 facebook.com##div[role="navigation"] > div a[href^="/groups/?"][href*="discover_category_id=212609529249058"]
 facebook.com##div[role="navigation"] > div a[href^="/groups/?"][href*="discover_category_id=234383826903707"]
 facebook.com##div[role="navigation"] > div a[href^="/groups/?"][href*="discover_category_id=470739743275782"]
+facebook.com##div[role="navigation"] > div a[href^="/groups/?"][href*="discover_category_id=1801122086782345"]
 facebook.com##iframe[id^="fbsbx-sig-iframe-"]
 m.facebook.com,mbasic.facebook.com###bookmarkmenu table td a[href*="freebasics.com"]
 m.facebook.com,mbasic.facebook.com###m_loginbar_login_button
@@ -298,6 +299,7 @@ m.facebook.com,touch.facebook.com###viewport #root[role="main"] div > a[href^="/
 m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=212609529249058"]
 m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=234383826903707"]
 m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=470739743275782"]
+m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=1801122086782345"]
 m.facebook.com,touch.facebook.com##.appCenterSimilarApps
 m.facebook.com,touch.facebook.com##.story_body_container header > div a[href*="package=com.facebook.lite"]
 m.facebook.com,touch.facebook.com##article._mFeedEgoSuggestionsBoatload__list
@@ -366,6 +368,7 @@ facebook.com##div[itemscope] #content_container div.clearfix div[class][id][styl
 facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=212609529249058"])
 facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=234383826903707"])
 facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=470739743275782"])
+facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=1801122086782345"])
 facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .mtm:has(div .uiList:has(li a[href^="/commerce/products/"]))
 facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .userContentWrapper .mtm .mtm:has(ul.uiList:has(a[href*="/services"]))
 facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"]:has(div ul.uiList:has(li[data-ft*="ego_id"]))
@@ -420,6 +423,7 @@ m.facebook.com,touch.facebook.com###events_dashboard_activity_feed section artic
 m.facebook.com,touch.facebook.com###group-discover-lading-column div:has(div[id^="group-discover-card-"] a[href^="/groups/?"][href*="discover_category_id=212609529249058"])
 m.facebook.com,touch.facebook.com###group-discover-lading-column div:has(div[id^="group-discover-card-"] a[href^="/groups/?"][href*="discover_category_id=234383826903707"])
 m.facebook.com,touch.facebook.com###group-discover-lading-column div:has(div[id^="group-discover-card-"] a[href^="/groups/?"][href*="discover_category_id=470739743275782"])
+m.facebook.com,touch.facebook.com###group-discover-lading-column div:has(div[id^="group-discover-card-"] a[href^="/groups/?"][href*="discover_category_id=1801122086782345"])
 m.facebook.com,touch.facebook.com###mEventsDashboard div > div[data-store-id] > div[data-store-id]:has(div[data-nt^="NT:BOX"]):has(.scrollArea)
 m.facebook.com,touch.facebook.com###mJewelRequestsFlyoutBody div div:has(div[class] div[class]:has(div[data-pymk-id]))
 m.facebook.com,touch.facebook.com###m_group_stories_container section article:has(.scrollArea .scrollAreaColumn[data-sigil="m-groups-pymi-item"])
