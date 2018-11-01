@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201811010937
+! Version: 201811010949
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -363,6 +363,7 @@ facebook.com##div[id^="hyperfeed_story_id"]:has(div[data-ft*="ego_id"]:has(a[hre
 facebook.com##div[id^="hyperfeed_story_id"]:has(span a:has-text(/Sponsored/))
 facebook.com##div[id^="hyperfeed_story_id"]:has(span a[href*="[is_sponsored]=1"])
 facebook.com##div[id^="hyperfeed_story_id"]:has(span a[href*="is_sponsored=1"])
+facebook.com##div[itemscope] #content_container div.clearfix div[class][id][style] div[class]:has(div.uiTypeahead div input[placeholder][aria-controls][aria-label^="Invite"])
 facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=212609529249058"])
 facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=234383826903707"])
 facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=470739743275782"])
