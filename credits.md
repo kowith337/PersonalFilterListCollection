@@ -14,6 +14,9 @@ Still writing and not completed yet, check back next time if changed...
 - https://greasyfork.org/scripts/7596
 - https://chromium.woolyss.com
 - - - - -
+### All emoji commits aren't come from GitMoji, instead, I've copied from emoji lists
+- https://www.webpagefx.com/tools/emoji-cheat-sheet
+- - - - -
 ### [/filterlist/facebook/FacebookCommands.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook/FacebookCommands.txt)
 ### [/filterlist/facebook/FacebookZuckestionKiller.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook/FacebookZuckestionKiller.txt)
 - https://facebook.adblockplus.me

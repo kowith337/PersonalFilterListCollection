@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201810291553
+! Version: 201811010937
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -314,6 +314,9 @@ facebook.com###ads_preferences_desktop_root div[tabindex][role="button"] button[
 facebook.com###contentArea div:if-not(.clearfix):has(a[href*="/login/?"])
 facebook.com###content[role="main"] .clearfix div[data-referrer] > div .stat_elem:has(button.PageLikeButton i[class*="sx_"])
 facebook.com###content[role=main] > div .clearfix .stat_elem:has(div a[class^="_fbPageBrowserSubscriptionCardItem"])
+facebook.com###content_container div > div[id^="u_fetchstream"] div :has(div[id^="u_fetchstream"] .uiTypeahead div input[aria-controls^="typeahead_list_u_fetchstream"][aria-label^="Invite"])
+facebook.com###event_tabs #event_guest_list div[class] div[class] ul[class]:has(div span:has-text(Suggested Friends))
+facebook.com###event_tabs #event_guest_list div[class] div[class] ul[class]:has(li div > button div[data-hover="tooltip"][data-tooltip-display="overflow"])
 facebook.com###events_dashboard_activity_feed div[role="article"]:has(.fbEventsSuggestionItem)
 facebook.com###fbSearchResultsBox:has(form.friendBrowserForm div:has(li a[href*="?fref=pymk"]))
 facebook.com###games_hub_root_content div > span div:has(a[href*="/gyml-similar/?"])
