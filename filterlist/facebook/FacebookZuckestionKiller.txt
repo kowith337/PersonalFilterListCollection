@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201811011000
+! Version: 201811031451
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -60,6 +60,7 @@
 ||facebook.com/feed/pivot/$xmlhttprequest
 ||facebook.com/feed/pivot/chaining$important
 ||facebook.com/feed/pivot/related_articles$important
+||facebook.com/feedtracking/$important
 ||facebook.com/friends/center/suggestions$important,~document,~xmlhttprequest
 ||facebook.com/friends/center/suggestions$xmlhttprequest
 ||facebook.com/groups/*suggested*$important,~xmlhttprequest
@@ -191,6 +192,7 @@
 ||facebook.com/ads/preferences/mobile_log/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/common/referer_frame.php$subdocument,important,redirect=noopframe
 ||facebook.com/feed/badge/$xmlhttprequest,important,redirect=nooptext
+||facebook.com/feedtracking/$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/related-application/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
 ||facebook.com/sem_pixel/1/control/0/$subdocument,important,redirect=noopframe
