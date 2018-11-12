@@ -44,6 +44,9 @@ Still writing and not completed yet, check back next time if changed...
 ### [/filterlist/ubo-css/iHateCircles.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css/iHateCircles.txt)
 - https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#style
 - - - - -
+### [/hosts/hosts_facebook0.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_facebook0.txt)
+- https://github.com/random-robbie/bugbounty-scans/blob/master/facebook.com/urls.txt
+- - - - -
 ### [/hosts/hosts_leftover.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_leftover.txt)
 #### Firefox Betrayed Backend Part
 - http://utaukitune.ldblog.jp/archives/65725024.html
