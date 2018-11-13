@@ -45,6 +45,7 @@ Still writing and not completed yet, check back next time if changed...
 - https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#style
 - - - - -
 ### [/hosts/hosts_facebook0.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_facebook0.txt)
+### [/hosts/hosts_facebook0_noedge.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_facebook0_noedge.txt)
 - https://github.com/random-robbie/bugbounty-scans/blob/master/facebook.com/urls.txt
 - - - - -
 ### [/hosts/hosts_leftover.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_leftover.txt)
