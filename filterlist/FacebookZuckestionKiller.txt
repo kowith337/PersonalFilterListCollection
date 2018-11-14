@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201811141958
+! Version: 201811150006
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -523,6 +523,7 @@ m.facebook.com,touch.facebook.com###pages_msite_body_contents div > div[data-sto
 
 !#if env_firefox
 ! Test Cookie Messing
+facebook.com##script:inject(cookie-remover.js, datr)
 facebook.com##script:inject(cookie-remover.js, noscript)
 facebook.com##script:inject(cookie-remover.js, x-referer)
 facebook.com##script:inject(nanop-easy-set-cookie.js, noscript=0)
