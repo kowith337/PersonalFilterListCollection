@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201811132036
+! Version: 201811141958
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -160,6 +160,9 @@
 !       but it still make xhr to 'mobile.facebook.com', so it's good to block that!
 ! Furthermore: I HATE FreakBasics by Facebook, internet.org also...
 ||0.facebook.com$important
+||edge-z-*.facebook.com$important
+||edge-z-*.facebook.net$important
+||edge-z-*.fbcdn.net$important
 ||facebook.com/zero/policy$document,important
 ||free.facebook.com$important
 ||freebasics.com$important
