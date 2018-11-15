@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201811092130
+# Version: 201811151839
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -41,6 +41,7 @@
 0.0.0.0 adasiaholdings.com
 0.0.0.0 addthisedge.com
 0.0.0.0 adnium.com
+0.0.0.0 adnuntius.com
 0.0.0.0 adsoptimal.com
 0.0.0.0 aniview.com
 0.0.0.0 app-measurement.com
@@ -68,6 +69,7 @@
 0.0.0.0 imrworldwide.com
 0.0.0.0 innity.com
 0.0.0.0 innity.net
+0.0.0.0 izooto.com
 0.0.0.0 mathtag.com
 0.0.0.0 newrelic.com
 0.0.0.0 nordvpn.com
@@ -269,7 +271,9 @@
 0.0.0.0 c.evidon.com
 0.0.0.0 cdn-gl.imrworldwide.com
 0.0.0.0 cdn-ssl.vidible.tv
+0.0.0.0 cdn.adnuntius.com
 0.0.0.0 cdn.adsoptimal.com
+0.0.0.0 cdn.izooto.com
 0.0.0.0 cdn.onesignal.com
 0.0.0.0 cdn.onthe.io
 0.0.0.0 cdn.yengo.com
@@ -293,6 +297,7 @@
 0.0.0.0 go.nordvpn.com
 0.0.0.0 graph.freebasics.org
 0.0.0.0 graph.internet.org
+0.0.0.0 graph.sanook.com
 0.0.0.0 h.beta.facebook.com
 0.0.0.0 h.facebook.com
 0.0.0.0 ho.lazada.co.th
@@ -318,6 +323,7 @@
 0.0.0.0 improving.duckduckgo.com
 0.0.0.0 info.internet.org
 0.0.0.0 ioms.bfmio.com
+0.0.0.0 isgstat.sanook.com
 0.0.0.0 js.genieessp.com
 0.0.0.0 js.mtburn.com
 0.0.0.0 js.mtburn.jp
@@ -407,6 +413,7 @@
 0.0.0.0 synad3.nuffnang.co.th
 0.0.0.0 syndication.twimg.com
 0.0.0.0 syndication.twitter.com
+0.0.0.0 ta.sanook.com
 0.0.0.0 taboola-d.openx.net
 0.0.0.0 tag.gammaplatform.com
 0.0.0.0 th-ssl.effectivemeasure.net
