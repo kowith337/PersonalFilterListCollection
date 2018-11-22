@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201811181823
+! Version: 201811222242
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -510,7 +510,7 @@ m.facebook.com,touch.facebook.com##section article .story_body_container header 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ! Experimental
-! This work only for specific platform, to testing out!
+! This work only for specific platform, or for testing out!
 
 !#if env_mobile
 ! Hide zuckestions items pane to enforce Facebook fill up their zuckestions, but in fact you see none of any zuckestions at all!
@@ -519,15 +519,19 @@ m.facebook.com,touch.facebook.com##.async_fan:has(div div a.darkTouch[href*="pag
 
 ! Hide some page admin pane to invite, get tips, etc.
 m.facebook.com,touch.facebook.com###pages_msite_body_contents div > div[data-store*="logging_data"][data-sigil="reaction-unit-logging"]:has(div[data-nt][data-ntid] img[data-nt="NT:IMAGE"])
-!endif
+!#endif
 
 !#if env_firefox
 ! Test Cookie Messing
-facebook.com##script:inject(cookie-remover.js, datr)
 facebook.com##script:inject(cookie-remover.js, noscript)
 facebook.com##script:inject(cookie-remover.js, x-referer)
 facebook.com##script:inject(nanop-easy-set-cookie.js, noscript=0)
-!endif
+!#endif
+
+! This let Facebook forgot mobile carrier name that saved in this cookie (It will keep up to 3 days if you're not remove manuall)
+! You can test in 'https://m.facebook.com/diagnostics' and then see the "DATR" value, it should be blank once you've connected to
+! private network, such as Ethernet / LAN / Wi-Fi to prevent "Free Basics" menu keep injecting in bookmarks menu
+facebook.com##script:inject(cookie-remover.js, datr)
 
 ! This help for opt out zuckestions, you can convert scriptlets below as bookmarklet.
 ! var divs = document.querySelectorAll('a[data-sigil*="xout"] i.touched_hide'); for (i = 0; i < divs.length; ++i) {divs[i].click();};
