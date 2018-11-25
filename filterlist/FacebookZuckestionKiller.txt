@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201811222242
+! Version: 201811251735
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -453,6 +453,7 @@ m.facebook.com,touch.facebook.com###pages_msite_body_contents div[data-store-id]
 m.facebook.com,touch.facebook.com###pages_msite_body_contents div[data-store-id] div[style] div[style^=flex-grow] div:has(button[type="submit"][data-nt*="CHILD"])
 m.facebook.com,touch.facebook.com###root div > div[data-sigil^="m_login_upsell"]:has(.grouped a[href*="facebook.com/click.php?redir_url"])
 m.facebook.com,touch.facebook.com###root div a.sub[href*="?sk=h_nor"]
+m.facebook.com,touch.facebook.com###root[role="main"] div[style][data-store-id] > div[style^="flex"][data-nt] div[style^="flex"][data-nt] > :has(div[aria-label="Suggested Streamers"])
 m.facebook.com,touch.facebook.com###timelineProfileTiles div > div[data-autoid]:has(a[href*="?v=fun_facts&"])
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a span:has-text(Instagram)))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/ads/create/"]))
