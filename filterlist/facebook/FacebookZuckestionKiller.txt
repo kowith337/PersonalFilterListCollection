@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201811291234
+! Version: 201811292057
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -107,6 +107,8 @@
 ! information about advert prefs, and let you properly manage them without getting error or auto refresh due to cannot sent xhr
 ! to perform delete preference out of your account.
 @@||facebook.com/ads/advertiser_guidance/server_msg/$first-party,xmlhttprequest
+@@||facebook.com/ads/ajax/account_close/?$xmlhttprequest,first-party
+@@||facebook.com/ads/ajax/close_account_dialog.php?$xmlhttprequest,first-party
 @@||facebook.com/ads/can_change_business_country_reason/?$first-party
 @@||facebook.com/ads/can_change_currency_timezone_reason/?$first-party
 @@||facebook.com/ads/manage/$first-party
