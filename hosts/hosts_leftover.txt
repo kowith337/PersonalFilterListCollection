@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201811291543
+# Version: 201812032103
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -40,6 +40,7 @@
 0.0.0.0 aaxads.com
 0.0.0.0 adasiaholdings.com
 0.0.0.0 addthisedge.com
+0.0.0.0 addtoany.com
 0.0.0.0 adnium.com
 0.0.0.0 adnuntius.com
 0.0.0.0 adsoptimal.com
@@ -66,6 +67,7 @@
 0.0.0.0 gratonrewardcenter.icu
 0.0.0.0 gsspat.jp
 0.0.0.0 gssprt.jp
+0.0.0.0 imprezzer.com
 0.0.0.0 imrworldwide.com
 0.0.0.0 innity.com
 0.0.0.0 innity.net
@@ -216,11 +218,13 @@
 
 # Generic Sublevel
 0.0.0.0 0.freebasics.com
+0.0.0.0 3326.tm.zedo.com
 0.0.0.0 acds.vidible.tv
 0.0.0.0 ad.doubleclick.net
 0.0.0.0 adaptv.advertising.com
 0.0.0.0 adnetwork.adasiaholdings.com
 0.0.0.0 ads.bumq.com
+0.0.0.0 ads.imprezzer.com
 0.0.0.0 ads.pantip.com
 0.0.0.0 ads1-adnow.com
 0.0.0.0 ads1.bangkokpost.co.th
@@ -414,6 +418,7 @@
 0.0.0.0 stat.matichon.co.th
 0.0.0.0 statcounter.va-endpoint.com
 0.0.0.0 static-th.plista.com
+0.0.0.0 static.addtoany.com
 0.0.0.0 static.gammaplatform.com
 0.0.0.0 statmt.matichon.co.th
 0.0.0.0 synad1.nuffnang.co.th

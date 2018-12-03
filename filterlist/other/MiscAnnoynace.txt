@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Miscellaneous Annoyance
-! Version: 201810020812
+! Version: 201812032130
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -9,15 +9,30 @@
 ! will be stay here until the specific site or category are have enough rules.
 
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [GitHub]
+github.com##div[class^="signup-prompt"]
+
 ! [Minecraft] Forge Ads Pane
 files.minecraftforge.net##.ad-container
 files.minecraftforge.net##.ad-container-framed
+
+! [Twitter]
+twitter.com###signin-dropdown
 
 ! [WallGif]
 wallgif.com##content .big-modal
 wallgif.com##content .big_modal_bg
 
+! [YouTube Old]
+youtube.com###hats-container[data-survey-id]
+
+! [YouTube New Polymer]
+youtube.com##ytd-consent-bump-renderer
+
 ! DOM Chaining - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [GitHub]
+github.com##.js-notice:has(.js-dismiss)
+
 ! [Minecraft Forge]
 files.minecraftforge.net##.sidebar-right:has(.ad-container)
 files.minecraftforge.net##.sidebar-right:has(.ad-container-framed)
@@ -34,9 +49,14 @@ stackexchange.com,superuser.com##.hero-container:has(#hero-content:has(div a[hre
 wallgif.com###overlay:has(img[alt="Loader"])
 wallgif.com##content div[id^=block_modal]
 
+! [YouTube Old]
+youtube.com##.individual-feed li .branded-page-box:has(.feed-item-dismissable:has(span.shelf-subscription-button button[data-style-type="branded"]))
+
 ! HTML Filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: This work only FF quantum + uB0 WebExt
+!#if cap_html_filtering
 greasyfork.org##^.post-install
+!#endif
 
 ! CSS Modify - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Minecraft] to prevent clicking the paid links hyperlink, e.g. AdFly, AdFocus, NetBee (by accident or intent)
