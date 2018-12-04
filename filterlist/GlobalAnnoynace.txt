@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Personal Miscellaneous Annoyance
-! Version: 201812032130
+! Version: 201812041738
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -89,6 +89,10 @@ greasyfork.org###install-area .post-install:style(width: 0px !important; height:
 ||cpm10.com$domain=wallgif.com,important
 ||newrelic.com$domain=wallgif.com,important
 
+! [Reddit]
+||redditmedia.com/gtm^$important,~document
+||redditstatic.com/gtm^$important,~document
+
 ! [SpeedTest]
 ||cloudfront.net/x.js$domain=speedtest.net,important
 ||speedtest.net/choices/$important
@@ -99,6 +103,13 @@ greasyfork.org###install-area .post-install:style(width: 0px !important; height:
 ! promoted script to be shown and also the site also get user data about it, eliminate this requests and fake sent data with
 ! `nooptext` can solve this thing also.
 ||greasyfork.org/scripts/*/install-ping?$xmlhttprequest,important,redirect=nooptext
+
+! Reddit + GoogleTag Frame
+||redditmedia.com/gtm^$subdocument,important,redirect=noopframe
+||redditstatic.com/gtm^$subdocument,important,redirect=noopframe
+
+! Also, PNG PIXEL TRACKING!?
+||reddit.com/static/pixel.png$image,important,redirect=1x1-transparent.png
 
 ! Block Page(s) / Redirect annoyance - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Some extensions that hosted with add0n are show the popup
