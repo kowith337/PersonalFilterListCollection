@@ -1,0 +1,42 @@
+[uBlock Origin 1.16.20]
+! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
+! Version: 201812091851
+! Author: kowith337
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
+! Expires: 2 days
+
+! Note: I recreate this filterlist based on specific sites that I generally using, by borrow ability of strict blocking inside
+!       uBlock0/Nano to warn the sites that you want to go out to the real destination (or source of result) was get re-routing
+!       to go the tracked URLs instead, the internal strict blocking will prevent the navigation to be happen and you can get the
+!       real URL under the yellow triangle warning sign.
+!       However, some URLs will have multiple parameters than the legitimate one (e.g. YouTube), you may need to recombine or
+!       manually select some part of URL text that not wrapped by other things unnecessary.
+! Note 2: "Overdone" edition is also apply the "current tab" and "AJAX" that contains the tracked parameters, this probably make
+!         the issue about seamless navigating that use "XMLHttpRequest" to be stuck! so use at your own risk!!
+
+! Common Extrenal
+||*&fbclid$document,frame,xmlhttprequest,important
+||*?fbclid$document,frame,xmlhttprequest,important
+||google.*/url?*sa=*ved=*$document,frame,important
+||l.facebook.com$document,frame,xmlhttprequest,important
+||lm.facebook.com$document,frame,xmlhttprequest,important
+
+! Internal
+||facebook.com/*&__xts__=$document,frame,xmlhttprequest,important
+||facebook.com/*&__xts__*=$document,frame,xmlhttprequest,important
+||facebook.com/*&acontext=$document,frame,xmlhttprequest,important
+||facebook.com/*&eid=$document,frame,xmlhttprequest,important
+||facebook.com/*&settings_tracking=$document,frame,xmlhttprequest,important
+||facebook.com/*?__xts__=$document,frame,xmlhttprequest,important
+||facebook.com/*?__xts__*=$document,frame,xmlhttprequest,important
+||facebook.com/*?acontext=$document,frame,xmlhttprequest,important
+||facebook.com/*?eid=$document,frame,xmlhttprequest,important
+||facebook.com/*?settings_tracking=$document,frame,xmlhttprequest,important
+! ||facebook.com/*&__tn__=$document,frame,xmlhttprequest,important
+! ||facebook.com/*?__tn__=$document,frame,xmlhttprequest,important
+||reddit.com/*?utm_*=*&utm_*=*$document,frame,xmlhttprequest,important
+
+! Problematic, at your own risk!
+||pantip.com/l/http*$document,important
+||pantip.com/r/http*$document,important
+||pantip.com/r/*/https^$document,frame,xmlhttprequest,important
