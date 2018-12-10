@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 201811291245
+! Version: 201812101234
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
 ! Expires: 2 days
@@ -32,6 +32,7 @@
 ||facebook.com/*?settings_tracking=$document,important
 ! ||facebook.com/*&__tn__=$document,important
 ! ||facebook.com/*?__tn__=$document,important
+||reddit.com/*&utm_*=*&utm_*=*$document,important
 ||reddit.com/*?utm_*=*&utm_*=*$document,important
 
 ! Problematic, at your own risk!
