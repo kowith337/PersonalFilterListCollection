@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Zuckestion Killer
-! Version: 201812041008
+! Version: 201812120140
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -17,6 +17,7 @@
 
 ! Network Blocking
 ! to prevent sending requests to show related contents, determine user action about how users use Facebook, nasty redirect,...
+/PagesTimelineChainingPagelet$important,domain=facebook.com
 /qp/action/redirect$important,domain=facebook.com
 ||*&fbclid=$document,important
 ||*?fbclid=$document,important
@@ -44,6 +45,7 @@
 ||facebook.com/ajax/haste-response/?modules=UFIOrderingModeSelectorContainer$important
 ||facebook.com/ajax/haste-response/?modules=VideoAutoplayController$important
 ||facebook.com/ajax/pagelet/generic.php/WebEgoPane$important
+||facebook.com/ajax/pagelet/generic.php/PagesTimelineChainingPagelet$important
 ||facebook.com/ajax/photos/logging$important
 ||facebook.com/ajax/react_composer/survey?$important
 ||facebook.com/ajax/typeahead/record_basic_metrics.php$important
@@ -244,6 +246,7 @@ facebook.com###pagelet_explore_feed div[role="article"] .fbUserStory span.uiLike
 facebook.com###pagelet_games_rhc
 facebook.com###pagelet_group_mall div[id^="group_mall"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
 facebook.com###pagelet_main_column_personal #fbSuggestionsPlaceHolder
+facebook.com###pagesTimelineChainingUnit
 facebook.com###pages_may_like_section
 facebook.com###pages_side_column div a[href*="/friend_inviter_v2/"]
 facebook.com###permalink_related_videos_logged_out
@@ -374,6 +377,7 @@ facebook.com##div[id^="hyperfeed_story_id"]:has(span a:has-text(/Sponsored/))
 facebook.com##div[id^="hyperfeed_story_id"]:has(span a[href*="[is_sponsored]=1"])
 facebook.com##div[id^="hyperfeed_story_id"]:has(span a[href*="is_sponsored=1"])
 facebook.com##div[itemscope] #content_container div.clearfix div[class][id][style] div[class]:has(div.uiTypeahead div input[placeholder][aria-controls][aria-label^="Invite"])
+facebook.com##div[itemscope] div > #content_container div > div[style]:has(#pagelet_growth_expanding_cta)
 facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=212609529249058"])
 facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=234383826903707"])
 facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=470739743275782"])
