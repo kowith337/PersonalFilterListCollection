@@ -1,0 +1,28 @@
+[uBlock Origin 1.17.5.3]
+! Title: kowith337's Test List
+! Version: 201812131957
+! Author: kowith337
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection
+! Expires: 2 days
+! Note: This list is for experimental and testing only, all rules in here will be change and/or remove at anytime.
+
+! [Facebook] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+! No idea what it does? probably logging frequency of people or page that you're chatting?
+||facebook.com/*?modules=ChatImpressionLogger$important
+
+! Prevent ping active status, this probably prevent your friends noticeable that you're onlinebecaue allowing 'active_ping'
+! connections will be expose online status, regardless of your active status settings that you've turned off already.
+||edge-chat.facebook.com/active_ping?$important
+||*edge-chat.facebook.com/active_ping?$important
+
+! Prevent modules connections that autoplay GIF comments
+! Noticed that Facebook start to autoplay GIF images in comments when you scroll to it, same behaviour of autoplay videos, maybe.
+||facebook.com/*?modules=FeedAnimatedImageShare$important
+||facebook.com/*?modules=UFI2CommentAnimatedImageAttachmentPlayer$important
+
+! Prevent connections to retrieve lists of zuckested pages to like or follow. (Desktop site only)
+! Probably not recommended because you will not allow to remove or delete those pages zuckestions!
+! I recommended to remove it out by copy bookmarklet scripts below before blocking this connections.
+! Note: Bookmarklet script is only work for english UI users only (UK, US, Pirate)
+! javascript:(function()%7Bvar%20divs%20%3D%20document.querySelectorAll('a%5Brole%3Dbutton%5D%5Bdata-tooltip-content%3D%22Remove%20Suggestion%22%5D')%3B%20for%20(i%20%3D%200%3B%20i%20%3C%20divs.length%3B%20%2B%2Bi)%20%7Bdivs%5Bi%5D.click()%3B%7D%7D)()
+||facebook.com/ajax/pagelet/generic.php/PagesBrowserTopSuggestionsPagelet$xmlhttprequest,important,redirect=nooptext

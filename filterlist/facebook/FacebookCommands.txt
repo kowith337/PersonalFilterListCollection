@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Modules Commands List
-! Version: 201810061737
+! Version: 201812131945
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -289,11 +289,15 @@
 ||facebook.com/*?modules=PubcontentFeedChainingController$important
 ||facebook.com/*?modules=PubcontentFeedChainingInjectionUtils$important
 ||facebook.com/*?modules=PubcontentSuggestionsUtil$important
+||facebook.com/*?modules=QuickLogActionType$important
+||facebook.com/*?modules=QuickPerformanceLogger$important
 ||facebook.com/*?modules=ReactComposerFeedSurvey$important
 ||facebook.com/*?modules=ReactComposerMagicTagSurvey$important
 ||facebook.com/*?modules=SavedForLaterChromeExtensionToastNux$important
 ||facebook.com/*?modules=ShareDialogMessageAudience$important
 ||facebook.com/*?modules=ShowsPYMFUtils$important
+||facebook.com/*?modules=TahoeBackAffordanceContainer$important
+||facebook.com/*?modules=TahoeUpNextOverlayAndEndScreen$important
 ||facebook.com/*?modules=TrackingPixel$important
 ||facebook.com/*?modules=TypeaheadMetricReporter$important
 ||facebook.com/*?modules=UFIOrderingModeSelectorContainer$important
