@@ -1,12 +1,18 @@
 [uBlock Origin 1.17.5.3]
 ! Title: kowith337's Test List
-! Version: 201812131957
+! Version: 201812141858
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
 ! Note: This list is for experimental and testing only, all rules in here will be change and/or remove at anytime.
 
-! [Facebook] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+! [Facebook Desktop] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+! DOM Only: Top videos for you...? No! Not Me and You! but for someone else!!
+! Test case to hide every zuckestions of videos and leave only watchlst from pages you're following...
+! See example at https://imgur.com/a/PAORHlg
+facebook.com##.fb_content div[class] > div[class] > #watch_feed
+facebook.com##.fb_content div[class] > div[class] > #watch_feed div[class] div[class][data-ft]:has(div span > div span a[href*="?referrer=video_home"])
+
 ! No idea what it does? probably logging frequency of people or page that you're chatting?
 ||facebook.com/*?modules=ChatImpressionLogger$important
 
