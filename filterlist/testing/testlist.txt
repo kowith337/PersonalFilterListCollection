@@ -1,12 +1,15 @@
 [uBlock Origin 1.17.5.3]
 ! Title: kowith337's Test List
-! Version: 201812141858
+! Version: 201812141949
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
 ! Note: This list is for experimental and testing only, all rules in here will be change and/or remove at anytime.
 
 ! [Facebook Desktop] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+! DOM Only: Remove "Top Picks" product from marketplace lists, only work for english UI users only (UK, US, Pirate)
+##div[data-testid="marketplace_home_feed"] div[class] > div[class]:has(span[itemcomponent]:has-text(/^Top picks/))
+
 ! DOM Only: Top videos for you...? No! Not Me and You! but for someone else!!
 ! Test case to hide every zuckestions of videos and leave only watchlst from pages you're following...
 ! See example at https://imgur.com/a/PAORHlg
