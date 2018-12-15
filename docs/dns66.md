@@ -31,8 +31,8 @@
 | [Quad9 HTTP IPv6](https://quad9.net/doh-quad9-dns-servers) | [:lock_with_ink_pen:](https://dns.quad9.net/dns-query) :six: | [:bust_in_silhouette:](https://quad9.net/privacy) | 2620:fe::10 | 2620:fe::fe:10 |  |
 | [AdGuard IPv6](https://adguard.com/en/adguard-dns/overview.html) | :closed_lock_with_key: :six: :no_pedestrians: |  | 2a00:5a60::ad1:0ff | 2a00:5a60::ad2:0ff |  |
 | [AdGuard Family IPv6](https://adguard.com/en/adguard-dns/overview.html) | :closed_lock_with_key: :six: :no_pedestrians: :children_crossing: |  | 2a00:5a60::bad1:0ff | 2a00:5a60::bad2:0ff |  |
-| [CleanBrowsing Family IPv6](https://cleanbrowsing.org/filters) | [:lock_with_ink_pen:](https://doh.cleanbrowsing.org/doh/family-filter) :closed_lock_with_key: :six: :children_crossing: :fire: |  |  | 2a0d:2a00:1:: | 2a0d:2a00:2:: |
-| [CleanBrowsing Adult IPv6](https://cleanbrowsing.org/filters) | [:lock_with_ink_pen:](https://doh.cleanbrowsing.org/doh/adult-filter) :closed_lock_with_key: :six: :children_crossing: :fire: |  |  | 2a0d:2a00:1::1 | 2a0d:2a00:2::1 |  |
+| [CleanBrowsing Family IPv6](https://cleanbrowsing.org/filters) | [:lock_with_ink_pen:](https://doh.cleanbrowsing.org/doh/family-filter) :closed_lock_with_key: :six: :children_crossing: :fire: |  | 2a0d:2a00:1:: | 2a0d:2a00:2:: |  |
+| [CleanBrowsing Adult IPv6](https://cleanbrowsing.org/filters) | [:lock_with_ink_pen:](https://doh.cleanbrowsing.org/doh/adult-filter) :closed_lock_with_key: :six: :children_crossing: :fire: |  | 2a0d:2a00:1::1 | 2a0d:2a00:2::1 |  |
 | [CleanBrowsing Security IPv6](https://cleanbrowsing.org/filters) | [:lock_with_ink_pen:](https://doh.cleanbrowsing.org/doh/security-filter) :closed_lock_with_key: :six: :fire: |  | 2a0d:2a00:1::2 | 2a0d:2a00:2::2 |  |
 | [Digital Courage IPv6](https://digitalcourage.de/support/zensurfreier-dns-server) | :six: |  | 2a01:238:42f6:ac00:2a29:4f7f:b6d:ef46 |  |  |
 | [Yandex IPv6](https://dns.yandex.com) | :six: |  | 2a02:6b8::feed:0ff | 2a02:6b8:0:1::feed:0ff |  |
