@@ -40,6 +40,10 @@
 | [CleanBrowsing Security IPv6](https://cleanbrowsing.org/filters) | [:lock_with_ink_pen:](https://doh.cleanbrowsing.org/doh/security-filter) :closed_lock_with_key: :six: :fire: |  | 2a0d:2a00:1::2 | 2a0d:2a00:2::2 |  |
 | [OpenNIC](https://www.opennic.org) |  |  | [Tier 1](https://servers.opennic.org/?tier=1) | [Tier 2](https://servers.opennic.org/?tier=2) |  |
 |  |  |  |  |  |  |
+| **Other** |  |  |  |  |  |
+| [CloudFlare DoH in Firefox](https://wiki.mozilla.org/Trusted_Recursive_Resolver) | [:lock_with_ink_pen:](https://mozilla.cloudflare-dns.com/dns-query) |  | 1.0.0.1 | 1.1.1.1 |  |
+| [~~Google~~](https://developers.google.com/speed/public-dns/) | [:lock_with_ink_pen:](https://dns.google.com/experimental) | :alarm_clock: | 8.8.4.4 | 8.8.8.8 |  |
+|  |  |  |  |  |  |
 | **Retired** |  |  |  |  |  |
 | [Norton ConnectSafe](https://dns.norton.com) | :fire: |  | 199.85.126.10 | 199.85.127.10 |  |
 | [Norton + Adult](https://dns.norton.com) | :fire: :children_crossing: |  | 199.85.126.20 | 199.85.127.20 |  |
