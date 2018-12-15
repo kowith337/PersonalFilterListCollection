@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.3]
 ! Title: kowith337's Test List
-! Version: 201812141949
+! Version: 201812151359
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -19,6 +19,9 @@ facebook.com##.fb_content div[class] > div[class] > #watch_feed div[class] div[c
 ! No idea what it does? probably logging frequency of people or page that you're chatting?
 ||facebook.com/*?modules=ChatImpressionLogger$important
 
+! Possibly tracking the "Typing" state of MESSenger delta (Where you can use chat at Facebook itself, not on MESSenger.com)
+||facebook.com/*?modules=MessengerWebDeltasTypedLogger$important
+
 ! Prevent ping active status, this probably prevent your friends noticeable that you're onlinebecaue allowing 'active_ping'
 ! connections will be expose online status, regardless of your active status settings that you've turned off already.
 ||edge-chat.facebook.com/active_ping?$important
@@ -35,3 +38,7 @@ facebook.com##.fb_content div[class] > div[class] > #watch_feed div[class] div[c
 ! Note: Bookmarklet script is only work for english UI users only (UK, US, Pirate)
 ! javascript:(function()%7Bvar%20divs%20%3D%20document.querySelectorAll('a%5Brole%3Dbutton%5D%5Bdata-tooltip-content%3D%22Remove%20Suggestion%22%5D')%3B%20for%20(i%20%3D%200%3B%20i%20%3C%20divs.length%3B%20%2B%2Bi)%20%7Bdivs%5Bi%5D.click()%3B%7D%7D)()
 ||facebook.com/ajax/pagelet/generic.php/PagesBrowserTopSuggestionsPagelet$xmlhttprequest,important,redirect=nooptext
+
+! [Facebook Touch]
+! This possibly to tracking the news feed load time (In order to trigger the "Switch to Basic site" if news feed load too slow)
+||facebook.com/ajax/mtouch_perf_page_load_timings/$important
