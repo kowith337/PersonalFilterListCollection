@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.3]
 ! Title: kowith337's Test List
-! Version: 201812151429
+! Version: 201812151436
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -22,12 +22,12 @@ facebook.com##.fb_content div[class] > div[class] > #watch_feed div[class] div[c
 ! Possibly tracking the "Typing" state of MESSenger delta (Where you can use chat at Facebook itself, not on MESSenger.com)
 ||facebook.com/*?modules=MessengerWebDeltasTypedLogger$important
 
-! Prevent ping active status, this probably prevent your friends noticeable that you're onlinebecaue allowing 'active_ping'
+! Prevent ping active status, this probably prevent your friends noticeable that you're online becaue allowing 'active_ping'
 ! connections will be expose online status, regardless of your active status settings that you've turned off already.
 ||edge-chat.facebook.com/active_ping?$important
 ||*edge-chat.facebook.com/active_ping?$important
 
-! Prevent modules connections that autoplay GIF comments
+! Prevent modules connections that autoplay GIF comments (May doesn't work at all!)
 ! Noticed that Facebook start to autoplay GIF images in comments when you scroll to it, same behaviour of autoplay videos, maybe.
 ||facebook.com/*?modules=FeedAnimatedImageShare$important
 ||facebook.com/*?modules=UFI2CommentAnimatedImageAttachmentPlayer$important
