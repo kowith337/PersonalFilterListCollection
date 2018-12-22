@@ -1,0 +1,34 @@
+[uBlock Origin 1.17.5.3]
+! Title: Enhance Facebook Username Hider for Compilation Creators
+! Version: 201812222022
+! Author: kowith337
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection
+! Expires: 2 days
+! Credits / Based on: https://github.com/DandelionSprout/adfilt/raw/master/Username%2520Hider%2520for%2520Compilation%2520Creators.txt
+
+! [Facebook Desktop] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+! Hide your name on top (blue bar)
+facebook.com##div[role="navigation"] div[data-click="profile_icon"] a span span
+
+! Hide your name in left side home menu
+facebook.com###pagelet_navigation #sideNav #userNav ul li[data-pinned="1"] a[data-testid^="left_nav_item_"] .linkWrap
+
+! Hide profile name over cover image on profile page, remove shadow included
+facebook.com###fb-timeline-cover-name[data-testid="profile_name_in_profile_page"] a
+
+! Hide page name from shared posts
+facebook.com##.userContentWrapper div[data-ft] .mts .mtm span a[data-hovercard]
+
+! Hide name in shared posts where more than 2 peoples share same article
+! facebook.com##div[data-ft] a[class="profileLink"]
+
+! Hide name in comments
+facebook.com##.userContentWrapper form[rel][class] div > div[data-testid] div[role="article"] div[class] > div a[data-hovercard]
+
+! Hide name in stories
+facebook.com###stories_tray div > div[data-onkeypress*="onStoryTrayItemSelect"] div.verbose div[dir]
+facebook.com###fb_stories_card_root div[class*="vertical"] div[tabindex] .verbose div[dir]
+facebook.com###fbStoryContainer div > a[uid][data-hovercard]
+
+! Hide name in photos popup
+facebook.com###fbPhotoSnowliftAuthorName
