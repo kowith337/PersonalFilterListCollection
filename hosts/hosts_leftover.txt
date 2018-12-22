@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201812221940
+# Version: 201812221944
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -29,7 +29,9 @@
 # Note: this will surely break Facebook completely, due to mobile operators who deploy "Free Basics" services are mostly have
 #       traffic redirect to "h.facebook.com" (without HTTPS connections!) and "mobile.facebook.com", I didn't see any connections
 #       made to those 2 domains if using normal network (Home Wi-Fi, Workplace, etc.), but appear when use mobile data, no matter
-#       that you're opt in to use Facebook for free (if you won't care your data) or not!
+#       that you're opt in to use Facebook for free (if you won't care your data and phone number) or not!
+#       Please understand that I'm totally BAN this things because everything about Facebook will be broke on mobile data by
+#       themselves, both norm and functionality! sorry if this things make it worst than that.
 0.0.0.0 0.freebasics.com
 0.0.0.0 api.freebasics.com
 0.0.0.0 api.internet.org
