@@ -1,13 +1,53 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201812221729
+# Version: 201812221940
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
 # Expires: 2 days
 
-# Note: This use to re-blocking unblocked hosts in common hosts file, it's not recommended to use for workplace or company setup,
-#       just only my opinion and personal bias, you can use this at your own risk!
+# Note: This use to re-blocking unblocked hosts in common hosts file, unneccessary connections that should not be happen, etc.
+#       it's not recommended to use for workplace or company setup, just only my opinion and personal bias!
+#       you can use this at your own risk!
+
+# Facebook tracking link wrapping, you should modify URLs by yourself or use with uBlock/uMatrix in order to resolve actual URLs
+0.0.0.0 l.facebook.com
+0.0.0.0 lm.facebook.com
+
+# Alternative Facebook API/Graph domains, include "PIXEL" domain
+0.0.0.0 a-api.facebook.com
+0.0.0.0 a-graph.facebook.com
+0.0.0.0 a-pixel.facebook.com
+0.0.0.0 a-www.facebook.com
+0.0.0.0 b-api.facebook.com
+0.0.0.0 b-graph.facebook.com
+0.0.0.0 b-pixel.facebook.com
+0.0.0.0 b-www.facebook.com
+0.0.0.0 pixel.facebook.com
+
+# FREE BASUCKS <- NOT TYPO!
+# Note: this will surely break Facebook completely, due to mobile operators who deploy "Free Basics" services are mostly have
+#       traffic redirect to "h.facebook.com" (without HTTPS connections!) and "mobile.facebook.com", I didn't see any connections
+#       made to those 2 domains if using normal network (Home Wi-Fi, Workplace, etc.), but appear when use mobile data, no matter
+#       that you're opt in to use Facebook for free (if you won't care your data) or not!
+0.0.0.0 0.freebasics.com
+0.0.0.0 api.freebasics.com
+0.0.0.0 api.internet.org
+0.0.0.0 error.facebook.com
+0.0.0.0 free.facebook.com
+0.0.0.0 freebasics.com
+0.0.0.0 graph.freebasics.org
+0.0.0.0 graph.internet.org
+0.0.0.0 h.beta.facebook.com
+0.0.0.0 h.facebook.com
+0.0.0.0 mobile.beta.facebook.com
+0.0.0.0 mobile.facebook.com
+0.0.0.0 mobile.freebasics.com
+0.0.0.0 mobile.internet.org
+0.0.0.0 o.freebasics.com
+0.0.0.0 web.beta.facebook.com
+0.0.0.0 web.facebook.com
+0.0.0.0 zero.facebook.com
 
 # Firefox Betrayed Backend Domains (Telemetry, Health Report, Personalize content suggestions)
 0.0.0.0 api.getpocket.com
@@ -59,7 +99,6 @@
 0.0.0.0 effectivemeasure.net
 0.0.0.0 evidon.com
 0.0.0.0 fout.jp
-0.0.0.0 freebasics.com
 0.0.0.0 gammaplatform.com
 0.0.0.0 genieessp.com
 0.0.0.0 genieesspv.jp
@@ -218,7 +257,6 @@
 0.0.0.0 www.vt-rbs.com
 
 # Generic Sublevel
-0.0.0.0 0.freebasics.com
 0.0.0.0 3326.tm.zedo.com
 0.0.0.0 acds.vidible.tv
 0.0.0.0 ad.doubleclick.net
@@ -261,8 +299,6 @@
 0.0.0.0 adservice.google.co.uk
 0.0.0.0 adservice.google.com
 0.0.0.0 api.cxense.com
-0.0.0.0 api.freebasics.com
-0.0.0.0 api.internet.org
 0.0.0.0 api.userstyles.org
 0.0.0.0 as.innity.com
 0.0.0.0 as.innity.net
@@ -270,9 +306,6 @@
 0.0.0.0 autopost.cutedev.net
 0.0.0.0 avd.innity.com
 0.0.0.0 avd.innity.net
-0.0.0.0 b-api.facebook.com
-0.0.0.0 b-graph.facebook.com
-0.0.0.0 b-www.facebook.com
 0.0.0.0 bam.nr-data.net
 0.0.0.0 blog.cutedev.net
 0.0.0.0 byteark-analytics.thairath.co.th
@@ -297,20 +330,14 @@
 0.0.0.0 d3.yengo.com
 0.0.0.0 dev.visualwebsiteoptimizer.com
 0.0.0.0 engage.wixapps.net
-0.0.0.0 error.facebook.com
 0.0.0.0 firmware.cutedev.net
-0.0.0.0 free.facebook.com
 0.0.0.0 ftp.silkspan.com
 0.0.0.0 g.doubleclick.net
 0.0.0.0 go.nordvpn.com
 0.0.0.0 go1.aniview.com
 0.0.0.0 go2.aniview.com
 0.0.0.0 go3.aniview.com
-0.0.0.0 graph.freebasics.org
-0.0.0.0 graph.internet.org
 0.0.0.0 graph.sanook.com
-0.0.0.0 h.beta.facebook.com
-0.0.0.0 h.facebook.com
 0.0.0.0 ho.lazada.co.th
 0.0.0.0 hw-cdn.contentabc.com
 0.0.0.0 hw-cdn.trafficjunky.net
@@ -339,8 +366,6 @@
 0.0.0.0 js.mtburn.com
 0.0.0.0 js.mtburn.jp
 0.0.0.0 js.rfp.fout.jp
-0.0.0.0 l.facebook.com
-0.0.0.0 lm.facebook.com
 0.0.0.0 loadbalancer.visitor-analytics.io
 0.0.0.0 lvs.truehits.in.th
 0.0.0.0 lvs2.truehits.in.th
@@ -349,10 +374,6 @@
 0.0.0.0 media.innity.com
 0.0.0.0 media.innity.net
 0.0.0.0 mobile-collector.newrelic.com
-0.0.0.0 mobile.beta.facebook.com
-0.0.0.0 mobile.facebook.com
-0.0.0.0 mobile.freebasics.com
-0.0.0.0 mobile.internet.org
 0.0.0.0 n.ads1-adnow.com
 0.0.0.0 n.ads2-adnow.com
 0.0.0.0 n.ads3-adnow.com
@@ -362,11 +383,9 @@
 0.0.0.0 n.ads7-adnow.com
 0.0.0.0 n.ads8-adnow.com
 0.0.0.0 n.ads9-adnow.com
-0.0.0.0 o.freebasics.com
 0.0.0.0 openx.notebookspec.com
 0.0.0.0 opps.taboola.com
 0.0.0.0 ping.ublock.org
-0.0.0.0 pixel.facebook.com
 0.0.0.0 platform-api.sharethis.com
 0.0.0.0 play.aniview.com
 0.0.0.0 player-cdn.beachfrontmedia.com
@@ -443,8 +462,6 @@
 0.0.0.0 vidstat.taboola.com
 0.0.0.0 vz-cdn.contentabc.com
 0.0.0.0 vz-cdn.trafficjunky.net
-0.0.0.0 web.beta.facebook.com
-0.0.0.0 web.facebook.com
 0.0.0.0 webservice.silkspan.com
 0.0.0.0 wf.taboola.com
 0.0.0.0 widget.perfectmarket.com
@@ -460,7 +477,6 @@
 0.0.0.0 www.ublock.org
 0.0.0.0 www.yengo.com
 0.0.0.0 www2.silkspan.com
-0.0.0.0 zero.facebook.com
 
 # Adware Sublevel
 0.0.0.0 antivirus.baidu.com
