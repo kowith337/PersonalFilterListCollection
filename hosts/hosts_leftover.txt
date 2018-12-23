@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201812221944
+# Version: 201812231329
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -14,7 +14,7 @@
 0.0.0.0 l.facebook.com
 0.0.0.0 lm.facebook.com
 
-# Alternative Facebook API/Graph domains, include "PIXEL" domain
+# Alternative Facebook API/Graph domains, include error reporting and "PIXEL" domain
 0.0.0.0 a-api.facebook.com
 0.0.0.0 a-graph.facebook.com
 0.0.0.0 a-pixel.facebook.com
@@ -23,6 +23,7 @@
 0.0.0.0 b-graph.facebook.com
 0.0.0.0 b-pixel.facebook.com
 0.0.0.0 b-www.facebook.com
+0.0.0.0 error.facebook.com
 0.0.0.0 pixel.facebook.com
 
 # FREE BASUCKS <- NOT TYPO!
@@ -35,7 +36,6 @@
 0.0.0.0 0.freebasics.com
 0.0.0.0 api.freebasics.com
 0.0.0.0 api.internet.org
-0.0.0.0 error.facebook.com
 0.0.0.0 free.facebook.com
 0.0.0.0 freebasics.com
 0.0.0.0 graph.freebasics.org
