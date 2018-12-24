@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.3]
 ! Title: kowith337's Test List
-! Version: 201812151436
+! Version: 201812241802
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -8,7 +8,7 @@
 
 ! [Facebook Desktop] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ! DOM Only: Remove "Top Picks" product from marketplace lists, only work for english UI users only (UK, US, Pirate)
-##div[data-testid="marketplace_home_feed"] div[class] > div[class]:has(span[itemcomponent]:has-text(/^Top picks/))
+facebook.com##div[data-testid="marketplace_home_feed"] div[class] > div[class]:has(span[itemcomponent]:has-text(/^Top picks/))
 
 ! DOM Only: Top videos for you...? No! Not Me and You! but for someone else!!
 ! Test case to hide every zuckestions of videos and leave only watchlst from pages you're following...
@@ -46,3 +46,9 @@ facebook.com##.fb_content div[class] > div[class] > #watch_feed div[class] div[c
 ! [Facebook Touch] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ! This possibly to tracking the news feed load time (In order to trigger the "Switch to Basic site" if news feed load too slow)
 ||facebook.com/ajax/mtouch_perf_page_load_timings/$important
+
+! I want to remove "Open in app" pane when open Facebook Gaming Page from mobile browser, but currently I can only remove button.
+m.facebook.com,touch.facebook.com###root[role="main"] div[data-store-id] div[class] a[data-click*="open_in_app"]
+
+! Try to remove weird square box that divide almost every comments
+m.facebook.com,touch.facebook.com##div[data-sigil="comment"] section.touchable[data-ad-preview="carousel-card"]
