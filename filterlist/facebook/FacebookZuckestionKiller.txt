@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201812151356
+! Version: 201812271029
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -523,6 +523,14 @@ m.facebook.com,touch.facebook.com##section article .story_body_container header 
 ! Hide zuckestions items pane to enforce Facebook fill up their zuckestions, but in fact you see none of any zuckestions at all!
 m.facebook.com,touch.facebook.com###friends_center_main div[data-pymk-id]
 m.facebook.com,touch.facebook.com##.async_fan:has(div div a.darkTouch[href*="pages_nav_discover"])
+
+! Once you've redirect to "Free Basics" prompt page (for example https://m.faccebook.com/zero/policy/optin) these rules below
+! will remove the details of "Free Basics" service (descriptyion, legal link) and "Accept" button, only leave "Cancel" button to
+! make sure you didn't accidentally accept the terms and apply their "Free Basics" service at all!
+m.facebook.com,mbasic.facebook.com##div[role="article"] div:has(div > span a[href*="/zero/optin/legal/"])
+m.facebook.com,mbasic.facebook.com##form[action^="/zero/optin/write/"] input[type="submit"]
+m.facebook.com,touch.facebook.com###root div article div:has(span a[href*="/zero/optin/legal/"])
+m.facebook.com,touch.facebook.com###root div article form[action*="/zero/optin/write/"] button[type="submit"]
 
 !#if env_mobile
 ! Hide some page admin pane to invite, get tips, etc.
