@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201812271029
+! Version: 201812310920
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -30,7 +30,7 @@
 ||facebook.com/ads/manager/ajax/megaphone_story$important
 ||facebook.com/ads/preferences/mobile_log/?$important
 ||facebook.com/ads/qe/$important
-||facebook.com/ai.php$frame,subdocument,important
+||facebook.com/ai.php$subdocument,important
 ||facebook.com/ajax/ads/$important
 ||facebook.com/ajax/browse/null_state.php$important
 ||facebook.com/ajax/haste-response/?modules=*LinkshimLogController$important
@@ -183,7 +183,6 @@
 ! [Super lightweight Facebook enhancement]
 ! It's no need to load anything that not matter to use, because `mbasic.facebook.com` can work fine without JavaScript,
 ! Inline script, iframe and third party resources.
-||$frame,domain=mbasic.facebook.com
 ||$inline-script,domain=mbasic.facebook.com
 ||$script,domain=mbasic.facebook.com
 ||$subdocument,domain=mbasic.facebook.com
@@ -200,18 +199,18 @@
 ||facebook.com/ads/boosted_components/fetch_ad_account_data/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/ads/coupon/read/offer_data/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/ads/preferences/mobile_log/?$xmlhttprequest,important,redirect=nooptext
-||facebook.com/common/referer_frame.php$frame,subdocument,important,redirect=noopframe
+||facebook.com/common/referer_frame.php$subdocument,important,redirect=noopframe
 ||facebook.com/feed/badge/$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/feedtracking/$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/related-application/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
-||facebook.com/sem_pixel/1/control/0/$frame,subdocument,important,redirect=noopframe
-||facebook.com/sem_pixel/1/control/1/$frame,subdocument,important,redirect=noopframe
+||facebook.com/sem_pixel/1/control/0/$subdocument,important,redirect=noopframe
+||facebook.com/sem_pixel/1/control/1/$subdocument,important,redirect=noopframe
 ||facebook.com/ufi/typing/*/start/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/ufi/typing/*/stop/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/video/instream_video/rapid_feedback$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/xti.php$image,important,redirect=1x1-transparent.gif
-||facebook.com/xti.php$frame,subdocument,important,redirect=noopframe
+||facebook.com/xti.php$subdocument,important,redirect=noopframe
 ||facebook.net/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
 ||fbcdn.net/hads-ak-*/*.png$image,important,redirect=2x2-transparent.png
 ||fbcdn.net/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
