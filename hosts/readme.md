@@ -13,6 +13,8 @@ Due to some reason that based on few IMHO problems below...
   - Unfortunately, when I'm use on mobile data, Facebook try to redirect away, and then landing to the subdomains that prepared for mobile data users, so I decide to block it all because it's possible to leak some data (mainly about cookies and session data) to mobile operator itself that maybe easy to read without needed any tools to decrypt!
     - And seems like Facebook try to forcefully make users to subscribe their `Free Basics` plan, in order to allow you enjoying to use Facebook and related services for free (however, the large size {means about data} images and videos wouldn't load), while keep tracking your information and data all the time...
 
+I have no guaranteed about any breakage to use or setup with my lists below, however, you're still free to share your opinion, suggestions and improvements in the issues dashboard.
+
 | List Name | Copy raw location |
 | ----- | ----- |
 | **Active** |  |
