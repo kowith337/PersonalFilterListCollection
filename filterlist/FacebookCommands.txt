@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Bullshit Commands List
-! Version: 201812151353
+! Version: 201901042213
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -10,246 +10,108 @@
 !       these rules below will disable many JavaScript functions and also prevent lots of network requests.
 !       Although, the script blocking may not work as expected, but few rules will work in alphabetically.
 
-! #if ext_firefox
-! Function abort (Only Firefox quantum)
-! facebook.com##^script:has-text(AYMTHomepagePanelTypedLogger)
-! facebook.com##^script:has-text(AdAllocationIntegrityGapsInfo)
-! facebook.com##^script:has-text(AdAllocationIntegrityUtils)
-! facebook.com##^script:has-text(AdBlockerDetectorLogging)
-! facebook.com##^script:has-text(AdBreakInsertionDisabledReason)
-! facebook.com##^script:has-text(AdImpressionLoggingConfig)
-! facebook.com##^script:has-text(AdInterfacesUiLogger)
-! facebook.com##^script:has-text(AdPageMessageTypeEnum)
-! facebook.com##^script:has-text(AdsCollectionsConstants)
-! facebook.com##^script:has-text(AdsEmptyValue)
-! facebook.com##^script:has-text(AdsError)
-! facebook.com##^script:has-text(AdsGetter)
-! facebook.com##^script:has-text(AdsGuidanceUnifiedNavigationTip)
-! facebook.com##^script:has-text(AdsIntelligentBlueTipContainer)
-! facebook.com##^script:has-text(AdsInterfacesComponentsEventCategory)
-! facebook.com##^script:has-text(AdsInterfacesComponentsEventName)
-! facebook.com##^script:has-text(AdsInterfacesComponentsLogger)
-! facebook.com##^script:has-text(AdsInterfacesLogger)
-! facebook.com##^script:has-text(AdsLogger)
-! facebook.com##^script:has-text(AdsLoggerConstants)
-! facebook.com##^script:has-text(AdsMouseStateStore)
-! facebook.com##^script:has-text(AdsPagerConstants)
-! facebook.com##^script:has-text(AdsPagerDispatcher)
-! facebook.com##^script:has-text(AdsPixelDialogTypes)
-! facebook.com##^script:has-text(AdsPixelEventNames)
-! facebook.com##^script:has-text(AdsPixelTableColumns)
-! facebook.com##^script:has-text(AdsPixelViewActions)
-! facebook.com##^script:has-text(AdsProfileAdPreview)
-! facebook.com##^script:has-text(AdsProfileBehaviorItem)
-! facebook.com##^script:has-text(AdsProfileDemographicsView)
-! facebook.com##^script:has-text(AdsProfileDispatcher)
-! facebook.com##^script:has-text(AdsProfileEducationCarousel)
-! facebook.com##^script:has-text(AdsProfileInterestAdModal)
-! facebook.com##^script:has-text(AdsProfileSampleAdsStore)
-! facebook.com##^script:has-text(AdsProfileSuggestionsItem)
-! facebook.com##^script:has-text(AdsProfileSuggestionsModal)
-! facebook.com##^script:has-text(AdsRefreshHandler)
-! facebook.com##^script:has-text(AdsRichSelector)
-! facebook.com##^script:has-text(AdsScenarios)
-! facebook.com##^script:has-text(AdsSelectedAccountGetter)
-! facebook.com##^script:has-text(AdsTransparencyAdvertiserEnum)
-! facebook.com##^script:has-text(AdsTransparencyEvent)
-! facebook.com##^script:has-text(AdsTransparencyProduct)
-! facebook.com##^script:has-text(AdsTransparencyProductElement)
-! facebook.com##^script:has-text(AdsTransparencyTypedLogger)
-! facebook.com##^script:has-text(AdsVideoFetcher)
-! facebook.com##^script:has-text(AdvertiserHomePagelet)
-! facebook.com##^script:has-text(AttachmentRelatedShareTimingConstants)
-! facebook.com##^script:has-text(BoostedComponentPromotionsManagerStrings)
-! facebook.com##^script:has-text(ClickRefLogger)
-! facebook.com##^script:has-text(CommercialBreakHostStoryComponentType)
-! facebook.com##^script:has-text(CommercialBreakMobileEvent)
-! facebook.com##^script:has-text(CommercialBreakVideoHide)
-! facebook.com##^script:has-text(ControlledReferer)
-! facebook.com##^script:has-text(DimensionTracking)
-! facebook.com##^script:has-text(DynamicAdsXOutOptionName)
-! facebook.com##^script:has-text(EducationPromotionTriggerInfo)
-! facebook.com##^script:has-text(EgoSectionExpander)
-! facebook.com##^script:has-text(EgoUnitSlideInsert)
-! facebook.com##^script:has-text(EntstreamAttachmentRelatedFBVideo)
-! facebook.com##^script:has-text(EntstreamAttachmentRelatedShare)
-! facebook.com##^script:has-text(ExternalTrackingTag)
-! facebook.com##^script:has-text(FBStoriesLoggingHelper)
-! facebook.com##^script:has-text(FbFeedAttachmentRelatedShare)
-! facebook.com##^script:has-text(FeedAdsClickLogger)
-! facebook.com##^script:has-text(FeedAdsGapRuleViolationDetectionFix)
-! facebook.com##^script:has-text(FeedStoryOptionMenuTypedLogger)
-! facebook.com##^script:has-text(FeedTrackingAsync)
-! facebook.com##^script:has-text(FunnelLogger)
-! facebook.com##^script:has-text(FunnelLoggerSampler)
-! facebook.com##^script:has-text(HomeRHCAdsBasicRefresh)
-! facebook.com##^script:has-text(InteractionTracker)
-! facebook.com##^script:has-text(ItunesDetector)
-! facebook.com##^script:has-text(ItunesPluginLogging)
-! facebook.com##^script:has-text(KappaWrapper)
-! facebook.com##^script:has-text(LinkshimLogController)
-! facebook.com##^script:has-text(MAdsPrefsFeedback)
-! facebook.com##^script:has-text(MAdsScrollOnMarginTap)
-! facebook.com##^script:has-text(MAdsUtils)
-! facebook.com##^script:has-text(MFeedAdsGapRuleViolationDetection)
-! facebook.com##^script:has-text(MFeedChaining)
-! facebook.com##^script:has-text(MLinkshim)
-! facebook.com##^script:has-text(MNAdsLogMessageUtils)
-! facebook.com##^script:has-text(MNAdsLoggerEventEnum)
-! facebook.com##^script:has-text(MNAdsMessageUtils)
-! facebook.com##^script:has-text(MPymkFunnelLogger)
-! facebook.com##^script:has-text(MQuickPromotion)
-! facebook.com##^script:has-text(MRecentSearchesUpdater)
-! facebook.com##^script:has-text(MSearchTrendingLogger)
-! facebook.com##^script:has-text(MSearchTypeaheadLogger)
-! facebook.com##^script:has-text(MSearchTypeaheadPerfLoggerUtil)
-! facebook.com##^script:has-text(MSearchTypeaheadPerfLoggerV2)
-! facebook.com##^script:has-text(MTokenizerWithSuggestions)
-! facebook.com##^script:has-text(MTypeaheadNullstateSource)
-! facebook.com##^script:has-text(MViewableImpressionTracking)
-! facebook.com##^script:has-text(MobileZeroRewriteURL)
-! facebook.com##^script:has-text(NetEgo)
-! facebook.com##^script:has-text(NetEgoShowcase)
-! facebook.com##^script:has-text(NonBlockingIFrame)
-! facebook.com##^script:has-text(PageContextualRecommendationsTrigger)
-! facebook.com##^script:has-text(PhotoSnowliftViewableWithContextMenuLogging)
-! facebook.com##^script:has-text(PubcontentFeedChainingControllerX)
-! facebook.com##^script:has-text(PubcontentFeedChainingInjectionUtils)
-! facebook.com##^script:has-text(PubcontentSuggestionsUtil)
-! facebook.com##^script:has-text(ReactComposerFeedSurvey)
-! facebook.com##^script:has-text(ReactComposerMagicTagSurvey)
-! facebook.com##^script:has-text(SavedForLaterChromeExtensionToastNux)
-! facebook.com##^script:has-text(ShareDialogMessageAudience)
-! facebook.com##^script:has-text(ShowsPYMFUtils)
-! facebook.com##^script:has-text(TrackingPixel)
-! facebook.com##^script:has-text(TypeaheadMetricReporter)
-! facebook.com##^script:has-text(UFIOrderingModeSelectorContainer)
-! facebook.com##^script:has-text(VideoAutoplayController)
-! facebook.com##^script:has-text(VideoChainingToken)
-! facebook.com##^script:has-text(VideoWatchAndScrollEndScreen)
-! facebook.com##^script:has-text(ViewableImpressionDurationLogger)
-! facebook.com##^script:has-text(ViewableImpressionEventHandler)
-! facebook.com##^script:has-text(ViewableImpressionHeatmapLogger)
-! facebook.com##^script:has-text(ViewableImpressionTracking)
-! facebook.com##^script:has-text(ViewableImpressionUtils)
-! facebook.com##^script:has-text(VisibilityTracking)
-! facebook.com##^script:has-text(VisibilityTrackingHelper)
-! facebook.com##^script:has-text(XAYMTPanelSaveSettingsController)
-! facebook.com##^script:has-text(XAdPreferencesNUXController)
-! facebook.com##^script:has-text(XAdsCMController)
-! facebook.com##^script:has-text(XAdsPreferencesFeedbackController)
-! facebook.com##^script:has-text(XCommerceResponse)
-! facebook.com##^script:has-text(XEducationPromotionTriggerRecordController)
-! facebook.com##^script:has-text(XEgoExpandAsyncController)
-! facebook.com##^script:has-text(XEventRelatedEventsPivotController)
-! facebook.com##^script:has-text(XFeedAdsChainingController)
-! facebook.com##^script:has-text(XFeedChainingAsyncController)
-! facebook.com##^script:has-text(XFeedEgoImpressionLoggingController)
-! facebook.com##^script:has-text(XFundraiserAttachmentPivotController)
-! facebook.com##^script:has-text(XLinkshimLogController)
-! facebook.com##^script:has-text(XMobileSearchTrendingLoggingController)
-! facebook.com##^script:has-text(XPubcontentChainedSuggestionsController)
-! facebook.com##^script:has-text(XPubcontentCommerceProductChainingController)
-! facebook.com##^script:has-text(XPubcontentFeedChainingController)
-! facebook.com##^script:has-text(XPubcontentFeedCommentChainingController)
-! facebook.com##^script:has-text(XPubcontentGroupRelatedStoriesChainingController)
-! facebook.com##^script:has-text(XPubcontentImpressionLoggingController)
-! facebook.com##^script:has-text(XPubcontentInlinePhotoPivotsEventsController)
-! facebook.com##^script:has-text(XPubcontentInlineStoryPivotChainingController)
-! facebook.com##^script:has-text(XPubcontentLocalNewsChainingController)
-! facebook.com##^script:has-text(XPubcontentPoliticalIssueChainingController)
-! facebook.com##^script:has-text(XPubcontentRelatedShareChainingController)
-! facebook.com##^script:has-text(XPubcontentRelatedVideoChainingController)
-! facebook.com##^script:has-text(XPubcontentRelatedVideoInlineController)
-! facebook.com##^script:has-text(XPubcontentTopicChainingController)
-! facebook.com##^script:has-text(XPymkFunnelLoggingController)
-! facebook.com##^script:has-text(XQuickPromotionSimpleLoggingController)
-! facebook.com##^script:has-text(XRefererFrameController)
-! facebook.com##^script:has-text(XRelatedGamesChainingController)
-! facebook.com##^script:has-text(XSearchFacebarSurveyController)
-! facebook.com##^script:has-text(XSearchRelatedPostsPivotController)
-! facebook.com##^script:has-text(XSetNUXSeenController)
-! facebook.com##^script:has-text(XSpokespersonProductChainingController)
-! facebook.com##^script:has-text(XVideoQualitySurveyController)
-! facebook.com##^script:has-text(XVideoWNSSurveyController)
-! facebook.com##^script:has-text(XVideoWnsUpNextAsyncController)
-! facebook.com##^script:has-text(adBreakIndicatorShowing)
-! facebook.com##^script:has-text(ads-lib-formatters)
-! facebook.com##^script:has-text(ads-lib-urllib)
-! facebook.com##^script:has-text(getAdBreakTabState)
-! facebook.com##^script:has-text(getAdBreakTabStateFromDisabledReasons)
-! facebook.com##^script:has-text(getEventTarget)
-! facebook.com##^script:has-text(getMaxPossibleAdBreaks)
-! facebook.com##^script:has-text(isAdsExcelAddinURI)
-! facebook.com##^script:has-text(isLinkshimURI)
-! facebook.com##^script:has-text(trackReferrer)
-! #endif
-
 ! ?modules request block
 ||facebook.com/*?modules=*LinkshimLogController$important
 ||facebook.com/*?modules=AYMTHomepagePanelTypedLogger$important
+||facebook.com/*?modules=AbandonedSessionSurvey$important
 ||facebook.com/*?modules=AdAllocationIntegrityGapsInfo$important
 ||facebook.com/*?modules=AdAllocationIntegrityUtils$important
 ||facebook.com/*?modules=AdBlockerDetectorLogging$important
 ||facebook.com/*?modules=AdBreakInsertionDisabledReason$important
+||facebook.com/*?modules=AdDelayedHiddenCheckConfiguration$important
 ||facebook.com/*?modules=AdImpressionLoggingConfig$important
 ||facebook.com/*?modules=AdInterfacesUiLogger$important
 ||facebook.com/*?modules=AdPageMessageTypeEnum$important
+||facebook.com/*?modules=AdPreferencesEducationPageSubtype$important
+||facebook.com/*?modules=AdsAPIImageFields$important
+||facebook.com/*?modules=AdsAdobjectDataLoadStateStore$important
+||facebook.com/*?modules=AdsAppVisibilityFocusDataActionFlux$important
 ||facebook.com/*?modules=AdsCollectionsConstants$important
+||facebook.com/*?modules=AdsConversionPixelStatusUI$important
 ||facebook.com/*?modules=AdsEmptyValue$important
 ||facebook.com/*?modules=AdsError$important
+||facebook.com/*?modules=AdsFeedbackConstants$important
+||facebook.com/*?modules=AdsFilterChangeTypes$important
+||facebook.com/*?modules=AdsGenericFilter$important
 ||facebook.com/*?modules=AdsGetter$important
 ||facebook.com/*?modules=AdsGuidanceUnifiedNavigationTip$important
 ||facebook.com/*?modules=AdsIntelligentBlueTipContainer$important
+||facebook.com/*?modules=AdsInteractions$important
 ||facebook.com/*?modules=AdsInterfacesComponentsEventCategory$important
 ||facebook.com/*?modules=AdsInterfacesComponentsEventName$important
 ||facebook.com/*?modules=AdsInterfacesComponentsLogger$important
 ||facebook.com/*?modules=AdsInterfacesLogger$important
+||facebook.com/*?modules=AdsInterfacesRouteConstants$important
+||facebook.com/*?modules=AdsLWIErrorCode$important
 ||facebook.com/*?modules=AdsLWISimilarPromotionsNoticeContainer$important
+||facebook.com/*?modules=AdsLoadState$important
 ||facebook.com/*?modules=AdsLogger$important
 ||facebook.com/*?modules=AdsLoggerConstants$important
 ||facebook.com/*?modules=AdsMouseStateStore$important
+||facebook.com/*?modules=AdsPEReporting$important
 ||facebook.com/*?modules=AdsPagerConstants$important
 ||facebook.com/*?modules=AdsPagerDispatcher$important
+||facebook.com/*?modules=AdsPerfTiming$important
 ||facebook.com/*?modules=AdsPixelDialogTypes$important
 ||facebook.com/*?modules=AdsPixelEventNames$important
 ||facebook.com/*?modules=AdsPixelTableColumns$important
 ||facebook.com/*?modules=AdsPixelViewActions$important
+||facebook.com/*?modules=AdsPreferencesSectionSurvey$important
+||facebook.com/*?modules=AdsPreferencesSectionSurveyResponse$important
 ||facebook.com/*?modules=AdsProfileAdPreview$important
+||facebook.com/*?modules=AdsProfileAdvertiserStore$important
 ||facebook.com/*?modules=AdsProfileBehaviorItem$important
 ||facebook.com/*?modules=AdsProfileDemographicsView$important
 ||facebook.com/*?modules=AdsProfileDispatcher$important
 ||facebook.com/*?modules=AdsProfileEducationCarousel$important
 ||facebook.com/*?modules=AdsProfileInterestAdModal$important
 ||facebook.com/*?modules=AdsProfileSampleAdsStore$important
+||facebook.com/*?modules=AdsProfileSuggestions$important
 ||facebook.com/*?modules=AdsProfileSuggestionsItem$important
 ||facebook.com/*?modules=AdsProfileSuggestionsModal$important
 ||facebook.com/*?modules=AdsRefreshHandler$important
 ||facebook.com/*?modules=AdsRichSelector$important
+||facebook.com/*?modules=AdsRouting$important
 ||facebook.com/*?modules=AdsScenarios$important
 ||facebook.com/*?modules=AdsSelectedAccountGetter$important
+||facebook.com/*?modules=AdsShimmerBar$important
+||facebook.com/*?modules=AdsTargetingLocationLoggingEvents$important
+||facebook.com/*?modules=AdsTargetingViewActionsLogger$important
+||facebook.com/*?modules=AdsTimeRange$important
 ||facebook.com/*?modules=AdsTransparencyAdvertiserEnum$important
 ||facebook.com/*?modules=AdsTransparencyEvent$important
 ||facebook.com/*?modules=AdsTransparencyProduct$important
 ||facebook.com/*?modules=AdsTransparencyProductElement$important
+||facebook.com/*?modules=AdsTransparencySurveyTypedLogger$important
 ||facebook.com/*?modules=AdsTransparencyTypedLogger$important
 ||facebook.com/*?modules=AdsVideoFetcher$important
 ||facebook.com/*?modules=AdvertiserHomePagelet$important
+||facebook.com/*?modules=AppInstallLogger$important
+||facebook.com/*?modules=AppLoggerUtils$important
 ||facebook.com/*?modules=AttachmentRelatedShareTimingConstants$important
 ||facebook.com/*?modules=BoostedComponentPromotionsManagerStrings$important
+||facebook.com/*?modules=BootloaderEventsTypedLogger$important
+||facebook.com/*?modules=BootloaderLoggerUtil$important
+||facebook.com/*?modules=BrowseClickLogger$important
+||facebook.com/*?modules=BrowseClientEventLogger$important
+||facebook.com/*?modules=ChatImpressionLogger$important
 ||facebook.com/*?modules=ClickRefLogger$important
 ||facebook.com/*?modules=CommercialBreakHostStoryComponentType$important
 ||facebook.com/*?modules=CommercialBreakMobileEvent$important
 ||facebook.com/*?modules=CommercialBreakVideoHide$important
+||facebook.com/*?modules=ConnectionsPYMLTypedLogger$important
 ||facebook.com/*?modules=ControlledReferer$important
 ||facebook.com/*?modules=DimensionTracking$important
 ||facebook.com/*?modules=DynamicAdsXOutOptionName$important
 ||facebook.com/*?modules=EducationPromotionTriggerInfo$important
+||facebook.com/*?modules=EgoActionType$important
+||facebook.com/*?modules=EgoPageServiceConstants$important
 ||facebook.com/*?modules=EgoSectionExpander$important
 ||facebook.com/*?modules=EgoUnitSlideInsert$important
 ||facebook.com/*?modules=EntstreamAttachmentRelatedFBVideo$important
 ||facebook.com/*?modules=EntstreamAttachmentRelatedShare$important
 ||facebook.com/*?modules=ExternalTrackingTag$important
+||facebook.com/*?modules=FBLynxWrapper$important
 ||facebook.com/*?modules=FBStoriesLoggingHelper$important
 ||facebook.com/*?modules=FbFeedAttachmentRelatedShare$important
 ||facebook.com/*?modules=FeedAdsClickLogger$important
@@ -258,11 +120,22 @@
 ||facebook.com/*?modules=FeedTrackingAsync$important
 ||facebook.com/*?modules=FunnelLogger$important
 ||facebook.com/*?modules=FunnelLoggerSampler$important
+||facebook.com/*?modules=GBMAdCarousel$important
+||facebook.com/*?modules=GBMAdCarouselItem$important
+||facebook.com/*?modules=GBMAdMasonryGrid$important
+||facebook.com/*?modules=GBMAdModalCarousel$important
+||facebook.com/*?modules=GBMCMSAdCarouselItem$important
+||facebook.com/*?modules=GBMCMSAdMasonryGrid$important
+||facebook.com/*?modules=GBMLeaderboardAdCarouselItem$important
+||facebook.com/*?modules=GBMLeaderboardAdMasonryGrid$important
+||facebook.com/*?modules=GamesImpressionTracker$important
 ||facebook.com/*?modules=HomeRHCAdsBasicRefresh$important
 ||facebook.com/*?modules=InteractionTracker$important
 ||facebook.com/*?modules=ItunesDetector$important
 ||facebook.com/*?modules=ItunesPluginLogging$important
 ||facebook.com/*?modules=KappaWrapper$important
+||facebook.com/*?modules=KeyframesPluginRandomSubdocument$important
+||facebook.com/*?modules=LoadingMarkerVisibilityBasedStateTracker
 ||facebook.com/*?modules=MAdsPrefsFeedback$important
 ||facebook.com/*?modules=MAdsScrollOnMarginTap$important
 ||facebook.com/*?modules=MAdsUtils$important
@@ -282,26 +155,44 @@
 ||facebook.com/*?modules=MTokenizerWithSuggestions$important
 ||facebook.com/*?modules=MTypeaheadNullstateSource$important
 ||facebook.com/*?modules=MViewableImpressionTracking$important
+||facebook.com/*?modules=MainThreadPerformance$important
+||facebook.com/*?modules=MeasurePeopleTypedLogger$important
+||facebook.com/*?modules=MessengerDotComPromotionActionURL$important
+||facebook.com/*?modules=MessengerPromotionData$important
+||facebook.com/*?modules=MessengerWebDeltasTypedLogger$important
+||facebook.com/*?modules=MessengerWebGraphQLTypedLogger
 ||facebook.com/*?modules=MobileZeroRewriteURL$important
 ||facebook.com/*?modules=NetEgo$important
 ||facebook.com/*?modules=NetEgoShowcase$important
 ||facebook.com/*?modules=NonBlockingIFrame$important
 ||facebook.com/*?modules=PageContextualRecommendationsTrigger$important
+||facebook.com/*?modules=PageRecommendationsCircleScore$important
+||facebook.com/*?modules=PagesIntegrityEventTypedLogger$important
 ||facebook.com/*?modules=PhotoSnowliftViewableWithContextMenuLogging$important
 ||facebook.com/*?modules=PubcontentFeedChainingController$important
 ||facebook.com/*?modules=PubcontentFeedChainingInjectionUtils$important
 ||facebook.com/*?modules=PubcontentSuggestionsUtil$important
+||facebook.com/*?modules=PymkFunnelLogger$important
 ||facebook.com/*?modules=QuickLogActionType$important
 ||facebook.com/*?modules=QuickPerformanceLogger$important
+||facebook.com/*?modules=QuickPromotionActionType
 ||facebook.com/*?modules=ReactComposerFeedSurvey$important
 ||facebook.com/*?modules=ReactComposerMagicTagSurvey$important
+||facebook.com/*?modules=ResourceTimingBootloaderHelper$important
+||facebook.com/*?modules=SLPerfTypedLogger$important
 ||facebook.com/*?modules=SavedForLaterChromeExtensionToastNux$important
+||facebook.com/*?modules=SearchClientFunnelTypedLogger$important
+||facebook.com/*?modules=SearchFunnelLogger$important
+||facebook.com/*?modules=SearchLoggingClientUnitIdPrefix$important
+||facebook.com/*?modules=SearchResultPageNavigationPerfTypedLogger$important
+||facebook.com/*?modules=SearchSuggestionsHighlighter$important
 ||facebook.com/*?modules=ShareDialogMessageAudience$important
 ||facebook.com/*?modules=ShowsPYMFUtils$important
 ||facebook.com/*?modules=TahoeBackAffordanceContainer$important
 ||facebook.com/*?modules=TahoeUpNextOverlayAndEndScreen$important
 ||facebook.com/*?modules=TrackingPixel$important
 ||facebook.com/*?modules=TypeaheadMetricReporter$important
+||facebook.com/*?modules=TypingDetector$important
 ||facebook.com/*?modules=UFIOrderingModeSelectorContainer$important
 ||facebook.com/*?modules=VideoAutoplayController$important
 ||facebook.com/*?modules=VideoChainingToken$important
@@ -309,24 +200,33 @@
 ||facebook.com/*?modules=ViewableImpressionDurationLogger$important
 ||facebook.com/*?modules=ViewableImpressionEventHandler$important
 ||facebook.com/*?modules=ViewableImpressionHeatmapLogger$important
+||facebook.com/*?modules=ViewableImpressionTracker$important
 ||facebook.com/*?modules=ViewableImpressionTracking$important
 ||facebook.com/*?modules=ViewableImpressionUtils$important
 ||facebook.com/*?modules=VisibilityTracking$important
 ||facebook.com/*?modules=VisibilityTrackingHelper$important
+||facebook.com/*?modules=VisibilityWatcher$important
+||facebook.com/*?modules=WebBrowserDimensionsResizeTypedLogger$important
 ||facebook.com/*?modules=XAYMTPanelSaveSettingsController$important
+||facebook.com/*?modules=XAYMTPostPickerController$important
 ||facebook.com/*?modules=XAdPreferencesNUXController$important
 ||facebook.com/*?modules=XAdsCMController$important
 ||facebook.com/*?modules=XAdsPreferencesFeedbackController$important
+||facebook.com/*?modules=XBrowseLoggerController$important
 ||facebook.com/*?modules=XCommerceResponse$important
 ||facebook.com/*?modules=XEducationPromotionTriggerRecordController$important
 ||facebook.com/*?modules=XEgoExpandAsyncController$important
 ||facebook.com/*?modules=XEventRelatedEventsPivotController$important
+||facebook.com/*?modules=XFB4BResponsiveAdContentAsyncController$important
 ||facebook.com/*?modules=XFeedAdsChainingController$important
 ||facebook.com/*?modules=XFeedChainingAsyncController$important
 ||facebook.com/*?modules=XFeedEgoImpressionLoggingController$important
 ||facebook.com/*?modules=XFundraiserAttachmentPivotController$important
+||facebook.com/*?modules=XGBMLeaderboardAdItemContentAsyncController$important
+||facebook.com/*?modules=XGameroomLandingPageController$important
 ||facebook.com/*?modules=XLinkshimLogController$important
 ||facebook.com/*?modules=XMobileSearchTrendingLoggingController$important
+||facebook.com/*?modules=XPagesLikeAndReshareShownController$important
 ||facebook.com/*?modules=XPubcontentChainedSuggestionsController$important
 ||facebook.com/*?modules=XPubcontentCommerceProductChainingController$important
 ||facebook.com/*?modules=XPubcontentFeedChainingController$important
@@ -335,6 +235,7 @@
 ||facebook.com/*?modules=XPubcontentImpressionLoggingController$important
 ||facebook.com/*?modules=XPubcontentInlinePhotoPivotsEventsController$important
 ||facebook.com/*?modules=XPubcontentInlineStoryPivotChainingController$important
+||facebook.com/*?modules=XPubcontentInteractionLoggingController$important
 ||facebook.com/*?modules=XPubcontentLocalNewsChainingController$important
 ||facebook.com/*?modules=XPubcontentPoliticalIssueChainingController$important
 ||facebook.com/*?modules=XPubcontentRelatedShareChainingController$important
@@ -354,6 +255,8 @@
 ||facebook.com/*?modules=XVideoWnsUpNextAsyncController$important
 ||facebook.com/*?modules=ads-lib-formatters$important
 ||facebook.com/*?modules=ads-lib-urllib$important
+||facebook.com/*?modules=adsExcelGKCheck$important
+||facebook.com/*?modules=adsGetDateFromAdObject$important
 ||facebook.com/*?modules=getEventTarget$important
 ||facebook.com/*?modules=isAdsExcelAddinURI$important
 ||facebook.com/*?modules=isLinkshimURI$important
