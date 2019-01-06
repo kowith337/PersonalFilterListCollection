@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Google AdService and ID.Google tracking hosts
-# Version: 201811041308
+# Version: 201901061916
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File

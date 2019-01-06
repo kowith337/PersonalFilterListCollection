@@ -1,13 +1,13 @@
 # [uMatrix 1.3.15.100]
 # Title: Facebook Zero Hosts Block
-# Version: 201811222209
+# Version: 201901061916
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
 # Credits: https://github.com/random-robbie/bugbounty-scans/raw/master/facebook.com/urls.txt
 #        : https://github.com/CHEF-KOCH/CKs-FilterList/raw/master/HOSTS/CK's-Facebook-HOSTS-FilterList.txt 
 # Expires: 2 days
-
+# 
 # Note: This aim to block non-formal hosts that serve all Facebook contents and resources from alternative "Free Basics" servers
 #       that it happen when you're using on mobile data over the carrier that collaborate with Facebook to have THAT service!
 #       Currently, all of big 3 carriers in my country are give up to Facebook to let it invade and interrupt usage experience.
@@ -28,7 +28,7 @@
 #       I will keep block those connections, no matter that it will break the functionality to using Facebook on mobile data plan
 #       until they abandone this service and return all connections to the original favor, no redirects, no non-HTTPS, no nagging
 #       or forcing to use that service, just let it should be normal like I'm using Facebook at home or via Proxy/VPN!
-
+# 
 # Note 2: All rules below aren't check with any tools, I just duped and don't know how many "Free Basics" servers are existed?
 
 # FBZero TopLevel
