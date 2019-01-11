@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201901042243
+! Version: 201901112039
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -74,6 +74,7 @@
 ||facebook.com/network_ads_common$important
 ||facebook.com/pages/launchpoint/discover/$document
 ||facebook.com/pages/qe/$important
+||facebook.com/perf/device$important
 ||facebook.com/plugins/likebox.php$important
 ||facebook.com/pubcontent/$important,~xmlhttprequest
 ||facebook.com/pubcontent/$xmlhttprequest
@@ -105,6 +106,7 @@
 ||fbcdn.net/*?*facebook.com%2Fads%2F$important
 ||fbcdn.net/*?*facebook.com%2Fajax%2Fads%2F$important
 ||fbcdn.net/hads-ak-*$important
+||fbcdn.net/rsrc.php/*/-PAXP-*.gif$important
 
 ! Unbreak some functional, e.g. If you want to manage advert prefs, you need to allow some requests to let Facebook retrieve
 ! information about advert prefs, and let you properly manage them without getting error or auto refresh due to cannot sent xhr
@@ -212,6 +214,7 @@
 ||facebook.com/xti.php$subdocument,important,redirect=noopframe
 ||facebook.net/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
 ||fbcdn.net/hads-ak-*/*.png$image,important,redirect=2x2-transparent.png
+||fbcdn.net/rsrc.php/*/-PAXP-*.gif$image,important,redirect=1x1-transparent.gif
 ||fbcdn.net/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
 ||fbsbx.com/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
 ||messenger.com/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
@@ -235,6 +238,7 @@ facebook.com###left_nav_section_nodes ul li[id="navItem_526732794016279"]
 facebook.com###left_nav_section_nodes ul li[id="navItem_645191315628772"]
 facebook.com###left_nav_section_nodes ul li[id="navItem_762992637108088"]
 facebook.com###left_nav_section_nodes ul li[id="navItem_1728807357362356"]
+facebook.com###marketplace_bsg_explore_div #sale_groups_landing_page_recommended_groups div[id^="group_browse"] div[id^="GroupSuggestionCard"]
 facebook.com###mobile_login_bar
 facebook.com###pageInviteNoticeCard
 facebook.com###page_recommendations #recommendations_create_entrypoint_container
