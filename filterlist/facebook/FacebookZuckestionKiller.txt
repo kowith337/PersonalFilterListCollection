@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201901152154
+! Version: 201901152205
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -471,6 +471,8 @@ m.facebook.com,touch.facebook.com###root[role="main"] div[style][data-store-id] 
 m.facebook.com,touch.facebook.com###timelineProfileTiles div > div[data-autoid]:has(a[href*="?v=fun_facts&"])
 m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] > div[class][id^="u_0_"] div[class]:has(div[class][data-sigil^="ad-prefs-survey"])
 m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] > div[class][id^="u_0_"] div[class]:has(div[class][data-sigil^="adprefssurvey"])
+m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] article div[class][id^="u_0_"] div[class]:has(div[class][data-sigil^="ad-prefs-survey"])
+m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] article div[class][id^="u_0_"] div[class]:has(div[class][data-sigil^="adprefssurvey"])
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a span:has-text(Instagram)))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/ads/create/"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/friends/center/suggestions/"]))
