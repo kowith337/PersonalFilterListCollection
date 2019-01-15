@@ -1,40 +1,13 @@
 [uBlock Origin 1.16.20]
-! Title: Anti APKMirror Ads and Countdown
-! Version: 201809262121
+! Title: Anti APKMirror Ads and Countdown [Redirected]
+! Version: 201901151512
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
+! Mirror: https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/specific/AntiAPKMirrorCountdown.txt
 ! Redirect: https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/specific/AntiAPKMirrorCountdown.txt
-
-! Stop making some tears!
-||apkmirror.com/wp-content/themes/APKMirror/images/sadkitten.png$important
-
-! DOM
-apkmirror.com##.OUTBRAIN
-apkmirror.com##.appRow:if(.gooWidget)
-apkmirror.com##.advertisement-text
-apkmirror.com##.amazon-ad
-apkmirror.com##.downloadCountdown
-apkmirror.com##.gooWidget
-apkmirror.com##.google-ad-leaderboard
-apkmirror.com##.google-ad-square-sidebar
-apkmirror.com###sidebar .listWidget:has-text(/Follow APK Mirror/)
-
-! 3P domains block
-||amazon-adsystem.com$domain=apkmirror.com,important
-||crsspxl.com$domain=apkmirror.com,important
-||google-analytics.com$domain=apkmirror.com,important
-||googlesyndication.com$domain=apkmirror.com,important
-||outbrain.com$domain=apkmirror.com,important
-||pagefair.com$domain=apkmirror.com,important
-||pagefair.net$domain=apkmirror.com,important
-||pro-market.net$domain=apkmirror.com,important
-||quantserve.com$domain=apkmirror.com,important
-||referrer.disqus.com$domain=apkmirror.com,important
-||scorecardresearch.com$domain=apkmirror.com,important
-
-! Scriptlets
-apkmirror.com##script:inject(abort-on-property-read.js, visibleAds)
-apkmirror.com##script:inject(abort-on-property-write.js, #downloadCountdownBar)
-apkmirror.com##script:inject(abort-on-property-write.js, ranTwice)
-apkmirror.com##script:inject(abort-on-property-write.js, timerInterval)
+! Note: If you purged and refresh my filterlists and found [Redirected] appear in the subscription list name, now you're get the
+!       lists from redirected source above, however, this placeholder list will be remove soon, consider to copy new address
+!       above, either "Mirror" or "Redirect" and then add to custom filters to keep update, don't forget to press the
+!       "Apply Change" for load the lists at first time after re-add, Thank you!
+!#include specific/AntiAPKMirrorCountdown.txt

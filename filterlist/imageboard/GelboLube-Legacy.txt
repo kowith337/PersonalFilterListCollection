@@ -1,13 +1,14 @@
 [uBlock Origin 1.16.7.2]
 ! Title: GelboLube (Firefox Legacy)
-! Version: 201810311153
+! Version: 201901151318
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/imageboard
 ! From: https://github.com/kowith337/GelboLube/raw/legacy/gelbolube.txt
-
-! 1. It doesn't matter to have any checksum tools because uBo is now fully support filterlists that created on GitHub and
-!    regularly auto check itself when it's outdated more than 2 days.
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/imageboard/GelboLube-Legacy.txt
+! Note: You can read each entry below...
+! 1. It doesn't matter to have any checksum tools because uBo is now fully support filterlists that created on GitHub, GitLab,
+!    etc. and regularly auto check itself when it's outdated more than 2 days.
 ! 2. This rules not completely to hide ads and collapse space, but it still remove ads and unwanted resources.
 !    (e.g. subdocuments and other scripts file that no need to load them)
 ! 3. Author/Owner/Contributor of gelbooru.com will frequently update their sites to keep ads appear.

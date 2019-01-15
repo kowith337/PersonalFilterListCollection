@@ -1,15 +1,16 @@
 [uBlock Origin 1.16.20]
 ! Title: Miscellaneous Annoyance
-! Version: 201812041738
+! Version: 201901151318
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
-
-! An uncategorized / out of scope of site or topic to create the stand alone filterlists
-! will be stay here until the specific site or category are have enough rules.
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/MiscAnnoynace.txt
+! Note: An uncategorized / out of scope of site or topic to create the stand alone filterlists
+!       will be stay here until the specific site or category are have enough rules.
 
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [GitHub]
+github.com##.repository-content .protip
 github.com##div[class^="signup-prompt"]
 
 ! [Minecraft] Forge Ads Pane
@@ -23,10 +24,10 @@ twitter.com###signin-dropdown
 wallgif.com##content .big-modal
 wallgif.com##content .big_modal_bg
 
-! [YouTube Old]
+! [YouTube Non-Polymer]
 youtube.com###hats-container[data-survey-id]
 
-! [YouTube New Polymer]
+! [YouTube Polymer]
 youtube.com##ytd-consent-bump-renderer
 
 ! DOM Chaining - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -107,7 +108,7 @@ greasyfork.org###install-area .post-install:style(width: 0px !important; height:
 ||redditmedia.com/gtm^$subdocument,important,redirect=noopframe
 ||redditstatic.com/gtm^$subdocument,important,redirect=noopframe
 
-! Also, PNG PIXEL TRACKING!?
+! Reddit Again, also PNG PIXEL TRACKING!?
 ||reddit.com/static/pixel.png$image,important,redirect=1x1-transparent.png
 
 ! Block Page(s) / Redirect annoyance - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
