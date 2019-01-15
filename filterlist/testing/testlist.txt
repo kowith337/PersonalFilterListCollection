@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.3]
 ! Title: kowith337's Test List
-! Version: 201901112026
+! Version: 201901152155
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -11,7 +11,7 @@
 facebook.com##div[data-testid="marketplace_home_feed"] div[class] > div[class]:has(span[itemcomponent]:has-text(/^Top picks/))
 
 ! DOM Only: Top videos for you...? No! Not Me and You! but for someone else!!
-! Test case to hide every zuckestions of videos and leave only watchlst from pages you're following...
+! Test case to hide every zuckestions of videos and leave only channel list from pages you're following... (pages tiles)
 ! See example at https://imgur.com/a/PAORHlg
 facebook.com##.fb_content div[class] > div[class] > #watch_feed
 facebook.com##.fb_content div[class] > div[class] > #watch_feed div[class] div[class][data-ft]:has(div span > div span a[href*="?referrer=video_home"])
@@ -56,3 +56,6 @@ m.facebook.com,touch.facebook.com###root[role="main"] div[data-store-id] div[cla
 
 ! Try to remove weird square box that divide almost every comments
 m.facebook.com,touch.facebook.com##div[data-sigil="comment"] section.touchable[data-ad-preview="carousel-card"]
+
+! Remove the "Add" ads interest after you've removed it
+! m.facebook.com,touch.facebook.com##.-hardstate-ads .accelerate div[class] > div[class][style] div[class] > a[data-sigil="add"]
