@@ -1,18 +1,16 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201901151318
+! Version: 201901151557
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/facebook/FacebookZuckestionKiller.txt
-! These rules below are pulled from "Thai Paranoid Block" that have some rules that I've created for hide and remove zuckestions,
-! ads, related contents, also remove ability to link back to related application from Facebook, such as Instagram, MESSenger,
-! even Facebook Lite.
-
-! Some rules below are too long due to use an xpath, or multiple procedural chaining to make sure it won't accidentally remove
-! something that really need.
-
-! Inspired from report on https://github.com/collinbarrett/FilterLists/issues/282
+! Note  : These rules below are pulled from "Thai Paranoid Block" that have some rules that I've created for hide and remove
+!         zuckestions, ads, related contents, also remove ability to link back to related application from Facebook, such as
+!         Instagram, MESSenger, even Facebook Lite.
+! Note 2: Some rules below are too long due to use an xpath, or multiple procedural chaining to make sure it won't accidentally
+!         remove something that really need.
+! Note 3: Inspired from report on https://github.com/collinbarrett/FilterLists/issues/282
 
 ! Network Blocking
 ! to prevent sending requests to show related contents, determine user action about how users use Facebook, nasty redirect,...
@@ -21,7 +19,7 @@
 ||*&fbclid=$document,important
 ||*?fbclid=$document,important
 ||facebook.com/adnw_logging/$important
-||facebook.com/ads/
+||facebook.com/ads/$~document
 ||facebook.com/ads/ad_choices$important
 ||facebook.com/ads/growth$important
 ||facebook.com/ads/manager/ajax/check_tip_qe$important
