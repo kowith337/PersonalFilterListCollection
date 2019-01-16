@@ -21,8 +21,4 @@ Include other things
 - Documentation about setting up advanced blockers (uBlock0 / Nano), DNS lists for DNS66, etc.
 - uMatrix rulesets for Thai sites (Testing)
 
-The **leftover hosts** are also used on [eieiDNS](https://eieidns.com) that provided and created by [@pakonda](https://github.com/pakonda) however, I cannot control the whitelist and maybe it's suitable for not too stricting to block some domains. (I did add blacklisted hosts by means of personal issues and nothing more...)
-
-Anyway, you can show support to eieiDNS by [say thanks](https://saythanks.io/to/pakonda) or [buy a coffee (Ko-Fi)](https://ko-fi.com/V7V0KGVT).
-
 More things will be listed, if available...

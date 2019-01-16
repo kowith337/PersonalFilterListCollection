@@ -25,7 +25,3 @@ I have no guaranteed about any breakage to use or setup with my lists below, how
 | Facebook Zero Hosts (via [Dead Hosts](https://github.com/dead-hosts/hosts_facebook0_git_kowith337)) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/hosts/test/hosts_facebook0.txt) |
 | **Static or Stale** |  |
 | Facebook Zero Hosts (No regional servers) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/hosts/static/hosts_facebook0_noregionsv.txt) |
-
-The **leftover hosts** are also used on [eieiDNS](https://eieidns.com) that provided and created by [@pakonda](https://github.com/pakonda) however, I didn't have any control about their whitelists \([1](https://github.com/pakonda/eieiDNS/blob/master/hosts/url_list.txt#L7), [2](https://github.com/pakonda/eieiDNS/blob/master/hosts/white_list.txt).\) and maybe it's suitable for their services to not too strict blocking some domains that may break functionality and usability for specific sites.
-
-Anyway, you can show support to eieiDNS by [say thanks](https://saythanks.io/to/pakonda) or [buy a coffee (Ko-Fi)](https://ko-fi.com/V7V0KGVT).
