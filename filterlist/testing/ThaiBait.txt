@@ -1,0 +1,12 @@
+[uBlock Origin 1.17.5.3]
+! Title: Thai Bait Domains List (In-Test)
+! Version: 201901172058
+! Author: kowith337
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection
+! Expires: 2 days
+! Note: List as domain name only
+
+followyoutech.com
+gmmwork.com
+! jarm.com
+! lierk.com

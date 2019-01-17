@@ -1,10 +1,10 @@
 [uBlock Origin 1.16.20]
 ! Title: Anti APKMirror Ads and Countdown [Redirected]
-! Version: 201901151512
+! Version: 201901171856
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
-! Mirror: https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/specific/AntiAPKMirrorCountdown.txt
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/specific/AntiAPKMirrorCountdown.txt
 ! Redirect: https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/specific/AntiAPKMirrorCountdown.txt
 ! Note: If you purged and refresh my filterlists and found [Redirected] appear in the subscription list name, now you're get the
 !       lists from redirected source above, however, this placeholder list will be remove soon, consider to copy new address
