@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201901172105
+! Version: 201901172220
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -318,6 +318,9 @@ m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div 
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href^="/lite/?"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href^="fb://offer_bookmark"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href^="fb://search_voyager"]
+m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href="/appcenter/165907476854626"]
+m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href="/pages/"]
+m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href^="fb://search_voyager"]
 m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=212609529249058"]
 m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=234383826903707"]
 m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=470739743275782"]
@@ -457,6 +460,7 @@ m.facebook.com,touch.facebook.com###m_group_stories_container section article:ha
 m.facebook.com,touch.facebook.com###m_group_stories_container section article:has(div[id^="scrollarea"] div[id^="GroupMallGYSJSuggestionCard"])
 m.facebook.com,touch.facebook.com###m_group_stories_container section article:has(div[id^="scrollarea"] div[id^="GroupMallPYMISuggestionCard"])
 m.facebook.com,touch.facebook.com###m_newsfeed_stream section article:has(a[href*="source=promotion_feed_story"])
+m.facebook.com,touch.facebook.com###messages_jewel #messages_flyout div ol[data-sigil="contents"] li:has(div.ext a[href*="no_fw=1"])
 m.facebook.com,touch.facebook.com###msite-pages-header-contents div[style*="transparent none repeat scroll"]:has(#popup_xout)
 m.facebook.com,touch.facebook.com###page #root div > div[data-store-id] > div[id^="unit_id"]:has-text(/^Related/):has(.scrollArea)
 m.facebook.com,touch.facebook.com###page #root div > div[style^="bottom:"]:has(div[data-sigil="footer-launchpad-more-button"])
@@ -475,8 +479,8 @@ m.facebook.com,touch.facebook.com###root[role="main"] div[style][data-store-id] 
 m.facebook.com,touch.facebook.com###timelineProfileTiles div > div[data-autoid]:has(a[href*="?v=fun_facts&"])
 m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] > div[class][id^="u_0_"] div[class]:has(div[class][data-sigil^="ad-prefs-survey"])
 m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] > div[class][id^="u_0_"] div[class]:has(div[class][data-sigil^="adprefssurvey"])
-m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] article div[class][id^="u_0_"] div[class]:has(div[class][data-sigil^="ad-prefs-survey"])
-m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] article div[class][id^="u_0_"] div[class]:has(div[class][data-sigil^="adprefssurvey"])
+m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] article div[id][class] div[class]:has(div[class][data-sigil^="ad-prefs-survey"])
+m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] article div[id][class] div[class]:has(div[class][data-sigil^="adprefssurvey"])
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href^="/pages/"]:has(div(has-text(/^Suggested/)))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a span:has-text(Instagram)))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/ads/create/"]))
