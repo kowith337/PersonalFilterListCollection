@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
-! Title: iHateCircles :black_circle: :x:
-! Version: 201810182102
+! Title: iHateCircles
+! Version: 201901202026
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css
 ! Expires: 2 days
