@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201901172220
+! Version: 201901210114
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -316,10 +316,11 @@ m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div 
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="zero.facebook.com"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href^="/appcenter/165907476854626"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href^="/lite/?"]
-m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href^="fb://offer_bookmark"]
+m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href^="fb://offer"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href^="fb://search_voyager"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href="/appcenter/165907476854626"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href="/pages/"]
+m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href^="fb://offer"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href^="fb://search_voyager"]
 m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=212609529249058"]
 m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=234383826903707"]
@@ -517,6 +518,7 @@ m.facebook.com,touch.facebook.com##article:has(footer a[href*="/saved/"])
 m.facebook.com,touch.facebook.com##article:has(footer a[href^="https://www.instagram.com"])
 m.facebook.com,touch.facebook.com##article:has(span[data-sigil="pixelContainer"])
 m.facebook.com,touch.facebook.com##div[data-sigil*="story-div"] > div[class] > div[class]:has(#popup_xout)
+m.facebook.com,touch.facebook.com##div[data-sigil="comment"] section.touchable:has(div header h3)
 m.facebook.com,touch.facebook.com##section article .story_body_container .story_body_container > div > div:has(.scrollArea .scrollAreaColumn)
 m.facebook.com,touch.facebook.com##section article:has(.scrollArea):has(a[href*="instagram.com"])
 

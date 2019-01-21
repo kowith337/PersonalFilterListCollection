@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Miscellaneous Annoyance
-! Version: 201901211158
+! Version: 20190121609
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -13,7 +13,7 @@
 github.com##.repository-content .protip
 github.com##div[class^="signup-prompt"]
 
-! Linkis (scam content framing)
+! [Linkis] (scam content framing)
 linkis.com##.deeper-overlay
 linkis.com##.js-forceAuth-popup-light
 linkis.com##.other-pages-holder .left-column
@@ -25,7 +25,7 @@ linkis.com##.theme15-authorize
 files.minecraftforge.net##.ad-container
 files.minecraftforge.net##.ad-container-framed
 
-! Taobao Mobile
+! [Taobao Mobile]
 m.intl.taobao.com,m.taobao.com##.App div[class^="smartbanner"]
 m.intl.taobao.com,m.taobao.com##.zebra-oversea-smartbanner
 
@@ -91,10 +91,10 @@ files.minecraftforge.net##.downloads .download .links .links-right .link:has(a[h
 optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadLine"] a[href*="?f="][href*="&x=ce78"]:style(pointer-events: none !important; text-decoration: none !important)
 optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadLine"] a[href^="http://adf.ly"]:style(pointer-events: none !important; text-decoration: none !important)
 
-! GreasyFork: in case if they rewrite CSS style, this will minimize the element at first place.
+! [GreasyFork] in case if they rewrite CSS style, this will minimize the element at first place.
 greasyfork.org###install-area .post-install:style(width: 0px !important; height: 0px !important; pointer-events: none !important; display: none !important)
 
-! Taobao Mobile: Hide promotional frame appear at bottom
+! [Taobao Mobile] Hide promotional frame appear at bottom (directly point to DOM doesn't help because it's use "display: block")
 m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none !important)
 
 ! Network Requests - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -113,26 +113,26 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||speedtest.net/javascript/jquery-analytics$important
 
 ! Redirect - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! GreasyFork added ping request while installing script (inside the "Install Script" green button) via [data-ping-url] that cause
-! promoted script to be shown and also the site also get user data about it, eliminate this requests and fake sent data with
-! `nooptext` can solve this thing also.
+! [GreasyFork] added ping request while installing script (inside the "Install Script" green button) via [data-ping-url] that
+! cause promoted script to be shown and also the site also get user data about it, eliminate this requests and fake sent data
+! with `nooptext` can solve this thing also.
 ||greasyfork.org/scripts/*/install-ping?$xmlhttprequest,important,redirect=nooptext
 
-! Reddit + GoogleTag Frame
+! [Reddit] GoogleTag Frame
 ||redditmedia.com/gtm^$subdocument,important,redirect=noopframe
 ||redditstatic.com/gtm^$subdocument,important,redirect=noopframe
 
-! Reddit Again, also PNG PIXEL TRACKING!?
+! [Reddit] Again, also PNG PIXEL TRACKING!?
 ||reddit.com/static/pixel.png$image,important,redirect=1x1-transparent.png
 
 ! Block Page(s) / Redirect annoyance - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Some extensions that hosted with add0n are show the popup
+! [Add0n] Some extensions that hosted with add0n are show the popup
 ||add0n.com$document
 ||add0n.com$popunder
 ||add0n.com$popup
 
-! Some extensions at Mozilla (mostly if it have suggest to contribute via donation)
-! is redirect to developer profile page after installed.
+! [Mozilla AMO] Some extensions at Mozilla (mostly if it have suggest to contribute via donation) is redirect to open a developer
+! profile page after installed.
 ||addons.mozilla.org/*/addon/*/developers$document
 
 ! Scriplets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
