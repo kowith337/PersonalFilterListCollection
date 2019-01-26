@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Miscellaneous Annoyance
-! Version: 20190121609
+! Version: 201901262141
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -24,6 +24,11 @@ linkis.com##.theme15-authorize
 ! [Minecraft] Forge Ads Pane
 files.minecraftforge.net##.ad-container
 files.minecraftforge.net##.ad-container-framed
+
+! Reddit Old
+old.reddit.com##.ProfileVoiceAd
+old.reddit.com##.TrendingProfilesSidebar
+old.reddit.com##.listingsignupbar
 
 ! [Taobao Mobile]
 m.intl.taobao.com,m.taobao.com##.App div[class^="smartbanner"]
