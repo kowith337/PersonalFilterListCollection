@@ -12,8 +12,8 @@
 | [Yandex Family](https://dns.yandex.com) | :fire: :children_crossing: |  | 77.88.8.3 | 77.88.8.7 |  |
 | [dns.watch](https://dns.watch) | :closed_lock_with_key: | :negative_squared_cross_mark: | 84.200.69.80 | 84.200.70.40 |  |
 | [Digital Courage](https://digitalcourage.de/support/zensurfreier-dns-server) |  |  | 85.214.20.141 |  |  |
-| [keweon](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) [(RootCA needed)](http://pki.keweon.center) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :closed_lock_with_key: :no_pedestrians: | :negative_squared_cross_mark: | 107.191.55.215 | 213.239.207.143 |  |
-| [keweon](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :closed_lock_with_key: :no_pedestrians: | :negative_squared_cross_mark: | 176.9.62.58 | 176.9.62.62 |  |
+| [keweon](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) [(RootCA needed)](http://pki.keweon.center) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :no_pedestrians: :fire: | :negative_squared_cross_mark: | 107.191.55.215 | 213.239.207.143 |  |
+| [keweon](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :no_pedestrians: :fire: | :negative_squared_cross_mark: | 176.9.62.58 | 176.9.62.62 |  |
 | [AdGuard](https://adguard.com/en/adguard-dns/overview.html) | :closed_lock_with_key: :no_pedestrians: |  | 176.103.130.130 | 176.103.130.131 |  |
 | [AdGuard Family](https://adguard.com/en/adguard-dns/overview.html) | :closed_lock_with_key: :no_pedestrians: :children_crossing: |  | 176.103.130.132 | 176.103.130.134 |  |
 | [CleanBrowsing Security](https://cleanbrowsing.org/filters) | [:lock_with_ink_pen:](https://doh.cleanbrowsing.org/doh/security-filter) :closed_lock_with_key: :fire: |  | 185.228.168.9 | 185.228.169.9 |  |
@@ -25,7 +25,7 @@
 | [Chaos Computer Club](https://www.ccc.de/censorship/dns-howto) |  |  | 213.73.89.122 |  |  |
 | [Oracle DynDNS](https://dyn.com/labs/dyn-internet-guide) |  | [:question:](https://dyn.com/legal/dyn-privacy-policy) | 216.146.35.35 | 216.146.36.36 |  |
 | [dns.watch IPv6](https://dns.watch) | :closed_lock_with_key: :six: | :negative_squared_cross_mark: | 2001:1608:10:25::1c04:b12f | 2001:1608:10:25::9249:d69b |  |
-| [keweon IPv6](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) [(RootCA needed)](http://pki.keweon.center) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :closed_lock_with_key: :no_pedestrians: | :negative_squared_cross_mark: |  2001:19f0:6401:175d::215 | 2a01:4f8:a0:8487::143 |  |
+| [keweon IPv6](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) [(RootCA needed)](http://pki.keweon.center) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: |  2001:19f0:6401:175d::215 | 2a01:4f8:a0:8487::143 |  |
 | [CloudFlare + APNIC IPv6](https://1.1.1.1/) | [:lock_with_ink_pen:](https://cloudflare-dns.com/dns-query) :six: | [:bust_in_silhouette: :watch:](https://developers.cloudflare.com/1.1.1.1/commitment-to-privacy/privacy-policy/privacy-policy) | 2606:4700:4700::1001 | 2606:4700:4700::1111 |  |
 | [OpenDNS IPv6](https://www.opendns.com/about/innovations/ipv6/) | :closed_lock_with_key: :six: :twisted_rightwards_arrows: |  | 2620:0:ccc::2 | 2620:0:ccd::2 |  |
 | [Quad9 IPv6](https://quad9.net) | [:lock_with_ink_pen:](https://dns9.quad9.net/dns-query) :closed_lock_with_key: :six: :fire: | [:bust_in_silhouette:](https://quad9.net/privacy) | 2620:fe::9 | 2620:fe::fe:9 |  |
@@ -34,7 +34,7 @@
 | [AdGuard IPv6](https://adguard.com/en/adguard-dns/overview.html) | :closed_lock_with_key: :six: :no_pedestrians: |  | 2a00:5a60::ad1:0ff | 2a00:5a60::ad2:0ff |  |
 | [AdGuard Family IPv6](https://adguard.com/en/adguard-dns/overview.html) | :closed_lock_with_key: :six: :no_pedestrians: :children_crossing: |  | 2a00:5a60::bad1:0ff | 2a00:5a60::bad2:0ff |  |
 | [Digital Courage IPv6](https://digitalcourage.de/support/zensurfreier-dns-server) | :six: |  | 2a01:238:42f6:ac00:2a29:4f7f:b6d:ef46 |  |  |
-| [keweon IPv6](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :closed_lock_with_key: :no_pedestrians: | :negative_squared_cross_mark: | 2a01:4f8:150:8023::58 | 2a01:4f8:150:8023::62 |  |
+| [keweon IPv6](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | 2a01:4f8:150:8023::58 | 2a01:4f8:150:8023::62 |  |
 | [Yandex IPv6](https://dns.yandex.com) | :six: |  | 2a02:6b8::feed:0ff | 2a02:6b8:0:1::feed:0ff |  |
 | [Yandex Safe IPv6](https://dns.yandex.com) | :six: :fire: |  | 2a02:6b8::feed:bad | 2a02:6b8:0:1::feed:bad |  |
 | [Yandex Family IPv6](https://dns.yandex.com) | :six: :fire: :children_crossing: |  | 2a02:6b8::feed:a11 | 2a02:6b8:0:1::feed:a11 |  |
