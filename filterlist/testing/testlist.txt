@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.3]
 ! Title: kowith337's Test List
-! Version: 201901262144
+! Version: 201901262154
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -54,18 +54,18 @@ facebook.com##.fb_content div[class] > div[class] > #watch_feed div[class] div[c
 ! Finally, weird space between comments also come to this version, freaking cool!!
 ! Note: I have no idea about breakage effect if I put those rules below into FZK, just put into here for testing is good for now.
 !       Moreover, currently it will affect some type of permalink view only, e.g. text-only posts, photos and external URLs.
-m.facebook.com,mbasic.facebook.com###MPhotoContent div[id^="ufi_"] div[class] > div[class][id] div div[id^="u_0"]:has(h3):has(div[class] div[class])
-m.facebook.com,mbasic.facebook.com###m_story_permalink_view div[id^="ufi_"] div[class] > div[class][id] div div[id^="u_0"]:has(h3):has(div[class] div[class])
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###MPhotoContent div[id^="ufi_"] div[class] > div[class][id] div div[id^="u_0"]:has(h3):has(div[class] div[class])
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_story_permalink_view div[id^="ufi_"] div[class] > div[class][id] div div[id^="u_0"]:has(h3):has(div[class] div[class])
 
 ! [Facebook Touch] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ! This possibly to tracking the news feed load time (In order to trigger the "Switch to Basic site" if news feed load too slow)
 ||facebook.com/ajax/mtouch_perf_page_load_timings/$important
 
 ! Try to remove weird square box that divide almost every comments
-m.facebook.com,touch.facebook.com##div[data-sigil="comment"] section.touchable[data-ad-preview="carousel-card"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##div[data-sigil="comment"] section.touchable[data-ad-preview="carousel-card"]
 
 ! Remove the "Add" ads interest after you've removed it
-! m.facebook.com,touch.facebook.com##.-hardstate-ads .accelerate div[class] > div[class][style] div[class] > a[data-sigil="add"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads .accelerate div[class] > div[class][style] div[class] > a[data-sigil="add"]
 
 ! I want to remove "Open in app" pane when open Facebook Gaming Page from mobile browser, but currently I can only remove button.
 m.facebook.com,touch.facebook.com###root[role="main"] div[data-store-id] div[class] a[data-click*="open_in_app"]
@@ -73,16 +73,21 @@ m.facebook.com,touch.facebook.com###root[role="main"] div[data-store-id] div[cla
 ! ^ This make above rule blocked ^
 ! Remove non-same origin meun out of list (affect Pages Menu [your pages, liked, zuckested], Gaming, Explore, Fundarise, Instant Games)
 ! New Bookmarks (visit https://touch.facebook.com/bookmarks)
-m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href^="https://m.facebook.com/fundraisers/"]
-m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href^="https://m.facebook.com/nt/"]
-m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="fb://"]
-m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://m.facebook.com/fundraisers/"]
-m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://m.facebook.com/nt/"]
-m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://web.facebook.com/games/?"]
-m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://www.facebook.com/games/?"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href^="https://m.facebook.com/fundraisers/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href^="https://m.facebook.com/local_surface/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href^="https://m.facebook.com/nt/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href^="https://web.facebook.com/games/?"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href^="https://www.facebook.com/games/?"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="fb://"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://m.facebook.com/fundraisers/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://m.facebook.com/local_surface/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://m.facebook.com/nt/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://web.facebook.com/games/?"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://www.facebook.com/games/?"]
 ! Old Bookmarks (manual press three dash icon)
-m.facebook.com,touch.facebook.com##.mSideMenu .touchable:has(a[href^="fb://"])
-m.facebook.com,touch.facebook.com##.mSideMenu .touchable:has(a[href^="https://m.facebook.com/fundraisers/"])
-m.facebook.com,touch.facebook.com##.mSideMenu .touchable:has(a[href^="https://m.facebook.com/nt/"])
-m.facebook.com,touch.facebook.com##.mSideMenu .touchable:has(a[href^="https://web.facebook.com/games/?"])
-m.facebook.com,touch.facebook.com##.mSideMenu .touchable:has(a[href^="https://www.facebook.com/games/?"])
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="fb://"])
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="https://m.facebook.com/fundraisers/"])
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="https://m.facebook.com/local_surface/"])
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="https://m.facebook.com/nt/"])
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="https://web.facebook.com/games/?"])
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="https://www.facebook.com/games/?"])
