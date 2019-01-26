@@ -1,0 +1,9 @@
+[uBlock Origin 1.16.7.2]
+! Title: Facebook SkyBlue Redesign
+! Version: 201901262215
+! Author: kowith337
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css
+! Expires: 2 days
+! Note: Just only redesign Facebook touch mode menu bar (for now)
+m.facebook.com,touch.facebook.com###header[data-sigil="MTopBlueBarHeader"]:style(background-color: lightskyblue !important)
+m.facebook.com,touch.facebook.com###header[data-sigil="MTopBlueBarHeader"] .popoverOpen:style(background-color: deepskyblue  !important)
