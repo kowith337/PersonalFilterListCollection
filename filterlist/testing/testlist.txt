@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.3]
 ! Title: kowith337's Test List
-! Version: 201901262136
+! Version: 201901262144
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -76,6 +76,7 @@ m.facebook.com,touch.facebook.com###root[role="main"] div[data-store-id] div[cla
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href^="https://m.facebook.com/fundraisers/"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href^="https://m.facebook.com/nt/"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="fb://"]
+m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://m.facebook.com/fundraisers/"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://m.facebook.com/nt/"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://web.facebook.com/games/?"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://www.facebook.com/games/?"]
