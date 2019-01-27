@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201901271251
+! Version: 201901271256
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -322,7 +322,7 @@ m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div 
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href="/appcenter/165907476854626"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href="/pages/"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href^="fb://offer"]
-m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href^="fb://search_voyager"]
+m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href^="fb://search"]
 m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=212609529249058"]
 m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=234383826903707"]
 m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=470739743275782"]
