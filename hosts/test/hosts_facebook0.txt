@@ -1,6 +1,6 @@
 # [uMatrix 1.3.15.100]
-# Title: Facebook Zero Hosts Block (Use for Test)
-# Version: 201901271917
+# Title: Facebook Zero Hosts Block (Use for test)
+# Version: 201901282141
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -28,19 +28,16 @@
 #       I will keep block those connections, no matter that it will break the functionality to using Facebook on mobile data plan
 #       until they abandone this service and return all connections to the original favor, no redirects, no non-HTTPS, no nagging
 #       or forcing to use that service, just let it should be normal like I'm using Facebook at home or via Proxy/VPN!
-# 
 # Note 2: All rules below aren't check with any tools, I just duped and don't know how many "Free Basics" servers are existed?
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# FBZero TopLevel
+# FBZero TopLevel - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 freebasics.com
 0.0.0.0 internet.org
-
-# FBZero CNAME/DNS
+# FBZero CNAME/DNS - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 z-m.c10r.facebook.com
 0.0.0.0 z-1.c10r.facebook.com
 0.0.0.0 z.c10r.facebook.com
-
-# FBZero API&Core
+# FBZero API&Core - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 0.beta.facebook.com
 0.0.0.0 0.facebook.com
 0.0.0.0 0.freebasics.com
@@ -100,8 +97,7 @@
 0.0.0.0 z-p4.facebook.com
 0.0.0.0 z-upload.facebook.com
 0.0.0.0 z.facebook.com
-
-# FBZero StaticXX CDN
+# FBZero StaticXX CDN - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 z-m-scontent-ams.xx.fbcdn.net
 0.0.0.0 z-m-scontent-amt.xx.fbcdn.net
 0.0.0.0 z-m-scontent-arn.xx.fbcdn.net
@@ -219,8 +215,7 @@
 0.0.0.0 z-m-video-waw.xx.fbcdn.net
 0.0.0.0 z-m-video-yyz.xx.fbcdn.net
 0.0.0.0 z-m-video.xx.fbcdn.net
-
-# FBZero RegionalCDN SecureContent
+# FBZero RegionalCDN SecureContent - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 z-m-scontent-ams1-1.fbcdn.net
 0.0.0.0 z-m-scontent-ams1-2.fbcdn.net
 0.0.0.0 z-m-scontent-ams1-3.fbcdn.net
@@ -1274,8 +1269,7 @@
 0.0.0.0 z-m-scontent-yyz3-7.fbcdn.net
 0.0.0.0 z-m-scontent-yyz3-8.fbcdn.net
 0.0.0.0 z-m-scontent-yyz3-9.fbcdn.net
-
-# FBZero RegionalCDN Static
+# FBZero RegionalCDN Static - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 z-m-static-ams1-1.fbcdn.net
 0.0.0.0 z-m-static-ams1-2.fbcdn.net
 0.0.0.0 z-m-static-ams1-3.fbcdn.net
@@ -2329,8 +2323,7 @@
 0.0.0.0 z-m-static-yyz3-7.fbcdn.net
 0.0.0.0 z-m-static-yyz3-8.fbcdn.net
 0.0.0.0 z-m-static-yyz3-9.fbcdn.net
-
-# FBZero RegionalCDN videos
+# FBZero RegionalCDN videos - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 z-m-video-ams1-1.fbcdn.net
 0.0.0.0 z-m-video-ams1-2.fbcdn.net
 0.0.0.0 z-m-video-ams1-3.fbcdn.net
@@ -3384,8 +3377,7 @@
 0.0.0.0 z-m-video-yyz3-7.fbcdn.net
 0.0.0.0 z-m-video-yyz3-8.fbcdn.net
 0.0.0.0 z-m-video-yyz3-9.fbcdn.net
-
-# FBZero EdgeCDN (Include Opera Mini?)
+# FBZero EdgeCDN (Include Opera Mini?) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 edge-z-1-p2-shv-01-ams1.fbcdn.net
 0.0.0.0 edge-z-1-p2-shv-01-ams2.fbcdn.net
 0.0.0.0 edge-z-1-p2-shv-01-ams3.fbcdn.net
@@ -12863,3 +12855,4 @@
 0.0.0.0 edge-z-p36-shv-02-yyz7.fbcdn.net
 0.0.0.0 edge-z-p36-shv-02-yyz8.fbcdn.net
 0.0.0.0 edge-z-p36-shv-02-yyz9.fbcdn.net
+# End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #

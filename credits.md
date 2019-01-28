@@ -15,7 +15,7 @@ Still writing and not completed yet, check back next time if changed...
 - https://chromium.woolyss.com
 - - - - -
 ### All emoji commits aren't come from GitMoji, instead, I've copied from emoji lists
-- https://www.webpagefx.com/tools/emoji-cheat-sheet
+- https://www.webfx.com/tools/emoji-cheat-sheet
 - - - - -
 ### [/filterlist/facebook/FacebookCommands.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook/FacebookCommands.txt)
 ### [/filterlist/facebook/FacebookZuckestionKiller.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook/FacebookZuckestionKiller.txt)
@@ -33,7 +33,7 @@ Still writing and not completed yet, check back next time if changed...
 - All peoples on 4ch archive and reddit who spread the words about my lists.
 - - - - -
 ### [/filterlist/other/MiscAnnoynace.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/other/MiscAnnoynace.txt)
-- Not available yet.
+- Not available.
 - - - - -
 ### [/filterlist/other/SurvivedTrackingLinkWarning.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/other/SurvivedTrackingLinkWarning.txt)
 - https://github.com/gorhill/uBlock/wiki/Strict-blocking
@@ -52,6 +52,8 @@ Still writing and not completed yet, check back next time if changed...
 #### Firefox Betrayed Backend Part
 - http://utaukitune.ldblog.jp/archives/65725024.html
 - https://github.com/jmdugan/blocklists/tree/master/corporations/mozilla/all.txt
+#### Rayban Scam Part
+- https://blog.eset.co.th/2016/04/08/%E0%B8%81%E0%B8%A5%E0%B9%82%E0%B8%81%E0%B8%87%E0%B8%9A%E0%B8%99-facebook-ray-bans-on-sale/
 - - - - -
 ### [/hosts/hosts_google_adservice_id.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_google_adservice_id.txt)
 - Adapted from https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/List_of_Google_domains.html
