@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201901271256
+! Version: 201901311717
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -12,12 +12,17 @@
 !         remove something that really need.
 ! Note 3: Inspired from report on https://github.com/collinbarrett/FilterLists/issues/282
 
+! Proactive outbound tracking, added to prevent Facebook tracking you outside while click and open shared URL (see #19)
+! Remark: If you're using uBlock0 or Nano, try click the magnifier icon to expand all parameters for getting real URL
+||*&fbclid=$document,popunder,popup,xmlhttprequest,important
+||*?fbclid=$document,popunder,popup,xmlhttprequest,important
+||l.facebook.com$document,popunder,popup,xmlhttprequest,important
+||lm.facebook.com$document,popunder,popup,xmlhttprequest,important
+
 ! Network Blocking
 ! to prevent sending requests to show related contents, determine user action about how users use Facebook, nasty redirect,...
 /PagesTimelineChainingPagelet$important,domain=facebook.com
 /qp/action/redirect$important,domain=facebook.com
-||*&fbclid=$document,important
-||*?fbclid=$document,important
 ||facebook.com/adnw_logging/$important
 ||facebook.com/ads/$~document
 ||facebook.com/ads/ad_choices$important
@@ -99,6 +104,7 @@
 ||facebook.com/video/instream_video/rapid_feedback$important
 ||facebook.com/video/quality_survey$important
 ||facebook.com/video/tahoe/upnext/$important
+||facebook.com/watch/msite/more/?*last_ad_index$important
 ||facebook.com/xti.php$important
 ||facebook.net/*/xfbml.ad.js$script,important
 ||fbcdn.net/*?*facebook.com%2Fads%2F$important
@@ -484,6 +490,7 @@ m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] > div[class]
 m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] article div[id][class] div[class]:has(div[class][data-sigil^="ad-prefs-survey"])
 m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] article div[id][class] div[class]:has(div[class][data-sigil^="adprefssurvey"])
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href^="/pages/"]:has(div(has-text(/^Suggested/)))
+m.facebook.com,touch.facebook.com##.-hardstate-watch #root div[class] > div[id][class]:has(.story_body_container header div[class] a[href*="tracking_source.video_home"][href*="originated_from_recommendation"])
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a span:has-text(Instagram)))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/ads/create/"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/friends/center/suggestions/"]))
