@@ -1,12 +1,13 @@
 # [uMatrix 1.3.15.100]
 # Title: Facebook Zero Hosts Block (Static version)
-# Version: 201901282147
+# Version: 201902031306
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
 # Credits: https://github.com/random-robbie/bugbounty-scans/raw/master/facebook.com/urls.txt
-#        : https://github.com/CHEF-KOCH/CKs-FilterList/raw/master/HOSTS/CK's-Facebook-HOSTS-FilterList.txt 
+#        : https://github.com/CHEF-KOCH/CKs-FilterList/raw/master/HOSTS/CK's-Facebook-HOSTS-FilterList.txt
 # Expires: 2 days
+# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/hosts/static/hosts_facebook0_noregionsv.txt
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Note: This aim to block non-formal hosts that serve all Facebook contents and resources from alternative "Free Basics" servers
 #       that it happen when you're using on mobile data over the carrier that collaborate with Facebook to have THAT service!

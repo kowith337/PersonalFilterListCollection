@@ -2,13 +2,11 @@
 ! Title: Rulesets for Thai sites (alpha test)
 ! Maintainer: kowith337
 !
-! Version: 201810281915
-! VersionNumber: 0.16
+! Version: 201902031310
+! VersionNumber: 0.16.1
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
-! 
-! Note: This ruleset isn't ready yet because this function is still in beta release (start from 1.3.3b0),
-!       I need to wait until this function and more document guide is publicly releases (or at least on the RC state)
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/ruleset/recipes_th.txt
 
 Amarin TV
 	amarintv.com *

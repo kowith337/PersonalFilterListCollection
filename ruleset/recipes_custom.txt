@@ -2,15 +2,16 @@
 ! Title: Self Custom Ruleset
 ! Maintainer: kowith337
 !
-! Version: 201810281916
-! VersionNumber: 0.21
+! Version: 201902031316
+! VersionNumber: 0.30
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/ruleset/recipes_custom.txt
 
 Gelbooru
-	! Note: You must use with uBlock Origin or Nano, this only allow something that really need and prevent unwanted connections,
-	! not for unbreak AntiUser tactics that their made.
 	gelbooru.com *
+		! Note: You must use with uBlock Origin or Nano, this only allow something that really need and prevent unwanted
+		! connections, not for unbreak AntiUser tactics that their made.
 		_ 1st-party script
 		_ ajax.googleapis.com script
 		_ maxcdn.bootstrapcdn.com script
@@ -22,6 +23,18 @@ Google Login (Custom Test)
 		_ accounts.google.com frame
 		_ apis.google.com script
 		_ ssl.gstatic.com script
+
+Google reCaptcha
+	* www.google.com
+		! Directly copied from official English Recipe, but I've added allow workers rules because you cannot get the enhanced
+		! version of reCaptcha (picture challenges) unless you've enable web workers, however, it may allow other workers to be
+		! running (like cryptominer, etc.)
+		_ no-workers: _ false
+		_ www.google.com *
+		_ www.google.com script
+		_ www.google.com frame
+		_ www.gstatic.com *
+		_ www.gstatic.com script
 
 Ookla SpeedTest
 	speedtest.net *
