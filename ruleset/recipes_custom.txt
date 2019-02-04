@@ -2,8 +2,8 @@
 ! Title: Self Custom Ruleset
 ! Maintainer: kowith337
 !
-! Version: 201902031316
-! VersionNumber: 0.30
+! Version: 201902041241
+! VersionNumber: 0.30.1
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/ruleset/recipes_custom.txt
@@ -24,7 +24,7 @@ Google Login (Custom Test)
 		_ apis.google.com script
 		_ ssl.gstatic.com script
 
-Google reCaptcha
+Google reCaptcha (Allow SW)
 	* www.google.com
 		! Directly copied from official English Recipe, but I've added allow workers rules because you cannot get the enhanced
 		! version of reCaptcha (picture challenges) unless you've enable web workers, however, it may allow other workers to be
