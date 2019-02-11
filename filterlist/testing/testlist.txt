@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.3]
 ! Title: kowith337's Test List
-! Version: 201902031257
+! Version: 201902111927
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -95,3 +95,8 @@ m.facebook.com,touch.facebook.com###root[role="main"] div[data-store-id] div[cla
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="https://m.facebook.com/nt/"])
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="https://web.facebook.com/games/?"])
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="https://www.facebook.com/games/?"])
+
+! Remove "Watch" out of menu, this thing is useless because it's also pull your ads profile data for inject more related videos
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href^="/watch/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="/watch/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="/watch/"])
