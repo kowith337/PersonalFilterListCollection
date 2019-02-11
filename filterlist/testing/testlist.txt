@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.3]
 ! Title: kowith337's Test List
-! Version: 201902111927
+! Version: 201902111954
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -51,8 +51,12 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 ! Probably track the feed that posted by instant game via 'TimeSlice' module, if scrolled to game post.
 ||facebook.com/*?modules=TimeSliceInteractionsLiteTypedLogger$important
 
-! /ajax/bz/ isn't enough?
+! /ajax/bz/ xhr isn't enough?
 ||facebook.com/ajax/ibl/$important
+||facebook.com/ajax$beacon,important
+
+! Block WebSocket chat connections (This possibly completely break Facebook MESSenger chat at facebook.com itself)
+||facebook.com/chat?$websocket,important
 
 ! [Facebook Feature Phone Basic] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ! Finally, weird space between comments also come to this version, freaking cool!!
