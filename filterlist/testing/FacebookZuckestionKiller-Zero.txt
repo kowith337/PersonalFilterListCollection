@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201902111906
+! Version: 201902141956
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
 ! Expires: 2 days
@@ -440,6 +440,7 @@ facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root table[role] div > div:has(a[href*="facebook.com/click.php?redir_url"])
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###sub_profile_pic_content div > div:has(table a[href*="/search/"])
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###sub_profile_pic_content div > div:has(table[role]:has(td div:has-text(/^People also like/)))
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###sub_profile_pic_content div div[class] > :has(div[id][class] table[role="presentation"] div:has-text(/^Related/))
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport #root div:has(h3):has(span a[href^="/dd/greeting/mbasic/more/tapped"])
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport #root div[data-ft]:has(h3:has-text(Facebook)):has(a[href^="/netego/redirect/"])
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport #root table td div div:has(a[href^="/lite/?loc_ref=menu"])
