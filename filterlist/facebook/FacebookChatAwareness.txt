@@ -1,0 +1,28 @@
+[uBlock Origin 1.17.5.7]
+! Title: kowith337's Facebook Chat Awareness
+! Author: kowith337
+! Version: 201902151718
+! Expires: 2 days
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/facebook
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/facebook/FacebookChatAwareness.txt
+! Note: It works only Facebook itself, not MESSenger site.
+
+! Block WebSocket chat connections (This possibly completely break Facebook MESSenger chat at facebook.com itself)
+||facebook.com/chat?$websocket,important
+
+! This request is probably logging frequency of people or page that you're chatting...
+||facebook.com/*?modules=ChatImpressionLogger$important
+
+! Possibly tracking the "Typing" state of MESSenger delta (Where you can use chat at Facebook itself, not on MESSenger.com)
+||facebook.com/*?modules=MessengerWebDeltasTypedLogger$important
+
+! Prevent ping active status, this probably prevent your friends noticeable that you're online becaue allowing 'active_ping' and
+! 'reconnect.php' XHR will be expose online status while you're interacting to your friends, post, pages, etc. regardless of your
+! active status settings that you've turned off already.
+||edge-chat.facebook.com/active_ping?$important
+||*-edge-chat.facebook.com/active_ping?$important
+||facebook.com/ajax/presence/reconnect.php?$important
+
+! Additional connections that trying switch connections from `edge-chat.facebook.com` if it's get blocked.
+||*-undefined.facebook.com$important
+||undefined.facebook.com$important
