@@ -45,7 +45,6 @@ Still writing and not completed yet, check back next time if changed...
 - https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#style
 - - - - -
 ### [/hosts/hosts_facebook0.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_facebook0.txt)
-### [/hosts/hosts_facebook0_noedge.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_facebook0_noedge.txt)
 - https://github.com/random-robbie/bugbounty-scans/blob/master/facebook.com/urls.txt
 - - - - -
 ### [/hosts/hosts_leftover.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_leftover.txt)
@@ -56,6 +55,7 @@ Still writing and not completed yet, check back next time if changed...
 - https://blog.eset.co.th/2016/04/08/%E0%B8%81%E0%B8%A5%E0%B9%82%E0%B8%81%E0%B8%87%E0%B8%9A%E0%B8%99-facebook-ray-bans-on-sale/
 - - - - -
 ### [/hosts/hosts_google_adservice_id.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_google_adservice_id.txt)
+- https://www.google.com/supported_domains
 - Adapted from https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/List_of_Google_domains.html
 - - - - -
 `### []()`

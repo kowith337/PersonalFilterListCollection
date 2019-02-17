@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Google AdService and ID.Google tracking hosts (Use for test)
-# Version: 201902031307
+# Version: 20190171742
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -8,7 +8,6 @@
 # Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/hosts/test/hosts_google_adservice_id.txt
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # AdService - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-0.0.0.0 adservice.google.ac
 0.0.0.0 adservice.google.ad
 0.0.0.0 adservice.google.ae
 0.0.0.0 adservice.google.al
@@ -27,7 +26,6 @@
 0.0.0.0 adservice.google.by
 0.0.0.0 adservice.google.ca
 0.0.0.0 adservice.google.cat
-0.0.0.0 adservice.google.cc
 0.0.0.0 adservice.google.cd
 0.0.0.0 adservice.google.cf
 0.0.0.0 adservice.google.cg
@@ -88,7 +86,6 @@
 0.0.0.0 adservice.google.com.kh
 0.0.0.0 adservice.google.com.kw
 0.0.0.0 adservice.google.com.lb
-0.0.0.0 adservice.google.com.lc
 0.0.0.0 adservice.google.com.ly
 0.0.0.0 adservice.google.com.mm
 0.0.0.0 adservice.google.com.mt
@@ -134,7 +131,6 @@
 0.0.0.0 adservice.google.fr
 0.0.0.0 adservice.google.ga
 0.0.0.0 adservice.google.ge
-0.0.0.0 adservice.google.gf
 0.0.0.0 adservice.google.gg
 0.0.0.0 adservice.google.gl
 0.0.0.0 adservice.google.gm
@@ -147,7 +143,6 @@
 0.0.0.0 adservice.google.hu
 0.0.0.0 adservice.google.ie
 0.0.0.0 adservice.google.im
-0.0.0.0 adservice.google.io
 0.0.0.0 adservice.google.iq
 0.0.0.0 adservice.google.is
 0.0.0.0 adservice.google.it
@@ -207,7 +202,6 @@
 0.0.0.0 adservice.google.vu
 0.0.0.0 adservice.google.ws
 # ID Track - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-0.0.0.0 id.google.ac
 0.0.0.0 id.google.ad
 0.0.0.0 id.google.ae
 0.0.0.0 id.google.al
@@ -226,7 +220,6 @@
 0.0.0.0 id.google.by
 0.0.0.0 id.google.ca
 0.0.0.0 id.google.cat
-0.0.0.0 id.google.cc
 0.0.0.0 id.google.cd
 0.0.0.0 id.google.cf
 0.0.0.0 id.google.cg
@@ -287,7 +280,6 @@
 0.0.0.0 id.google.com.kh
 0.0.0.0 id.google.com.kw
 0.0.0.0 id.google.com.lb
-0.0.0.0 id.google.com.lc
 0.0.0.0 id.google.com.ly
 0.0.0.0 id.google.com.mm
 0.0.0.0 id.google.com.mt
@@ -333,7 +325,6 @@
 0.0.0.0 id.google.fr
 0.0.0.0 id.google.ga
 0.0.0.0 id.google.ge
-0.0.0.0 id.google.gf
 0.0.0.0 id.google.gg
 0.0.0.0 id.google.gl
 0.0.0.0 id.google.gm
@@ -346,7 +337,6 @@
 0.0.0.0 id.google.hu
 0.0.0.0 id.google.ie
 0.0.0.0 id.google.im
-0.0.0.0 id.google.io
 0.0.0.0 id.google.iq
 0.0.0.0 id.google.is
 0.0.0.0 id.google.it
