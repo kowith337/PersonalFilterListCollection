@@ -1,7 +1,7 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
 ! Author: kowith337
-! Version: 201902151733
+! Version: 201902191405
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/facebook/FacebookExperimentCleanup.txt
@@ -84,3 +84,8 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 
 ! Remove feed item appear in "On This Day" to watch and/or share auto generated friendship videos. (Work on specific language)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-onthisday #root div > article:has(div[style^="flex-"] div[aria-label*="Friendship"]):has(div[aria-label^="Friendship"])
+
+! Remove "News Feed" out of menu, I resist to view an algorithm'd news feed!
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href="/home.php"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href="/home.php"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=4748854339"]))
