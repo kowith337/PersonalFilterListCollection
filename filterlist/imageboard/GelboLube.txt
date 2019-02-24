@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201901151318
+! Version: 201902241912
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/imageboard
@@ -18,7 +18,7 @@
 
 ! ------------------------------------------------------ GelboLube Core -------------------------------------------------------- !
 ! Element Hiding - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Block external hyperlinks, include CCBill ads and Patreon.
+! 1. Block external hyperlinks, include CCBill ads and Patreon.
 ! gelbooru.com##.content #nup
 ! gelbooru.com##.sidebar #tup
 ! gelbooru.com##a#ext
@@ -27,9 +27,10 @@ gelbooru.com##a[href*="click.php"]
 gelbooru.com##a[href*="media.r18"]
 gelbooru.com##a[href*="mnfclub.com"]
 gelbooru.com##a[href^="http://"][href*="/track/"]
+gelbooru.com##a[href^="https://"][href*="/track/"]
 gelbooru.com##a[rel="nofollow"] video
 
-! Block ExoClick iFrame (Not sure is it still exist?)
+! 2. Block ExoClick iFrame (Not sure is it still exist?)
 gelbooru.com##iframe[src*="exoclick"]
 
 ! Leftover ad space above of image list / image view and below page number
@@ -38,23 +39,23 @@ gelbooru.com##.contain-push .hidden-xs[style*="max-width: 728px"]
 gelbooru.com##.contain-push div[style^="max-width: 728px"][style*="overflow"]
 gelbooru.com##.contain-push div[style^="max-width: 750px"][style*="Overflow"]
 
-! Trying to block NoScript
+! 3. Trying to block NoScript
 gelbooru.com##noscript
 
-! I have no idea about <ins> tag, can uBlock handle it?
+! 4. I have no idea about <ins> tag, can uBlock handle it?
 gelbooru.com##ins.adsbytrafficjunky
 
 ! Filtered procedural hiding - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Element hiding in tags list pane that also insert tall banner ads
-gelbooru.com###paginater a:if(img)
-gelbooru.com###pagination a:if(img)
-gelbooru.com###paginator a:if(img)
-gelbooru.com##.paginater a:if(img)
-gelbooru.com##.pagination a:if(img)
-gelbooru.com##.paginator a:if(img)
+gelbooru.com###paginater a:has(img)
+gelbooru.com###pagination a:has(img)
+gelbooru.com###paginator a:has(img)
+gelbooru.com##.paginater a:has(img)
+gelbooru.com##.pagination a:has(img)
+gelbooru.com##.paginator a:has(img)
 
 ! 2. To block hyperlink ads that appear under the tag lists (currently know it's promote r18.com and jabcomix.com)
-gelbooru.com##div[class^="sidebar"] a[target]:if(img)
+gelbooru.com##div[class^="sidebar"] a[target]:has(img)
 
 ! 3. Hide hyperlink that link to '/extra/', e.g. shirt promo, internal redirect before sent to external ads sites.
 gelbooru.com##.contain-push a:has(img[src^="/extras/"])
@@ -73,11 +74,16 @@ gelbooru.com##.contain-push center div:matches-css(max-width: 750px)
 gelbooru.com##body div[style*="z-index"]:matches-css(width: 100%)
 
 ! 7. Hide some notices (e.g. Change to regular layout when use mobile browser, Pasta notice)
-gelbooru.com##.alert-info:if(a[href*="?page=ihnt"])
-gelbooru.com##.alert-warning:if(a[href*="javascript"])
+gelbooru.com##.alert-info:has(a[href*="?page=ihnt"])
+gelbooru.com##.alert-warning:has(a[href*="javascript"])
 
 ! 8. Remove berserk rant!
 gelbooru.com##.contain-push center div[style]:not(#paginator)
+
+! 9. Remove non-same-site out of menu (e.g. buy shirts, TheDoujin, GYDADC; save custom style menu space)
+gelbooru.com###navbar ul.nav li:has(a[href*="buymyshit.moneygrubbingwhore.com"])
+gelbooru.com###navbar ul.nav li:has(a[href*="gydadc.com"])
+gelbooru.com###navbar ul.nav li:has(a[href*="thedoujin.com"])
 
 ! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. [Prequel] Block Every videos, subdocs and scripts (See below for what things could be exclude)
@@ -269,7 +275,6 @@ gelbooru.com##^script[src^="https://gelbooru.com/script/try.js"]
 ! CSS Re-design / Mobile Improvement - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space
 ! almost half of screen from top, this will surely conflict when you request desktop view or when you're already use desktop browser.
-gelbooru.com###navbar .nav .active2.strong a:style(background: none transparent !important; color: #ffffff !important; font-weight: normal !important)
 gelbooru.com###navbar .nav li a:style(padding-left: 5px !important; padding-right: 5px !important)
 gelbooru.com##.navbar #navbar2 li a:style(padding-left: 5px !important; padding-right: 5px !important)
 gelbooru.com##.navbar#submenu #navbar2 .navbar-nav:style(direction:rtl !important)
