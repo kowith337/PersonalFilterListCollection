@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201902191331
+# Version: 201902250841
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -130,6 +130,7 @@
 0.0.0.0 onesignal.com
 0.0.0.0 onthe.io
 0.0.0.0 openx.net
+0.0.0.0 opticks.io
 0.0.0.0 perfectmarket.com
 0.0.0.0 petametrics.com
 0.0.0.0 run-syndicate.com
@@ -462,6 +463,7 @@
 0.0.0.0 th-ssl.effectivemeasure.net
 0.0.0.0 thn.gratonrewardcenter.icu
 0.0.0.0 tm.zedo.com
+0.0.0.0 track.opticks.io
 0.0.0.0 track1.aniview.com
 0.0.0.0 track2.aniview.com
 0.0.0.0 track3.aniview.com
