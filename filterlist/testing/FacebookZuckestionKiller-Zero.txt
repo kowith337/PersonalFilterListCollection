@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201902151741
+! Version: 201902280909
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
 ! Expires: 2 days
@@ -287,6 +287,7 @@ facebook.com##.fbEmuTracking
 facebook.com##.fbPhotoAdsCol
 facebook.com##.fbTimelineSideAds
 facebook.com##.fb_content[role=main] div > div[seealluri^="/gaming/?section_id"][seealluri*="view=streamer"]
+facebook.com##.home_right_column .pagelet[id^="pagelet_marketplace"]
 facebook.com##div[id^="GroupDiscoverCard"] li[id^="GroupDiscoverCard_"] div > a[id^="joinButton"]
 facebook.com##div[id^="GroupDiscoverCard_Local"]
 facebook.com##div[id^="GroupDiscoverCard_Recent"]
@@ -363,6 +364,9 @@ facebook.com##iframe[id^="fbsbx-sig-iframe-"]
 
 ! DOM Hiding - Level 2: contains has(-text)/xpath parameter
 ! This need at least uBO 1.8.0+, but 1.10.0+ for multiple chaining...
+facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div[style] a[href^="https://web.facebook.com/help/"])
+facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div[style] a[href^="https://www.facebook.com/help/"])
+facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(.userContentWrapper div[class] a[target][data-hovercard*="directed_target_id"])
 facebook.com###ads_preferences_desktop_root div[tabindex][role="button"] button[data-hover][data-tooltip-content="Add"]:has(span:has-text(Add))
 facebook.com###contentArea div:if-not(.clearfix):has(a[href*="/login/?"])
 facebook.com###content[role="main"] .clearfix div[data-referrer] > div .stat_elem:has(button.PageLikeButton i[class*="sx_"])
