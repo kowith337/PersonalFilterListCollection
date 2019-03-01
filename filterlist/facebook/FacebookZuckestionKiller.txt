@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201902281656
+! Version: 201903011824
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -503,7 +503,7 @@ m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] > div[class]
 m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] > div[class][id^="u_0_"] div[class]:has(div[class][data-sigil^="adprefssurvey"])
 m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] article div[id][class] div[class]:has(div[class][data-sigil^="ad-prefs-survey"])
 m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] article div[id][class] div[class]:has(div[class][data-sigil^="adprefssurvey"])
-m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href^="/pages/"]:has(div(has-text(/^Suggested/)))
+m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href^="/pages/"]:has(div:has-text(/^Suggested/)))
 m.facebook.com,touch.facebook.com##.-hardstate-gaming #root div[class][data-store-id] > div[class] > :has(a[href^="fb://gaming/"])
 m.facebook.com,touch.facebook.com##.-hardstate-gaming #root div[class][data-store-id] > section:has(div[data-store-id] div[class][style^="flex-grow"] .scrollArea)
 m.facebook.com,touch.facebook.com##.-hardstate-watch #root div[class] > div[id][class]:has(.story_body_container header div[class] a[href*="tracking_source.video_home"][href*="originated_from_recommendation"])
