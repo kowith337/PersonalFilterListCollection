@@ -1,8 +1,8 @@
 ! uMatrix: Ruleset recipes 1.0
 ! Title: Rulesets for Thai sites (alpha test)
 ! Maintainer: kowith337
-! Version: 201902222121
-! VersionNumber: 0.17
+! Version: 201903011318
+! VersionNumber: 0.17.1
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/ruleset/recipes_th.txt
@@ -95,5 +95,4 @@ Sanook! Music (aka. Joox)
 
 Thairath
 	thairath.co.th *
-		_ byteark.com css
-		_ byteark.com script
+		_ cdn.byteark.com script
