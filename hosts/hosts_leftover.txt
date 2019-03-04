@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201903011319
+# Version: 201903050056
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -102,6 +102,8 @@
 0.0.0.0 criteo.com
 0.0.0.0 criteo.net
 0.0.0.0 cutedev.net
+0.0.0.0 da-ads.com
+0.0.0.0 dapxl.com
 0.0.0.0 dentsu360th.com
 0.0.0.0 dome.cloud
 0.0.0.0 easylist.club
@@ -453,6 +455,7 @@
 0.0.0.0 static.addtoany.com
 0.0.0.0 static.gammaplatform.com
 0.0.0.0 statmt.matichon.co.th
+0.0.0.0 suggestqueries.googleapis.com
 0.0.0.0 synad1.nuffnang.co.th
 0.0.0.0 synad2.nuffnang.co.th
 0.0.0.0 synad3.nuffnang.co.th

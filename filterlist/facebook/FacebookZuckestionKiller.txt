@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201903011843
+! Version: 201903050052
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -178,6 +178,7 @@
 ||edge-z-*.facebook.com$important
 ||edge-z-*.facebook.net$important
 ||edge-z-*.fbcdn.net$important
+||edge-z-*.fbsbx.com$important
 ||facebook.com/zero/policy$document,important
 ||free.facebook.com$important
 ||freebasics.com$important
@@ -186,9 +187,14 @@
 ||mobile.facebook.com$important
 ||o.facebook.com$important
 ||web.facebook.com$document,important
+||z-1-*.facebook.com$important
+||z-1-*.facebook.net$important
+||z-1-*.fbcdn.net$important
+||z-1-*.fbsbx.com$important
 ||z-m-*.facebook.com$important
 ||z-m-*.facebook.net$important
 ||z-m-*.fbcdn.net$important
+||z-m-*.fbsbx.com$important
 
 ! [Super lightweight Facebook enhancement]
 ! It's no need to load anything that not matter to use, because `mbasic.facebook.com` can work fine without JavaScript,
