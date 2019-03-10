@@ -13,7 +13,7 @@
 | [dns.watch](https://dns.watch) | :closed_lock_with_key: | :negative_squared_cross_mark: | 84.200.69.80 | 84.200.70.40 |  |
 | [Digital Courage](https://digitalcourage.de/support/zensurfreier-dns-server) |  |  | 85.214.20.141 |  |  |
 | [keweon](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) [(RootCA needed)](http://pki.keweon.center) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :no_pedestrians: :fire: | :negative_squared_cross_mark: | 107.191.55.215 | 213.239.207.143 |  |
-| [SecureDNS](https://securedns.eu) | :lock_with_ink_pen: :closed_lock_with_key: | :negative_squared_cross_mark: | 146.185.167.43 |  |  |
+| [SecureDNS](https://securedns.eu) | [:lock_with_ink_pen:](https://doh.securedns.eu/dns-query) :lock_with_ink_pen: :closed_lock_with_key: | :negative_squared_cross_mark: | 146.185.167.43 |  |  |
 | [keweon](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :no_pedestrians: :fire: | :negative_squared_cross_mark: | 176.9.62.58 | 176.9.62.62 |  |
 | [AdGuard](https://adguard.com/en/adguard-dns/overview.html) | :closed_lock_with_key: :no_pedestrians: |  | 176.103.130.130 | 176.103.130.131 |  |
 | [AdGuard Family](https://adguard.com/en/adguard-dns/overview.html) | :closed_lock_with_key: :no_pedestrians: :children_crossing: |  | 176.103.130.132 | 176.103.130.134 |  |
@@ -39,6 +39,7 @@
 | [Yandex IPv6](https://dns.yandex.com) | :six: |  | 2a02:6b8::feed:0ff | 2a02:6b8:0:1::feed:0ff |  |
 | [Yandex Safe IPv6](https://dns.yandex.com) | :six: :fire: |  | 2a02:6b8::feed:bad | 2a02:6b8:0:1::feed:bad |  |
 | [Yandex Family IPv6](https://dns.yandex.com) | :six: :fire: :children_crossing: |  | 2a02:6b8::feed:a11 | 2a02:6b8:0:1::feed:a11 |  |
+| [SecureDNS IPv6](https://securedns.eu) | [:lock_with_ink_pen:](https://doh.securedns.eu/dns-query) :lock_with_ink_pen: :closed_lock_with_key: :six: | :negative_squared_cross_mark: | 2a03:b0c0:0:1010::e9a:3001 |  |  |
 | [CleanBrowsing Family IPv6](https://cleanbrowsing.org/filters) | [:lock_with_ink_pen:](https://doh.cleanbrowsing.org/doh/family-filter) :closed_lock_with_key: :six: :children_crossing: :fire: |  | 2a0d:2a00:1:: | 2a0d:2a00:2:: |  |
 | [CleanBrowsing Adult IPv6](https://cleanbrowsing.org/filters) | [:lock_with_ink_pen:](https://doh.cleanbrowsing.org/doh/adult-filter) :closed_lock_with_key: :six: :children_crossing: :fire: |  | 2a0d:2a00:1::1 | 2a0d:2a00:2::1 |  |
 | [CleanBrowsing Security IPv6](https://cleanbrowsing.org/filters) | [:lock_with_ink_pen:](https://doh.cleanbrowsing.org/doh/security-filter) :closed_lock_with_key: :six: :fire: |  | 2a0d:2a00:1::2 | 2a0d:2a00:2::2 |  |
@@ -47,8 +48,10 @@
 | **Other** |  |  |  |  |  |
 | [CloudFlare DoH in Firefox](https://wiki.mozilla.org/Trusted_Recursive_Resolver) | [:lock_with_ink_pen:](https://mozilla.cloudflare-dns.com/dns-query) |  | 1.0.0.1 | 1.1.1.1 |  |
 | [~~Google~~](https://developers.google.com/speed/public-dns/) | [:lock_with_ink_pen:](https://dns.google.com/experimental) | :alarm_clock: | 8.8.4.4 | 8.8.8.8 |  |
-| [SecureDNS (DoT/DoH)] | [:lock_with_ink_pen:](https://doh.securedns.eu/dns-query) :closed_lock_with_key: | :negative_squared_cross_mark: | 146.185.167.43 | TLS:`dot.securedns.eu` |  |
-| [SecureDNS AdBlock (DoT/DoH)] | [:lock_with_ink_pen:](https://ads-doh.securedns.eu/dns-query) :closed_lock_with_key: :no_pedestrians: | :negative_squared_cross_mark: | 146.185.167.43 | TLS:`ads-dot.securedns.eu` |  |
+| [SecureDNS (DoT/DoH)](https://securedns.eu) | [:lock_with_ink_pen:](https://doh.securedns.eu/dns-query) :closed_lock_with_key: | :negative_squared_cross_mark: | 146.185.167.43 | TLS:`dot.securedns.eu` |  |
+| [SecureDNS AdBlock (DoT/DoH)](https://securedns.eu) | [:lock_with_ink_pen:](https://ads-doh.securedns.eu/dns-query) :closed_lock_with_key: :no_pedestrians: | :negative_squared_cross_mark: | 146.185.167.43 | TLS:`ads-dot.securedns.eu` |  |
+| [SecureDNS (DoT/DoH)](https://securedns.eu) | [:lock_with_ink_pen:](https://doh.securedns.eu/dns-query) :closed_lock_with_key: :six: | :negative_squared_cross_mark: | 2a03:b0c0:0:1010::e9a:3001 | TLS:`dot.securedns.eu` |  |
+| [SecureDNS AdBlock (DoT/DoH)](https://securedns.eu) | [:lock_with_ink_pen:](https://ads-doh.securedns.eu/dns-query) :closed_lock_with_key: :six: :no_pedestrians: | :negative_squared_cross_mark: | 2a03:b0c0:0:1010::e9a:3001 | TLS:`ads-dot.securedns.eu` |  |
 |  |  |  |  |  |  |
 | **Retired** |  |  |  |  |  |
 | [eieiDNS](https://eieidns.com) | [:lock_with_ink_pen:](https://doh.eieidns.com/dns-query) :closed_lock_with_key: :no_pedestrians: |  | 103.86.49.31 |  |  |
