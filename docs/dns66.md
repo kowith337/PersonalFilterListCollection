@@ -1,7 +1,7 @@
 # DNS list table to apply in DNS66
 
-| Provider | Features | Logging | First IP | Second IP | Compatibility |
-|----------|----------|---------|----------|-----------|---------------|
+| Provider | Features | Logging | First Address | Second Address | Compatibility |
+|----------|----------|---------|---------------|----------------|---------------|
 | [CloudFlare + APNIC](https://1.1.1.1/) | [:lock_with_ink_pen:](https://cloudflare-dns.com/dns-query) | [:bust_in_silhouette: :watch:](https://developers.cloudflare.com/1.1.1.1/commitment-to-privacy/privacy-policy/privacy-policy) | 1.0.0.1 | 1.1.1.1 |  |
 | [Comodo Secure](https://www.comodo.com/secure-dns) | :twisted_rightwards_arrows: |  | 8.20.247.20 | 8.26.56.26 |  |
 | [Quad9](https://quad9.net) | [:lock_with_ink_pen:](https://dns9.quad9.net/dns-query) :closed_lock_with_key: :fire: | [:bust_in_silhouette:](https://quad9.net/privacy) | 9.9.9.9 | 149.112.112.9 |  |
@@ -13,6 +13,7 @@
 | [dns.watch](https://dns.watch) | :closed_lock_with_key: | :negative_squared_cross_mark: | 84.200.69.80 | 84.200.70.40 |  |
 | [Digital Courage](https://digitalcourage.de/support/zensurfreier-dns-server) |  |  | 85.214.20.141 |  |  |
 | [keweon](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) [(RootCA needed)](http://pki.keweon.center) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :no_pedestrians: :fire: | :negative_squared_cross_mark: | 107.191.55.215 | 213.239.207.143 |  |
+| [SecureDNS](https://securedns.eu) | :lock_with_ink_pen: :closed_lock_with_key: | :negative_squared_cross_mark: | 146.185.167.43 |  |  |
 | [keweon](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :no_pedestrians: :fire: | :negative_squared_cross_mark: | 176.9.62.58 | 176.9.62.62 |  |
 | [AdGuard](https://adguard.com/en/adguard-dns/overview.html) | :closed_lock_with_key: :no_pedestrians: |  | 176.103.130.130 | 176.103.130.131 |  |
 | [AdGuard Family](https://adguard.com/en/adguard-dns/overview.html) | :closed_lock_with_key: :no_pedestrians: :children_crossing: |  | 176.103.130.132 | 176.103.130.134 |  |
@@ -46,6 +47,8 @@
 | **Other** |  |  |  |  |  |
 | [CloudFlare DoH in Firefox](https://wiki.mozilla.org/Trusted_Recursive_Resolver) | [:lock_with_ink_pen:](https://mozilla.cloudflare-dns.com/dns-query) |  | 1.0.0.1 | 1.1.1.1 |  |
 | [~~Google~~](https://developers.google.com/speed/public-dns/) | [:lock_with_ink_pen:](https://dns.google.com/experimental) | :alarm_clock: | 8.8.4.4 | 8.8.8.8 |  |
+| [SecureDNS (DoT/DoH)] | [:lock_with_ink_pen:](https://doh.securedns.eu/dns-query) :closed_lock_with_key: | :negative_squared_cross_mark: | 146.185.167.43 | TLS:`dot.securedns.eu` |  |
+| [SecureDNS AdBlock (DoT/DoH)] | [:lock_with_ink_pen:](https://ads-doh.securedns.eu/dns-query) :closed_lock_with_key: :no_pedestrians: | :negative_squared_cross_mark: | 146.185.167.43 | TLS:`ads-dot.securedns.eu` |  |
 |  |  |  |  |  |  |
 | **Retired** |  |  |  |  |  |
 | [eieiDNS](https://eieidns.com) | [:lock_with_ink_pen:](https://doh.eieidns.com/dns-query) :closed_lock_with_key: :no_pedestrians: |  | 103.86.49.31 |  |  |
@@ -56,7 +59,20 @@
 
 - - - - - - - - - -
 
-## Legends
+### Note
+- DNS-over-TLS (DoT) commonly use port 853, and use port 443 for alternative.
+- Configuration for personalDNSFilter
+  - To adding DoT entry, you can enter with these format below
+    - For IPv4 entry: `146.185.167.43::853::DoT`
+    - For IPv6 entry: `[2a03:b0c0:0:1010::e9a:3001]::853::DoT`
+  - To adding DoH entry, you can enter with these format below
+    - For IPv4 entry: `146.185.167.43::443::DoH::https://doh.securedns.eu/dns-query`
+    - For IPv6 entry: `[2a03:b0c0:0:1010::e9a:3001]::443::DoH::https://doh.securedns.eu/dns-query`
+
+- - - - - - - - - -
+
+### Legends
+
 #### Features
 | Icon | Description |
 |------|-------------|
