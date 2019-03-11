@@ -1,6 +1,7 @@
 | List Name | Subscribe via ABP link | Copy raw location |
-| ----- | ----- | ----- |
+| --------- | ---------------------- | ----------------- |
 | Anti Survived Tracking Link Warning | [:scroll:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fother%2FSurvivedTrackingLinkWarning.txt&amp;title=Anti%20Survived%20Tracking%20Link%20Warning) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/SurvivedTrackingLinkWarning.txt) |
+| - Overdone version | [:scroll:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fother%2FSurvivedTrackingLinkWarning-Overdone.txt&amp;title=Anti%20Survived%20Tracking%20Link%20Warning%20(Overdone%20Edition)) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/SurvivedTrackingLinkWarning-Overdone.txt) |
 | Uncategorized Miscellaneous Annoyance | [:scroll:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fother%2FMiscAnnoynace.txt&amp;title=Miscellaneous%20Annoyance) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/MiscAnnoynace.txt) |
 
 
@@ -15,9 +16,9 @@ However, some big company won't play nice and currently produce new problematic 
 
 I will let the uBlock0 or Nano for block and prevent navigation before it's follow that way, then give the same internal ability to expose real URL under blocked URLs but...
 - Some URL that have multiple parameters is possibly to be messed and making you confuse and don't know what to do next, you may need to make a manual text selection (don't forget to exclude some path that possibly tracking you), copy and paste to address bar or use the **Go to 'your address'** instead.
-- Some sites that can do the seamless navigations will not prevent tracked URL in the same tab, however, it's work properly if you open it into new tab.
+- Some sites that can do the seamless navigations will not prevent tracked URL in the same tab, however, it's work properly if you open it into new tab or subscribe to [**Overdone**](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/SurvivedTrackingLinkWarning-Overdone.txt) version instead.
 
-I cannot help you much if you still stuck, but I have no choice, just privacy first!
+I cannot help you much if you still stuck, but **I have no choice, just privacy first!**
 
 - - - - -
 
@@ -29,13 +30,17 @@ As usual, only uBlock Origin (also other forks, but I don't recommend anything o
 
 ### Supported sites (for current)
 - Chocolate Minecraft [`chocolateminecraft.com`]
+- GitHub [`github.com`]
 - GreasyFork [`greasyfork.org`]
 - Linkis [`linkis.com`]
 - Minecraft Forge [`files.minecraftforge.net`]
 - Ookla Speed Test [`speedtest.net`]
 - Optifine [`optifine.net`]
+- Reddit [`reddit.com`]
 - Randomness Thing [`randomnessthing.com`]
 - Stack Networks (Partial) [`stackoverflow.com`, `stackexchange.com`, `superuser.com`]
+- Taobao Mobile [`m.intl.taobao.com`, `m.taobao.com`]
+- YouTube [`youtube.com`]
 - WallGif [`wallgif.com`]
 
 ### Blocking mode
