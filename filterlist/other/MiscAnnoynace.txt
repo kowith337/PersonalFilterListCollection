@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Miscellaneous Annoyance
-! Version: 201902141958
+! Version: 201903121719
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -79,6 +79,7 @@ youtube.com##.individual-feed li .branded-page-box:has(.feed-item-dismissable:ha
 ! Note: This work only FF quantum + uB0 WebExt
 !#if cap_html_filtering
 greasyfork.org##^.post-install
+m.intl.taobao.com,m.taobao.com##^script:has-text(getFB_GOOLE_trackJs)
 !#endif
 
 ! CSS Modify - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -146,6 +147,8 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||addons.mozilla.org/*/addon/*/developers$document
 
 ! Scriplets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+m.intl.taobao.com,m.taobao.com##script:contains(getFB_GOOLE_trackJs)
+m.intl.taobao.com,m.taobao.com##script:inject(addEventListener-defuser.js, load, getFB_GOOLE_trackJs)
 randomnessthing.com##script:contains(Criteo)
 randomnessthing.com##script:inject(abort-on-property-read.js, Criteo)
 randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptableAdIfAdblocked)
