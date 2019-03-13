@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Miscellaneous Annoyance
-! Version: 201903121719
+! Version: 201903131305
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Expires: 2 days
@@ -67,6 +67,9 @@ randomnessthing.com##.textwidget:has(img[src*="no-adblock-wordpress-plugin"])
 stackoverflow.com##.hero-container:has(.s-signup)
 stackoverflow.com##.js-topbar-dialog-corral:has(.dialog-content:has(a[href^="/jobs/salary/?"]))
 stackexchange.com,superuser.com##.hero-container:has(#hero-content:has(div a[href^="/users/signup?"]))
+
+! [Taobao Mobile] Remove non-same shop related items
+m.intl.taobao.com##.App .recommend .recommend-list-wrapper:nth-of-type(2)
 
 ! [WallGif] Disable AdBlock...? HOW ABOUT NO!!
 wallgif.com###overlay:has(img[alt="Loader"])
