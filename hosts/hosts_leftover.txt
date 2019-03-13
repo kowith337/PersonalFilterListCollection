@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201903070007
+# Version: 201903131724
 # Author: kowith337
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
@@ -276,6 +276,7 @@
 0.0.0.0 ads.bumq.com
 0.0.0.0 ads.imprezzer.com
 0.0.0.0 ads.pantip.com
+0.0.0.0 ads.thaiware.com
 0.0.0.0 ads1-adnow.com
 0.0.0.0 ads1.bangkokpost.co.th
 0.0.0.0 ads1.matichon.co.th
