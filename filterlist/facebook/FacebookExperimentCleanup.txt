@@ -1,7 +1,7 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
 ! Author: kowith337
-! Version: 201903021711
+! Version: 201903131238
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/facebook/FacebookExperimentCleanup.txt
@@ -60,6 +60,10 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 ! [Facebook Touch] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ! This possibly to tracking the news feed load time (In order to trigger the "Switch to Basic site" if news feed load too slow)
 ||facebook.com/ajax/mtouch_perf_page_load_timings/$important
+
+! Remove "Big Like" button in message chat, the button will auto change to "Send" once you've start focusing to text box, but it
+! will change to "Like" button once the text box lost focus, I remove it to prevent accidentally sending "Big Like"
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-messages #root #message-reply-composer form div[data-sigil="marea"] div[class] > button.iconOnly[name="like"]
 
 ! Try to remove weird square box that divide almost every comments
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##div[data-sigil="comment"] section.touchable[data-ad-preview="carousel-card"]
