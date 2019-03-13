@@ -1,11 +1,11 @@
 [uBlock Origin 1.17.5.3]
 ! Title: Enhance Facebook Username Hider for Compilation Creators
-! Version: 201902031257
+! Version: 201903132025
+! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
-! Expires: 2 days
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/testing/enh_usernamehider-for-fb.txt
-! Credits / Based on: https://github.com/DandelionSprout/adfilt/raw/master/Username%2520Hider%2520for%2520Compilation%2520Creators.txt
+! Credits: https://github.com/DandelionSprout/adfilt/raw/master/Username%2520Hider%2520for%2520Compilation%2520Creators.txt
 
 ! [Facebook Desktop] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ! Hide your name on top (blue bar)

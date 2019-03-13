@@ -1,10 +1,10 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201902241912
-! Author: kowith337
+! Version: 201903132023
 ! Expires: 2 days
-! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/imageboard
+! Author: kowith337
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/imageboard
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/imageboard/GelboLube.txt
 ! Note: You can read each entry below...
 ! 1. It doesn't matter to have any checksum tools because uBo is now fully support filterlists that created on GitHub, GitLab,

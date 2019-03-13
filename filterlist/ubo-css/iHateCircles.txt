@@ -1,9 +1,9 @@
 [uBlock Origin 1.16.7.2]
 ! Title: iHateCircles
-! Version: 201902031258
+! Version: 201903132029
+! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css
-! Expires: 2 days
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/ubo-css/iHateCircles.txt
 
 ! Note: Circles?, Material Design?, All of that is too mainstream! Just Bring Back All Squares!!

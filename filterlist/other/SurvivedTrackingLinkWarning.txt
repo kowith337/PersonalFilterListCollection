@@ -1,9 +1,9 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 201903112210
+! Version: 201903132024
+! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
-! Expires: 2 days
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/SurvivedTrackingLinkWarning.txt
 ! Note: I recreate this filterlist based on specific sites that I generally using, by borrow ability of strict blocking inside
 !       uBlock0/Nano to warn the sites that you want to go out to the real destination (or source of result) was get re-routing

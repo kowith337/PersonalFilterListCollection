@@ -1,8 +1,8 @@
 [uBlock Origin 1.17.5.7]
 ! Title: kowith337's Facebook Chat Awareness
-! Author: kowith337
-! Version: 201902151718
+! Version: 201903132023
 ! Expires: 2 days
+! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/facebook
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/facebook/FacebookChatAwareness.txt
 ! Note: It works only Facebook itself, not MESSenger site.

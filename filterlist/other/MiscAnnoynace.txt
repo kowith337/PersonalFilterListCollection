@@ -1,9 +1,9 @@
 [uBlock Origin 1.16.20]
 ! Title: Miscellaneous Annoyance
-! Version: 201903131305
+! Version: 201903132024
+! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
-! Expires: 2 days
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/MiscAnnoynace.txt
 ! Note: An uncategorized / out of scope of site or topic to create the stand alone filterlists
 !       will be stay here until the specific site or category are have enough rules.
