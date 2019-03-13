@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201903050052
+! Version: 201903131233
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Expires: 2 days
@@ -367,7 +367,7 @@ facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div
 facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div[style] a[href^="https://www.facebook.com/help/"])
 facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(.userContentWrapper div[class] a[target][data-hovercard*="directed_target_id"])
 facebook.com###ads_preferences_desktop_root div[tabindex][role="button"] button[data-hover][data-tooltip-content="Add"]:has(span:has-text(Add))
-facebook.com###contentArea div:if-not(.clearfix):has(a[href*="/login/?"])
+facebook.com###contentArea div[class] div[id][class]:has(a[href*="/login/?"])
 facebook.com###content[role="main"] .clearfix div[data-referrer] > div .stat_elem:has(button.PageLikeButton i[class*="sx_"])
 facebook.com###content[role=main] > div .clearfix .stat_elem:has(div a[class^="_fbPageBrowserSubscriptionCardItem"])
 facebook.com###content_container div > div[id^="u_fetchstream"] div :has(div[id^="u_fetchstream"] .uiTypeahead div input[aria-controls^="typeahead_list_u_fetchstream"][aria-label^="Invite"])

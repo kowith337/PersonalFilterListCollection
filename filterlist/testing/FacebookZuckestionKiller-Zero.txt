@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201903050052
+! Version: 201903131233
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
 ! Expires: 2 days
@@ -370,13 +370,8 @@ facebook.com##iframe[id^="fbsbx-sig-iframe-"]
 
 ! DOM Hiding - Level 2: contains has(-text)/xpath parameter
 ! This need at least uBO 1.8.0+, but 1.10.0+ for multiple chaining...
-facebook.com##div[data-testid="marketplace_category_feed"] div > div[class][style]:has(a[href*="facebook.com/l.php?"][href*="fbclid"])
-facebook.com##div[data-testid="marketplace_category_feed"] div > div[class][style]:has(a[href^="/ads/about/?"])
-facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(.userContentWrapper div[class] a[target][data-hovercard*="directed_target_id"])
-facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div[style] a[href^="https://web.facebook.com/help/"])
-facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div[style] a[href^="https://www.facebook.com/help/"])
 facebook.com###ads_preferences_desktop_root div[tabindex][role="button"] button[data-hover][data-tooltip-content="Add"]:has(span:has-text(Add))
-facebook.com###contentArea div:if-not(.clearfix):has(a[href*="/login/?"])
+facebook.com###contentArea div[class] div[id][class]:has(a[href*="/login/?"])
 facebook.com###content[role="main"] .clearfix div[data-referrer] > div .stat_elem:has(button.PageLikeButton i[class*="sx_"])
 facebook.com###content[role=main] > div .clearfix .stat_elem:has(div a[class^="_fbPageBrowserSubscriptionCardItem"])
 facebook.com###content_container div > div[id^="u_fetchstream"] div :has(div[id^="u_fetchstream"] .uiTypeahead div input[aria-controls^="typeahead_list_u_fetchstream"][aria-label^="Invite"])
@@ -412,6 +407,8 @@ facebook.com##[id^=hyperfeed_story_id_]:has(a[href*="utm_campaign"])
 facebook.com##div ul[role="menu"] li:has(a[href*="campaign/landing.php?"])
 facebook.com##div[data-referrer="pagelet_side_ads"]
 facebook.com##div[data-referrer="timeline_collections_section_title"] > div:has(div[id^="pagelet_recommendation"])
+facebook.com##div[data-testid="marketplace_category_feed"] div > div[class][style]:has(a[href*="facebook.com/l.php?"][href*="fbclid"])
+facebook.com##div[data-testid="marketplace_category_feed"] div > div[class][style]:has(a[href^="/ads/about/?"])
 facebook.com##div[id^="dialog_"]:has(.dialog_buttons input[name="login"])
 facebook.com##div[id^="hyperfeed_story_id"] .mtm div[id^="u_jsonp"] div[id^="u_jsonp"]:has(a[href*="type=article_author_in_shared_link"])
 facebook.com##div[id^="hyperfeed_story_id"] div[data-gt*="click2canvas"] div[data-ft] .mts .mtm:has(.uiList:has(li a[rel][target="_blank"]))
@@ -428,6 +425,9 @@ facebook.com##div[id^="hyperfeed_story_id"]:has(div[data-ft*="ego_id"]:has(a[hre
 facebook.com##div[id^="hyperfeed_story_id"]:has(span a:has-text(/Sponsored/))
 facebook.com##div[id^="hyperfeed_story_id"]:has(span a[href*="[is_sponsored]=1"])
 facebook.com##div[id^="hyperfeed_story_id"]:has(span a[href*="is_sponsored=1"])
+facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(.userContentWrapper div[class] a[target][data-hovercard*="directed_target_id"])
+facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div[style] a[href^="https://web.facebook.com/help/"])
+facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div[style] a[href^="https://www.facebook.com/help/"])
 facebook.com##div[itemscope] #content_container div.clearfix div[class][id][style] div[class]:has(div.uiTypeahead div input[placeholder][aria-controls][aria-label^="Invite"])
 facebook.com##div[itemscope] div > #content_container div > div[style]:has(#pagelet_growth_expanding_cta)
 facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=212609529249058"])
