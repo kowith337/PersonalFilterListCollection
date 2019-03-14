@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: kowith337's Facebook Chat Awareness
-! Version: 201903132023
+! Version: 201903141528
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/facebook
@@ -19,9 +19,12 @@
 ! Prevent ping active status, this probably prevent your friends noticeable that you're online becaue allowing 'active_ping' and
 ! 'reconnect.php' XHR will be expose online status while you're interacting to your friends, post, pages, etc. regardless of your
 ! active status settings that you've turned off already.
-||edge-chat.facebook.com/active_ping?$important
-||*-edge-chat.facebook.com/active_ping?$important
+||facebook.com/active_ping?$important
 ||facebook.com/ajax/presence/reconnect.php?$important
+
+
+! Prevent "null" commerce messaging ping
+||facebook.com/messages/commerce/page/nullstate$important
 
 ! Additional connections that trying switch connections from `edge-chat.facebook.com` if it's get blocked.
 ||*-undefined.facebook.com$important
