@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 201903132023
+! Version: 201903151657
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -62,7 +62,7 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 ||facebook.com/ajax/mtouch_perf_page_load_timings/$important
 
 ! Remove "Big Like" button in message chat, the button will auto change to "Send" once you've start focusing to text box, but it
-! will change to "Like" button once the text box lost focus, I remove it to prevent accidentally sending "Big Like"
+! will change to "Like" button once the text box lost focus, I remove it to prevent sending "Big Like" by mistake!
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-messages #root #message-reply-composer form div[data-sigil="marea"] div[class] > button.iconOnly[name="like"]
 
 ! Try to remove weird square box that divide almost every comments
@@ -70,6 +70,9 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 
 ! Remove the "Add" ads interest after you've removed it
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads .accelerate div[class] > div[class][style] div[class] > a[data-sigil="add"]
+
+! Remove a button to subscribe notifications for "On This Day"
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-onthisday #root div[class][data-store-id] > div[class] > div a[href^="/onthisday/subscribe/?"]
 
 ! Remove non-same origin meun out of list (affect Pages Menu [your pages, liked, zuckested], Gaming, Explore, Fundarise, Instant Games)
 ! - New Bookmarks (visit https://touch.facebook.com/bookmarks)

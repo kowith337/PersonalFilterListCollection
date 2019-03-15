@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: kowith337's Facebook Chat Awareness
-! Version: 201903141528
+! Version: 201903141537
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/facebook
@@ -21,7 +21,6 @@
 ! active status settings that you've turned off already.
 ||facebook.com/active_ping?$important
 ||facebook.com/ajax/presence/reconnect.php?$important
-
 
 ! Prevent "null" commerce messaging ping
 ||facebook.com/messages/commerce/page/nullstate$important

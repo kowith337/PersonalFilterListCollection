@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201903141525
+! Version: 201903151657
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -318,6 +318,7 @@ facebook.com##div[role="navigation"] > div a[href^="/groups/?"][href*="discover_
 facebook.com##div[role="navigation"] > div a[href^="/groups/?"][href*="discover_category_id=470739743275782"]
 facebook.com##div[role="navigation"] > div a[href^="/groups/?"][href*="discover_category_id=1801122086782345"]
 facebook.com##iframe[id^="fbsbx-sig-iframe-"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###MNewsFeed section article[data-store*="originated_from_recommendation"]
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###bookmarkmenu table td a[href*="freebasics.com"]
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_loginbar_login_button
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_loginbar_reg_button
