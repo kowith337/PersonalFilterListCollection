@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201903151657
+! Version: 201903171721
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -571,6 +571,7 @@ facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
 ! CSS Modification
 ! This may modify some element instead of hiding
 ! 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###header #MBackNavBar:style(margin-top: 95% !important)
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###MNewsFeed section article .story_body_container header a[href^="/mobile/android/upsell_link/"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##article #advertiserhidden div[data-sigil="ad-prefs-advertiser-section"] .scrollArea .scrollAreaBody a[data-sigil="ad-prefs-advertiser-preview-link"]:style(pointer-events: none !important)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##article .story_body_container div > div a[href^="/mobile/"][href*="/upsell_link/?"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##article div > div[data-autoid] a[data-sigil="redirect_to_advertiser"]:style(color: red !important; text-decoration: none !important; pointer-events: none !important)
