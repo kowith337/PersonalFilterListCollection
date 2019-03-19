@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Miscellaneous Annoyance
-! Version: 201903151730
+! Version: 201903192218
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -12,6 +12,10 @@
 ! [GitHub]
 github.com##.repository-content .protip
 github.com##div[class^="signup-prompt"]
+
+! [Google]
+! No reason to manually update location with precious method! (resolve location from network connection isn't enough, huh?)
+google.*###fbar #swml a#swml-upd
 
 ! [Linkis] (scam content framing)
 linkis.com##.deeper-overlay
@@ -28,6 +32,7 @@ files.minecraftforge.net##.ad-container-framed
 ! [Reddit Old]
 old.reddit.com##.ProfileVoiceAd
 old.reddit.com##.TrendingProfilesSidebar
+old.reddit.com##.commentsignupbar
 old.reddit.com##.listingsignupbar
 
 ! [Taobao Mobile]
@@ -54,7 +59,7 @@ youtube.com###hats-container[data-survey-id]
 ! [YouTube Polymer]
 youtube.com##ytd-consent-bump-renderer
 
-! DOM Chaining - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [GitHub]
 github.com##.js-notice:has(.js-dismiss)
 
@@ -80,14 +85,14 @@ wallgif.com##content div[id^=block_modal]
 ! [YouTube Old]
 youtube.com##.individual-feed li .branded-page-box:has(.feed-item-dismissable:has(span.shelf-subscription-button button[data-style-type="branded"]))
 
-! HTML Filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! HTML Filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: This work only FF quantum + uB0 WebExt
 !#if cap_html_filtering
 greasyfork.org##^.post-install
 m.intl.taobao.com,m.taobao.com##^script:has-text(getFB_GOOLE_trackJs)
 !#endif
 
-! CSS Modify - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! CSS Modify  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Minecraft] to prevent clicking the paid links hyperlink, e.g. AdFly, AdFocus, NetBee (by accident or intent)
 ! ChocolateMinecraft: http://chocolateminecraft.com (Use both AdFly and NetBee {Older version of mods})
 ! - Only "Mirror" links can be clickable, the very old versions may unable to click because it have no mirror links.
@@ -129,7 +134,7 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||speedtest.net/javascript/jquery-analytics$important
 
 ! Redirect - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! [GreasyFork] added ping request while installing script (inside the "Install Script" green button) via [data-ping-url] that
+! [GreasyFork] added ping request while installing script (inside the "Install Script" green button) via `data-ping-url` that
 ! cause promoted script to be shown and also the site also get user data about it, eliminate this requests and fake sent data
 ! with `nooptext` can solve this thing also.
 ||greasyfork.org/scripts/*/install-ping?$xmlhttprequest,important,redirect=nooptext
@@ -149,6 +154,9 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 
 ! [Mozilla AMO] Some extensions at Mozilla (mostly if it have suggest to contribute via donation) is redirect to open a developer
 ! profile page after installed.
+! Note for post-quantum Firefox users, the filter may not work unless you've de-whitelist WebExtension exception and make config
+! prefs to resist fingerprinting on mozilla addons page, see "Privileged Pages" information and how-tos in uBlock wiki
+! https://github.com/gorhill/uBlock/wiki/Privileged-Pages
 ||addons.mozilla.org/*/addon/*/developers$document
 
 ! Scriplets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
