@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 201903132024
+! Version: 201903232018
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -13,6 +13,10 @@
 !       manually select some part of URL text that not wrapped by other things unnecessary.
 ! Note 2: "Overdone" edition is also apply the "current tab" and "AJAX" that contains the tracked parameters, this probably make
 !         the issue about seamless navigating that use "XMLHttpRequest" to be stuck! so use at your own risk!!
+
+! Prevent AMP on Twitter
+! Based on https://old.reddit.com/r/uBlockOrigin/comments/a650rk/how_can_i_block_google_amp_links/ebsye7c
+||t.co/*?amp=1$document,subdocument,xmlhttprequest,important
 
 ! Common Extrenal
 ||*&fbclid$document,subdocument,xmlhttprequest,important
