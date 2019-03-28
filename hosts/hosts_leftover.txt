@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201903132018
+# Version: 201903281155
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -122,6 +122,7 @@
 0.0.0.0 gratonrewardcenter.icu
 0.0.0.0 gsspat.jp
 0.0.0.0 gssprt.jp
+0.0.0.0 igmedianow.com
 0.0.0.0 imprezzer.com
 0.0.0.0 imrworldwide.com
 0.0.0.0 innity.com
@@ -481,6 +482,7 @@
 0.0.0.0 tracker.dome.cloud
 0.0.0.0 tracker.stats.in.th
 0.0.0.0 trc.sanook.com
+0.0.0.0 trend.igmedianow.com
 0.0.0.0 vidstat.taboola.com
 0.0.0.0 vz-cdn.contentabc.com
 0.0.0.0 vz-cdn.trafficjunky.net
