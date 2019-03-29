@@ -1,15 +1,27 @@
 # [uMatrix 1.3.3.1]
 # Title: Thai BadBait Lists (Top level only)
-# Version: 201903132019
+# Version: 201903300038
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
 # Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/hosts/hosts_badbait_th.txt
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 dirangu.com
 0.0.0.0 followyoutech.com
 0.0.0.0 gmmwork.com
+0.0.0.0 hareebota.com
+0.0.0.0 iohbnews.com
+0.0.0.0 jookthai.com
+0.0.0.0 khoasodth.com
 0.0.0.0 mono29news.com
+0.0.0.0 nukrangnews.com
 0.0.0.0 one31news.com
+0.0.0.0 ratstas.com
+0.0.0.0 syoutaogou.com
+0.0.0.0 tawatnews.com
+0.0.0.0 thaisde.com
 0.0.0.0 toosthai.com
+0.0.0.0 wanmreos.com
+0.0.0.0 www.iohbnews.com
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
