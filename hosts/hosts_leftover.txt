@@ -108,6 +108,7 @@
 0.0.0.0 cutedev.net
 0.0.0.0 da-ads.com
 0.0.0.0 dapxl.com
+0.0.0.0 demand.supply
 0.0.0.0 dentsu360th.com
 0.0.0.0 dome.cloud
 0.0.0.0 easylist.club
@@ -140,6 +141,7 @@
 0.0.0.0 opticks.io
 0.0.0.0 perfectmarket.com
 0.0.0.0 petametrics.com
+0.0.0.0 pikdo.net
 0.0.0.0 run-syndicate.com
 0.0.0.0 sharethis.com
 0.0.0.0 silkspan.com
@@ -386,6 +388,7 @@
 0.0.0.0 js.mtburn.com
 0.0.0.0 js.mtburn.jp
 0.0.0.0 js.rfp.fout.jp
+0.0.0.0 live.demand.supply
 0.0.0.0 loadbalancer.visitor-analytics.io
 0.0.0.0 lvs.truehits.in.th
 0.0.0.0 lvs2.truehits.in.th
