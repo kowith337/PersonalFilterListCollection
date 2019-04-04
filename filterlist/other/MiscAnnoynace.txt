@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Miscellaneous Annoyance
-! Version: 201903192218
+! Version: 201904042102
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -42,6 +42,7 @@ m.intl.taobao.com,m.taobao.com##.zebra-oversea-smartbanner
 ! [Twitter]
 twitter.com###signin-dropdown
 twitter.com##.stream li.WtfLargeCarouselStreamItem
+twitter.com##.SidebarCommonModules .RelatedUsers
 twitter.com##div[class^="MomentsPermalinkPage"] .MomentsPermalinkPage-related
 
 ! [WallGif]
