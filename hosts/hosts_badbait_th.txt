@@ -1,12 +1,15 @@
 # [uMatrix 1.3.3.1]
 # Title: Thai BadBait Lists (Top level only)
-# Version: 201903300038
+# Version: 201904042052
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
 # Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/hosts/hosts_badbait_th.txt
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Note: This only self protect against tweet bot spam and scam that throw clickbait site links into your timeline and mentions!
+# Fake News + SureAndShare Tweets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Credits: https://twitter.com/SureAndShare/status/1111550422085296128
+#          https://twitter.com/SureAndShare/status/1110350866660249600
 0.0.0.0 dirangu.com
 0.0.0.0 followyoutech.com
 0.0.0.0 gmmwork.com
@@ -23,5 +26,40 @@
 0.0.0.0 thaisde.com
 0.0.0.0 toosthai.com
 0.0.0.0 wanmreos.com
+0.0.0.0 www.dirangu.com
+0.0.0.0 www.followyoutech.com
+0.0.0.0 www.gmmwork.com
+0.0.0.0 www.hareebota.com
 0.0.0.0 www.iohbnews.com
+0.0.0.0 www.jookthai.com
+0.0.0.0 www.khoasodth.com
+0.0.0.0 www.mono29news.com
+0.0.0.0 www.nukrangnews.com
+0.0.0.0 www.one31news.com
+0.0.0.0 www.ratstas.com
+0.0.0.0 www.syoutaogou.com
+0.0.0.0 www.tawatnews.com
+0.0.0.0 www.thaisde.com
+0.0.0.0 www.toosthai.com
+0.0.0.0 www.wanmreos.com
+# Twitter mention spam train  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Credits: https://twitter.com/thammarith/status/1110399142168166400
+0.0.0.0 darachilli.com
+0.0.0.0 lekded369.com
+0.0.0.0 linkis.com
+0.0.0.0 ln.is
+0.0.0.0 socialhot24.com
+0.0.0.0 starnews2day.com
+0.0.0.0 startclip.com
+0.0.0.0 topicza.com
+0.0.0.0 tricksex.net
+0.0.0.0 www.darachilli.com
+0.0.0.0 www.lekded369.com
+0.0.0.0 www.socialhot24.com
+0.0.0.0 www.starnews2day.com
+0.0.0.0 www.startclip.com
+0.0.0.0 www.topicza.com
+0.0.0.0 www.tricksex.net
+0.0.0.0 www.you-health.net
+0.0.0.0 you-health.net
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
