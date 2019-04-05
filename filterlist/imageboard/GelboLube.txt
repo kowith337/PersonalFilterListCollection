@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201903132023
+! Version: 201904052052
 ! Expires: 2 days
 ! Author: kowith337
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -44,6 +44,9 @@ gelbooru.com##noscript
 
 ! 4. I have no idea about <ins> tag, can uBlock handle it?
 gelbooru.com##ins.adsbytrafficjunky
+
+! 5. Hide all AdToniq AAB overlay (DOM Wildcard)
+gelbooru.com##div[id^="adtoniq-msg-bar"]
 
 ! Filtered procedural hiding - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Element hiding in tags list pane that also insert tall banner ads
@@ -160,14 +163,17 @@ gelbooru.com###navbar ul.nav li:has(a[href*="thedoujin.com"])
 !    Now using $important tag due to counter EasyList filters that whitelist ExoClick script ads.
 ||4uvjosuc.com$domain=gelbooru.com,important
 ||adnium.com$domain=gelbooru.com,important
+||adtng.com$domain=gelbooru.com,important
+||amazonaws.com$domain=gelbooru.com,important
 ||atas.io$domain=gelbooru.com,important
-||contentabc.com$domain=gelbooru.com,important
 ||ccbill.com$domain=gelbooru.com,important
+||contentabc.com$domain=gelbooru.com,important
 ||dynsrvaba.com$domain=gelbooru.com,important
 ||exoclick.com$domain=gelbooru.com,important
 ||exosrv.com$domain=gelbooru.com,important
 ||google-analytics.com$domain=gelbooru.com,important
 ||googletagmanager.com$domain=gelbooru.com,important
+||hdscout.com$domain=gelbooru.com,important
 ||jabcomix.com$domain=gelbooru.com,important
 ||javhd.com$domain=gelbooru.com,important
 ||juicyads.com$domain=gelbooru.com,important
@@ -189,6 +195,11 @@ gelbooru.com###navbar ul.nav li:has(a[href*="thedoujin.com"])
 ||gelbooru.com/bed2.php$important
 ||gelbooru.com/bluet.php$important
 ||gelbooru.com/bluet.wry$important
+||gelbooru.com//script/application.js.php$important
+||gelbooru.com//script/bed.php$important
+||gelbooru.com//script/bed2.php$important
+||gelbooru.com//script/bluet.php$important
+||gelbooru.com//script/bluet.wry$important
 ||gelbooru.com/script/application.js.php$important
 ||gelbooru.com/script/bed.php$important
 ||gelbooru.com/script/bed2.php$important
@@ -206,6 +217,9 @@ gelbooru.com###navbar ul.nav li:has(a[href*="thedoujin.com"])
 ! 6. To preventing resources request abuse that they trying to reload blocked resources as 'other' for able to re-access blocked
 !    JS function and/or re-deploy ads and such...
 ||gelbooru.com/*.php*$~document,~inline-script,~xmlhttprequest
+||gelbooru.com//script/application.js$~script,important
+||gelbooru.com//script/try.js$important
+||gelbooru.com//script/tryt.js$important
 ||gelbooru.com/ads.js$~script,important
 ||gelbooru.com/script/application.js$~script,important
 ||gelbooru.com/script/try.js$important
@@ -237,6 +251,7 @@ gelbooru.com###navbar ul.nav li:has(a[href*="thedoujin.com"])
 ! gelbooru.com##+js(abort-on-property-write.js, ExoLoader.serve)
 ! gelbooru.com##+js(abort-on-property-write.js, domain_base)
 ! gelbooru.com##+js(abort-on-property-write.js, addZone)
+! gelbooru.com##+js(abort-on-property-write.js, adtoniq)
 ! gelbooru.com##+js(abort-on-property-write.js, gtag)
 ! gelbooru.com##+js(abort-on-property-write.js, serve)
 
@@ -249,27 +264,34 @@ gelbooru.com##+js(abort-on-property-write.js, adsbyjuicy)
 
 ! 5. Experimental, to foil ILS function for Chromium / Firefox WebExt
 gelbooru.com##+js(abort-current-inline-script.js, AddZone, idzone)
+gelbooru.com##+js(abort-current-inline-script.js, BetterJsPop, cookieName)
 gelbooru.com##+js(abort-current-inline-script.js, ImplicityBreakingSite, debugging)
-gelbooru.com##+js(abort-current-inline-script.js, add, newTab)
+gelbooru.com##+js(abort-current-inline-script.js, adtoniq)
 gelbooru.com##+js(abort-current-inline-script.js, domain_base, exosrv.com)
 gelbooru.com##+js(abort-current-inline-script.js, serve, script_url)
 gelbooru.com##+js(abort-current-inline-script.js, window.dataLayer, gtag)
 
 ! 6. Inject constant value (Only a value that not match to specific string will be applied)
 gelbooru.com##+js(set-constant.js, ExoDetector, noopfunc)
+gelbooru.com##+js(set-constant.js, adtoniq, noopfunc)
 
 ! 7. HTML filtering, able to remove some specific path inside the non-filtered document before it's load
 !    currently require 1.14.23 beta and run on Firefox Quantum (57+)
+gelbooru.com##^div[id^="adtoniq-msg-bar"]
 gelbooru.com##^ins[class="adsbytrafficjunky"]
 gelbooru.com##^script:has-text(BetterJsPop)
 gelbooru.com##^script:has-text(EXoDetector)
+gelbooru.com##^script:has-text(adtoniq)
 gelbooru.com##^script:has-text(fuckingnormieswry)
 gelbooru.com##^script[async][src^="https://media.trafficjunky.net"]
 gelbooru.com##^script[async][src^="https://www.googletagmanager.com"]
 gelbooru.com##^script[src*="/autoDebug.js"]
 gelbooru.com##^script[src*="/script/license"]
 gelbooru.com##^script[src^="https://ads.exoclick.com"]
+gelbooru.com##^script[src^="https://gelbooru.com//script/try.js"]
+gelbooru.com##^script[src^="https://gelbooru.com//script/tryt.js"]
 gelbooru.com##^script[src^="https://gelbooru.com/script/try.js"]
+gelbooru.com##^script[src^="https://gelbooru.com/script/tryt.js"]
 ! gelbooru.com##^script:has-text(abvertDar)
 
 ! CSS Re-design / Mobile Improvement - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -288,6 +310,7 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ! Block then Redirect - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Experimental for replace a dummy script, frame, text, etc.
 ! Redirect rules is only affect for specific type of request only.
+||amazonaws.com/html/danaton3.html$subdocument,important,domain=gelbooru.com,redirect=noopframe
 ||gelbooru.com/autoDebug.js$script,important,redirect=noopjs
 ||gelbooru.com/index.php?page=autoDebug$xmlhttprequest,important,redirect=nooptext
 ||gelbooru.com/intermission.php$subdocument,important,redirect=noopframe
