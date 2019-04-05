@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Miscellaneous Annoyance
-! Version: 201904042102
+! Version: 201904060022
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -16,6 +16,7 @@ github.com##div[class^="signup-prompt"]
 ! [Google]
 ! No reason to manually update location with precious method! (resolve location from network connection isn't enough, huh?)
 google.*###fbar #swml a#swml-upd
+google.*###fbar #swml a[data-ved]
 
 ! [Linkis] (scam content framing)
 linkis.com##.deeper-overlay
