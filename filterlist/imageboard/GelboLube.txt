@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201904052052
+! Version: 201904060011
 ! Expires: 2 days
 ! Author: kowith337
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -223,6 +223,7 @@ gelbooru.com###navbar ul.nav li:has(a[href*="thedoujin.com"])
 ||gelbooru.com/ads.js$~script,important
 ||gelbooru.com/script/application.js$~script,important
 ||gelbooru.com/script/try.js$important
+||gelbooru.com/script/tryt.js$important
 ||youhate.us/ads.js$~script,important
 
 ! 7. Useless scripts that use for anti-adblock (license.gelbooru.js is similar to license.<num>.js that used in openload.co)
