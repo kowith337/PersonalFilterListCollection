@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: GelboLube (Firefox Legacy)
-! Version: 201904060011
+! Version: 201904121531
 ! Expires: 2 days
 ! Author: kowith337
 ! From: https://github.com/kowith337/GelboLube/raw/legacy/gelbolube.txt
@@ -78,6 +78,8 @@ gelbooru.com##body div[style*="z-index"]:matches-css(width: 100%)
 ! 7. Hide some notices (e.g. Change to regular layout when use mobile browser, Pasta notice)
 gelbooru.com##.alert-info:has(a[href*="?page=ihnt"])
 gelbooru.com##.alert-warning:has(a[href*="javascript"])
+gelbooru.com##.alert-warning:has(a[href^="https://buymyshit.moneygrubbingwhore.com"])
+gelbooru.com##.alert-warning:has(a[href^="https://patreon.com/gelbooru"])
 
 ! 8. Remove berserk rant!
 gelbooru.com##.contain-push center div[style]:not(#paginator)
