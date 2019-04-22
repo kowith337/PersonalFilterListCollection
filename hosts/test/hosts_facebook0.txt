@@ -1,6 +1,6 @@
 # [uMatrix 1.3.15.100]
 # Title: Facebook Zero Hosts Block (Use for test)
-# Version: 201904151538
+# Version: 201904222155
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/hosts
@@ -62,20 +62,12 @@
 0.0.0.0 p.internet.org
 0.0.0.0 web.beta.facebook.com
 0.0.0.0 web.facebook.com
+0.0.0.0 z-1.facebook.com
 0.0.0.0 z-m-a-api.facebook.com
 0.0.0.0 z-m-a-graph.facebook.com
 0.0.0.0 z-m-api.facebook.com
 0.0.0.0 z-m-b-api.facebook.com
 0.0.0.0 z-m-b-graph.facebook.com
-0.0.0.0 z-m-graph.facebook.com
-0.0.0.0 z-m-www.facebook.com
-0.0.0.0 z-m.facebook.com
-0.0.0.0 zero.beta.facebook.com
-0.0.0.0 zero.facebook.com
-0.0.0.0 zero.freebasics.com
-0.0.0.0 zero.internet.org
-0.0.0.0 z-1.facebook.com
-0.0.0.0 z-m-api.facebook.com
 0.0.0.0 z-m-graph.facebook.com
 0.0.0.0 z-m-www.facebook.com
 0.0.0.0 z-m.facebook.com
@@ -101,7 +93,13 @@
 0.0.0.0 z-p4.facebook.com
 0.0.0.0 z-upload.facebook.com
 0.0.0.0 z.facebook.com
-# FBZero StaticXX CDN - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 zero.beta.facebook.com
+0.0.0.0 zero.facebook.com
+0.0.0.0 zero.freebasics.com
+0.0.0.0 zero.internet.org
+0.0.0.0 zero-api-slb-10-08-prn1.facebook.com
+# FBZero XXCDN Server - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 z-1-scontent.xx.fbcdn.net
 0.0.0.0 z-m-scontent-ams.xx.fbcdn.net
 0.0.0.0 z-m-scontent-amt.xx.fbcdn.net
 0.0.0.0 z-m-scontent-arn.xx.fbcdn.net
@@ -219,7 +217,10 @@
 0.0.0.0 z-m-video-waw.xx.fbcdn.net
 0.0.0.0 z-m-video-yyz.xx.fbcdn.net
 0.0.0.0 z-m-video.xx.fbcdn.net
-# Import test from https://github.com/anudeepND/blacklist/raw/master/facebook.txt - - - - - - - - - - - - - - - - - - - - - - - !
+0.0.0.0 z-p3-scontent-amt2-1.xx.fbcdn.net
+0.0.0.0 z-p3-scontent-lax3-1.xx.fbcdn.net
+0.0.0.0 z-p3-video-vie1-1.xx.fbcdn.net
+# FBZero ShaverCDN Server - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 edge-star-z-mini-shv-01-bom1.facebook.com
 0.0.0.0 edge-star-z-mini-shv-01-bru2.facebook.com
 0.0.0.0 edge-star-z-mini-shv-01-cdg2.facebook.com
@@ -326,36 +327,25 @@
 0.0.0.0 fna-fbcdn-z-p4-shv-03-fmaa1.fbcdn.net
 0.0.0.0 fna-fbcdn-z-p4-shv-04-fmaa1.fbcdn.net
 0.0.0.0 mqtt-z-shv-16-frc1.facebook.com
-0.0.0.0 www.z-1-lookaside.fbsbx.com
-0.0.0.0 www.z-p3-cdn.fbsbx.com
-0.0.0.0 z-1-cdn.fbsbx.com
-0.0.0.0 z-1-external.fsea1-1.fna.fbcdn.net
-0.0.0.0 z-1-lookaside.fbsbx.com
-0.0.0.0 z-1-scontent-sjc2-1.xx.fbcdn.net
-0.0.0.0 z-1-scontent.fmaa1-1.fna.fbcdn.net
-0.0.0.0 z-1-scontent.fpoa10-1.fna.fbcdn.net
-0.0.0.0 z-1-scontent.xx.fbcdn.net
-0.0.0.0 z-1-video.fpoa10-1.fna.fbcdn.net
-0.0.0.0 z-1-video.fszb1-1.fna.fbcdn.net
-0.0.0.0 z-1.facebook.com
 0.0.0.0 z-m-fbcdn-mini-shv-01-ord1.fbcdn.net
 0.0.0.0 z-m-fbcdn-shv-01-frt3.fbcdn.net
-0.0.0.0 z-m-graph.facebook.com
-0.0.0.0 z-m-graph.fbsbx.com
-0.0.0.0 z-m-lookaside.fbsbx.com
+# FBZero FNA Server - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 z-1-external.fsea1-1.fna.fbcdn.net
+0.0.0.0 z-1-scontent-sjc2-1.xx.fbcdn.net
+0.0.0.0 z-1-scontent.fbkk1-1.fna.fbcdn.net
+0.0.0.0 z-1-scontent.fbkk10-1.fna.fbcdn.net
+0.0.0.0 z-1-scontent.fmaa1-1.fna.fbcdn.net
+0.0.0.0 z-1-scontent.fmaa10-1.fna.fbcdn.net
+0.0.0.0 z-1-scontent.fpoa1-1.fna.fbcdn.net
+0.0.0.0 z-1-scontent.fpoa10-1.fna.fbcdn.net
+0.0.0.0 z-1-video.fpoa10-1.fna.fbcdn.net
+0.0.0.0 z-1-video.fszb1-1.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fceb1-1.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fdac1-1.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fmex10-1.fna.fbcdn.net
-0.0.0.0 z-m.c10r.facebook.com
-0.0.0.0 z-m.facebook.com
-0.0.0.0 z-p3-cdn.fbsbx.com
 0.0.0.0 z-p3-external.fmdc1-1.fna.fbcdn.net
 0.0.0.0 z-p3-external.fsdu11-1.fna.fbcdn.net
 0.0.0.0 z-p3-external.fsea1-1.fna.fbcdn.net
-0.0.0.0 z-p3-graph.facebook.com
-0.0.0.0 z-p3-lookaside.fbsbx.com
-0.0.0.0 z-p3-scontent-amt2-1.xx.fbcdn.net
-0.0.0.0 z-p3-scontent-lax3-1.xx.fbcdn.net
 0.0.0.0 z-p3-scontent.facc1-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.faqa1-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbga1-1.fna.fbcdn.net
@@ -380,16 +370,22 @@
 0.0.0.0 z-p3-scontent.fsea1-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fsub1-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.ftpa1-1.fna.fbcdn.net
-0.0.0.0 z-p3-video-vie1-1.xx.fbcdn.net
 0.0.0.0 z-p3-video.flpb1-1.fna.fbcdn.net
 0.0.0.0 z-p3-video.fpfb1-1.fna.fbcdn.net
 0.0.0.0 z-p3-video.fsea1-1.fna.fbcdn.net
-0.0.0.0 z-p4-cdn.fbsbx.com
-0.0.0.0 z-p4-dcn.fbsbx.com
-0.0.0.0 z-p4-graph.facebook.com
 0.0.0.0 z-p4-instagram.ffor11-1.fna.fbcdn.net
 0.0.0.0 z-p42-instagram.fada1-1.fna.fbcdn.net
 0.0.0.0 z-p42-instagram.fada1-10.fna.fbcdn.net
-0.0.0.0 z.facebook.com
-0.0.0.0 zero-api-slb-10-08-prn1.facebook.com
+# FBZero SandboxCDN Server  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 www.z-1-lookaside.fbsbx.com
+0.0.0.0 www.z-p1-cdn.fbsbx.com
+0.0.0.0 www.z-p3-cdn.fbsbx.com
+0.0.0.0 z-1-cdn.fbsbx.com
+0.0.0.0 z-1-lookaside.fbsbx.com
+0.0.0.0 z-m-graph.fbsbx.com
+0.0.0.0 z-m-lookaside.fbsbx.com
+0.0.0.0 z-p3-cdn.fbsbx.com
+0.0.0.0 z-p3-lookaside.fbsbx.com
+0.0.0.0 z-p4-cdn.fbsbx.com
+0.0.0.0 z-p4-dcn.fbsbx.com
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
