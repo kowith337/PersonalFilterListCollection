@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Miscellaneous Annoyance
-! Version: 201904060022
+! Version: 201904242100
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -40,7 +40,7 @@ old.reddit.com##.listingsignupbar
 m.intl.taobao.com,m.taobao.com##.App div[class^="smartbanner"]
 m.intl.taobao.com,m.taobao.com##.zebra-oversea-smartbanner
 
-! [Twitter]
+! [Twitter Old] (Deprecated, maybe.)
 twitter.com###signin-dropdown
 twitter.com##.stream li.WtfLargeCarouselStreamItem
 twitter.com##.SidebarCommonModules .RelatedUsers
@@ -79,6 +79,11 @@ stackexchange.com,superuser.com##.hero-container:has(#hero-content:has(div a[hre
 
 ! [Taobao Mobile] Remove non-same shop related items
 m.intl.taobao.com##.App .recommend .recommend-list-wrapper:nth-of-type(2)
+
+! [Twitter NEW]
+twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(a[role="link"][data-focusable][href^="/i/"])
+twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(div[role="button"][data-focusable][data-testid="UserCell"] a[aria-hidden][tabindex][href]):has(a[role="link"][data-focusable] div[dir="auto"] span[dir="auto"])
+twitter.com##div[data-reactroot] div[class] > div[data-focusable][tabindex][class] div[class]:has(div[class] > div[class][style] img[alt][src^="https://ton.twimg.com/twitter_shared_public/responsive-web"])
 
 ! [WallGif] Disable AdBlock...? HOW ABOUT NO!!
 wallgif.com###overlay:has(img[alt="Loader"])
