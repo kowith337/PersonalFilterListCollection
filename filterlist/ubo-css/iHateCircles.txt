@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: iHateCircles
-! Version: 201903132029
+! Version: 201904302041
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css
@@ -11,3 +11,4 @@
 facebook.com##*:after:style(border-radius: 0px !important)
 facebook.com##*:before:style(border-radius: 0px !important)
 facebook.com##*:style(border-radius: 0px !important)
+twitter.com##*:style(border-radius: 0px !important)
