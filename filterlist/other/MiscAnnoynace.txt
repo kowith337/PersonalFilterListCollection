@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Miscellaneous Annoyance
-! Version: 201904242100
+! Version: 201905060205
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -17,6 +17,10 @@ github.com##div[class^="signup-prompt"]
 ! No reason to manually update location with precious method! (resolve location from network connection isn't enough, huh?)
 google.*###fbar #swml a#swml-upd
 google.*###fbar #swml a[data-ved]
+! Remove "Related search" / "People also search for"
+google.*###main #extrares #botstuff div[data-ved] div[jscontroller][data-hveid][data-ved]
+google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][data-ved] div[data-has-close][class*="result-pivots"][data-ved]
+google.*###main div[data-ved] div[data-async-context] .kno-result[data-hveid][data-ved]
 
 ! [Linkis] (scam content framing)
 linkis.com##.deeper-overlay
@@ -100,6 +104,11 @@ m.intl.taobao.com,m.taobao.com##^script:has-text(getFB_GOOLE_trackJs)
 !#endif
 
 ! CSS Modify  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Google] Restore context of search result that was hidden by a things named as "People also search for", the hidden action will
+! be triggered when you've open some result into new tab or window, then return back to Google...
+google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname] hr[style^="visibility: hidden"]:style(visibility: visible !important)
+google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][style^="display: none"]:style(display: block !important)
+
 ! [Minecraft] to prevent clicking the paid links hyperlink, e.g. AdFly, AdFocus, NetBee (by accident or intent)
 ! ChocolateMinecraft: http://chocolateminecraft.com (Use both AdFly and NetBee {Older version of mods})
 ! - Only "Mirror" links can be clickable, the very old versions may unable to click because it have no mirror links.
