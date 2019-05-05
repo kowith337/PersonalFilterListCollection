@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201904130942
+! Version: 201905052127
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -172,6 +172,8 @@
 ! Note: Sometime you're able to still use 'm.facebook.com' or 'touch.facebook.com' on mobile data,
 !       but it still make xhr to 'mobile.facebook.com', so it's good to block that!
 ! Furthermore: I HATE FreakBasics by Facebook, internet.org also...
+||*&_nc_fbs=*$important,domain=facebook.com|instagram.com|messenger.com|freebasics.com|internet.org
+||*?_nc_fbs=*$important,domain=facebook.com|instagram.com|messenger.com|freebasics.com|internet.org
 ||0.facebook.com$important
 ||edge-z-*.facebook.com$important
 ||edge-z-*.facebook.net$important
@@ -315,8 +317,8 @@ m.facebook.com,mbasic.facebook.com###m_newsfeed_stream div > div[data-ft*="saved
 m.facebook.com,mbasic.facebook.com###root table > div table > a[href*="freebasics.com"]
 m.facebook.com,mbasic.facebook.com##div[id^="u_0_"][data-ft*="ego_id"]
 m.facebook.com,mbasic.facebook.com##root div[data-ft][data-xt*="sponsored"]
-m.facebook.com,touch.facebook.com###header #MBackNavBar
 m.facebook.com,touch.facebook.com###MNewsFeed section article[data-store*="originated_from_recommendation"]
+m.facebook.com,touch.facebook.com###header #MBackNavBar
 m.facebook.com,touch.facebook.com###root .scrollArea[data-sigil*="friends-center-nav"] a[data-ajaxify-href*="/friends/center/suggestions/"]
 m.facebook.com,touch.facebook.com###root div > div[data-store*="actor_id"] div[data-sigil^="m-promo"]
 m.facebook.com,touch.facebook.com###root[data-sigil*="context-layer-root"] article div a[href*="/ads/preferences/interest_suggestions/"]
@@ -359,11 +361,6 @@ m.facebook.com,touch.facebook.com##div[id^="composer"] div[data-sigil="m-convers
 
 ! DOM Hiding - Level 2: contains has(-text)/xpath parameter
 ! This need at least uBO 1.8.0+, but 1.10.0+ for multiple chaining...
-facebook.com##div[data-testid="marketplace_category_feed"] div > div[class][style]:has(a[href*="facebook.com/l.php?"][href*="fbclid"])
-facebook.com##div[data-testid="marketplace_category_feed"] div > div[class][style]:has(a[href^="/ads/about/?"])
-facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div[style] a[href^="https://web.facebook.com/help/"])
-facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div[style] a[href^="https://www.facebook.com/help/"])
-facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(.userContentWrapper div[class] a[target][data-hovercard*="directed_target_id"])
 facebook.com###ads_preferences_desktop_root div[tabindex][role="button"] button[data-hover][data-tooltip-content="Add"]:has(span:has-text(Add))
 facebook.com###contentArea div[class] div[id][class]:has(a[href*="/login/?"])
 facebook.com###content[role="main"] .clearfix div[data-referrer] > div .stat_elem:has(button.PageLikeButton i[class*="sx_"])
@@ -401,6 +398,8 @@ facebook.com##[id^=hyperfeed_story_id_]:has(a[href*="utm_campaign"])
 facebook.com##div ul[role="menu"] li:has(a[href*="campaign/landing.php?"])
 facebook.com##div[data-referrer="pagelet_side_ads"]
 facebook.com##div[data-referrer="timeline_collections_section_title"] > div:has(div[id^="pagelet_recommendation"])
+facebook.com##div[data-testid="marketplace_category_feed"] div > div[class][style]:has(a[href*="facebook.com/l.php?"][href*="fbclid"])
+facebook.com##div[data-testid="marketplace_category_feed"] div > div[class][style]:has(a[href^="/ads/about/?"])
 facebook.com##div[id^="dialog_"]:has(.dialog_buttons input[name="login"])
 facebook.com##div[id^="hyperfeed_story_id"] .mtm div[id^="u_jsonp"] div[id^="u_jsonp"]:has(a[href*="type=article_author_in_shared_link"])
 facebook.com##div[id^="hyperfeed_story_id"] div[data-gt*="click2canvas"] div[data-ft] .mts .mtm:has(.uiList:has(li a[rel][target="_blank"]))
@@ -417,6 +416,9 @@ facebook.com##div[id^="hyperfeed_story_id"]:has(div[data-ft*="ego_id"]:has(a[hre
 facebook.com##div[id^="hyperfeed_story_id"]:has(span a:has-text(/Sponsored/))
 facebook.com##div[id^="hyperfeed_story_id"]:has(span a[href*="[is_sponsored]=1"])
 facebook.com##div[id^="hyperfeed_story_id"]:has(span a[href*="is_sponsored=1"])
+facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(.userContentWrapper div[class] a[target][data-hovercard*="directed_target_id"])
+facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div[style] a[href^="https://web.facebook.com/help/"])
+facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div[style] a[href^="https://www.facebook.com/help/"])
 facebook.com##div[itemscope] #content_container div.clearfix div[class][id][style] div[class]:has(div.uiTypeahead div input[placeholder][aria-controls][aria-label^="Invite"])
 facebook.com##div[itemscope] div > #content_container div > div[style]:has(#pagelet_growth_expanding_cta)
 facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=212609529249058"])
@@ -475,10 +477,10 @@ m.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_contai
 m.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div[data-store*="share_id"] .story_body_container div div:has(.scrollArea:has(a[href^="/commerce/products/"]))
 m.facebook.com,touch.facebook.com###MNewsFeed section article:has(.scrollArea:has(a#pyml_infinite_scroll_loading))
 m.facebook.com,touch.facebook.com###events_dashboard_activity_feed section article:has(.scrollArea:has(.fbEventsEgoScroller))
-m.facebook.com,touch.facebook.com###group-discover-lading-column div:has(div[id^="group-discover-card-"] a[href^="/groups/?"][href*="discover_category_id=1801122086782345"])
 m.facebook.com,touch.facebook.com###group-discover-lading-column div:has(div[id^="group-discover-card-"] a[href^="/groups/?"][href*="discover_category_id=212609529249058"])
 m.facebook.com,touch.facebook.com###group-discover-lading-column div:has(div[id^="group-discover-card-"] a[href^="/groups/?"][href*="discover_category_id=234383826903707"])
 m.facebook.com,touch.facebook.com###group-discover-lading-column div:has(div[id^="group-discover-card-"] a[href^="/groups/?"][href*="discover_category_id=470739743275782"])
+m.facebook.com,touch.facebook.com###group-discover-lading-column div:has(div[id^="group-discover-card-"] a[href^="/groups/?"][href*="discover_category_id=1801122086782345"])
 m.facebook.com,touch.facebook.com###mEventsDashboard div > div[data-store-id] > div[data-store-id]:has(div[data-nt^="NT:BOX"]):has(.scrollArea)
 m.facebook.com,touch.facebook.com###mJewelRequestsFlyoutBody div div:has(div[class] div[class]:has(div[data-pymk-id]))
 m.facebook.com,touch.facebook.com###m_group_stories_container section article:has(.scrollArea .scrollAreaColumn[data-sigil="m-groups-pymi-item"])
@@ -515,7 +517,6 @@ m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a span:has-t
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/ads/create/"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/friends/center/suggestions/"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=124024574287414"]))
-m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=1728807357362356"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=275254692598279"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=343553122467255"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=399711043500146"]))
@@ -523,6 +524,7 @@ m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=526732794016279"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=645191315628772"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=762992637108088"]))
+m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=1728807357362356"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="instagram.com"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="/appcenter/165907476854626?"]))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="/lite/?loc_ref=menu"]))
@@ -545,12 +547,11 @@ m.facebook.com,touch.facebook.com##article:has(footer a[href*="/friends/center/"
 m.facebook.com,touch.facebook.com##article:has(footer a[href*="/saved/"])
 m.facebook.com,touch.facebook.com##article:has(footer a[href^="https://www.instagram.com"])
 m.facebook.com,touch.facebook.com##article:has(span[data-sigil="pixelContainer"])
+m.facebook.com,touch.facebook.com##div[class^="-hardstate-"] #root section article:has(.story_body_container div h3 a[href*="originated_from_recommendation"])
 m.facebook.com,touch.facebook.com##div[data-sigil*="story-div"] > div[class] > div[class]:has(#popup_xout)
 m.facebook.com,touch.facebook.com##div[data-sigil="comment"] section.touchable:has(div header h3)
 m.facebook.com,touch.facebook.com##section article .story_body_container .story_body_container > div > div:has(.scrollArea .scrollAreaColumn)
 m.facebook.com,touch.facebook.com##section article:has(.scrollArea):has(a[href*="instagram.com"])
-m.facebook.com,touch.facebook.com##div[class^="-hardstate-"] #root section article:has(.story_body_container div h3 a[href*="originated_from_recommendation"])
-
 
 ! DOM Hiding - Level 3: Same as level 2, but include :not
 ! Note: some rules still results false positive, e.g. remove panel that zuckest to download 'Facebook Lite', but it also
