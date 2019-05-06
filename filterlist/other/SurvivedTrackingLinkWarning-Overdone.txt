@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 201904262133
+! Version: 201905061728
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -58,8 +58,14 @@
 ||facebook.com/ads/*&session_id=$xmlhttprequest
 ||facebook.com/ads/*?session_id=$document,subdocument,important
 ||facebook.com/ads/*?session_id=$xmlhttprequest
-||reddit.com/*&utm_*=*&utm_*=*$document,subdocument,xmlhttprequest,important
-||reddit.com/*?utm_*=*&utm_*=*$document,subdocument,xmlhttprequest,important
+||mozilla.com/*&utm_*=*$document,subdocument,xmlhttprequest,important
+||mozilla.com/*?utm_*=*$document,subdocument,xmlhttprequest,important
+||mozilla.net/*&utm_*=*$document,subdocument,xmlhttprequest,important
+||mozilla.net/*?utm_*=*$document,subdocument,xmlhttprequest,important
+||mozilla.org/*&utm_*=*$document,subdocument,xmlhttprequest,important
+||mozilla.org/*?utm_*=*$document,subdocument,xmlhttprequest,important
+||reddit.com/*&utm_*=*$document,subdocument,xmlhttprequest,important
+||reddit.com/*?utm_*=*$document,subdocument,xmlhttprequest,important
 ||youtube.com/redirect?redir_token=*$document,subdocument,xmlhttprequest,important
 ||youtube.com/redirect?*&redir_token=*$document,subdocument,xmlhttprequest,important
 
