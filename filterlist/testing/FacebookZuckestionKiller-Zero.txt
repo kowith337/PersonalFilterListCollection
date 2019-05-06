@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201905061456
+! Version: 201905061804
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -251,6 +251,8 @@
 ! DOM Hiding - Level 1: Known DOM id and class, some wildcard of element name
 facebook.com###GroupDiscoverCard_Local
 facebook.com###GroupsRHCSuggestionSection
+facebook.com###ads_preferences_desktop_root #interacted div[class] > div[class] > div[class] img[alt][width="148"][height="148"]
+facebook.com###ads_preferences_desktop_root #interests div[class] > div[class] > div[class] img[alt][width="148"][height="148"]
 facebook.com###fbpage_invite_audience_action
 facebook.com###fbpage_invite_audience_action_finch
 facebook.com###feed_optimistic_video
@@ -334,6 +336,7 @@ facebook.com##iframe[id^="fbsbx-sig-iframe-"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div > div[data-store*="actor_id"] div[data-sigil^="m-promo"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root[data-sigil*="context-layer-root"] article div a[href*="/ads/preferences/interest_suggestions/"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###viewport #header #mJewelNav #feed_jewel.hasCount a div span[data-sigil="count"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root article div[class] > [id][data-autoid] img[data-sigil="redirect_to_interest"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads .accelerate div[class] > div[class][style] div[class] > a[data-sigil="add"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads .accelerate div[class] > div[class][style] div[class] > a[href^="/ads/interest/?"][data-sigil="redirect_to_interest"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads .accelerate div[class] > div[class][style] div[class] > div[class][data-sigil="add_removed"]
