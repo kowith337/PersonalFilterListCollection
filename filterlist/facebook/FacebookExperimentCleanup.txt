@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 201903222140
+! Version: 201905061555
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -82,6 +82,9 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 ! *4th items of top bar, I think their system will pick between marketplace and videos and will be determined by your usage.
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###mJewelNav div[class]:has(#marketplace_jewel)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###mJewelNav div[class]:has(#watch_jewel)
+
+! Try to rearrange new top bar that have search bar placeholder overlap, especially when you're viewing stories...
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-stories div[id*="schedulable-graph-search"]:style(display: none !important; position: unset !important)
 
 ! Remove non-same origin meun out of list (affect Pages Menu [your pages, liked, zuckested], Gaming, Explore, Fundarise, Instant Games)
 ! - New Bookmarks (visit https://touch.facebook.com/bookmarks)

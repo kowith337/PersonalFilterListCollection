@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201905052127
+! Version: 201905061456
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -234,6 +234,8 @@
 ||facebook.com/sem_pixel/1/control/1/$subdocument,important,redirect=noopframe
 ||facebook.com/sem_pixel/1/test/0/$subdocument,important,redirect=noopframe
 ||facebook.com/sem_pixel/1/test/1/$subdocument,important,redirect=noopframe
+||facebook.com/sem_pixel/14/dysmith24_dap_at_risk_test/0/$subdocument,important,redirect=noopframe
+||facebook.com/sem_pixel/14/dysmith24_dap_at_risk_test/1/$subdocument,important,redirect=noopframe
 ||facebook.com/ufi/typing/*/start/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/ufi/typing/*/stop/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/video/instream_video/rapid_feedback$xmlhttprequest,important,redirect=nooptext

@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.3]
 ! Title: kowith337's Test List
-! Version: 201903212328
+! Version: 201905061608
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -20,9 +20,15 @@ m.intl.taobao.com##.App .bar:has(a.bar-item[href^="//shop.m.taobao.com/shop/shop
 m.intl.taobao.com##.App .recommend .recommend-list-wrapper:has(.recommend-title:has-text(邻家好货))
 
 ! CSS Modification  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Facebook]
+! Uncorrupted Facebook Stories design because your profile picture in story card will not fulfilled if you didn't have any posts.
+m.facebook.com,mobile.facebook.com,touch.facebook.com###MStoriesTray div[class] > #m-stories-add-item.profilePic i.profpic[role=img]:style(width: 100% !important; height: 100% !important)
+
 ! [Taobao Mobile]
 ! - Make tob-bar placeholder transparent
 m.intl.taobao.com##.App .toolbar.transformed:style(background-color: transparent !important)
 ! - Make placeholder button (back / add to cart) have circle background alpha under button and use custom color permanently
 m.intl.taobao.com##.App .toolbar .toolbar__btn i.iconfont:style(color: white !important)
 m.intl.taobao.com##.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,0,0.4) !important)
+
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
