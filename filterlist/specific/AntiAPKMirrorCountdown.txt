@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Anti APKMirror Ads and Countdown
-! Version: 201903132024
+! Version: 201905061626
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -22,12 +22,13 @@ apkmirror.com###sidebar .listWidget:has-text(/Follow APK Mirror/)
 
 ! 3P domains block
 ||amazon-adsystem.com$domain=apkmirror.com,important
+||consensu.org$domain=apkmirror.com,important
 ||crsspxl.com$domain=apkmirror.com,important
 ||google-analytics.com$domain=apkmirror.com,important
 ||googlesyndication.com$domain=apkmirror.com,important
+||instant.page$domain=apkmirror.com,important
 ||outbrain.com$domain=apkmirror.com,important
-||pagefair.com$domain=apkmirror.com,important
-||pagefair.net$domain=apkmirror.com,important
+||pagefair.*$domain=apkmirror.com,important
 ||pro-market.net$domain=apkmirror.com,important
 ||quantserve.com$domain=apkmirror.com,important
 ||referrer.disqus.com$domain=apkmirror.com,important
