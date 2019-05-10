@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201905061804
+! Version: 201905101538
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -12,7 +12,7 @@
 !         remove something that really need.
 ! Note 3: Inspired from report on https://github.com/collinbarrett/FilterLists/issues/282
 
-! Proactive outbound tracking, added to prevent Facebook tracking you outside while click and open shared URL (see #19)
+! Proactive outbound tracking prevention, to prevent Facebook tracking you outside while click and open shared URL (see #19)
 ! Remark: If you're using uBlock0 or Nano, try click the magnifier icon to expand all parameters for getting real URL
 ||*&fbclid=$document,popunder,popup,xmlhttprequest,important
 ||*?fbclid=$document,popunder,popup,xmlhttprequest,important
@@ -20,7 +20,7 @@
 ||lm.facebook.com$document,popunder,popup,xmlhttprequest,important
 
 ! Network Blocking
-! to prevent sending requests to show related contents, determine user action about how users use Facebook, nasty redirect,...
+! to prevent sending requests to show related contents, determine user action about how users use Facebook, nasty redirect, etc.
 /PagesTimelineChainingPagelet$important,domain=facebook.com
 /qp/action/redirect$important,domain=facebook.com
 ||facebook.com/*/promotion_trigger_info/$important,~document
@@ -167,10 +167,10 @@
 ! e.g. when you want to go 'mbasic.faecbook.com' for super lightweight Facebook mobile version, but you get redirected to
 ! 'm.facebook.com' or 'mobile.facebook.com' then show the suggestion page to use Facebook under "Free Basics" campaign,
 ! Note: I don't know why it redirected to "h.facebook.com" under non-HTTPS? first before bouncing back to "m.facebook.com"
-! or "mobile.facebook.com" ? so, I will blocking it!
+!       or "mobile.facebook.com" ? so, I will blocking it!
 ! Update: I will keep blocking this, no matter what, when and why...
-! Note: Sometime you're able to still use 'm.facebook.com' or 'touch.facebook.com' on mobile data,
-!       but it still make xhr to 'mobile.facebook.com', so it's good to block that!
+! Note 2: Sometime you're able to still use 'm.facebook.com' or 'touch.facebook.com' on mobile data,
+!         but it still make xhr to 'mobile.facebook.com', so it's good to block that!
 ! Furthermore: I HATE FreakBasics by Facebook, internet.org also...
 ||*&_nc_fbs=*$important,domain=facebook.com|instagram.com|messenger.com|freebasics.com|internet.org
 ||*?_nc_fbs=*$important,domain=facebook.com|instagram.com|messenger.com|freebasics.com|internet.org
