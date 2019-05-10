@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Miscellaneous Annoyance
-! Version: 201905101423
+! Version: 201905101439
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -34,7 +34,7 @@ linkis.com##.theme15-authorize
 files.minecraftforge.net##.ad-container
 files.minecraftforge.net##.ad-container-framed
 files.minecraftforge.net##.promo-container
-files.minecraftforge.net##.promos-wrapper
+! files.minecraftforge.net##.promos-wrapper
 
 ! [Reddit Old]
 old.reddit.com##.ProfileVoiceAd
