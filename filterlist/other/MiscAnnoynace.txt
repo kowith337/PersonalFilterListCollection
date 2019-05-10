@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Miscellaneous Annoyance
-! Version: 201905101459
+! Version: 201905101527
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -18,7 +18,8 @@ github.com##div[class^="signup-prompt"]
 google.*###fbar #swml a#swml-upd
 google.*###fbar #swml a[data-ved]
 ! Remove "Related search" / "People also search for"
-google.*###main #extrares #botstuff div[data-ved] div[jscontroller][data-hveid][data-ved]
+google.*###extrares #botstuff div[data-ved] div[data-hveid]
+google.*###extrares #botstuff div[data-ved] div[jscontroller][data-hveid][data-ved]
 google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][data-ved] div[data-has-close][class*="result-pivots"][data-ved]
 google.*###main div[data-ved] div[data-async-context] .kno-result[data-hveid][data-ved]
 
