@@ -58,7 +58,7 @@
 | [SecureDNS AdBlock (DoT/DoH)](https://securedns.eu) | [:lock_with_ink_pen:](https://ads-doh.securedns.eu/dns-query) :closed_lock_with_key: :no_pedestrians: | :negative_squared_cross_mark: | 146.185.167.43 | TLS:`ads-dot.securedns.eu` |  |
 | [BlahDNS](https://github.com/ookangzheng/blahdns) | [:lock_with_ink_pen:](https://doh-jp.blahdns.com/dns-query) :closed_lock_with_key: :no_pedestrians: :fire: | [:question:](https://github.com/ookangzheng/blahdns/#policy) | 108.61.201.119 | TLS:`dot-jp.blahdns.com` |  |
 | [BlahDNS Germany](https://github.com/ookangzheng/blahdns/#server-information) | [:lock_with_ink_pen:](https://doh-de.blahdns.com/dns-query) :closed_lock_with_key: :six: :no_pedestrians: :fire: | [:question:](https://github.com/ookangzheng/blahdns/#policy) | 2a01:4f8:1c1c:6b4b::1 | TLS:`dot-de.blahdns.com` |  |
-| [keweon aSecDNS (DoT/DoH)] | [:lock_with_ink_pen:](https://doh.asecdns.com/nebulo) :no_pedestrians: :fire: |  | [View IP lists](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | TLS:`dot.asecdns.com` |  |
+| [keweon aSecDNS (DoT/DoH)](https://forum.xda-developers.com/showpost.php?p=73985083) | [:lock_with_ink_pen:](https://doh.asecdns.com/nebulo) :no_pedestrians: :fire: |  | [View IP lists](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | TLS:`dot.asecdns.com` |  |
 |  |  |  |  |  |  |
 | **Retired** |  |  |  |  |  |
 | [eieiDNS](https://eieidns.com) | [:lock_with_ink_pen:](https://doh.eieidns.com/dns-query) :closed_lock_with_key: :no_pedestrians: |  | 103.86.49.31 |  |  |
