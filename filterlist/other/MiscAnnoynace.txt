@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Miscellaneous Annoyance
-! Version: 201905060205
+! Version: 201905101423
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -33,6 +33,8 @@ linkis.com##.theme15-authorize
 ! [Minecraft] Forge Ads Pane
 files.minecraftforge.net##.ad-container
 files.minecraftforge.net##.ad-container-framed
+files.minecraftforge.net##.promo-container
+files.minecraftforge.net##.promos-wrapper
 
 ! [Reddit Old]
 old.reddit.com##.ProfileVoiceAd
@@ -99,6 +101,9 @@ youtube.com##.individual-feed li .branded-page-box:has(.feed-item-dismissable:ha
 ! HTML Filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: This work only FF quantum + uB0 WebExt
 !#if cap_html_filtering
+files.minecraftforge.net##^.promo-container
+files.minecraftforge.net##^.promos-wrapper
+files.minecraftforge.net##^img[src^="data:image/gif;base64,"]
 greasyfork.org##^.post-install
 m.intl.taobao.com,m.taobao.com##^script:has-text(getFB_GOOLE_trackJs)
 !#endif
@@ -176,6 +181,7 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||addons.mozilla.org/*/addon/*/developers$document
 
 ! Scriplets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+files.minecraftforge.net##script:inject(abort-current-inline-script.js, _comscore)
 m.intl.taobao.com,m.taobao.com##script:contains(getFB_GOOLE_trackJs)
 m.intl.taobao.com,m.taobao.com##script:inject(addEventListener-defuser.js, load, getFB_GOOLE_trackJs)
 randomnessthing.com##script:contains(Criteo)
