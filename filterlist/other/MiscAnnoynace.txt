@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: Miscellaneous Annoyance
-! Version: 201905101439
+! Version: 201905101459
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -35,6 +35,7 @@ files.minecraftforge.net##.ad-container
 files.minecraftforge.net##.ad-container-framed
 files.minecraftforge.net##.promo-container
 ! files.minecraftforge.net##.promos-wrapper
+files.minecraftforge.net##div img[src*="imrworldwide.com/cgi-bin/m?"][width="1"][height="1"]
 
 ! [Reddit Old]
 old.reddit.com##.ProfileVoiceAd
@@ -103,7 +104,8 @@ youtube.com##.individual-feed li .branded-page-box:has(.feed-item-dismissable:ha
 !#if cap_html_filtering
 files.minecraftforge.net##^.promo-container
 files.minecraftforge.net##^.promos-wrapper
-files.minecraftforge.net##^img[src^="data:image/gif;base64,"]
+files.minecraftforge.net##^div img[src*="imrworldwide.com/cgi-bin/m?"][width="1"][height="1"]
+files.minecraftforge.net##^div img[src^="data:image/gif;base64,"]
 greasyfork.org##^.post-install
 m.intl.taobao.com,m.taobao.com##^script:has-text(getFB_GOOLE_trackJs)
 !#endif
@@ -187,3 +189,14 @@ m.intl.taobao.com,m.taobao.com##script:inject(addEventListener-defuser.js, load,
 randomnessthing.com##script:contains(Criteo)
 randomnessthing.com##script:inject(abort-on-property-read.js, Criteo)
 randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptableAdIfAdblocked)
+
+! Specific Use! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [GitHub] I don't mind if I'm still use XUL Legacy version of Firefox and get noticed that the site won't support older Firefox
+!          and any related forks that based on XUL Legacy (such as Basilisk, Palemoon, Waterfox, IceCatMobile, etc.)
+!          For any Chrome forks, I've made custom shortcut and/or launcher to spoof user agent to any Chrome version that I like.
+!          You can look for henrypp's "ChrLauncher" if you want to do so... (Windows users only!)
+!#if env_firefox
+github.com##.unsupported-browser
+!#endif
+
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
