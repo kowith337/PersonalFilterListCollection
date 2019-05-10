@@ -1,6 +1,6 @@
-[uBlock Origin 1.17.5.3]
+﻿[uBlock Origin 1.17.5.3]
 ! Title: kowith337's Test List
-! Version: 201905061608
+! Version: 201905101444
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -30,5 +30,19 @@ m.intl.taobao.com##.App .toolbar.transformed:style(background-color: transparent
 ! - Make placeholder button (back / add to cart) have circle background alpha under button and use custom color permanently
 m.intl.taobao.com##.App .toolbar .toolbar__btn i.iconfont:style(color: white !important)
 m.intl.taobao.com##.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,0,0.4) !important)
+
+! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+||akamaihd.net/shopee/*/TrackingRules$script,domain=shopee.co.th
+||akamaihd.net/shopee/*/*TrackingRules$script,domain=shopee.co.th
+||shopee.co.th/__t__$xmlhttprequest
+||shopee.co.th/userstats_record$xmlhttprequest
+||shopeemobile.com/th/tr$xmlhttprequest
+
+! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+
+! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+||shopee.co.th/__t__$xmlhttprequest,important,redirect=nooptext
+||shopee.co.th/userstats_record$xmlhttprequest,important,redirect=nooptext
+||shopeemobile.com/th/tr$xmlhttprequest,important,redirect=nooptext,domain=shopee.co.th
 
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
