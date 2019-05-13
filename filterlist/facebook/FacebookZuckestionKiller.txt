@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201905101538
+! Version: 201905131245
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -457,9 +457,9 @@ m.facebook.com,mbasic.facebook.com###sub_profile_pic_content div div[class] > :h
 m.facebook.com,mbasic.facebook.com###viewport #root div:has(h3):has(span a[href^="/dd/greeting/mbasic/more/tapped"])
 m.facebook.com,mbasic.facebook.com###viewport #root div[data-ft]:has(h3:has-text(Facebook)):has(a[href^="/netego/redirect/"])
 m.facebook.com,mbasic.facebook.com###viewport #root table td div div:has(a[href^="/lite/?loc_ref=menu"])
+m.facebook.com,mbasic.facebook.com###viewport div > :has(table[role="presentation"]:has(td a[href^="/qp/action/redirect/?"]))
 m.facebook.com,mbasic.facebook.com###viewport div > div:has(a[href^="/download.php"])
-m.facebook.com,mbasic.facebook.com###viewport div:has(table[role="presentation"]:has(td a[href^="/qp/action/redirect/?"]))
-m.facebook.com,mbasic.facebook.com###viewport div:not([id]) > div table:has(td a[href^="/a/language.php?"][href*="ref_component=mbasic_footer"])
+m.facebook.com,mbasic.facebook.com###viewport div[class] > table[role]:has(td a[href^="/a/language.php?"][href*="ref_component=mbasic_footer"])
 m.facebook.com,mbasic.facebook.com##div[data-ft] > div > div:has(span a[href*="/boosted_post/"])
 m.facebook.com,mbasic.facebook.com##div[data-ft] div:has(table a[href*="mbasic_feed_post_like_chaining"])
 m.facebook.com,mbasic.facebook.com##div[data-ft] div:has(table a[href*="mbasic_feed_share_like_chaining"])
@@ -564,7 +564,7 @@ m.facebook.com,touch.facebook.com##section article:has(.scrollArea):has(a[href*=
 m.facebook.com,mbasic.facebook.com###viewport #root div:not([id^="MPhoto"]) > table[role] tbody:has(a[href^="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
 m.facebook.com,mbasic.facebook.com###viewport div:not(#objects_container) > div:has(table[role] a[href^="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
 m.facebook.com,mbasic.facebook.com###viewport div:not(#objects_container) > table[class] td a[href*="lm.facebook.com/l.php?"][target="_blank"]:has(span)
-m.facebook.com,mbasic.facebook.com###viewport div:not([id]) > table[role]:has(td a[href^="/a/language.php?"][href*="ref_component=mbasic_footer"])
+m.facebook.com,mbasic.facebook.com###viewport div:not([id]) > table:has(td a[href^="/a/language.php?"][href*="ref_component=mbasic_footer"])
 
 ! CSS Modification
 ! This may modify some element instead of hiding
