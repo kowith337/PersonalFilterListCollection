@@ -60,12 +60,12 @@
 | [CleanBrowsing Family IPv6](https://cleanbrowsing.org/filters) | [:lock_with_ink_pen:](https://doh.cleanbrowsing.org/doh/family-filter) :closed_lock_with_key: :six: :children_crossing: :fire: |  | 2a0d:2a00:1:: | 2a0d:2a00:2:: |  |
 | [CleanBrowsing Adult IPv6](https://cleanbrowsing.org/filters) | [:lock_with_ink_pen:](https://doh.cleanbrowsing.org/doh/adult-filter) :closed_lock_with_key: :six: :children_crossing: :fire: |  | 2a0d:2a00:1::1 | 2a0d:2a00:2::1 |  |
 | [CleanBrowsing Security IPv6](https://cleanbrowsing.org/filters) | [:lock_with_ink_pen:](https://doh.cleanbrowsing.org/doh/security-filter) :closed_lock_with_key: :six: :fire: |  | 2a0d:2a00:1::2 | 2a0d:2a00:2::2 |  |
-| **Other** |  |  |  |  |  |
-| [CloudFlare DoH in Firefox](https://wiki.mozilla.org/Trusted_Recursive_Resolver) | [:lock_with_ink_pen:](https://mozilla.cloudflare-dns.com/dns-query) |  | 1.0.0.1 | 1.1.1.1 |  |
+| **Other \/ TLS** |  |  |  |  |  |
+| [CloudFlare DoH in Firefox](https://wiki.mozilla.org/Trusted_Recursive_Resolver) | [:lock_with_ink_pen:](https://mozilla.cloudflare-dns.com/dns-query) | [:bust_in_silhouette: :watch:](https://developers.cloudflare.com/1.1.1.1/commitment-to-privacy/privacy-policy/privacy-policy) | 1.0.0.1 | 1.1.1.1 |  |
 | [SecureDNS](https://securedns.eu) | [:lock_with_ink_pen:](https://doh.securedns.eu/dns-query) :closed_lock_with_key: | :negative_squared_cross_mark: | 146.185.167.43 | TLS:`dot.securedns.eu` |  |
 | [SecureDNS AdBlock](https://securedns.eu) | [:lock_with_ink_pen:](https://ads-doh.securedns.eu/dns-query) :closed_lock_with_key: :no_pedestrians: | :negative_squared_cross_mark: | 146.185.167.43 | TLS:`ads-dot.securedns.eu` |  |
 | [BlahDNS 🇯🇵](https://github.com/ookangzheng/blahdns) | [:lock_with_ink_pen:](https://doh-jp.blahdns.com/dns-query) :closed_lock_with_key: :no_pedestrians: :fire: | [:question:](https://github.com/ookangzheng/blahdns/#policy) | 108.61.201.119 | TLS:`dot-jp.blahdns.com` |  |
-| [BlahDNS 🇩🇪](https://github.com/ookangzheng/blahdns/#server-information) | [:lock_with_ink_pen:](https://doh-de.blahdns.com/dns-query) :closed_lock_with_key: :six: :no_pedestrians: :fire: | [:question:](https://github.com/ookangzheng/blahdns/#policy) | 2a01:4f8:1c1c:6b4b::1 | TLS:`dot-de.blahdns.com` |  |
+| [BlahDNS 🇩🇪](https://github.com/ookangzheng/blahdns/#server-information) | [:lock_with_ink_pen:](https://doh-de.blahdns.com/dns-query) :closed_lock_with_key: :six: :no_pedestrians: :fire: | [:question:](https://github.com/ookangzheng/blahdns/#policy) | 159.69.198.101 | TLS:`dot-de.blahdns.com` |  |
 | [keweon aSecDNS](https://forum.xda-developers.com/showpost.php?p=73985083) | [:lock_with_ink_pen:](https://doh.asecdns.com/nebulo) :no_pedestrians: :fire: |  | [View server lists](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | TLS:`dot.asecdns.com` |  |
 |  |  |  |  |  |  |
 | **Retired** |  |  |  |  |  |
@@ -79,8 +79,8 @@
 
 ### Note
 - (\*) Some entry will be use **Second IP** column, such as...
-  - *IPv6 address* if specific DNS service provide only one IPv4 address
-  - *TLS address* if specific DNS service provide only one IP address, but have DNS-over-TLS supported
+  - **IPv6 address** if specific DNS service provide only one IPv4 address
+  - **TLS address** if specific DNS service provide only one IP address, but have DNS-over-TLS supported
 - DNS-over-TLS (DoT) commonly use port 853, and use port 443 for alternative.
 - Configuration for personalDNSFilter
   - To adding DoT entry, you can enter with these format below
