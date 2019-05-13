@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201905131245
+! Version: 201905132243
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -586,8 +586,8 @@ m.facebook.com,touch.facebook.com##section article .story_body_container header 
 m.facebook.com,touch.facebook.com###friends_center_main div[data-pymk-id]
 m.facebook.com,touch.facebook.com##.async_fan:has(div div a.darkTouch[href*="pages_nav_discover"])
 
-! Once you've redirect to "Free Basics" prompt page (for example https://m.faccebook.com/zero/policy/optin) these rules below
-! will remove the details of "Free Basics" service (descriptyion, legal link) and "Accept" button, only leave "Cancel" button to
+! Once you've redirect to "Free Basics" prompt page (for example https://m.facebook.com/zero/policy/optin) these rules below
+! will remove the details of "Free Basics" service (description, legal link) and "Accept" button, only leave "Cancel" button to
 ! make sure you didn't accidentally accept the terms and apply their "Free Basics" service at all!
 m.facebook.com,mbasic.facebook.com##div[role="article"] div:has(div > span a[href*="/zero/optin/legal/"])
 m.facebook.com,mbasic.facebook.com##form[action^="/zero/optin/write/"] input[type="submit"]

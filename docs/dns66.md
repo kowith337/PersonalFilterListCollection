@@ -1,28 +1,37 @@
 # DNS list table to apply in DNS66
 
-| Provider | Features | Logging | First Address | Second Address | Compatibility |
-|----------|----------|---------|---------------|----------------|---------------|
+| Provider | Features | Logging | First IP | Second IP\* | Compatibility |
+|----------|----------|---------|----------|-------------|---------------|
 | **Individual** |  |  |  |  |  |
 | [dns.watch](https://dns.watch) | :closed_lock_with_key: | :negative_squared_cross_mark: | 84.200.69.80 | 84.200.70.40 |  |
-| [Digital Courage](https://digitalcourage.de/support/zensurfreier-dns-server) |  |  | 85.214.20.141 |  |  |
+| [Digital Courage](https://digitalcourage.de/support/zensurfreier-dns-server) |  |  | 85.214.20.141 | 2a01:238:42f6:ac00:2a29:4f7f:b6d:ef46 |  |
 | [keweon](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) [(RootCA)](http://pki.keweon.center) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :no_pedestrians: :fire: | :negative_squared_cross_mark: | 107.191.55.215 | 213.239.207.143 |  |
-| [BlahDNS](https://github.com/ookangzheng/blahdns) | [:lock_with_ink_pen:](https://doh-jp.blahdns.com/dns-query) :closed_lock_with_key: :no_pedestrians: :fire: | [:question:](https://github.com/ookangzheng/blahdns/#policy) | 108.61.201.119 |  |  |
-| [SecureDNS](https://securedns.eu) | [:lock_with_ink_pen:](https://doh.securedns.eu/dns-query) :closed_lock_with_key: | :negative_squared_cross_mark: | 146.185.167.43 |  |  |
+| [BlahDNS](https://github.com/ookangzheng/blahdns) | [:lock_with_ink_pen:](https://doh-jp.blahdns.com/dns-query) :closed_lock_with_key: :no_pedestrians: :fire: | [:question:](https://github.com/ookangzheng/blahdns/#policy) | 108.61.201.119 | 2001:19f0:7001:1ded:5400:01ff:fe90:945b |  |
+| [SecureDNS](https://securedns.eu) | [:lock_with_ink_pen:](https://doh.securedns.eu/dns-query) :closed_lock_with_key: | :negative_squared_cross_mark: | 146.185.167.43 | 2a03:b0c0:0:1010::e9a:3001 |  |
 | [keweon](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :no_pedestrians: :fire: | :negative_squared_cross_mark: | 176.9.62.58 | 176.9.62.62 |  |
 | [AS250](https://twitter.com/as250) |  |  | 194.150.168.168 |  |  |
 | [Chaos Computer Club](https://www.ccc.de/censorship/dns-howto) |  |  | 213.73.89.122 |  |  |
 | [dns.watch IPv6](https://dns.watch) | :closed_lock_with_key: :six: | :negative_squared_cross_mark: | 2001:1608:10:25::1c04:b12f | 2001:1608:10:25::9249:d69b |  |
 | [keweon IPv6](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) [(RootCA)](http://pki.keweon.center) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: |  2001:19f0:6401:175d::215 | 2a01:4f8:a0:8487::143 |  |
-| [BlahDNS IPv6](https://github.com/ookangzheng/blahdns#server-information) | [:lock_with_ink_pen:](https://doh-jp.blahdns.com/dns-query) :closed_lock_with_key: :six: :no_pedestrians: :fire: | [:question:](https://github.com/ookangzheng/blahdns/#policy) | 2001:19f0:7001:1ded:5400:01ff:fe90:945b |  |  |
-| [Digital Courage IPv6](https://digitalcourage.de/support/zensurfreier-dns-server) | :six: |  | 2a01:238:42f6:ac00:2a29:4f7f:b6d:ef46 |  |  |
 | [keweon IPv6](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | 2a01:4f8:150:8023::58 | 2a01:4f8:150:8023::62 |  |
-| [SecureDNS IPv6](https://securedns.eu) | [:lock_with_ink_pen:](https://doh.securedns.eu/dns-query) :closed_lock_with_key: :six: | :negative_squared_cross_mark: | 2a03:b0c0:0:1010::e9a:3001 |  |  |
-| [OpenNIC](https://www.opennic.org) |  |  | [Tier 1](https://servers.opennic.org/?tier=1) | [Tier 2](https://servers.opennic.org/?tier=2) |  |
+| [OpenNIC](https://www.opennic.org) |  |  | [View Tier 1](https://servers.opennic.org/?tier=1) | [View Tier 2](https://servers.opennic.org/?tier=2) |  |
 |  |  |  |  |  |  |
 | **Regional** |  |  |  |  |  |
-| [BlahDNS Germany](https://github.com/ookangzheng/blahdns/#server-information) | [:lock_with_ink_pen:](https://doh-de.blahdns.com/dns-query) :closed_lock_with_key: :six: :no_pedestrians: :fire: | [:question:](https://github.com/ookangzheng/blahdns/#policy) | 2a01:4f8:1c1c:6b4b::1 |  |  |
+| [BlahDNS 🇩🇪](https://github.com/ookangzheng/blahdns/#server-information) | [:lock_with_ink_pen:](https://doh-de.blahdns.com/dns-query) :closed_lock_with_key: :six: :no_pedestrians: :fire: | [:question:](https://github.com/ookangzheng/blahdns/#policy) | 159.69.198.101 | 2a01:4f8:1c1c:6b4b::1 |  |
+| [keweon 🇺🇸 (Silicon Valley)](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | 45.32.140.26 | 2001:19f0:ac01:639::26 |  |
+| [keweon 🇬🇧](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | 45.32.183.39 | 2001:19f0:7402:a61::39 |  |
+| [keweon 🇺🇸 (Dallas)](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | 45.76.57.41 | 2001:19f0:6401:9ed::41 |  |
+| [keweon 🇦🇺](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | 45.76.125.130 | 2001:19f0:5801:b45::130 |  |
+| [keweon 🇸🇬](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | 45.76.151.221 | 2001:19f0:4400:4f31::221 |  |
+| [keweon 🇯🇵](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | 45.77.25.72 | 2001:19f0:7001:22a8::72 |  |
+| [keweon 🇫🇷](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | 45.77.62.37 | 2001:19f0:6801:95e::37 |  |
+| [keweon 🇳🇱](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | 45.77.138.206 | 2001:19f0:5001:d8d::206 |  |
+| [keweon 🇺🇸 (New Jersey)](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | 45.77.144.132 | 2001:19f0:5:2962::132 |  |
+| [keweon 🇩🇪 (Frankfurt)](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | 104.207.131.11 | 2001:19f0:6c01:61f::11 |  |
+| [keweon 🇮🇳](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | 139.59.33.236 | 2400:6180:100:d0::30d:5001 |  |
 | **Run by corporate** |  |  |  |  |  |
 | [CloudFlare + APNIC](https://1.1.1.1/) | [:lock_with_ink_pen:](https://cloudflare-dns.com/dns-query) | [:bust_in_silhouette: :watch:](https://developers.cloudflare.com/1.1.1.1/commitment-to-privacy/privacy-policy/privacy-policy) | 1.0.0.1 | 1.1.1.1 |  |
+| [~~Google~~](https://developers.google.com/speed/public-dns/) | [:lock_with_ink_pen:](https://dns.google.com/experimental) | :alarm_clock: | ~~8.8.4.4~~ | ~~8.8.8.8~~ |  |
 | [Comodo Secure](https://www.comodo.com/secure-dns) | :twisted_rightwards_arrows: |  | 8.20.247.20 | 8.26.56.26 |  |
 | [Quad9](https://quad9.net) | [:lock_with_ink_pen:](https://dns9.quad9.net/dns-query) :closed_lock_with_key: :fire: | [:bust_in_silhouette:](https://quad9.net/privacy) | 9.9.9.9 | 149.112.112.9 |  |
 | [Quad9^2](https://quad9.net/doh-quad9-dns-servers) | [:lock_with_ink_pen:](https://dns.quad9.net/dns-query) :closed_lock_with_key: :fire: | [:bust_in_silhouette:](https://quad9.net/privacy) | 9.9.9.9 | 149.112.112.112 |  |
@@ -53,12 +62,11 @@
 | [CleanBrowsing Security IPv6](https://cleanbrowsing.org/filters) | [:lock_with_ink_pen:](https://doh.cleanbrowsing.org/doh/security-filter) :closed_lock_with_key: :six: :fire: |  | 2a0d:2a00:1::2 | 2a0d:2a00:2::2 |  |
 | **Other** |  |  |  |  |  |
 | [CloudFlare DoH in Firefox](https://wiki.mozilla.org/Trusted_Recursive_Resolver) | [:lock_with_ink_pen:](https://mozilla.cloudflare-dns.com/dns-query) |  | 1.0.0.1 | 1.1.1.1 |  |
-| [~~Google~~](https://developers.google.com/speed/public-dns/) | [:lock_with_ink_pen:](https://dns.google.com/experimental) | :alarm_clock: | ~~8.8.4.4~~ | ~~8.8.8.8~~ |  |
-| [SecureDNS (DoT/DoH)](https://securedns.eu) | [:lock_with_ink_pen:](https://doh.securedns.eu/dns-query) :closed_lock_with_key: | :negative_squared_cross_mark: | 146.185.167.43 | TLS:`dot.securedns.eu` |  |
-| [SecureDNS AdBlock (DoT/DoH)](https://securedns.eu) | [:lock_with_ink_pen:](https://ads-doh.securedns.eu/dns-query) :closed_lock_with_key: :no_pedestrians: | :negative_squared_cross_mark: | 146.185.167.43 | TLS:`ads-dot.securedns.eu` |  |
-| [BlahDNS](https://github.com/ookangzheng/blahdns) | [:lock_with_ink_pen:](https://doh-jp.blahdns.com/dns-query) :closed_lock_with_key: :no_pedestrians: :fire: | [:question:](https://github.com/ookangzheng/blahdns/#policy) | 108.61.201.119 | TLS:`dot-jp.blahdns.com` |  |
-| [BlahDNS Germany](https://github.com/ookangzheng/blahdns/#server-information) | [:lock_with_ink_pen:](https://doh-de.blahdns.com/dns-query) :closed_lock_with_key: :six: :no_pedestrians: :fire: | [:question:](https://github.com/ookangzheng/blahdns/#policy) | 2a01:4f8:1c1c:6b4b::1 | TLS:`dot-de.blahdns.com` |  |
-| [keweon aSecDNS (DoT/DoH)](https://forum.xda-developers.com/showpost.php?p=73985083) | [:lock_with_ink_pen:](https://doh.asecdns.com/nebulo) :no_pedestrians: :fire: |  | [View IP lists](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | TLS:`dot.asecdns.com` |  |
+| [SecureDNS](https://securedns.eu) | [:lock_with_ink_pen:](https://doh.securedns.eu/dns-query) :closed_lock_with_key: | :negative_squared_cross_mark: | 146.185.167.43 | TLS:`dot.securedns.eu` |  |
+| [SecureDNS AdBlock](https://securedns.eu) | [:lock_with_ink_pen:](https://ads-doh.securedns.eu/dns-query) :closed_lock_with_key: :no_pedestrians: | :negative_squared_cross_mark: | 146.185.167.43 | TLS:`ads-dot.securedns.eu` |  |
+| [BlahDNS 🇯🇵](https://github.com/ookangzheng/blahdns) | [:lock_with_ink_pen:](https://doh-jp.blahdns.com/dns-query) :closed_lock_with_key: :no_pedestrians: :fire: | [:question:](https://github.com/ookangzheng/blahdns/#policy) | 108.61.201.119 | TLS:`dot-jp.blahdns.com` |  |
+| [BlahDNS 🇩🇪](https://github.com/ookangzheng/blahdns/#server-information) | [:lock_with_ink_pen:](https://doh-de.blahdns.com/dns-query) :closed_lock_with_key: :six: :no_pedestrians: :fire: | [:question:](https://github.com/ookangzheng/blahdns/#policy) | 2a01:4f8:1c1c:6b4b::1 | TLS:`dot-de.blahdns.com` |  |
+| [keweon aSecDNS](https://forum.xda-developers.com/showpost.php?p=73985083) | [:lock_with_ink_pen:](https://doh.asecdns.com/nebulo) :no_pedestrians: :fire: |  | [View server lists](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | TLS:`dot.asecdns.com` |  |
 |  |  |  |  |  |  |
 | **Retired** |  |  |  |  |  |
 | [eieiDNS](https://eieidns.com) | [:lock_with_ink_pen:](https://doh.eieidns.com/dns-query) :closed_lock_with_key: :no_pedestrians: |  | 103.86.49.31 |  |  |
@@ -70,6 +78,9 @@
 - - - - - - - - - -
 
 ### Note
+- (\*) Some entry will be use **Second IP** column, such as...
+  - *IPv6 address* if specific DNS service provide only one IPv4 address
+  - *TLS address* if specific DNS service provide only one IP address, but have DNS-over-TLS supported
 - DNS-over-TLS (DoT) commonly use port 853, and use port 443 for alternative.
 - Configuration for personalDNSFilter
   - To adding DoT entry, you can enter with these format below
