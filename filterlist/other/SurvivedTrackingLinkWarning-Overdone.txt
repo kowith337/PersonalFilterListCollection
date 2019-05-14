@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 201905142048
+! Version: 201905142100
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -34,32 +34,28 @@
 ||facebook.com/*&__tn__=$xmlhttprequest
 ||facebook.com/*&__xts__*=$document,subdocument,important
 ||facebook.com/*&__xts__*=$xmlhttprequest
-||facebook.com/*&__xts__=$document,subdocument,important
-||facebook.com/*&__xts__=$xmlhttprequest
 ||facebook.com/*&acontext=$document,subdocument,important
 ||facebook.com/*&acontext=$xmlhttprequest
 ||facebook.com/*&dti=$document,subdocument,important
 ||facebook.com/*&dti=$xmlhttprequest
 ||facebook.com/*&eid=$document,subdocument,important
 ||facebook.com/*&eid=$xmlhttprequest
-||facebook.com/*&hc_ref$document,subdocument,important
-||facebook.com/*&hc_ref$xmlhttprequest
+||facebook.com/*&hc_ref=$document,subdocument,important
+||facebook.com/*&hc_ref=$xmlhttprequest
 ||facebook.com/*&settings_tracking=$document,subdocument,important
 ||facebook.com/*&settings_tracking=$xmlhttprequest
 ||facebook.com/*?__tn__=$document,subdocument,important
 ||facebook.com/*?__tn__=$xmlhttprequest
 ||facebook.com/*?__xts__*=$document,subdocument,important
 ||facebook.com/*?__xts__*=$xmlhttprequest
-||facebook.com/*?__xts__=$document,subdocument,important
-||facebook.com/*?__xts__=$xmlhttprequest
 ||facebook.com/*?acontext=$document,subdocument,important
 ||facebook.com/*?acontext=$xmlhttprequest
 ||facebook.com/*?dti=$document,subdocument,important
 ||facebook.com/*?dti=$xmlhttprequest
 ||facebook.com/*?eid=$document,subdocument,important
 ||facebook.com/*?eid=$xmlhttprequest
-||facebook.com/*?hc_ref$document,subdocument,important
-||facebook.com/*?hc_ref$xmlhttprequest
+||facebook.com/*?hc_ref=$document,subdocument,important
+||facebook.com/*?hc_ref=$xmlhttprequest
 ||facebook.com/*?settings_tracking=$document,subdocument,important
 ||facebook.com/*?settings_tracking=$xmlhttprequest
 ||facebook.com/ads/*&session_id=$document,subdocument,important
