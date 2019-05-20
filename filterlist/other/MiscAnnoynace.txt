@@ -1,6 +1,6 @@
-[uBlock Origin 1.16.20]
+[uBlock Origin 1.19.3.7]
 ! Title: Miscellaneous Annoyance
-! Version: 201905101527
+! Version: 201905202053
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -143,6 +143,10 @@ greasyfork.org###install-area .post-install:style(width: 0px !important; height:
 m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none !important)
 
 ! Network Requests - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Google]
+||google.*/async/bgasy?ei=*$important
+||google.*/async/bgasy?*&ei=*$important
+
 ! [WallGif]
 ||bnserving.com$domain=wallgif.com,important
 ||cpm10.com$domain=wallgif.com,important
@@ -158,6 +162,10 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||speedtest.net/javascript/jquery-analytics$important
 
 ! Redirect - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Google] I don't know about this connection but I've found `ei` parameter inside that already blocked by my another list called
+! "Anti survived tracking warning (overdone ver.)" , expected that the request use for pingback to phone home? alright then...
+||google.*/async/bgasy?$xmlhttprequest,important,redirect=nooptext
+
 ! [GreasyFork] added ping request while installing script (inside the "Install Script" green button) via `data-ping-url` that
 ! cause promoted script to be shown and also the site also get user data about it, eliminate this requests and fake sent data
 ! with `nooptext` can solve this thing also.

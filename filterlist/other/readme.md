@@ -1,8 +1,8 @@
 | List Name | Subscribe via ABP link | Copy raw location |
 | --------- | ---------------------- | ----------------- |
-| Anti Survived Tracking Link Warning | [:scroll:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fother%2FSurvivedTrackingLinkWarning.txt&amp;title=Anti%20Survived%20Tracking%20Link%20Warning) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/SurvivedTrackingLinkWarning.txt) |
-| - Overdone version | [:scroll:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fother%2FSurvivedTrackingLinkWarning-Overdone.txt&amp;title=Anti%20Survived%20Tracking%20Link%20Warning%20(Overdone%20Edition)) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/SurvivedTrackingLinkWarning-Overdone.txt) |
-| Uncategorized Miscellaneous Annoyance | [:scroll:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fother%2FMiscAnnoynace.txt&amp;title=Miscellaneous%20Annoyance) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/MiscAnnoynace.txt) |
+| Anti Survived Tracking Link Warning | [:cat:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fother%2FSurvivedTrackingLinkWarning.txt&amp;title=Anti%20Survived%20Tracking%20Link%20Warning) [:pill:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgitlab.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fother%2FSurvivedTrackingLinkWarning.txt&amp;title=Anti%20Survived%20Tracking%20Link%20Warning) | [:cat:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/SurvivedTrackingLinkWarning.txt) [:pill:](https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/SurvivedTrackingLinkWarning.txt) |
+| - Overdone version | [:cat:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fother%2FSurvivedTrackingLinkWarning-Overdone.txt&amp;title=Anti%20Survived%20Tracking%20Link%20Warning%20(Overdone%20Edition)) [:pill:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgitlab.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fother%2FSurvivedTrackingLinkWarning-Overdone.txt&amp;title=Anti%20Survived%20Tracking%20Link%20Warning%20(Overdone%20Edition)) | [:cat:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/SurvivedTrackingLinkWarning-Overdone.txt) [:pill:](https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/SurvivedTrackingLinkWarning-Overdone.txt) |
+| Uncategorised Miscellaneous Annoyance | [:cat:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fother%2FMiscAnnoynace.txt&amp;title=Miscellaneous%20Annoyance) [:pill:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgitlab.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fother%2FMiscAnnoynace.txt&amp;title=Miscellaneous%20Annoyance) | [:cat:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/MiscAnnoynace.txt) [:pill:](https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/MiscAnnoynace.txt) |
 
 
 - - - - -
@@ -30,6 +30,7 @@ As usual, only uBlock Origin (also other forks, but I don't recommend anything o
 
 ### Supported sites (for current)
 - Chocolate Minecraft [`chocolateminecraft.com`]
+- Google (wildcard TLD) [`google.*`]
 - GitHub [`github.com`]
 - GreasyFork [`greasyfork.org`]
 - Linkis [`linkis.com`]
@@ -40,8 +41,10 @@ As usual, only uBlock Origin (also other forks, but I don't recommend anything o
 - Randomness Thing [`randomnessthing.com`]
 - Stack Networks (Partial) [`stackoverflow.com`, `stackexchange.com`, `superuser.com`]
 - Taobao Mobile [`m.intl.taobao.com`, `m.taobao.com`]
+- Twitter [`twitter.com`]
 - YouTube [`youtube.com`]
 - WallGif [`wallgif.com`]
+- Wordpress Dashboard (aka. Gravatar) [`wordpress.com`]
 
 ### Blocking mode
 - Add0n [`add0n.com`]

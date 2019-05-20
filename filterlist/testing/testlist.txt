@@ -34,6 +34,7 @@ m.intl.taobao.com##.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,
 ! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||akamaihd.net/shopee/*/TrackingRules$script,domain=shopee.co.th
 ||akamaihd.net/shopee/*/*TrackingRules$script,domain=shopee.co.th
+||pantip.com/files/bingsuscript.js$script
 ||shopee.co.th/__t__$xmlhttprequest
 ||shopee.co.th/userstats_record$xmlhttprequest
 ||shopeemobile.com/th/tr$xmlhttprequest
@@ -41,6 +42,7 @@ m.intl.taobao.com##.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+||pantip.com/files/bingsuscript.js$script,important,redirect=noopjs
 ||shopee.co.th/__t__$xmlhttprequest,important,redirect=nooptext
 ||shopee.co.th/userstats_record$xmlhttprequest,important,redirect=nooptext
 ||shopeemobile.com/th/tr$xmlhttprequest,important,redirect=nooptext,domain=shopee.co.th

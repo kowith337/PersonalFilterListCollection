@@ -18,10 +18,10 @@ I have no guaranteed about any breakage to use or setup with my lists below, how
 | List Name | Copy raw location |
 | ----- | ----- |
 | **Active** |  |
-| Personal Bias Hosts | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/hosts/hosts_leftover.txt) |
-| Facebook Zero Hosts (Active Only) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/hosts/hosts_facebook0.txt) |
+| Personal Bias Hosts | [:cat:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/hosts/hosts_leftover.txt) [:pill:](https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/hosts/hosts_leftover.txt) |
+| Facebook Zero Hosts (Active Only) | [:cat:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/hosts/hosts_facebook0.txt) [:pill:](https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/hosts/hosts_facebook0.txt) |
 | **In Test** |  |
-| `ads.google.com` and `id.google.com` hosts (All Regions) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/hosts/hosts_google_adservice_id.txt) |
-| Facebook Zero Hosts (via [Dead Hosts](https://github.com/dead-hosts/hosts_facebook0_git_kowith337)) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/hosts/test/hosts_facebook0.txt) |
+| `ads.google.com` and `id.google.com` hosts (All Regions) | [:cat:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/hosts/hosts_google_adservice_id.txt) [:pill:](https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/hosts/hosts_google_adservice_id.txt) |
+| Facebook Zero Hosts (via [Dead Hosts](https://github.com/dead-hosts/hosts_facebook0_git_kowith337)) | [:cat:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/hosts/test/hosts_facebook0.txt) [:pill:](https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/hosts/test/hosts_facebook0.txt) |
 | **Static or Stale** |  |
-| Facebook Zero Hosts (No regional servers) | [:clipboard:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/hosts/static/hosts_facebook0_noregionsv.txt) |
+| Facebook Zero Hosts (No regional servers) | [:cat:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/hosts/static/hosts_facebook0_noregionsv.txt) [:pill:](https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/hosts/static/hosts_facebook0_noregionsv.txt) |

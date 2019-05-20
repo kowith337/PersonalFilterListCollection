@@ -1,4 +1,4 @@
-# DNS list table to apply in DNS66
+# DNS list table to apply in DNS66 and related apps
 
 | Provider | Features | Logging | First IP | Second IP\* | Compatibility |
 |----------|----------|---------|----------|-------------|---------------|
