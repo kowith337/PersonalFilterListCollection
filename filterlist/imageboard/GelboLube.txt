@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201904121531
+! Version: 201905211932
 ! Expires: 2 days
 ! Author: kowith337
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -23,6 +23,7 @@
 ! gelbooru.com##.sidebar #tup
 ! gelbooru.com##a#ext
 ! gelbooru.com##a.ext
+gelbooru.com##a[href*="adtng.com"]
 gelbooru.com##a[href*="click.php"]
 gelbooru.com##a[href*="media.r18"]
 gelbooru.com##a[href*="mnfclub.com"]
@@ -48,7 +49,7 @@ gelbooru.com##ins.adsbytrafficjunky
 ! 5. Hide all AdToniq AAB overlay (DOM Wildcard)
 gelbooru.com##div[id^="adtoniq-msg-bar"]
 
-! Filtered procedural hiding - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Filtered procedural hiding  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Element hiding in tags list pane that also insert tall banner ads
 gelbooru.com###paginater a:has(img)
 gelbooru.com###pagination a:has(img)
@@ -76,17 +77,16 @@ gelbooru.com##.contain-push center div:matches-css(max-width: 750px)
 !    (anywhere of site)
 gelbooru.com##body div[style*="z-index"]:matches-css(width: 100%)
 
-! 7. Hide some notices (e.g. Change to regular layout when use mobile browser, Pasta notice)
-gelbooru.com##.alert-info:has(a[href*="?page=ihnt"])
+! 7. Hide red bar notices for specific reason (e.g. pasta notice, promote merch, patron)
 gelbooru.com##.alert-warning:has(a[href*="javascript"])
-gelbooru.com##.alert-warning:has(a[href^="https://buymyshit.moneygrubbingwhore.com"])
-gelbooru.com##.alert-warning:has(a[href^="https://patreon.com/gelbooru"])
+gelbooru.com##.alert-warning:has(a[href*="moneygrubbingwhore.com"])
+gelbooru.com##.alert-warning:has(a[href*="patreon.com/gelbooru"])
 
 ! 8. Remove berserk rant!
 gelbooru.com##.contain-push center div[style]:not(#paginator)
 
 ! 9. Remove non-same-site out of menu (e.g. buy shirts, TheDoujin, GYDADC; save custom style menu space)
-gelbooru.com###navbar ul.nav li:has(a[href*="buymyshit.moneygrubbingwhore.com"])
+gelbooru.com###navbar ul.nav li:has(a[href*="moneygrubbingwhore.com"])
 gelbooru.com###navbar ul.nav li:has(a[href*="gydadc.com"])
 gelbooru.com###navbar ul.nav li:has(a[href*="thedoujin.com"])
 
@@ -98,8 +98,9 @@ gelbooru.com###navbar ul.nav li:has(a[href*="thedoujin.com"])
 
 ! Block extra things (Banner images that promote their shirts)
 ||gelbooru.com/extras/$image,other
+||gelbooru.com/mind/$image,other
 
-! Unbreak - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ! 
+! Unbreak - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Allow jQuery from GoogleAPIs and BootStrap (suggested by toshiya44)
 @@||*/script/jquery*$script,domain=gelbooru.com
 @@||ajax.googleapis.com/ajax/libs/jquery*$script,domain=gelbooru.com
@@ -140,7 +141,7 @@ gelbooru.com###navbar ul.nav li:has(a[href*="thedoujin.com"])
 @@||*/script/lazyload.js?$script,domain=gelbooru.com
 @@||gelbooru.com/script/lazyload.js?$script,first-party
 
-! Counter other filterlists - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Counter other filterlists - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Counter uBlock Assets that's block inline-script, the purpose is my filter still block some bad scripts and function,
 !    such as prevent ExoLoader to execute and deploy cookie, prevent read ILS ads check, block GoogleAnalyticsObject, ...
 ||gelbooru.com$inline-script,badfilter
@@ -193,15 +194,15 @@ gelbooru.com###navbar ul.nav li:has(a[href*="thedoujin.com"])
 ||gelbooru.com/r19/$important
 
 ! 4. Block hostile scripts that load as php, it's an ad script that foolish exception rule and loaded as php doc.
-||gelbooru.com/bed.php$important
-||gelbooru.com/bed2.php$important
-||gelbooru.com/bluet.php$important
-||gelbooru.com/bluet.wry$important
 ||gelbooru.com//script/application.js.php$important
 ||gelbooru.com//script/bed.php$important
 ||gelbooru.com//script/bed2.php$important
 ||gelbooru.com//script/bluet.php$important
 ||gelbooru.com//script/bluet.wry$important
+||gelbooru.com/bed.php$important
+||gelbooru.com/bed2.php$important
+||gelbooru.com/bluet.php$important
+||gelbooru.com/bluet.wry$important
 ||gelbooru.com/script/application.js.php$important
 ||gelbooru.com/script/bed.php$important
 ||gelbooru.com/script/bed2.php$important
@@ -297,7 +298,7 @@ gelbooru.com##^script[src^="https://gelbooru.com/script/try.js"]
 gelbooru.com##^script[src^="https://gelbooru.com/script/tryt.js"]
 ! gelbooru.com##^script:has-text(abvertDar)
 
-! CSS Re-design / Mobile Improvement - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! CSS Re-design / Mobile Improvement  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space
 ! almost half of screen from top, this will surely conflict when you request desktop view or when you're already use desktop browser.
 gelbooru.com###navbar .nav li a:style(padding-left: 5px !important; padding-right: 5px !important)
@@ -317,6 +318,12 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ||gelbooru.com/autoDebug.js$script,important,redirect=noopjs
 ||gelbooru.com/index.php?page=autoDebug$xmlhttprequest,important,redirect=nooptext
 ||gelbooru.com/intermission.php$subdocument,important,redirect=noopframe
+
+! Specific rules to use for some case or unless some requirement are met  - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! 1. Cancel hiding "Switch layout", sometime it's needed to do, I guess.
+!#if !env_mobile
+gelbooru.com##.alert-info:has(a[href*="?page=ihnt"])
+!endif
 
 ! ---------------------------------------------------- TheDoujin Support ------------------------------------------------------ !
 ! This aim to re-support TheDoujin to hide ads and prevent connections to ads and tracking servers, although this site have less
