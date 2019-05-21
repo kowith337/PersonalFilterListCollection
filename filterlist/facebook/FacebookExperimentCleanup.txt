@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 201905061555
+! Version: 201905211813
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -8,8 +8,8 @@
 ! Note : I don't recommend to subscribe this list due to it's may break or hide some useful functions, but honestly,
 !        some functionality seems to be useless for me, not like it or even hate it!
 
-! [Facebook Desktop] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-! [Start DOM entry]
+! [DOM Sectiom] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Facebook Desktop]
 ! Remove "Top Picks" product from marketplace lists, only work for english UI users only (UK, US, Pirate)
 facebook.com##div[data-testid="marketplace_home_feed"] div[class] > div[class]:has(span[itemcomponent]:has-text(/^Top picks/))
 
@@ -32,26 +32,13 @@ facebook.com###profile_timeline_tiles_unit_pagelets_friends .fbTimelineUnit div[
 facebook.com###GroupDiscoverCard_more_suggestions
 facebook.com###GroupDiscoverCard_top_suggestions
 
-! [Start requests entry]
+! Block instant games overlay that shown over and dim posted images to make attractions for play game(s)
+facebook.com##.userContentWrapper div[data-ft] .mtm a[ajaxify^="/games/quicksilver/spotlight/?"]
+
 ! Top zuckested pages to like (or batch remove via scriptlets) is survived again, expected ads code also survived as well.
 facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[data-referrer] .stat_elem:has(div[class].likeButton span button.PageLikeButton)
 
-! Prevent modules connections that autoplay GIF comments (May doesn't work at all!)
-! Noticed that Facebook start to autoplay GIF images in comments when you scroll to it, same behaviour of autoplay videos, maybe.
-||facebook.com/*?modules=FeedAnimatedImageShare$important
-||facebook.com/*?modules=UFI2CommentAnimatedImageAttachmentPlayer$important
-
-! Prevent connections to retrieve lists of zuckested pages to like or follow. (Desktop site only)
-! Probably not recommended because you will not allow to remove or delete those pages zuckestions!
-! I recommended to remove it out by copy bookmarklet scripts below before blocking this connections.
-! Note: Bookmarklet script is only work for english UI users only (UK, US, Pirate)
-! javascript:(function()%7Bvar%20divs%20%3D%20document.querySelectorAll('a%5Brole%3Dbutton%5D%5Bdata-tooltip-content%3D%22Remove%20Suggestion%22%5D')%3B%20for%20(i%20%3D%200%3B%20i%20%3C%20divs.length%3B%20%2B%2Bi)%20%7Bdivs%5Bi%5D.click()%3B%7D%7D)()
-||facebook.com/ajax/pagelet/generic.php/PagesBrowserTopSuggestionsPagelet$xmlhttprequest,important,redirect=nooptext
-
-! Probably track the feed that posted by instant game via 'TimeSlice' module, if scrolled to game post.
-||facebook.com/*?modules=TimeSliceInteractionsLiteTypedLogger$important
-
-! [Facebook Feature Phone Basic] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+! [Facebook Feature Phone Basic]
 ! Finally, weird space between comments also come to this version, freaking cool!!
 ! Note: I have no idea about breakage effect if I put those rules below into FZK, just put into here for testing is good for now.
 !       Moreover, currently it will affect some type of permalink view only, e.g. text-only posts, photos and external URLs.
@@ -61,7 +48,7 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 ! Remove event discover (also affect threaded discover)
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###events_card_list div[class] > :has(a span:has-text(/^Discover/))
 
-! [Facebook Touch] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+! [Facebook Touch]
 ! This possibly to tracking the news feed load time (In order to trigger the "Switch to Basic site" if news feed load too slow)
 ||facebook.com/ajax/mtouch_perf_page_load_timings/$important
 
@@ -119,3 +106,21 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href="/home.php"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href="/home.php"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=4748854339"]))
+
+! [Network blocking section]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Prevent modules connections that autoplay GIF comments (May doesn't work at all!)
+! Noticed that Facebook start to autoplay GIF images in comments when you scroll to it, same behaviour of autoplay videos, maybe.
+||facebook.com/*?modules=FeedAnimatedImageShare$important
+||facebook.com/*?modules=UFI2CommentAnimatedImageAttachmentPlayer$important
+
+! Probably track the feed that posted by instant game via 'TimeSlice' module, if scrolled to game post.
+||facebook.com/*?modules=TimeSliceInteractionsLiteTypedLogger$important
+
+! Prevent connections to retrieve lists of zuckested pages to like or follow. (Desktop site only)
+! Probably not recommended because you will not allow to remove or delete those pages zuckestions!
+! I recommended to remove it out by copy bookmarklet scripts below before blocking this connections.
+! Note: Bookmarklet script is only work for english UI users only (UK, US, Pirate)
+! javascript:(function()%7Bvar%20divs%20%3D%20document.querySelectorAll('a%5Brole%3Dbutton%5D%5Bdata-tooltip-content%3D%22Remove%20Suggestion%22%5D')%3B%20for%20(i%20%3D%200%3B%20i%20%3C%20divs.length%3B%20%2B%2Bi)%20%7Bdivs%5Bi%5D.click()%3B%7D%7D)()
+||facebook.com/ajax/pagelet/generic.php/PagesBrowserTopSuggestionsPagelet$xmlhttprequest,important,redirect=nooptext
+
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
