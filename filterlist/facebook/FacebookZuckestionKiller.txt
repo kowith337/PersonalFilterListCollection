@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201905211725
+! Version: 201905212119
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -55,6 +55,7 @@
 ||facebook.com/ajax/photos/logging$important
 ||facebook.com/ajax/react_composer/survey?$important
 ||facebook.com/ajax/typeahead/record_basic_metrics.php$important
+||facebook.com/ascend_mr_no$important,~document
 ||facebook.com/async/social_good/$xmlhttprequest
 ||facebook.com/audience_network/$important
 ||facebook.com/common/referer_frame.php$important
@@ -71,7 +72,7 @@
 ||facebook.com/feedtracking/$important
 ||facebook.com/friends/center/suggestions$important,~document,~xmlhttprequest
 ||facebook.com/friends/center/suggestions$xmlhttprequest
-||facebook.com/goodwill/^$important,~document
+||facebook.com/goodwill/$important,~document
 ||facebook.com/groups/*suggested*$important,~xmlhttprequest
 ||facebook.com/groups/*suggested*$xmlhttprequest
 ||facebook.com/groups/membersuggestion$important,~xmlhttprequest
@@ -99,6 +100,7 @@
 ||facebook.com/requests/interaction_history_logging$important
 ||facebook.com/sem_campaigns$important
 ||facebook.com/sem_pixel$important
+||facebook.com/sketch_results$important,~document
 ||facebook.com/suggestions$important
 ||facebook.com/tr?$important
 ||facebook.com/typeahead/search/facebar/nullstate/?$important
@@ -216,6 +218,7 @@
 ||facebook.com/ads/boosted_components/fetch_ad_account_data/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/ads/coupon/read/offer_data/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/ads/preferences/mobile_log/?$xmlhttprequest,important,redirect=nooptext
+||facebook.com/ascend_mr_no$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/common/referer_frame.php$subdocument,important,redirect=noopframe
 ||facebook.com/feed/badge/$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/feedtracking/$xmlhttprequest,important,redirect=nooptext
@@ -227,6 +230,7 @@
 ||facebook.com/sem_pixel/1/test/1/$subdocument,important,redirect=noopframe
 ||facebook.com/sem_pixel/14/dysmith24_dap_at_risk_test/0/$subdocument,important,redirect=noopframe
 ||facebook.com/sem_pixel/14/dysmith24_dap_at_risk_test/1/$subdocument,important,redirect=noopframe
+||facebook.com/sketch_results$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/ufi/typing/*/start/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/ufi/typing/*/stop/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/video/instream_video/rapid_feedback$xmlhttprequest,important,redirect=nooptext
