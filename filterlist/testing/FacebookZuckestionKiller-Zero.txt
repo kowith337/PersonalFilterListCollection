@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201905212119
+! Version: 201905272014
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -348,6 +348,7 @@ facebook.com##iframe[id^="fbsbx-sig-iframe-"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads .accelerate div[class] div[class][style] div[class] > a[data-sigil="redirect_to_advertiser"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads .accelerate div[class] div[class][style] div[class] > div a[href][data-sigil="add"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="0.facebook.com"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="/lite/?loc_ref"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="free.facebook.com"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="freebasics.com"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="instagram.com"]
@@ -535,6 +536,7 @@ facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a span:has-text(Instagram)))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/ads/create/"]))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/friends/center/suggestions/"]))
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/lite/?loc_ref"]))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=124024574287414"]))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=275254692598279"]))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=343553122467255"]))
@@ -546,7 +548,7 @@ facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=1728807357362356"]))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="instagram.com"]))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="/appcenter/165907476854626?"]))
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="/lite/?loc_ref=menu"]))
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="/lite/?loc_ref"]))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="/marketplace/?ref=bookmarks"] div span[data-sigil="marketplace_bookmark"]))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="fb://search_voyager"]))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="https://0.freebasics.com/?ref"]))
