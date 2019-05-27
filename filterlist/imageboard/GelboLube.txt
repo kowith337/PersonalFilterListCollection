@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt)
-! Version: 201905211932
+! Version: 201905271000
 ! Expires: 2 days
 ! Author: kowith337
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -323,7 +323,7 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ! 1. Cancel hiding "Switch layout", sometime it's needed to do, I guess.
 !#if !env_mobile
 gelbooru.com##.alert-info:has(a[href*="?page=ihnt"])
-!endif
+!#endif
 
 ! ---------------------------------------------------- TheDoujin Support ------------------------------------------------------ !
 ! This aim to re-support TheDoujin to hide ads and prevent connections to ads and tracking servers, although this site have less
