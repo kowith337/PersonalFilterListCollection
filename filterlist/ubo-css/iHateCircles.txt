@@ -1,15 +1,27 @@
 [uBlock Origin 1.16.7.2]
 ! Title: iHateCircles
-! Version: 201905302120
+! Version: 201906011718
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/ubo-css/iHateCircles.txt
 
-! Note: Circles?, Material Design?, All of that is too mainstream! Just Bring Back All Squares!!
+! Description: Circles? Material Design? All of that is too mainstream! Just bring back all the squares!!
 
+! Multi-domain
+facebook.com,pixiv.net,tumblr.com,reddit.com,instagram.com,vk.com,ok.ru,quora.com,tiktok.com,douyin.com,minds.com,answers.yahoo.com,aminoapps.com,ifunny.co,google.*##*:style(border-radius: 0px !important)
+facebook.com,pixiv.net##*:before:style(border-radius: 0px !important)
+
+! Single-domain
+discordapp.com##div[class*="avatar"][role="button"]:style(border-radius: 0px !important)
+discordapp.com##div[class^="inner-"][style*="/assets/"]:style(border-radius: 0px !important)
+discordapp.com##div[class^="wrapper-"] > svg > mask
+discordapp.com##div[class^="wrapper-"]:style(border-radius: 0px !important)
+discordapp.com##div[style*="avatars"]:style(border-radius: 0px !important; -webkit-mask: none !important)
 facebook.com##*:after:style(border-radius: 0px !important)
-facebook.com##*:before:style(border-radius: 0px !important)
-facebook.com##*:style(border-radius: 0px !important)
-twitter.com##*:style(border-radius: 0px !important)
+instagram.com##canvas
+mewe.com##*:not([class*="dot"]):style(border-radius: 0px !important)
 twitch.tv##.tw-avatar > .tw-border-radius-rounded.tw-overflow-hidden:style(border-radius: 0px !important)
+twitter.com##*:style(border-radius: 0px !important)
+weibo.com##.subinfo_face > img:style(border-radius: 0px !important)
+youtube.com##yt-img-shadow:style(border-radius: 0px !important)
