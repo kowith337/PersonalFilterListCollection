@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.3.7]
 ! Title: Miscellaneous Annoyance
-! Version: 201905202053
+! Version: 201906011355
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -208,4 +208,8 @@ randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptable
 github.com##.unsupported-browser
 !#endif
 
+! [DeviantArt Mobile] Trim ads placeholder and focus only download button
+!#if env_mobile
+deviantart.com###download .mobile-ad .container .download:style(margin-left: 0px !important; left: 0px !important; width: 100% !important; height: 25px !important)
+!#endif
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
