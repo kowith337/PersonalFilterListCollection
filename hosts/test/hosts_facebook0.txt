@@ -1,6 +1,6 @@
 # [uMatrix 1.3.15.100]
 # Title: Facebook Zero Hosts Block (Use for test)
-# Version: 201904222155
+# Version: 201906042029
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/hosts
@@ -29,7 +29,8 @@
 #       I will keep block those connections, no matter that it will break the functionality to using Facebook on mobile data plan
 #       until they abandone this service and return all connections to the original favor, no redirects, no non-HTTPS, no nagging
 #       or forcing to use that service, just let it should be normal like I'm using Facebook at home or via Proxy/VPN!
-# Note 2: All rules below aren't check with any tools, I just duped and don't know how many "Free Basics" servers are existed?
+# Note 2: All rules below aren't check with any tools, except funilrys's "Dead Hosts" tools (aka. PyFunceble) I just duped hosts
+#         entry that found by myself and some entry from [Credits] and don't know how many "Free Basics" servers are existed?
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # FBZero TopLevel - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 freebasics.com
