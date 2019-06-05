@@ -147,10 +147,11 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||google.*/async/bgasy?ei=*$important
 ||google.*/async/bgasy?*&ei=*$important
 
-! [WallGif]
-||bnserving.com$domain=wallgif.com,important
-||cpm10.com$domain=wallgif.com,important
-||newrelic.com$domain=wallgif.com,important
+! [Linkis]
+! ||linkis.com/ajax^$xmlhttprequest
+||linkis.com/ajax/update-click?*force_auth
+||linkis.com/index/ln-event?*force-auth
+||linkis.com/signin^$popup
 
 ! [Reddit]
 ||redditmedia.com/gtm^$important,~document
@@ -160,6 +161,11 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||cloudfront.net/x.js$domain=speedtest.net,important
 ||speedtest.net/choices/$important
 ||speedtest.net/javascript/jquery-analytics$important
+
+! [WallGif]
+||bnserving.com$domain=wallgif.com,important
+||cpm10.com$domain=wallgif.com,important
+||newrelic.com$domain=wallgif.com,important
 
 ! Redirect - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Google] I don't know about this connection but I've found `ei` parameter inside that already blocked by my another list called
