@@ -1,10 +1,10 @@
 [uBlock Origin 1.19.3.7]
 ! Title: Miscellaneous Annoyance
-! Version: 201906011355
+! Version: 201906091955
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
-! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/MiscAnnoynace.txt
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/MiscAnnoyance.txt
 ! Note: An uncategorized / out of scope of site or topic to create the stand alone filterlists
 !       will be stay here until the specific site or category are have enough rules.
 
@@ -48,6 +48,9 @@ old.reddit.com##.listingsignupbar
 m.intl.taobao.com,m.taobao.com##.App div[class^="smartbanner"]
 m.intl.taobao.com,m.taobao.com##.zebra-oversea-smartbanner
 
+! [Twitter New]
+twitter.com##main[role] div[class] > div[class][data-testid="sidebarColumn"] div[class][style] > div[class] aside[role="complementary"][aria-label^="Relevant"]
+
 ! [Twitter Old] (Deprecated, maybe.)
 twitter.com###signin-dropdown
 twitter.com##.stream li.WtfLargeCarouselStreamItem
@@ -88,7 +91,7 @@ stackexchange.com,superuser.com##.hero-container:has(#hero-content:has(div a[hre
 ! [Taobao Mobile] Remove non-same shop related items
 m.intl.taobao.com##.App .recommend .recommend-list-wrapper:nth-of-type(2)
 
-! [Twitter NEW]
+! [Twitter New]
 twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(a[role="link"][data-focusable][href^="/i/"])
 twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(div[role="button"][data-focusable][data-testid="UserCell"] a[aria-hidden][tabindex][href]):has(a[role="link"][data-focusable] div[dir="auto"] span[dir="auto"])
 twitter.com##div[data-reactroot] div[class] > div[data-focusable][tabindex][class] div[class]:has(div[class] > div[class][style] img[alt][src^="https://ton.twimg.com/twitter_shared_public/responsive-web"])
