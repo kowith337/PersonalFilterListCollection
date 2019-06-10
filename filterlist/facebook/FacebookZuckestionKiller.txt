@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201905272014
+! Version: 201906100805
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -14,10 +14,10 @@
 
 ! Proactive outbound tracking prevention, to prevent Facebook tracking you outside while click and open shared URL (see #19)
 ! Remark: If you're using uBlock0 or Nano, try click the magnifier icon to expand all parameters for getting real URL
-||*&fbclid=$document,popunder,popup,xmlhttprequest,important
-||*?fbclid=$document,popunder,popup,xmlhttprequest,important
-||l.facebook.com$document,popunder,popup,xmlhttprequest,important
-||lm.facebook.com$document,popunder,popup,xmlhttprequest,important
+||*&fbclid=$document,xmlhttprequest,important
+||*?fbclid=$document,xmlhttprequest,important
+||l.facebook.com$document,xmlhttprequest,important
+||lm.facebook.com$document,xmlhttprequest,important
 
 ! Network Blocking
 ! to prevent sending requests to show related contents, determine user action about how users use Facebook, nasty redirect, etc.
