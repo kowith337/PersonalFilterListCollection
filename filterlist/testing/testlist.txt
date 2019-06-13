@@ -1,6 +1,6 @@
-﻿[uBlock Origin 1.19.0]
+[uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 201906122216
+! Version: 201906130831
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -50,15 +50,19 @@ f8.com,facebook.com,freebasics.com,internet.org##script:inject(query-stripper.js
 f8.com,facebook.com,freebasics.com,internet.org##script:inject(query-stripper.js, refid)
 f8.com,facebook.com,freebasics.com,internet.org##script:inject(query-stripper.js, session_id)
 f8.com,facebook.com,freebasics.com,internet.org##script:inject(query-stripper.js, settings_tracking)
-google.*##script:inject(query-stripper.js, bih)
-google.*##script:inject(query-stripper.js, biw)
-google.*##script:inject(query-stripper.js, gs_l)
-google.*##script:inject(query-stripper.js, gs_r)
-google.*##script:inject(query-stripper.js, ibh)
-google.*##script:inject(query-stripper.js, ibw)
-google.*##script:inject(query-stripper.js, sa)
-google.*##script:inject(query-stripper.js, usg)
-google.*##script:inject(query-stripper.js, ved)
+google.com##script:inject(query-stripper.js, bih)
+google.com##script:inject(query-stripper.js, biw)
+google.com##script:inject(query-stripper.js, gs_l)
+google.com##script:inject(query-stripper.js, gs_r)
+google.com##script:inject(query-stripper.js, ibh)
+google.com##script:inject(query-stripper.js, ibw)
+google.com##script:inject(query-stripper.js, sa)
+google.com##script:inject(query-stripper.js, usg)
+google.com##script:inject(query-stripper.js, ved)
+mozilla.com,mozilla.org,reddit.com##script:inject(query-stripper.js, utm)
+mozilla.com,mozilla.org,reddit.com##script:inject(query-stripper.js, utm_campaign)
+mozilla.com,mozilla.org,reddit.com##script:inject(query-stripper.js, utm_medium)
+mozilla.com,mozilla.org,reddit.com##script:inject(query-stripper.js, utm_source)
 twitter.com,t.co##script:inject(query-stripper.js, amp)
 youtube.com##script:inject(query-stripper.js, redir_token)
 
