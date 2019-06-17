@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201906091716
+# Version: 201906172033
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -11,13 +11,55 @@
 #       it's not recommended to use for workplace or company setup, just only my opinion and personal bias!
 #       you can use this at your own risk!
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# `p.facebook.com` use for ping mobile OS intent with new subdomains, aim to enforce open official app while break functionality
-# of mobile browsers, however, any users who spoofed user agents to escape mobile browser detection maybe not affected, I hope...
-0.0.0.0 p.facebook.com
-# Facebook tracking link parking, you should modify URLs by yourself or use with uBlock/uMatrix in order to resolve actual URLs #
+# [Untrusted Google Hosts]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - Generic
+0.0.0.0 adservice.google.com
+0.0.0.0 google-analytics.com
+0.0.0.0 googleadservices.com
+0.0.0.0 googlesyndication.com
+0.0.0.0 googletagmanager.com
+0.0.0.0 googletagservices.com
+0.0.0.0 id.google.com
+0.0.0.0 ssl.google-analytics.com
+0.0.0.0 www.google-analytics.com
+# - DoubleClick (Include Syndication)
+0.0.0.0 googleads.g.doubleclick.net
+0.0.0.0 pagead.googlesyndication.com
+0.0.0.0 pagead2.googlesyndication.com
+0.0.0.0 pagead3.googlesyndication.com
+0.0.0.0 pubads.g.doubleclick.net
+0.0.0.0 securepubads.g.doubleclick.net
+0.0.0.0 static.doubleclick.net
+0.0.0.0 tpc.googlesyndication.com
+# - Google APIs
+0.0.0.0 android-safebrowsing.googleapis.com
+0.0.0.0 androidsuggesthub-pa.googleapis.com
+0.0.0.0 exploresites-pa.googleapis.com
+0.0.0.0 growth-pa.googleapis.com
+0.0.0.0 imasdk.googleapis.com
+0.0.0.0 mobilecrashreporting.googleapis.com
+0.0.0.0 mobilenetworkscoring-pa.googleapis.com
+# 0.0.0.0 people-pa.googleapis.com
+# safebrowsing.googleapis.com
+0.0.0.0 suggestqueries.googleapis.com
+# 0.0.0.0 telephonyspamprotect-pa.googleapis.com
+# 0.0.0.0 voledevice-pa.googleapis.com
+# - G-Static
+0.0.0.0 connectivitycheck.gstatic.com
+# - Redirector
+# 0.0.0.0 redirector.gvt1.com
+0.0.0.0 redirector.googlevideo.com
+# - SafeBrowsing De-Trust
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Facebook Hosts]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - Facebook tracking link parking, you should modify URLs by yourself or use with uBlock/uMatrix in order to resolve actual URLs
 0.0.0.0 l.facebook.com
 0.0.0.0 lm.facebook.com
-# Facebook API/Graph domains, include alternative, error reporting and "PIXEL" domain - - - - - - - - - - - - - - - - - - - - - #
+# - `p.facebook.com` use for ping mobile OS intent with new subdomains, aim to enforce open official app while break
+#   functionality of mobile browsers, however, any users who spoofed user agents to escape mobile browser detection maybe not
+#   affected, I hope...
+0.0.0.0 p.facebook.com
+# - Facebook API/Graph domains, include alternative, error reporting and "PIXEL" domain 
 0.0.0.0 a-api.facebook.com
 0.0.0.0 a-error.facebook.com
 0.0.0.0 a-graph.facebook.com
@@ -31,13 +73,13 @@
 0.0.0.0 error.facebook.com
 0.0.0.0 graph.facebook.com
 0.0.0.0 pixel.facebook.com
-# FREE BASUCKS <--- NOT TYPO! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# Note: this will surely break Facebook completely, due to mobile operators who deploy "Free Basics" services are mostly have
-#       traffic redirect to "h.facebook.com" (without HTTPS connections!) and "mobile.facebook.com", I didn't see any connections
-#       made to those 2 domains if using normal network (Home Wi-Fi, Workplace, etc.), but appear when use mobile data, no matter
-#       that you're opt-in to use Facebook for free (if you won't care your data and phone number) or not!
-#       Please understand that I'm TOTALLY BAN THIS THINGS because everything about Facebook will be broke on mobile data by
-#       themselves, both norm and functionality! sorry if this things make it worst than that.
+# - FREE BASUCKS! <--- "NOT TYPO" !!
+#   Note: this will surely break Facebook completely, due to mobile operators who deploy "Free Basics" services are mostly have
+#         traffic redirect to "h.facebook.com" (without HTTPS connections!) and "mobile.facebook.com", I didn't see any 
+#         connections made to those 2 domains if using normal network (Home Wi-Fi, Workplace, etc.), but appear when use mobile
+#         data, no matter that you're opt-in to use Facebook for free (if you won't care your data and phone number) or not!
+#         Please understand that I'm TOTALLY BAN THIS THINGS because everything about Facebook will be broke on mobile data by
+#         themselves, both norm and functionality! sorry if this things make it worst than that.
 0.0.0.0 0.facebook.com
 0.0.0.0 0.freebasics.com
 0.0.0.0 api.freebasics.com
@@ -59,8 +101,9 @@
 0.0.0.0 web.facebook.com
 0.0.0.0 zero.facebook.com
 0.0.0.0 zero.freebasics.com
-# Firefox Betrayed Backend Domains (Telemetry, Health Report, Personalise content zuckestions)  - - - - - - - - - - - - - - - - #
-# Based on 2 sources below...
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Firefox Betrayed Backend Domains]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Telemetry, Health Report, Personalise content zuckestions , based on 2 sources below...
 # - http://utaukitune.ldblog.jp/archives/65725024.html
 # - https://github.com/jmdugan/blocklists/tree/master/corporations/mozilla/all.txt
 0.0.0.0 api.getpocket.com
@@ -88,7 +131,8 @@
 0.0.0.0 tiles.up.mozillalabs.com
 0.0.0.0 token.services.mozilla.com
 0.0.0.0 tracking.services.mozilla.com
-# Generic Root (Recommended for uMatrix to block as top level, regardless of sub-domains) - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Generic Root] (Recommended for uMatrix to block as top level, regardless of sub-domains)
 0.0.0.0 aaxads.com
 0.0.0.0 adasiaholdings.com
 0.0.0.0 addthisedge.com
@@ -120,7 +164,6 @@
 0.0.0.0 genieessp.com
 0.0.0.0 genieesspv.jp
 0.0.0.0 go2speed.org
-0.0.0.0 googletagmanager.com
 0.0.0.0 gratonrewardcenter.icu
 0.0.0.0 gsspat.jp
 0.0.0.0 gssprt.jp
@@ -161,121 +204,8 @@
 0.0.0.0 visualwebsiteoptimizer.com
 0.0.0.0 waust.at
 0.0.0.0 yengo.com
-# Adware Root (Same as Generic Root)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-0.0.0.0 360tools.org
-0.0.0.0 555.in.th
-0.0.0.0 baidu.co.th
-0.0.0.0 beedoctor.in.th
-0.0.0.0 default-search.net
-0.0.0.0 hao123.com
-0.0.0.0 joydownload.com
-0.0.0.0 mystart.com
-0.0.0.0 opencandy.com
-0.0.0.0 palikan.com
-0.0.0.0 pcfaster.com
-0.0.0.0 reimageplus.com
-0.0.0.0 snapdo.com
-0.0.0.0 tools1000.com
-0.0.0.0 toptools100.com
-0.0.0.0 v9.com
-0.0.0.0 vosteran.com
-0.0.0.0 vosteransearch.com
-0.0.0.0 yac.mx
-0.0.0.0 wisemana.com
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# RayBan Scam Domains (Based on https://blog.eset.co.th/2016/04/08/%E0%B8%81%E0%B8%A5%E0%B9%82%E0%B8%81%E0%B8%87%E0%B8%9A%E0%B8%99-facebook-ray-bans-on-sale)
-0.0.0.0 2015goodsunglasses.com
-0.0.0.0 br-rbso.com
-0.0.0.0 cheapsunglasses.cn
-0.0.0.0 cz-rb.com
-0.0.0.0 esnrb.com
-0.0.0.0 frrbsrbs.com
-0.0.0.0 glasses-sale.com
-0.0.0.0 ok-rb.top
-0.0.0.0 rayban-brand.com
-0.0.0.0 rayban-sk.com
-0.0.0.0 rb-as.com
-0.0.0.0 rb-be.org
-0.0.0.0 rb-cz.com
-0.0.0.0 rb-ff.com
-0.0.0.0 rb-nb.com
-0.0.0.0 rb-rr.com
-0.0.0.0 rb-sk.com
-0.0.0.0 rb-sk.org
-0.0.0.0 rbbuy-se.com
-0.0.0.0 rbbuy-se.com
-0.0.0.0 rbbuy-sk.com
-0.0.0.0 rbcet.com
-0.0.0.0 rbdmc.com
-0.0.0.0 rbdps.com
-0.0.0.0 rbdyu.com
-0.0.0.0 rbese.com
-0.0.0.0 rbeus.co
-0.0.0.0 rbfr-rbs.com
-0.0.0.0 rbgpb.com
-0.0.0.0 rbius.co
-0.0.0.0 rbnes.com
-0.0.0.0 rbs-chile.com
-0.0.0.0 rbs-sk.com
-0.0.0.0 rbsave-fr.com
-0.0.0.0 rbshop-il.com
-0.0.0.0 rbstore-cl.com
-0.0.0.0 rbstore-no.com
-0.0.0.0 rbstoreonline.org
-0.0.0.0 rbwap.com
-0.0.0.0 rbwzu.com
-0.0.0.0 salesunglasses07.pw
-0.0.0.0 sk-rb.com
-0.0.0.0 spain-rb.com
-0.0.0.0 ukrb-uk.com
-0.0.0.0 vt-rbs.com
-# RayBan Scam Add WWW - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-0.0.0.0 www.2015goodsunglasses.com
-0.0.0.0 www.br-rbso.com
-0.0.0.0 www.cheapsunglasses.cn
-0.0.0.0 www.cz-rb.com
-0.0.0.0 www.esnrb.com
-0.0.0.0 www.frrbsrbs.com
-0.0.0.0 www.glasses-sale.com
-0.0.0.0 www.ok-rb.top
-0.0.0.0 www.rayban-brand.com
-0.0.0.0 www.rayban-sk.com
-0.0.0.0 www.rb-as.com
-0.0.0.0 www.rb-be.org
-0.0.0.0 www.rb-cz.com
-0.0.0.0 www.rb-ff.com
-0.0.0.0 www.rb-nb.com
-0.0.0.0 www.rb-rr.com
-0.0.0.0 www.rb-sk.com
-0.0.0.0 www.rb-sk.org
-0.0.0.0 www.rbbuy-se.com
-0.0.0.0 www.rbbuy-se.com
-0.0.0.0 www.rbbuy-sk.com
-0.0.0.0 www.rbcet.com
-0.0.0.0 www.rbdmc.com
-0.0.0.0 www.rbdps.com
-0.0.0.0 www.rbdyu.com
-0.0.0.0 www.rbese.com
-0.0.0.0 www.rbeus.co
-0.0.0.0 www.rbfr-rbs.com
-0.0.0.0 www.rbgpb.com
-0.0.0.0 www.rbius.co
-0.0.0.0 www.rbnes.com
-0.0.0.0 www.rbs-chile.com
-0.0.0.0 www.rbs-sk.com
-0.0.0.0 www.rbsave-fr.com
-0.0.0.0 www.rbshop-il.com
-0.0.0.0 www.rbstore-cl.com
-0.0.0.0 www.rbstore-no.com
-0.0.0.0 www.rbstoreonline.org
-0.0.0.0 www.rbwap.com
-0.0.0.0 www.rbwzu.com
-0.0.0.0 www.salesunglasses07.pw
-0.0.0.0 www.sk-rb.com
-0.0.0.0 www.spain-rb.com
-0.0.0.0 www.ukrb-uk.com
-0.0.0.0 www.vt-rbs.com
-# Generic Sublevel  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Generic Sublevel]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 3326.tm.zedo.com
 0.0.0.0 acds.vidible.tv
 0.0.0.0 ad.doubleclick.net
@@ -314,11 +244,6 @@
 0.0.0.0 ads9.matichon.co.th
 0.0.0.0 adsbybumq.bumq.com
 0.0.0.0 adsense.codev.wixapps.net
-0.0.0.0 adservice.google.co.jp
-0.0.0.0 adservice.google.co.th
-0.0.0.0 adservice.google.co.uk
-0.0.0.0 adservice.google.com
-0.0.0.0 androidsuggesthub-pa.googleapis.com
 0.0.0.0 api.cxense.com
 0.0.0.0 api.userstyles.org
 0.0.0.0 as.innity.com
@@ -347,7 +272,6 @@
 0.0.0.0 code.nytive.com
 0.0.0.0 code.yengo.com
 0.0.0.0 collector.newrelic.com
-0.0.0.0 connectivitycheck.gstatic.com
 0.0.0.0 convammp.taboola.com
 0.0.0.0 cs.gssprt.jp
 0.0.0.0 d1.yengo.com
@@ -363,16 +287,11 @@
 0.0.0.0 go2.aniview.com
 0.0.0.0 go3.aniview.com
 0.0.0.0 graph.sanook.com
-0.0.0.0 growth-pa.googleapis.com
 0.0.0.0 hits.truehits.in.th
 0.0.0.0 ho.lazada.co.th
 0.0.0.0 hw-cdn.contentabc.com
 0.0.0.0 hw-cdn.trafficjunky.net
 0.0.0.0 ialaddin.genieesspv.jp
-0.0.0.0 id.google.co.jp
-0.0.0.0 id.google.co.th
-0.0.0.0 id.google.co.uk
-0.0.0.0 id.google.com
 0.0.0.0 id.rlcdn.com
 0.0.0.0 image1.pubmatic.com
 0.0.0.0 image2.pubmatic.com
@@ -383,7 +302,6 @@
 0.0.0.0 image7.pubmatic.com
 0.0.0.0 image8.pubmatic.com
 0.0.0.0 image9.pubmatic.com
-0.0.0.0 imasdk.googleapis.com
 0.0.0.0 imprammp.taboola.com
 0.0.0.0 improving.duckduckgo.com
 0.0.0.0 info.internet.org
@@ -445,7 +363,6 @@
 0.0.0.0 simage9.pubmatic.com
 0.0.0.0 ssl-avd.innity.com
 0.0.0.0 ssl-avd.innity.net
-0.0.0.0 ssl.google-analytics.com
 0.0.0.0 st-n.ads1-adnow.com
 0.0.0.0 st-n.ads2-adnow.com
 0.0.0.0 st-n.ads3-adnow.com
@@ -472,7 +389,6 @@
 0.0.0.0 static.addtoany.com
 0.0.0.0 static.gammaplatform.com
 0.0.0.0 statmt.matichon.co.th
-0.0.0.0 suggestqueries.googleapis.com
 0.0.0.0 synad1.nuffnang.co.th
 0.0.0.0 synad2.nuffnang.co.th
 0.0.0.0 synad3.nuffnang.co.th
@@ -511,7 +427,30 @@
 0.0.0.0 www.ublock.org
 0.0.0.0 www.yengo.com
 0.0.0.0 www2.silkspan.com
-# Adware Sublevel - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Adware Root] (Same as Generic Root)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 360tools.org
+0.0.0.0 555.in.th
+0.0.0.0 baidu.co.th
+0.0.0.0 beedoctor.in.th
+0.0.0.0 default-search.net
+0.0.0.0 hao123.com
+0.0.0.0 joydownload.com
+0.0.0.0 mystart.com
+0.0.0.0 opencandy.com
+0.0.0.0 palikan.com
+0.0.0.0 pcfaster.com
+0.0.0.0 reimageplus.com
+0.0.0.0 snapdo.com
+0.0.0.0 tools1000.com
+0.0.0.0 toptools100.com
+0.0.0.0 v9.com
+0.0.0.0 vosteran.com
+0.0.0.0 vosteransearch.com
+0.0.0.0 yac.mx
+0.0.0.0 wisemana.com
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Adware Sublevel] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 antivirus.baidu.com
 0.0.0.0 baidu-pc-faster.en.softonic.com
 0.0.0.0 baidu-spark-browser.en.softonic.com
@@ -606,4 +545,98 @@
 0.0.0.0 www.vosteransearch.com
 0.0.0.0 www.wisemana.com
 0.0.0.0 www.yac.mx
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# RayBan Scam Domains (Based on https://blog.eset.co.th/2016/04/08/%E0%B8%81%E0%B8%A5%E0%B9%82%E0%B8%81%E0%B8%87%E0%B8%9A%E0%B8%99-facebook-ray-bans-on-sale)
+0.0.0.0 2015goodsunglasses.com
+0.0.0.0 br-rbso.com
+0.0.0.0 cheapsunglasses.cn
+0.0.0.0 cz-rb.com
+0.0.0.0 esnrb.com
+0.0.0.0 frrbsrbs.com
+0.0.0.0 glasses-sale.com
+0.0.0.0 ok-rb.top
+0.0.0.0 rayban-brand.com
+0.0.0.0 rayban-sk.com
+0.0.0.0 rb-as.com
+0.0.0.0 rb-be.org
+0.0.0.0 rb-cz.com
+0.0.0.0 rb-ff.com
+0.0.0.0 rb-nb.com
+0.0.0.0 rb-rr.com
+0.0.0.0 rb-sk.com
+0.0.0.0 rb-sk.org
+0.0.0.0 rbbuy-se.com
+0.0.0.0 rbbuy-se.com
+0.0.0.0 rbbuy-sk.com
+0.0.0.0 rbcet.com
+0.0.0.0 rbdmc.com
+0.0.0.0 rbdps.com
+0.0.0.0 rbdyu.com
+0.0.0.0 rbese.com
+0.0.0.0 rbeus.co
+0.0.0.0 rbfr-rbs.com
+0.0.0.0 rbgpb.com
+0.0.0.0 rbius.co
+0.0.0.0 rbnes.com
+0.0.0.0 rbs-chile.com
+0.0.0.0 rbs-sk.com
+0.0.0.0 rbsave-fr.com
+0.0.0.0 rbshop-il.com
+0.0.0.0 rbstore-cl.com
+0.0.0.0 rbstore-no.com
+0.0.0.0 rbstoreonline.org
+0.0.0.0 rbwap.com
+0.0.0.0 rbwzu.com
+0.0.0.0 salesunglasses07.pw
+0.0.0.0 sk-rb.com
+0.0.0.0 spain-rb.com
+0.0.0.0 ukrb-uk.com
+0.0.0.0 vt-rbs.com
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [RayBan Scam Add WWW] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 www.2015goodsunglasses.com
+0.0.0.0 www.br-rbso.com
+0.0.0.0 www.cheapsunglasses.cn
+0.0.0.0 www.cz-rb.com
+0.0.0.0 www.esnrb.com
+0.0.0.0 www.frrbsrbs.com
+0.0.0.0 www.glasses-sale.com
+0.0.0.0 www.ok-rb.top
+0.0.0.0 www.rayban-brand.com
+0.0.0.0 www.rayban-sk.com
+0.0.0.0 www.rb-as.com
+0.0.0.0 www.rb-be.org
+0.0.0.0 www.rb-cz.com
+0.0.0.0 www.rb-ff.com
+0.0.0.0 www.rb-nb.com
+0.0.0.0 www.rb-rr.com
+0.0.0.0 www.rb-sk.com
+0.0.0.0 www.rb-sk.org
+0.0.0.0 www.rbbuy-se.com
+0.0.0.0 www.rbbuy-se.com
+0.0.0.0 www.rbbuy-sk.com
+0.0.0.0 www.rbcet.com
+0.0.0.0 www.rbdmc.com
+0.0.0.0 www.rbdps.com
+0.0.0.0 www.rbdyu.com
+0.0.0.0 www.rbese.com
+0.0.0.0 www.rbeus.co
+0.0.0.0 www.rbfr-rbs.com
+0.0.0.0 www.rbgpb.com
+0.0.0.0 www.rbius.co
+0.0.0.0 www.rbnes.com
+0.0.0.0 www.rbs-chile.com
+0.0.0.0 www.rbs-sk.com
+0.0.0.0 www.rbsave-fr.com
+0.0.0.0 www.rbshop-il.com
+0.0.0.0 www.rbstore-cl.com
+0.0.0.0 www.rbstore-no.com
+0.0.0.0 www.rbstoreonline.org
+0.0.0.0 www.rbwap.com
+0.0.0.0 www.rbwzu.com
+0.0.0.0 www.salesunglasses07.pw
+0.0.0.0 www.sk-rb.com
+0.0.0.0 www.spain-rb.com
+0.0.0.0 www.ukrb-uk.com
+0.0.0.0 www.vt-rbs.com
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
