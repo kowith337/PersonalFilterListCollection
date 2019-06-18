@@ -1,13 +1,13 @@
 [uBlock Origin 1.19.3.7]
 ! Title: Miscellaneous Annoyance
-! Version: 201906171948
+! Version: 201906181808
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/MiscAnnoyance.txt
 ! Note: An uncategorized / out of scope of site or topic to create the stand alone filterlists
 !       will be stay here until the specific site or category are have enough rules.
-
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [GitHub]
 github.com##.repository-content .protip
@@ -32,11 +32,11 @@ linkis.com##.popup_force-auth
 linkis.com##.theme15-authorize
 
 ! [Minecraft] Forge Ads Pane
-files.minecraftforge.net##.ad-container
-files.minecraftforge.net##.ad-container-framed
-files.minecraftforge.net##.promo-container
-! files.minecraftforge.net##.promos-wrapper
-files.minecraftforge.net##div img[src*="imrworldwide.com/cgi-bin/m?"][width="1"][height="1"]
+minecraftforge.net##.ad-container
+minecraftforge.net##.ad-container-framed
+minecraftforge.net##.promo-container
+minecraftforge.net##div img[src*="imrworldwide.com/cgi-bin/m?"]
+! minecraftforge.net##.promos-wrapper
 
 ! [Reddit Old]
 old.reddit.com##.ProfileVoiceAd
@@ -106,13 +106,21 @@ youtube.com##.individual-feed li .branded-page-box:has(.feed-item-dismissable:ha
 ! HTML Filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: This work only FF quantum + uB0 WebExt
 !#if cap_html_filtering
-files.minecraftforge.net##^.promo-container
-files.minecraftforge.net##^.promos-wrapper
-files.minecraftforge.net##^div img[src*="imrworldwide.com/cgi-bin/m?"][width="1"][height="1"]
-files.minecraftforge.net##^div img[src^="data:image/gif;base64,"]
+minecraftforge.net##^.promo-container
+minecraftforge.net##^.promos-wrapper
+minecraftforge.net##^div img[src*="imrworldwide.com/cgi-bin/m?"]
+minecraftforge.net##^div img[src^="data:image/gif;base64,"]
 greasyfork.org##^.post-install
 m.intl.taobao.com,m.taobao.com##^script:has-text(getFB_GOOLE_trackJs)
 !#endif
+
+! Inline Script Filtering
+! Note: HTML Filtering for Firefox pre-quantum (aka. XUL Legacy), mainly to support removing matched inline script block
+!#if env_firefox
+m.intl.taobao.com,m.taobao.com##script:contains(getFB_GOOLE_trackJs)
+minecraftforge.net##script:contains(window.factorem)
+randomnessthing.com##script:contains(Criteo)
+!endif
 
 ! CSS Modify  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Google] Restore context of search result that was hidden by a things named as "People also search for", the hidden action will
@@ -121,21 +129,19 @@ google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname] 
 google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][style^="display: none"]:style(display: block !important)
 
 ! [Minecraft] to prevent clicking the paid links hyperlink, e.g. AdFly, AdFocus, NetBee (by accident or intent)
-! ChocolateMinecraft: http://chocolateminecraft.com (Use both AdFly and NetBee {Older version of mods})
-! - Only "Mirror" links can be clickable, the very old versions may unable to click because it have no mirror links.
+! - ChocolateMinecraft: http://chocolateminecraft.com (Use both AdFly and NetBee {Older version of mods})
+!   - Only "Mirror" links can be clickable, the very old versions may unable to click because it have no mirror links.
 chocolateminecraft.com###content table[style*="width:100%"] td a[href*="adf.ly/"]:style(pointer-events: none !important; text-decoration: none !important)
 chocolateminecraft.com###content table[style*="width:100%"] td a[href*="netb.ee/"]:style(pointer-events: none !important; text-decoration: none !important)
-
-! [Minecraft] Forge: http://files.minecraftforge.net - It use AdFocus for all installer links (except changelog)
-! - Prevent clicking on all big icon links that appear as latest and/or recommended (because it contains AdFocus hyperlink) and
+! - Forge: http://files.minecraftforge.net - It use AdFocus for all installer links (except changelog)
+!   - Prevent clicking on all big icon links that appear as latest and/or recommended (because it contains AdFocus hyperlink) and
 !   leave only changelog can be clickable.
-! - All download URLs will not have underline an also unable to click, the only way to download is just click the (i) icon beside
+!   - All download URLs will not have underline an also unable to click, the only way to download is just click the (i) icon beside
 !   "Download" text, that's only the way you can get the direct download for this.
-files.minecraftforge.net##.download-list-wrapper .download-files .download-links li a[href*="adfoc.us/"]:style(pointer-events: none !important; text-decoration: none !important)
-files.minecraftforge.net##.downloads .download .links .link-left:has(a[href*="adfoc.us/"]):style(pointer-events: none !important)
-files.minecraftforge.net##.downloads .download .links .links-right .link:has(a[href*="adfoc.us/"]):style(pointer-events: none !important)
-
-! [Minecraft] Optifine: http://optifine.net/downloads - (Use AdFly + CPMStar) Only "Mirror" links can be clickable.
+minecraftforge.net##.download-list-wrapper .download-files .download-links li a[href*="adfoc.us/"]:style(pointer-events: none !important; text-decoration: none !important)
+minecraftforge.net##.downloads .download .links .link-left:has(a[href*="adfoc.us/"]):style(pointer-events: none !important)
+minecraftforge.net##.downloads .download .links .links-right .link:has(a[href*="adfoc.us/"]):style(pointer-events: none !important)
+! - Optifine: http://optifine.net/downloads - (Use AdFly + CPMStar) Only "Mirror" links can be clickable.
 optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadLine"] a[href*="?f="][href*="&x=ce78"]:style(pointer-events: none !important; text-decoration: none !important)
 optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadLine"] a[href^="http://adf.ly"]:style(pointer-events: none !important; text-decoration: none !important)
 
@@ -173,7 +179,8 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||newrelic.com$domain=wallgif.com,important
 
 ! Redirect - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! [Google] I don't know about this connection but I've found `ei` parameter inside that already blocked by my another list called
+! [Google]
+! I don't know about this connection but I've found `ei` parameter inside that already blocked by my another list called
 ! "Anti survived tracking warning (overdone ver.)" , expected that the request use for ping back to phone home? alright then...
 ||google.*/async/bgasy?$xmlhttprequest,important,redirect=nooptext
 ||google.*/imgevent?$xmlhttprequest,important,redirect=nooptext
@@ -183,11 +190,11 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ! with `nooptext` can solve this thing also.
 ||greasyfork.org/scripts/*/install-ping?$xmlhttprequest,important,redirect=nooptext
 
-! [Reddit] GoogleTag Frame
+! [Reddit]
+! -GoogleTag Frame
 ||redditmedia.com/gtm^$subdocument,important,redirect=noopframe
 ||redditstatic.com/gtm^$subdocument,important,redirect=noopframe
-
-! [Reddit] Again, also PNG PIXEL TRACKING!?
+! - Also PNG PIXEL TRACKING!?
 ||reddit.com/static/pixel.png$image,important,redirect=1x1-transparent.png
 
 ! Block Page(s) / Redirect annoyance - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -196,18 +203,19 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||add0n.com$popunder
 ||add0n.com$popup
 
-! [Mozilla AMO] Some extensions at Mozilla (mostly if it have suggest to contribute via donation) is redirect to open a developer
-! profile page after installed.
-! Note for post-quantum Firefox users, the filter may not work unless you've de-whitelist WebExtension exception and make config
-! prefs to resist fingerprinting on mozilla addons page, see "Privileged Pages" information and how-tos in uBlock wiki
+! [Mozilla AMO]
+! Some extensions at Mozilla (mostly if it have suggest to contribute via donation) is redirect to open a developer profile page
+! after installed some extension(s), currently all legacy extensions are purged out, so that's mean only post-quantum version of
+! Firefox is actually support and/or suppose to use strict block below, however...
+! For post-quantum Firefox users, the filter may not work unless you've de-whitelist WebExtension exception and make config prefs
+! to resist fingerprinting on mozilla addons page, see "Privileged Pages" information and how-tos in uBlock wiki below...
 ! https://github.com/gorhill/uBlock/wiki/Privileged-Pages
 ||addons.mozilla.org/*/addon/*/developers$document
 
 ! Scriplets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-files.minecraftforge.net##script:inject(abort-current-inline-script.js, _comscore)
-m.intl.taobao.com,m.taobao.com##script:contains(getFB_GOOLE_trackJs)
 m.intl.taobao.com,m.taobao.com##script:inject(addEventListener-defuser.js, load, getFB_GOOLE_trackJs)
-randomnessthing.com##script:contains(Criteo)
+minecraftforge.net##script:inject(abort-current-inline-script.js, _comscore)
+minecraftforge.net##script:inject(abort-current-inline-script.js, window.factorem)
 randomnessthing.com##script:inject(abort-on-property-read.js, Criteo)
 randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptableAdIfAdblocked)
 
