@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201906181734
+# Version: 201906181854
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -146,6 +146,7 @@
 0.0.0.0 app-measurement.com
 0.0.0.0 beachfrontmedia.com
 0.0.0.0 bfmio.com
+0.0.0.0 browsehappy.com
 0.0.0.0 bumq.com
 0.0.0.0 consensu.org
 0.0.0.0 cpsee.com
