@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 201905142100
+! Version: 201906181942
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -21,7 +21,9 @@
 ! Common Extrenal
 ||*&fbclid$document,subdocument,xmlhttprequest,important
 ||*?fbclid$document,subdocument,xmlhttprequest,important
-||google.*/url?*sa=*ved=*$document,subdocument,important
+||google.*/url?*&usg=*$document,subdocument,important
+||google.*/url?*&ved=*$document,subdocument,important
+||google.*/url?*&vet=*$document,subdocument,important
 ||l.facebook.com$document,subdocument,xmlhttprequest,important
 ||lm.facebook.com$document,subdocument,xmlhttprequest,important
 ||youtube.com/redirect?redir_token=*$document,subdocument,important
@@ -62,12 +64,20 @@
 ||facebook.com/ads/*&session_id=$xmlhttprequest
 ||facebook.com/ads/*?session_id=$document,subdocument,important
 ||facebook.com/ads/*?session_id=$xmlhttprequest
+||google.*/imgres?*&ved=*$document,subdocument,important
+||google.*/imgres?*&ved=*$xmlhttprequest
+||google.*/imgres?*&vet=*$document,subdocument,important
+||google.*/imgres?*&vet=*$xmlhttprequest
 ||google.*/search?*&ei=*&gs_l=*$document,subdocument,important
 ||google.*/search?*&ei=*&gs_l=*$xmlhttprequest
 ||google.*/search?*&ei=*&gs_r=*$document,subdocument,important
 ||google.*/search?*&ei=*&gs_r=*$xmlhttprequest
-||google.*/search?*&sa=*&ved=$document,subdocument,important
-||google.*/search?*&sa=*&ved=$xmlhttprequest
+||google.*/search?*&usg=$document,subdocument,important
+||google.*/search?*&usg=$xmlhttprequest
+||google.*/search?*&ved=$document,subdocument,important
+||google.*/search?*&ved=$xmlhttprequest
+||google.*/search?*&vet=$document,subdocument,important
+||google.*/search?*&vet=$xmlhttprequest
 ||mozilla.com/*&utm_*=*$document,subdocument,xmlhttprequest,important
 ||mozilla.com/*?utm_*=*$document,subdocument,xmlhttprequest,important
 ||mozilla.net/*&utm_*=*$document,subdocument,xmlhttprequest,important
