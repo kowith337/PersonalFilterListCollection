@@ -1,4 +1,12 @@
-# GelboLube is a filterlist that target to use on Gelbooru, an image board site that have safe and not safe images.
+# Freezing State Notice:
+
+The site owner decided to lockdown itself by limited viewing uploaded images for registered users only, I cannot predict that their owners team will easily know that you're still using content blocker, and probably in the worst case senario, they will be disable or terminate your accounts and/or blocking IP address for prevent attempts to revisit their site while you're still activating privacy protection tools, either hosts files, content blockers, custom stylesheet, custom scripts, etc.
+
+As for your safe state, try looking to other similar services that not aggressively violate your privacy just for their profits like that site!
+
+-----
+
+### GelboLube is a filterlist that target to use on Gelbooru, an image board site that have safe and not safe images.
 > Formerly renamed from Lubricant of Gel [(Gist)](https://gist.github.com/kowith337/54c072b3dbb66862ee5ac1110e7e402a)
 
 | **Browser** | **Subscribe** | **Direct Link** |

@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
-! Title: GelboLube (Chromium/WebExt)
-! Version: 201905271000
+! Title: GelboLube (Chromium/WebExt) [Freezing]
+! Version: 201906212241
 ! Expires: 2 days
 ! Author: kowith337
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
