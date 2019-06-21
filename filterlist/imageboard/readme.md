@@ -1,6 +1,6 @@
 # Freezing State Notice:
 
-The site owner decided to lockdown itself by limited viewing uploaded images for registered users only, I cannot predict that their owners team will easily know that you're still using content blocker, and probably in the worst case senario, they will be disable or terminate your accounts and/or blocking IP address for prevent attempts to revisit their site while you're still activating privacy protection tools, either hosts files, content blockers, custom stylesheet, custom scripts, etc.
+The site owner decided to lockdown itself by limited viewing some tags for registered users only, I cannot predict that their owners team will easily know that you're still using content blocker, and probably in the worst case senario, they will be disable or terminate your accounts and/or blocking IP address for prevent attempts to revisit their site while you're still activating privacy protection tools, either hosts files, content blockers, custom stylesheet, custom scripts, etc.
 
 As for your safe state, try looking to other similar services that not aggressively violate your privacy just for their profits like that site!
 
