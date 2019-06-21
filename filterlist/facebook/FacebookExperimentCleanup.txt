@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 201906091954
+! Version: 201906212133
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -81,6 +81,9 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 
 ! Try to rearrange new top bar that have search bar placeholder overlap, especially when you're viewing stories...
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-stories div[id*="schedulable-graph-search"]:style(display: none !important; position: unset !important)
+
+! Try remove "More Zuckestions" when viewing group discover (This may break everything in group discover page)
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-groups #root div[class] > div div[class] > div[class]:has(div a[href="#"] div[class*="clearfix"])
 
 ! Remove non-same origin meun out of list (affect Pages Menu [your pages, liked, zuckested], Gaming, Explore, Fundarise, Instant Games)
 ! - New Bookmarks (visit https://touch.facebook.com/bookmarks)

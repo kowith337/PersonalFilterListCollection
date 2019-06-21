@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201906171949
+! Version: 201906212131
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -384,6 +384,9 @@ facebook.com##iframe[id^="fbsbx-sig-iframe-"]
 facebook.com###ads_preferences_desktop_root div[tabindex][role="button"] button[data-hover][data-tooltip-content="Add"]:has(span:has-text(Add))
 facebook.com###contentArea div[class] div[id][class]:has(a[href*="/login/?"])
 facebook.com###content[role="main"] .clearfix div[data-referrer] > div .stat_elem:has(button.PageLikeButton i[class*="sx_"])
+facebook.com###content[role="main"] div .clearfix div[class] > div[class] > :has(a[href^="/groups_browse/see_all/?"][href*="212609529249058"])
+facebook.com###content[role="main"] div .clearfix div[class] > div[class] > :has(a[href^="/groups_browse/see_all/?"][href*="234383826903707"])
+facebook.com###content[role="main"] div .clearfix div[class] > div[class] > :has(div[role="heading"] span:has-text(/More Suggestions/))
 facebook.com###content[role=main] > div .clearfix .stat_elem:has(div a[class^="_fbPageBrowserSubscriptionCardItem"])
 facebook.com###content_container div > div[id^="u_fetchstream"] div :has(div[id^="u_fetchstream"] .uiTypeahead div input[aria-controls^="typeahead_list_u_fetchstream"][aria-label^="Invite"])
 facebook.com###event_tabs #event_guest_list div[class] div[class] ul[class]:has(div span:has-text(Suggested Friends))
@@ -472,9 +475,11 @@ facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport #root div:has(h3):has(span a[href^="/dd/greeting/mbasic/more/tapped"])
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport #root div[data-ft]:has(h3:has-text(Facebook)):has(a[href^="/netego/redirect/"])
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport #root table td div div:has(a[href^="/lite/?loc_ref=menu"])
-0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div > div:has(a[href^="/download.php"])
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div > :has(table[role="presentation"]:has(td a[href^="/qp/action/redirect/?"]))
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div > div:has(a[href^="/download.php"])
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div[class] > table:has(td a[href^="/a/language.php?"][href*="ref_component=mbasic_footer"])
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-groups #root div[class] > div div[class] > div[class]:has(div[class] a[href^="/groups_browse/see_all/?"][href*="212609529249058"])
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-groups #root div[class] > div div[class] > div[class]:has(div[class] a[href^="/groups_browse/see_all/?"][href*="234383826903707"])
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-ft] > div > div:has(span a[href*="/boosted_post/"])
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-ft] div:has(table a[href*="mbasic_feed_post_like_chaining"])
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-ft] div:has(table a[href*="mbasic_feed_share_like_chaining"])
