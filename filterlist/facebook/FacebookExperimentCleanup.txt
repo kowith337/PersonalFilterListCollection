@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 201906222110
+! Version: 201906222120
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -42,24 +42,24 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 ! Finally, weird space between comments also come to this version, freaking cool!!
 ! Note: I have no idea about breakage effect if I put those rules below into FZK, just put into here for testing is good for now.
 !       Moreover, currently it will affect some type of permalink view only, e.g. text-only posts, photos and external URLs.
-0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###MPhotoContent div[id^="ufi_"] div[class] > div[class][id] div div[id^="u_0"]:has(h3):has(div[class] div[class])
-0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_story_permalink_view div[id^="ufi_"] div[class] > div[class][id] div div[id^="u_0"]:has(h3):has(div[class] div[class])
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###MPhotoContent div[id^="ufi_"] div[class] > div[class][id] div div[id^="u_0"]:has(h3):has(div[class] div[class])
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###m_story_permalink_view div[id^="ufi_"] div[class] > div[class][id] div div[id^="u_0"]:has(h3):has(div[class] div[class])
 
 ! Remove event discover (also affect threaded discover)
-0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###events_card_list div[class] > :has(a span:has-text(/^Discover/))
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###events_card_list div[class] > :has(a span:has-text(/^Discover/))
 
 ! [Facebook Touch]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Facebook want you to see friends stories again before they're gone, by re-injecting stories tiles into feed streams.
 ! This will remove any stories panel that randomly injected later between feed posts and keep only the legitmate one on the top!
-0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##section article:has(div[id^="TRAY"] div[data-testid="story_tray"])
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##section article:has(div[id^="TRAY"] div[data-testid="story_tray"])
 
 ! Try to remove "Paid partnership" posts where the sponsored pages hiring some other pages (mostly viral) to post or announcing.
 ! This may break other posts that show (i) indicator, such as external links.
-0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##section.storyStream article[data-xt][data-xt-vimp]:has(a[data-sigil=" flyout-causal"])
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##section.storyStream article[data-xt][data-xt-vimp]:has(a[data-sigil=" flyout-causal"])
 
 ! Remove hyperlink of "Discover" appear when you access group lists, ensure to focus your groups that you've joined and/or
 ! managing only and forgot to find a new one...
-0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-groups #root div[class] > div div[class] > a[class][href="/groups_browse/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-groups #root div[class] > div div[class] > a[class][href="/groups_browse/"]
 
 ! Remove "Big Like" button in message chat, the button will auto change to "Send" once you've start focusing to text box, but it
 ! will change to "Like" button once the text box lost focus, I remove it to prevent sending "Big Like" by mistake!
@@ -83,7 +83,7 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-stories div[id*="schedulable-graph-search"]:style(display: none !important; position: unset !important)
 
 ! Try remove "More Zuckestions" when viewing group discover (This may break everything in group discover page)
-0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-groups #root div[class] > div div[class] > div[class]:has(div a[href="#"] div[class*="clearfix"])
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-groups #root div[class] > div div[class] > div[class]:has(div a[href="#"] div[class*="clearfix"])
 
 ! Remove non-same origin meun out of list (affect Pages Menu [your pages, liked, zuckested], Gaming, Explore, Fundarise, Instant Games)
 ! - New Bookmarks (visit https://touch.facebook.com/bookmarks)
