@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 201906221225
+! Version: 201906222016
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -35,9 +35,13 @@ m.intl.taobao.com##.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,
 
 
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! [Requirement for this section] @uBlock-user's scriptlets: https://github.com/uBlock-user/uBO-Scriptlets
+! [Legacy internal scriptlets]
+! Use only internal scriptlets provided by uBO for this section
+f8.com,facebook.com,fb.me,fbcdn.net,freebasics.com,instagram.com,internet.org,m.me,messenger.com,whatsapp.com##script:inject(fingerprint2.js)
+
+! [External scriptlets]
+! Requirement for this section: @uBlock-user's scriptlets: https://github.com/uBlock-user/uBO-Scriptlets
 ! Raw: https://raw.githubusercontent.com/uBlock-user/uBO-Scriptlets/master/scriptlets.txt
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(fingerprint2.js)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, __tn__)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, __xts__[0])
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, __xts__\[0\])
