@@ -1,15 +1,15 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 201906212133
+! Version: 201906222110
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/facebook/FacebookExperimentCleanup.txt
 ! Note : I don't recommend to subscribe this list due to it's may break or hide some useful functions, but honestly,
 !        some functionality seems to be useless for me, not like it or even hate it!
-
-! [DOM Sectiom] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! [Facebook Desktop]
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [DOM Sectiom] --------------------------------------------------------------------------------------------------------------- !
+! [Facebook Desktop]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove "Top Picks" product from marketplace lists, only work for english UI users only (UK, US, Pirate)
 facebook.com##div[data-testid="marketplace_home_feed"] div[class] > div[class]:has(span[itemcomponent]:has-text(/^Top picks/))
 
@@ -38,7 +38,7 @@ facebook.com##.userContentWrapper div[data-ft] .mtm a[ajaxify^="/games/quicksilv
 ! Top zuckested pages to like (or batch remove via scriptlets) is survived again, expected ads code also survived as well.
 facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[data-referrer] .stat_elem:has(div[class].likeButton span button.PageLikeButton)
 
-! [Facebook Feature Phone Basic]
+! [Facebook Feature Phone Basic]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 ! Finally, weird space between comments also come to this version, freaking cool!!
 ! Note: I have no idea about breakage effect if I put those rules below into FZK, just put into here for testing is good for now.
 !       Moreover, currently it will affect some type of permalink view only, e.g. text-only posts, photos and external URLs.
@@ -48,7 +48,11 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 ! Remove event discover (also affect threaded discover)
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###events_card_list div[class] > :has(a span:has-text(/^Discover/))
 
-! [Facebook Touch]
+! [Facebook Touch]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Facebook want you to see friends stories again before they're gone, by re-injecting stories tiles into feed streams.
+! This will remove any stories panel that randomly injected later between feed posts and keep only the legitmate one on the top!
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##section article:has(div[id^="TRAY"] div[data-testid="story_tray"])
+
 ! Try to remove "Paid partnership" posts where the sponsored pages hiring some other pages (mostly viral) to post or announcing.
 ! This may break other posts that show (i) indicator, such as external links.
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##section.storyStream article[data-xt][data-xt-vimp]:has(a[data-sigil=" flyout-causal"])
@@ -56,10 +60,6 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 ! Remove hyperlink of "Discover" appear when you access group lists, ensure to focus your groups that you've joined and/or
 ! managing only and forgot to find a new one...
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-groups #root div[class] > div div[class] > a[class][href="/groups_browse/"]
-
-! Facebook want you to see friends stories again before they're gone, by re-injecting stories tiles into feed streams.
-! This will remove any stories panel that randomly injected later between feed posts and keep only the legitmate one on the top!
-0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###MNewsFeed section article:has(div[class] [id^="TRAY"] [data-testid="story_tray"])
 
 ! Remove "Big Like" button in message chat, the button will auto change to "Send" once you've start focusing to text box, but it
 ! will change to "Like" button once the text box lost focus, I remove it to prevent sending "Big Like" by mistake!
@@ -119,7 +119,7 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href="/home.php"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=4748854339"]))
 
-! [Network blocking section]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Network blocking section] -------------------------------------------------------------------------------------------------- !
 ! Prevent modules connections that autoplay GIF comments (May doesn't work at all!)
 ! Noticed that Facebook start to autoplay GIF images in comments when you scroll to it, same behaviour of autoplay videos, maybe.
 ||facebook.com/*?modules=FeedAnimatedImageShare$important
