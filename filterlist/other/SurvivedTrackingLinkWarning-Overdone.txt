@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 201906181942
+! Version: 201906242053
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -64,20 +64,34 @@
 ||facebook.com/ads/*&session_id=$xmlhttprequest
 ||facebook.com/ads/*?session_id=$document,subdocument,important
 ||facebook.com/ads/*?session_id=$xmlhttprequest
-||google.*/imgres?*&ved=*$document,subdocument,important
-||google.*/imgres?*&ved=*$xmlhttprequest
-||google.*/imgres?*&vet=*$document,subdocument,important
-||google.*/imgres?*&vet=*$xmlhttprequest
-||google.*/search?*&ei=*&gs_l=*$document,subdocument,important
-||google.*/search?*&ei=*&gs_l=*$xmlhttprequest
-||google.*/search?*&ei=*&gs_r=*$document,subdocument,important
-||google.*/search?*&ei=*&gs_r=*$xmlhttprequest
-||google.*/search?*&usg=$document,subdocument,important
-||google.*/search?*&usg=$xmlhttprequest
-||google.*/search?*&ved=$document,subdocument,important
-||google.*/search?*&ved=$xmlhttprequest
-||google.*/search?*&vet=$document,subdocument,important
-||google.*/search?*&vet=$xmlhttprequest
+||google.*/*?*&ei=*&gs_l=*$document,subdocument,important
+||google.*/*?*&ei=*&gs_l=*$xmlhttprequest
+||google.*/*?*&ei=*&gs_r=*$document,subdocument,important
+||google.*/*?*&ei=*&gs_r=*$xmlhttprequest
+||google.*/*?*&usg=$document,subdocument,important
+||google.*/*?*&usg=$xmlhttprequest
+||google.*/*?*&ved=$document,subdocument,important
+||google.*/*?*&ved=$xmlhttprequest
+||google.*/*?*&ved=*$document,subdocument,important
+||google.*/*?*&ved=*$xmlhttprequest
+||google.*/*?*&vet=$document,subdocument,important
+||google.*/*?*&vet=$xmlhttprequest
+||google.*/*?*&vet=*$document,subdocument,important
+||google.*/*?*&vet=*$xmlhttprequest
+||google.*/*?ei=*&gs_l=*$document,subdocument,important
+||google.*/*?ei=*&gs_l=*$xmlhttprequest
+||google.*/*?ei=*&gs_r=*$document,subdocument,important
+||google.*/*?ei=*&gs_r=*$xmlhttprequest
+||google.*/*?usg=$document,subdocument,important
+||google.*/*?usg=$xmlhttprequest
+||google.*/*?ved=$document,subdocument,important
+||google.*/*?ved=$xmlhttprequest
+||google.*/*?ved=*$document,subdocument,important
+||google.*/*?ved=*$xmlhttprequest
+||google.*/*?vet=$document,subdocument,important
+||google.*/*?vet=$xmlhttprequest
+||google.*/*?vet=*$document,subdocument,important
+||google.*/*?vet=*$xmlhttprequest
 ||mozilla.com/*&utm_*=*$document,subdocument,xmlhttprequest,important
 ||mozilla.com/*?utm_*=*$document,subdocument,xmlhttprequest,important
 ||mozilla.net/*&utm_*=*$document,subdocument,xmlhttprequest,important
