@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 201906242050
+! Version: 201906252126
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -44,7 +44,7 @@ f8.com,facebook.com,fb.me,fbcdn.net,freebasics.com,instagram.com,internet.org,m.
 ! Raw: https://raw.githubusercontent.com/uBlock-user/uBO-Scriptlets/master/scriptlets.txt
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, __tn__)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, __xts__[0])
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, __xts__\[0\])
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, __xts__%5B0%5D)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, _ft_)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, acontext)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, dti)
@@ -52,6 +52,7 @@ f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(que
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, fbclid)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, fref)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, hc_ref)
+! f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, ref)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, refid)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, session_id)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, settings_tracking)
