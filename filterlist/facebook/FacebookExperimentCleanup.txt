@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 201906222120
+! Version: 201906252255
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -55,7 +55,7 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 
 ! Try to remove "Paid partnership" posts where the sponsored pages hiring some other pages (mostly viral) to post or announcing.
 ! This may break other posts that show (i) indicator, such as external links.
-0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##section.storyStream article[data-xt][data-xt-vimp]:has(a[data-sigil=" flyout-causal"])
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##section.storyStream article[data-xt][data-xt-vimp]:has(a[data-sigil="flyout-causal"])
 
 ! Remove hyperlink of "Discover" appear when you access group lists, ensure to focus your groups that you've joined and/or
 ! managing only and forgot to find a new one...
