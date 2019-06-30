@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Zuckestion Killer
-! Version: 201906212123
+! Version: 201906301224
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -17,7 +17,9 @@
 ||*&fbclid=$document,xmlhttprequest,important
 ||*?fbclid=$document,xmlhttprequest,important
 ||l.facebook.com$document,xmlhttprequest,important
+||l.messenger.com$document,xmlhttprequest,important
 ||lm.facebook.com$document,xmlhttprequest,important
+||lm.messenger.com$document,xmlhttprequest,important
 
 ! Network Blocking
 ! to prevent sending requests to show related contents, determine user action about how users use Facebook, nasty redirect, etc.
