@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 201906301808
+! Version: 201906301814
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -55,9 +55,8 @@ f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(que
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)ref_(component|page)=.+/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)refid=\d+/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)session_id=.+/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(\?|\&)__m_log_async__=\d+/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(\?|\&)__tn__=\w+/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(\?|\&)_ft_=.+/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)__m_log_async__=\d+/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(_ft_|__tn__)=.+/)
 google.com##script:inject(query-stripper.js, /(\?|\&)(aqs|oq)=.+/)
 google.com##script:inject(query-stripper.js, /(\?|\&)(bih|biw|ibh|ibw)=\w+/)
 google.com##script:inject(query-stripper.js, /(\?|\&)(sa|usg|ved|vet)=\w+/)
