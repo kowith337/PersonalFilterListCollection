@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 201906301408
+! Version: 201906301651
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -49,7 +49,7 @@ aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&
 aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(scm|spm)=.+[^(?<=\?|\&)id=]+/)
 aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(\?|\&)(go|main)_item(_id|id)=\w+/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(__tn__|dti|eid|ref|settings_tracking)=\w+/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(acontext|fbclid)=.+/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(acontext|bacr|fbclid)=.+/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(a|f|hc_|pn|pn_)ref=\w+/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(ref|session_)id=\w+/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)__xts__\[\d\]=\w+/)
