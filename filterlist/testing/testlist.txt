@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 201907010001
+! Version: 201907021317
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -50,19 +50,21 @@ aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&
 aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(\?|\&)(go|main)_item(_id|id)=\w+/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(_ft_|__tn__)=.+/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(acontext|bacr|fbclid)=.+/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(a|f|hc_|pn|pn_)ref=\w+/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(dti|eid|ref|settings_tracking)=\w+/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)__m_log_async__=\d+/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(a|f|hc_|pn_)ref=\w+/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(dti|eid|ref|settings_tracking|source)=\w+/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(ref|sw_fnr_)id=\d+/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)__m_(async_page|log_async)__=\d+/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)__xts__(\[\d\]|\%5B\d\%5D)=.+/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)ref_(component|page)=.+/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)refid=\d+/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)_rdc=\d+/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)ref_(component|page|source)=.+/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)session_id=.+/)
-google.com##script:inject(query-stripper.js, /(?<=\?|\&)(aqs|oq|sa|usg|ved|vet)=.+/)
+google.com##script:inject(query-stripper.js, /(?<=\?|\&)(aqs|oq|usg|ved|vet)=.+/)
 google.com##script:inject(query-stripper.js, /(?<=\?|\&)gs_(l|r)=.+/)
+google.com##script:inject(query-stripper.js, /(?<=\?|\&)sa=\w/)
 google.com##script:inject(query-stripper.js, /(\?|\&)(bih|biw|ibh|ibw)=\d+/)
 google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(\?|\&)utm=\w+/)
 google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(\?|\&)utm_(campaign|medium|source)=\w+/)
 twitter.com,t.co##script:inject(query-stripper.js, /(\?|\&)amp=\d/)
 youtube.com##script:inject(query-stripper.js, /(\?|\&)redir_token=\w+/)
-
+	
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
