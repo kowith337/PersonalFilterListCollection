@@ -1,6 +1,6 @@
-[uBlock Origin 1.17.5.7]
+[uBlock Origin 1.20.0]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201906212131
+! Version: 201907021809
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -27,9 +27,9 @@
 ! to prevent sending requests to show related contents, determine user action about how users use Facebook, nasty redirect, etc.
 /PagesTimelineChainingPagelet$important,domain=facebook.com
 /qp/action/redirect$important,domain=facebook.com
-||facebook.com/*/promotion_trigger_info/$important,~document
+||facebook.com/*/promotion_trigger_info/$all,important,~document
 ||facebook.com/adnw_logging/$important
-||facebook.com/ads/$~document
+||facebook.com/ads/$all,~document
 ||facebook.com/ads/ad_choices$important
 ||facebook.com/ads/growth$important
 ||facebook.com/ads/manager/ajax/check_tip_qe$important
@@ -59,7 +59,7 @@
 ||facebook.com/ajax/photos/logging$important
 ||facebook.com/ajax/react_composer/survey?$important
 ||facebook.com/ajax/typeahead/record_basic_metrics.php$important
-||facebook.com/ascend_mr_no$important,~document
+||facebook.com/ascend_mr_no$all,important,~document
 ||facebook.com/async/social_good/$xmlhttprequest
 ||facebook.com/audience_network/$important
 ||facebook.com/common/referer_frame.php$important
@@ -74,9 +74,9 @@
 ||facebook.com/feed/pivot/chaining$important
 ||facebook.com/feed/pivot/related_articles$important
 ||facebook.com/feedtracking/$important
-||facebook.com/friends/center/suggestions$important,~document,~xmlhttprequest
+||facebook.com/friends/center/suggestions$all,important,~document,~xmlhttprequest
 ||facebook.com/friends/center/suggestions$xmlhttprequest
-||facebook.com/goodwill/$important,~document
+||facebook.com/goodwill/$all,important,~document
 ||facebook.com/groups/*suggested*$important,~xmlhttprequest
 ||facebook.com/groups/*suggested*$xmlhttprequest
 ||facebook.com/groups/membersuggestion$important,~xmlhttprequest
@@ -104,7 +104,7 @@
 ||facebook.com/requests/interaction_history_logging$important
 ||facebook.com/sem_campaigns$important
 ||facebook.com/sem_pixel$important
-||facebook.com/sketch_results$important,~document
+||facebook.com/sketch_results$all,important,~document
 ||facebook.com/suggestions$important
 ||facebook.com/tr?$important
 ||facebook.com/typeahead/search/facebar/nullstate/?$important
@@ -631,6 +631,16 @@ facebook.com##script:inject(cookie-remover.js, x-referer)
 ! You can test in 'https://m.facebook.com/diagnostics' and then see the "DATR" value, it should be blank once you've connected to
 ! private network, such as Ethernet / LAN / Wi-Fi to prevent "Free Basics" menu keep injecting in bookmarks menu
 facebook.com##script:inject(cookie-remover.js, datr)
+!#endif
+
+! Backup area for backward compatibility (Only XUL Firefox + uBO Legacy), newer version (aka. Quantum) will be read as invalid!
+!#if env_firefox
+||facebook.com/*/promotion_trigger_info/$important,~document
+||facebook.com/ads/$~document
+||facebook.com/ascend_mr_no$all,important,~document
+||facebook.com/friends/center/suggestions$important,~document,~xmlhttprequest
+||facebook.com/goodwill/$important,~document
+||facebook.com/sketch_results$important,~document
 !#endif
 
 ! This help for opt out zuckestions, you can convert scriptlets below as bookmarklet.

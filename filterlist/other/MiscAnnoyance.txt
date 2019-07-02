@@ -1,6 +1,6 @@
-[uBlock Origin 1.19.3.7]
+[uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 201906181808
+! Version: 201907021808
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -231,5 +231,11 @@ github.com##.unsupported-browser
 ! [DeviantArt Mobile] Trim ads placeholder and focus only download button
 !#if env_mobile
 deviantart.com###download .mobile-ad .container .download:style(margin-left: 0px !important; left: 0px !important; width: 100% !important; height: 25px !important)
+!#endif
+
+! [Backup since uBO 1.20 doesn't support standalone use of `~document` exception]
+!#if env_firefox
+||redditmedia.com/gtm^$important,~document
+||redditstatic.com/gtm^$important,~document
 !#endif
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
