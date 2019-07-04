@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201906181854
+# Version: 201907042110
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -190,6 +190,7 @@
 0.0.0.0 perfectmarket.com
 0.0.0.0 petametrics.com
 0.0.0.0 pikdo.net
+0.0.0.0 rgvqcsxqge.com
 0.0.0.0 run-syndicate.com
 0.0.0.0 sharethis.com
 0.0.0.0 silkspan.com
