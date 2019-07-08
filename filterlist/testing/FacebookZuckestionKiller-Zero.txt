@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201907082148
+! Version: 201907082157
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -12,7 +12,7 @@
 !         remove something that really need.
 ! Note 3: Inspired from report on https://github.com/collinbarrett/FilterLists/issues/282
 ! Note 4: This is a test version for allowing some "Facebook Zero" traffics to be bypassed, since my routine use of ISP proxy was
-!         falsely flagged as mobile network (although I'm also legitmately use same proxy from my home connections), so I guess
+!         falsely flagged as mobile network (although I'm also legitimately use same proxy from my home connections), so I guess
 !         it's a good time to testing out how Facebook under Free Basics were work without a need to connect via real mobile
 !         network and data (aka. 2G/Edge/3G/H/H+/4G/LTE), I will remove this later if I'm not satisfy about it!
 
@@ -642,7 +642,7 @@ facebook.com##script:inject(cookie-remover.js, datr)
 !#if env_firefox
 ||facebook.com/*/promotion_trigger_info/$important,~document
 ||facebook.com/ads/$~document
-||facebook.com/ascend_mr_no$all,important,~document
+||facebook.com/ascend_mr_no$important,~document
 ||facebook.com/friends/center/suggestions$important,~document,~xmlhttprequest
 ||facebook.com/goodwill/$important,~document
 ||facebook.com/sketch_results$important,~document
