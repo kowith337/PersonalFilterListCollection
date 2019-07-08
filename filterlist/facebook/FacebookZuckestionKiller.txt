@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Facebook Zuckestion Killer
-! Version: 201907021809
+! Version: 201907082148
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -519,6 +519,7 @@ m.facebook.com,touch.facebook.com###pages_msite_body_contents div[data-store-id]
 m.facebook.com,touch.facebook.com###pages_msite_body_contents div[data-store-id] > div[data-store-id] > div[data-nt] > div[data-nt]:has(.scrollArea):has(.scrollAreaBody[data-ad-preview])
 m.facebook.com,touch.facebook.com###root div > div[data-sigil^="m_login_upsell"]:has(.grouped a[href*="facebook.com/click.php?redir_url"])
 m.facebook.com,touch.facebook.com###root div a.sub[href*="?sk=h_nor"]
+m.facebook.com,touch.facebook.com###root[role="main"] div[class] div[style="text-align: center"]:has(a[data-sigil*="AppGrowthCtaButton"])
 m.facebook.com,touch.facebook.com###root[role="main"] div[style][data-store-id] > div[style^="flex"][data-nt] div[style^="flex"][data-nt] > :has(div[aria-label="Suggested Streamers"])
 m.facebook.com,touch.facebook.com###timelineProfileTiles div > div[data-autoid]:has(a[href*="?v=fun_facts&"])
 m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] > div[class][id^="u_0_"] div[class]:has(div[class][data-sigil^="ad-prefs-survey"])
@@ -584,6 +585,7 @@ m.facebook.com,mbasic.facebook.com###viewport div:not([id]) > table:has(td a[hre
 ! This may modify some element instead of hiding
 ! m.facebook.com,touch.facebook.com###header #MBackNavBar:style(margin-top: 95% !important)
 m.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container header a[href^="/mobile/android/upsell_link/"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
+m.facebook.com,touch.facebook.com###root[role="main"] div[class] a[data-sigil="AppGrowthCtaButton"]:style(pointer-events: none !important)
 m.facebook.com,touch.facebook.com##article #advertiserhidden div[data-sigil="ad-prefs-advertiser-section"] .scrollArea .scrollAreaBody a[data-sigil="ad-prefs-advertiser-preview-link"]:style(pointer-events: none !important)
 m.facebook.com,touch.facebook.com##article .story_body_container div > div a[href^="/mobile/"][href*="/upsell_link/?"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
 m.facebook.com,touch.facebook.com##article div > div[data-autoid] a[data-sigil="redirect_to_advertiser"]:style(color: red !important; text-decoration: none !important; pointer-events: none !important)
@@ -627,6 +629,7 @@ facebook.com##script:inject(cookie-remover.js, datr)
 !#endif
 
 ! Backup area for backward compatibility (Only XUL Firefox + uBO Legacy), newer version (aka. Quantum) will be read as invalid!
+! Also, any rules that have `$all` tag may won't read (treated as invalid) for legacy version, too!
 !#if env_firefox
 ||facebook.com/*/promotion_trigger_info/$important,~document
 ||facebook.com/ads/$~document

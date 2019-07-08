@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201907021809
+! Version: 201907082148
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -21,7 +21,9 @@
 ||*&fbclid=$document,xmlhttprequest,important
 ||*?fbclid=$document,xmlhttprequest,important
 ||l.facebook.com$document,xmlhttprequest,important
+||l.messenger.com$document,xmlhttprequest,important
 ||lm.facebook.com$document,xmlhttprequest,important
+||lm.messenger.com$document,xmlhttprequest,important
 
 ! Network Blocking
 ! to prevent sending requests to show related contents, determine user action about how users use Facebook, nasty redirect, etc.
@@ -528,6 +530,7 @@ facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###pages_msite_body_contents div[data-store-id] > div[data-store-id] > div[data-nt] > div[data-nt]:has(.scrollArea):has(.scrollAreaBody[data-ad-preview])
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div > div[data-sigil^="m_login_upsell"]:has(.grouped a[href*="facebook.com/click.php?redir_url"])
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div a.sub[href*="?sk=h_nor"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root[role="main"] div[class] div[style="text-align: center"]:has(a[data-sigil*="AppGrowthCtaButton"])
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root[role="main"] div[style][data-store-id] > div[style^="flex"][data-nt] div[style^="flex"][data-nt] > :has(div[aria-label="Suggested Streamers"])
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###timelineProfileTiles div > div[data-autoid]:has(a[href*="?v=fun_facts&"])
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] > div[class][id^="u_0_"] div[class]:has(div[class][data-sigil^="ad-prefs-survey"])
@@ -586,6 +589,7 @@ facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div:not(#objects_container) > div:has(table[role] a[href^="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div:not(#objects_container) > table[class] td a[href*="lm.facebook.com/l.php?"][target="_blank"]:has(span)
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div:not([id]) > table[role]:has(td a[href^="/a/language.php?"][href*="ref_component=mbasic_footer"])
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root[role="main"] div[class] a[data-sigil="AppGrowthCtaButton"]:style(pointer-events: none !important)
 
 ! CSS Modification
 ! This may modify some element instead of hiding
@@ -634,6 +638,7 @@ facebook.com##script:inject(cookie-remover.js, datr)
 !#endif
 
 ! Backup area for backward compatibility (Only XUL Firefox + uBO Legacy), newer version (aka. Quantum) will be read as invalid!
+! Also, any rules that have `$all` tag may won't read (treated as invalid) for legacy version, too!
 !#if env_firefox
 ||facebook.com/*/promotion_trigger_info/$important,~document
 ||facebook.com/ads/$~document

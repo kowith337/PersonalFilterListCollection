@@ -1,11 +1,11 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 201907021808
+! Version: 201907082139
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/MiscAnnoyance.txt
-! Note: An uncategorized / out of scope of site or topic to create the stand alone filterlists
+! Note: An uncategorised / out of scope of site or topic to create the stand alone filterlists
 !       will be stay here until the specific site or category are have enough rules.
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -37,6 +37,9 @@ minecraftforge.net##.ad-container-framed
 minecraftforge.net##.promo-container
 minecraftforge.net##div img[src*="imrworldwide.com/cgi-bin/m?"]
 ! minecraftforge.net##.promos-wrapper
+
+! [Pixivision] (Formerly Pixiv Spotlights)
+pixivision.net##._floated-bottom-bar
 
 ! [Reddit Old]
 old.reddit.com##.ProfileVoiceAd
@@ -104,7 +107,7 @@ wallgif.com##content div[id^=block_modal]
 youtube.com##.individual-feed li .branded-page-box:has(.feed-item-dismissable:has(span.shelf-subscription-button button[data-style-type="branded"]))
 
 ! HTML Filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Note: This work only FF quantum + uB0 WebExt
+! Note: This may work only FF quantum + uB0 WebExt
 !#if cap_html_filtering
 minecraftforge.net##^.promo-container
 minecraftforge.net##^.promos-wrapper
@@ -124,7 +127,7 @@ randomnessthing.com##script:contains(Criteo)
 
 ! CSS Modify  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Google] Restore context of search result that was hidden by a things named as "People also search for", the hidden action will
-! be triggered when you've open some result into new tab or window, then return back to Google...
+!          be triggered when you've open some result into new tab or window, then return back to Google search result tab...
 google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname] hr[style^="visibility: hidden"]:style(visibility: visible !important)
 google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][style^="display: none"]:style(display: block !important)
 
@@ -133,14 +136,16 @@ google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][
 !   - Only "Mirror" links can be clickable, the very old versions may unable to click because it have no mirror links.
 chocolateminecraft.com###content table[style*="width:100%"] td a[href*="adf.ly/"]:style(pointer-events: none !important; text-decoration: none !important)
 chocolateminecraft.com###content table[style*="width:100%"] td a[href*="netb.ee/"]:style(pointer-events: none !important; text-decoration: none !important)
+
 ! - Forge: http://files.minecraftforge.net - It use AdFocus for all installer links (except changelog)
 !   - Prevent clicking on all big icon links that appear as latest and/or recommended (because it contains AdFocus hyperlink) and
-!   leave only changelog can be clickable.
+!     leave only changelog can be clickable.
 !   - All download URLs will not have underline an also unable to click, the only way to download is just click the (i) icon beside
-!   "Download" text, that's only the way you can get the direct download for this.
+!     "Download" text, that's only the way you can get the direct download for this.
 minecraftforge.net##.download-list-wrapper .download-files .download-links li a[href*="adfoc.us/"]:style(pointer-events: none !important; text-decoration: none !important)
 minecraftforge.net##.downloads .download .links .link-left:has(a[href*="adfoc.us/"]):style(pointer-events: none !important)
 minecraftforge.net##.downloads .download .links .links-right .link:has(a[href*="adfoc.us/"]):style(pointer-events: none !important)
+
 ! - Optifine: http://optifine.net/downloads - (Use AdFly + CPMStar) Only "Mirror" links can be clickable.
 optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadLine"] a[href*="?f="][href*="&x=ce78"]:style(pointer-events: none !important; text-decoration: none !important)
 optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadLine"] a[href^="http://adf.ly"]:style(pointer-events: none !important; text-decoration: none !important)
@@ -186,12 +191,12 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||google.*/imgevent?$xmlhttprequest,important,redirect=nooptext
 
 ! [GreasyFork] added ping request while installing script (inside the "Install Script" green button) via `data-ping-url` that
-! cause promoted script to be shown and also the site also get user data about it, eliminate this requests and fake sent data
-! with `nooptext` can solve this thing also.
+! cause promoted script to be shown and the site also get user data about it, eliminate this requests and fake sent data with
+! `nooptext` can solve this thing also.
 ||greasyfork.org/scripts/*/install-ping?$xmlhttprequest,important,redirect=nooptext
 
 ! [Reddit]
-! -GoogleTag Frame
+! - GoogleTag Frame
 ||redditmedia.com/gtm^$subdocument,important,redirect=noopframe
 ||redditstatic.com/gtm^$subdocument,important,redirect=noopframe
 ! - Also PNG PIXEL TRACKING!?

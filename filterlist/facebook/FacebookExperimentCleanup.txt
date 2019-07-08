@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 201906252255
+! Version: 201907082139
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -49,13 +49,13 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###events_card_list div[class] > :has(a span:has-text(/^Discover/))
 
 ! [Facebook Touch]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Facebook want you to see friends stories again before they're gone, by re-injecting stories tiles into feed streams.
-! This will remove any stories panel that randomly injected later between feed posts and keep only the legitmate one on the top!
+! Facebook want you to see friends stories again before they're gone, by re-injecting stories tiles into feed streams!
+! This will remove any stories panel that randomly injected later between feed posts and keep only the legitmate one on the top!!
 0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##section article:has(div[id^="TRAY"] div[data-testid="story_tray"])
 
 ! Try to remove "Paid partnership" posts where the sponsored pages hiring some other pages (mostly viral) to post or announcing.
-! This may break other posts that show (i) indicator, such as external links.
-0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##section.storyStream article[data-xt][data-xt-vimp]:has(a[data-sigil="flyout-causal"])
+! This may break other posts that show (i) indicator, such as external links from the commonly known branded pages or sites.
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##section.storyStream article[data-xt][data-xt-vimp]:has(a[data-sigil*="flyout-causal"])
 
 ! Remove hyperlink of "Discover" appear when you access group lists, ensure to focus your groups that you've joined and/or
 ! managing only and forgot to find a new one...
@@ -113,6 +113,10 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 
 ! Remove feed item appear in "On This Day" to watch and/or share auto generated friendship videos. (Work on specific language)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-onthisday #root div > article:has(div[style^="flex-"] div[aria-label*="Friendship"]):has(div[aria-label^="Friendship"])
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-onthisday #root div article:has(div[style^="flex-"] > i[data-sigil="inlineVideo"])
+
+! Re-remove "Fun Facts" appear in any users profile page
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###timelineBody #tlFeed div[class] .scrollArea .scrollAreaBody a[href*="v=fun_facts"]
 
 ! Remove "News Feed" out of menu, I resist to view an algorithm'd news feed!
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href="/home.php"]
