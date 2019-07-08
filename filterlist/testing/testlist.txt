@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 201907072028
+! Version: 201907082103
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -47,7 +47,7 @@ f8.com,facebook.com,fb.me,fbcdn.net,freebasics.com,instagram.com,internet.org,m.
 ! Raw: https://raw.githubusercontent.com/uBlock-user/uBO-Scriptlets/master/scriptlets.txt
 aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(pvid|utparam)=.+[^(?<=\?|\&)id=]+/)
 aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(scm|spm)=.+[^(?<=\?|\&)id=]+/)
-aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(\?|\&)(go|main)_item(_id|id)=\w+/)
+aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(\?|\&)(go|main)_item(_id|id)=\d+/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(_ft_|__tn__)=.+/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(acontext|bacr|fbclid)=.+/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(app_|ref|sw_fnr_)id=\d+/)
@@ -60,6 +60,8 @@ f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(que
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)mt_nav=\d/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)ref_(component|page|source)=.+/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)session_id=.+/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, lst)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, ref)
 google.com##script:inject(query-stripper.js, /(?<=\?|\&)(aqs|oq|usg|ved|vet)=.+/)
 google.com##script:inject(query-stripper.js, /(?<=\?|\&)gs_(l|r)=.+/)
 google.com##script:inject(query-stripper.js, /(?<=\?|\&)sa=\w/)
