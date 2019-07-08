@@ -1,30 +1,28 @@
 ### What type of resource that you're use?
-> e.g. Filterlist, Hosts File, Ruleset (Fill only one type from existing)
+<!--  e.g. Filterlist, Hosts File, Ruleset (Fill only one type from existing) -->
 
 ### Describe the issue
-> Tell me what's happen
+<!-- Tell me what's happen -->
 
 ### Steps to reproduce
 1. 
 2. 
 3. 
 4. 
-...
+<!-- ...
 
 ### Expected behaviour
-> A result that you want it happen...
+<!-- A result that you want it happen... -->
 
 ### Actual behaviour
-> A result that you get instead...
+<!-- A result that you get instead... -->
 
 ### Screenshots
-> If you have some screencap, just upload here or paste from clipboard (PrintScreen, then Ctrl+V)
+<!-- If you have some screencap, just upload here or paste from clipboard (PrintScreen, then Ctrl+V) -->
 
 ### Logs
-> If you tools have ability to store and/or report logs, you can fill in the code text box below. (fill in the blank line between code header/footer marker)
-```
-
-```
+<!-- If you tools have ability to store and/or report logs, you can fill in the code text box below. -->
+<!-- Note for uBlock0, NanoAdblocker or uMatrix users, you can directly copy log table and paste here below for table formatting -->
 
 ### Additional notes
-> Feel free to write, especially to make more clear for resolve your issue.
+<!-- Feel free to write, especially to make more clear for resolve your issue. -->
