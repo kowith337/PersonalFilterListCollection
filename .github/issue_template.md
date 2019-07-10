@@ -9,7 +9,8 @@
 2. 
 3. 
 4. 
-<!-- ...
+...
+<!-- Fill next numbers if you have more steps than that -->
 
 ### Expected behaviour
 <!-- A result that you want it happen... -->
