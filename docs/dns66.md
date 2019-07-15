@@ -33,7 +33,7 @@
 |  |  |  |  |  |
 | **Run by corporate** |  |  |  |  |
 | [CloudFlare + APNIC](https://1.1.1.1) | [:lock_with_ink_pen:](https://cloudflare-dns.com/dns-query)[²](https://mozilla.cloudflare-dns.com/dns-query) | [:bust_in_silhouette: :watch:](https://developers.cloudflare.com/1.1.1.1/commitment-to-privacy/privacy-policy/privacy-policy) | `1.0.0.1` | `1.1.1.1` |
-| [~~Google~~](https://developers.google.com/speed/public-dns/) | [:lock_with_ink_pen:](https://dns.google.com/experimental) | :alarm_clock: | ~~`8.8.4.4`~~ | ~~`8.8.8.8`~~ |
+| [~~Google~~](https://developers.google.com/speed/public-dns/) | [:lock_with_ink_pen:](https://dns.google/dns-query) | [:person_with_pouting_face: :alarm_clock:](https://developers.google.com/speed/public-dns/privacy) | ~~`8.8.4.4`~~ | ~~`8.8.8.8`~~ |
 | [Comodo Secure](https://www.comodo.com/secure-dns) | :twisted_rightwards_arrows: |  | `8.20.247.20` | `8.26.56.26` |
 | [Quad9](https://quad9.net) | [:lock_with_ink_pen:](https://dns9.quad9.net/dns-query) :closed_lock_with_key: :fire: | [:bust_in_silhouette:](https://quad9.net/privacy) | `9.9.9.9` | `149.112.112.9` |
 | [Quad9^2](https://quad9.net/doh-quad9-dns-servers) | [:lock_with_ink_pen:](https://dns.quad9.net/dns-query) :closed_lock_with_key: :fire: | [:bust_in_silhouette:](https://quad9.net/privacy) | `9.9.9.9` | `149.112.112.112` |
@@ -56,7 +56,7 @@
 | [Quad9 HTTP IPv6](https://quad9.net/doh-quad9-dns-servers) | [:lock_with_ink_pen:](https://dns10.quad9.net/dns-query) :six: | [:bust_in_silhouette:](https://quad9.net/privacy) | `2620:fe::10` | `2620:fe::fe:10` |
 | [AdGuard IPv6](https://adguard.com/en/adguard-dns/overview.html) | :closed_lock_with_key: :six: :no_pedestrians: |  | `2a00:5a60::ad1:0ff` | `2a00:5a60::ad2:0ff` |
 | [AdGuard Family IPv6](https://adguard.com/en/adguard-dns/overview.html) | :closed_lock_with_key: :six: :no_pedestrians: :children_crossing: |  | `2a00:5a60::bad1:0ff` | `2a00:5a60::bad2:0ff` |
-| [DNSWarden IPv6](https://github.com/bhanupratapys/dnswarden) | [:lock_with_ink_pen:](https://doh.dnswarden.com/adblock)[²](https://doh.dnswarden.com/uncensored) :closed_lock_with_key: :no_pedestrians: | :negative_squared_cross_mark: | `2a01:4f8:1c1c:75b4::1` | `2a01:4f8:1c1c:5e77::1` |
+| [DNSWarden IPv6](https://github.com/bhanupratapys/dnswarden) | [:lock_with_ink_pen:](https://doh.dnswarden.com/adblock)[²](https://doh.dnswarden.com/uncensored) :closed_lock_with_key: :six: :no_pedestrians: | :negative_squared_cross_mark: | `2a01:4f8:1c1c:75b4::1` | `2a01:4f8:1c1c:5e77::1` |
 | [Yandex IPv6](https://dns.yandex.com) | :six: |  | `2a02:6b8::feed:0ff` | `2a02:6b8:0:1::feed:0ff` |
 | [Yandex Safe IPv6](https://dns.yandex.com) | :six: :fire: |  | `2a02:6b8::feed:bad` | `2a02:6b8:0:1::feed:bad` |
 | [Yandex Family IPv6](https://dns.yandex.com) | :six: :fire: :children_crossing: |  | `2a02:6b8::feed:a11` | `2a02:6b8:0:1::feed:a11` |
