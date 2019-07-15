@@ -22,7 +22,7 @@
 <!-- If you have some screencap, just upload here or paste from clipboard (PrintScreen, then Ctrl+V) -->
 
 ### Logs
-<!-- If you tools have ability to store and/or report logs, you can fill in the code text box below. -->
+<!-- If you tools have ability to store and/or report logs, you can fill in or paste below. -->
 <!-- Note for uBlock0, NanoAdblocker or uMatrix users, you can directly copy log table and paste here below for table formatting -->
 
 ### Additional notes
