@@ -15,6 +15,7 @@
 | [dns.watch IPv6](https://dns.watch) | :closed_lock_with_key: :six: | :negative_squared_cross_mark: | `2001:1608:10:25::1c04:b12f` | `2001:1608:10:25::9249:d69b` |
 | [keweon IPv6](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) [(RootCA)](https://pki.keweon.center) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: |  `2001:19f0:6401:175d::215` | `2a01:4f8:a0:8487::143` |
 | [keweon IPv6](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `2a01:4f8:150:8023::58` | `2a01:4f8:150:8023::62` |
+| [DNSWarden IPv6](https://github.com/bhanupratapys/dnswarden) | [:lock_with_ink_pen:](https://doh.dnswarden.com/adblock)[²](https://doh.dnswarden.com/uncensored) :closed_lock_with_key: :six: :no_pedestrians: | :negative_squared_cross_mark: | `2a01:4f8:1c1c:75b4::1` | `2a01:4f8:1c1c:5e77::1` |
 | [OpenNIC](https://www.opennic.org) |  |  | [View Tier 1](https://servers.opennic.org/?tier=1) | [View Tier 2](https://servers.opennic.org/?tier=2) |
 |  |  |  |  |  |
 | **Regional** |  |  |  |  |
@@ -56,7 +57,6 @@
 | [Quad9 HTTP IPv6](https://quad9.net/doh-quad9-dns-servers) | [:lock_with_ink_pen:](https://dns10.quad9.net/dns-query) :six: | [:bust_in_silhouette:](https://quad9.net/privacy) | `2620:fe::10` | `2620:fe::fe:10` |
 | [AdGuard IPv6](https://adguard.com/en/adguard-dns/overview.html) | :closed_lock_with_key: :six: :no_pedestrians: |  | `2a00:5a60::ad1:0ff` | `2a00:5a60::ad2:0ff` |
 | [AdGuard Family IPv6](https://adguard.com/en/adguard-dns/overview.html) | :closed_lock_with_key: :six: :no_pedestrians: :children_crossing: |  | `2a00:5a60::bad1:0ff` | `2a00:5a60::bad2:0ff` |
-| [DNSWarden IPv6](https://github.com/bhanupratapys/dnswarden) | [:lock_with_ink_pen:](https://doh.dnswarden.com/adblock)[²](https://doh.dnswarden.com/uncensored) :closed_lock_with_key: :six: :no_pedestrians: | :negative_squared_cross_mark: | `2a01:4f8:1c1c:75b4::1` | `2a01:4f8:1c1c:5e77::1` |
 | [Yandex IPv6](https://dns.yandex.com) | :six: |  | `2a02:6b8::feed:0ff` | `2a02:6b8:0:1::feed:0ff` |
 | [Yandex Safe IPv6](https://dns.yandex.com) | :six: :fire: |  | `2a02:6b8::feed:bad` | `2a02:6b8:0:1::feed:bad` |
 | [Yandex Family IPv6](https://dns.yandex.com) | :six: :fire: :children_crossing: |  | `2a02:6b8::feed:a11` | `2a02:6b8:0:1::feed:a11` |
