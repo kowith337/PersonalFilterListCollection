@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 201907082144
+! Version: 201907220022
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -88,10 +88,8 @@
 ||facebook.com/ads/*&session_id=$xmlhttprequest
 ||facebook.com/ads/*?session_id=$document,subdocument,important
 ||facebook.com/ads/*?session_id=$xmlhttprequest
-||google.*/*?*&ei=*&gs_l=*$document,subdocument,important
-||google.*/*?*&ei=*&gs_l=*$xmlhttprequest
-||google.*/*?*&ei=*&gs_r=*$document,subdocument,important
-||google.*/*?*&ei=*&gs_r=*$xmlhttprequest
+||google.*/*?*&ei=*$document,subdocument,important
+||google.*/*?*&ei=*$xmlhttprequest
 ||google.*/*?*&usg=$document,subdocument,important
 ||google.*/*?*&usg=$xmlhttprequest
 ||google.*/*?*&ved=$document,subdocument,important
@@ -102,10 +100,8 @@
 ||google.*/*?*&vet=$xmlhttprequest
 ||google.*/*?*&vet=*$document,subdocument,important
 ||google.*/*?*&vet=*$xmlhttprequest
-||google.*/*?ei=*&gs_l=*$document,subdocument,important
-||google.*/*?ei=*&gs_l=*$xmlhttprequest
-||google.*/*?ei=*&gs_r=*$document,subdocument,important
-||google.*/*?ei=*&gs_r=*$xmlhttprequest
+||google.*/*?ei=*$document,subdocument,important
+||google.*/*?ei=*$xmlhttprequest
 ||google.*/*?usg=$document,subdocument,important
 ||google.*/*?usg=$xmlhttprequest
 ||google.*/*?ved=$document,subdocument,important
