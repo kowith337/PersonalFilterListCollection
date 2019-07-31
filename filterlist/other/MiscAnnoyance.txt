@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 201907220021
+! Version: 201907311204
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -124,7 +124,7 @@ m.intl.taobao.com,m.taobao.com##^script:has-text(getFB_GOOLE_trackJs)
 m.intl.taobao.com,m.taobao.com##script:contains(getFB_GOOLE_trackJs)
 minecraftforge.net##script:contains(window.factorem)
 randomnessthing.com##script:contains(Criteo)
-!endif
+!#endif
 
 ! CSS Modify  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Google] Restore context of search result that was hidden by a things named as "People also search for", the hidden action will
