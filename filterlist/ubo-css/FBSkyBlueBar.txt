@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
-! Title: Facebook SkyBlue Redesign
-! Version: 201903132029
+! Title: Facebook Topbar SkyBlue Redesign (Touch Only)
+! Version: 201908032014
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css

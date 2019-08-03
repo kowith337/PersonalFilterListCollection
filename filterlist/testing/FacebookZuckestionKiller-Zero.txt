@@ -1,17 +1,18 @@
 [uBlock Origin 1.20.0]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201907082300
+! Version: 201908032033
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/testing/FacebookZuckestionKiller-Zero.txt
-! Note  : These rules below are pulled from "Thai Paranoid Block" that have some rules that I've created for hide and remove
-!         zuckestions, ads, related contents, also remove ability to link back to related application from Facebook, such as
-!         Instagram, MESSenger, even Facebook Lite.
-! Note 2: Some rules below are too long due to use an xpath, or multiple procedural chaining to make sure it won't accidentally
+! Description: These rules below are pulled from "Thai Paranoid Block" that have some rules that I've created for hide and remove
+!              zuckestions, ads, related contents, also remove ability to link back to related application from Facebook, such as
+!              Instagram, MESSenger, even Facebook Lite.
+!
+! Note 1: Some rules below are too long due to use an xpath, or multiple procedural chaining to make sure it won't accidentally
 !         remove something that really need.
-! Note 3: Inspired from report on https://github.com/collinbarrett/FilterLists/issues/282
-! Note 4: This is a test version for allowing some "Facebook Zero" traffics to be bypassed, since my routine use of ISP proxy was
+! Note 2: Inspired from report on https://github.com/collinbarrett/FilterLists/issues/282
+! Note 3: This is a test version for allowing some "Facebook Zero" traffics to be bypassed, since my routine use of ISP proxy was
 !         falsely flagged as mobile network (although I'm also legitimately use same proxy from my home connections), so I guess
 !         it's a good time to testing out how Facebook under Free Basics were work without a need to connect via real mobile
 !         network and data (aka. 2G/Edge/3G/H/H+/4G/LTE), I will remove this later if I'm not satisfy about it!
@@ -287,6 +288,7 @@ facebook.com###pagelet_explore_feed div[role="article"] .fbUserStory span.uiLike
 facebook.com###pagelet_games_rhc
 facebook.com###pagelet_group_mall div[id^="group_mall"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
 facebook.com###pagelet_main_column_personal #fbSuggestionsPlaceHolder
+facebook.com###pagelet_page_above_header div[id^="megaphone_story"]
 facebook.com###pagesTimelineChainingUnit
 facebook.com###pages_may_like_section
 facebook.com###pages_side_column div > div[id^="PageRelatedPagesSecondaryPagelet"]

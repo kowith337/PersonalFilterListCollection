@@ -1,16 +1,16 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 201907082144
+! Version: 201908032033
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/SurvivedTrackingLinkWarning.txt
-! Note: I recreate this filterlist based on specific sites that I generally using, by borrow ability of strict blocking inside
-!       uBlock0/Nano to warn the sites that you want to go out to the real destination (or source of result) was get re-routing
-!       to go the tracked URLs instead, the internal strict blocking will prevent the navigation to be happen and you can get the
-!       real URL under the yellow triangle warning sign.
-!       However, some URLs will have multiple parameters than the legitimate one (e.g. YouTube), you may need to recombine or
-!       manually select some part of URL text that not wrapped by other things unnecessary.
+! Description: I recreate this filterlist based on specific sites that I generally using, by borrow ability of strict blocking
+!              inside uBlock0/Nano to warn the sites that you want to go out to the real destination (or source of result) was
+!              get re-routing to go the tracked URLs instead, the internal strict blocking will prevent the navigation to be
+!              happen and you can get the real URL under the yellow triangle warning sign.
+!              However, some URLs will have multiple parameters than the legitimate one (e.g. YouTube), you may need to recombine
+!              or manually select some part of URL text that not wrapped by other things unnecessary.
 
 ! Prevent AMP on Twitter
 ! Based on https://old.reddit.com/r/uBlockOrigin/comments/a650rk/how_can_i_block_google_amp_links/ebsye7c
@@ -84,6 +84,10 @@
 ||mozilla.org/*?utm_*=*$document,important
 ||reddit.com/*&utm_*=*$document,important
 ||reddit.com/*?utm_*=*$document,important
+||steamcommunity.com/*&snr=*$document,important
+||steamcommunity.com/*?snr=*$document,important
+||steampowered.com/*&snr=*$document,important
+||steampowered.com/*?snr=*$document,important
 
 ! Problematic, at your own risk!
 ||pantip.com/l/http*$document,important

@@ -1,18 +1,18 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 201907220022
+! Version: 201908032033
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/SurvivedTrackingLinkWarning-Overdone.txt
-! Note: I recreate this filterlist based on specific sites that I generally using, by borrow ability of strict blocking inside
-!       uBlock0/Nano to warn the sites that you want to go out to the real destination (or source of result) was get re-routing
-!       to go the tracked URLs instead, the internal strict blocking will prevent the navigation to be happen and you can get the
-!       real URL under the yellow triangle warning sign.
-!       However, some URLs will have multiple parameters than the legitimate one (e.g. YouTube), you may need to recombine or
-!       manually select some part of URL text that not wrapped by other things unnecessary.
-! Note 2: "Overdone" edition is also apply the "current tab" and "AJAX" that contains the tracked parameters, this probably make
-!         the issue about seamless navigating that use "XMLHttpRequest" to be stuck! so use at your own risk!!
+! Description: I recreate this filterlist based on specific sites that I generally using, by borrow ability of strict blocking
+!              inside uBlock0/Nano to warn the sites that you want to go out to the real destination (or source of result) was
+!              get re-routing to go the tracked URLs instead, the internal strict blocking will prevent the navigation to be
+!              happen and you can get the real URL under the yellow triangle warning sign.
+!              However, some URLs will have multiple parameters than the legitimate one (e.g. YouTube), you may need to recombine
+!              or manually select some part of URL text that not wrapped by other things unnecessary.
+! Note: "Overdone" edition is also apply the "current tab" and "AJAX" that contains the tracked parameters, this probably make
+!       the issue about seamless navigating that use "XMLHttpRequest" to be stuck! so use at your own risk!!
 
 ! Prevent AMP on Twitter
 ! Based on https://old.reddit.com/r/uBlockOrigin/comments/a650rk/how_can_i_block_google_amp_links/ebsye7c
@@ -164,6 +164,10 @@
 ||mozilla.org/*?utm_*=*$document,subdocument,xmlhttprequest,important
 ||reddit.com/*&utm_*=*$document,subdocument,xmlhttprequest,important
 ||reddit.com/*?utm_*=*$document,subdocument,xmlhttprequest,important
+||steamcommunity.com/*&snr=*$document,subdocument,xmlhttprequest,important
+||steamcommunity.com/*?snr=*$document,subdocument,xmlhttprequest,important
+||steampowered.com/*&snr=*$document,subdocument,xmlhttprequest,important
+||steampowered.com/*?snr=*$document,subdocument,xmlhttprequest,important
 
 ! Problematic, at your own risk!
 ||pantip.com/l/http*$document,subdocument,xmlhttprequest,important

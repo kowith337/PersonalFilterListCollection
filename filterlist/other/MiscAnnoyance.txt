@@ -1,12 +1,12 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 201907311204
+! Version: 201908032046
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/MiscAnnoyance.txt
-! Note: An uncategorised / out of scope of site or topic to create the stand alone filterlists
-!       will be stay here until the specific site or category are have enough rules.
+! Description: An uncategorised / out of scope of site or topic to create the stand alone filterlists will be stay here until
+!              the specific site or category are have enough rules.
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [GitHub]
@@ -38,6 +38,9 @@ minecraftforge.net##.ad-container-framed
 minecraftforge.net##.promo-container
 minecraftforge.net##div img[src*="imrworldwide.com/cgi-bin/m?"]
 ! minecraftforge.net##.promos-wrapper
+
+! [Pixiv]
+pixiv.net###header ._description-signup-header
 
 ! [Pixivision] (Formerly Pixiv Spotlights)
 pixivision.net##._floated-bottom-bar
@@ -84,6 +87,16 @@ github.com##.js-notice:has(.js-dismiss)
 files.minecraftforge.net##.sidebar-right:has(.ad-container)
 files.minecraftforge.net##.sidebar-right:has(.ad-container-framed)
 
+! [Pantip NEW] (as of 2019/08 site redesign)
+! - Disable user top pick and trending topics due to it's never load for my side, plus take more space unneccessay. (yet)
+pantip.com##.pt-body .container .row:has(.pt-block .tooltipTagsOnTop)
+! - Also disable BlogGang and PantipMarket, same reason as above.
+pantip.com###sidebar-container #sidebar-fixed .pt-block:has(a[title="Bloggang"])
+pantip.com###sidebar-container #sidebar-fixed .pt-block:has(a[title="Pantip Market"])
+
+! [Pixiv]
+pixiv.net##.search-nav-config .button:has(a.premium-link)
+
 ! [Randomness Thing]
 randomnessthing.com##.textwidget:has(img[src*="no-adblock-wordpress-plugin"])
 
@@ -99,6 +112,11 @@ m.intl.taobao.com##.App .recommend .recommend-list-wrapper:nth-of-type(2)
 twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(a[role="link"][data-focusable][href^="/i/"])
 twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(div[role="button"][data-focusable][data-testid="UserCell"] a[aria-hidden][tabindex][href]):has(a[role="link"][data-focusable] div[dir="auto"] span[dir="auto"])
 twitter.com##div[data-reactroot] div[class] > div[data-focusable][tabindex][class] div[class]:has(div[class] > div[class][style] img[alt][src^="https://ton.twimg.com/twitter_shared_public/responsive-web"])
+twitter.com##div[role="menu"] div[class] > a[href*="ads.twitter.com"]
+twitter.com##div[role="menu"] div[class] > a[href*="analytics.twitter.com"]
+twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(a[href^="/i/related_users"])
+twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/))
+twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell"] [data-testid*="follow"])
 
 ! [WallGif] Disable AdBlock...? HOW ABOUT NO!!
 wallgif.com###overlay:has(img[alt="Loader"])
@@ -132,6 +150,9 @@ randomnessthing.com##script:contains(Criteo)
 google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname] hr[style^="visibility: hidden"]:style(visibility: visible !important)
 google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][style^="display: none"]:style(display: block !important)
 
+! [GreasyFork] in case if they rewrite CSS style, this will minimize the element at first place.
+greasyfork.org###install-area .post-install:style(width: 0px !important; height: 0px !important; pointer-events: none !important; display: none !important)
+
 ! [Minecraft] to prevent clicking the paid links hyperlink, e.g. AdFly, AdFocus, NetBee (by accident or intent)
 ! - ChocolateMinecraft: http://chocolateminecraft.com (Use both AdFly and NetBee {Older version of mods})
 !   - Only "Mirror" links can be clickable, the very old versions may unable to click because it have no mirror links.
@@ -150,9 +171,6 @@ minecraftforge.net##.downloads .download .links .links-right .link:has(a[href*="
 ! - Optifine: http://optifine.net/downloads - (Use AdFly + CPMStar) Only "Mirror" links can be clickable.
 optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadLine"] a[href*="?f="][href*="&x=ce78"]:style(pointer-events: none !important; text-decoration: none !important)
 optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadLine"] a[href^="http://adf.ly"]:style(pointer-events: none !important; text-decoration: none !important)
-
-! [GreasyFork] in case if they rewrite CSS style, this will minimize the element at first place.
-greasyfork.org###install-area .post-install:style(width: 0px !important; height: 0px !important; pointer-events: none !important; display: none !important)
 
 ! [Taobao Mobile] Hide promotional frame appear at bottom (directly point to DOM doesn't help because it's use "display: block")
 m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none !important)
