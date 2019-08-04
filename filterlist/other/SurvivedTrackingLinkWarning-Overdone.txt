@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 201908032033
+! Version: 201908041940
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -20,9 +20,15 @@
 
 ! Common Extrenal
 ||*&fbclid$document,subdocument,xmlhttprequest,important
-||*?fbclid$document,subdocument,xmlhttprequest,important
 ||*&gclid$document,subdocument,xmlhttprequest,important
+||*&utm_campaign$document,subdocument,xmlhttprequest,important
+||*&utm_medium$document,subdocument,xmlhttprequest,important
+||*&utm_source$document,subdocument,xmlhttprequest,important
+||*?fbclid$document,subdocument,xmlhttprequest,important
 ||*?gclid$document,subdocument,xmlhttprequest,important
+||*?utm_campaign$document,subdocument,xmlhttprequest,important
+||*?utm_medium$document,subdocument,xmlhttprequest,important
+||*?utm_source$document,subdocument,xmlhttprequest,important
 ||google.*/url?*&usg=*$document,subdocument,important
 ||google.*/url?*&ved=*$document,subdocument,important
 ||google.*/url?*&vet=*$document,subdocument,important
@@ -30,10 +36,10 @@
 ||l.messenger.com$document,subdocument,xmlhttprequest,important
 ||lm.facebook.com$document,subdocument,xmlhttprequest,important
 ||lm.messenger.com$document,subdocument,xmlhttprequest,important
-||youtube.com/redirect?redir_token=*$document,subdocument,important
-||youtube.com/redirect?redir_token=*$xmlhttprequest
 ||youtube.com/redirect?*&redir_token=*$document,subdocument,important
 ||youtube.com/redirect?*&redir_token=*$xmlhttprequest
+||youtube.com/redirect?redir_token=*$document,subdocument,important
+||youtube.com/redirect?redir_token=*$xmlhttprequest
 
 ! Internal
 ||facebook.com/*&__tn__=$document,subdocument,important
