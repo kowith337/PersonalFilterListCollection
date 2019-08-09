@@ -1,6 +1,6 @@
 # [uMatrix 1.3.15.100]
 # Title: Facebook Zero Hosts Block (dead-hosts verified version)
-# Version: 201907022048
+# Version: 201907081809
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/hosts
@@ -9,29 +9,34 @@
 # Credits: https://github.com/anudeepND/blacklist/raw/master/facebook.txt
 #          https://github.com/random-robbie/bugbounty-scans/raw/master/facebook.com/urls.txt
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# Note: This aim to block non-formal hosts that serve all Facebook contents and resources from alternative "Free Basics" servers
-#       that it happen when you're using on mobile data over the carrier that collaborate with Facebook to have THAT service!
-#       Currently, all of big 3 carriers in my country are give up to Facebook to let it invade and interrupt usage experience.
-#       I'm against to this services because it's show various of annoyance that likely Facebook trying to force me and all of
-#       users to use THAT service, include showing balloon party cover, inject purple bar above, or even prevent any videos to
-#       play on mobile data, even many users in my country are use the unlimited data (but limited speed) plan!
-#       Also...
-#           MOST ANNOYING THAT IT REDIRECT TO "h.facebook.com" WITH "NON-HTTPS" CONNECTIONS! THIS POSSIBLY TO OPEN THE GATE FOR
-#                                 MOBILE DATA PROVIDER AND FACEBOOK ITSELF TO KNOW THAT USERS USE OR CONNECT TO FACEBOOK WITH
-#                                 THEIR NETWORKS, THEN THROW THE ZUCKESTIONS TO USE THAT SERVICES ABOVE, THE REDIRECT IS STILL IN
-#                                 EFFECT, EITHER USERS DIDN'T REGISTERED FOR / NOT INTENT TO OR DOESN'T WANT TO USE THAT SERVICE!
-#           MOST ANNOYING THAT IT PREVENT ACCESSING "facebook.com" OR "www.facebook.com" AS THE PROPER WAY OF DESKTOP SITE.
-#                                 INSTEAD, IT WILL REDIRECT TO "web.facebook.com" WITH UNCLEAR REASON ABOUT ANY RECOMMENDATIONS
-#                                 FOR LANDING TO OTHER SUBDOMAIN!!
-#           MOST ANNOYING THAT IT PREVENT ACCESSING "mbasic.facebook.com" OR "touch.facebook.com" IF FACEBOOK DETECTED THAT USERS
-#                                 ARE USING MOBILE BROWSER, AND WILL TRY TO REDIRECT ALMOST EVERYTHING TO "mobile.facebook.com"
-#                                 INSTEAD!!!
-#       I will keep block those connections, no matter that it will break the functionality to using Facebook on mobile data plan
-#       until they abandone this service and return all connections to the original favor, no redirects, no non-HTTPS, no nagging
-#       or forcing to use that service, just let it should be normal like I'm using Facebook at home or via Proxy/VPN!
+# Description: This aim to block non-formal hosts that serve all Facebook contents and resources from alternative "Free Basics"
+#              servers that it happen when you're using on mobile data over the carrier that collaborate with Facebook to have
+#              THAT service!
+#              Currently, all of big 3 carriers in my country are give up to Facebook and let it invade and interrupt the
+#              functionality and usage experience of their service.
+#              I'm against to this shady services because it's show various of annoyance that likely Facebook trying to force me
+#              and all of users to use THAT service! include showing balloon party cover, inject purple bar above or even
+#              prevent any videos to play on mobile data, although many users in my country are use the unlimited data plan but
+#              limited the connectivity speed instead.
+#              Also...
+#                  MOST ANNOYING THAT IT REDIRECT TO "h.facebook.com" WITH "NON-HTTPS" CONNECTIONS! THIS POSSIBLY TO OPEN THE
+#                                     GATE FOR MOBILE DATA PROVIDER AND FACEBOOK ITSELF TO KNOW THAT USERS USE OR CONNECT TO
+#                                     FACEBOOK OVER ANY NETWORKS WHO PARTICIPATE TO HAVE THAT SERVICE, THEN THROW THE ZUCKESTIONS
+#                                     TO TELL USERS TO USE THAT SERVICE!! THE REDIRECT IS STILL IN EFFECT, EVEN USERS DIDN'T
+#                                     REGISTERED FOR, NOT INTENT TO OR DOESN'T WANT TO USE THAT SERVICE!
+#                  MOST ANNOYING THAT IT PREVENT ACCESSING "facebook.com" OR "www.facebook.com" AS THE PROPER WAY OF DESKTOP
+#                                     SITE, INSTEAD, IT WILL REDIRECT TO "web.facebook.com" WITH UNCLEAR REASON ABOUT ANY
+#                                     RECOMMENDATIONS FOR LANDING TO OTHER SUBDOMAIN!!
+#                  MOST ANNOYING THAT IT PREVENT ACCESSING "mbasic.facebook.com" OR "touch.facebook.com" IF FACEBOOK DETECTED
+#                                     THAT SOME USERS ARE USING MOBILE BROWSER AND CONNECT THEIR SERVICE OVER MOBILE DATA, ALSO
+#                                     THEY WILL TRY TO REDIRECT ALMOST EVERYTHING TO "mobile.facebook.com" INSTEAD!!!
+#              I will keep block those connections, no matter that it will break the functionality to using Facebook on mobile
+#              data plan until they abandone this service and return all connections to the original favor, no redirects,
+#              no non-HTTPS, no nagging or forcing to use that service, just let it should be normal like I'm using Facebook at
+#              home, workplace and/or via Proxy/VPN!
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # File generated by PyFunceble (v2.2.0.dev) / https://github.com/funilrys/PyFunceble
-# Date of generation: Sun 30 Jun 17:06:36 UTC 2019 
+# Date of generation: Sat 03 Aug 17:08:55 UTC 2019
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 0.beta.facebook.com
 0.0.0.0 0.facebook.com
