@@ -1,13 +1,13 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Modules Commands List
-! Version: 201903132023
+! Version: 201908092036
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/facebook/FacebookCommands.txt
-! Note: This filter isn't recommended to use publicly, it might broke entire Facebook functions because
-!       these rules below will disable many JavaScript functions and also prevent lots of network requests.
-!       Although, the script blocking may not work as expected, but few rules will work in alphabetically.
+! Description: This filter isn't recommended to use publicly, it might broke entire Facebook functions because these rules below
+!              will disable many JavaScript functions and also prevent lots of network requests, although the script blocking may
+!              not work as expected, but few rules will work in alphabetically.
 
 ! ?modules request block
 ||facebook.com/*?modules=*LinkshimLogController$important
@@ -160,6 +160,7 @@
 ||facebook.com/*?modules=MessengerPromotionData$important
 ||facebook.com/*?modules=MessengerWebDeltasTypedLogger$important
 ||facebook.com/*?modules=MessengerWebGraphQLTypedLogger
+||facebook.com/*?modules=MobileZeroRewriteURL$important
 ||facebook.com/*?modules=MobileZeroRewriteURL$important
 ||facebook.com/*?modules=NetEgo$important
 ||facebook.com/*?modules=NetEgoShowcase$important

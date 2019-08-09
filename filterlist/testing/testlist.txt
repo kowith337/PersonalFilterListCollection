@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 201908041419
+! Version: 201908092044
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -45,29 +45,29 @@ m.intl.taobao.com##.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,
 ! [External scriptlets]
 ! Requirement for this section: @uBlock-user's scriptlets: https://github.com/uBlock-user/uBO-Scriptlets
 ! Raw: https://raw.githubusercontent.com/uBlock-user/uBO-Scriptlets/master/scriptlets.txt
-aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|&)(go|main)_item(_id|id)=([^&]\d+)/)
-aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|&)(pvid|utparam)=([^&].+)/)
-aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|&)(scm|spm)=([^&].+)/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)(_ft_|__tn__)=([^&].+)/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)(_rdc|mt_nav)=([^&]\d+)/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)(acontext|bacr|fbclid|lst|session_id)=([^&].+)/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)(app_|ref|sw_fnr_)id=([^&]\d+)/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)(a|f|hc_|pn_)ref=([^&]\w+)/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)(dti|eid|settings_tracking|source)=([^&]\w+)/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)(ref)=([^&].)/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)__m_(async_page|log_async)__=([^&]\d+)/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)__xts__(\[\d\]|\%5B\d\%5D)=([^&].+)/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)_rdc=([^&]\d+)/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)_rdr/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)ref_(component|page|source)=([^&].+)/)
-google.com##script:inject(query-stripper.js, /(?<=\?|\&)(aqs|ei|oq|stick|usg|ved)=([^&].+)/)
-google.com##script:inject(query-stripper.js, /(?<=\?|\&)gs_(l|r)=([^&].+)/)
-google.com##script:inject(query-stripper.js, /(?<=\?|\&)sa=([^&]\w)/)
-google.com##script:inject(query-stripper.js, /(\?|\&)(bih|biw|ibh|ibw|ust|vet)=([^&]\d+)/)
-google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(\?|\&)utm=([^&]\w+)/)
-google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(\?|\&)utm_(campaign|medium|source)=([^&]\w+)/)
-steamcommunity.com,steampowered.com##script:inject(query-stripper.js, /(\?|&)(snr)=([^&].)/)
-twitter.com,t.co##script:inject(query-stripper.js, /(\?|\&)amp=([^&]\d)/)
-youtube.com##script:inject(query-stripper.js, /(\?|\&)feature=([^&].+)/)
-youtube.com##script:inject(query-stripper.js, /(\?|\&)redir_token=([^&]\w+)/)
+! f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)_rdc=\d+/) // Redirect Counter
+! f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)_rdr/) // Not work
+aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|&)(go|main)_item(_id|id)=\d+/)
+aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|&)(pvid|utparam)=([^&]*)/)
+aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|&)(scm|spm)=([^&]*)/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)(_ft_|__tn__)=([^&]*)/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)(_rdc|mt_nav)=\d+/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)(acontext|bacr|fbclid|lst|session_id)=([^&]*)/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)(app_|ref|sw_fnr_)id=\d+/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)(a|f|hc_|pn_)ref=\w+/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)(dti|eid|settings_tracking|source)=\w+/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)(ref)=([^&]*)/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)__m_(async_page|log_async)__=\d+/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)__xts__(\[\d\]|\%5B\d\%5D)=([^&]*)/)
+f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|&)ref_(component|page|source)=([^&]*)/)
+google.com##script:inject(query-stripper.js, /(?<=\?|\&)(aqs|ei|oq|stick|usg|ved)=([^&]*)/)
+google.com##script:inject(query-stripper.js, /(?<=\?|\&)(bih|biw|ibh|ibw|ust|vet)=\d+/)
+google.com##script:inject(query-stripper.js, /(?<=\?|\&)gs_(l|r)=([^&]*)/)
+google.com##script:inject(query-stripper.js, /(?<=\?|\&)sa=\w/)
+google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(?<=\?|\&)utm=\w+/)
+google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(?<=\?|\&)utm_(campaign|medium|source)=\w+/)
+steamcommunity.com,steampowered.com##script:inject(query-stripper.js, /(?<=\?|\&)(snr)=([^&]*)/)
+twitter.com,t.co##script:inject(query-stripper.js, /(?<=\?|\&)amp=\d/)
+youtube.com##script:inject(query-stripper.js, /(?<=\?|\&)feature=([^&]*)/)
+youtube.com##script:inject(query-stripper.js, /(?<=\?|\&)redir_token=([^&]*)/)
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
