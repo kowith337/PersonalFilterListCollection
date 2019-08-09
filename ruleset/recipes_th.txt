@@ -1,7 +1,7 @@
 ! uMatrix: Ruleset recipes 1.0
 ! Title: Rulesets for Thai sites (alpha test)
-! Version: 201903132027
-! VersionNumber: 0.17.1
+! Version: 201908091407
+! VersionNumber: 0.17.2
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
@@ -44,9 +44,6 @@ MCOT Radio - Mellow
 		! Mellow use FancyBox from jQuery, so I will not add for exception,
 		! judging it may show overlay annoyance, I don't know.
 		referrer-spoof: _ false
-		_ cdn.mcot.net script
-		_ cdn.mcot.net xhr
-		_ mcotn-api.mcot.net xhr
 		_ ssl.p.jwpcdn.com script
 
 MCOT Radio - MET
@@ -66,6 +63,11 @@ MCOT Radio - News Network
 		_ mcotn-api.mcot.net xhr
 		_ ssl.p.jwpcdn.com script
 
+MCOT Radio - News Network (Fallback)
+	news1005.mcot.net *
+		referrer-spoof: _ false
+		_ ssl.p.jwpcdn.com script
+
 MCOT Radio - Thinking Radio
 	thinkingradio.net *
 		referrer-spoof: _ false
@@ -77,9 +79,6 @@ MCOT Radio - Thinking Radio
 MCOT Radio - Luktung Mahanakorn
 	ltmfm95.mcot.net *
 		referrer-spoof: _ false
-		_ cdn.mcot.net script
-		_ cdn.mcot.net xhr
-		_ mcotn-api.mcot.net xhr
 		_ ssl.p.jwpcdn.com script
 
 Sanook! (Tencent)
