@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201908111328
+# Version: 201908141447
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -232,6 +232,7 @@
 0.0.0.0 onthe.io
 0.0.0.0 openx.net
 0.0.0.0 opticks.io
+0.0.0.0 orpheusdroid.com
 0.0.0.0 perfectmarket.com
 0.0.0.0 petametrics.com
 0.0.0.0 pikdo.net
@@ -293,6 +294,7 @@
 0.0.0.0 ads9.matichon.co.th
 0.0.0.0 adsbybumq.bumq.com
 0.0.0.0 adsense.codev.wixapps.net
+0.0.0.0 analytics.orpheusdroid.com
 0.0.0.0 api.cxense.com
 0.0.0.0 api.userstyles.org
 0.0.0.0 as.innity.com
