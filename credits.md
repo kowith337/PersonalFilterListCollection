@@ -54,7 +54,7 @@ Still writing and not completed yet, check back next time if changed...
 - https://github.com/gorhill/uBlock/wiki/Static-filter-syntax#style
 - - - - -
 ### [/hosts/hosts_facebook0.txt](https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts/hosts_facebook0.txt)
-- [funilrys](https://github.com/funilrys)
+- [funilrys](https://github.com/funilrys) for domain testing tools
   - https://github.com/funilrys/PyFunceble
 - https://github.com/anudeepND/blacklist/blob/master/facebook.txt
 - https://github.com/random-robbie/bugbounty-scans/blob/master/facebook.com/urls.txt
