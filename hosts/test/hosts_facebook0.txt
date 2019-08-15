@@ -1,6 +1,6 @@
 # [uMatrix 1.3.15.100]
 # Title: Facebook Zero Hosts Block (Test unit)
-# Version: 201908132024
+# Version: 201908160059
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/hosts
@@ -12,16 +12,16 @@
 # Description: This aim to block non-formal hosts that serve all Facebook contents and resources from alternative "Free Basics"
 #              servers that it happen when you're using on mobile data over the carrier that collaborate with Facebook to have
 #              that service!
-#              Currently, all of big 3 mobile carriers in my country are give up to Facebook and let it invade and interrupt the
-#              privacy, functionality and usability of their service.
-#              I'm against to it's shady services because it's show various of annoyance that likely Facebook trying to force me
-#              and all of other users to use that, include nasty traffic redirect, showing balloon party cover, inject purple bar
-#              above of page or in-app screen or even prevent any videos to play on mobile data, although many users in my
-#              country are ok to use the unlimited data plan but limited the connectivity speed.
+#              Currently, all of big 3 mobile carriers in my country are give up to Facebook by allow that services to be happen,
+#              and let it's service invade and interrupt the privacy, functionality and usability of Facebook itself.
+#              I'm against to that shady services because when I connect to Facebook over mobile data, it's start to show various
+#              of annoyance that likely Facebook trying to force me and all of other users to use that, include nasty and
+#              insecure traffic redirect, showing balloon party cover, inject purple bar above of page or in-app screen or even
+#              prevent any videos to play on mobile data, although many users in my country are ok to use the unlimited data plan
+#              but limited the connectivity speed.
 #              In my opinion, I will keep block those connections, no matter about breaking the functionality and usability for
-#              using Facebook on mobile data plan due to privacy concern that Facebook itself use uploaded mobile phone numbers
-#              for selling to advertisers for direct (re-)targeting ads* until they abandone that services and return all
-#              connections to the original favor, no redirects, no non-HTTPS, no nagging or forcing to use that service, just let
+#              using Facebook on mobile data plan until they abandone that services and return all connections to the original
+#              favor, no redirects, no non-HTTPS, no nagging or forcing to use that service, just let
 #              it should be normal like I and/or we accessing Facebook at home or via Proxy/VPN!
 # Note: All rules below will be use as test unit for @funilrys's "Dead Hosts" tools (aka. PyFunceble), however, some hosts entry
 #       are duplicated based from hosts name that found by myself and more entry from [Credits] source, Currently I'm still don't
@@ -33,23 +33,15 @@
 #      randomly add bulk mobile phone numbers to subscribe nasty, wasteful and also unwanted content supscriptions without any
 #      confirmations from user's side.
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# FBZero TopLevel - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Top Level - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 freebasics.com
 0.0.0.0 internet.org
-# FBZero ResolvedDNS  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Resolved DNS Name - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 headers-regional.vvv.facebook.com
 # 0.0.0.0 vvv.facebook.com
 0.0.0.0 z-m.c10r.facebook.com
 0.0.0.0 z-1.c10r.facebook.com
 0.0.0.0 z.c10r.facebook.com
-# FBZero CorePage - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-0.0.0.0 0.facebook.com
-0.0.0.0 free.facebook.com
-0.0.0.0 h.facebook.com
-0.0.0.0 mobile.facebook.com
-0.0.0.0 o.facebook.com
-0.0.0.0 p.facebook.com
-0.0.0.0 web.facebook.com
 0.0.0.0 z-1.facebook.com
 0.0.0.0 z-m-www.facebook.com
 0.0.0.0 z-m.facebook.com
@@ -57,9 +49,17 @@
 0.0.0.0 z-p2.facebook.com
 0.0.0.0 z-p3.facebook.com
 0.0.0.0 z-p4.facebook.com
-0.0.0.0 z.facebook.com
+# Core Site Landing - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 0.facebook.com
+0.0.0.0 free.facebook.com
+0.0.0.0 h.facebook.com
+0.0.0.0 mobile.facebook.com
+0.0.0.0 o.facebook.com
+0.0.0.0 p.facebook.com
+0.0.0.0 web.facebook.com
 0.0.0.0 zero.facebook.com
-# FBZero BetaCore - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 z.facebook.com
+# Beta Core Site Landing  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 0.beta.facebook.com
 0.0.0.0 free.beta.facebook.com
 0.0.0.0 h.beta.facebook.com
@@ -67,7 +67,7 @@
 0.0.0.0 o.beta.facebook.com
 0.0.0.0 web.beta.facebook.com
 0.0.0.0 zero.beta.facebook.com
-# FBZero Upload - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# API for upload (text, images, videos, etc.) over data - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 z-p1-rupload.facebook.com
 0.0.0.0 z-p1-upload.facebook.com
 0.0.0.0 z-p2-rupload.facebook.com
@@ -77,7 +77,7 @@
 0.0.0.0 z-p4-rupload.facebook.com
 0.0.0.0 z-p4-upload.facebook.com
 0.0.0.0 z-upload.facebook.com
-# FBZero FreeBasics Sub - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Free Basics - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 0.freebasics.com
 0.0.0.0 free.freebasics.com
 0.0.0.0 info.freebasics.com
@@ -85,7 +85,7 @@
 0.0.0.0 p.freebasics.com
 0.0.0.0 z.freebasics.com
 0.0.0.0 zero.freebasics.com
-# FBZero InternetOrg Sub  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Internet.org  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 0.internet.org
 0.0.0.0 free.internet.org
 0.0.0.0 info.internet.org
@@ -93,7 +93,7 @@
 0.0.0.0 p.internet.org
 0.0.0.0 z.internet.org
 0.0.0.0 zero.internet.org
-# FBZero APIRedir - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Generic API Redirect - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 z-m-a-api.facebook.com
 0.0.0.0 z-m-api.facebook.com
 0.0.0.0 z-m-b-api.facebook.com
@@ -101,7 +101,7 @@
 0.0.0.0 z-p2-api.facebook.com
 0.0.0.0 z-p3-api.facebook.com
 0.0.0.0 z-p4-api.facebook.com
-# FBZero GraphRedir - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Graph API Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 z-m-a-graph.facebook.com
 0.0.0.0 z-m-b-graph.facebook.com
 0.0.0.0 z-m-graph.facebook.com
@@ -109,7 +109,7 @@
 0.0.0.0 z-p2-graph.facebook.com
 0.0.0.0 z-p3-graph.facebook.com
 0.0.0.0 z-p4-graph.facebook.com
-# FBZero Sandbox  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Sandbox domains - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 www.z-1-lookaside.fbsbx.com
 0.0.0.0 www.z-p1-cdn.fbsbx.com
 0.0.0.0 www.z-p3-cdn.fbsbx.com
@@ -121,7 +121,148 @@
 0.0.0.0 z-p3-lookaside.fbsbx.com
 0.0.0.0 z-p4-cdn.fbsbx.com
 0.0.0.0 z-p4-dcn.fbsbx.com
-# FBZero XXCDN Server - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# FBCDN FNA SecureContent Z-1 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# FBCDN FNA SecureContent Z-M - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# FBCDN FNA SecureContent Z-P (Include number)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# FBCDN FNA Video Z-1 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# FBCDN FNA Video Z-P (Include number)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# FBCDN FNA Zero External - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Facebook Shavar Edge Z Standalone - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Facebook Shavar Edge Z-1 + Z-M  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Facebook Shavar Edge Z-P (include number) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# MESSenger Shavar Edge Z - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Shavar CDN EdgeZeroMini - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# ShavarCDN EdgeFNA Z-1 + Z-M - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# ShavarCDN EdgeFNA Z-P - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# FBCDN Instagram FNA CDN (Z-Lead)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# This entry may not have lots of it, due to I've deleted my account after algorithm'd sorting landed, plus completely self-block
+# Instagram site and services after... Probably WhatsApps also have sub-servers for mobile data? (Because Facebook bought both)
+# Facebook Shavar CDN EdgeStar Mini - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 edge-star-z-mini-shv-01-bom1.facebook.com
+0.0.0.0 edge-star-z-mini-shv-01-bru2.facebook.com
+0.0.0.0 edge-star-z-mini-shv-01-cdg2.facebook.com
+0.0.0.0 edge-star-z-mini-shv-01-cdt1.facebook.com
+0.0.0.0 edge-star-z-mini-shv-01-mad1.facebook.com
+0.0.0.0 edge-star-z-mini-shv-01-nrt1.facebook.com
+0.0.0.0 edge-star-z-mini-shv-01-sea1.facebook.com
+# Facebook Shavar CDN EdgeStar Z-1-P - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 edge-z-1-p2-shv-01-arn2.facebook.com
+0.0.0.0 edge-z-1-p2-shv-01-bru2.facebook.com
+0.0.0.0 edge-z-1-p2-shv-01-mad1.facebook.com
+0.0.0.0 edge-z-1-p2-shv-01-mrs1.facebook.com
+0.0.0.0 edge-z-1-p2-shv-01-mxp1.facebook.com
+0.0.0.0 edge-z-1-p2-shv-01-nrt1.facebook.com
+0.0.0.0 edge-z-1-p2-shv-01-sea1.facebook.com
+0.0.0.0 edge-z-1-p2-shv-01-sin1.facebook.com
+0.0.0.0 edge-z-1-p2-shv-01-sjc2.facebook.com
+0.0.0.0 edge-z-1-p2-shv-01-syd2.facebook.com
+0.0.0.0 edge-z-1-p2-shv-01-vie1.facebook.com
+# Facebook Shavar CDN EdgeStar Mini  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 edge-z-m-mini-shv-01-arn2.facebook.com
+0.0.0.0 edge-z-m-mini-shv-01-cdg2.facebook.com
+0.0.0.0 edge-z-m-mini-shv-01-eze1.facebook.com
+0.0.0.0 edge-z-m-mini-shv-01-kut2.facebook.com
+0.0.0.0 edge-z-m-mini-shv-01-mad1.facebook.com
+0.0.0.0 edge-z-m-mini-shv-01-mia1.facebook.com
+0.0.0.0 edge-z-m-mini-shv-01-mxp1.facebook.com
+0.0.0.0 edge-z-m-mini-shv-01-nrt1.facebook.com
+0.0.0.0 edge-z-m-mini-shv-01-ord1.facebook.com
+0.0.0.0 edge-z-m-mini-shv-01-ort2.facebook.com
+0.0.0.0 edge-z-m-mini-shv-01-sea1.facebook.com
+0.0.0.0 edge-z-m-mini-shv-01-sin1.facebook.com
+0.0.0.0 edge-z-m-mini-shv-01-sjc2.facebook.com
+0.0.0.0 edge-z-m-mini-shv-01-syd2.facebook.com
+0.0.0.0 edge-z-m-mini-shv-02-mia1.facebook.com
+0.0.0.0 edge-z-m-mini-shv-06-atn1.facebook.com
+0.0.0.0 edge-z-m-mini-shv-17-prn1.facebook.com
+0.0.0.0 edge-z-mini-shv-01-mad1.facebook.com
+# Facebook Shavar Edge Z-M  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 edge-z-m-shv-01-cdg2.facebook.com
+0.0.0.0 edge-z-m-shv-01-syd1.facebook.com
+0.0.0.0 edge-z-m-shv-03-prn2.facebook.com
+# Facebook Shavar Edge Z-P  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 edge-z-p1-shv-01-bom1.facebook.com
+0.0.0.0 edge-z-p1-shv-01-eze1.facebook.com
+0.0.0.0 edge-z-p1-shv-01-kut2.facebook.com
+0.0.0.0 edge-z-p1-shv-01-mad1.facebook.com
+0.0.0.0 edge-z-p1-shv-01-sea1.facebook.com
+0.0.0.0 edge-z-p3-shv-01-eze1.facebook.com
+0.0.0.0 edge-z-p3-shv-01-mad1.facebook.com
+0.0.0.0 edge-z-p3-shv-01-sea1.facebook.com
+0.0.0.0 edge-z-p3-shv-01-syd2.facebook.com
+0.0.0.0 edge-z-p3-shv-01-waw1.facebook.com
+0.0.0.0 edge-z-p3-shv-02-ort2.facebook.com
+0.0.0.0 edge-z-p4-shv-01-arn2.facebook.com
+0.0.0.0 edge-z-p4-shv-01-bom1.facebook.com
+0.0.0.0 edge-z-p4-shv-01-mad1.facebook.com
+0.0.0.0 edge-z-p4-shv-01-sea1.facebook.com
+# Facebook Shavar CDN Edge Z Misc - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 edge-z-shv-03-prn2.facebook.com
+0.0.0.0 edge-z-shv-04-prn2.facebook.com
+0.0.0.0 edge-z-shv-12-frc1.facebook.com
+0.0.0.0 edge-z-shv-12-prn1.facebook.com
+0.0.0.0 edge-z-shv-13-frc1.facebook.com
+0.0.0.0 edge-z-shv-17-prn1.facebook.com
+# FBCDN FNA Shavar Z-1  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 fna-fbcdn-z-1-shv-01-fapa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-1-shv-01-fbna1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-1-shv-01-fgla1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-1-shv-01-fmaa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-1-shv-01-fmia1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-1-shv-01-fsea1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-1-shv-02-fbna1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-1-shv-02-fmaa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-1-shv-02-fmia1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-1-shv-03-fmaa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-1-shv-04-fmaa1.fbcdn.net
+# FBCDN FNA Shavar Z-M  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 fna-fbcdn-z-m-shv-01-fapa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-m-shv-01-fbna1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-m-shv-01-fgla1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-m-shv-01-fmaa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-m-shv-01-fmia1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-m-shv-01-fsea1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-m-shv-02-fbna1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-m-shv-02-fmaa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-m-shv-02-fmia1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-m-shv-03-fmaa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-m-shv-04-fmaa1.fbcdn.net
+# FBCDN FNA Shavar Z-P  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 fna-fbcdn-z-p3-shv-01-fapa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p3-shv-01-fbna1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p3-shv-01-fgla1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p3-shv-01-fmaa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p3-shv-01-fmia1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p3-shv-01-fsea1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p3-shv-02-fbna1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p3-shv-02-fmaa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p3-shv-02-fmia1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p3-shv-03-fmaa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p3-shv-04-fmaa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p4-shv-01-fapa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p4-shv-01-fbna1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p4-shv-01-fgla1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p4-shv-01-fmaa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p4-shv-01-fmia1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p4-shv-01-fsea1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p4-shv-02-fbna1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p4-shv-02-fmaa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p4-shv-02-fmia1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p4-shv-03-fmaa1.fbcdn.net
+0.0.0.0 fna-fbcdn-z-p4-shv-04-fmaa1.fbcdn.net
+# FBCDN FNA SecureContent + Z-1 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 z-1-scontent.fbkk1-1.fna.fbcdn.net
+0.0.0.0 z-1-scontent.fbkk2-1.fna.fbcdn.net
+0.0.0.0 z-1-scontent.fbkk10-1.fna.fbcdn.net
+0.0.0.0 z-1-scontent.fmaa1-1.fna.fbcdn.net
+0.0.0.0 z-1-scontent.fmaa2-1.fna.fbcdn.net
+0.0.0.0 z-1-scontent.fmaa10-1.fna.fbcdn.net
+0.0.0.0 z-1-scontent.fpoa1-1.fna.fbcdn.net
+0.0.0.0 z-1-scontent.fpoa2-1.fna.fbcdn.net
+0.0.0.0 z-1-scontent.fpoa10-1.fna.fbcdn.net
+0.0.0.0 z-1-video.fpoa10-1.fna.fbcdn.net
+0.0.0.0 z-1-video.fszb1-1.fna.fbcdn.net
+# FBCDN XX SecureContent + Z-Lead - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 z-1-scontent.xx.fbcdn.net
 0.0.0.0 z-m-scontent-ams.xx.fbcdn.net
 0.0.0.0 z-m-scontent-amt.xx.fbcdn.net
@@ -161,7 +302,61 @@
 0.0.0.0 z-m-scontent-vie.xx.fbcdn.net
 0.0.0.0 z-m-scontent-waw.xx.fbcdn.net
 0.0.0.0 z-m-scontent-yyz.xx.fbcdn.net
+# FBCDN FNA SecureContent + Z-M - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 z-m-scontent.fbkk1-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk1-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk1-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk2-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk2-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk3-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk3-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk3-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk3-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk4-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk4-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk4-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fceb1-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fceb1-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fceb1-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fceb2-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fceb2-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fceb2-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fceb3-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fceb3-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fceb3-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fceb4-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fceb4-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fceb4-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fdac1-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fdac1-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fdac1-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fdac2-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fdac2-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fdac2-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fdac3-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fdac3-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fdac3-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fdac4-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fdac4-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fdac4-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex1-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex1-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex1-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex10-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex10-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex10-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex2-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex2-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex2-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex3-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex3-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex3-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex4-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex4-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex4-3.fna.fbcdn.net
 0.0.0.0 z-m-scontent.xx.fbcdn.net
+# FBCDN XX Static + Z-Lead  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 z-1-static.xx.fbcdn.net
 0.0.0.0 z-m-static-ams.xx.fbcdn.net
 0.0.0.0 z-m-static-amt.xx.fbcdn.net
 0.0.0.0 z-m-static-arn.xx.fbcdn.net
@@ -201,6 +396,8 @@
 0.0.0.0 z-m-static-waw.xx.fbcdn.net
 0.0.0.0 z-m-static-yyz.xx.fbcdn.net
 0.0.0.0 z-m-static.xx.fbcdn.net
+# FBCDN XX Video + Z-Lead - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 z-1-video.xx.fbcdn.net
 0.0.0.0 z-m-video-ams.xx.fbcdn.net
 0.0.0.0 z-m-video-amt.xx.fbcdn.net
 0.0.0.0 z-m-video-arn.xx.fbcdn.net
@@ -240,135 +437,10 @@
 0.0.0.0 z-m-video-waw.xx.fbcdn.net
 0.0.0.0 z-m-video-yyz.xx.fbcdn.net
 0.0.0.0 z-m-video.xx.fbcdn.net
-# FBZero ShaverCDN EdgeMini - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-0.0.0.0 edge-star-z-mini-shv-01-bom1.facebook.com
-0.0.0.0 edge-star-z-mini-shv-01-bru2.facebook.com
-0.0.0.0 edge-star-z-mini-shv-01-cdg2.facebook.com
-0.0.0.0 edge-star-z-mini-shv-01-cdt1.facebook.com
-0.0.0.0 edge-star-z-mini-shv-01-mad1.facebook.com
-0.0.0.0 edge-star-z-mini-shv-01-nrt1.facebook.com
-0.0.0.0 edge-star-z-mini-shv-01-sea1.facebook.com
-0.0.0.0 edge-z-m-mini-shv-01-arn2.facebook.com
-0.0.0.0 edge-z-m-mini-shv-01-cdg2.facebook.com
-0.0.0.0 edge-z-m-mini-shv-01-eze1.facebook.com
-0.0.0.0 edge-z-m-mini-shv-01-kut2.facebook.com
-0.0.0.0 edge-z-m-mini-shv-01-mad1.facebook.com
-0.0.0.0 edge-z-m-mini-shv-01-mia1.facebook.com
-0.0.0.0 edge-z-m-mini-shv-01-mxp1.facebook.com
-0.0.0.0 edge-z-m-mini-shv-01-nrt1.facebook.com
-0.0.0.0 edge-z-m-mini-shv-01-ord1.facebook.com
-0.0.0.0 edge-z-m-mini-shv-01-ort2.facebook.com
-0.0.0.0 edge-z-m-mini-shv-01-sea1.facebook.com
-0.0.0.0 edge-z-m-mini-shv-01-sin1.facebook.com
-0.0.0.0 edge-z-m-mini-shv-01-sjc2.facebook.com
-0.0.0.0 edge-z-m-mini-shv-01-syd2.facebook.com
-0.0.0.0 edge-z-m-mini-shv-02-mia1.facebook.com
-0.0.0.0 edge-z-m-mini-shv-06-atn1.facebook.com
-0.0.0.0 edge-z-m-mini-shv-17-prn1.facebook.com
-0.0.0.0 edge-z-mini-shv-01-mad1.facebook.com
-# FBZero ShavarCDN EdgeFNA  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-0.0.0.0 fna-fbcdn-z-1-shv-01-fapa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-1-shv-01-fbna1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-1-shv-01-fgla1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-1-shv-01-fmaa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-1-shv-01-fmia1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-1-shv-01-fsea1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-1-shv-02-fbna1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-1-shv-02-fmaa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-1-shv-02-fmia1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-1-shv-03-fmaa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-1-shv-04-fmaa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-m-shv-01-fapa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-m-shv-01-fbna1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-m-shv-01-fgla1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-m-shv-01-fmaa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-m-shv-01-fmia1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-m-shv-01-fsea1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-m-shv-02-fbna1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-m-shv-02-fmaa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-m-shv-02-fmia1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-m-shv-03-fmaa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-m-shv-04-fmaa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p3-shv-01-fapa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p3-shv-01-fbna1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p3-shv-01-fgla1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p3-shv-01-fmaa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p3-shv-01-fmia1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p3-shv-01-fsea1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p3-shv-02-fbna1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p3-shv-02-fmaa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p3-shv-02-fmia1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p3-shv-03-fmaa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p3-shv-04-fmaa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p4-shv-01-fapa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p4-shv-01-fbna1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p4-shv-01-fgla1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p4-shv-01-fmaa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p4-shv-01-fmia1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p4-shv-01-fsea1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p4-shv-02-fbna1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p4-shv-02-fmaa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p4-shv-02-fmia1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p4-shv-03-fmaa1.fbcdn.net
-0.0.0.0 fna-fbcdn-z-p4-shv-04-fmaa1.fbcdn.net
-# FBZero ShavarCDN EdgeZ  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-0.0.0.0 edge-z-m-shv-01-cdg2.facebook.com
-0.0.0.0 edge-z-m-shv-01-syd1.facebook.com
-0.0.0.0 edge-z-m-shv-03-prn2.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-arn2.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-bru2.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-mad1.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-mrs1.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-mxp1.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-nrt1.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-sea1.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-sin1.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-sjc2.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-syd2.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-vie1.facebook.com
-0.0.0.0 edge-z-p1-shv-01-bom1.facebook.com
-0.0.0.0 edge-z-p1-shv-01-eze1.facebook.com
-0.0.0.0 edge-z-p1-shv-01-kut2.facebook.com
-0.0.0.0 edge-z-p1-shv-01-mad1.facebook.com
-0.0.0.0 edge-z-p1-shv-01-sea1.facebook.com
-0.0.0.0 edge-z-p3-shv-01-eze1.facebook.com
-0.0.0.0 edge-z-p3-shv-01-mad1.facebook.com
-0.0.0.0 edge-z-p3-shv-01-sea1.facebook.com
-0.0.0.0 edge-z-p3-shv-01-syd2.facebook.com
-0.0.0.0 edge-z-p3-shv-01-waw1.facebook.com
-0.0.0.0 edge-z-p3-shv-02-ort2.facebook.com
-0.0.0.0 edge-z-p4-shv-01-arn2.facebook.com
-0.0.0.0 edge-z-p4-shv-01-bom1.facebook.com
-0.0.0.0 edge-z-p4-shv-01-mad1.facebook.com
-0.0.0.0 edge-z-p4-shv-01-sea1.facebook.com
-0.0.0.0 edge-z-shv-03-prn2.facebook.com
-0.0.0.0 edge-z-shv-04-prn2.facebook.com
-0.0.0.0 edge-z-shv-12-frc1.facebook.com
-0.0.0.0 edge-z-shv-12-prn1.facebook.com
-0.0.0.0 edge-z-shv-13-frc1.facebook.com
-0.0.0.0 edge-z-shv-17-prn1.facebook.com
-0.0.0.0 mqtt-z-shv-16-frc1.facebook.com
-# FBZero FNA.ZCDN External  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-0.0.0.0 z-1-external.fsea1-1.fna.fbcdn.net
+# FBCDN FNA Video + Z-P - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 z-p3-external.fmdc1-1.fna.fbcdn.net
 0.0.0.0 z-p3-external.fsdu11-1.fna.fbcdn.net
 0.0.0.0 z-p3-external.fsea1-1.fna.fbcdn.net
-# FBZero FNA.ZCDN Instagram - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# This entry may not have lots of it, due to I've deleted my account after algorithm'd sorting landed.
-0.0.0.0 z-p4-instagram.ffor11-1.fna.fbcdn.net
-0.0.0.0 z-p42-instagram.fada1-1.fna.fbcdn.net
-0.0.0.0 z-p42-instagram.fada1-10.fna.fbcdn.net
-# FBZero FNA.ZCDN SecureContent - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-0.0.0.0 z-1-scontent-sjc2-1.xx.fbcdn.net
-0.0.0.0 z-1-scontent.fbkk1-1.fna.fbcdn.net
-0.0.0.0 z-1-scontent.fbkk10-1.fna.fbcdn.net
-0.0.0.0 z-1-scontent.fmaa1-1.fna.fbcdn.net
-0.0.0.0 z-1-scontent.fmaa10-1.fna.fbcdn.net
-0.0.0.0 z-1-scontent.fpoa1-1.fna.fbcdn.net
-0.0.0.0 z-1-scontent.fpoa10-1.fna.fbcdn.net
-0.0.0.0 z-m-scontent.fceb1-1.fna.fbcdn.net
-0.0.0.0 z-m-scontent.fdac1-1.fna.fbcdn.net
-0.0.0.0 z-m-scontent.fmex10-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.facc1-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.faqa1-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbga1-1.fna.fbcdn.net
@@ -393,14 +465,18 @@
 0.0.0.0 z-p3-scontent.fsea1-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fsub1-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.ftpa1-1.fna.fbcdn.net
-# FBZero FNA.ZCDN Video - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-0.0.0.0 z-1-video.fpoa10-1.fna.fbcdn.net
-0.0.0.0 z-1-video.fszb1-1.fna.fbcdn.net
 0.0.0.0 z-p3-video.flpb1-1.fna.fbcdn.net
 0.0.0.0 z-p3-video.fpfb1-1.fna.fbcdn.net
 0.0.0.0 z-p3-video.fsea1-1.fna.fbcdn.net
+0.0.0.0 z-p4-instagram.ffor11-1.fna.fbcdn.net
+0.0.0.0 z-p42-instagram.fada1-1.fna.fbcdn.net
+0.0.0.0 z-p42-instagram.fada1-10.fna.fbcdn.net
 # Unknown (may be re-categorise later if have enough entry) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 edge-z-ecmp-02-ord1.facebook.com
+0.0.0.0 mqtt-z-shv-16-frc1.facebook.com
+0.0.0.0 z-1-external.fsea1-1.fna.fbcdn.net
+0.0.0.0 z-1-scontent-sjc1-1.xx.fbcdn.net
+0.0.0.0 z-1-scontent-sjc2-1.xx.fbcdn.net
 0.0.0.0 z-m-fbcdn-mini-shv-01-ord1.fbcdn.net
 0.0.0.0 z-m-fbcdn-shv-01-frt3.fbcdn.net
 0.0.0.0 z-p3-scontent-amt2-1.xx.fbcdn.net
