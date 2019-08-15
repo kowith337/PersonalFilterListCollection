@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 201908032046
+! Version: 201908160155
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -17,12 +17,14 @@ github.com##div[class^="signup-prompt"]
 ! - No reason to manually update location with precious method! (resolve location from network connection isn't enough, huh?)
 google.*###fbar #swml a#swml-upd
 google.*###fbar #swml a[data-ved]
-! - Remove "Related search" / "People also search for"
-google.*##div[jsname][role="list"] div[jsname][data-id^="Refinements"]
+! - Remove "Related question" / "Related search" / "People also search for"
 google.*###extrares #botstuff div[data-ved] div[data-hveid]
 google.*###extrares #botstuff div[data-ved] div[jscontroller][data-hveid][data-ved]
 google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][data-ved] div[data-has-close][class*="result-pivots"][data-ved]
 google.*###main div[data-ved] div[data-async-context] .kno-result[data-hveid][data-ved]
+google.*###search div[data-ved] #rso div[class]:has(.xpdopen)
+google.*##[jscontroller] #rg[data-ved] div[class*="irc-"]
+google.*##div[jsname][role="list"] div[jsname][data-id^="Refinements"]
 
 ! [Linkis] (scam content framing)
 linkis.com##.deeper-overlay
@@ -176,9 +178,10 @@ optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadL
 m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none !important)
 
 ! Network Requests - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! [Google] Tracking users with `ei` parameter tag
+! [Google] Tracking users with some parameter tag (e.g. 'ei', 'vet')
 ||google.*/async/bgasy?ei=*$important
 ||google.*/async/bgasy?*&ei=*$important
+||google.*/async/irc?$important
 ||google.*/imgevent?ei=$important
 ||google.*/imgevent?*&ei=$important
 
@@ -187,6 +190,10 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||linkis.com/ajax/update-click?*force_auth
 ||linkis.com/index/ln-event?*force-auth
 ||linkis.com/signin^$popup
+
+! [Pantip]
+||pantip.com/api/forum-service/forum/get_promote_box?$important
+||pantip.com/api/forum-service/forum/get_promote_tag?$important
 
 ! [Reddit]
 ||redditmedia.com/gtm^$important,~document
@@ -204,15 +211,21 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 
 ! Redirect - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Google]
-! I don't know about this connection but I've found `ei` parameter inside that already blocked by my another list called
+! - I don't know about this connection but I've found 'ei' parameter inside that already blocked by my another list called
 ! "Anti survived tracking warning (overdone ver.)" , expected that the request use for ping back to phone home? alright then...
 ||google.*/async/bgasy?$xmlhttprequest,important,redirect=nooptext
 ||google.*/imgevent?$xmlhttprequest,important,redirect=nooptext
+! - This request use 'vet' parameter and random strings value
+||google.com/async/irc?$xmlhttprequest,important,redirect=nooptext
 
-! [GreasyFork] added ping request while installing script (inside the "Install Script" green button) via `data-ping-url` that
+! [GreasyFork] added ping request while installing script (inside the "Install Script" green button) via 'data-ping-url' that
 ! cause promoted script to be shown and the site also get user data about it, eliminate this requests and fake sent data with
-! `nooptext` can solve this thing also.
+! 'nooptext' can solve this thing also.
 ||greasyfork.org/scripts/*/install-ping?$xmlhttprequest,important,redirect=nooptext
+
+! [Pantip] Neutralise promoted topic requests
+||pantip.com/api/forum-service/forum/get_promote_box?$xmlhttprequest,important,redirect=nooptext
+||pantip.com/api/forum-service/forum/get_promote_tag?$xmlhttprequest,important,redirect=nooptext
 
 ! [Reddit]
 ! - GoogleTag Frame
