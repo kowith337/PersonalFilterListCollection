@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 201908160155
+! Version: 201908172308
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -90,7 +90,7 @@ files.minecraftforge.net##.sidebar-right:has(.ad-container)
 files.minecraftforge.net##.sidebar-right:has(.ad-container-framed)
 
 ! [Pantip NEW] (as of 2019/08 site redesign)
-! - Disable user top pick and trending topics due to it's never load for my side, plus take more space unneccessay. (yet)
+! - Disable top pick and trending topics due to Bingsu subdomain was blocked for good, plus take more space unneccessay, yet.
 pantip.com##.pt-body .container .row:has(.pt-block .tooltipTagsOnTop)
 ! - Also disable BlogGang and PantipMarket, same reason as above.
 pantip.com###sidebar-container #sidebar-fixed .pt-block:has(a[title="Bloggang"])
@@ -222,10 +222,6 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ! cause promoted script to be shown and the site also get user data about it, eliminate this requests and fake sent data with
 ! 'nooptext' can solve this thing also.
 ||greasyfork.org/scripts/*/install-ping?$xmlhttprequest,important,redirect=nooptext
-
-! [Pantip] Neutralise promoted topic requests
-||pantip.com/api/forum-service/forum/get_promote_box?$xmlhttprequest,important,redirect=nooptext
-||pantip.com/api/forum-service/forum/get_promote_tag?$xmlhttprequest,important,redirect=nooptext
 
 ! [Reddit]
 ! - GoogleTag Frame
