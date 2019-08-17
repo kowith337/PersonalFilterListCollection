@@ -13,6 +13,7 @@
 
 ### I will...
 - Aim to support preventing internal ads, tracking, phone home, **zuckestions**, etc.
+  - *I'm not guarantee for desktop version about removing in-feed ad posts inject!*
 - Keep away from any attempts that **zuckest** to installing `unfriendly for your privacy` [official apps](https://play.google.com/store/apps/developer?id=Facebook).
 - Keep away from any attempts that **zuckest** to use and/or register for related products. (Instagram for good example!)
 - Keep away from any attempts that **zuckest** to follow their related products of Facebook, include related peoples under head of company.
