@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.3]
 ! Title: Enhance Facebook Username Hider for Compilation Creators
-! Version: 201903132025
+! Version: 201908192328
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -20,7 +20,7 @@ facebook.com###fb-timeline-cover-name[data-testid="profile_name_in_profile_page"
 ! Hide page name from shared posts
 facebook.com##.userContentWrapper div[data-ft] .mts .mtm span a[data-hovercard]
 
-! Hide name in shared posts where more than 2 peoples share same article
+! Hide name in shared posts where more than 2 peoples share same post or article
 ! facebook.com##div[data-ft] a[class="profileLink"]
 
 ! Hide name in comments

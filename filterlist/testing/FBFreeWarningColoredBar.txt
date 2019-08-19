@@ -1,12 +1,12 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Free Basics Warning (TopBar Colored Redesign)
-! Version: 201905061528
+! Version: 201908192328
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/testing/FBFreeWarningColoredBar.txt
+! Description: Just only redesign Facebook touch mode menu bar on the free basics domains (for now)
 
-! Note: Just only redesign Facebook touch mode menu bar on the free basics domains (for now)
 ! [Touch] They often detect this version if your browser are modern enough...
 0.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###header[data-sigil="MTopBlueBarHeader"]:style(background-color: plum !important)
 0.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###header[data-sigil="MTopBlueBarHeader"] .popoverOpen:style(background-color: mediumorchid  !important)

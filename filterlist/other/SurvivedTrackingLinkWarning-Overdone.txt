@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 201908042108
+! Version: 201908192328
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -11,8 +11,8 @@
 !              happen and you can get the real URL under the yellow triangle warning sign.
 !              However, some URLs will have multiple parameters than the legitimate one (e.g. YouTube), you may need to recombine
 !              or manually select some part of URL text that not wrapped by other things unnecessary.
-! Note: "Overdone" edition is also apply the "current tab" and "AJAX" that contains the tracked parameters, this probably make
-!       the issue about seamless navigating that use "XMLHttpRequest" to be stuck! so use at your own risk!!
+! Remark: "Overdone" edition is also apply the "current tab" and "AJAX" that contains the tracked parameters, this probably make
+!         the issue about seamless navigating that use "XMLHttpRequest" and/or "CORS" to be stuck! so use at your own risk!!
 
 ! Prevent AMP on Twitter
 ! Based on https://old.reddit.com/r/uBlockOrigin/comments/a650rk/how_can_i_block_google_amp_links/ebsye7c
