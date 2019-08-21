@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.1]
 # Title: Thai BadBait Lists (Top level only)
-# Version: 201904042052
+# Version: 201908211838
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -20,6 +20,7 @@
 0.0.0.0 mono29news.com
 0.0.0.0 nukrangnews.com
 0.0.0.0 one31news.com
+0.0.0.0 ramatipnews.com
 0.0.0.0 ratstas.com
 0.0.0.0 syoutaogou.com
 0.0.0.0 tawatnews.com
@@ -36,6 +37,7 @@
 0.0.0.0 www.mono29news.com
 0.0.0.0 www.nukrangnews.com
 0.0.0.0 www.one31news.com
+0.0.0.0 www.ramatipnews.com
 0.0.0.0 www.ratstas.com
 0.0.0.0 www.syoutaogou.com
 0.0.0.0 www.tawatnews.com
