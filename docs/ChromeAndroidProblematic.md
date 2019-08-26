@@ -3,7 +3,7 @@
 
 1. No matter that how long you've disabled **Chrome** app, if you've open **Play store** app, it will update itself and re-enable back! regardless of you've set to turn off automatic updates!!
    - Also, these apps are auto update itself without user consents and cannot be prevented! if you didn't disable **Google Play Store** before it does!!
-	 - **YouTube**
+	 - **YouTube** (can do same things like **Chrome** does, by re-enable and update app if you've disable before!)
 	 - **Google Play Store**
      - **Google Play Services**
 2. When I've complete reset **Chrome** app either via *App settings* or *ADB commands* (use `am kill`, `am force-stop`, and `pm clear` together), I've re-check app info and found **Chrome** app have **Location** permission toggled on after successfully clear everything!
