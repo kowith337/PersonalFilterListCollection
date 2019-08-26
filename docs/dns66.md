@@ -3,15 +3,19 @@
 | Provider | Features | Logging | First IP | Second IP\* |
 |----------|----------|---------|----------|-------------|
 | **Individual \/ Recommended** |  |  |  |  |  |
+| [Applied Privacy](https://appliedprivacy.net/services/dns) | [:lock_with_ink_pen:](https://doh.appliedprivacy.net/query) :closed_lock_with_key: :six: | [:negative_squared_cross_mark:](https://appliedprivacy.net/privacy-policy) | `37.252.185.232` | `2a00:63c1:a:229::3` |
 | [dns.watch](https://dns.watch) | :closed_lock_with_key: | :negative_squared_cross_mark: | `84.200.69.80` | `84.200.70.40` |
-| [Digital Courage](https://digitalcourage.de/support/zensurfreier-dns-server) |  |  | `85.214.20.141` | `2a01:238:42f6:ac00:2a29:4f7f:b6d:ef46` |
+| [Digital Courage](https://digitalcourage.de/support/zensurfreier-dns-server) | :six: |  | `85.214.20.141` | `2a01:238:42f6:ac00:2a29:4f7f:b6d:ef46` |
 | [keweon](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) [(RootCA)](https://pki.keweon.center) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :no_pedestrians: :fire: | :negative_squared_cross_mark: | `107.191.55.215` | `213.239.207.143` |
-| [BlahDNS](https://github.com/ookangzheng/blahdns) | [:lock_with_ink_pen:](https://doh-jp.blahdns.com/dns-query) :closed_lock_with_key: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `108.61.201.119` | `2001:19f0:7001:1ded:5400:01ff:fe90:945b` |
-| [DNSWarden](https://github.com/bhanupratapys/dnswarden) | [:lock_with_ink_pen:](https://doh.dnswarden.com/adblock)[²](https://doh.dnswarden.com/uncensored) :closed_lock_with_key: :no_pedestrians: | :negative_squared_cross_mark: | `116.203.35.255` | `116.203.70.156` |
-| [SecureDNS](https://securedns.eu) | [:lock_with_ink_pen:](https://doh.securedns.eu/dns-query) :closed_lock_with_key: | :negative_squared_cross_mark: | `146.185.167.43` | `2a03:b0c0:0:1010::e9a:3001` |
+| [BlahDNS](https://github.com/ookangzheng/blahdns) | [:lock_with_ink_pen:](https://doh-jp.blahdns.com/dns-query) :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `108.61.201.119` | `2001:19f0:7001:1ded:5400:01ff:fe90:945b` |
+| [DNSWarden](https://github.com/bhanupratapys/dnswarden) | [:lock_with_ink_pen:](https://doh.dnswarden.com/adblock)[²](https://doh.dnswarden.com/uncensored) :closed_lock_with_key: :six: :no_pedestrians: | :negative_squared_cross_mark: | `116.203.35.255` | `116.203.70.156` |
+| [SecureDNS](https://securedns.eu) | [:lock_with_ink_pen:](https://doh.securedns.eu/dns-query) :closed_lock_with_key: :six: | :negative_squared_cross_mark: | `146.185.167.43` | `2a03:b0c0:0:1010::e9a:3001` |
+| [Tiarap](https://doh.tiar.app) | [:lock_with_ink_pen:](https://doh.tiar.app/dns-query) :six: :no_pedestrians: | :negative_squared_cross_mark: | `174.138.21.128` | `2400:6180:0:d0::5f6e:4001` |
 | [keweon](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :no_pedestrians: :fire: | :negative_squared_cross_mark: | `176.9.62.58` | `176.9.62.62` |
+| [dns.sb](https://dns.sb) | [:lock_with_ink_pen:](https://doh.dns.sb/dns-query) :closed_lock_with_key: | [:negative_squared_cross_mark:](https://dns.sb/privacy)\* | `185.184.222.222` | `185.222.222.222` |
 | [AS250](https://twitter.com/as250) |  |  | `194.150.168.168` |  |
-| [Chaos Computer Club](https://www.ccc.de/censorship/dns-howto) |  |  | `213.73.89.122` |  |
+| [Chaos Computer Club](https://www.ccc.de/censorship/dns-howto) |  |  | `195.54.164.39` |  |
+| [CCC ClaraNet](https://www.ccc.de/censorship/dns-howto) |  |  | `212.82.225.7` | `212.82.226.212` |
 | [dns.watch IPv6](https://dns.watch) | :closed_lock_with_key: :six: | :negative_squared_cross_mark: | `2001:1608:10:25::1c04:b12f` | `2001:1608:10:25::9249:d69b` |
 | [keweon IPv6](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) [(RootCA)](https://pki.keweon.center) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: |  `2001:19f0:6401:175d::215` | `2a01:4f8:a0:8487::143` |
 | [keweon IPv6](https://forum.xda-developers.com/android/software-hacking/keweon-privacy-online-security-t3681139) | [:lock_with_ink_pen:](https://sedns.keweon.center/keweonDNS) :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `2a01:4f8:150:8023::58` | `2a01:4f8:150:8023::62` |
@@ -20,6 +24,7 @@
 |  |  |  |  |  |
 | **Regional** |  |  |  |  |
 | [BlahDNS 🇩🇪](https://github.com/ookangzheng/blahdns/#server-information) | [:lock_with_ink_pen:](https://doh-de.blahdns.com/dns-query) :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `159.69.198.101` | `2a01:4f8:1c1c:6b4b::1` |
+| [BlahDNS 🇨🇭](https://github.com/ookangzheng/blahdns/#server-information) | [:lock_with_ink_pen:](https://doh-ch.blahdns.com/dns-query) :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `2a0a:e5c0:2:2:0:c8ff:fe68:bf48` |  |
 | [keweon 🇺🇸 (Silicon Valley)](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `45.32.140.26` | `2001:19f0:ac01:639::26` |
 | [keweon 🇬🇧](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `45.32.183.39` | `2001:19f0:7402:a61::39` |
 | [keweon 🇺🇸 (Dallas)](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `45.76.57.41` | `2001:19f0:6401:9ed::41` |
@@ -31,6 +36,7 @@
 | [keweon 🇺🇸 (New Jersey)](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `45.77.144.132` | `2001:19f0:5:2962::132` |
 | [keweon 🇩🇪 (Frankfurt)](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `104.207.131.11` | `2001:19f0:6c01:61f::11` |
 | [keweon 🇮🇳](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `139.59.33.236` | `2400:6180:100:d0::30d:5001` |
+| [Tiarap 🇯🇵](https://jp.tiar.app) | [:lock_with_ink_pen:](https://jp.tiar.app/dns-query) :six: | :negative_squared_cross_mark: | `172.104.93.80` | `2400:8902::f03c:91ff:feda:c514` |
 |  |  |  |  |  |
 | **Run by corporate** |  |  |  |  |
 | [CloudFlare + APNIC](https://1.1.1.1) | [:lock_with_ink_pen:](https://cloudflare-dns.com/dns-query)[²](https://mozilla.cloudflare-dns.com/dns-query) | [:bust_in_silhouette: :watch:](https://developers.cloudflare.com/1.1.1.1/commitment-to-privacy/privacy-policy/privacy-policy) | `1.0.0.1` | `1.1.1.1` |
@@ -109,10 +115,16 @@
 |  |  |
 | **Logging** | Note: you can click emoji to view their terms (if available) |
 |  | Unspecified |
-| :negative_squared_cross_mark: | No Logging |
+| :negative_squared_cross_mark: | No Logging\* (Contain no sensitive info in logs e.g. No IP Address logging at all!) |
 | :question: | Logging terms is unclear enough |
-| :bust_in_silhouette: | Anonymous Log (e.g. Partial IP address) |
-| :person_with_pouting_face: | Identifiable Log (e.g. Full IP address, devices, hardware, etc.) |
+| :bust_in_silhouette: | Anonymous Log (e.g. Partial IP address with client country) |
+| :person_with_pouting_face: | Identifiable Log (e.g. Full IP address, client country, devices name, hardware name, etc.) |
 | :alarm_clock: | Logged permanently! |
 | :watch: | Logs will kept for specific time and will remove after... |
 | :open_file_folder: | May share logs to others (e.g. Partners, Threads watcher, etc.) |
+
+- - - - - - - - - -
+
+### Credits
+- https://github.com/DNSCrypt
+- https://github.com/curl/curl/wiki/DNS-over-HTTPS
