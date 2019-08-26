@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201908242026
+# Version: 201908242322
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -84,9 +84,9 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Facebook Hosts]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # {Block WebRTC STUN} THIS POSSIBLY BREAK MESSENGER CALLS!!
-0.0.0.0 edge-stun.facebook.com
-0.0.0.0 stun.c10r.facebook.com
-0.0.0.0 stun.facebook.com
+#0.0.0.0 edge-stun.facebook.com
+#0.0.0.0 stun.c10r.facebook.com
+#0.0.0.0 stun.facebook.com
 #
 # {Pigeon} Block as main level!
 0.0.0.0 fbpigeon.com
