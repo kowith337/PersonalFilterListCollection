@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 201908042108
+! Version: 201909021904
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -20,26 +20,18 @@
 ||*&fbclid$document,important
 ||*&gclid$document,important
 ||*&utm_campaign$document,important
+||*&utm_content$document,important
 ||*&utm_medium$document,important
 ||*&utm_source$document,important
 ||*?fbclid$document,important
 ||*?gclid$document,important
 ||*?utm_campaign$document,important
+||*?utm_content$document,important
 ||*?utm_medium$document,important
 ||*?utm_source$document,important
-||google.*/url?*&usg=*$document,important
-||google.*/url?*&ved=*$document,important
-||google.*/url?*&vet=*$document,important
-||l.facebook.com$document,important
-||l.messenger.com$document,important
-||lm.facebook.com$document,important
-||lm.messenger.com$document,important
-||youtube.com/redirect?*&redir_token=*$document,important
-||youtube.com/redirect?redir_token=*$document,important
 
 ! Internal
 ! ||facebook.com/*&__tn__=$document,important
-! ||facebook.com/*?__tn__=$document,important
 ||facebook.com/*&__xts__%5B0%5D=$document,important
 ||facebook.com/*&__xts__*=$document,important
 ||facebook.com/*&__xts__[0]=$document,important
@@ -50,6 +42,7 @@
 ||facebook.com/*&hc_ref=$document,important
 ||facebook.com/*&lst=$document,important
 ||facebook.com/*&settings_tracking=$document,important
+! ||facebook.com/*?__tn__=$document,important
 ||facebook.com/*?__xts__%5B0%5D=$document,important
 ||facebook.com/*?__xts__*=$document,important
 ||facebook.com/*?__xts__[0]=$document,important
@@ -62,6 +55,13 @@
 ||facebook.com/*?settings_tracking=$document,important
 ||facebook.com/ads/*&session_id=$document,important
 ||facebook.com/ads/*?session_id=$document,important
+||google.*/url?*&usg=*$document,important
+||google.*/url?*&ved=*$document,important
+||google.*/url?*&vet=*$document,important
+||l.facebook.com$document,important
+||l.messenger.com$document,important
+||lm.facebook.com$document,important
+||lm.messenger.com$document,important
 ||messenger.com/*&__xts__%5B0%5D=$document,important
 ||messenger.com/*&__xts__*=$document,important
 ||messenger.com/*&__xts__[0]=$document,important
@@ -86,6 +86,8 @@
 ||steamcommunity.com/*?snr=*$document,important
 ||steampowered.com/*&snr=*$document,important
 ||steampowered.com/*?snr=*$document,important
+||youtube.com/redirect?*&redir_token=*$document,important
+||youtube.com/redirect?redir_token=*$document,important
 
 ! Problematic, at your own risk!
 ||pantip.com/l/http*$document,important

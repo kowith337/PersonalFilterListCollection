@@ -3,14 +3,15 @@
 
 1. No matter that how long you've disabled **Chrome** app, if you've open **Play store** app, it will update itself and re-enable back! regardless of you've set to turn off automatic updates!!
    - Also, these apps are auto update itself without user consents and cannot be prevented! if you didn't disable **Google Play Store** before it does!!
-	    - **YouTube** (can do same things like **Chrome** does, by re-enable and update app if you've disable before!)
+     - **YouTube** (can do same things like **Chrome** does, by re-enable and update app if you've disable before!)
      - **Google Play Store**
      - **Google Play Services**
 
 2. When I've complete reset **Chrome** app either via *App settings* or *ADB commands* (use `am kill`, `am force-stop`, and `pm clear` together), I've re-check app info and found **Chrome** app have **Location** permission toggled on after successfully clear everything!
    - Personally, I think in case if everything must be reset, none of any permissions can be granted automatically!!
    - That's why some tech news said and found **Google Chrome** itself phone home user locations too often!!!
-   > None of any forks doing the same things as **Google Chrome itself** does for this (intentionally?) problem, maybe because the marketing agreement of Android :tm: and/or Chrome itself are pre-installed as system level, which have enough priviledge for doing that thing!?
+   > - None of any forks doing the same things as **Google Chrome itself** does for this (intentionally?) problem, maybe because the marketing agreement of Android :tm: and/or Chrome itself are pre-installed as system level, which have enough priviledge for doing that thing!?
+   > - Same things also happen to **`Google search`** app itself, but worst than chrome, it's will grant every permissions except `Location` if you didn't turn on device location (either GPS only or just network-based or both) yet.
 
 3. Because **Chrome** itself use internal **Manage storage** function, so...
    - The **Clear storage** button will launch app itself (via `activity shortcut`?) and have 3 buttons inside, to *clear unimportant site storage*, *clear all site storage* or *clear every data* (the last choice is means include your configuratoion in the app!)

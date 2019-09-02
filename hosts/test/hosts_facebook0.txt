@@ -1,6 +1,6 @@
 # [uMatrix 1.3.15.100]
 # Title: Facebook Zero Hosts Block (Test unit)
-# Version: 201908241308
+# Version: 201909021943
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/hosts
@@ -38,16 +38,6 @@
 0.0.0.0 internet.org
 # Resolved DNS Name - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 headers-regional.vvv.facebook.com
-0.0.0.0 z-m.c10r.facebook.com
-0.0.0.0 z-1.c10r.facebook.com
-0.0.0.0 z.c10r.facebook.com
-0.0.0.0 z-1.facebook.com
-0.0.0.0 z-m-www.facebook.com
-0.0.0.0 z-m.facebook.com
-0.0.0.0 z-p1.facebook.com
-0.0.0.0 z-p2.facebook.com
-0.0.0.0 z-p3.facebook.com
-0.0.0.0 z-p4.facebook.com
 0.0.0.0 z-1.c10r.facebook.com
 0.0.0.0 z-1.facebook.com
 0.0.0.0 z-m-www.facebook.com
@@ -151,7 +141,6 @@
 0.0.0.0 edge-z-m-mini-shv-01-ort2.facebook.com
 0.0.0.0 edge-z-m-mini-shv-01-sea1.facebook.com
 0.0.0.0 edge-z-m-mini-shv-01-syd2.facebook.com
-0.0.0.0 edge-z-mini-shv-01-mad1.facebook.com
 # Facebook Shavar Edge Z-M  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 edge-z-m-shv-01-cdg2.facebook.com
 0.0.0.0 edge-z-m-shv-01-syd1.facebook.com
@@ -236,12 +225,9 @@
 0.0.0.0 fna-fbcdn-z-p4-shv-03-fmaa1.fbcdn.net
 0.0.0.0 fna-fbcdn-z-p4-shv-04-fmaa1.fbcdn.net
 # FBCDN FNA SecureContent + Z-1 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-0.0.0.0 z-1-scontent.fbkk1-1.fna.fbcdn.net
-0.0.0.0 z-1-scontent.fbkk2-1.fna.fbcdn.net
 0.0.0.0 z-1-scontent.fbkk10-1.fna.fbcdn.net
 0.0.0.0 z-1-scontent.fmaa1-1.fna.fbcdn.net
 0.0.0.0 z-1-scontent.fmaa2-1.fna.fbcdn.net
-0.0.0.0 z-1-scontent.fmaa10-1.fna.fbcdn.net
 0.0.0.0 z-1-scontent.fpoa1-1.fna.fbcdn.net
 0.0.0.0 z-1-scontent.fpoa2-1.fna.fbcdn.net
 0.0.0.0 z-1-scontent.fpoa10-1.fna.fbcdn.net
@@ -449,11 +435,5 @@
 0.0.0.0 z-p42-instagram.fada1-1.fna.fbcdn.net
 0.0.0.0 z-p42-instagram.fada1-10.fna.fbcdn.net
 # Unknown (may be re-categorise later if have enough entry) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-0.0.0.0 edge-z-ecmp-02-ord1.facebook.com
-0.0.0.0 mqtt-z-shv-16-frc1.facebook.com
-0.0.0.0 z-1-external.fsea1-1.fna.fbcdn.net
-0.0.0.0 z-m-fbcdn-mini-shv-01-ord1.fbcdn.net
-0.0.0.0 z-m-fbcdn-shv-01-frt3.fbcdn.net
 0.0.0.0 z-p3-video-vie1-1.xx.fbcdn.net
-0.0.0.0 zero-api-slb-10-08-prn1.facebook.com
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
