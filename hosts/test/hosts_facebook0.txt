@@ -435,5 +435,6 @@
 0.0.0.0 z-p42-instagram.fada1-1.fna.fbcdn.net
 0.0.0.0 z-p42-instagram.fada1-10.fna.fbcdn.net
 # Unknown (may be re-categorise later if have enough entry) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 snaptu-z.facebook.com
 0.0.0.0 z-p3-video-vie1-1.xx.fbcdn.net
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
