@@ -1,9 +1,9 @@
 ! uMatrix: Ruleset recipes 1.0
 ! Title: Rulesets for Thai sites (alpha test)
-! Version: 201908272012
-! VersionNumber: 0.17.3
+! Version: 201909051651
+! VersionNumber: 0.18.0
 ! Maintainer: kowith337
-! Homepage: https://github.com/kowith337/PersonalFilterListCollection
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/ruleset/readme.md
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/ruleset/recipes_th.txt
 
@@ -43,7 +43,7 @@ MCOT Radio - Active Radio
 MCOT Radio - Mellow
 	mellow975.mcot.net *
 		! Mellow use FancyBox from jQuery, so I will not add for exception,
-		! judging it may show overlay annoyance, I don't know.
+		! judging it may show overlay ads and/or annoyance, I don't know.
 		referrer-spoof: _ false
 		_ ssl.p.jwpcdn.com script
 
@@ -56,26 +56,15 @@ MCOT Radio - MET
 		_ mcotn-api.mcot.net xhr
 		_ ssl.p.jwpcdn.com script
 
-MCOT Radio - News Network
-	news1005.fm *
-		referrer-spoof: _ false
-		_ cdn.mcot.net script
-		_ cdn.mcot.net xhr
-		_ mcotn-api.mcot.net xhr
-		_ ssl.p.jwpcdn.com script
-
 MCOT Radio - News Network (Fallback)
 	news1005.mcot.net *
 		referrer-spoof: _ false
 		_ ssl.p.jwpcdn.com script
 
-MCOT Radio - Thinking Radio
-	thinkingradio.net *
+MCOT Radio - Thinking Radio (Fallback)
+	thinkingradio.mcot.net *
 		referrer-spoof: _ false
-		_ cdn.mcot.net script
-		_ cdn.mcot.net xhr
-		_ mcotn-api.mcot.net xhr
-		_ ssl.p.jwpcdn.com script
+		_ cdn.jwplayer.com script
 
 MCOT Radio - Luktung Mahanakorn
 	ltmfm95.mcot.net *
@@ -96,3 +85,7 @@ Sanook! Music (aka. Joox)
 Thairath
 	thairath.co.th *
 		_ cdn.byteark.com script
+
+This Is Game (TH)
+	thisisgamethailand.com *
+		_ cdn.tigthai.com script
