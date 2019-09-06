@@ -1,6 +1,6 @@
-! uMatrix: Ruleset recipes 1.0
+! uMatrix: Ruleset recipes 1.4.0
 ! Title: Self Custom Ruleset
-! Version: 201903132027
+! Version: 201909052214
 ! VersionNumber: 0.32.1
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -13,7 +13,8 @@ Gelbooru
 		!       something that really need and prevent unwanted connections,
 		!       not for unbreak antiuser tactics that their made.
 		! Note2: I won't turn on Google reCaptcha by default, you can turn it
-		!        on with default recipe that already provided by uMatrix.
+		!        on with default recipe that already provided by uMatrix
+		!        or use my recipe that allow workers (Dangerous!)
 		_ 1st-party script
 		_ ajax.googleapis.com script
 		_ maxcdn.bootstrapcdn.com script

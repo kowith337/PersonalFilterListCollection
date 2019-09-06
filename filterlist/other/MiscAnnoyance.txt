@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 201908172308
+! Version: 201909052153
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -84,6 +84,10 @@ youtube.com##ytd-consent-bump-renderer
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [GitHub]
 github.com##.js-notice:has(.js-dismiss)
+
+! [Google]
+! - Remove UK consent overlay
+google.*##g-bottom-sheet[jscontroller] div[role="dialog"]:has(div[jscontroller][data-ved] img[src*="consent.google.com/status?"])
 
 ! [Minecraft Forge]
 files.minecraftforge.net##.sidebar-right:has(.ad-container)
