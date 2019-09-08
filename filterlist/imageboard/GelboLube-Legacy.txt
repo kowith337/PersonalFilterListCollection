@@ -89,6 +89,12 @@ gelbooru.com###navbar ul.nav li:has(a[href*="moneygrubbingwhore.com"])
 gelbooru.com###navbar ul.nav li:has(a[href*="gydadc.com"])
 gelbooru.com###navbar ul.nav li:has(a[href*="thedoujin.com"])
 
+! 10. Remove blur overlay for images requiring an account
+gelbooru.com##body img:style(filter:none !important;)
+
+! 11. Remove Twitter shilling
+gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
+
 ! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. [Prequel] Block Every videos, subdocs and scripts (See below for what things could be exclude)
 ||gelbooru.com$media
