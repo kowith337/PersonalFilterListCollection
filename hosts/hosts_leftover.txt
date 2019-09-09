@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201909080854
+# Version: 201909092258
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -291,6 +291,7 @@
 0.0.0.0 visitor-analytics.io
 0.0.0.0 visualwebsiteoptimizer.com
 0.0.0.0 waust.at
+0.0.0.0 xm.com
 0.0.0.0 yengo.com
 #
 # [Generic Sublevel]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
