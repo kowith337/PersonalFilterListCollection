@@ -1,8 +1,8 @@
 [uBlock Origin 1.16.7.2]
 ! Title: GelboLube (Firefox Legacy) [Freezing]
-! Version: 201906212241
+! Version: 201909092012
 ! Expires: 2 days
-! Author: kowith337
+! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/legacy/gelbolube.txt
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/imageboard
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/imageboard/GelboLube-Legacy.txt
@@ -89,10 +89,7 @@ gelbooru.com###navbar ul.nav li:has(a[href*="moneygrubbingwhore.com"])
 gelbooru.com###navbar ul.nav li:has(a[href*="gydadc.com"])
 gelbooru.com###navbar ul.nav li:has(a[href*="thedoujin.com"])
 
-! 10. Remove blur overlay for images requiring an account
-gelbooru.com##body img:style(filter:none !important;)
-
-! 11. Remove Twitter shilling
+! 10. Remove Twitter shilling
 gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 
 ! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -285,8 +282,9 @@ gelbooru.com##+js(set-constant.js, ExoDetector, noopfunc)
 gelbooru.com##+js(set-constant.js, adtoniq, noopfunc)
 
 ! CSS Re-design / Mobile Improvement  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space
-! almost half of screen from top, this will surely conflict when you request desktop view or when you're already use desktop browser.
+! 1. Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space
+!    almost half of screen from top, this will surely conflict when you request desktop view or when you're already use desktop
+!    browser.
 gelbooru.com###navbar .nav li a:style(padding-left: 5px !important; padding-right: 5px !important)
 gelbooru.com##.navbar #navbar2 li a:style(padding-left: 5px !important; padding-right: 5px !important)
 gelbooru.com##.navbar#submenu #navbar2 .navbar-nav:style(direction:rtl !important)
@@ -296,6 +294,9 @@ gelbooru.com##.navbar-header .navbar-brand:style(font-size: 12px !important)
 gelbooru.com##.navbar.navbar-default .navbar-header button.navbar-toggle:style(float:left !important; margin-left: 10px !important; margin-right: 0px !important)
 gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 ! gelbooru.com###post-view #right-col div #image[src*="sample"]:style(width: 100% !important)
+
+! 2. Remove blur overlay for images requiring an account
+gelbooru.com##body img:style(filter:none !important;)
 
 ! Block then Redirect - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Experimental for replace a dummy script, frame, text, etc.
@@ -337,20 +338,3 @@ gelbooru.com##script:contains(trw_domain)
 !#if !env_mobile
 gelbooru.com##.alert-info:has(a[href*="?page=ihnt"])
 !#endif
-
-! ---------------------------------------------------- TheDoujin Support ------------------------------------------------------ !
-! This aim to re-support TheDoujin to hide ads and prevent connections to ads and tracking servers, although this site have less
-! connections than Gelbooru and can be easily hide ads by blocking unwanted functions...
-||exoclick.com$domain=thedoujin.com,important
-||exosrv.com$domain=thedoujin.com,important
-||google-analytics.com$domain=thedoujin.com,important
-||thedoujin.com/*.php?$~document,~inline-script,~xmlhttprequest
-||thedoujin.com/assets/*/*.js$~script,important
-@@||ajax.googleapis.com/ajax/libs/jquery*$script,domain=thedoujin.com
-@@||bootstrapcdn.com/bootstrap/*$script,domain=thedoujin.com
-@@||thedoujin.com/assets/*/*.js$script,first-party
-thedoujin.com##script:inject(abort-on-property-write.js, ExoLoader)
-thedoujin.com##script:inject(abort-on-property-write.js, addZone)
-thedoujin.com##script:inject(abort-on-property-write.js, serve)
-thedoujin.com##script:contains(ExoLoader.addZone)
-thedoujin.com##script:contains(ExoLoader.serve)
