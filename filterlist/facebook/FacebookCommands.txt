@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Modules Commands List
-! Version: 201908092036
+! Version: 201909102232
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -111,6 +111,7 @@
 ||facebook.com/*?modules=EntstreamAttachmentRelatedShare$important
 ||facebook.com/*?modules=ExternalTrackingTag$important
 ||facebook.com/*?modules=FBLynxWrapper$important
+||facebook.com/*?modules=FBPaymentsPerfLogger$important
 ||facebook.com/*?modules=FBStoriesLoggingHelper$important
 ||facebook.com/*?modules=FbFeedAttachmentRelatedShare$important
 ||facebook.com/*?modules=FeedAdsClickLogger$important
