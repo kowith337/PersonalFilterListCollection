@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 201907082139
+! Version: 201909102207
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -37,6 +37,9 @@ facebook.com##.userContentWrapper div[data-ft] .mtm a[ajaxify^="/games/quicksilv
 
 ! Top zuckested pages to like (or batch remove via scriptlets) is survived again, expected ads code also survived as well.
 facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[data-referrer] .stat_elem:has(div[class].likeButton span button.PageLikeButton)
+
+! Remove "Top Fan" label and it's icon! (Only from comments view)
+facebook.com##div[data-testid^="UFI2Comment/root"] div[data-testid^="UFI2Comment/body"] a:has(img[src^="/images/assets"][src*="/facebook_icons/diamond_filled"])
 
 ! [Facebook Feature Phone Basic]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 ! Finally, weird space between comments also come to this version, freaking cool!!
@@ -82,8 +85,11 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 ! Try to rearrange new top bar that have search bar placeholder overlap, especially when you're viewing stories...
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-stories div[id*="schedulable-graph-search"]:style(display: none !important; position: unset !important)
 
-! Try remove "More Zuckestions" when viewing group discover (This may break everything in group discover page)
-0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-groups #root div[class] > div div[class] > div[class]:has(div a[href="#"] div[class*="clearfix"])
+! Try remove "More Zuckestions" when viewing group discover (This may break everything in group discover page!)
+0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##div[class^="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div a[href="#"] div[class*="clearfix"])
+
+! Try remove "Top Fan" (Only work for english language for now)
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##div[data-sigil="comment"] div[class] > a[href] div[class]:has-text(Top Fan)
 
 ! Remove non-same origin meun out of list (affect Pages Menu [your pages, liked, zuckested], Gaming, Explore, Fundarise, Instant Games)
 ! - New Bookmarks (visit https://touch.facebook.com/bookmarks)
