@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Facebook Zuckestion Killer
-! Version: 201909102022
+! Version: 201909102138
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -364,10 +364,10 @@ m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[ro
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href="/pages/"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href^="fb://offer"]
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href^="fb://search"]
-m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=212609529249058"]
-m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=234383826903707"]
-m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=470739743275782"]
-m.facebook.com,touch.facebook.com##.-hardstate-groups #root[role="main"] div > div a[href^="/groups/?"][href*="discover_category_id=1801122086782345"]
+m.facebook.com,touch.facebook.com##div[class^="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=212609529249058"]
+m.facebook.com,touch.facebook.com##div[class^="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=234383826903707"]
+m.facebook.com,touch.facebook.com##div[class^="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=470739743275782"]
+m.facebook.com,touch.facebook.com##div[class^="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=1801122086782345"]
 m.facebook.com,touch.facebook.com##.appCenterSimilarApps
 m.facebook.com,touch.facebook.com##.story_body_container header > div a[href*="package=com.facebook.lite"]
 m.facebook.com,touch.facebook.com##article._mFeedEgoSuggestionsBoatload__list
@@ -537,8 +537,15 @@ m.facebook.com,touch.facebook.com##.-hardstate-ads #root div[class] article div[
 m.facebook.com,touch.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href^="/pages/"]:has(div:has-text(/^Suggested/))
 m.facebook.com,touch.facebook.com##.-hardstate-gaming #root div[class][data-store-id] > div[class] > :has(a[href^="fb://gaming/"])
 m.facebook.com,touch.facebook.com##.-hardstate-gaming #root div[class][data-store-id] > section:has(div[data-store-id] div[class][style^="flex-grow"] .scrollArea)
-m.facebook.com,touch.facebook.com##.-hardstate-groups #root div[class] > div div[class] > div[class]:has(div[class] a[href^="/groups_browse/see_all/?"][href*="212609529249058"])
-m.facebook.com,touch.facebook.com##.-hardstate-groups #root div[class] > div div[class] > div[class]:has(div[class] a[href^="/groups_browse/see_all/?"][href*="234383826903707"])
+m.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="212609529249058"])
+m.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="234383826903707"])
+m.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="470739743275782"])
+m.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="1801122086782345"])
+m.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href^="/groups_browse/"][href*="212609529249058"])
+m.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href^="/groups_browse/"][href*="234383826903707"])
+m.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href^="/groups_browse/"][href*="470739743275782"])
+m.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href^="/groups_browse/"][href*="1801122086782345"])
+m.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href^="/groups_browse/interests/"])
 m.facebook.com,touch.facebook.com##.-hardstate-watch #root div[class] > div[id][class]:has(.story_body_container header div[class] a[href*="tracking_source.video_home"][href*="originated_from_recommendation"])
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a span:has-text(Instagram)))
 m.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/ads/create/"]))
