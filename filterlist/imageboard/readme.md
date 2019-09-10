@@ -1,8 +1,8 @@
 # Freezing State Notice:
 
-The site owner decided to lockdown itself by limited viewing some tags for registered users only, I cannot predict that their owners team will easily know that you're still using content blocker, and probably in the worst case senario, they will be disable or terminate your accounts and/or blocking IP address for prevent attempts to revisit their site while you're still activating privacy protection tools, either hosts files, content blockers, custom stylesheet, custom scripts, etc.
+The `????????????????` site owner and their team decided to lockdown themselve by limited viewing some tags and images for registered users only, I cannot predict that their owners team will easily know that you're still using content blocker, and probably in the worst case senario, they will be disable or terminate your accounts and/or blocking IP address for prevent attempts to revisit their site while you're still activating privacy protection tools, either hosts files, content blockers, custom stylesheet, custom scripts, etc.
 
-As for your safe state, try looking to other similar services that not aggressively violate your privacy just for their profits like that site!
+As for your safe state and if your privacy is matter enough, try looking to other similar services that not aggressively violate your privacy just for their profits like that site itself!
 
 -----
 
@@ -14,7 +14,7 @@ As for your safe state, try looking to other similar services that not aggressiv
 | Chromium / Firefox Quantum | [:cat:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fimageboard%2FGelboLube.txt&amp;title=GelboLube%20for%20Chromium%20or%20Firefox%20WebExt) [:pill:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgitlab.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fimageboard%2FGelboLube.txt&amp;title=GelboLube%20for%20Chromium%20or%20Firefox%20WebExt) | [:cat:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/imageboard/GelboLube.txt) [:pill:](https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/imageboard/GelboLube.txt) |
 | Firefox Legacy (XUL) | [:cat:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fimageboard%2FGelboLube-Legacy.txt&amp;title=GelboLube%20for%20Firefox%20Legacy) [:pill:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgitlab.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fimageboard%2FGelboLube-Legacy.txt&amp;title=GelboLube%20for%20Firefox%20Legacy) | [:cat:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/imageboard/GelboLube-Legacy.txt) [:pill:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/imageboard/GelboLube-Legacy.txt) |
 
-This aim to eliminate every ads on Gelbooru without allowing any ads, even it's served or generated from site itself.
+This aim to eliminate every ads on `Gelbooru` without allowing any ads, even it's served or generated from site itself.
 
 But this list was designed to use with **uBlock Origin** only, I strongly **not support AdBlockPlus**.
 
@@ -28,4 +28,4 @@ I recommended to use other lists, such as Hosts File, AdGuard or any lists that 
 
 > meaning it's not allow third party resources to load for unbreak, such as allow ads script from `ExoClick` to prevent **[Plan B](https://github.com/kowith337/GelboLube/wiki/Blocking-rule-explanation#ublock-resource-injection-rule)** method to serve ads.
 
-This will work greater if you use with **uBo + Firefox** (or any fork that's suitable to you, such as CyberFox, IceCat, Pale moon, WaterFox)
+This will work greater if you use with **uBo + Firefox** (or any fork that's suitable to you, such as ABrowser, CyberFox, IceCat, Pale Moon, WaterFox, etc.)
