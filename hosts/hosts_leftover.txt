@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201909092258
+# Version: 201909131859
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -344,6 +344,7 @@
 0.0.0.0 avd.innity.net
 0.0.0.0 bam.nr-data.net
 0.0.0.0 bingsu.pantip.com
+0.0.0.0 bingsu.devpantip.com
 0.0.0.0 blog.cutedev.net
 0.0.0.0 byteark-analytics.thairath.co.th
 0.0.0.0 c.aaxads.com
