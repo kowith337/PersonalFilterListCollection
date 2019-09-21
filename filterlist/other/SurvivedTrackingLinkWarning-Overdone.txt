@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 201909021905
+! Version: 201909211540
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -21,16 +21,10 @@
 ! Common Extrenal
 ||*&fbclid$document,subdocument,xmlhttprequest,important
 ||*&gclid$document,subdocument,xmlhttprequest,important
-||*&utm_campaign$document,subdocument,xmlhttprequest,important
-||*&utm_content$document,subdocument,xmlhttprequest,important
-||*&utm_medium$document,subdocument,xmlhttprequest,important
-||*&utm_source$document,subdocument,xmlhttprequest,important
+||*&utm_*=$document,subdocument,xmlhttprequest,important
 ||*?fbclid$document,subdocument,xmlhttprequest,important
 ||*?gclid$document,subdocument,xmlhttprequest,important
-||*?utm_campaign$document,subdocument,xmlhttprequest,important
-||*?utm_content$document,subdocument,xmlhttprequest,important
-||*?utm_medium$document,subdocument,xmlhttprequest,important
-||*?utm_source$document,subdocument,xmlhttprequest,important
+||*?utm_*=$document,subdocument,xmlhttprequest,important
 
 ! Internal
 ||facebook.com/*&__tn__=$document,subdocument,important
@@ -55,6 +49,8 @@
 ||facebook.com/*&hc_ref=$xmlhttprequest
 ||facebook.com/*&lst=$document,subdocument,important
 ||facebook.com/*&lst=$xmlhttprequest
+||facebook.com/*&referrer=$document,subdocument,important
+||facebook.com/*&referrer=$xmlhttprequest
 ||facebook.com/*&settings_tracking=$document,subdocument,important
 ||facebook.com/*&settings_tracking=$xmlhttprequest
 ||facebook.com/*?__tn__=$document,subdocument,important
@@ -79,6 +75,8 @@
 ||facebook.com/*?hc_ref=$xmlhttprequest
 ||facebook.com/*?lst=$document,subdocument,important
 ||facebook.com/*?lst=$xmlhttprequest
+||facebook.com/*?referrer=$document,subdocument,important
+||facebook.com/*?referrer=$xmlhttprequest
 ||facebook.com/*?settings_tracking=$document,subdocument,important
 ||facebook.com/*?settings_tracking=$xmlhttprequest
 ||facebook.com/ads/*&session_id=$document,subdocument,important
@@ -133,6 +131,8 @@
 ||messenger.com/*&hc_ref=$xmlhttprequest
 ||messenger.com/*&lst=$document,subdocument,important
 ||messenger.com/*&lst=$xmlhttprequest
+||messenger.com/*&referrer=$document,subdocument,important
+||messenger.com/*&referrer=$xmlhttprequest
 ||messenger.com/*&settings_tracking=$document,subdocument,important
 ||messenger.com/*&settings_tracking=$xmlhttprequest
 ||messenger.com/*?__tn__=$document,subdocument,important
@@ -155,6 +155,8 @@
 ||messenger.com/*?hc_ref=$xmlhttprequest
 ||messenger.com/*?lst=$document,subdocument,important
 ||messenger.com/*?lst=$xmlhttprequest
+||messenger.com/*?referrer=$document,subdocument,important
+||messenger.com/*?referrer=$xmlhttprequest
 ||messenger.com/*?settings_tracking=$document,subdocument,important
 ||messenger.com/*?settings_tracking=$xmlhttprequest
 ||steamcommunity.com/*&snr=*$document,subdocument,xmlhttprequest,important

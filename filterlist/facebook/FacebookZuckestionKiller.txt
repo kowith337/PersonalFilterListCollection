@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Facebook Zuckestion Killer
-! Version: 201909202012
+! Version: 201909211528
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -339,6 +339,7 @@ m.facebook.com,mbasic.facebook.com###m_loginbar_reg_button
 m.facebook.com,mbasic.facebook.com###m_newsfeed_stream div > div[data-ft*="saved_for_later"]
 m.facebook.com,mbasic.facebook.com###root table > div table > a[href*="freebasics.com"]
 m.facebook.com,mbasic.facebook.com##div[id^="u_0_"][data-ft*="ego_id"]
+m.facebook.com,mbasic.facebook.com##div[role="article"] table td a[href^="/messenger-destination/cta/?"]
 m.facebook.com,mbasic.facebook.com##root div[data-ft][data-xt*="sponsored"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###MNewsFeed section article[data-store*="originated_from_recommendation"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###header #MBackNavBar

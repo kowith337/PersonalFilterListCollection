@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 201909021904
+! Version: 201909211540
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -19,16 +19,10 @@
 ! Common Extrenal
 ||*&fbclid$document,important
 ||*&gclid$document,important
-||*&utm_campaign$document,important
-||*&utm_content$document,important
-||*&utm_medium$document,important
-||*&utm_source$document,important
+||*&utm_*=$document,important
 ||*?fbclid$document,important
 ||*?gclid$document,important
-||*?utm_campaign$document,important
-||*?utm_content$document,important
-||*?utm_medium$document,important
-||*?utm_source$document,important
+||*?utm_*=$document,important
 
 ! Internal
 ! ||facebook.com/*&__tn__=$document,important
@@ -41,6 +35,7 @@
 ||facebook.com/*&fref=$document,important
 ||facebook.com/*&hc_ref=$document,important
 ||facebook.com/*&lst=$document,important
+||facebook.com/*&referrer=$document,important
 ||facebook.com/*&settings_tracking=$document,important
 ! ||facebook.com/*?__tn__=$document,important
 ||facebook.com/*?__xts__%5B0%5D=$document,important
@@ -52,6 +47,7 @@
 ||facebook.com/*?fref=$document,important
 ||facebook.com/*?hc_ref=$document,important
 ||facebook.com/*?pn_ref=$document,important
+||facebook.com/*?referrer=$document,important
 ||facebook.com/*?settings_tracking=$document,important
 ||facebook.com/ads/*&session_id=$document,important
 ||facebook.com/ads/*?session_id=$document,important
@@ -71,6 +67,7 @@
 ||messenger.com/*&fref=$document,important
 ||messenger.com/*&hc_ref=$document,important
 ||messenger.com/*&lst=$document,important
+||messenger.com/*&referrer=$document,important
 ||messenger.com/*&settings_tracking=$document,important
 ||messenger.com/*?__xts__%5B0%5D=$document,important
 ||messenger.com/*?__xts__*=$document,important
@@ -81,6 +78,7 @@
 ||messenger.com/*?fref=$document,important
 ||messenger.com/*?hc_ref=$document,important
 ||messenger.com/*?pn_ref=$document,important
+||messenger.com/*?referrer=$document,important
 ||messenger.com/*?settings_tracking=$document,important
 ||steamcommunity.com/*&snr=*$document,important
 ||steamcommunity.com/*?snr=*$document,important
