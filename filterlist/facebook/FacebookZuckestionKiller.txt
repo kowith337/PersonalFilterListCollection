@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Facebook Zuckestion Killer
-! Version: 201909211528
+! Version: 201909251254
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -333,14 +333,14 @@ facebook.com##div[role="navigation"] > div a[href^="/groups/?"][href*="discover_
 facebook.com##div[role="navigation"] > div a[href^="/groups/?"][href*="discover_category_id=470739743275782"]
 facebook.com##div[role="navigation"] > div a[href^="/groups/?"][href*="discover_category_id=1801122086782345"]
 facebook.com##iframe[id^="fbsbx-sig-iframe-"]
-m.facebook.com,mbasic.facebook.com###bookmarkmenu table td a[href*="freebasics.com"]
-m.facebook.com,mbasic.facebook.com###m_loginbar_login_button
-m.facebook.com,mbasic.facebook.com###m_loginbar_reg_button
-m.facebook.com,mbasic.facebook.com###m_newsfeed_stream div > div[data-ft*="saved_for_later"]
-m.facebook.com,mbasic.facebook.com###root table > div table > a[href*="freebasics.com"]
-m.facebook.com,mbasic.facebook.com##div[id^="u_0_"][data-ft*="ego_id"]
-m.facebook.com,mbasic.facebook.com##div[role="article"] table td a[href^="/messenger-destination/cta/?"]
-m.facebook.com,mbasic.facebook.com##root div[data-ft][data-xt*="sponsored"]
+d.facebook.com,m.facebook.com,mbasic.facebook.com###bookmarkmenu table td a[href*="freebasics.com"]
+d.facebook.com,m.facebook.com,mbasic.facebook.com###m_loginbar_login_button
+d.facebook.com,m.facebook.com,mbasic.facebook.com###m_loginbar_reg_button
+d.facebook.com,m.facebook.com,mbasic.facebook.com###m_newsfeed_stream div > div[data-ft*="saved_for_later"]
+d.facebook.com,m.facebook.com,mbasic.facebook.com###root table > div table > a[href*="freebasics.com"]
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[id^="u_0_"][data-ft*="ego_id"]
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[role="article"] table td a[href^="/messenger-destination/cta/?"]
+d.facebook.com,m.facebook.com,mbasic.facebook.com##root div[data-ft][data-xt*="sponsored"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###MNewsFeed section article[data-store*="originated_from_recommendation"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###header #MBackNavBar
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###root #MRoot span[data-top-of-feed-unit-type^="megaphone"]
@@ -370,10 +370,6 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com##.-hardstate-bookmarks #ro
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href="/pages/"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href^="fb://offer"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href^="fb://search"]
-m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[class^="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=212609529249058"]
-m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[class^="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=234383826903707"]
-m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[class^="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=470739743275782"]
-m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[class^="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=1801122086782345"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##.appCenterSimilarApps
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##.story_body_container header > div a[href*="package=com.facebook.lite"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##article._mFeedEgoSuggestionsBoatload__list
@@ -382,6 +378,10 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com##article[data-ft][data-xt*
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##article[data-store*="is_sponsored.1"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##article[data-store*="quick_promotion_id"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##article[data-xt*="is_sponsored.1"]
+m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[class^="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=212609529249058"]
+m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[class^="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=234383826903707"]
+m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[class^="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=470739743275782"]
+m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[class^="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=1801122086782345"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[data-sigil="comment"] div[class] > div[data-sigil*="m-inline-reply-compose"] div[data-sigil="m-conversation-guide"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[data-store*="mobile_page_contextual_recommendations"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[id^="composer"] div[data-sigil="m-conversation-guide"]
@@ -459,49 +459,49 @@ facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .mtm:has(div .uiLis
 facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .userContentWrapper .mtm .mtm:has(ul.uiList:has(a[href*="/services"]))
 facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"]:has(div ul.uiList:has(li[data-ft*="ego_id"]))
 facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
-m.facebook.com,mbasic.facebook.com###friends_center_main div:has(table tr:has(td a[href*="pymk_funnel_data"]))
-m.facebook.com,mbasic.facebook.com###m_group_stories_container div:has(div a[href*="/findgroups/"])
-m.facebook.com,mbasic.facebook.com###m_newsfeed_stream div div[data-ft]:has(div:has(a[href^="/qp/action/redirect/"]))
-m.facebook.com,mbasic.facebook.com###m_newsfeed_stream div[data-ft] > div a[href*="/mobile/friends/add_friend.php?"]
-m.facebook.com,mbasic.facebook.com###objects_container #root table td div > div:has(a[href*="freebasics.com"])
-m.facebook.com,mbasic.facebook.com###objects_container #root table td div > div:has(a[href^="/zero/toggle/enable/"])
-m.facebook.com,mbasic.facebook.com###objects_container #root table td div > div:has(a[href^="http://0.freebasics.com/?ref"])
-m.facebook.com,mbasic.facebook.com###objects_container #root table td div > div:has(a[href^="http://free.facebook.com/"])
-m.facebook.com,mbasic.facebook.com###objects_container #root table td div > div:has(a[href^="https://0.freebasics.com/?ref"])
-m.facebook.com,mbasic.facebook.com###objects_container #root table td div > div:has(a[href^="https://free.facebook.com/"])
-m.facebook.com,mbasic.facebook.com###root #bookmarkmenu table:has(a[href^="/findfriends/browser/"])
-m.facebook.com,mbasic.facebook.com###root div div:has(div[id^="more_item_"]:has(a[href^="/findfriends/browser/?"]))
-m.facebook.com,mbasic.facebook.com###root div:has(table td a[href*="/collapse/"])
-m.facebook.com,mbasic.facebook.com###root div[data-ft]:has(a[href*="netego_suggestion"])
-m.facebook.com,mbasic.facebook.com###root table div:has(div[id^="page_suggestion"]:has(div a[href*="&origin=mobile_page_browser&"]))
-m.facebook.com,mbasic.facebook.com###root table td > div:has-text(/^Suggested/):has(ul li:has(table))
-m.facebook.com,mbasic.facebook.com###root table[role] div > div:has(a[href*="facebook.com/click.php?redir_url"])
-m.facebook.com,mbasic.facebook.com###sub_profile_pic_content div > div:has(table a[href*="/search/"])
-m.facebook.com,mbasic.facebook.com###sub_profile_pic_content div > div:has(table[role]:has(td div:has-text(/^People also like/)))
-m.facebook.com,mbasic.facebook.com###sub_profile_pic_content div div[class] > :has(div[id][class] table[role="presentation"] div:has-text(/^Related/))
-m.facebook.com,mbasic.facebook.com###viewport #root div:has(h3):has(span a[href^="/dd/greeting/mbasic/more/tapped"])
-m.facebook.com,mbasic.facebook.com###viewport #root div[data-ft]:has(h3:has-text(Facebook)):has(a[href^="/netego/redirect/"])
-m.facebook.com,mbasic.facebook.com###viewport #root table td div div:has(a[href^="/lite/?loc_ref"])
-m.facebook.com,mbasic.facebook.com###viewport div > :has(table[role="presentation"]:has(td a[href^="/qp/action/redirect/?"]))
-m.facebook.com,mbasic.facebook.com###viewport div > div:has(a[href^="/download.php"])
-m.facebook.com,mbasic.facebook.com###viewport div[class] > table[role]:has(td a[href^="/a/language.php?"][href*="ref_component=mbasic_footer"])
-m.facebook.com,mbasic.facebook.com##div[data-ft] > div > div:has(span a[href*="/boosted_post/"])
-m.facebook.com,mbasic.facebook.com##div[data-ft] div:has(table a[href*="mbasic_feed_post_like_chaining"])
-m.facebook.com,mbasic.facebook.com##div[data-ft] div:has(table a[href*="mbasic_feed_share_like_chaining"])
-m.facebook.com,mbasic.facebook.com##div[data-ft]:has(a[href*="[is_sponsored]=1"])
-m.facebook.com,mbasic.facebook.com##div[data-ft]:has(a[href*="is_sponsored=1"])
-m.facebook.com,mbasic.facebook.com##div[data-ft]:has(div a[href*="/friends/center/"])
-m.facebook.com,mbasic.facebook.com##div[data-ft]:has(div a[href*="/groups/?ref=category_discover_landing"])
-m.facebook.com,mbasic.facebook.com##div[data-ft]:has(span:has-text(/Sponsored/))
-m.facebook.com,mbasic.facebook.com##div[data-ft]:has(table td div:has(a[href*="origin=feed_pyml"]))
-m.facebook.com,mbasic.facebook.com##div[id^="u_0_"] table:has(td a[href^="/profilepicframes/"])
-m.facebook.com,mbasic.facebook.com##div[role="article"] div:has(table a[href*="mbasic_feed_post_like_chaining"])
-m.facebook.com,mbasic.facebook.com##div[role="article"] div:has(table a[href*="mbasic_feed_share_like_chaining"])
-m.facebook.com,mbasic.facebook.com##div[role="article"] table[role="presentation"]:has(td a[href^="/profilepicframes"])
-m.facebook.com,mbasic.facebook.com##div[role="article"]:has(div a[href*="/friends/center/"])
-m.facebook.com,mbasic.facebook.com##div[role="article"]:has(iframe[src^="/xti.php?"])
-m.facebook.com,mbasic.facebook.com##div[role="article"]:has(span:has-text(/Sponsored/))
-m.facebook.com,mbasic.facebook.com##table td#mEventsDashboard #events_dashboard_activity_feed:has(a[href*="suggestion_feed_unit"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###friends_center_main div:has(table tr:has(td a[href*="pymk_funnel_data"]))
+d.facebook.com,m.facebook.com,mbasic.facebook.com###m_group_stories_container div:has(div a[href*="/findgroups/"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###m_newsfeed_stream div div[data-ft]:has(div:has(a[href^="/qp/action/redirect/"]))
+d.facebook.com,m.facebook.com,mbasic.facebook.com###m_newsfeed_stream div[data-ft] > div a[href*="/mobile/friends/add_friend.php?"]
+d.facebook.com,m.facebook.com,mbasic.facebook.com###objects_container #root table td div > div:has(a[href*="freebasics.com"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###objects_container #root table td div > div:has(a[href^="/zero/toggle/enable/"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###objects_container #root table td div > div:has(a[href^="http://0.freebasics.com/?ref"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###objects_container #root table td div > div:has(a[href^="http://free.facebook.com/"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###objects_container #root table td div > div:has(a[href^="https://0.freebasics.com/?ref"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###objects_container #root table td div > div:has(a[href^="https://free.facebook.com/"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###root #bookmarkmenu table:has(a[href^="/findfriends/browser/"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###root div div:has(div[id^="more_item_"]:has(a[href^="/findfriends/browser/?"]))
+d.facebook.com,m.facebook.com,mbasic.facebook.com###root div:has(table td a[href*="/collapse/"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###root div[data-ft]:has(a[href*="netego_suggestion"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###root table div:has(div[id^="page_suggestion"]:has(div a[href*="&origin=mobile_page_browser&"]))
+d.facebook.com,m.facebook.com,mbasic.facebook.com###root table td > div:has-text(/^Suggested/):has(ul li:has(table))
+d.facebook.com,m.facebook.com,mbasic.facebook.com###root table[role] div > div:has(a[href*="facebook.com/click.php?redir_url"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###sub_profile_pic_content div > div:has(table a[href*="/search/"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###sub_profile_pic_content div > div:has(table[role]:has(td div:has-text(/^People also like/)))
+d.facebook.com,m.facebook.com,mbasic.facebook.com###sub_profile_pic_content div div[class] > :has(div[id][class] table[role="presentation"] div:has-text(/^Related/))
+d.facebook.com,m.facebook.com,mbasic.facebook.com###viewport #root div:has(h3):has(span a[href^="/dd/greeting/mbasic/more/tapped"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###viewport #root div[data-ft]:has(h3:has-text(Facebook)):has(a[href^="/netego/redirect/"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###viewport #root table td div div:has(a[href^="/lite/?loc_ref"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###viewport div > :has(table[role="presentation"]:has(td a[href^="/qp/action/redirect/?"]))
+d.facebook.com,m.facebook.com,mbasic.facebook.com###viewport div > div:has(a[href^="/download.php"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###viewport div[class] > table[role]:has(td a[href^="/a/language.php?"][href*="ref_component=mbasic_footer"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[data-ft] > div > div:has(span a[href*="/boosted_post/"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[data-ft] div:has(table a[href*="mbasic_feed_post_like_chaining"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[data-ft] div:has(table a[href*="mbasic_feed_share_like_chaining"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[data-ft]:has(a[href*="[is_sponsored]=1"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[data-ft]:has(a[href*="is_sponsored=1"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[data-ft]:has(div a[href*="/friends/center/"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[data-ft]:has(div a[href*="/groups/?ref=category_discover_landing"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[data-ft]:has(span:has-text(/Sponsored/))
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[data-ft]:has(table td div:has(a[href*="origin=feed_pyml"]))
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[id^="u_0_"] table:has(td a[href^="/profilepicframes/"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[role="article"] div:has(table a[href*="mbasic_feed_post_like_chaining"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[role="article"] div:has(table a[href*="mbasic_feed_share_like_chaining"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[role="article"] table[role="presentation"]:has(td a[href^="/profilepicframes"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[role="article"]:has(div a[href*="/friends/center/"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[role="article"]:has(iframe[src^="/xti.php?"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[role="article"]:has(span:has-text(/Sponsored/))
+d.facebook.com,m.facebook.com,mbasic.facebook.com##table td#mEventsDashboard #events_dashboard_activity_feed:has(a[href*="suggestion_feed_unit"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div div[data-store*="share_id"] .story_body_container div[data-ft] div:has(.scrollArea:has(a[href*="/services?"]))
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div:has(.scrollArea:has(a[href^="/commerce/products/"]))
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div[data-store*="share_id"] .story_body_container div div:has(.scrollArea:has(a[href^="/commerce/products/"]))
@@ -597,14 +597,13 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com##section article:has(.scro
 ! DOM Hiding - Level 3: Same as level 2, but include :not
 ! Note: some rules still results false positive, e.g. remove panel that zuckest to download 'Facebook Lite', but it also
 !       accidentally hide everything when viewing photo at first time of session.
-m.facebook.com,mbasic.facebook.com###viewport #root div:not([id^="MPhoto"]) > table[role] tbody:has(a[href^="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
-m.facebook.com,mbasic.facebook.com###viewport div:not(#objects_container) > div:has(table[role] a[href^="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
-m.facebook.com,mbasic.facebook.com###viewport div:not(#objects_container) > table[class] td a[href*="lm.facebook.com/l.php?"][target="_blank"]:has(span)
-m.facebook.com,mbasic.facebook.com###viewport div:not([id]) > table:has(td a[href^="/a/language.php?"][href*="ref_component=mbasic_footer"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###viewport #root div:not([id^="MPhoto"]) > table[role] tbody:has(a[href^="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###viewport div:not(#objects_container) > div:has(table[role] a[href^="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com###viewport div:not(#objects_container) > table[class] td a[href*="lm.facebook.com/l.php?"][target="_blank"]:has(span)
+d.facebook.com,m.facebook.com,mbasic.facebook.com###viewport div:not([id]) > table:has(td a[href^="/a/language.php?"][href*="ref_component=mbasic_footer"])
 
 ! CSS Modification
 ! This may modify some element instead of hiding
-! m.facebook.com,mtouch.facebook.com,touch.facebook.com###header #MBackNavBar:style(margin-top: 95% !important)
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container header a[href^="/mobile/android/upsell_link/"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###root[role="main"] div[class] a[data-sigil="AppGrowthCtaButton"]:style(pointer-events: none !important)
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##article #advertiserhidden div[data-sigil="ad-prefs-advertiser-section"] .scrollArea .scrollAreaBody a[data-sigil="ad-prefs-advertiser-preview-link"]:style(pointer-events: none !important)
@@ -626,8 +625,8 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com##.async_fan:has(div div a.
 ! Once you've redirect to "Free Basics" prompt page (for example https://m.facebook.com/zero/policy/optin) these rules below
 ! will remove the details of "Free Basics" service (description, legal link) and "Accept" button, only leave "Cancel" button to
 ! make sure you didn't accidentally accept the terms and apply their "Free Basics" service at all!
-m.facebook.com,mbasic.facebook.com##div[role="article"] div:has(div > span a[href*="/zero/optin/legal/"])
-m.facebook.com,mbasic.facebook.com##form[action^="/zero/optin/write/"] input[type="submit"]
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[role="article"] div:has(div > span a[href*="/zero/optin/legal/"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com##form[action^="/zero/optin/write/"] input[type="submit"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###root div article div:has(span a[href*="/zero/optin/legal/"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###root div article form[action*="/zero/optin/write/"] button[type="submit"]
 

@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 201909202012
+! Version: 201909251252
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -45,11 +45,11 @@ facebook.com##div[data-testid^="UFI2Comment/root"] div[data-testid^="UFI2Comment
 ! Finally, weird space between comments also come to this version, freaking cool!!
 ! Note: I have no idea about breakage effect if I put those rules below into FZK, just put into here for testing is good for now.
 !       Moreover, currently it will affect some type of permalink view only, e.g. text-only posts, photos and external URLs.
-0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###MPhotoContent div[id^="ufi_"] div[class] > div[class][id] div div[id^="u_0"]:has(h3):has(div[class] div[class])
-0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_story_permalink_view div[id^="ufi_"] div[class] > div[class][id] div div[id^="u_0"]:has(h3):has(div[class] div[class])
+0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###MPhotoContent div[id^="ufi_"] div[class] > div[class][id] div div[id^="u_0"]:has(h3):has(div[class] div[class])
+0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_story_permalink_view div[id^="ufi_"] div[class] > div[class][id] div div[id^="u_0"]:has(h3):has(div[class] div[class])
 
 ! Remove event discover (also affect threaded discover)
-0.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###events_card_list div[class] > :has(a span:has-text(/^Discover/))
+0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###events_card_list div[class] > :has(a span:has-text(/^Discover/))
 
 ! [Facebook Touch]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Facebook want you to see friends stories again before they're gone, by re-injecting stories tiles into feed streams!
