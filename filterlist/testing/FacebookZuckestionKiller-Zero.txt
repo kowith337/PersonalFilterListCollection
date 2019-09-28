@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201909251251
+! Version: 201909282051
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -81,6 +81,8 @@
 ||facebook.com/feedtracking/$important
 ||facebook.com/friends/center/suggestions$all,important,~document,~xmlhttprequest
 ||facebook.com/friends/center/suggestions$xmlhttprequest
+||facebook.com/friends/center/suggestions/?ppk=*&tid=*$important,~xmlhttprequest
+||facebook.com/friends/center/suggestions/?ppk=*&tid=*$xmlhttprequest
 ||facebook.com/goodwill/$all,important,~document
 ||facebook.com/groups/*suggested*$important,~xmlhttprequest
 ||facebook.com/groups/*suggested*$xmlhttprequest
@@ -158,7 +160,7 @@
 @@||facebook.com/ajax/settings/account/advertising_email.php?$first-party,xmlhttprequest
 @@||facebook.com/ego/feed/logging/xout/?$first-party,xmlhttprequest
 @@||facebook.com/feed/options_menu$first-party,xmlhttprequest
-@@||facebook.com/friends/center/suggestions/?ppk$first-party,xmlhttprequest
+@@||facebook.com/friends/center/suggestions/?ppk=$first-party,xmlhttprequest
 @@||facebook.com/groups/membersuggestion/xout/$first-party,xmlhttprequest
 @@||facebook.com/groups/xout_suggested_group_followup/?$first-party,xmlhttprequest
 @@||facebook.com/pubcontent/suggestions/interaction_logging/?dpr=1$first-party,xmlhttprequest
@@ -243,6 +245,7 @@
 ||facebook.com/dlite/skywalker_topic$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/feed/badge/$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/feedtracking/$xmlhttprequest,important,redirect=nooptext
+||facebook.com/friends/center/suggestions/?ppk=*&tid=*$xmlhttprequest,red=nooptext
 ||facebook.com/pubcontent/suggestions/impression_logging/$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/privacy/reminders/log_imp$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/related-application/?$xmlhttprequest,important,redirect=nooptext
@@ -561,6 +564,7 @@ facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href^="/pages/"]:has(div:has-text(/^Suggested/))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-gaming #root div[class][data-store-id] > div[class] > :has(a[href^="fb://gaming/"])
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-gaming #root div[class][data-store-id] > section:has(div[data-store-id] div[class][style^="flex-grow"] .scrollArea)
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-pages #root .async_fan:has(.like_thumb_container)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-watch #root div[class] > div[id][class]:has(.story_body_container header div[class] a[href*="tracking_source.video_home"][href*="originated_from_recommendation"])
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a span:has-text(Instagram)))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/ads/create/"]))
