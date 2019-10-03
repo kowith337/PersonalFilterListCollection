@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201909282051
+! Version: 201910032147
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -354,6 +354,7 @@ facebook.com##iframe[id^="fbsbx-sig-iframe-"]
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[role="article"] table td a[href^="/messenger-destination/cta/?"]
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##root div[data-ft][data-xt*="sponsored"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###MNewsFeed section article[data-store*="originated_from_recommendation"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###MNewsFeed section div[data-store*="originated_from_recommendation"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###header #MBackNavBar
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root #MRoot span[data-top-of-feed-unit-type^="megaphone"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root .scrollArea[data-sigil*="friends-center-nav"] a[data-ajaxify-href*="/friends/center/suggestions/"]
