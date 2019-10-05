@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 201909211540
+! Version: 201910051215
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -32,10 +32,12 @@
 ||facebook.com/*&acontext=$document,important
 ||facebook.com/*&dti=$document,important
 ||facebook.com/*&eid=$document,important
+||facebook.com/*&entrypoint=$document,important
 ||facebook.com/*&fref=$document,important
 ||facebook.com/*&hc_ref=$document,important
 ||facebook.com/*&lst=$document,important
 ||facebook.com/*&referrer=$document,important
+||facebook.com/*&refsrc=$document,important
 ||facebook.com/*&settings_tracking=$document,important
 ! ||facebook.com/*?__tn__=$document,important
 ||facebook.com/*?__xts__%5B0%5D=$document,important
@@ -44,10 +46,12 @@
 ||facebook.com/*?acontext=$document,important
 ||facebook.com/*?dti=$document,important
 ||facebook.com/*?eid=$document,important
+||facebook.com/*?entrypoint=$document,important
 ||facebook.com/*?fref=$document,important
 ||facebook.com/*?hc_ref=$document,important
 ||facebook.com/*?pn_ref=$document,important
 ||facebook.com/*?referrer=$document,important
+||facebook.com/*?refsrc=$document,important
 ||facebook.com/*?settings_tracking=$document,important
 ||facebook.com/ads/*&session_id=$document,important
 ||facebook.com/ads/*?session_id=$document,important
@@ -64,10 +68,12 @@
 ||messenger.com/*&acontext=$document,important
 ||messenger.com/*&dti=$document,important
 ||messenger.com/*&eid=$document,important
+||messenger.com/*&entrypoint=$document,important
 ||messenger.com/*&fref=$document,important
 ||messenger.com/*&hc_ref=$document,important
 ||messenger.com/*&lst=$document,important
 ||messenger.com/*&referrer=$document,important
+||messenger.com/*&refsrc=$document,important
 ||messenger.com/*&settings_tracking=$document,important
 ||messenger.com/*?__xts__%5B0%5D=$document,important
 ||messenger.com/*?__xts__*=$document,important
@@ -75,10 +81,12 @@
 ||messenger.com/*?acontext=$document,important
 ||messenger.com/*?dti=$document,important
 ||messenger.com/*?eid=$document,important
+||messenger.com/*?entrypoint=$document,important
 ||messenger.com/*?fref=$document,important
 ||messenger.com/*?hc_ref=$document,important
 ||messenger.com/*?pn_ref=$document,important
 ||messenger.com/*?referrer=$document,important
+||messenger.com/*?refsrc=$document,important
 ||messenger.com/*?settings_tracking=$document,important
 ||steamcommunity.com/*&snr=*$document,important
 ||steamcommunity.com/*?snr=*$document,important

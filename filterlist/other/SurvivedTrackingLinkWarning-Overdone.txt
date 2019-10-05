@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 201909211540
+! Version: 201910051202
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -43,6 +43,8 @@
 ||facebook.com/*&dti=$xmlhttprequest
 ||facebook.com/*&eid=$document,subdocument,important
 ||facebook.com/*&eid=$xmlhttprequest
+||facebook.com/*&entrypoint=$document,subdocument,important
+||facebook.com/*&entrypoint=$xmlhttprequest
 ||facebook.com/*&fref=$document,subdocument,important
 ||facebook.com/*&fref=$xmlhttprequest
 ||facebook.com/*&hc_ref=$document,subdocument,important
@@ -51,6 +53,8 @@
 ||facebook.com/*&lst=$xmlhttprequest
 ||facebook.com/*&referrer=$document,subdocument,important
 ||facebook.com/*&referrer=$xmlhttprequest
+||facebook.com/*&refsrc=$document,subdocument,important
+||facebook.com/*&refsrc=$xmlhttprequest
 ||facebook.com/*&settings_tracking=$document,subdocument,important
 ||facebook.com/*&settings_tracking=$xmlhttprequest
 ||facebook.com/*?__tn__=$document,subdocument,important
@@ -69,6 +73,8 @@
 ||facebook.com/*?dti=$xmlhttprequest
 ||facebook.com/*?eid=$document,subdocument,important
 ||facebook.com/*?eid=$xmlhttprequest
+||facebook.com/*?entrypoint=$document,subdocument,important
+||facebook.com/*?entrypoint=$xmlhttprequest
 ||facebook.com/*?fref=$document,subdocument,important
 ||facebook.com/*?fref=$xmlhttprequest
 ||facebook.com/*?hc_ref=$document,subdocument,important
@@ -77,6 +83,8 @@
 ||facebook.com/*?lst=$xmlhttprequest
 ||facebook.com/*?referrer=$document,subdocument,important
 ||facebook.com/*?referrer=$xmlhttprequest
+||facebook.com/*?refsrc=$document,subdocument,important
+||facebook.com/*?refsrc=$xmlhttprequest
 ||facebook.com/*?settings_tracking=$document,subdocument,important
 ||facebook.com/*?settings_tracking=$xmlhttprequest
 ||facebook.com/ads/*&session_id=$document,subdocument,important
@@ -125,6 +133,8 @@
 ||messenger.com/*&dti=$xmlhttprequest
 ||messenger.com/*&eid=$document,subdocument,important
 ||messenger.com/*&eid=$xmlhttprequest
+||messenger.com/*&entrypoint=$document,subdocument,important
+||messenger.com/*&entrypoint=$xmlhttprequest
 ||messenger.com/*&fref=$document,subdocument,important
 ||messenger.com/*&fref=$xmlhttprequest
 ||messenger.com/*&hc_ref=$document,subdocument,important
@@ -133,6 +143,8 @@
 ||messenger.com/*&lst=$xmlhttprequest
 ||messenger.com/*&referrer=$document,subdocument,important
 ||messenger.com/*&referrer=$xmlhttprequest
+||messenger.com/*&refsrc=$document,subdocument,important
+||messenger.com/*&refsrc=$xmlhttprequest
 ||messenger.com/*&settings_tracking=$document,subdocument,important
 ||messenger.com/*&settings_tracking=$xmlhttprequest
 ||messenger.com/*?__tn__=$document,subdocument,important
@@ -149,6 +161,8 @@
 ||messenger.com/*?dti=$xmlhttprequest
 ||messenger.com/*?eid=$document,subdocument,important
 ||messenger.com/*?eid=$xmlhttprequest
+||messenger.com/*?entrypoint=$document,subdocument,important
+||messenger.com/*?entrypoint=$xmlhttprequest
 ||messenger.com/*?fref=$document,subdocument,important
 ||messenger.com/*?fref=$xmlhttprequest
 ||messenger.com/*?hc_ref=$document,subdocument,important
@@ -157,6 +171,8 @@
 ||messenger.com/*?lst=$xmlhttprequest
 ||messenger.com/*?referrer=$document,subdocument,important
 ||messenger.com/*?referrer=$xmlhttprequest
+||messenger.com/*?refsrc=$document,subdocument,important
+||messenger.com/*?refsrc=$xmlhttprequest
 ||messenger.com/*?settings_tracking=$document,subdocument,important
 ||messenger.com/*?settings_tracking=$xmlhttprequest
 ||steamcommunity.com/*&snr=*$document,subdocument,xmlhttprequest,important
