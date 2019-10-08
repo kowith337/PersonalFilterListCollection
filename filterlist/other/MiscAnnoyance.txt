@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 201909052153
+! Version: 201910090107
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -88,6 +88,8 @@ github.com##.js-notice:has(.js-dismiss)
 ! [Google]
 ! - Remove UK consent overlay
 google.*##g-bottom-sheet[jscontroller] div[role="dialog"]:has(div[jscontroller][data-ved] img[src*="consent.google.com/status?"])
+! - Remove text dialog to tell back to Google for suggest something to show more results.
+google.*###extrares #botstuff div[data-ved] > :has(div textarea[data-ved])
 
 ! [Minecraft Forge]
 files.minecraftforge.net##.sidebar-right:has(.ad-container)
@@ -182,12 +184,17 @@ optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadL
 m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none !important)
 
 ! Network Requests - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! [Google] Tracking users with some parameter tag (e.g. 'ei', 'vet')
+! [Google]
+! - Tracking users with some parameter tag (e.g. 'ei', 'vet')
 ||google.*/async/bgasy?ei=*$important
 ||google.*/async/bgasy?*&ei=*$important
 ||google.*/async/irc?$important
 ||google.*/imgevent?ei=$important
 ||google.*/imgevent?*&ei=$important
+! - Block "sorry" spam protect page, I've often use browser searchbar itself instead of search new word with their search bar!
+!   Because they have `ved` parameter to obfuscase destination and also use for keep an eyes on you!! (indeed, tracking you!!!)
+!   This strict blocking will divide parameters and you may need to copy, then switch to another TLD, such as UK, JP, TH, etc.
+||google.*/sorry/index?$document,important
 
 ! [Linkis]
 ! ||linkis.com/ajax^$xmlhttprequest
