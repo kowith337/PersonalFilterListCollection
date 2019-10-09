@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 201910090107
+! Version: 201910090110
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -92,8 +92,8 @@ google.*##g-bottom-sheet[jscontroller] div[role="dialog"]:has(div[jscontroller][
 google.*###extrares #botstuff div[data-ved] > :has(div textarea[data-ved])
 
 ! [Minecraft Forge]
-files.minecraftforge.net##.sidebar-right:has(.ad-container)
-files.minecraftforge.net##.sidebar-right:has(.ad-container-framed)
+minecraftforge.net##.sidebar-right:has(.ad-container)
+minecraftforge.net##.sidebar-right:has(.ad-container-framed)
 
 ! [Pantip NEW] (as of 2019/08 site redesign)
 ! - Disable top pick and trending topics due to Bingsu subdomain was blocked for good, plus take more space unneccessay, yet.
@@ -177,7 +177,7 @@ minecraftforge.net##.downloads .download .links .link-left:has(a[href*="adfoc.us
 minecraftforge.net##.downloads .download .links .links-right .link:has(a[href*="adfoc.us/"]):style(pointer-events: none !important)
 
 ! - Optifine: http://optifine.net/downloads - (Use AdFly + CPMStar) Only "Mirror" links can be clickable.
-optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadLine"] a[href*="?f="][href*="&x=ce78"]:style(pointer-events: none !important; text-decoration: none !important)
+optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadLine"] a[href*="?f="][href*="&x="]:style(pointer-events: none !important; text-decoration: none !important)
 optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadLine"] a[href^="http://adf.ly"]:style(pointer-events: none !important; text-decoration: none !important)
 
 ! [Taobao Mobile] Hide promotional frame appear at bottom (directly point to DOM doesn't help because it's use "display: block")
