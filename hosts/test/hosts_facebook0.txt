@@ -1,6 +1,6 @@
 # [uMatrix 1.3.15.100]
 # Title: Facebook Zero Hosts Block (Test unit)
-# Version: 201909302216
+# Version: 201910092057
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/hosts
@@ -279,6 +279,14 @@
 0.0.0.0 z-m-scontent.fbkk4-6.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fbkk4-7.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fbkk4-8.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk5-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk5-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk5-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk5-4.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk5-5.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk5-6.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk5-7.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk5-8.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fceb1-1.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fceb2-1.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fceb2-2.fna.fbcdn.net
@@ -329,6 +337,14 @@
 0.0.0.0 z-p3-scontent.fbkk4-6.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbkk4-7.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbkk4-8.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk5-1.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk5-2.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk5-3.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk5-4.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk5-5.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk5-6.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk5-7.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk5-8.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbsb11-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbsb1-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fcgh11-1.fna.fbcdn.net
