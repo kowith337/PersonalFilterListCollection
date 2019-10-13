@@ -1,6 +1,6 @@
 # [uMatrix 1.3.15.100]
 # Title: Facebook Zero Hosts Block (Test unit)
-# Version: 201910092057
+# Version: 201910131632
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/hosts
@@ -287,6 +287,14 @@
 0.0.0.0 z-m-scontent.fbkk5-6.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fbkk5-7.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fbkk5-8.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk22-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk22-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk22-3.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk22-4.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk22-5.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk22-6.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk22-7.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk22-8.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fceb1-1.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fceb2-1.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fceb2-2.fna.fbcdn.net
@@ -294,13 +302,13 @@
 0.0.0.0 z-m-scontent.fdac2-1.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fdac3-1.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fdac4-1.fna.fbcdn.net
-0.0.0.0 z-m-scontent.fmex10-1.fna.fbcdn.net
-0.0.0.0 z-m-scontent.fmex10-2.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fmex1-1.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fmex2-1.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fmex3-1.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fmex4-1.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fmex4-2.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex10-1.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fmex10-2.fna.fbcdn.net
 # FBCDN FNA SecureContent + Z-P - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 z-p3-scontent.facc1-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.faqa1-1.fna.fbcdn.net
@@ -345,8 +353,16 @@
 0.0.0.0 z-p3-scontent.fbkk5-6.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbkk5-7.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbkk5-8.fna.fbcdn.net
-0.0.0.0 z-p3-scontent.fbsb11-1.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk22-1.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk22-2.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk22-3.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk22-4.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk22-5.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk22-6.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk22-7.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk22-8.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbsb1-1.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbsb11-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fcgh11-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fdac1-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fdxb1-1.fna.fbcdn.net
