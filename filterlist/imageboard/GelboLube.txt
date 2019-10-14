@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt) [Freezing]
-! Version: 201909092012
+! Version: 201910141945
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -197,11 +197,14 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ||gelbooru.com/r19/$important
 
 ! 4. Block hostile scripts that load as php, it's an ad script that foolish exception rule and loaded as php doc.
+!    Additional note: license.* js file is similar to holstile script for survive ad-blocking that used in openload.
 ||gelbooru.com//script/application.js.php$important
 ||gelbooru.com//script/bed.php$important
 ||gelbooru.com//script/bed2.php$important
 ||gelbooru.com//script/bluet.php$important
 ||gelbooru.com//script/bluet.wry$important
+||gelbooru.com//script/bpjs.js$important
+||gelbooru.com//script/license.*$important
 ||gelbooru.com/bed.php$important
 ||gelbooru.com/bed2.php$important
 ||gelbooru.com/bluet.php$important
@@ -211,6 +214,8 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ||gelbooru.com/script/bed2.php$important
 ||gelbooru.com/script/bluet.php$important
 ||gelbooru.com/script/bluet.wry$important
+||gelbooru.com/script/bpjs.js$important
+||gelbooru.com/script/license.*$important
 
 ! 5. Pre-blocking images ahead to prevent advert images that placed as /thumbnails/0X/, this will supply by Unbreak #4 that
 !    actually load legitmate thumbnails, I've reduced priority for [*.jpg] due to it's use for other appearance, such as
@@ -222,6 +227,7 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 
 ! 6. To preventing resources request abuse that they trying to reload blocked resources as 'other' for able to re-access blocked
 !    JS function and/or re-deploy ads and such...
+!    Note that it's also break AutoComplete due to the search query are now rely to `beacon`, not `xhr` anymore.
 ||gelbooru.com/*.php*$~document,~inline-script,~xmlhttprequest
 ||gelbooru.com//script/application.js$~script,important
 ||gelbooru.com//script/try.js$important
@@ -232,93 +238,6 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ||gelbooru.com/script/tryt.js$important
 ||youhate.us/ads.js$~script,important
 
-! 7. Useless scripts that use for anti-adblock (license.gelbooru.js is similar to license.<num>.js that used in openload.co)
-||gelbooru.com/script/license$important
-
-! Inject Scriptlets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! 1. [Deprecated] Block attempt to rewrite adverts under paginator via reading some value, doing this also stop advert images
-!                 requests.
-!    Note: they bypassed this block by rename function like [advertVar > abvertDar], this solution will not be last long enough.
-! gelbooru.com##+js(abort-on-property-read.js, abvertDar)
-! gelbooru.com##+js(abort-on-property-read.js, advertVar)
-
-! 2. [Deprecated] Stop exo_zones cookie deploy as first party, the ExoLoader function was called from application.js that
-!    whitelisted to unbreak site functionality.
-!    Update 1: due to new update on Gelbooru was using the lazyload function to load all thumbnails, these rules will be halt
-!              until found a better solution to keep preventing ExoLoader wrote cookies on local storage as 1st-party.
-!    Update 2: They change the script name, likely they do in the fallback ILS to execute and re-deploy ads if some ads value was
-!              forbidden.
-!    Update 3: New BetterJsPop function that currently testing to show thedoujin site as popunder.
-! gelbooru.com##+js(abort-on-property-write.js, AddZone)
-! gelbooru.com##+js(abort-on-property-write.js, BetterJsPop)
-! gelbooru.com##+js(abort-on-property-write.js, BetterJsPop.add)
-! gelbooru.com##+js(abort-on-property-write.js, EXoDetector)
-! gelbooru.com##+js(abort-on-property-write.js, ExoDetector)
-! gelbooru.com##+js(abort-on-property-write.js, ExoLoader.AddZone)
-! gelbooru.com##+js(abort-on-property-write.js, ExoLoader.serve)
-! gelbooru.com##+js(abort-on-property-write.js, domain_base)
-! gelbooru.com##+js(abort-on-property-write.js, addZone)
-! gelbooru.com##+js(abort-on-property-write.js, adtoniq)
-! gelbooru.com##+js(abort-on-property-write.js, gtag)
-! gelbooru.com##+js(abort-on-property-write.js, serve)
-
-! 3. Prevent Google Analytics to be executed, but it works only inline script due to they recently add asynchronous script after
-!    document loaded.
-gelbooru.com##+js(abort-on-property-write.js, GoogleAnalyticsObject)
-
-! 4. Prevent JuicyAds execute, same behavior as Google Analytics
-gelbooru.com##+js(abort-on-property-write.js, adsbyjuicy)
-
-! 5. Experimental, to foil ILS function for Chromium / Firefox WebExt
-gelbooru.com##+js(abort-current-inline-script.js, AddZone, idzone)
-gelbooru.com##+js(abort-current-inline-script.js, BetterJsPop, cookieName)
-gelbooru.com##+js(abort-current-inline-script.js, ImplicityBreakingSite, debugging)
-gelbooru.com##+js(abort-current-inline-script.js, adtoniq)
-gelbooru.com##+js(abort-current-inline-script.js, domain_base, exosrv.com)
-gelbooru.com##+js(abort-current-inline-script.js, serve, script_url)
-gelbooru.com##+js(abort-current-inline-script.js, window.dataLayer, gtag)
-
-! 6. Inject constant value (Only a value that not match to specific string will be applied)
-gelbooru.com##+js(set-constant.js, ExoDetector, noopfunc)
-gelbooru.com##+js(set-constant.js, adtoniq, noopfunc)
-
-! 7. HTML filtering, able to remove some specific path inside the non-filtered document before it's load
-!    currently require 1.14.23 beta and run on Firefox Quantum (57+)
-gelbooru.com##^div[id^="adtoniq-msg-bar"]
-gelbooru.com##^ins[class="adsbytrafficjunky"]
-gelbooru.com##^script:has-text(BetterJsPop)
-gelbooru.com##^script:has-text(EXoDetector)
-gelbooru.com##^script:has-text(adtoniq)
-gelbooru.com##^script:has-text(fuckingnormieswry)
-gelbooru.com##^script[async][src^="https://media.trafficjunky.net"]
-gelbooru.com##^script[async][src^="https://www.googletagmanager.com"]
-gelbooru.com##^script[src*="/autoDebug.js"]
-gelbooru.com##^script[src*="/script/license"]
-gelbooru.com##^script[src^="https://ads.exoclick.com"]
-gelbooru.com##^script[src^="https://gelbooru.com//script/try.js"]
-gelbooru.com##^script[src^="https://gelbooru.com//script/tryt.js"]
-gelbooru.com##^script[src^="https://gelbooru.com/script/try.js"]
-gelbooru.com##^script[src^="https://gelbooru.com/script/tryt.js"]
-! gelbooru.com##^script:has-text(abvertDar)
-
-! CSS Re-design / Mobile Improvement  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! 1. Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space
-!    almost half of screen from top, this will surely conflict when you request desktop view or when you're already use desktop
-!    browser.
-gelbooru.com###navbar .nav li a:style(padding-left: 5px !important; padding-right: 5px !important)
-gelbooru.com##.navbar #navbar2 li a:style(padding-left: 5px !important; padding-right: 5px !important)
-gelbooru.com##.navbar#submenu #navbar2 .navbar-nav:style(direction:rtl !important)
-gelbooru.com##.navbar#submenu #navbar2:style(float: right !important)
-gelbooru.com##.navbar#submenu:style(float: right !important; width: 50% !important)
-gelbooru.com##.navbar-header .navbar-brand:style(font-size: 12px !important)
-gelbooru.com##.navbar.navbar-default .navbar-header button.navbar-toggle:style(float:left !important; margin-left: 10px !important; margin-right: 0px !important)
-gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
-! gelbooru.com###post-view #right-col div #image[src*="sample"]:style(width: 100% !important)
-
-! 2. Remove blur overlay for images requiring an account
-gelbooru.com##body img:style(filter:none !important;)
-
-
 ! Block then Redirect - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Experimental for replace a dummy script, frame, text, etc.
 ! Redirect rules is only affect for specific type of request only.
@@ -327,8 +246,70 @@ gelbooru.com##body img:style(filter:none !important;)
 ||gelbooru.com/index.php?page=autoDebug$xmlhttprequest,important,redirect=nooptext
 ||gelbooru.com/intermission.php$subdocument,important,redirect=noopframe
 
+! Inject Scriptlets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! 1. Prevent Google Analytics to be executed, but it works only inline script due to they recently add asynchronous script after
+!    document loaded.
+gelbooru.com##+js(abort-on-property-write.js, GoogleAnalyticsObject)
+
+! 2. Prevent JuicyAds execute, same behavior as Google Analytics
+gelbooru.com##+js(abort-on-property-write.js, adsbyjuicy)
+
+! 3. Experimental, to foil ILS function for Chromium / Firefox WebExt
+gelbooru.com##+js(abort-current-inline-script.js, AddZone, idzone)
+gelbooru.com##+js(abort-current-inline-script.js, ImplicityBreakingSite)
+gelbooru.com##+js(abort-current-inline-script.js, adtoniq)
+gelbooru.com##+js(abort-current-inline-script.js, cookieName, gelcomPoop)
+gelbooru.com##+js(abort-current-inline-script.js, domain_base, exosrv.com)
+gelbooru.com##+js(abort-current-inline-script.js, serve, script_url)
+gelbooru.com##+js(abort-current-inline-script.js, window.dataLayer, gtag)
+
+! 4. Inject constant value (Only a value that not match to specific string will be applied)
+gelbooru.com##+js(set-constant.js, ExoDetector, noopfunc)
+gelbooru.com##+js(set-constant.js, adtoniq, noopfunc)
+
+! CSS Re-design / Mobile Improvement  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! 1. Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space
+!    almost half of screen from top, this will surely conflict when you request desktop view or when you're already use desktop
+!    browser.
+gelbooru.com###navbar ul li a:style(font-weight: normal !important; padding-left: 4px !important; padding-right: 4px !important)
+gelbooru.com###navbar ul li a b:style(font-weight: normal !important; padding-left: 0px !important; padding-right: 0px !important)
+gelbooru.com###navbar2 ul li a:style(font-weight: normal !important; padding-left: 4px !important; padding-right: 4px !important)
+gelbooru.com###navbar2 ul li a b:style(font-weight: normal !important; padding-left: 0px !important; padding-right: 0px !important)
+gelbooru.com###navbar2 .navbar-nav:style(direction:rtl !important)
+gelbooru.com###navbar2:style(float: right !important)
+gelbooru.com##.navbar#submenu:style(float: right !important; width: 50% !important)
+gelbooru.com##.navbar-header .navbar-brand:style(font-size: 12px !important)
+gelbooru.com##.navbar.navbar-default .navbar-header button.navbar-toggle:style(float:left !important; margin-left: 10px !important; margin-right: 0px !important)
+gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
+! gelbooru.com###post-view #right-col div #image[src*="sample"]:style(width: 100% !important)
+
+! 2. Remove blur overlay for images requiring an account
+gelbooru.com##body img:style(filter:none !important)
+
+! HTML filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! able to remove some specific path inside the non-filtered document before it's load
+! currently require 1.14.23 beta and run on Firefox Quantum (57+)
+!#if cap_html_filtering
+gelbooru.com##^div[id^="adtoniq-msg-bar"]
+gelbooru.com##^ins[class="adsbytrafficjunky"]
+gelbooru.com##^script:has-text(BPJS)
+gelbooru.com##^script:has-text(BetterJsPop)
+gelbooru.com##^script:has-text(EXoDetector)
+gelbooru.com##^script:has-text(adtoniq)
+gelbooru.com##^script:has-text(fuckingnormieswry)
+gelbooru.com##^script[async][src^="https://media.trafficjunky.net"]
+gelbooru.com##^script[async][src^="https://www.googletagmanager.com"]
+gelbooru.com##^script[src*="/autoDebug.js"]
+gelbooru.com##^script[src*="/script/bpjs.js"]
+gelbooru.com##^script[src*="/script/license"]
+gelbooru.com##^script[src*="/script/try.js"]
+gelbooru.com##^script[src*="/script/tryt.js"]
+gelbooru.com##^script[src^="https://ads.exoclick.com"]
+! gelbooru.com##^script:has-text(abvertDar)
+!#endif
+
 ! Specific rules to use for some case or unless some requirement are met  - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Cancel hiding "Switch layout", sometime it's needed to do, I guess.
-!#if !env_mobile
+!#if env_mobile
 gelbooru.com##.alert-info:has(a[href*="?page=ihnt"])
 !#endif
