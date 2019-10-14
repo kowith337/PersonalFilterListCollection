@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt) [Freezing]
-! Version: 201910141945
+! Version: 201910141957
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -292,8 +292,8 @@ gelbooru.com##body img:style(filter:none !important)
 !#if cap_html_filtering
 gelbooru.com##^div[id^="adtoniq-msg-bar"]
 gelbooru.com##^ins[class="adsbytrafficjunky"]
-gelbooru.com##^script:has-text(BPJS)
-gelbooru.com##^script:has-text(BetterJsPop)
+! gelbooru.com##^script:has-text(BPJS)
+! gelbooru.com##^script:has-text(BetterJsPop)
 gelbooru.com##^script:has-text(EXoDetector)
 gelbooru.com##^script:has-text(adtoniq)
 gelbooru.com##^script:has-text(fuckingnormieswry)
