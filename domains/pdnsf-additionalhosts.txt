@@ -1,0 +1,186 @@
+[personalDNSFilter 1.50.33.5]
+# Title: kowith337's custom hosts for personalDNSFilter
+# Version: 201910152058
+# Author: kowith337
+# Expires: 2 days
+# Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
+# Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Domain%20Lists%20and%20Wildcard
+# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/domains/pdnsf-additionalhosts.txt
+# Description: This file will intent to only work with "personalDNSFilter" app for read additional hosts that aim for blocking
+#              matched wildcard and entire domains regardless of any subdomains, unless you've manually unblocked or based on my
+#              decision as enough reason for subjected to whitelist.
+#              This filter is unlike generic hosts file and/or domain lists that you can update and/or recombine with, because
+#              the targeted app are also support wildcard blocking, but this should be loaded as user custom hosts however.
+#              You may need to regularly copy and update this file with your own way, futhurmore, you need to backup previous
+#              custom hosts list if you have any existed before use this file as a replacement.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Generic Reason]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Unneccessary protocol
+EMPTY
+WPAD
+
+# "Retard Logic" use the random subdomains of any website who use that things to make sure all ads are survived blocking!
+# Did any site owners who use that service noticed it's had impact to their client-side and/or web server performance?
+# Or it really doesn't cost much any harm at all!?
+g00.*
+
+# Block "ScreenCam" app owner's domain due to his own analytics inside that app until he really fix his problem!
+# See also: https://gitlab.com/fdroid/fdroiddata/issues/1745#note_206628341
+# App owner's rant message: https://gitlab.com/vijai/screenrecorder/issues/72#note_180783854
+orpheusdroid.com
+
+# For honor of Huawei phone users! (Include Honor {Huawei sub-brand} and some Xiaomi, RealMe, too!)
+# Problematic due to shady advertisement in their OS ROM that load low quality wallpapers and apply without user intent!
+# Thai article (translated from original article below): https://www.blognone.com/node/110342
+# AndroidPolice: https://www.androidpolice.com/2019/06/13/huawei-apparently-decides-it-needs-more-bad-press-puts-ads-on-phone-lock-screens
+booking.com
+
+# More privacy enhanced for Firefox users, make sure you've disable their internal TRR first.
+location.services.mozilla.com
+ciscobinary.openh264.org
+
+# I want to say sorry to anyone who use CloudFlare DNS resolvers, but it's just my opinion to block due to Firefox's wrong turn!
+# e.g. OOB config of Firefox use "TRR" resolvers (aka. DoH) from CloudFlare by default.
+cloudflare-dns.com
+
+# Must block entirely, no matter what!
+add0n.com
+adjust.com
+baidu.co.th
+bemobtrk.com
+bugsnag.com
+cloudfront.net
+hao123.com
+innity.com
+innity.net
+linkedin.com
+onesignal.com
+umeng.com
+
+# [Big Brother - Non-Google fanboy!]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Note that some domains are neccessary but it's also shady at a same time, e.g. "Google Play Store" use gvt1~gvt3 domains for
+# updating apps, while use randomized subdomains for phoning home (aka. "beacon") during, you may need to whitelisted it's app
+# manually, however, I prefer you to looking for "Aurora" or "Yalp" and whitelist those apps instead if you're not want to use
+# their official store app for update anything about applications in your phone.
+# Futhurmore, Youtube also use 'redirector.gvt1.com' to redirect ad videos as well.
+2mdn.net
+admob.com
+adsensecustomsearchads.com
+adwords.com
+crashlytics.com
+doubleclick.com
+doubleclick.net
+fabric.io
+firebase.google.com
+firebaseio.com
+google-analytics.com
+googleadservices.com
+googlesyndication.com
+googletagmanager.com
+googletagservices.com
+googletraveladservices.com
+gvt1.com
+gvt2.com
+gvt3.com
+gvt4.com
+gvt46.com
+metric.gstatic.com
+urchin.com
+
+# Prevent use Google STUN ("WebRTC" IP address leaks issue) Any voice and/video call that rely to this will surely break!
+# e.g. Facebook, Google Duo, Hangouts, LINE, Skype, etc.
+stun.l.google.com
+
+# Hotword (aka. suggestion keyowrd) blocking
+suggestqueries.google.com
+suggestqueries.googleapis.com
+
+# Generic GoogleAPIs
+digitalassetlinks.googleapis.com
+firebaseremoteconfig.googleapis.com
+
+# G-Static
+connectivitycheck.gstatic.com
+
+# PA-ranoid GoogleAPIs
+appinvite-*.googleapis.com
+androidsuggesthub-pa.googleapis.com
+chrome*-pa.googleapis.com
+exploresites-pa.googleapis.com
+footprints-pa.googleapis.com
+growth-pa.googleapis.com
+mobilenetworkscoring-pa.googleapis.com
+myphonenumbers-pa.googleapis.com
+offlinepages-pa.googleapis.com
+# dialercallinfolookup-pa.googleapis.com         ## It's upload incoming phone numbers to check spam calls.
+# instantmessaging-pa.googleapis.com             ## Needed for Google Allo/Duo?
+# people-pa.googleapis.com                       ## Google Contacts?
+# phonedeviceverification-pa.googleapis.com      ## Google Play device certify? (1)
+# photosdata-pa.googleapis.com                   ## Google Photos?
+# subscriptionsmanagement-pa.googleapis.com      ## Google Play IAP/subscriptions?
+# telephonyspamprotect-pa.googleapis.com         ## use for check spam calls.
+# voledevice-pa.googleapis.com                   ## Google Play device certify? (2)
+
+# Prefer to block if you don't trust their DNS services, e.g. DoT and DoH resolvers!
+dns.google
+dns.google.com
+
+# Disable alternate "Google Talk" servers, contacting only main server is enough.
+# This may impact to all notifications that rely to "GCM"
+alt*-mtalk.google.com
+
+# De-trust Safebrowsing, tend to disabled for publically, just in case...?
+# android-safebrowsing.google.com
+# safebrowsing.google.com
+# safebrowsing.googleapis.com
+
+# [Big Brother - This is so zucky!~]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Facebook Zero Substances (aka. "Free Basics", wait, no! "Free BaSucks")
+# Allow these connections below means they can use additional tricks for keep track you with old tech, such WAP and MSISDN!
+# Even their Free Basics domains was blocked, they can still tracking you from the main and sub hosts with that methods as well.
+# e.g. They will binding your "DATR" cookie with mobile carrier name that you're using, you can check with diagnostics page at
+# https://d.facebook.com/diagnostics
+# - Sometime it's neccessary for them to make sure that you're eligable to use it, or if you've previously agree to use that!!
+0.facebook.com
+edge-star-z-*.facebook.com
+edge-z-*.facebook.com
+edge-z-*.facebook.net
+edge-z-*.fbcdn.net
+edge-z-*.fbsbx.com
+fna-fbcdn-z-*.fbcdn.net
+free.facebook.com
+freebasics.com
+h.facebook.com
+internet.org
+mobile.facebook.com
+mqtt-z-*.facebook.com
+mqtt-z-*.facebook.net
+mqtt-z-*.fbcdn.net
+mqtt-z-*.fbsbx.com
+o.facebook.com
+p.facebook.com
+vvv.facebook.com
+web.facebook.com
+z-*.facebook.com
+z-*.facebook.net
+z-*.fbcdn.net
+z-*.fbsbx.com
+z.facebook.com
+zero.facebook.com
+
+# I knew it's will break anything that rely to Facebook, such as MESSenger, Login with, Play game, Comments, etc.
+connect.facebook.net
+
+# Pigeon servers? What does it can do!?
+fbpigeon.com
+
+# I'm surely this will break MESSenger net call due to using "STUN", that's surely it use "WebRTC" and possibly to leaks your IP!
+edge-stun.facebook.com
+stun.c10r.facebook.com
+stun.facebook.com
+
+# Tell me if it's break something, however, if you didn't use their official apps!!
+lookaside.facebook.com
+staticxx.facebook.com
+update.fbsbx.com
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #

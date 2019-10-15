@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201909211129
+# Version: 201910152059
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -48,10 +48,11 @@
 0.0.0.0 mobilecrashreporting.googleapis.com
 0.0.0.0 suggestqueries.googleapis.com
 #
-# {PA} = Personal assistant?
+# PA-ranoid!
 # 0.0.0.0 geomobileservices-pa.googleapis.com
-# 0.0.0.0 people-pa.googleapis.com
 # 0.0.0.0 personalsafety-pa.googleapis.com
+# 0.0.0.0 people-pa.googleapis.com
+# 0.0.0.0 dialercallinfolookup-pa.googleapis.com
 # 0.0.0.0 reminders-pa.googleapis.com
 # 0.0.0.0 telephonyspamprotect-pa.googleapis.com
 0.0.0.0 androidsuggesthub-pa.googleapis.com
@@ -63,7 +64,6 @@
 0.0.0.0 chromefeedcontentsuggestions-pa.googleapis.com
 0.0.0.0 chromereader-pa.googleapis.com
 0.0.0.0 clientmetrics-pa.googleapis.com
-0.0.0.0 dialercallinfolookup-pa.googleapis.com
 0.0.0.0 exploresites-pa.googleapis.com
 0.0.0.0 footprints-pa.googleapis.com
 0.0.0.0 ging-chromecontentsuggestions-pa.googleapis.com
