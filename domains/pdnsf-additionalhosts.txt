@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.33.5]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 201910171945
+# Version: 201910211852
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -29,7 +29,7 @@ wpad
 # Or it really doesn't cost much any harm at all!?
 g00.*
 
-# Block "ScreenCam" app owner's domain due to his own analytics inside that app until he really fix his problem!
+# Block "ScreenCam" app owner's domain due to his own analytics inside that app until he really fix it's own problem!
 # See also: https://gitlab.com/fdroid/fdroiddata/issues/1745#note_206628341
 # App owner's rant message: https://gitlab.com/vijai/screenrecorder/issues/72#note_180783854
 orpheusdroid.com
@@ -54,7 +54,7 @@ adjust.com
 baidu.co.th
 bemobtrk.com
 bugsnag.com
-cloudfront.net
+# cloudfront.net
 hao123.com
 innity.com
 innity.net
@@ -114,7 +114,9 @@ datasaver.googleapis.com
 exploresites-pa.googleapis.com
 offlinepages-pa.googleapis.com
 
-# PA-ranoid GoogleAPIs (No proper reason, yet.)
+# PA-ranoid GoogleAPI connections
+digitalassetlinks.googleapis.com
+firebaseremoteconfig.googleapis.com
 footprints-pa.googleapis.com
 personalsafety-pa.googleapis.com
 
@@ -122,6 +124,11 @@ personalsafety-pa.googleapis.com
 android-safebrowsing.google.com
 # safebrowsing.google.com
 # safebrowsing.googleapis.com
+
+# It's upload incoming phone numbers to check spam calls.
+# * Concern to anyone who touching phone numbers and contacts since various Facebook violations (please blame "Zuck" for that!)
+dialercallinfolookup-pa.googleapis.com
+telephonyspamprotect-pa.googleapis.com
 
 # Prefer to block if you don't trust their DNS services, e.g. DoT and DoH resolvers!
 dns.google
@@ -135,20 +142,11 @@ suggestqueries.googleapis.com
 connectivitycheck.gstatic.com
 mobilenetworkscoring-pa.googleapis.com
 
-# Unwanted GoogleAPIs
-digitalassetlinks.googleapis.com
-firebaseremoteconfig.googleapis.com
-
-# It's upload incoming phone numbers to check spam calls.
-# * Concern to anyone who touching phone numbers and contacts since Facebook incidents (please blame "zuck" for that!)
-dialercallinfolookup-pa.googleapis.com
-telephonyspamprotect-pa.googleapis.com
-
 # Google Play device certify?
 phonedeviceverification-pa.googleapis.com
 voledevice-pa.googleapis.com
 
-# Prevent use Google STUN ("WebRTC" IP address leaks issue) Any voice and/video call that rely to this will surely break!
+# Prevent use Google STUN ("WebRTC" IP address leaks issue) Any voice and/or video call that rely to this will surely break!
 # e.g. Facebook, Google Duo, Hangouts, LINE, Skype, etc.
 stun.l.google.com
 
@@ -175,7 +173,11 @@ reminders-pa.googleapis.com
 # Facebook Zero Substances (aka. "Free Basics", wait, no! "Free BaSucks")
 # Allow these connections below means they can use additional tricks for keep track you with old tech, such WAP and MSISDN!
 # Plus, their system can easily to determine that it's really you! because the shame quality of WAP protocal and MSISDN header
-# are ship with your mobile phone numbers!! (Obviously! How many bad reputation of privacy at Facebook right now!?)
+# are ship with your mobile phone numbers and will be leaks to anyone who want to capture it!!
+# - Obviously! How many bad reputation of privacy at Facebook right now!?
+# - Some shady companies in my country are use those method above to resolve phone numbers via those headers and protocol for
+#   silently subscribe garbage contents and/or simply charging additional costs in billing or deduct prepaid calling balance,
+#   with or without anything sending right to your mobile phone! (by SMS, MMS or WAP Push)
 # Even their Free Basics domains was blocked, they can still tracking you from the main and sub hosts with that methods as well!
 # e.g. They will binding your "DATR" cookie with mobile carrier name that you're using, you can check with diagnostics page at
 # https://d.facebook.com/diagnostics

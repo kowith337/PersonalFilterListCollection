@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt) [Freezing]
-! Version: 201910141957
+! Version: 201910211857
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -122,11 +122,11 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 @@||gelbooru.com/script/miscJs.js?$script,first-party
 @@||gelbooru.com/script/miscJs.js|$script,first-party
 
-! 3. Actual WebM Videos (Legitmate WebM vids are loaded from /images/ only, otherwise is adverts!)
+! 3. Actual WebM Videos (Legitimate WebM vids are loaded from /images/ only, otherwise is adverts!)
 @@||gelbooru.com/images/$media
 @@||gelbooru.com//images/$media
 
-! 4. Legitmate thumbnails conclusion
+! 4. Legitimate thumbnails conclusion
 !       a. Blame to Gelbooru's false that place advert images into "/0A/" (now they use "/0C/")
 !       b. some filterlists blocking part of "/ad/"
 !    Note: all thumbnails are loaded as jpg files and have image id assigned after ?, ex. (thumbnail_<md5>.jpg?<postid>)
@@ -218,7 +218,7 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ||gelbooru.com/script/license.*$important
 
 ! 5. Pre-blocking images ahead to prevent advert images that placed as /thumbnails/0X/, this will supply by Unbreak #4 that
-!    actually load legitmate thumbnails, I've reduced priority for [*.jpg] due to it's use for other appearance, such as
+!    actually load legitimate thumbnails, I've reduced priority for [*.jpg] due to it's use for other appearance, such as
 !    recent comments that load thumbnail images without ?<PostID> referrer, also prevent repetitive requests that their
 !    currently using, like re-request every images as "other" instead of "image"
 ||gelbooru.com/thumbnails/*.jpg|
@@ -309,7 +309,7 @@ gelbooru.com##^script[src^="https://ads.exoclick.com"]
 !#endif
 
 ! Specific rules to use for some case or unless some requirement are met  - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! 1. Cancel hiding "Switch layout", sometime it's needed to do, I guess.
-!#if env_mobile
+! 1. Cancel hiding "Switch layout" for actual mobile devices, sometime it's needed to do, I guess.
+!#if !env_mobile
 gelbooru.com##.alert-info:has(a[href*="?page=ihnt"])
 !#endif
