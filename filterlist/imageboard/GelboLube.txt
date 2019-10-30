@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt) [Freezing]
-! Version: 201910211857
+! Version: 201910301930
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -47,7 +47,7 @@ gelbooru.com##noscript
 gelbooru.com##ins.adsbytrafficjunky
 
 ! 5. Hide all AdToniq AAB overlay (DOM Wildcard)
-gelbooru.com##div[id^="adtoniq-msg-bar"]
+gelbooru.com##div[id^="adtoniq-"]
 
 ! Filtered procedural hiding  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Element hiding in tags list pane that also insert tall banner ads
@@ -163,6 +163,9 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 |http://$script,domain=gelbooru.com,badfilter
 |https://$script,domain=gelbooru.com,badfilter
 ||gelbooru.com^$first-party,image,badfilter
+
+! 4. Counter and override AdGuard GenericHide whitelist!
+||gelbooru.com$generichide,important
 
 ! Strict blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Third party their use to serve ads and track users.

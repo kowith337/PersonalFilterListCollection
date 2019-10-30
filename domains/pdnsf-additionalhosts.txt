@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.33.5]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 201910242212
+# Version: 201910310020
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -138,10 +138,6 @@ dns.google.com
 suggestqueries.google.*
 suggestqueries.googleapis.com
 
-# Phoninig home about network quality and also measuring?
-connectivitycheck.gstatic.com
-mobilenetworkscoring-pa.googleapis.com
-
 # Google Play device certify?
 phonedeviceverification-pa.googleapis.com
 voledevice-pa.googleapis.com
@@ -154,6 +150,16 @@ stun.l.google.com
 # This may impact to all notifications that rely to "GCM"
 alt*-mtalk.google.com
 
+# Blocking connection check mean "Google Play" cannot trigger app updates and/or downloads unless you've once allow it!
+# However, it's may prevent some unexpected behaviour, such as update disabled system apps without intents, e.g.
+# Chrome, YouTube, etc.
+# IMO, I don't want to use Chrome! but unfortunately, I cannot find any proper ways to keep stop updating it without that method!
+# Futhurmore, because "Android 6+" can foruce use Google Chrome as System WebView, it's likely impossible for disabling that!
+# Unless you're running "Android 9" and install "Shelter" app, you need to create work profile by that, then "Freeze" Chrome and
+# forget about it! once you've done that, Android will pick default SystemWebView and you will unable to use Chrome as WebView
+# anymore because not all profiles are allowed to enable using Chrome for WebView!
+connectivitycheck.gstatic.com
+
 # Geolocation?
 geomobileservices-pa.googleapis.com
 
@@ -162,6 +168,9 @@ instantmessaging-pa.googleapis.com
 
 # Google Fit / Health related?
 mdh-pa.googleapis.com
+
+# Phoninig home about network quality and also measuring?
+mobilenetworkscoring-pa.googleapis.com
 
 # Google Contacts?
 people-pa.googleapis.com
