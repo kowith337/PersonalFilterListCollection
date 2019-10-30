@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.33.5]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 201910211852
+# Version: 201910242212
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -54,7 +54,7 @@ adjust.com
 baidu.co.th
 bemobtrk.com
 bugsnag.com
-# cloudfront.net
+cloudfront.net
 hao123.com
 innity.com
 innity.net
@@ -160,13 +160,16 @@ geomobileservices-pa.googleapis.com
 # Needed for Google Allo/Duo?
 instantmessaging-pa.googleapis.com
 
+# Google Fit / Health related?
+mdh-pa.googleapis.com
+
 # Google Contacts?
 people-pa.googleapis.com
 
 # Google Photos?
 photosdata-pa.googleapis.com
 
-# Google calendar reminder
+# Google calendar reminder (Blocked because I use another calendar client)
 reminders-pa.googleapis.com
 
 # [Big Brother - This is so zucky!] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
@@ -209,7 +212,7 @@ z-*.fbsbx.com
 z.facebook.com
 zero.facebook.com
 
-# I'm surely this will break MESSenger net call due to using "STUN", that's surely it use "WebRTC" and possibly to leaks your IP!
+# I think this will break MESSenger net call due to using "STUN", that's surely it use "WebRTC" and possibly to leaks your IP!
 edge-stun.facebook.com
 stun.c10r.facebook.com
 stun.facebook.com

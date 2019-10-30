@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 201910090110
+! Version: 201910300859
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -58,7 +58,10 @@ m.intl.taobao.com,m.taobao.com##.App div[class^="smartbanner"]
 m.intl.taobao.com,m.taobao.com##.zebra-oversea-smartbanner
 
 ! [Twitter New]
+! - Generic
 twitter.com##main[role] div[class] > div[class][data-testid="sidebarColumn"] div[class][style] > div[class] aside[role="complementary"][aria-label^="Relevant"]
+! - Analytics Popup
+twitter.com##.ep-Campaign .ep-Signup
 
 ! [Twitter Old] (Deprecated, maybe.)
 twitter.com###signin-dropdown
@@ -117,6 +120,7 @@ stackexchange.com,superuser.com##.hero-container:has(#hero-content:has(div a[hre
 m.intl.taobao.com##.App .recommend .recommend-list-wrapper:nth-of-type(2)
 
 ! [Twitter New]
+twitter.com##div[aria-label^="Timeline:"] div > article[role="article"]:has(div[class] > svg g path[fill="#794BC4"])
 twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(a[role="link"][data-focusable][href^="/i/"])
 twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(div[role="button"][data-focusable][data-testid="UserCell"] a[aria-hidden][tabindex][href]):has(a[role="link"][data-focusable] div[dir="auto"] span[dir="auto"])
 twitter.com##div[data-reactroot] div[class] > div[data-focusable][tabindex][class] div[class]:has(div[class] > div[class][style] img[alt][src^="https://ton.twimg.com/twitter_shared_public/responsive-web"])
