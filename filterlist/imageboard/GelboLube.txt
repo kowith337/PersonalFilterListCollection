@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt) [Freezing]
-! Version: 201910301930
+! Version: 201911021209
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -288,6 +288,10 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 
 ! 2. Remove blur overlay for images requiring an account
 gelbooru.com##body img:style(filter:none !important)
+
+! 3. Experimental to (not fully) hide notice about using extensions in their site, since they want to obfuscate DOM name often,
+!    I will make those texts transparent instead.
+gelbooru.com##.contain-push div:style(color: transparent; font-size: 8px; font-weight: normal)
 
 ! HTML filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! able to remove some specific path inside the non-filtered document before it's load

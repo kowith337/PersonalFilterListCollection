@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: GelboLube (Firefox Legacy) [Freezing]
-! Version: 201910301930
+! Version: 201911021209
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/legacy/gelbolube.txt
@@ -287,6 +287,10 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 
 ! 2. Remove blur overlay for images requiring an account
 gelbooru.com##body img:style(filter:none !important)
+
+! 3. Experimental to (not fully) hide notice about using extensions in their site, since they want to obfuscate DOM name often,
+!    I will make those texts transparent instead.
+gelbooru.com##.contain-push div:style(color: transparent; font-size: 8px; font-weight: normal)
 
 ! Firefox + uBO Legacy Only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! ##script rules are work only uBlock0 1.2.0 + Firefox 42 or newer, but make sure it's not over than 56, if your Firefox version
