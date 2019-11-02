@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 201910050749
+! Version: 201911021320
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -23,6 +23,11 @@ m.intl.taobao.com##.App .recommend .recommend-list-wrapper:has(.recommend-title:
 ! [Facebook]
 ! Uncorrupted Facebook Stories design because your profile picture in story card will not fulfilled if you didn't have any posts.
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###MStoriesTray div[class] > #m-stories-add-item.profilePic i.profpic[role=img]:style(width: 100% !important; height: 100% !important)
+
+! [Gelbooru]
+! Experimental to (not fully) hide notice about using extensions in their site, since they want to obfuscate DOM name often,
+! I will make those texts transparent instead of hiding, also not set important because it may affect most hyperlinks.
+gelbooru.com##.contain-push div[class^="this"]:style(color: transparent; font-size: 8px; font-weight: normal)
 
 ! [Taobao Mobile]
 ! - Make tob-bar placeholder transparent
