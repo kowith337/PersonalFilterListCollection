@@ -8,7 +8,7 @@
      - **Google Play Services**
 
 2. When I've complete reset **Chrome** app either via *App settings* or *ADB commands* (use `am kill`, `am force-stop`, and `pm clear` together), I've re-check app info and found **Chrome** app have **Location** permission toggled on after successfully clear everything!
-   - Personally, I think in case if everything must be reset, none of any permissions can be granted automatically!!
+   - Personally, I think in case if everything has been reset, it should have none of any permissions can be granted automatically at all!!
    - That's why some tech news said and found **Google Chrome** itself phone home user locations too often!!!
    > - None of any forks doing the same things as **Google Chrome itself** does for this (intentionally?) problem, maybe because the marketing agreement of Android :tm: and/or Chrome itself are pre-installed as system level, which have enough priviledge for doing that thing!?
    > - Same things also happen to **`Google search`** app itself, but worst than chrome, it's will grant every permissions except `Location` if you didn't turn on device location (either GPS only or just network-based or both) yet.

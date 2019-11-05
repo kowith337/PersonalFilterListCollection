@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.33.5]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 201910310020
+# Version: 201911052003
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -12,7 +12,7 @@
 #              This filter is unlike generic hosts file and/or domain lists that you can update and/or recombine with, because
 #              the targeted app are also support wildcard blocking, but this should be loaded as user custom hosts however.
 #              You may need to regularly copy and update this file with your own way, futhurmore, you need to backup previous
-#              custom hosts list if you have any existed before use this file as a replacement.
+#              custom hosts list if you have anything existed before use this file as a replacement.
 #              Since this filter cannot load as remote rules, if you think I've overdone blocking something, try add "!" or "#"
 #              (w/o quote) to unblock or whitelist it manually, e.g. below.
 #              !google.co.th (This is a whitelist rule, that's mean anything from 'google.co.th' can be bypassed.)
@@ -73,8 +73,10 @@ umeng.com
 # Note that some domains are neccessary but it's also shady at a same time, e.g. "Google Play Store" use gvt1~gvt3 domains for
 # updating apps, while use randomized subdomains for phoning home (contains "beacon" in hostname) during, you may need to
 # whitelisted it's app manually, however, I prefer you to looking for "Aurora" or "Yalp" and whitelist those apps instead if
-# you don't want to use their official store app for update anything about applications in your phone.
+# you don't want to use their official store app for update anything about applications in your phone.*
 # Futhurmore, Youtube also use 'redirector.gvt1.com' to redirect ad videos as well.
+# * Note that some apps are check "Installation source" that it's actually come from "Play Store" or not, you may lost some
+#   feature or you can't even use app if it's detected that you're not installed from desired source that they want!
 2mdn.net
 admob.com
 adsensecustomsearchads.com
@@ -98,6 +100,19 @@ gvt4.com
 gvt46.com
 metric.gstatic.com
 urchin.com
+
+# Blocking connection check mean "Google Play" cannot trigger app updates and/or downloads unless you've once allow it!
+# However, it's may prevent some unexpected behaviour, such as update disabled system apps without intent, e.g.
+# YouTube, Google Chrome, Google Play Store itself, etc. and especially Google Play Service, because every update will reset
+# device admin state, e.g. "Find my device" and "Lock Screen Service"
+# (even you've turned off already, but it will re-enable after update it or reboot! and it's no way for disable permanently!!)*
+# * Unless your device was rooted or use another OS ROM that not ship with any G-APPS!!!
+# Also, I don't want to use Chrome, but unfortunately, I cannot find any proper way to keep stop updating it without that method!
+# Futhurmore, because "Android 6+" can foruce use Google Chrome as System WebView, it's likely impossible for disabling that!
+# Unless you're running "Android 9" and install "Shelter" app, you need to create work profile by that, then "Freeze" Chrome and
+# also DON'T EVEN UNFREEZE AND/OR USE IT! once you've done that, Android will pick default SystemWebView and you will unable to
+# use Chrome as WebView anymore because not all profiles are enabled Chrome, and it's not eligable to use as WebView!
+connectivitycheck.gstatic.com
 
 # Google play features (include play services, e.g. app invite, growth, phone number, subscriptions, etc.)
 appinvite-*.googleapis.com
@@ -126,7 +141,7 @@ android-safebrowsing.google.com
 # safebrowsing.googleapis.com
 
 # It's upload incoming phone numbers to check spam calls.
-# * Concern to anyone who touching phone numbers and contacts since various Facebook violations (please blame "Zuck" for that!)
+# * Concern to anyone who touching phone numbers and contacts since various Facebook violations (please blame "ZUCK" for that!)
 dialercallinfolookup-pa.googleapis.com
 telephonyspamprotect-pa.googleapis.com
 
@@ -150,16 +165,6 @@ stun.l.google.com
 # This may impact to all notifications that rely to "GCM"
 alt*-mtalk.google.com
 
-# Blocking connection check mean "Google Play" cannot trigger app updates and/or downloads unless you've once allow it!
-# However, it's may prevent some unexpected behaviour, such as update disabled system apps without intents, e.g.
-# Chrome, YouTube, etc.
-# IMO, I don't want to use Chrome! but unfortunately, I cannot find any proper ways to keep stop updating it without that method!
-# Futhurmore, because "Android 6+" can foruce use Google Chrome as System WebView, it's likely impossible for disabling that!
-# Unless you're running "Android 9" and install "Shelter" app, you need to create work profile by that, then "Freeze" Chrome and
-# forget about it! once you've done that, Android will pick default SystemWebView and you will unable to use Chrome as WebView
-# anymore because not all profiles are allowed to enable using Chrome for WebView!
-connectivitycheck.gstatic.com
-
 # Geolocation?
 geomobileservices-pa.googleapis.com
 
@@ -178,11 +183,11 @@ people-pa.googleapis.com
 # Google Photos?
 photosdata-pa.googleapis.com
 
-# Google calendar reminder (Blocked because I use another calendar client)
+# Google calendar reminder (Blocked because I use another calendar client!)
 reminders-pa.googleapis.com
 
 # [Big Brother - This is so zucky!] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# Facebook Zero Substances (aka. "Free Basics", wait, no! "Free BaSucks")
+# Facebook Zero Substances (aka. "Free Basics", wait, no! "Free BaZUCKS")
 # Allow these connections below means they can use additional tricks for keep track you with old tech, such WAP and MSISDN!
 # Plus, their system can easily to determine that it's really you! because the shame quality of WAP protocal and MSISDN header
 # are ship with your mobile phone numbers and will be leaks to anyone who want to capture it!!
