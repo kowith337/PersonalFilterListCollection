@@ -30,7 +30,7 @@
 | [BlahDNS 🇩🇪](https://github.com/ookangzheng/blahdns/#server-information) | :lock: [:lock_with_ink_pen:](https://doh-de.blahdns.com/dns-query) | :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `159.69.198.101` | TLS:`dot-de.blahdns.com` |
 | [BlahDNS 🇨🇭](https://github.com/ookangzheng/blahdns/#server-information) | :lock: [:lock_with_ink_pen:](https://doh-ch.blahdns.com/dns-query) | :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `[2a0a:e5c0:2:2:0:c8ff:fe68:bf48]` | TLS:`dot-ch.blahdns.com` |
 | [SecureDNS](https://securedns.eu) | :lock: [:lock_with_ink_pen:](https://ads-doh.securedns.eu/dns-query)[²](https://doh.securedns.eu/dns-query) | :closed_lock_with_key: | :negative_squared_cross_mark: | TLS:`ads-dot.securedns.eu` | TLS²:`dot.securedns.eu` |
-| [keweon aSecDNS](https://forum.xda-developers.com/showpost.php?p=73985083) | :computer: :lock: [:lock_with_ink_pen:](https://doh.asecdns.com/nebulo) :no_pedestrians: :fire: |  | [View server lists](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | TLS:`dot.asecdns.com` |
+| [keweon aSecDNS](https://forum.xda-developers.com/showpost.php?p=73985083) | :computer: :lock: [:lock_with_ink_pen:](https://doh.asecdns.com/nebulo) | :no_pedestrians: :fire: |  | [View server lists](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | TLS:`dot.asecdns.com` |
 |  |  |  |  |  |  |
 | **Other** |  |  |  |  |  |
 | [Captain Nemo](https://captnemo.in/doh) | [:lock_with_ink_pen:](https://doh.captnemo.in/dns-query) |  | [:person_with_pouting_face: :watch:](https://captnemo.in/dns/privacy) (1h) | `139.59.48.222` |  |
