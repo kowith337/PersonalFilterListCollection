@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: GelboLube (Firefox Legacy) [Freezing]
-! Version: 201911021319
+! Version: 201911092033
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/legacy/gelbolube.txt
@@ -287,6 +287,9 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 
 ! 2. Remove blur overlay for images requiring an account
 gelbooru.com##body img:style(filter:none !important)
+
+! 3. Fix extra-long search bar caused by padding adjust. (reported from Twitter DM, so I won't shout reporter name.)
+gelbooru.com##.padding15:style(padding: 15px !important)
 
 ! Firefox + uBO Legacy Only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! ##script rules are work only uBlock0 1.2.0 + Firefox 42 or newer, but make sure it's not over than 56, if your Firefox version

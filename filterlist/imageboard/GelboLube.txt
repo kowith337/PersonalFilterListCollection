@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt) [Freezing]
-! Version: 201911021318
+! Version: 201911092033
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -288,6 +288,9 @@ gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
 
 ! 2. Remove blur overlay for images requiring an account
 gelbooru.com##body img:style(filter:none !important)
+
+! 3. Fix extra-long search bar caused by padding adjust. (reported from Twitter DM, so I won't shout reporter name.)
+gelbooru.com##.padding15:style(padding: 15px !important)
 
 ! HTML filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! able to remove some specific path inside the non-filtered document before it's load
