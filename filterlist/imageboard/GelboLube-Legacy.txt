@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: GelboLube (Firefox Legacy) [Freezing]
-! Version: 201911092033
+! Version: 201911130025
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/legacy/gelbolube.txt
@@ -219,10 +219,10 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ||gelbooru.com/script/bpjs.js$important
 ||gelbooru.com/script/license.*$important
 
-! 5. Pre-blocking images ahead to prevent advert images that placed as /thumbnails/0X/, this will supply by Unbreak #4 that
+! 5. Pre-blocking images ahead to prevent advert images that placed as '/thumbnails/0X/', this will supply by Unbreak #4 that
 !    actually load legitimate thumbnails, I've reduced priority for [*.jpg] due to it's use for other appearance, such as
-!    recent comments that load thumbnail images without ?<PostID> referrer, also prevent repetitive requests that their
-!    currently using, like re-request every images as "other" instead of "image"
+!    recent comments that load thumbnail images without '?<PostID>' referrer, also prevent repetitive (and abusive) requests
+!    that their currently using, like re-request every images as "other" instead of request as it's own type.
 ||gelbooru.com/thumbnails/*.jpg|
 ||gelbooru.com/thumbnails/*.gif|$important
 ||gelbooru.com/thumbnails/*.png|$important
@@ -297,7 +297,7 @@ gelbooru.com##.padding15:style(padding: 15px !important)
 ! Note: Fennec F-Droid also work, Not sure for IceCat and Pale Moon because it based on ESR build...
 ! - I can confirmed these inline script filter rules below can collaps space that caused from every immoral ads, for now.
 ! - Only the legacy version of uBlock Origin can be used these rules, the legacy version will be no longer release and get updated
-!   when stable version of Firefox 57 released, or maybe need someone to clone and port to keep extended support for legacy version.
+!   when stable version of Firefox 57 released, or maybe need someone to clone and port to keep extended support beyond EoL!
 ! - Keep in mind because they may rename some function to survive blocking, such as change [advertVar] to [abvertDar]
 !#if env_firefox
 gelbooru.com##script:contains(.AddZone)

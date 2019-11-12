@@ -6,9 +6,9 @@
 | [BlahDNS](https://github.com/ookangzheng/blahdns) | :lock: [:lock_with_ink_pen:](https://doh-jp.blahdns.com/dns-query) | :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `108.61.201.119` | `[2001:19f0:7001:1ded:5400:01ff:fe90:945b]` |
 | [DNSWarden](https://github.com/bhanupratapys/dnswarden) AdBlock | :computer: :lock: [:lock_with_ink_pen:](https://doh.dnswarden.com/adblock) | :closed_lock_with_key: :no_pedestrians: | [:negative_squared_cross_mark:](https://github.com/bhanupratapys/dnswarden#privacy-policy-and-tc) | `116.203.35.255:53` | `116.203.70.156:53` |
 | [SecureDNS](https://securedns.eu) | :lock: [:lock_with_ink_pen:](https://ads-doh.securedns.eu/dns-query)[²](https://doh.securedns.eu/dns-query) | :closed_lock_with_key: :six: :no_pedestrians: | :negative_squared_cross_mark: | `146.185.167.43` | `[2a03:b0c0:0:1010::e9a:3001]` |
-| [Tiarap](https://doh.tiar.app) | :computer: :lock: [:lock_with_ink_pen:](https://doh.tiar.app/dns-query) | :six: :no_pedestrians: | :negative_squared_cross_mark: | `174.138.21.128` | `2400:6180:0:d0::5f6e:4001` |
-| [keweon](https://forum.xda-developers.com/showpost.php?p=73985083) [Physical](https://reinstall.keweon.center) | :computer: :lock: [:lock_with_ink_pen:](https://doh.asecdns.com/dns-query)[²](https://doh.asecdns.com/nebulo)[³](https://dns.keweon.center/nebulo) | :closed_lock_with_key: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `176.9.62.58` | `176.9.62.62` |
-| [keweon](https://forum.xda-developers.com/showpost.php?p=73985083) [Physical](https://reinstall.keweon.center) IPv6 | :computer: :lock: [:lock_with_ink_pen:](https://doh.asecdns.com/dns-query)[²](https://doh.asecdns.com/nebulo)[³](https://dns.keweon.center/nebulo) | :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `2a01:4f8:150:8023::58` | `2a01:4f8:150:8023::62` |
+| [Tiarap](https://doh.tiarap.org) | :computer: :lock: [:lock_with_ink_pen:](https://doh.tiar.app/dns-query)[²](https://doh.tiarap.org/dns-query) | :six: :no_pedestrians: | :negative_squared_cross_mark: | `174.138.21.128` | `2400:6180:0:d0::5f6e:4001` |
+| [keweon](https://reinstall.keweon.center) | :computer: :lock: [:lock_with_ink_pen:](https://dns.keweon.center/dns-query)[²](https://dns.keweon.center/nebulo) | :closed_lock_with_key: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `176.9.62.58` | `176.9.62.62` |
+| [keweon](https://reinstall.keweon.center) IPv6 | :computer: :lock: [:lock_with_ink_pen:](https://dns.keweon.center/dns-query)[²](https://dns.keweon.center/nebulo) | :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `2a01:4f8:150:8023::58` | `2a01:4f8:150:8023::62` |
 | [DNSWarden](https://github.com/bhanupratapys/dnswarden) IPv6 AdBlock | :computer: :lock: [:lock_with_ink_pen:](https://doh.dnswarden.com/adblock) | :closed_lock_with_key: :six: :no_pedestrians: | [:negative_squared_cross_mark:](https://github.com/bhanupratapys/dnswarden#privacy-policy-and-tc) | `[2a01:4f8:1c1c:75b4::1]:53` | `[2a01:4f8:1c1c:5e77::1]:53` |
 |  |  |  |  |  |  |
 | **Anti-Censorship** \* |  |  |  |  |  |
@@ -33,8 +33,8 @@
 | [keweon aSecDNS](https://forum.xda-developers.com/showpost.php?p=73985083) | :computer: :lock: [:lock_with_ink_pen:](https://doh.asecdns.com/nebulo) | :no_pedestrians: :fire: |  | [View server lists](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | TLS:`dot.asecdns.com` |
 |  |  |  |  |  |  |
 | **Other** |  |  |  |  |  |
+| [NekoMimiRouter](https://dns-over-https.com) | [:lock_with_ink_pen:](https://dns.dns-over-https.com/dns-query) |  | [:person_with_pouting_face: :watch:](https://dns-over-https.com/privacy) (?) | `45.77.124.64` | `[2001:470:f324:0:45:77:124:64]` |
 | [Captain Nemo](https://captnemo.in/doh) | [:lock_with_ink_pen:](https://doh.captnemo.in/dns-query) |  | [:person_with_pouting_face: :watch:](https://captnemo.in/dns/privacy) (1h) | `139.59.48.222` |  |
-| [NekoMimiRouter](https://dns-over-https.com) | [:lock_with_ink_pen:](https://dns.dns-over-https.com/dns-query) |  | [:person_with_pouting_face: :watch:](https://dns-over-https.com/privacy) (?) | `[2001:470:f324:0:45:77:124:64]` |  |
 |  |  |  |  |  |  |
 | **Regional** |  |  |  |  |  |
 | [keweon 🇺🇸 (Silicon Valley)](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :computer: | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `45.32.140.26` | `[2001:19f0:ac01:639::26]` |

@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Chromium/WebExt) [Freezing]
-! Version: 201911092033
+! Version: 201911130025
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -220,10 +220,10 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ||gelbooru.com/script/bpjs.js$important
 ||gelbooru.com/script/license.*$important
 
-! 5. Pre-blocking images ahead to prevent advert images that placed as /thumbnails/0X/, this will supply by Unbreak #4 that
+! 5. Pre-blocking images ahead to prevent advert images that placed as '/thumbnails/0X/', this will supply by Unbreak #4 that
 !    actually load legitimate thumbnails, I've reduced priority for [*.jpg] due to it's use for other appearance, such as
-!    recent comments that load thumbnail images without ?<PostID> referrer, also prevent repetitive requests that their
-!    currently using, like re-request every images as "other" instead of "image"
+!    recent comments that load thumbnail images without '?<PostID>' referrer, also prevent repetitive (and abusive) requests
+!    that their currently using, like re-request every images as "other" instead of request as it's own type.
 ||gelbooru.com/thumbnails/*.jpg|
 ||gelbooru.com/thumbnails/*.gif|$important
 ||gelbooru.com/thumbnails/*.png|$important
