@@ -1,11 +1,11 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 201911071144
+! Version: 201911121058
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/testing/testlist.txt
-! Description: This list is for experimental and testing only, all rules in here will be change and/or remove at anytime!
+! Description: This list is for experimental and testing only, all rules in here maybe changed and/or remove at anytime!
 
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Taobao Mobile] Remove header anchor navigator
@@ -16,7 +16,7 @@ m.intl.taobao.com##.App .toolbar .toolbar__anchor-wrapper
 m.intl.taobao.com##.App .bar:has(a.bar-item[href^="//shop.m.taobao.com/shop/shop_index.htm?"])
 
 ! Non-basic characters filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! [Taobao Mobile] Aim to remove "you might also like" items, but using the chinese word (MiscAnnoyance use `nth-of-type` method)
+! [Taobao Mobile] Aim to remove "you may also like" items, but using the chinese word (MiscAnnoyance use `nth-of-type` method)
 m.intl.taobao.com##.App .recommend .recommend-list-wrapper:has(.recommend-title:has-text(邻家好货))
 
 ! CSS Modification  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -62,6 +62,7 @@ google.com##script:inject(query-stripper.js, /(?<=\?|\&)gs_(l|r)=.+[\&]/)
 google.com##script:inject(query-stripper.js, /(?<=\?|\&)sa=\w/)
 google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(?<=\?|\&)utm=.+[\&]/)
 google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(?<=\?|\&)utm_\w+=.+[\&]/)
+play.google.com##script:inject(query-stripper.js, /(?<=\?|\&)(pcampaignid|referrer)=.+[\&]/)
 steamcommunity.com,steampowered.com##script:inject(query-stripper.js, /(?<=\?|\&)snr=.+[\&]/)
 twitter.com,t.co##script:inject(query-stripper.js, /(?<=\?|\&)amp=\d/)
 youtube.com##script:inject(query-stripper.js, /(?<=\?|\&)feature=.+[\&]/)
