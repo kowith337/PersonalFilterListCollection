@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.33.5]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 201911130113
+# Version: 201911151855
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -142,7 +142,7 @@ offlinepages-pa.googleapis.com
 
 # PA-ranoid GoogleAPI connections
 digitalassetlinks.googleapis.com
-firebaseremoteconfig.googleapis.com
+firebase*.googleapis.com
 footprints-pa.googleapis.com
 personalsafety-pa.googleapis.com
 
