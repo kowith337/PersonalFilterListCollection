@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.33.5]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 201911151855
+# Version: 201911191837
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -76,9 +76,9 @@ linkedin.com
 onesignal.com
 python-libs.com
 thisilike.net
+umeng.com
 vidoomy.com
 vuclip.com
-umeng.com
 
 # [Big Brother - Non-Google fanboy] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Note that some domains are neccessary but it's also shady at a same time, e.g. "Google Play Store" use gvt1~gvt3 domains for
@@ -121,13 +121,13 @@ urchin.com
 # Also, I don't want to use Chrome, but unfortunately, I cannot find any proper way to keep stop updating it without that method!
 # Futhurmore, because "Android 6+" can foruce use Google Chrome as System WebView, it's likely impossible for disabling that!
 # Unless you're running "Android 9" and install "Shelter" app, you need to create work profile by that, then "Freeze" Chrome and
-# also DON'T EVEN UNFREEZE AND/OR USE IT! once you've done that, Android will pick default SystemWebView and you will unable to
-# use Chrome as WebView anymore because not all profiles are enabled Chrome, and it's not eligable to use as WebView!
+# also "DON'T EVEN UNFREEZE AND/OR USE IT!" once you've done that, Android will pick default SystemWebView and you will unable to
+# use Chrome as WebView anymore because not all profiles are enabled Chrome for ready to use as WebView!
 connectivitycheck.gstatic.com
 
 # Google play features (include play services, e.g. app invite, growth, phone number, subscriptions, etc.)
-appinvite-*.googleapis.com
 androidsuggesthub-pa.googleapis.com
+appinvite-*.googleapis.com
 growth-pa.googleapis.com
 myphonenumbers-pa.googleapis.com
 playatoms-pa.googleapis.com
@@ -214,22 +214,18 @@ reminders-pa.googleapis.com
 # e.g. They will binding your "DATR" cookie with mobile carrier name that you're using, you can check with diagnostics page at
 # https://d.facebook.com/diagnostics
 # - Sometime it's neccessary for them to make sure that you're eligable to use it, or if you've previously agree to use that!!
+*-z-*.facebook.com
+*-z-*.facebook.net
+*-z-*.fbcdn.net
+*-z-*.fbsbx.com
 0.facebook.com
 edge-star-z-*.facebook.com
-edge-z-*.facebook.com
-edge-z-*.facebook.net
-edge-z-*.fbcdn.net
-edge-z-*.fbsbx.com
 fna-fbcdn-z-*.fbcdn.net
 free.facebook.com
 freebasics.com
 h.facebook.com
 internet.org
 mobile.facebook.com
-mqtt-z-*.facebook.com
-mqtt-z-*.facebook.net
-mqtt-z-*.fbcdn.net
-mqtt-z-*.fbsbx.com
 o.facebook.com
 p.facebook.com
 vvv.facebook.com
