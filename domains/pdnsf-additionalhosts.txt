@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.33.5]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 201911191837
+# Version: 201911191840
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -219,8 +219,6 @@ reminders-pa.googleapis.com
 *-z-*.fbcdn.net
 *-z-*.fbsbx.com
 0.facebook.com
-edge-star-z-*.facebook.com
-fna-fbcdn-z-*.fbcdn.net
 free.facebook.com
 freebasics.com
 h.facebook.com
