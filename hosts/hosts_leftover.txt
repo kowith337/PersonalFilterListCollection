@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201911151857
+# Version: 201911201916
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -498,6 +498,7 @@
 0.0.0.0 static.addtoany.com
 0.0.0.0 static.gammaplatform.com
 0.0.0.0 statmt.matichon.co.th
+0.0.0.0 stats.waterfox.net
 0.0.0.0 synad1.nuffnang.co.th
 0.0.0.0 synad2.nuffnang.co.th
 0.0.0.0 synad3.nuffnang.co.th
