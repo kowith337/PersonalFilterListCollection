@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 201911121058
+! Version: 201911210840
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -25,7 +25,7 @@ m.intl.taobao.com##.App .recommend .recommend-list-wrapper:has(.recommend-title:
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###MStoriesTray div[class] > #m-stories-add-item.profilePic i.profpic[role=img]:style(width: 100% !important; height: 100% !important)
 
 ! [Taobao Mobile]
-! - Make tob-bar placeholder transparent
+! - Make top bar placeholder transparent
 m.intl.taobao.com##.App .toolbar.transformed:style(background-color: transparent !important)
 ! - Make placeholder button (back / add to cart) have circle background alpha under button and use custom color permanently
 m.intl.taobao.com##.App .toolbar .toolbar__btn i.iconfont:style(color: white !important)
@@ -45,6 +45,11 @@ m.intl.taobao.com##.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,
 ! [External scriptlets]
 ! Requirement for this section: @uBlock-user's scriptlets: https://github.com/uBlock-user/uBO-Scriptlets
 ! Raw: https://raw.githubusercontent.com/uBlock-user/uBO-Scriptlets/master/scriptlets.txt
+! - Tesing stage: Remove internal tag
+google.com##script:inject(remove-div-tag.js, data-ved)
+! - Testing stage: Remove META
+facebook.com##script:inject(remove-meta.js, referrer)
+! - Strip unnecessary URL parameters (mostly use for tracking users internally)
 aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(go|main)_item(_id|id)=\d+/)
 aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(pvid|scm|sourceType|sm|spm|ttid|ut_sk|utparam)=.+[\&]/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(_ft_|__tn__)=.+[\&]/)
