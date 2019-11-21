@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201910131918
+! Version: 201912211758
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -31,6 +31,7 @@
 /PagesTimelineChainingPagelet$important,domain=facebook.com
 /qp/action/redirect$important,domain=facebook.com
 ||facebook.com/*/promotion_trigger_info/$all,important,~document
+||facebook.com/ad_campaign/landing.php$important
 ||facebook.com/adnw_logging/$important
 ||facebook.com/ads/$all,~document
 ||facebook.com/ads/ad_choices$important
@@ -200,7 +201,7 @@
 ||facebook.com/zero/policy$document,important
 ! ||free.facebook.com$important
 ! ||freebasics.com$important
-|http://h.facebook.com$important
+||h.facebook.com$important
 ! ||internet.org$important
 ! ||mobile.facebook.com$important
 ! ||o.facebook.com$important
@@ -245,7 +246,7 @@
 ||facebook.com/feed/badge/$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/feedtracking/$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/friends/center/suggestions/?ppk=*&tid=*$xmlhttprequest,red=nooptext
-||facebook.com/pubcontent/suggestions/impression_logging/$xmlhttprequest,important,redirect=nooptext
+||facebook.com/pubcontent/suggestions/impression_logging$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/privacy/reminders/log_imp$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/related-application/?$xmlhttprequest,important,redirect=nooptext
 ||facebook.com/security/hsts-pixel.gif$image,important,redirect=1x1-transparent.gif
