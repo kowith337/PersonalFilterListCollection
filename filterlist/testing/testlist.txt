@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 201911210840
+! Version: 201911231920
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -12,6 +12,10 @@
 m.intl.taobao.com##.App .toolbar .toolbar__anchor-wrapper
 
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Pantip] Remove all images inserted from anybody who have "Organization" roles
+! Often see at MBK forum, mostly come from mobile operator accounts (esp. AIS), it's bullshit idea and produced wasteful space!
+pantip.com###comments-jsrender .section-comment:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story img.img-in-post
+
 ! [Taobao Mobile] Remove bottom anchor (quickly add to cart / buy menu pane)
 m.intl.taobao.com##.App .bar:has(a.bar-item[href^="//shop.m.taobao.com/shop/shop_index.htm?"])
 
@@ -47,8 +51,10 @@ m.intl.taobao.com##.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,
 ! Raw: https://raw.githubusercontent.com/uBlock-user/uBO-Scriptlets/master/scriptlets.txt
 ! - Tesing stage: Remove internal tag
 google.com##script:inject(remove-div-tag.js, data-ved)
+
 ! - Testing stage: Remove META
 facebook.com##script:inject(remove-meta.js, referrer)
+
 ! - Strip unnecessary URL parameters (mostly use for tracking users internally)
 aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(go|main)_item(_id|id)=\d+/)
 aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(pvid|scm|sourceType|sm|spm|ttid|ut_sk|utparam)=.+[\&]/)

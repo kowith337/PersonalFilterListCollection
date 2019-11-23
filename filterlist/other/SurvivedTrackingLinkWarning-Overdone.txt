@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 201911130025
+! Version: 201911231944
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -47,6 +47,7 @@
 ||facebook.com/*&eid=$xmlhttprequest
 ||facebook.com/*&entrypoint=$document,subdocument,important
 ||facebook.com/*&entrypoint=$xmlhttprequest
+||facebook.com/*&fb_dtsg_ag=$document,important
 ||facebook.com/*&fref=$document,subdocument,important
 ||facebook.com/*&fref=$xmlhttprequest
 ||facebook.com/*&hc_ref=$document,subdocument,important
@@ -77,8 +78,7 @@
 ||facebook.com/*?eid=$xmlhttprequest
 ||facebook.com/*?entrypoint=$document,subdocument,important
 ||facebook.com/*?entrypoint=$xmlhttprequest
-||facebook.com/*?fb_dtsg_ag=$document,subdocument,important
-||facebook.com/*?fb_dtsg_ag=$xmlhttprequest
+||facebook.com/*?fb_dtsg_ag=$document,important
 ||facebook.com/*?fref=$document,subdocument,important
 ||facebook.com/*?fref=$xmlhttprequest
 ||facebook.com/*?hc_ref=$document,subdocument,important
@@ -139,8 +139,7 @@
 ||messenger.com/*&eid=$xmlhttprequest
 ||messenger.com/*&entrypoint=$document,subdocument,important
 ||messenger.com/*&entrypoint=$xmlhttprequest
-||messenger.com/*?fb_dtsg_ag=$document,subdocument,important
-||messenger.com/*?fb_dtsg_ag=$xmlhttprequest
+||messenger.com/*&fb_dtsg_ag=$document,important
 ||messenger.com/*&fref=$document,subdocument,important
 ||messenger.com/*&fref=$xmlhttprequest
 ||messenger.com/*&hc_ref=$document,subdocument,important
@@ -169,6 +168,7 @@
 ||messenger.com/*?eid=$xmlhttprequest
 ||messenger.com/*?entrypoint=$document,subdocument,important
 ||messenger.com/*?entrypoint=$xmlhttprequest
+||messenger.com/*?fb_dtsg_ag=$document,important
 ||messenger.com/*?fref=$document,subdocument,important
 ||messenger.com/*?fref=$xmlhttprequest
 ||messenger.com/*?hc_ref=$document,subdocument,important

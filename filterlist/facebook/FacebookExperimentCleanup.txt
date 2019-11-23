@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 201909251252
+! Version: 201911231923
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -40,6 +40,10 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 
 ! Remove "Top Fan" label and it's icon! (Only from comments view)
 facebook.com##div[data-testid^="UFI2Comment/root"] div[data-testid^="UFI2Comment/body"] a:has(img[src^="/images/assets"][src*="/facebook_icons/diamond_filled"])
+
+! Remove zuckestions to watch videos in "Party" mode!
+facebook.com##.uiStreamStory div[class] > div div[class] >:has(a[href^="/watch/"])
+facebook.com##.userContentWrapper div > div a[ajaxify^="/living_room/share_dialog/"]
 
 ! [Facebook Feature Phone Basic]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 ! Finally, weird space between comments also come to this version, freaking cool!!
