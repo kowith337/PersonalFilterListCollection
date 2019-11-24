@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.33.5]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 201911191840
+# Version: 201911250359
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -58,8 +58,9 @@ orpheusdroid.com
 cloudflare-dns.com
 
 # More privacy enhanced for Firefox users, make sure you've disable their internal TRR first.
-location.services.mozilla.com
 ciscobinary.openh264.org
+detectportal.*
+location.services.mozilla.com
 
 # Must block entirely, no matter what!
 add0n.com
