@@ -104,6 +104,7 @@ pantip.com##.pt-body .container .row:has(.pt-block .tooltipTagsOnTop)
 ! - Also disable BlogGang and PantipMarket, same reason as above.
 pantip.com###sidebar-container #sidebar-fixed .pt-block:has(a[title="Bloggang"])
 pantip.com###sidebar-container #sidebar-fixed .pt-block:has(a[title="Pantip Market"])
+pantip.com###sidebar-container #sidebar-fixed .pt-block:has(pt-block-header a[href^="https://pantip.com/club"])
 
 ! [Pixiv]
 pixiv.net##.search-nav-config .button:has(a.premium-link)
