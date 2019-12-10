@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.33.5]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 201911250359
+# Version: 201912110130
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -27,14 +27,24 @@ g00.*
 # Use CSP as abusive way, anyone who use that in their server are said and pretend that use for capture problems, however, using
 # this ability may also send some sensitive information that enough for fingerprinting, such as User Agent, OS, CPU, etc.
 # even "CloudFlare" also use this!
+csp.withgoogle.com
 report-to.*
 report-uri.*
 
 # Gambling and shady mobile supscription services that have some repetitve patterns
 *88*.tk
 *horo.space
+datapremium.*
+downloadwap.*
 scr888*.*
 tons*.com
+
+# Other unwanted (Partial From ThaiParanoidBlock)
+innity.*
+nuffnang.*
+nr-data.*
+popclck.*
+truehits.*
 
 # [Generic Reason]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Unneccessary protocol
@@ -62,24 +72,164 @@ ciscobinary.openh264.org
 detectportal.*
 location.services.mozilla.com
 
-# Must block entirely, no matter what!
+# Copied from ThaiParanoidBlock and must block entirely, no matter what!
+24x7th.com
+2o7.net
+accesstrade.in.th
+adasiaholdings.com
 add0n.com
 adjust.com
+adnuntius.com
+adok.asia
+adop.cc
+adsoptimal.com
+adtplatform.com
+alexametrics.com
+amung.us
+anonymousdemographics.com
+ao0c.club
+app-measurement.com
+appsflyer.com
+areyouahuman.com
+atdmt.com
 audiencerun.com
+aviasales.ru
 baidu.co.th
 bemobtrk.com
+bingsu.devpantip.com
+bingsu.pantip.com
+bluekai.com
+browsehappy.com
+btstatic.com
 bugsnag.com
+bumq.com
+clickadu.com
+clicksgear.com
 cloudfront.net
+connextra.com
+consensu.org
+crashlytics.com
+crazyegg.com
+criteo.com
+criteo.net
+crwdcntrl.net
+cryptobrowser.site
+cxense.com
+d-stats.com
+da-ads.com
+dapxl.com
+demand.supply
+dentsu360th.com
+dtscout.com
+edgesuite.net
+effectivemeasure.net
+exdynsrv.com
+exoclick.com
+exosrv.com
+eyeota.net
+feedjit.com
+filadmir.site
+fout.jp
+gammaplatform.com
+gbotvisit.com
+gbox.sc
+generaltagcom.ga
+geoplugin.net
+go2cloud.org
+go2speed.org
 hao123.com
+heatmap.it
+histats.com
+hotjar.com
+igmedianow.com
+imprezzer.com
+imrworldwide.com
+inmobi.com
 innity.com
 innity.net
+inspectlet.com
+instant.page
+iyfnzgb.com
+izooto.com
+kiosked.com
 linkedin.com
+luckyorange.com
+m88.com
+mgid.com
+moatads.com
+mtburn.com
+mtburn.jp
+newrelic.com
+nytive.com
+oclaserver.com
+oilchange.website
+onclasrv.com
+onclickads.net
 onesignal.com
+openx.notebookspec.com
+openxmarket.asia
+opticks.io
+padsdel.com
+padstm.com
+parkingcrew.com
+parkingcrew.net
+pc1ads.com
+pc2ads.com
+pc3ads.com
+pikdo.net
+ping-fast.com
+pingdom.net
+plista.com
+popads.net
+popcash.net
+poptm.com
+ptengine.com
+puserving.com
+pushnative.com
 python-libs.com
+quicktask.xyz
+reimageplus.com
+replase.tk
+revsci.net
+rgvqcsxqge.com
+run-syndicate.com
+runtnc.net
+ruu-dee.com
+sales-frontier.com
+scorecardresearch.com
+serving-sys.com
+shinobi.jp
+silkspan.com
+simba-digital.com
+socdm.com
+stats.in.th
+stats.wp.com
+sumome.com
+synergy-e.com
+taboola.com
+tagserve.asia
+tapad.com
 thisilike.net
+thstats.com
+thtrackingap.com
+tityx.com
+trackjs.com
+travelpayouts.com
+tynt.com
 umeng.com
+user-api.com
+user-clicks.com
+user-red.com
+uustoughtonma.org
+va-endpoint.com
 vidoomy.com
+visitor-analytics.io
 vuclip.com
+whatshelp.io
+wmdstat.dev-sanook.com
+yengo.com
+yu0123456.com
+zemanta.com
 
 # [Big Brother - Non-Google fanboy] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Note that some domains are neccessary but it's also shady at a same time, e.g. "Google Play Store" use gvt1~gvt3 domains for
