@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 201911052002
+! Version: 201911141712
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -22,7 +22,6 @@ google.*###extrares #botstuff div[data-ved] div[data-hveid]
 google.*###extrares #botstuff div[data-ved] div[jscontroller][data-hveid][data-ved]
 google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][data-ved] div[data-has-close][class*="result-pivots"][data-ved]
 google.*###main div[data-ved] div[data-async-context] .kno-result[data-hveid][data-ved]
-google.*###search div[data-ved] #rso div[class]:has(.xpdopen)
 google.*##[jscontroller] #rg[data-ved] div[class*="irc-"]
 google.*##div[jsname][role="list"] div[jsname][data-id^="Refinements"]
 
@@ -93,18 +92,12 @@ github.com##.js-notice:has(.js-dismiss)
 google.*##g-bottom-sheet[jscontroller] div[role="dialog"]:has(div[jscontroller][data-ved] img[src*="consent.google.com/status?"])
 ! - Remove text dialog to tell back to Google for suggest something to show more results.
 google.*###extrares #botstuff div[data-ved] > :has(div textarea[data-ved])
+! - Related to "Related question" / "Related search" / "People also search for"
+google.*###search div[data-ved] #rso div[class]:has(.xpdopen)
 
 ! [Minecraft Forge]
 minecraftforge.net##.sidebar-right:has(.ad-container)
 minecraftforge.net##.sidebar-right:has(.ad-container-framed)
-
-! [Pantip NEW] (as of 2019/08 site redesign)
-! - Disable top pick and trending topics due to Bingsu subdomain was blocked for good, plus take more space unneccessay, yet.
-pantip.com##.pt-body .container .row:has(.pt-block .tooltipTagsOnTop)
-! - Also disable BlogGang and PantipMarket, same reason as above.
-pantip.com###sidebar-container #sidebar-fixed .pt-block:has(a[title="Bloggang"])
-pantip.com###sidebar-container #sidebar-fixed .pt-block:has(a[title="Pantip Market"])
-pantip.com###sidebar-container #sidebar-fixed .pt-block:has(pt-block-header a[href^="https://pantip.com/club"])
 
 ! [Pixiv]
 pixiv.net##.search-nav-config .button:has(a.premium-link)
