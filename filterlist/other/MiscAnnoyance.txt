@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 201911141712
+! Version: 201912171354
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -96,8 +96,18 @@ google.*###extrares #botstuff div[data-ved] > :has(div textarea[data-ved])
 google.*###search div[data-ved] #rso div[class]:has(.xpdopen)
 
 ! [Minecraft Forge]
-minecraftforge.net##.sidebar-right:has(.ad-container)
-minecraftforge.net##.sidebar-right:has(.ad-container-framed)
+minecraftforge.net##.sidebar-right:has(div[class^="ad-container"])
+
+! [Pantip]
+! - Remove all kind of "PROMOTED Reviews", either Sponsored [SR] and Business [BR]
+pantip.com##.m-thumb:has(a .subject:has-text([BR] ))
+pantip.com##.m-thumb:has(a .subject:has-text([SR] ))
+pantip.com##.pt-list-item:has(.pt-list-item__title h2 a:has-text([BR] ))
+pantip.com##.pt-list-item:has(.pt-list-item__title h2 a:has-text([SR] ))
+! - Remove all images inserted from anybody who have "Organization" roles
+!   Often see at MBK forum, mostly come from mobile operator accounts (esp. AIS), it's bullshit idea and produced wasteful space!
+pantip.com##.m-post-comment[id^="comment"] .m-comment-wrapper:has(a.icon-memberbadge-organization) .m-display-post-story .img-in-post
+pantip.com##.section-comment:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post
 
 ! [Pixiv]
 pixiv.net##.search-nav-config .button:has(a.premium-link)
@@ -112,6 +122,12 @@ stackexchange.com,superuser.com##.hero-container:has(#hero-content:has(div a[hre
 
 ! [Taobao Mobile] Remove non-same shop related items
 m.intl.taobao.com##.App .recommend .recommend-list-wrapper:nth-of-type(2)
+
+! [YouTube Mobile]
+! - Remove privacy reminder overlay
+m.youtube.com##ytm-mealbar:has-text(privacy)
+! - Try remove "Recommended for you" from watch next lists (Only work for English interface for now)
+m.youtube.com##ytm-compact-video-renderer .compact-media-item:has(.compact-media-item-metadata .subhead:has-text(Recommended))
 
 ! [Twitter New]
 twitter.com##div[aria-label^="Timeline:"] div > article[role="article"]:has(div[class] > svg g path[fill="#794BC4"])
@@ -205,10 +221,10 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||pantip.com/api/forum-service/forum/get_promote_tag?$important
 
 ! [Reddit]
-||redditmedia.com/gtm^$important,~document
-||redditstatic.com/gtm^$important,~document
+||redditmedia.com/gtm^$all,important,~document
+||redditstatic.com/gtm^$all,important,~document
 
-! [SpeedTest]
+! [OOKLA SpeedTest]
 ||cloudfront.net/x.js$domain=speedtest.net,important
 ||speedtest.net/choices/$important
 ||speedtest.net/javascript/jquery-analytics$important
@@ -227,7 +243,8 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ! Redirect - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Google]
 ! - I don't know about this connection but I've found 'ei' parameter inside that already blocked by my another list called
-! "Anti survived tracking warning (overdone ver.)" , expected that the request use for ping back to phone home? alright then...
+!   "Anti survived tracking warning (overdone ver.)" , expected that the request use for ping back to phone home and/or keep
+!   tracking users periodically, right...?
 ||google.*/async/bgasy?$xmlhttprequest,important,redirect=nooptext
 ||google.*/imgevent?$xmlhttprequest,important,redirect=nooptext
 ! - This request use 'vet' parameter and random strings value
@@ -244,6 +261,9 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||redditstatic.com/gtm^$subdocument,important,redirect=noopframe
 ! - Also PNG PIXEL TRACKING!?
 ||reddit.com/static/pixel.png$image,important,redirect=1x1-transparent.png
+
+! [OOKLA SpeedTest]
+||cloudfront.net/x.js$domain=speedtest.net,script,important,redirect=noopjs
 
 ! Block Page(s) / Redirect annoyance - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Add0n] Some extensions that hosted with add0n are show the popup
@@ -274,11 +294,6 @@ randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptable
 !          You can look for henrypp's "ChrLauncher" if you want to do so... (Windows users only!)
 !#if env_firefox
 github.com##.unsupported-browser
-!#endif
-
-! [DeviantArt Mobile] Trim ads placeholder and focus only download button
-!#if env_mobile
-deviantart.com###download .mobile-ad .container .download:style(margin-left: 0px !important; left: 0px !important; width: 100% !important; height: 25px !important)
 !#endif
 
 ! [Backup since uBO 1.20 doesn't support standalone use of `~document` exception]

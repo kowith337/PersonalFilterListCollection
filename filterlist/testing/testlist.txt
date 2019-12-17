@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 201912010024
+! Version: 201912171331
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -12,14 +12,13 @@
 m.intl.taobao.com##.App .toolbar .toolbar__anchor-wrapper
 
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! [Pantip] Remove all images inserted from anybody who have "Organization" roles
-! Often see at MBK forum, mostly come from mobile operator accounts (esp. AIS), it's bullshit idea and produced wasteful space!
-pantip.com##.section-comment:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story img.img-in-post
-
 ! [Taobao Mobile] Remove bottom anchor (quickly add to cart / buy menu pane)
 m.intl.taobao.com##.App .bar:has(a.bar-item[href^="//shop.m.taobao.com/shop/shop_index.htm?"])
 
 ! Non-basic characters filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Pantip] Explicit and spam topic name
+pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(วรพจน์))
+
 ! [Taobao Mobile] Aim to remove "you may also like" items, but using the chinese word (MiscAnnoyance use `nth-of-type` method)
 m.intl.taobao.com##.App .recommend .recommend-list-wrapper:has(.recommend-title:has-text(邻家好货))
 
@@ -51,7 +50,6 @@ m.intl.taobao.com##.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,
 ! Raw: https://raw.githubusercontent.com/uBlock-user/uBO-Scriptlets/master/scriptlets.txt
 ! - Tesing stage: Remove internal tag
 ! google.com##script:inject(remove-div-tag.js, data-ved) // Broken due to it's remove everything entirely!
-
 ! - Testing stage: Remove META
 facebook.com##script:inject(remove-meta.js, referrer)
 
@@ -65,9 +63,8 @@ f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(que
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)__m_(async_page|log_async)__=\d+/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)__xts__(\[\d\]|\%5B\d\%5D)=.+[\&]/)
 f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)ref_\w+=.+[\&]/)
-google.com##script:inject(query-stripper.js, /(?<=\?|\&)(aqs|ei|oq|stick|usg|ved)=.+[\&]/)
+google.com##script:inject(query-stripper.js, /(?<=\?|\&)(aqs|ei|gs_l|gs_r|oq|stick|usg|ved)=.+[\&]/)
 google.com##script:inject(query-stripper.js, /(?<=\?|\&)(bih|biw|ibh|ibw|ust|vet)=\d+/)
-google.com##script:inject(query-stripper.js, /(?<=\?|\&)gs_(l|r)=.+[\&]/)
 google.com##script:inject(query-stripper.js, /(?<=\?|\&)sa=\w/)
 google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(?<=\?|\&)utm=.+[\&]/)
 google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(?<=\?|\&)utm_\w+=.+[\&]/)

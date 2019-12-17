@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 201912141716
+! Version: 201912171357
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -19,14 +19,28 @@
 ||t.co/*?amp=1$document,subdocument,xmlhttprequest,important
 
 ! Common Extrenal
+||*&=__cf_chl_jschl_tk__=*$document,subdocument,xmlhttprequest,important
 ||*&amp_*=*&usqp=*$document,subdocument,xmlhttprequest,important
 ||*&fbclid$document,subdocument,xmlhttprequest,important
 ||*&gclid$document,subdocument,xmlhttprequest,important
 ||*&utm_*=$document,subdocument,xmlhttprequest,important
+||*&yclid$document,subdocument,xmlhttprequest,important
+||*?=__cf_chl_jschl_tk__=*$document,subdocument,xmlhttprequest,important
 ||*?amp_*=*&usqp=*$document,subdocument,xmlhttprequest,important
 ||*?fbclid$document,subdocument,xmlhttprequest,important
 ||*?gclid$document,subdocument,xmlhttprequest,important
 ||*?utm_*=$document,subdocument,xmlhttprequest,important
+||*?yclid$document,subdocument,xmlhttprequest,important
+
+! Shady outgoing prompt from first party service
+||l.facebook.com$document,subdocument,xmlhttprequest,important
+||l.messenger.com$document,subdocument,xmlhttprequest,important
+||lm.facebook.com$document,subdocument,xmlhttprequest,important
+||lm.messenger.com$document,subdocument,xmlhttprequest,important
+||youtube.com/redirect?*&redir_token=*$document,subdocument,important
+||youtube.com/redirect?*&redir_token=*$xmlhttprequest
+||youtube.com/redirect?redir_token=*$document,subdocument,important
+||youtube.com/redirect?redir_token=*$xmlhttprequest
 
 ! Internal
 ||facebook.com/*&__tn__=$document,subdocument,important
@@ -119,10 +133,6 @@
 ||google.*/*?vet=$xmlhttprequest
 ||google.*/*?vet=*$document,subdocument,important
 ||google.*/*?vet=*$xmlhttprequest
-||l.facebook.com$document,subdocument,xmlhttprequest,important
-||l.messenger.com$document,subdocument,xmlhttprequest,important
-||lm.facebook.com$document,subdocument,xmlhttprequest,important
-||lm.messenger.com$document,subdocument,xmlhttprequest,important
 ||messenger.com/*&__tn__=$document,subdocument,important
 ||messenger.com/*&__tn__=$xmlhttprequest
 ||messenger.com/*&__xts__%5B0%5D=$document,subdocument,important
@@ -183,20 +193,16 @@
 ||messenger.com/*?settings_tracking=$xmlhttprequest
 ||play.google.com/*&pcampaignid=*$document,subdocument,important
 ||play.google.com/*&pcampaignid=*$xmlhttprequest
-||play.google.com/*?pcampaignid=*$document,subdocument,important
-||play.google.com/*?pcampaignid=*$xmlhttprequest
 ||play.google.com/*&referrer=*$document,subdocument,important
 ||play.google.com/*&referrer=*$xmlhttprequest
+||play.google.com/*?pcampaignid=*$document,subdocument,important
+||play.google.com/*?pcampaignid=*$xmlhttprequest
 ||play.google.com/*?referrer=*$document,subdocument,important
 ||play.google.com/*?referrer=*$xmlhttprequest
 ||steamcommunity.com/*&snr=*$document,subdocument,xmlhttprequest,important
 ||steamcommunity.com/*?snr=*$document,subdocument,xmlhttprequest,important
 ||steampowered.com/*&snr=*$document,subdocument,xmlhttprequest,important
 ||steampowered.com/*?snr=*$document,subdocument,xmlhttprequest,important
-||youtube.com/redirect?*&redir_token=*$document,subdocument,important
-||youtube.com/redirect?*&redir_token=*$xmlhttprequest
-||youtube.com/redirect?redir_token=*$document,subdocument,important
-||youtube.com/redirect?redir_token=*$xmlhttprequest
 
 ! Problematic, at your own risk!
 ||pantip.com/l/http*$document,subdocument,xmlhttprequest,important
