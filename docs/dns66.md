@@ -3,45 +3,34 @@
 | Provider | Support | Features | Logging | First IP | Second IP \* |
 |----------|---------|----------|---------|----------|--------------|
 | **Ads\/Tracking Block** |  |  |  |  |  |
-| [BlahDNS](https://github.com/ookangzheng/blahdns) | :lock: [:lock_with_ink_pen:](https://doh-jp.blahdns.com/dns-query) | :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `108.61.201.119` | `[2001:19f0:7001:1ded:5400:01ff:fe90:945b]` |
-| [DNSWarden](https://github.com/bhanupratapys/dnswarden) AdBlock | :computer: :lock: [:lock_with_ink_pen:](https://doh.dnswarden.com/adblock) | :closed_lock_with_key: :no_pedestrians: | [:negative_squared_cross_mark:](https://github.com/bhanupratapys/dnswarden#privacy-policy-and-tc) | `116.203.35.255:53` | `116.203.70.156:53` |
+| [Public PiHole 🇳🇱](https://public-pihole.com) | :computer: | :closed_lock_with_key: |  | `51.158.168.202` |  |
+| [Public PiHole 🇨🇦](https://public-pihole.com) | :computer: | :closed_lock_with_key: |  | `54.39.97.51` |  |
+| [Public PiHole 🇸🇬](https://public-pihole.com) | :computer: | :closed_lock_with_key: |  | `139.99.74.182` |  |
 | [SecureDNS](https://securedns.eu) | :lock: [:lock_with_ink_pen:](https://ads-doh.securedns.eu/dns-query)[²](https://doh.securedns.eu/dns-query) | :closed_lock_with_key: :six: :no_pedestrians: | :negative_squared_cross_mark: | `146.185.167.43` | `[2a03:b0c0:0:1010::e9a:3001]` |
+| [Public PiHole 🇫🇷](https://public-pihole.com) | :computer: | :closed_lock_with_key: |  | `163.172.170.19` |  |
 | [Tiarap](https://doh.tiarap.org) | :computer: :lock: [:lock_with_ink_pen:](https://doh.tiar.app/dns-query)[²](https://doh.tiarap.org/dns-query) | :six: :no_pedestrians: | :negative_squared_cross_mark: | `174.138.21.128` | `2400:6180:0:d0::5f6e:4001` |
-| [DNSWarden](https://github.com/bhanupratapys/dnswarden) AdBlock IPv6 | :computer: :lock: [:lock_with_ink_pen:](https://doh.dnswarden.com/adblock) | :closed_lock_with_key: :six: :no_pedestrians: | [:negative_squared_cross_mark:](https://github.com/bhanupratapys/dnswarden#privacy-policy-and-tc) | `[2a01:4f8:1c1c:75b4::1]:53` | `[2a01:4f8:1c1c:5e77::1]:53` |
 |  |  |  |  |  |  |
-| **Anti-Censorship** \* |  |  |  |  |  |
+| **No Censorship and\/or logging** \* |  |  |  |  |  |
+| [Foundation of Applied Privacy](https://appliedprivacy.net/services/dns) | :lock: [:lock_with_ink_pen:](https://doh.appliedprivacy.net/query) | :closed_lock_with_key: :six: | [:negative_squared_cross_mark:](https://appliedprivacy.net/privacy-policy) | `37.252.185.232` | `[2a00:63c1:a:229::3]` |
 | [dns.watch](https://dns.watch) | :lock: | :closed_lock_with_key: | [:negative_squared_cross_mark:](https://dns.watch/why)\* | `84.200.69.80` | `84.200.70.40` |
 | [Digital Courage](https://digitalcourage.de/support/zensurfreier-dns-server) | :lock: | :six: |  | `85.214.20.141` | `[2a01:238:42f6:ac00:2a29:4f7f:b6d:ef46]` |
-| [DNSWarden](https://github.com/bhanupratapys/dnswarden) Uncensored | :computer: :lock: [:lock_with_ink_pen:](https://doh.dnswarden.com/uncensored) | :closed_lock_with_key: :six: | [:negative_squared_cross_mark:](https://github.com/bhanupratapys/dnswarden#privacy-policy-and-tc) | `116.203.35.255:5353` | `116.203.70.156:5353` |
+| [Tiarap 🇯🇵](https://jp.tiar.app) | :computer: :lock: [:lock_with_ink_pen:](https://jp.tiar.app/dns-query) | :six: | :negative_squared_cross_mark: | `172.104.93.80` | `[2400:8902::f03c:91ff:feda:c514]` |
 | [AS250](https://twitter.com/as250) | :computer: |  |  | `194.150.168.168` |  |
 | [Chaos Computer Club](https://www.ccc.de/censorship/dns-howto) | :computer: |  |  | `195.54.164.39` |  |
 | [CCC ClaraNet](https://www.ccc.de/censorship/dns-howto) | :computer: |  |  | `212.82.225.7` | `212.82.226.212` |
 | [dns.watch](https://dns.watch) IPv6 | :computer: | :closed_lock_with_key: :six: | [:negative_squared_cross_mark:](https://dns.watch/why)\* | `[2001:1608:10:25::1c04:b12f]` | `[2001:1608:10:25::9249:d69b]` |
-| [DNSWarden](https://github.com/bhanupratapys/dnswarden) Uncensored IPv6 | :computer: :lock: [:lock_with_ink_pen:](https://doh.dnswarden.com/uncensored) | :closed_lock_with_key: :six: :no_pedestrians: | [:negative_squared_cross_mark:](https://github.com/bhanupratapys/dnswarden#privacy-policy-and-tc) | `[2a01:4f8:1c1c:75b4::1]:5353` | `[2a01:4f8:1c1c:5e77::1]:5353` |
 | [OpenNIC](https://www.opennic.org) |  |  |  | [View Tier 1](https://servers.opennic.org/?tier=1) | [View Tier 2](https://servers.opennic.org/?tier=2) |
 |  |  |  |  |  |  |
-| **Non-logging only** |  |  |  |  |  |
-| [Foundation of Applied Privacy](https://appliedprivacy.net/services/dns) | :lock: [:lock_with_ink_pen:](https://doh.appliedprivacy.net/query) | :closed_lock_with_key: :six: | [:negative_squared_cross_mark:](https://appliedprivacy.net/privacy-policy) | `37.252.185.232` | `[2a00:63c1:a:229::3]` |
-|  |  |  |  |  |  |
-| **TLS** |  |  |  |  |  |
-| [BlahDNS 🇯🇵](https://github.com/ookangzheng/blahdns) | :lock: [:lock_with_ink_pen:](https://doh-jp.blahdns.com/dns-query) | :closed_lock_with_key: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `108.61.201.119` | TLS:`dot-jp.blahdns.com` |
-| [BlahDNS 🇩🇪](https://github.com/ookangzheng/blahdns/#server-information) | :lock: [:lock_with_ink_pen:](https://doh-de.blahdns.com/dns-query) | :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `159.69.198.101` | TLS:`dot-de.blahdns.com` |
-| [BlahDNS 🇨🇭](https://github.com/ookangzheng/blahdns/#server-information) | :lock: [:lock_with_ink_pen:](https://doh-ch.blahdns.com/dns-query) | :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `[2a0a:e5c0:2:2:0:c8ff:fe68:bf48]` | TLS:`dot-ch.blahdns.com` |
-| [SecureDNS](https://securedns.eu) | :lock: [:lock_with_ink_pen:](https://ads-doh.securedns.eu/dns-query)[²](https://doh.securedns.eu/dns-query) | :closed_lock_with_key: | :negative_squared_cross_mark: | TLS:`ads-dot.securedns.eu` | TLS²:`dot.securedns.eu` |
-|  |  |  |  |  |  |
-| **Other** |  |  |  |  |  |
+| **Non-standard DNS (DoT and\/or DoH)** |  |  |  |  |  |
+| [BlahDNS 🇯🇵](https://github.com/ookangzheng/blahdns) | :lock: [:lock_with_ink_pen:](https://doh-jp.blahdns.com/dns-query) | :closed_lock_with_key: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `45.32.55.94` | `[2001:19f0:7001:3259:5400:02ff:fe71:0bc9]` |
 | [NekoMimiRouter](https://dns-over-https.com) | [:lock_with_ink_pen:](https://dns.dns-over-https.com/dns-query) |  | [:person_with_pouting_face: :watch:](https://dns-over-https.com/privacy) (?) | `45.77.124.64` | `[2001:470:f324:0:45:77:124:64]` |
+| [BlahDNS 🇫🇮](https://github.com/ookangzheng/blahdns/#server-information) | :lock: [:lock_with_ink_pen:](https://doh-ch.blahdns.com/dns-query) | :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `95.216.212.177` | `[2a01:4f9:c010:43ce::1]` |
+| [DNSWarden](https://github.com/bhanupratapys/dnswarden) | :lock: [:lock_with_ink_pen:](https://doh.dnswarden.com/adblock)[²](https://doh.dnswarden.com/adblock-ecs)[³](https://doh.dnswarden.com/uncensored)[⁴](https://doh.dnswarden.com/uncensored-ecs)[⁵](https://doh.dnswarden.com/adult-filter)[⁶](https://doh.dnswarden.com/adult-filter-ecs) | :closed_lock_with_key: :no_pedestrians: | [:negative_squared_cross_mark:](https://github.com/bhanupratapys/dnswarden#privacy-policy-and-tc) | `116.203.35.255` | `116.203.70.156` |
 | [Captain Nemo](https://captnemo.in/doh) | [:lock_with_ink_pen:](https://doh.captnemo.in/dns-query) |  | [:person_with_pouting_face: :watch:](https://captnemo.in/dns/privacy) (1h) | `139.59.48.222` |  |
-|  |  |  |  |  |  |
-| **Regional** |  |  |  |  |  |
-| [Public PiHole 🇳🇱](https://public-pihole.com) | :computer: | :closed_lock_with_key: |  | `51.158.168.202` |  |
-| [Public PiHole 🇨🇦](https://public-pihole.com) | :computer: | :closed_lock_with_key: |  | `54.39.97.51` |  |
-| [Public PiHole 🇸🇬](https://public-pihole.com) | :computer: | :closed_lock_with_key: |  | `139.99.74.182` |  |
 | [BlahDNS 🇩🇪](https://github.com/ookangzheng/blahdns/#server-information) | :lock: [:lock_with_ink_pen:](https://doh-de.blahdns.com/dns-query) | :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `159.69.198.101` | `[2a01:4f8:1c1c:6b4b::1]` |
-| [Antoine Aflalo 🇺🇸](https://www.aaflalo.me/2019/01/dns-over-https-server-aaflalo-me) | :lock: [:lock_with_ink_pen:](https://dns-nyc.aaflalo.me/dns-query) | :closed_lock_with_key: :no_pedestrians: |  | `168.235.81.167` | TLS:`dns-nyc.aaflalo.me:853` |
-| [Public PiHole 🇫🇷](https://public-pihole.com) | :computer: | :closed_lock_with_key: |  | `163.172.170.19` |  |
-| [Tiarap 🇯🇵](https://jp.tiar.app) | :computer: :lock: [:lock_with_ink_pen:](https://jp.tiar.app/dns-query) | :six: | :negative_squared_cross_mark: | `172.104.93.80` | `[2400:8902::f03c:91ff:feda:c514]` |
-| [Antoine Aflalo 🇨🇭](https://www.aaflalo.me/2019/01/dns-over-https-server-aaflalo-me) | :lock: [:lock_with_ink_pen:](https://dns.aaflalo.me/dns-query) | :closed_lock_with_key: :no_pedestrians: |  | `176.56.236.175` | TLS:`dns.aaflalo.me:853` |
+| [Antoine Aflalo 🇺🇸](https://www.aaflalo.me/2019/01/dns-over-https-server-aaflalo-me) | :lock: [:lock_with_ink_pen:](https://dns-nyc.aaflalo.me/dns-query) | :closed_lock_with_key: :no_pedestrians: |  | `168.235.81.167` | TLS:`dns-nyc.aaflalo.me` |
+| [Antoine Aflalo 🇨🇭](https://www.aaflalo.me/2019/01/dns-over-https-server-aaflalo-me) | :lock: [:lock_with_ink_pen:](https://dns.aaflalo.me/dns-query) | :closed_lock_with_key: :no_pedestrians: |  | `176.56.236.175` | TLS:`dns.aaflalo.me` |
+| [DNSWarden](https://github.com/bhanupratapys/dnswarden) IPv6 | :lock: [:lock_with_ink_pen:](https://doh.dnswarden.com/adblock)[²](https://doh.dnswarden.com/adblock-ecs)[³](https://doh.dnswarden.com/uncensored)[⁴](https://doh.dnswarden.com/uncensored-ecs)[⁵](https://doh.dnswarden.com/adult-filter)[⁶](https://doh.dnswarden.com/adult-filter-ecs) | :closed_lock_with_key: :six: :no_pedestrians: | [:negative_squared_cross_mark:](https://github.com/bhanupratapys/dnswarden#privacy-policy-and-tc) | `[2a01:4f8:1c1c:75b4::1]` | `[2a01:4f8:1c1c:5e77::1]` |
 |  |  |  |  |  |  |
 | **Run by corporate** |  |  |  |  |  |
 | [CloudFlare + APNIC](https://1.1.1.1) | :computer: :lock: [:lock_with_ink_pen:](https://cloudflare-dns.com/dns-query)[²](https://mozilla.cloudflare-dns.com/dns-query) |  | [:bust_in_silhouette: :watch:](https://developers.cloudflare.com/1.1.1.1/commitment-to-privacy/privacy-policy/privacy-policy) | `1.0.0.1` | `1.1.1.1` |

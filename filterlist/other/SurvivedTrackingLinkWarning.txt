@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 201912171359
+! Version: 201912181553
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -17,13 +17,13 @@
 ||t.co/*?amp=1$document,important
 
 ! Common Extrenal
-||*&=__cf_chl_jschl_tk__=*$document,important
+||*&=__cf_chl_jschl_tk__=$document,important
 ||*&amp_*=*&usqp=*$document,important
 ||*&fbclid$document,important
 ||*&gclid$document,important
 ||*&utm_*=$document,important
 ||*&yclid$document,important
-||*?=__cf_chl_jschl_tk__=*$document,important
+||*?=__cf_chl_jschl_tk__=$document,important
 ||*?amp_*=*&usqp=*$document,important
 ||*?fbclid$document,important
 ||*?gclid$document,important
@@ -35,8 +35,8 @@
 ||l.messenger.com$document,important
 ||lm.facebook.com$document,important
 ||lm.messenger.com$document,important
-||youtube.com/redirect?*&redir_token=*$document,important
-||youtube.com/redirect?redir_token=*$document,important
+||youtube.com/redirect?*&redir_token=$document,important
+||youtube.com/redirect?redir_token=$document,important
 
 ! Internal
 ||facebook.com/*&__xts__%5B0%5D=$document,important
@@ -69,9 +69,11 @@
 ||facebook.com/*?settings_tracking=$document,important
 ||facebook.com/ads/*&session_id=$document,important
 ||facebook.com/ads/*?session_id=$document,important
-||google.*/url?*&usg=*$document,important
-||google.*/url?*&ved=*$document,important
-||google.*/url?*&vet=*$document,important
+||google.*/url?*&usg=$document,important
+||google.*/url?*&ved=$document,important
+||google.*/url?*&vet=$document,important
+||instagram.com/*&igshid=$document,important
+||instagram.com/*?igshid=$document,important
 ||messenger.com/*&__xts__%5B0%5D=$document,important
 ||messenger.com/*&__xts__*=$document,important
 ||messenger.com/*&__xts__[0]=$document,important
@@ -100,10 +102,10 @@
 ||messenger.com/*?referrer=$document,important
 ||messenger.com/*?refsrc=$document,important
 ||messenger.com/*?settings_tracking=$document,important
-||steamcommunity.com/*&snr=*$document,important
-||steamcommunity.com/*?snr=*$document,important
-||steampowered.com/*&snr=*$document,important
-||steampowered.com/*?snr=*$document,important
+||steamcommunity.com/*&snr=$document,important
+||steamcommunity.com/*?snr=$document,important
+||steampowered.com/*&snr=$document,important
+||steampowered.com/*?snr=$document,important
 
 ! Problematic, at your own risk!
 ||pantip.com/l/http*$document,important

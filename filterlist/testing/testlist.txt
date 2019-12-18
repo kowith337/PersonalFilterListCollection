@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 201912171331
+! Version: 201912181553
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -68,6 +68,7 @@ google.com##script:inject(query-stripper.js, /(?<=\?|\&)(bih|biw|ibh|ibw|ust|vet
 google.com##script:inject(query-stripper.js, /(?<=\?|\&)sa=\w/)
 google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(?<=\?|\&)utm=.+[\&]/)
 google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(?<=\?|\&)utm_\w+=.+[\&]/)
+instagram.com##script:inject(query-stripper.js, /(?<=\?|\&)igshid=.+[\&]/)
 play.google.com##script:inject(query-stripper.js, /(?<=\?|\&)(pcampaignid|referrer)=.+[\&]/)
 steamcommunity.com,steampowered.com##script:inject(query-stripper.js, /(?<=\?|\&)snr=.+[\&]/)
 twitter.com,t.co##script:inject(query-stripper.js, /(?<=\?|\&)amp=\d/)
