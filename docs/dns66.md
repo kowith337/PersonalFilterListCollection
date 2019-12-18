@@ -7,9 +7,7 @@
 | [DNSWarden](https://github.com/bhanupratapys/dnswarden) AdBlock | :computer: :lock: [:lock_with_ink_pen:](https://doh.dnswarden.com/adblock) | :closed_lock_with_key: :no_pedestrians: | [:negative_squared_cross_mark:](https://github.com/bhanupratapys/dnswarden#privacy-policy-and-tc) | `116.203.35.255:53` | `116.203.70.156:53` |
 | [SecureDNS](https://securedns.eu) | :lock: [:lock_with_ink_pen:](https://ads-doh.securedns.eu/dns-query)[²](https://doh.securedns.eu/dns-query) | :closed_lock_with_key: :six: :no_pedestrians: | :negative_squared_cross_mark: | `146.185.167.43` | `[2a03:b0c0:0:1010::e9a:3001]` |
 | [Tiarap](https://doh.tiarap.org) | :computer: :lock: [:lock_with_ink_pen:](https://doh.tiar.app/dns-query)[²](https://doh.tiarap.org/dns-query) | :six: :no_pedestrians: | :negative_squared_cross_mark: | `174.138.21.128` | `2400:6180:0:d0::5f6e:4001` |
-| [keweon](https://reinstall.keweon.center) | :computer: :lock: [:lock_with_ink_pen:](https://dns.keweon.center/dns-query)[²](https://dns.keweon.center/nebulo) | :closed_lock_with_key: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `176.9.62.58` | `176.9.62.62` |
-| [keweon](https://reinstall.keweon.center) IPv6 | :computer: :lock: [:lock_with_ink_pen:](https://dns.keweon.center/dns-query)[²](https://dns.keweon.center/nebulo) | :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `2a01:4f8:150:8023::58` | `2a01:4f8:150:8023::62` |
-| [DNSWarden](https://github.com/bhanupratapys/dnswarden) IPv6 AdBlock | :computer: :lock: [:lock_with_ink_pen:](https://doh.dnswarden.com/adblock) | :closed_lock_with_key: :six: :no_pedestrians: | [:negative_squared_cross_mark:](https://github.com/bhanupratapys/dnswarden#privacy-policy-and-tc) | `[2a01:4f8:1c1c:75b4::1]:53` | `[2a01:4f8:1c1c:5e77::1]:53` |
+| [DNSWarden](https://github.com/bhanupratapys/dnswarden) AdBlock IPv6 | :computer: :lock: [:lock_with_ink_pen:](https://doh.dnswarden.com/adblock) | :closed_lock_with_key: :six: :no_pedestrians: | [:negative_squared_cross_mark:](https://github.com/bhanupratapys/dnswarden#privacy-policy-and-tc) | `[2a01:4f8:1c1c:75b4::1]:53` | `[2a01:4f8:1c1c:5e77::1]:53` |
 |  |  |  |  |  |  |
 | **Anti-Censorship** \* |  |  |  |  |  |
 | [dns.watch](https://dns.watch) | :lock: | :closed_lock_with_key: | [:negative_squared_cross_mark:](https://dns.watch/why)\* | `84.200.69.80` | `84.200.70.40` |
@@ -19,7 +17,7 @@
 | [Chaos Computer Club](https://www.ccc.de/censorship/dns-howto) | :computer: |  |  | `195.54.164.39` |  |
 | [CCC ClaraNet](https://www.ccc.de/censorship/dns-howto) | :computer: |  |  | `212.82.225.7` | `212.82.226.212` |
 | [dns.watch](https://dns.watch) IPv6 | :computer: | :closed_lock_with_key: :six: | [:negative_squared_cross_mark:](https://dns.watch/why)\* | `[2001:1608:10:25::1c04:b12f]` | `[2001:1608:10:25::9249:d69b]` |
-| [DNSWarden](https://github.com/bhanupratapys/dnswarden) IPv6 Uncensored | :computer: :lock: [:lock_with_ink_pen:](https://doh.dnswarden.com/uncensored) | :closed_lock_with_key: :six: :no_pedestrians: | [:negative_squared_cross_mark:](https://github.com/bhanupratapys/dnswarden#privacy-policy-and-tc) | `[2a01:4f8:1c1c:75b4::1]:5353` | `[2a01:4f8:1c1c:5e77::1]:5353` |
+| [DNSWarden](https://github.com/bhanupratapys/dnswarden) Uncensored IPv6 | :computer: :lock: [:lock_with_ink_pen:](https://doh.dnswarden.com/uncensored) | :closed_lock_with_key: :six: :no_pedestrians: | [:negative_squared_cross_mark:](https://github.com/bhanupratapys/dnswarden#privacy-policy-and-tc) | `[2a01:4f8:1c1c:75b4::1]:5353` | `[2a01:4f8:1c1c:5e77::1]:5353` |
 | [OpenNIC](https://www.opennic.org) |  |  |  | [View Tier 1](https://servers.opennic.org/?tier=1) | [View Tier 2](https://servers.opennic.org/?tier=2) |
 |  |  |  |  |  |  |
 | **Non-logging only** |  |  |  |  |  |
@@ -30,26 +28,14 @@
 | [BlahDNS 🇩🇪](https://github.com/ookangzheng/blahdns/#server-information) | :lock: [:lock_with_ink_pen:](https://doh-de.blahdns.com/dns-query) | :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `159.69.198.101` | TLS:`dot-de.blahdns.com` |
 | [BlahDNS 🇨🇭](https://github.com/ookangzheng/blahdns/#server-information) | :lock: [:lock_with_ink_pen:](https://doh-ch.blahdns.com/dns-query) | :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `[2a0a:e5c0:2:2:0:c8ff:fe68:bf48]` | TLS:`dot-ch.blahdns.com` |
 | [SecureDNS](https://securedns.eu) | :lock: [:lock_with_ink_pen:](https://ads-doh.securedns.eu/dns-query)[²](https://doh.securedns.eu/dns-query) | :closed_lock_with_key: | :negative_squared_cross_mark: | TLS:`ads-dot.securedns.eu` | TLS²:`dot.securedns.eu` |
-| [keweon aSecDNS](https://forum.xda-developers.com/showpost.php?p=73985083) | :computer: :lock: [:lock_with_ink_pen:](https://doh.asecdns.com/nebulo) | :no_pedestrians: :fire: |  | [View server lists](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | TLS:`dot.asecdns.com` |
 |  |  |  |  |  |  |
 | **Other** |  |  |  |  |  |
 | [NekoMimiRouter](https://dns-over-https.com) | [:lock_with_ink_pen:](https://dns.dns-over-https.com/dns-query) |  | [:person_with_pouting_face: :watch:](https://dns-over-https.com/privacy) (?) | `45.77.124.64` | `[2001:470:f324:0:45:77:124:64]` |
 | [Captain Nemo](https://captnemo.in/doh) | [:lock_with_ink_pen:](https://doh.captnemo.in/dns-query) |  | [:person_with_pouting_face: :watch:](https://captnemo.in/dns/privacy) (1h) | `139.59.48.222` |  |
 |  |  |  |  |  |  |
 | **Regional** |  |  |  |  |  |
-| [keweon 🇺🇸 (Silicon Valley)](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :computer: | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `45.32.140.26` | `[2001:19f0:ac01:639::26]` |
-| [keweon 🇬🇧](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :computer: | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `45.32.183.39` | `[2001:19f0:7402:a61::39]` |
-| [keweon 🇺🇸 (Dallas)](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :computer: | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `45.76.57.41` | `[2001:19f0:6401:9ed::41]` |
-| [keweon 🇦🇺](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :computer: | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `45.76.125.130` | `[2001:19f0:5801:b45::130]` |
-| [keweon 🇸🇬](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :computer: | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `45.76.151.221` | `[2001:19f0:4400:4f31::221]` |
-| [keweon 🇯🇵](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :computer: | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `45.77.25.72` | `[2001:19f0:7001:22a8::72]` |
-| [keweon 🇫🇷](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :computer: | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `45.77.62.37` | `[2001:19f0:6801:95e::37]` |
-| [keweon 🇳🇱](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :computer: | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `45.77.138.206` | `[2001:19f0:5001:d8d::206]` |
-| [keweon 🇺🇸 (New Jersey)](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :computer: | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `45.77.144.132` | `[2001:19f0:5:2962::132]` |
 | [Public PiHole 🇳🇱](https://public-pihole.com) | :computer: | :closed_lock_with_key: |  | `51.158.168.202` |  |
 | [Public PiHole 🇨🇦](https://public-pihole.com) | :computer: | :closed_lock_with_key: |  | `54.39.97.51` |  |
-| [keweon 🇩🇪 (Frankfurt)](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :computer: | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `104.207.131.11` | `[2001:19f0:6c01:61f::11]` |
-| [keweon 🇮🇳](https://forum.xda-developers.com/showpost.php?p=73985083&postcount=6) | :computer: | :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `139.59.33.236` | `[2400:6180:100:d0::30d:5001]` |
 | [Public PiHole 🇸🇬](https://public-pihole.com) | :computer: | :closed_lock_with_key: |  | `139.99.74.182` |  |
 | [BlahDNS 🇩🇪](https://github.com/ookangzheng/blahdns/#server-information) | :lock: [:lock_with_ink_pen:](https://doh-de.blahdns.com/dns-query) | :closed_lock_with_key: :six: :no_pedestrians: :fire: | :negative_squared_cross_mark: | `159.69.198.101` | `[2a01:4f8:1c1c:6b4b::1]` |
 | [Antoine Aflalo 🇺🇸](https://www.aaflalo.me/2019/01/dns-over-https-server-aaflalo-me) | :lock: [:lock_with_ink_pen:](https://dns-nyc.aaflalo.me/dns-query) | :closed_lock_with_key: :no_pedestrians: |  | `168.235.81.167` | TLS:`dns-nyc.aaflalo.me:853` |
