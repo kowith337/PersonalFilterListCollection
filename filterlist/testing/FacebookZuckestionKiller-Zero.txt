@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 201911231945
+! Version: 201912192135
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -358,6 +358,7 @@ facebook.com##iframe[id^="fbsbx-sig-iframe-"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###header #MBackNavBar
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root #MRoot span[data-top-of-feed-unit-type^="megaphone"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root .scrollArea[data-sigil*="friends-center-nav"] a[data-ajaxify-href*="/friends/center/suggestions/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div > a[href^="/friends/center/suggestions"][href*="empty_feed"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div > div[data-store*="actor_id"] div[data-sigil^="m-promo"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root[data-sigil*="context-layer-root"] article div a[href*="/ads/preferences/interest_suggestions/"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###viewport #header #mJewelNav #feed_jewel.hasCount a div span[data-sigil="count"]

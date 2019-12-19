@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 201911231923
+! Version: 201912192136
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -10,7 +10,7 @@
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [DOM Sectiom] --------------------------------------------------------------------------------------------------------------- !
 ! [Facebook Desktop]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Remove "Top Picks" product from marketplace lists, only work for english UI users only (UK, US, Pirate)
+! Remove "Top Picks" product from marketplace lists, only work for english UI users only (UK, US)
 facebook.com##div[data-testid="marketplace_home_feed"] div[class] > div[class]:has(span[itemcomponent]:has-text(/^Top picks/))
 
 ! Top videos for you...? No! Not Me and You! but for someone else!!
@@ -92,8 +92,8 @@ facebook.com##.userContentWrapper div > div a[ajaxify^="/living_room/share_dialo
 ! Try remove "More Zuckestions" when viewing group discover (This may break everything in group discover page!)
 0.facebook.com,free.facebook.com,m.facebook.com,mtouch.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##div[class^="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div a[href="#"] div[class*="clearfix"])
 
-! Try remove "Top Fan" (Only work for english language for now)
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##div[data-sigil="comment"] div[class] > a[href] div[class]:has-text(Top Fan)
+! Try remove any "Extra badges" (e.g. Top Fan, Valued Commenter, etc.)
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##div[data-sigil="comment"] div[class] > a[href] div[class]:has(div i.img[class*="sp_"][class*="sx_"])
 
 ! Remove non-same origin meun out of list (affect Pages Menu [your pages, liked, zuckested], Gaming, Explore, Fundarise, Instant Games)
 ! - New Bookmarks (visit https://touch.facebook.com/bookmarks)
@@ -148,7 +148,7 @@ facebook.com##.userContentWrapper div > div a[ajaxify^="/living_room/share_dialo
 ! Prevent connections to retrieve lists of zuckested pages to like or follow. (Desktop site only)
 ! Probably not recommended because you will not allow to remove or delete those pages zuckestions!
 ! I recommended to remove it out by copy bookmarklet scripts below before blocking this connections.
-! Note: Bookmarklet script is only work for english UI users only (UK, US, Pirate)
+! Note: Bookmarklet script is only work for english UI users only (UK, US)
 ! javascript:(function()%7Bvar%20divs%20%3D%20document.querySelectorAll('a%5Brole%3Dbutton%5D%5Bdata-tooltip-content%3D%22Remove%20Suggestion%22%5D')%3B%20for%20(i%20%3D%200%3B%20i%20%3C%20divs.length%3B%20%2B%2Bi)%20%7Bdivs%5Bi%5D.click()%3B%7D%7D)()
 ||facebook.com/ajax/pagelet/generic.php/PagesBrowserTopSuggestionsPagelet$xmlhttprequest,important,redirect=nooptext
 

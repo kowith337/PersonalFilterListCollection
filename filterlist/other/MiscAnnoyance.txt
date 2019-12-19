@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 201912171354
+! Version: 201912192144
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -40,9 +40,6 @@ minecraftforge.net##.promo-container
 minecraftforge.net##div img[src*="imrworldwide.com/cgi-bin/m?"]
 ! minecraftforge.net##.promos-wrapper
 
-! [Pixiv]
-pixiv.net###header ._description-signup-header
-
 ! [Pixivision] (Formerly Pixiv Spotlights)
 pixivision.net##._floated-bottom-bar
 
@@ -78,7 +75,10 @@ wordpress.com##.reader-recommended-sites
 wordpress.com##.sidebar-streams__discover
 
 ! [YouTube Non-Polymer]
+! - Remove BS survey (give stars about how satisfying, etc.)
 youtube.com###hats-container[data-survey-id]
+! - Remove related search keyword lists
+youtube.com###results li > .search-refinements
 
 ! [YouTube Polymer]
 youtube.com##ytd-consent-bump-renderer
@@ -108,9 +108,6 @@ pantip.com##.pt-list-item:has(.pt-list-item__title h2 a:has-text([SR] ))
 !   Often see at MBK forum, mostly come from mobile operator accounts (esp. AIS), it's bullshit idea and produced wasteful space!
 pantip.com##.m-post-comment[id^="comment"] .m-comment-wrapper:has(a.icon-memberbadge-organization) .m-display-post-story .img-in-post
 pantip.com##.section-comment:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post
-
-! [Pixiv]
-pixiv.net##.search-nav-config .button:has(a.premium-link)
 
 ! [Randomness Thing]
 randomnessthing.com##.textwidget:has(img[src*="no-adblock-wordpress-plugin"])
@@ -144,8 +141,11 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 wallgif.com###overlay:has(img[alt="Loader"])
 wallgif.com##content div[id^=block_modal]
 
-! [YouTube Old]
+! [YouTube Non-Polymer]
+! - Remove any "recommended" channel and topic lists at home feed
 youtube.com##.individual-feed li .branded-page-box:has(.feed-item-dismissable:has(span.shelf-subscription-button button[data-style-type="branded"]))
+! - Remove related search results
+youtube.com###results li > .feed-item-container.branded-page-box:has(.feed-item-dismissable)
 
 ! HTML Filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: This may work only FF quantum + uB0 WebExt

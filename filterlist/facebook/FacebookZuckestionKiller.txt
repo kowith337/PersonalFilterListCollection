@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Facebook Zuckestion Killer
-! Version: 201911231945
+! Version: 201912192135
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -349,6 +349,7 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com###MNewsFeed section div[da
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###header #MBackNavBar
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###root #MRoot span[data-top-of-feed-unit-type^="megaphone"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###root .scrollArea[data-sigil*="friends-center-nav"] a[data-ajaxify-href*="/friends/center/suggestions/"]
+m.facebook.com,mtouch.facebook.com,touch.facebook.com###root div > a[href^="/friends/center/suggestions"][href*="empty_feed"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###root div > div[data-store*="actor_id"] div[data-sigil^="m-promo"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###root[data-sigil*="context-layer-root"] article div a[href*="/ads/preferences/interest_suggestions/"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###viewport #header #mJewelNav #feed_jewel.hasCount a div span[data-sigil="count"]
