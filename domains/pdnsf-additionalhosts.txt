@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.33.5]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 201912110130
+# Version: 201912220214
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -23,6 +23,9 @@
 # Did any site owners who use that service noticed it's had impact to their client-side and/or web server performance?
 # Or it really doesn't cost much any harm at all!?
 g00.*
+g01.*
+g02.*
+g03.*
 
 # Use CSP as abusive way, anyone who use that in their server are said and pretend that use for capture problems, however, using
 # this ability may also send some sensitive information that enough for fingerprinting, such as User Agent, OS, CPU, etc.
@@ -292,6 +295,7 @@ exploresites-pa.googleapis.com
 offlinepages-pa.googleapis.com
 
 # PA-ranoid GoogleAPI connections
+datamixer-pa.googleapis.com
 digitalassetlinks.googleapis.com
 firebase*.googleapis.com
 footprints-pa.googleapis.com
