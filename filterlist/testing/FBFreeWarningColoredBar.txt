@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Free Basics Warning (TopBar Colored Redesign)
-! Version: 201912141727
+! Version: 201912252042
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -11,8 +11,10 @@
 0.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###header[data-sigil="MTopBlueBarHeader"]:style(background-color: plum !important)
 0.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###header[data-sigil="MTopBlueBarHeader"] .popoverOpen:style(background-color: mediumorchid  !important)
 
-! [Basic] If Facebook detected you as older browsers, they can apply basic layout!
+! [Basic] If Facebook detected you as older browsers, they can apply basic layout! (Mostly if you use or spoof as older Firefox)
+0.facebook.com,d.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_top_blue_bar_header:style(background-color: mediumorchid !important)
 0.facebook.com,d.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div[class] > #header:style(background-color: mediumorchid !important)
+0.facebook.com,d.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport #header:style(background-color: mediumorchid !important)
 0.facebook.com,d.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport #header form[action^="/search/"]:style(background-color: mediumorchid !important)
 0.facebook.com,d.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport #header form[action^="/search/"] table tbody tr td input[type="text"]:style(border-color: darkorchid !important)
 0.facebook.com,d.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport #header form[action^="/search/"] table tbody tr td input[type="submit"]:style(background-color: orchid !important; border-color: darkorchid !important)

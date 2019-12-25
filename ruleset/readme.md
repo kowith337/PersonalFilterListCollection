@@ -6,6 +6,7 @@ I will not responsible about breakage, both from my default settings and recipes
 
 ### My default settings lists (exclude `matrix-off:` entry)
 ```
+cname-reveal: * true
 https-strict: * true
 no-workers: * true
 noscript-spoof: * false

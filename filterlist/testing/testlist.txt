@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 201912181553
+! Version: 201912252042
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -51,7 +51,10 @@ m.intl.taobao.com##.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,
 ! - Tesing stage: Remove internal tag
 ! google.com##script:inject(remove-div-tag.js, data-ved) // Broken due to it's remove everything entirely!
 ! - Testing stage: Remove META
+akibatan.com##script:inject(remove-meta.js, onesignal)
 facebook.com##script:inject(remove-meta.js, referrer)
+! - Testing stage: I want to try re-enable XSS protection on Facebook
+facebook.com,messenger.com##script:inject(set-respheader.js, x-xss-protection, 1)
 
 ! - Strip unnecessary URL parameters (mostly use for tracking users internally)
 aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(go|main)_item(_id|id)=\d+/)
