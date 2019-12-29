@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 201912220152
+! Version: 201912292244
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -23,7 +23,6 @@ google.*###extrares #botstuff div[data-ved] div[jscontroller][data-hveid][data-v
 google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][data-ved] div[data-has-close][class*="result-pivots"][data-ved]
 google.*###main div[data-ved] div[data-async-context] .kno-result[data-hveid][data-ved]
 google.*##[jscontroller] #rg[data-ved] div[class*="irc-"]
-google.*##div[data-async-context] div[jsname][data-ved] div[class]:has(h2):has(a[href*="/search?"][href*="&ved="])
 google.*##div[jsname][role="list"] div[jsname][data-id^="Refinements"]
 
 ! [Linkis] (scam content framing)
@@ -66,6 +65,10 @@ twitter.com##.stream li.WtfLargeCarouselStreamItem
 twitter.com##.SidebarCommonModules .RelatedUsers
 twitter.com##div[class^="MomentsPermalinkPage"] .MomentsPermalinkPage-related
 
+! [Twitter New] Remove non-consumer things that not neccessary, such as create ads, tweet performance (analytics), etc.
+twitter.com##div[role="menu"] div[class] > a[href*="ads.twitter.com"]
+twitter.com##div[role="menu"] div[class] > a[href*="analytics.twitter.com"]
+
 ! [WallGif]
 wallgif.com##content .big-modal
 wallgif.com##content .big_modal_bg
@@ -82,7 +85,18 @@ youtube.com###hats-container[data-survey-id]
 youtube.com###results li > .search-refinements
 
 ! [YouTube Polymer]
+! - I should file this rules to any repo that include kind of "UK Consent" annoyance rules, such as IDCAC, FanboyCookie, etc?
 youtube.com##ytd-consent-bump-renderer
+! - Forgot what does it do, but probably zuckest to download or open in app?
+youtube.com##ytd-popup-container.ytd-app
+! - Another BS survey also appear in this version, too!
+youtube.com##ytd-single-option-survey-renderer
+! - Hide "Scroll for details" prompt while watching video in fullscreen.
+youtube.com##.ytp-chrome-bottom [class^="ytp-fullerscreen-edu"]
+! - Remove any kinds of "Sign in" prompts
+youtube.com##.ytd-guide-renderer ytd-guide-signin-promo-renderer
+youtube.com###primary #contents #button[class*="ytd-background-promo"]
+youtube.com###primary #contents ytd-button-renderer .style-suggestive
 
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [GitHub]
@@ -94,6 +108,7 @@ google.*##g-bottom-sheet[jscontroller] div[role="dialog"]:has(div[jscontroller][
 ! - Remove text dialog to tell back to Google for suggest something to show more results.
 google.*###extrares #botstuff div[data-ved] > :has(div textarea[data-ved])
 ! - Related to "Related question" / "Related search" / "People also search for"
+google.*##div[data-async-context] div[jsname][data-ved] div[class]:has(h2):has(a[href*="/search?"][href*="&ved="])
 google.*###search div[data-ved] #rso div[class]:has(.xpdopen)
 
 ! [Minecraft Forge]
@@ -128,15 +143,10 @@ m.youtube.com##ytm-mealbar:has-text(privacy)
 m.youtube.com##ytm-compact-video-renderer .compact-media-item:has(.compact-media-item-metadata .subhead:has-text(Recommended))
 
 ! [Twitter New]
+! - Try remove any highlights that inject directly to notification lists (aka. In case that you've missed)
 twitter.com##div[aria-label^="Timeline:"] div > article[role="article"]:has(div[class] > svg g path[fill="#794BC4"])
-twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(a[role="link"][data-focusable][href^="/i/"])
-twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(div[role="button"][data-focusable][data-testid="UserCell"] a[aria-hidden][tabindex][href]):has(a[role="link"][data-focusable] div[dir="auto"] span[dir="auto"])
+! - Remove new layout overlay notify popup
 twitter.com##div[data-reactroot] div[class] > div[data-focusable][tabindex][class] div[class]:has(div[class] > div[class][style] img[alt][src^="https://ton.twimg.com/twitter_shared_public/responsive-web"])
-twitter.com##div[role="menu"] div[class] > a[href*="ads.twitter.com"]
-twitter.com##div[role="menu"] div[class] > a[href*="analytics.twitter.com"]
-twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(a[href^="/i/related_users"])
-twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/))
-twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell"] [data-testid*="follow"])
 
 ! [WallGif] Disable AdBlock...? HOW ABOUT NO!!
 wallgif.com###overlay:has(img[alt="Loader"])
@@ -144,9 +154,20 @@ wallgif.com##content div[id^=block_modal]
 
 ! [YouTube Non-Polymer]
 ! - Remove any "recommended" channel and topic lists at home feed
+youtube.com###feed-main-what_to_watch ol li:has(.feed-item-dismissable:has(.shelf-title-row h2 span:has-text(Recommended )))
 youtube.com##.individual-feed li .branded-page-box:has(.feed-item-dismissable:has(span.shelf-subscription-button button[data-style-type="branded"]))
+! - Remove overpromoted "Premium" appear in sidebar
+youtube.com##.guide-section .guide-item-container ul li:has(a[href*="/premium"])
 ! - Remove related search results
 youtube.com###results li > .feed-item-container.branded-page-box:has(.feed-item-dismissable)
+
+! [YouTube Polymer]
+! - Hide "New ToS" announcement
+youtube.com###alert-banner [alert-style]:has(a[href*="youtube.com/t/terms"])
+! - Remove "Sign in" prompt at top bar
+youtube.com###masthead #end #buttons ytd-button-renderer:has(a[href*="accounts.google.com/ServiceLogin?"])
+! - Try remove "Premium" link at sidebar
+youtube.com##.ytd-guide-renderer:has(#items ytd-guide-entry-renderer:has(a[href*="/premium"]))
 
 ! HTML Filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: This may work only FF quantum + uB0 WebExt
@@ -295,6 +316,12 @@ randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptable
 !          You can look for henrypp's "ChrLauncher" if you want to do so... (Windows users only!)
 !#if env_firefox
 github.com##.unsupported-browser
+!#endif
+
+! [IMGUr Mobile View] Hide zuckestions to download and/or open in app
+!#if env_mobile
+imgur.com##.FloatingOIA-container
+imgur.com##.get-app-block
 !#endif
 
 ! [Backup since uBO 1.20 doesn't support standalone use of `~document` exception]

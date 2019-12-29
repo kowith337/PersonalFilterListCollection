@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 201912252042
+! Version: 201912292246
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -11,9 +11,22 @@
 ! [Taobao Mobile] Remove header anchor navigator
 m.intl.taobao.com##.App .toolbar .toolbar__anchor-wrapper
 
+! [YouTube Non-polymer] Aim to remove UK consent dialog overlay and overhaul
+youtube.com###yt-consent-dialog
+youtube.com###yt-dialog-bg
+youtube.com##.yt-dialog[id*="privacy"]
+
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Taobao Mobile] Remove bottom anchor (quickly add to cart / buy menu pane)
 m.intl.taobao.com##.App .bar:has(a.bar-item[href^="//shop.m.taobao.com/shop/shop_index.htm?"])
+
+! [ImgUr] Try to remove non-main images that linked from/to (mobile site only)
+!         * this may cause to hide all non-first images if it load next items in album!
+!         ** Beware about extra data use because the site will fetch next images endlessly!!
+!#if env_mobile
+imgur.com##.GalleryHandler-postContainer:not(:nth-of-type(2))
+imgur.com##.GalleryHandler-postContainer .Gallery-moreOnImgur
+!#endif
 
 ! Non-basic characters filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Pantip] Explicit and spam topic name
@@ -33,6 +46,16 @@ m.intl.taobao.com##.App .toolbar.transformed:style(background-color: transparent
 ! - Make placeholder button (back / add to cart) have circle background alpha under button and use custom color permanently
 m.intl.taobao.com##.App .toolbar .toolbar__btn i.iconfont:style(color: white !important)
 m.intl.taobao.com##.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,0,0.4) !important)
+
+! [Twitter]
+! - Aim to remove who to follow / related users (aka. ZUCKESTIONS)
+!   * Please note: these rules are produce huge problematic, it's also hide all user lists that have "Follow" button, no matter
+!     about any state of user following! you can keep using this if you're not mind to follow other peoples much!~
+twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(a[role="link"][data-focusable][href^="/i/"])
+twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(div[role="button"][data-focusable][data-testid="UserCell"] a[aria-hidden][tabindex][href]):has(a[role="link"][data-focusable] div[dir="auto"] span[dir="auto"])
+twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(a[href^="/i/related_users"])
+twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/))
+twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell"] [data-testid*="follow"])
 
 ! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
