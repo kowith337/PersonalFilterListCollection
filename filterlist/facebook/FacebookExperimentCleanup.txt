@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202001010044
+! Version: 202001010121
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -9,6 +9,10 @@
 !        some functionality seems to be useless for me, not like it or even hate it!
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [DOM Sectiom] --------------------------------------------------------------------------------------------------------------- !
+! [Apply as root, no matter what!]
+! Hide form dialog to add phone numbers (confirmed affect to any mobile site layout, no idea for desktop site breakage?)
+facebook.com###root form[action^="/phoneacqwrite"]
+
 ! [Facebook Desktop]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove "Top Picks" product from marketplace lists, only work for english UI users only (UK, US)
 facebook.com##div[data-testid="marketplace_home_feed"] div[class] > div[class]:has(span[itemcomponent]:has-text(/^Top picks/))
@@ -20,12 +24,12 @@ facebook.com##.fb_content div[class] > div[class] > #watch_feed
 facebook.com##.fb_content div[class] > div[class] > #watch_feed div[class] div[class][data-ft]:has(div span > div span a[href*="?referrer=video_home"])
 
 ! Remove "More items" (near you?)
-! This will let your only focus to the products that you want to see more details, no zuckested and related trains.
+!   This will let your only focus to the products that you want to see more details, no zuckested and related trains.
 facebook.com###content.fb_content div[id] div[class] > div[role="main"] div > div:has(span[role=heading]):has(div a[data-testid="marketplace_feed_item"] section #marketplace-modal-dialog-title)
 ! facebook.com###content.fb_content div[id] div[class] > div[role="main"] div > div:has(span[role=heading]:has-text(/^More items/))
 
 ! Remove button and panel that appear under friend tiles (when directly view profile)
-! However, this will hide entire friend tiles for your profile, but not for others...
+!   However, this will hide entire friend tiles for your profile, but not for others...
 facebook.com###profile_timeline_tiles_unit_pagelets_friends .fbTimelineUnit div[role="article"] div[class] > div[class]:has(div[class] button[data-onclick*="ProfileDiscoveryModalLauncher"])
 
 ! Remove group zuckestion that show in each categories
@@ -56,16 +60,16 @@ facebook.com##.userContentWrapper div > div a[ajaxify^="/living_room/share_dialo
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###events_card_list div[class] > :has(a span:has-text(/^Discover/))
 
 ! Remove related videos while you're viewing the video as direct permalink post
-! * Note: This rule doesn't work for Firefox Legacy
+! * WARNING: This rule doesn't work for Firefox Legacy
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root[role="main"]:has(#m_story_permalink_view) div[class]:has(div i):has(div a[href*="/videos/"])
 
 ! [Facebook Touch]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Facebook want you to see friends stories again before they're gone, by re-injecting stories tiles into feed streams!
-! This will remove any stories panel that randomly injected later between feed posts and keep only the legitmate one on the top!!
+!   This will remove any stories panel that injected later between feed posts and keep only the legitimate one on the top!
 0.facebook.com,free.facebook.com,m.facebook.com,mtouch.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##section article:has(div[id^="TRAY"] div[data-testid="story_tray"])
 
 ! Try to remove "Paid partnership" posts where the sponsored pages hiring some other pages (mostly viral) to post or announcing.
-! This may break other posts that show (i) indicator, such as external links from the commonly known branded pages or sites.
+!   This may break other posts that show (i) indicator, such as external links from the commonly known branded pages or sites.
 0.facebook.com,free.facebook.com,m.facebook.com,mtouch.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##section.storyStream article[data-xt][data-xt-vimp]:has(a[data-sigil*="flyout-causal"])
 
 ! Remove hyperlink of "Discover" appear when you access group lists, ensure to focus your groups that you've joined and/or
@@ -86,7 +90,7 @@ facebook.com##.userContentWrapper div > div a[ajaxify^="/living_room/share_dialo
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-onthisday #root div[class][data-store-id] > div[class] > div a[href^="/onthisday/subscribe/?"]
 
 ! Remove zuckestion placeholder top bar item (Only affect who get white top bar style)
-! *4th items of top bar, I think their system will pick between marketplace and videos and will be determined by your usage.
+!   4th items of top bar, I think their system will pick between marketplace and videos and will be determined by your usage.
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###mJewelNav div[class]:has(#marketplace_jewel)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###mJewelNav div[class]:has(#watch_jewel)
 
@@ -139,7 +143,7 @@ facebook.com##.userContentWrapper div > div a[ajaxify^="/living_room/share_dialo
 
 ! [Network blocking section] -------------------------------------------------------------------------------------------------- !
 ! Prevent modules connections that autoplay GIF comments (May doesn't work at all!)
-! Noticed that Facebook start to autoplay GIF images in comments when you scroll to it, same behaviour of autoplay videos, maybe.
+!   Noticed that Facebook start to autoplay GIF images in comments when you scroll to it, same behaviour of autoplay videos, maybe.
 ||facebook.com/*?modules=FeedAnimatedImageShare$important
 ||facebook.com/*?modules=UFI2CommentAnimatedImageAttachmentPlayer$important
 
@@ -150,10 +154,16 @@ facebook.com##.userContentWrapper div > div a[ajaxify^="/living_room/share_dialo
 ||facebook.com/*?modules=TimeSliceInteractionsLiteTypedLogger$important
 
 ! Prevent connections to retrieve lists of zuckested pages to like or follow. (Desktop site only)
-! Probably not recommended because you will not allow to remove or delete those pages zuckestions!
-! I recommended to remove it out by copy bookmarklet scripts below before blocking this connections.
-! Note: Bookmarklet script is only work for english UI users only (UK, US)
-! javascript:(function()%7Bvar%20divs%20%3D%20document.querySelectorAll('a%5Brole%3Dbutton%5D%5Bdata-tooltip-content%3D%22Remove%20Suggestion%22%5D')%3B%20for%20(i%20%3D%200%3B%20i%20%3C%20divs.length%3B%20%2B%2Bi)%20%7Bdivs%5Bi%5D.click()%3B%7D%7D)()
+!   Probably not recommended because you will not allow to remove or delete those pages zuckestions!
+!   I recommended to remove it out by copy bookmarklet scripts below before blocking this connections.
+!   * Note: Bookmarklet script is only work for english UI users only (UK, US)
+!     javascript:(function()%7Bvar%20divs%20%3D%20document.querySelectorAll('a%5Brole%3Dbutton%5D%5Bdata-tooltip-content%3D%22Remove%20Suggestion%22%5D')%3B%20for%20(i%20%3D%200%3B%20i%20%3C%20divs.length%3B%20%2B%2Bi)%20%7Bdivs%5Bi%5D.click()%3B%7D%7D)()
 ||facebook.com/ajax/pagelet/generic.php/PagesBrowserTopSuggestionsPagelet$xmlhttprequest,important,redirect=nooptext
+
+! Prevent using "Phone Confirmation" (This request will triggered when use desktop site and push "Add a phone" button)
+!   You think you are added that for security reason, but unfortunately, do you know what will happen next!?
+!   It's described clear enough before you adding it, so if you really want to do that, just whitelist my rules manually!
+||facebook.com/ajax/phone/confirmation$important
+||facebook.com/ajax/phone/confirmation$xmlhttprequest,important,redirect=nooptext
 
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
