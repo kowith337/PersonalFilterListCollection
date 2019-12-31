@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202001010121
+! Version: 202001010150
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -48,6 +48,10 @@ facebook.com##div[data-testid^="UFI2Comment/root"] div[data-testid^="UFI2Comment
 ! Remove zuckestions to watch videos in "Party" mode!
 facebook.com##.uiStreamStory div[class] > div div[class] >:has(a[href^="/watch/"])
 facebook.com##.userContentWrapper div > div a[ajaxify^="/living_room/share_dialog/"]
+
+! Remove related video lists (permalink that have `/videos/` path in URL only)
+!  Assumed by DevTools point of view, it's may also logging and/or tracking you if clicked into that?
+facebook.com###contentArea div[class] > :has(table div[data-onclick*="VideoHomeClickLogger"])
 
 ! [Facebook Feature Phone Basic]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 ! Finally, weird space between comments also come to this version, freaking cool!!
