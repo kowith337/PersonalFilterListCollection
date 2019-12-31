@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 201912192136
+! Version: 202001010044
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -54,6 +54,10 @@ facebook.com##.userContentWrapper div > div a[ajaxify^="/living_room/share_dialo
 
 ! Remove event discover (also affect threaded discover)
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###events_card_list div[class] > :has(a span:has-text(/^Discover/))
+
+! Remove related videos while you're viewing the video as direct permalink post
+! * Note: This rule doesn't work for Firefox Legacy
+0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root[role="main"]:has(#m_story_permalink_view) div[class]:has(div i):has(div a[href*="/videos/"])
 
 ! [Facebook Touch]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Facebook want you to see friends stories again before they're gone, by re-injecting stories tiles into feed streams!
