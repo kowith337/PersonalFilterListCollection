@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Facebook Zuckestion Killer
-! Version: 202001010022
+! Version: 202001022024
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -140,8 +140,8 @@
 @@||facebook.com/ads/manage/$first-party
 @@||facebook.com/ads/manager/$first-party
 @@||facebook.com/ads/preferences/$first-party,popup
-@@||facebook.com/ads/preferences/*/*&__m_async_page__$first-party,xmlhttprequest
-@@||facebook.com/ads/preferences/*/?__m_async_page__$first-party,xmlhttprequest
+@@||facebook.com/ads/preferences/*&__m_async_page__$first-party,xmlhttprequest
+@@||facebook.com/ads/preferences/*?__m_async_page__$first-party,xmlhttprequest
 @@||facebook.com/ads/preferences/ad_report/$first-party,xmlhttprequest
 @@||facebook.com/ads/preferences/advertiser_hideall$first-party
 @@||facebook.com/ads/preferences/edit_interests/?*action=del$first-party
@@ -213,17 +213,17 @@
 ||z-m-*.fbsbx.com$important
 
 ! [Super lightweight Facebook enhancement]
-! It's no need to load anything that not matter to use, because `mbasic.facebook.com` can work fine without JavaScript,
-! Inline script, iframe and third party resources.
-||$inline-script,domain=mbasic.facebook.com
-||$script,domain=mbasic.facebook.com
-||$subdocument,domain=mbasic.facebook.com
-||$websocket,domain=mbasic.facebook.com
+! It's no need to load anything that not matter to use, because `mbasic.facebook.com` can work fine without external JavaScript,
+! iframe and third party resources.
+! ||$inline-script,domain=d.facebook.com,mbasic.facebook.com
+||$script,domain=d.facebook.com,mbasic.facebook.com
+||$subdocument,domain=d.facebook.com,mbasic.facebook.com
+||$websocket,domain=d.facebook.com,mbasic.facebook.com
 
 ! SOUND annoyances
-! This may break sounds in messages, but I have no choice about this, because Facebook Touch site is now play some sounds
-! when pick reactions (Like, Love, Haha, etc.), and found AdGuard base are whitelist rsrc.php from fbcdn.net, so I've
-! use some wildcard to make sure it will not block something that not related to "M4A audio"
+! This may break sounds in messages, but I have no choice about this, because Facebook Touch site is now play some sounds when
+! pick reactions (Like, Love, Haha, etc.), and found AdGuard base are whitelist `rsrc.php` from `fbcdn.net`, so I've use some
+! wildcard to make sure it will not block something that not related to "M4A audio"
 ||fbcdn.net/rsrc.php/*.m4a$media,important,domain=m.facebook.com|touch.facebook.com
 
 ! [Resources Replace] Instead of just blocking, then redirect to neutered resources
@@ -291,6 +291,7 @@ facebook.com###pagelet_ego_pane
 facebook.com###pagelet_explore_feed div[role="article"] .fbUserStory span.uiLikePageButton
 facebook.com###pagelet_games_rhc
 facebook.com###pagelet_group_mall div[id^="group_mall"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
+facebook.com###pagelet_loggedout_sign_up
 facebook.com###pagelet_main_column_personal #fbSuggestionsPlaceHolder
 facebook.com###pagelet_page_above_header div[id^="megaphone_story"]
 facebook.com###pagesTimelineChainingUnit
@@ -640,19 +641,6 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com###root div article form[ac
 !#if env_mobile
 ! Hide some page admin pane to invite, get tips, etc.
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###pages_msite_body_contents div > div[data-store*="logging_data"][data-sigil="reaction-unit-logging"]:has(div[data-nt][data-ntid] img[data-nt="NT:IMAGE"])
-
-! Test Cookie Messing (Now it's caveat because scriptlet cannot remove cookies on the root domain {higher level + HTTP only})
-! Remove NoScript State and then set NoScript cookie state to disable
-facebook.com##script:inject(cookie-remover.js, noscript)
-facebook.com##script:inject(nanop-easy-set-cookie.js, noscript=0)
-
-! Remove referer cookie
-facebook.com##script:inject(cookie-remover.js, x-referer)
-
-! This let Facebook forgot mobile carrier name that saved in this cookie (It will keep up to 3 days if you're not remove manuall)
-! You can test in 'https://m.facebook.com/diagnostics' and then see the "DATR" value, it should be blank once you've connected to
-! private network, such as Ethernet / LAN / Wi-Fi to prevent "Free Basics" menu keep injecting in bookmarks menu
-facebook.com##script:inject(cookie-remover.js, datr)
 !#endif
 
 ! Backup area for backward compatibility (Only XUL Firefox + uBO Legacy), newer version (aka. Quantum) will be read as invalid!

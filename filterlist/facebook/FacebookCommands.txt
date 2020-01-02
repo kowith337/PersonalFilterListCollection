@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Modules Commands List
-! Version: 201909102232
+! Version: 202001021554
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -87,6 +87,7 @@
 ||facebook.com/*?modules=AdvertiserHomePagelet$important
 ||facebook.com/*?modules=AppInstallLogger$important
 ||facebook.com/*?modules=AppLoggerUtils$important
+||facebook.com/*?modules=AsyncRequestNectarLogging$important
 ||facebook.com/*?modules=AttachmentRelatedShareTimingConstants$important
 ||facebook.com/*?modules=BoostedComponentPromotionsManagerStrings$important
 ||facebook.com/*?modules=BootloaderEventsTypedLogger$important
@@ -209,6 +210,7 @@
 ||facebook.com/*?modules=VisibilityTrackingHelper$important
 ||facebook.com/*?modules=VisibilityWatcher$important
 ||facebook.com/*?modules=WebBrowserDimensionsResizeTypedLogger$important
+||facebook.com/*?modules=WebDevicePerfInfoLogging$important
 ||facebook.com/*?modules=XAYMTPanelSaveSettingsController$important
 ||facebook.com/*?modules=XAYMTPostPickerController$important
 ||facebook.com/*?modules=XAdPreferencesNUXController$important

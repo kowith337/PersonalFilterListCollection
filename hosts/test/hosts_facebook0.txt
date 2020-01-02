@@ -1,6 +1,6 @@
 # [uMatrix 1.3.15.100]
 # Title: Facebook Zero Hosts Block (Test unit)
-# Version: 201910131632
+# Version: 202001021753
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/hosts
@@ -25,7 +25,7 @@
 #              it should be normal like I and/or we accessing Facebook at home or via Proxy/VPN!
 # Note: All rules below will be use as test unit for @funilrys's "Dead Hosts" tools (aka. PyFunceble), however, some hosts entry
 #       are duplicated based from hosts name that found by myself and more entry from [Credits] source, Currently I'm still don't
-#       know how many "Free Basics" servers are really existed?
+#       know how many "Free Basics" hosts name and servers are really existed?
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # (*): Facebook should be thanks to old technologies (but we still using them nowadays) called "(x-)WAP", "MSISDN", etc. that
 #      possible to extract or resolve user's mobile number who use cellular data without hinting the users to manually fill their
@@ -37,7 +37,15 @@
 0.0.0.0 freebasics.com
 0.0.0.0 internet.org
 # Resolved DNS Name - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 headers-regional-shv-13-atn1.facebook.com
+0.0.0.0 headers-regional-shv-18-prn1.facebook.com
+0.0.0.0 headers-regional-shv-22-atn1.facebook.com
 0.0.0.0 headers-regional.vvv.facebook.com
+0.0.0.0 headers-shv-00-rash0.facebook.com
+0.0.0.0 headers-shv-00-ratn0.facebook.com
+0.0.0.0 headers-shv-00-rfrc0.facebook.com
+0.0.0.0 headers-shv-00-rprn0.facebook.com
+0.0.0.0 headers-shv-04-prn2.facebook.com
 0.0.0.0 z-1.c10r.facebook.com
 0.0.0.0 z-1.facebook.com
 0.0.0.0 z-m-www.facebook.com

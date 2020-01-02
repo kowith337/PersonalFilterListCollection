@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 201912220215
+# Version: 202001022030
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -72,9 +72,10 @@
 0.0.0.0 ging-chromecontentsuggestions-pa.googleapis.com
 0.0.0.0 growth-pa.googleapis.com
 0.0.0.0 instantmessaging-pa.googleapis.com
-0.0.0.0 mdh-pa.googleapis.com
+# 0.0.0.0 mdh-pa.googleapis.com
 0.0.0.0 mobilenetworkscoring-pa.googleapis.com
 0.0.0.0 myphonenumbers-pa.googleapis.com
+# 0.0.0.0 notifications-pa.googleapis.com
 0.0.0.0 offlinepages-pa.googleapis.com
 0.0.0.0 playatoms-pa.googleapis.com
 0.0.0.0 staging-chromecontentsuggestions-pa.googleapis.com

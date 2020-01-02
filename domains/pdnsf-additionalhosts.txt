@@ -1,6 +1,6 @@
-# [personalDNSFilter 1.50.33.5]
+# [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 201912220214
+# Version: 202001022028
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -10,12 +10,12 @@
 #              matched wildcard and entire domains regardless of any subdomains, unless you've manually unblocked or based on my
 #              decision as enough reason for subjected to whitelist.
 #              This filter is unlike generic hosts file and/or domain lists that you can update and/or recombine with, because
-#              the targeted app are also support wildcard blocking, but this should be loaded as user custom hosts however.
+#              the targeted app are also support wildcard blocking, but this should be loaded as user custom hosts, however.
 #              You may need to regularly copy and update this file with your own way, futhurmore, you need to backup previous
 #              custom hosts list if you have anything existed before use this file as a replacement.
 #              Since this filter cannot load as remote rules, if you think I've overdone blocking something, try add "!" or "#"
 #              (w/o quote) to unblock or whitelist it manually, e.g. below.
-#              !google.co.th (This is a whitelist rule, that's mean anything from 'google.co.th' can be bypassed.)
+#              !google.co.th (This is a whitelist rule, that's mean anything from 'google.co.th' can be bypassed, include subs)
 #              #facebook.com (This will turn blocked rules as comment instead, other remote rules will still block if it have.)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Wildcard]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
@@ -28,7 +28,7 @@ g02.*
 g03.*
 
 # Use CSP as abusive way, anyone who use that in their server are said and pretend that use for capture problems, however, using
-# this ability may also send some sensitive information that enough for fingerprinting, such as User Agent, OS, CPU, etc.
+# this ability may also send some sensitive information that enough for fingerprinting, such as User Agent, OS, CPU, Memory, etc.
 # even "CloudFlare" also use this!
 csp.withgoogle.com
 report-to.*
@@ -49,11 +49,33 @@ nr-data.*
 popclck.*
 truehits.*
 
+# Prevent Firefox use CaptivePortal for check connectivity (ping network status)
+detectportal.*
+
 # [Generic Reason]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Unneccessary protocol
 EMPTY
 WPAD
 wpad
+
+# Abusive DNS Cloaking
+# Credits: https://github.com/nextdns/cname-cloaking-blocklist/raw/master/domains
+2o7.net
+affex.org
+at-o.net
+criteo.com
+criteo.net
+dnsdelegation.io
+eulerian.net
+intentmedia.net
+keyade.com
+oghub.io
+omtrdc.net
+storetail.io
+tagcommander.com
+webtrekk.net
+wizaly.com
+wt-eu02.net
 
 # For honor of Huawei phone users! (Include Honor {Huawei sub-brand} and some Xiaomi, RealMe, too!)
 # Problematic due to shady advertisement in their OS ROM that load low quality wallpapers and apply without user intent!
@@ -72,12 +94,10 @@ cloudflare-dns.com
 
 # More privacy enhanced for Firefox users, make sure you've disable their internal TRR first.
 ciscobinary.openh264.org
-detectportal.*
 location.services.mozilla.com
 
 # Copied from ThaiParanoidBlock and must block entirely, no matter what!
 24x7th.com
-2o7.net
 accesstrade.in.th
 adasiaholdings.com
 add0n.com
@@ -113,8 +133,6 @@ connextra.com
 consensu.org
 crashlytics.com
 crazyegg.com
-criteo.com
-criteo.net
 crwdcntrl.net
 cryptobrowser.site
 cxense.com
@@ -314,6 +332,7 @@ telephonyspamprotect-pa.googleapis.com
 # Google "AdService" and "ID" subdomains (You can see those connections while you're use their serach engine!)
 adservice.google.*
 id.google.*
+id.l.google.com
 
 # Prefer to block if you don't trust their DNS services, e.g. DoT and DoH resolvers!
 dns.google
@@ -341,11 +360,16 @@ geomobileservices-pa.googleapis.com
 # Needed for Google Allo/Duo?
 instantmessaging-pa.googleapis.com
 
-# Google Fit / Health related?
-mdh-pa.googleapis.com
+# No idea, I though it's related to Google Fit / Health related, but it's blocking user avatar now.
+# * Commented for safe
+# mdh-pa.googleapis.com
 
 # Phoninig home about network quality and also measuring?
 mobilenetworkscoring-pa.googleapis.com
+
+# Again, probably same as GTalk GCM mirroring, blocking this may cause lots of notifications never be arrive.
+# * Commented for safe
+# notifications-pa.googleapis.com
 
 # Google Contacts?
 people-pa.googleapis.com
@@ -360,14 +384,14 @@ reminders-pa.googleapis.com
 # Facebook Zero Substances (aka. "Free Basics", wait, no! "Free BaZUCKS")
 # Allow these connections below means they can use additional tricks for keep track you with old tech, such WAP and MSISDN!
 # Plus, their system can easily to determine that it's really you! because the shame quality of WAP protocal and MSISDN header
-# are ship with your mobile phone numbers and will be leaks to anyone who want to capture it!!
+# are ship with your mobile phone numbers and will be leaks to ANYONE who want to capture it!!
 # - Obviously! How many bad reputation of privacy at Facebook right now!?
 # - Some shady companies in my country are use those method above to resolve phone numbers via those headers and protocol for
 #   silently subscribe garbage contents and/or simply charging additional costs in billing or deduct prepaid calling balance,
-#   with or without anything sending right to your mobile phone! (by SMS, MMS or WAP Push)
+#   with or without anything sending right to your mobile phone! (by SMS, MMS, WAP Push, etc.)
 # Even their Free Basics domains was blocked, they can still tracking you from the main and sub hosts with that methods as well!
 # e.g. They will binding your "DATR" cookie with mobile carrier name that you're using, you can check with diagnostics page at
-# https://d.facebook.com/diagnostics
+# https://m.facebook.com/diagnostics
 # - Sometime it's neccessary for them to make sure that you're eligable to use it, or if you've previously agree to use that!!
 *-z-*.facebook.com
 *-z-*.facebook.net
@@ -377,6 +401,7 @@ reminders-pa.googleapis.com
 free.facebook.com
 freebasics.com
 h.facebook.com
+headers-*.facebook.com
 internet.org
 mobile.facebook.com
 o.facebook.com
@@ -395,17 +420,16 @@ edge-stun.facebook.com
 stun.c10r.facebook.com
 stun.facebook.com
 
-# Often use this domain to load "referrer frame" to keep tracking on you, also open the gate for "Google ads" observing you, too!
-staticxx.facebook.com
+# Tell me if it's break something, however, if you didn't use their official apps!!
+lookaside.facebook.com
+update.fbsbx.com
 
-# I knew it's will break anything that rely to Facebook, such as MESSenger, Login with, Play game, Comments, etc.
+# I knew it's will break anything that rely to Facebook, such as MESSenger, Login with, Play (instant) games, Comments, etc.
+# But in other words, make use of third party login button are mean allow them to tracking you remotely, regardless about that
+# you're previously logged in to their services or not.
 connect.facebook.net
 
 # Pigeon servers? What does it can do!?
 fbpigeon.com
-
-# Tell me if it's break something, however, if you didn't use their official apps!!
-lookaside.facebook.com
-update.fbsbx.com
 
 # [Cutoff for staging with your previous custom config] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
