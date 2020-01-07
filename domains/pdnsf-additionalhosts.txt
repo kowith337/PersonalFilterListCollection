@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202001022028
+# Version: 202001072243
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -15,8 +15,8 @@
 #              custom hosts list if you have anything existed before use this file as a replacement.
 #              Since this filter cannot load as remote rules, if you think I've overdone blocking something, try add "!" or "#"
 #              (w/o quote) to unblock or whitelist it manually, e.g. below.
-#              !google.co.th (This is a whitelist rule, that's mean anything from 'google.co.th' can be bypassed, include subs)
-#              #facebook.com (This will turn blocked rules as comment instead, other remote rules will still block if it have.)
+#              !google.co.th (This is a whitelist rule, that's mean anything from 'google.co.th' can be bypassed, include subs.)
+#              #facebook.com (This will turn blocked rules as comment instead, other remote rules may still block if it have.)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Wildcard]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # "Retard Logic" use the random subdomains of any website who use that things to make sure all ads are survived blocking!
@@ -218,6 +218,8 @@ runtnc.net
 ruu-dee.com
 sales-frontier.com
 scorecardresearch.com
+sentry-cdn.com
+sentry.io
 serving-sys.com
 shinobi.jp
 silkspan.com
@@ -325,16 +327,16 @@ android-safebrowsing.google.com
 # safebrowsing.googleapis.com
 
 # It's upload incoming phone numbers to check spam calls.
-# * Concern to anyone who touching phone numbers and contacts since various Facebook violations (please blame "ZUCK" for that!)
+# * Concern to anyone who touching phone numbers and contacts since various "Facebook" violations (please blame "ZUCK" for that!)
 dialercallinfolookup-pa.googleapis.com
 telephonyspamprotect-pa.googleapis.com
 
-# Google "AdService" and "ID" subdomains (You can see those connections while you're use their serach engine!)
+# Google "AdService" and "ID" subdomains (You can see those connections while you're use their serach engine and services!)
 adservice.google.*
 id.google.*
 id.l.google.com
 
-# Prefer to block if you don't trust their DNS services, e.g. DoT and DoH resolvers!
+# Prefer to block if you don't trust their DNS services, e.g. DoT and DoH resolvers, maybe include "Chrome" it's own (async) DNS!
 dns.google
 dns.google.com
 
@@ -357,14 +359,14 @@ alt*-mtalk.google.com
 # Geolocation?
 geomobileservices-pa.googleapis.com
 
-# Needed for Google Allo/Duo?
+# Needed for Google Allo/Duo, but personally, I don't use any of Google NetCall! (Hangout?)
 instantmessaging-pa.googleapis.com
 
 # No idea, I though it's related to Google Fit / Health related, but it's blocking user avatar now.
 # * Commented for safe
 # mdh-pa.googleapis.com
 
-# Phoninig home about network quality and also measuring?
+# Phoninig home about network quality and also measuring? (Good to block, should don't submit any network info back to Google!)
 mobilenetworkscoring-pa.googleapis.com
 
 # Again, probably same as GTalk GCM mirroring, blocking this may cause lots of notifications never be arrive.
@@ -377,7 +379,7 @@ people-pa.googleapis.com
 # Google Photos?
 photosdata-pa.googleapis.com
 
-# Google calendar reminder (Blocked because I use another calendar client!)
+# Google calendar reminder (Blocked because I use another calendar client, e.g. Etar + ICSx5)
 reminders-pa.googleapis.com
 
 # [Big Brother - This is so zucky!] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
@@ -415,6 +417,11 @@ z-*.fbsbx.com
 z.facebook.com
 zero.facebook.com
 
+# I knew it's will break anything that rely to Facebook, such as MESSenger, Login with, Play (instant) games, Comments, etc.
+# But in other words, make use of third party login button and/or plugins are mean allow them to tracking you remotely,
+# regardless about that you've previously logged in to their service or not.
+connect.facebook.net
+
 # I think this will break MESSenger net call due to using "STUN", that's surely it use "WebRTC" and possibly to leaks your IP!
 edge-stun.facebook.com
 stun.c10r.facebook.com
@@ -423,11 +430,6 @@ stun.facebook.com
 # Tell me if it's break something, however, if you didn't use their official apps!!
 lookaside.facebook.com
 update.fbsbx.com
-
-# I knew it's will break anything that rely to Facebook, such as MESSenger, Login with, Play (instant) games, Comments, etc.
-# But in other words, make use of third party login button are mean allow them to tracking you remotely, regardless about that
-# you're previously logged in to their services or not.
-connect.facebook.net
 
 # Pigeon servers? What does it can do!?
 fbpigeon.com
