@@ -1,11 +1,11 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Non-production Test)
-! Version: 202001082206
+! Version: 202001082210
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
-! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/imageboard
-! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/imageboard/GelboLube.txt
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/testing
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/testing/GelboLube-NonProd.txt
 ! Note: You can read each entry below...
 ! 1. It doesn't matter to have any checksum tools because uBo is now fully support filterlists that created on GitHub, GitLab,
 !    etc. and regularly auto check itself when it's outdated more than 2 days.
