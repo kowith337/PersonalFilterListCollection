@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Non-production Test)
-! Version: 202001081652
+! Version: 202001082206
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -11,7 +11,7 @@
 !    etc. and regularly auto check itself when it's outdated more than 2 days.
 ! 2. This rules not completely to hide ads and collapse space, but it still remove ads and unwanted resources.
 !    (e.g. subdocuments and other scripts file that no need to load them)
-! 3. Author/Owner/Contributor of gelbooru.com will frequently update their sites to keep ads appear.
+! 3. Author/Owner/Contributor of "gelbooru.com" will frequently update their sites to keep ads from their partners appear.
 ! 4. This is a test list for aiming two things, this file will remove when it's done.
 !    1. Merging both "Chromium/WebExt" and "Legacy" into one!
 !    2. Fixing problem about menu bar, aiming to reduce thickness of two menu rows, then giving up to divide each other.
@@ -274,11 +274,11 @@ gelbooru.com##.navbar:style(min-height: 20px !important)
 gelbooru.com##.navbar#submenu:style(margin: 0px !important; position: relative !important; width:100% !important; z-index: initial !important)
 
 ! 2. Adjust padding between menu items, also reduce priority of "Bold highlight" items by revert back to normal font weight.
-gelbooru.com##.navbar .navbar-nav ul li a:style(font-weight: normal !important; padding-left: 4px !important; padding-right: 4px !important; padding-top: 10px !important; padding-bottom: 10px !important; line-height: 20px !important)
-gelbooru.com##.navbar .navbar-nav ul li a b:style(font-weight: normal !important; padding-left: 0px !important; padding-right: 0px !important)
+gelbooru.com##.navbar .navbar-nav li a:style(font-weight: normal !important; padding-left: 4px !important; padding-right: 4px !important; padding-top: 10px !important; padding-bottom: 10px !important; line-height: 20px !important)
+gelbooru.com##.navbar .navbar-nav li a b:style(font-weight: normal !important; padding-left: 0px !important; padding-right: 0px !important)
 
 ! 3. Adjust "light bulb" icon size and positioning (aka. toggle dark mode)
-gelbooru.com##.navbar .navbar-nav ul li a.ui-icon-lightbulb:after:style(font-size: 16px !important; position: relative !important)
+gelbooru.com##.navbar .navbar-nav li a.ui-icon-lightbulb:after:style(font-size: 16px !important; position: relative !important)
 
 ! 4. Adjust to reduce thickness of "soft alert" height and expand maximum width (old value is use 15px, reduce to 10px instead.)
 gelbooru.com##.padding15 .alert.alert-info:style(padding: 8px 15px !important; margin: 8px 0px !important; width: auto 100% !important)
