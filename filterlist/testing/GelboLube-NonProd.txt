@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: GelboLube (Non-production Test)
-! Version: 202001082210
+! Version: 202001082224
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -270,7 +270,7 @@ gelbooru.com##script:inject(set-constant.js, adtoniq, noopfunc)
 ! 1. Overall adjust menu bar to reduce thickness of them, previously, I've use this section to divide each menu bars but for now
 !    they have increase menu items more and more and cause my old "half divide" style looks very ugly!
 !    this will surely conflict when you request desktop view or when you're already use desktop browser.
-gelbooru.com##.navbar:style(min-height: 20px !important)
+gelbooru.com##.navbar:style(min-height: 24px !important)
 gelbooru.com##.navbar#submenu:style(margin: 0px !important; position: relative !important; width:100% !important; z-index: initial !important)
 
 ! 2. Adjust padding between menu items, also reduce priority of "Bold highlight" items by revert back to normal font weight.
@@ -280,16 +280,16 @@ gelbooru.com##.navbar .navbar-nav li a b:style(font-weight: normal !important; p
 ! 3. Adjust "light bulb" icon size and positioning (aka. toggle dark mode)
 gelbooru.com##.navbar .navbar-nav li a.ui-icon-lightbulb:after:style(font-size: 16px !important; position: relative !important)
 
-! 4. Adjust to reduce thickness of "soft alert" height and expand maximum width (old value is use 15px, reduce to 10px instead.)
+! 4. Adjust to reduce thickness of "soft alert" height and expand maximum width (old value use 15px, so, reduce to 8px instead.)
 gelbooru.com##.padding15 .alert.alert-info:style(padding: 8px 15px !important; margin: 8px 0px !important; width: auto 100% !important)
 
 ! 5. Replace "Gelbooru Logo" to "text" (Indeed!)
 gelbooru.com##.navbar-header .navbar-brand:style(background: none 0px transparent !important; font-size: 12px !important; height: 20px !important; line-height: 20px !important; padding-top: 10px !important; padding-bottom: 10px !important)
 gelbooru.com##.navbar-header .navbar-brand:after:style(content: "Gelbooru" !important)
 
-! 6. Reduce heigh of toggle menu bar button to 10px, reduce margin between top and bottom to 4px.
+! 6. Reduce heigh of toggle menu bar button to 8px, reduce margin between top and bottom to 4px.
 !    * Mobile site user experience
-gelbooru.com##nav.navbar .navbar-toggle:style(padding: 10px !important; margin-top: 4px !important; margin-bottom: 4px !important)
+gelbooru.com##nav.navbar .navbar-toggle:style(padding: 8px !important; margin-top: 4px !important; margin-bottom: 4px !important)
 
 ! 7. Remove blur overlay for images requiring an account
 gelbooru.com##body img:style(filter:none !important)
