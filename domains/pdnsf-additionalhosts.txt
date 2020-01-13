@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202001072243
+# Version: 202001131122
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -58,14 +58,17 @@ EMPTY
 WPAD
 wpad
 
-# Abusive DNS Cloaking
+# Abusive DNS Cloaking (Don't forget to set 'checkCNAME = true' in 'DNSFilter.conf')
 # Credits: https://github.com/nextdns/cname-cloaking-blocklist/raw/master/domains
 2o7.net
+a8.net
 affex.org
 at-o.net
+ati-host.net
 criteo.com
 criteo.net
 dnsdelegation.io
+ebis.ne.jp
 eulerian.net
 intentmedia.net
 keyade.com
@@ -373,10 +376,12 @@ mobilenetworkscoring-pa.googleapis.com
 # * Commented for safe
 # notifications-pa.googleapis.com
 
-# Google Contacts?
+# Google Contacts? (If you think it's OK to upload contacts for future syncing/restoring, you need to unblock manually!)
 people-pa.googleapis.com
 
 # Google Photos?
+# * I won't comment because It doesn't mean to trade-off by using their space to upload and give their permissions to use them,
+#   such as AI study samples!
 photosdata-pa.googleapis.com
 
 # Google calendar reminder (Blocked because I use another calendar client, e.g. Etar + ICSx5)
@@ -399,11 +404,16 @@ reminders-pa.googleapis.com
 *-z-*.facebook.net
 *-z-*.fbcdn.net
 *-z-*.fbsbx.com
+*-z-*.messenger.com
 0.facebook.com
 free.facebook.com
 freebasics.com
 h.facebook.com
 headers-*.facebook.com
+headers-*.facebook.net
+headers-*.fbcdn.net
+headers-*.fbsbx.com
+headers-*.messenger.com
 internet.org
 mobile.facebook.com
 o.facebook.com
@@ -414,6 +424,7 @@ z-*.facebook.com
 z-*.facebook.net
 z-*.fbcdn.net
 z-*.fbsbx.com
+z-*.messenger.com
 z.facebook.com
 zero.facebook.com
 

@@ -28,3 +28,10 @@ referrer-spoof: * true
 | ------------ | ----------------- |
 | Custom Recipes | [:cat:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/ruleset/recipes_custom.txt) [:pill:](https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/ruleset/recipes_custom.txt) |
 | Thai Sites Recipes | [:cat:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/ruleset/recipes_th.txt) [:pill:](https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/ruleset/recipes_th.txt) |
+
+### Additional notes
+
+#### About turning off `noscript-spoof` globally by default
+Disable all of JavaScript doesn't mean to allow secondary or alternative function to be run, If users decide to not allow any scripts, even inline scripts, then leave it as is and don't call any alternative function at all!
+
+The `noscript` are often use for abusive, such as reload ads and/or tracking code, images, frames, etc. in alternative way, and their also know that the ads and tracking were loaded while JavaScript was turned off.
