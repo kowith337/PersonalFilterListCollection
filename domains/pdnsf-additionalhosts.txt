@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202001262130
+# Version: 202001262133
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -46,7 +46,9 @@ report-uri.*
 datapremium.*
 downloadwap.*
 scr888*.*
+ss*.mobilelife.co.th
 tons*.com
+ww*.mobilelife.co.th
 
 # Other unwanted
 beacon*.*
@@ -1483,7 +1485,6 @@ sparklemob.com
 spicyvideos.mobi
 splanetproject.com
 sptslmtrafms.com
-ss*.mobilelife.co.th
 sswap.mobi
 starchef.mobi
 startappservice.com
@@ -1680,7 +1681,6 @@ wppbbm.com
 wpwhatsappplus.com
 wrtual.com
 wurfl.io
-ww*.mobilelife.co.th
 xm.com
 xm88d.tk
 xm88g.tk
