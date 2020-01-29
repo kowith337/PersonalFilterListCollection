@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202001262133
+# Version: 202001300045
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -18,6 +18,11 @@
 #              !google.co.th (This is a whitelist rule, that's mean anything from 'google.co.th' can be bypassed, include subs.)
 #              #facebook.com (This will turn blocked rules as comment instead, other remote rules may still block if it have.)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Unneccessary protocol] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+EMPTY
+WPAD
+wpad
+
 # [Wildcard]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # "Retard Logic" use the random subdomains of any website who use that things to make sure all ads are survived blocking!
 # Did any site owners who use that service noticed it's had impact to their client-side and/or web server performance?
@@ -51,6 +56,8 @@ tons*.com
 ww*.mobilelife.co.th
 
 # Other unwanted
+amp.*
+ampproject.*
 beacon*.*
 beacon.*
 byteark-analytics.*
@@ -69,12 +76,18 @@ truehits.*
 # Prevent Firefox use CaptivePortal for check connectivity (ping network status)
 detectportal.*
 
-# [Generic Reason]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# Unneccessary protocol
-EMPTY
-WPAD
-wpad
+# Google CNAME Penetration (Mostly "Google L" subdomains, wildcard rules)
+*-google-analytics.*
+*-googlead*.*
+*-googletag*.*
+*2mdn*.google.com
+google-analytics.*
+googlead*.*
+googletag*.*
+pagead*.doubleclick.*
+pagead-*.l.google.com
 
+# [Generic Reason]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Abusive DNS Cloaking (Don't forget to set 'checkCNAME = true' in 'DNSFilter.conf')
 # Credits: https://github.com/nextdns/cname-cloaking-blocklist/raw/master/domains
 2o7.net
@@ -164,6 +177,12 @@ urchin.com
 # use Chrome as WebView anymore because Android will think that not all profiles are enabled Chrome for ready to use as WebView!
 connectivitycheck.gstatic.com
 
+# Google CNAME Penetration (Mostly "Google L" subdomains, non-wildcard section)
+gstaticadssl.l.google.com
+id.l.google.com
+mail-ads.google.com
+video-stats.l.google.com
+
 # Google play features (include play services, e.g. app invite, growth, phone number, subscriptions, etc.)
 androidsuggesthub-pa.googleapis.com
 appinvite-*.googleapis.com
@@ -218,23 +237,23 @@ voledevice-pa.googleapis.com
 stun.l.google.com
 
 # Disable alternate "Google Talk" servers, contacting only main server is enough!
-# This may impact to all notifications that rely to "GCM/GMS"
+# This may impact to all notifications that rely to "GCM/GMS", even you're using non-GApps ROMs.
 alt*-mtalk.google.com
 
 # Geolocation?
 geomobileservices-pa.googleapis.com
 
-# Needed for Google Allo/Duo, but personally, I don't use any of Google NetCall! (Hangout?)
+# Needed for Google Allo/Duo, but personally, I don't use any of Google NetCall! (Impact to Hangout!?)
 instantmessaging-pa.googleapis.com
 
 # No idea, I though it's related to Google Fit?
 mdh-pa.googleapis.com
 
-# Phoninig home about network quality and also measuring? (Good to block, should don't submit any network info back to Google!)
+# Phoninig home about network quality and also measuring? (Good to block, we should not submit any network info back to Google!)
 mobilenetworkscoring-pa.googleapis.com
 
 # Again, probably same as GTalk GCM mirroring, blocking this may cause lots of notifications never be arrive.
-# * Commented for safe
+# * Commented, just in case.
 # notifications-pa.googleapis.com
 
 # Google Contacts? (This may cause "Google account avatar" won't show!)
@@ -258,8 +277,9 @@ photosdata-pa.googleapis.com
 # Some HTTP header data (aka. MSISDN) are ship with your mobile phone numbers and can be leak to ANYONE who want to capture it!!!
 # - Obviously! How many bad reputations, news and shoutouts about privacy while using Facebook right now!?
 # - If you've previously pair your phone numbers with your account, well, RIP your privacy, I cannot do anothing more...
-# - From above, it's become easy to use (very limitation without images and videos) Facebook for free under "Free BaSucks" if you
-#   do, then good luck out there, again, RIP your privacy and phone numbers, expected telesales will call to you more and more!?
+# - From above, it's become easy to use (very limitation without images and videos) Facebook and MESSenger for free under
+#   "Free BaSucks", oops! "Free Basics" if you do, then good luck out there, and again, RIP your privacy and phone numbers, too!!
+#   Expected telesales who retrieve your numbers by anyway that they can will mass spam call to your numbers more and more!?
 # - Some shady companies in my country are also use those method above to resolve phone numbers via those headers and protocol
 #   for silently subscribe garbage contents and/or simply charging additional costs in billing or deduct prepaid calling balance,
 #   with or without anything sending right to your mobile phone! (by SMS, MMS, WAP Push, etc.)
@@ -297,16 +317,23 @@ zero.facebook.com
 # I knew it's will break anything that rely to Facebook, such as MESSenger, Login with, Play (instant) games, Comments, etc.
 # But in other words, make use of third party login button and/or plugins are mean allow its platform to tracking you easily,
 # regardless about that you've previously logged in to their service or not!
-# For more safety, DON'T USE IN-APP BROWSER! FACEBOOK KNOW YOU ARE LOGGED IN BY IT!!
-# However, since Facebook improve ability to track users by make use of "FBCLID", even you've use another browsers to open links
+# For more safety, Don't use in-app browser! Facebook know you are logged in if you enter any websites that put plugins and/or
+# tracking code on that sites, in other words, you can blame site owner who have done that!!
+# However, since Facebook improve ability to track users by make use of "fbclid", even you've use another browsers to open links
 # from Facebook, you may better use something to strip them out! e.g.
 # - ViolentMonkey* + User scripts that capable to remove unwanted parameters...
 # - Ryack's Avoision (Sideload PC Browser Extension for Chrome/Firefox): https://github.com/dryack/avoision
 # - Stoutner's Privacy Browser (Android): https://f-droid.org/packages/com.stoutner.privacybrowser.standard
 # - Anti Survived Tracking Link Warning (uBO, Nano List): Look into `/filterlists/other/` select between "Normal" and "Overdone"
-#   * Other script extensions like GreaseMonkey and TamperMonkey are have ability to phone home! (Telemetry, anonymous stats)
+#   * Other script extensions like GreaseMonkey and TamperMonkey have ability to phone home! (Telemetry, anonymous stats, etc.)
 #     while ViolentMonkey aren't do that shady things like that!!
 connect.facebook.net
+
+# Pixel domain tracking prevention (Good to block)
+*-pixel.facebook.com
+*-pixel.messenger.com
+pixel.facebook.com
+pixel.messenger.com
 
 # I think this will break MESSenger net call due to using "STUN", that's surely it use "WebRTC" and possibly to leaks your IP!
 edge-stun.facebook.com
@@ -1639,6 +1666,7 @@ voluumtrk.com
 voluumtrk2.com
 vovivooo.com
 vplaynow.com
+vpnprotectplus.com
 vpnshieldplus2.com
 vrscr888.com
 vsjcommsource.com

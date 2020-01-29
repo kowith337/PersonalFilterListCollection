@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 202001141347
+! Version: 202001300044
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -80,6 +80,8 @@ facebook.com,instagram.com,messenger.com##script:inject(cookie-remover.js, x-ref
 ! - Testing stage: Remove META
 akibatan.com##script:inject(remove-meta.js, onesignal)
 facebook.com##script:inject(remove-meta.js, referrer)
+! - Testing stage: Remove inline scripts (New toy for chromium-based users as inline element filtering like Firefox)
+akibatan.com##script:inject(remove-inline-script.js, /googlesyndication|mi_track_user|monsterinsights_frontend|window.OneSignal|window._stq|_Hasync/)
 ! - Testing stage: I want to try re-enable XSS protection on Facebook
 facebook.com,instagram.com,messenger.com##script:inject(set-respheader.js, x-xss-protection, 1)
 ! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
@@ -88,15 +90,15 @@ facebook.com,instagram.com,messenger.com##script:inject(cookie-set.js, noscript,
 ! - Strip unnecessary URL parameters (mostly use for tracking users internally)
 aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(go|main)_item(_id|id)=\d+/)
 aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(pvid|scm|sourceType|sm|spm|ttid|ut_sk|utparam)=.+[\&]/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(_ft_|__ccr|__(rv|so|tn)__)=.+[\&]/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(_rdc|mt_nav)=\d+/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(acontext|app_id|bacr|dti|eid|entrypoint|entry_point|fb_dtsg_ag|fbclid|lst|privacy_source|ref|referrer|refid|refsrc|session_id|settings_tracking|sw_fnr_id|source)=.+[\&]/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(a|f|hc_|loc_|pn_)ref=.+[\&]/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)__m_(async_page|log_async)__=\d+/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)__xts__(\[\d\]|\%5B\d\%5D)=.+[\&]/)
-f8.com,facebook.com,freebasics.com,internet.org,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)ref_\w+=.+[\&]/)
-google.com##script:inject(query-stripper.js, /(?<=\?|\&)(aqs|ei|gs_l|gs_r|oq|stick|usg|ved)=.+[\&]/)
-google.com##script:inject(query-stripper.js, /(?<=\?|\&)(bih|biw|ibh|ibw|ust|vet)=\d+/)
+f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(_ft_|__ccr|__(rv|so|tn)__)=.+[\&]/)
+f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(_rdc|mt_nav)=\d+/)
+f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(acontext|app_id|bacr|dti|eid|entrypoint|entry_point|fb_dtsg_ag|fbclid|lst|privacy_source|ref|referrer|refid|refsrc|session_id|settings_tracking|sw_fnr_id|source)=.+[\&]/)
+f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(a|f|hc_|loc_|pn_)ref=.+[\&]/)
+f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)__m_(async_page|log_async)__=\d+/)
+f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)__xts__(\[\d\]|\%5B\d\%5D)=.+[\&]/)
+f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)ref_\w+=.+[\&]/)
+google.com##script:inject(query-stripper.js, /(aqs|ei|gs_l|gs_r|oq|stick|usg|ved/)
+google.com##script:inject(query-stripper.js, /(bih|biw|ibh|ibw|ust|vet/)
 google.com##script:inject(query-stripper.js, /(?<=\?|\&)sa=\w/)
 google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(?<=\?|\&)utm=.+[\&]/)
 google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(?<=\?|\&)utm_\w+=.+[\&]/)

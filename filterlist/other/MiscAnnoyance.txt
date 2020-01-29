@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 201912292354
+! Version: 202001300026
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -58,6 +58,13 @@ m.intl.taobao.com,m.taobao.com##.zebra-oversea-smartbanner
 twitter.com##main[role] div[class] > div[class][data-testid="sidebarColumn"] div[class][style] > div[class] aside[role="complementary"][aria-label^="Relevant"]
 ! - Analytics Popup
 twitter.com##.ep-Campaign .ep-Signup
+! - Right side pane (Who to follow)
+twitter.com##aside[aria-label="Who to follow"]
+! - Right side pane (Sign up prompt)
+twitter.com##section[aria-label="Sign up"]
+! - Remove non-consumer things that not neccessary, such as create ads, tweet performance (analytics), etc.
+twitter.com##div[role="menu"] div[class] > a[href*="ads.twitter.com"]
+twitter.com##div[role="menu"] div[class] > a[href*="analytics.twitter.com"]
 
 ! [Twitter Old] (Deprecated, only appera when you're not logged in.)
 twitter.com###signin-dropdown
@@ -65,10 +72,6 @@ twitter.com##.stream li.WtfLargeCarouselStreamItem
 twitter.com##.Grid .AdaptiveRelatedSearches
 twitter.com##.SidebarCommonModules .RelatedUsers
 twitter.com##div[class^="MomentsPermalinkPage"] .MomentsPermalinkPage-related
-
-! [Twitter New] Remove non-consumer things that not neccessary, such as create ads, tweet performance (analytics), etc.
-twitter.com##div[role="menu"] div[class] > a[href*="ads.twitter.com"]
-twitter.com##div[role="menu"] div[class] > a[href*="analytics.twitter.com"]
 
 ! [WallGif]
 wallgif.com##content .big-modal
@@ -87,7 +90,7 @@ youtube.com###results .section-list .item-section li .branded-page-box
 youtube.com###results .section-list .item-section li .search-refinements
 
 ! [YouTube Polymer]
-! - I should file this rules to any repo that include kind of "UK Consent" annoyance rules, such as IDCAC, FanboyCookie, etc?
+! - I should file this rules to any repo that include kind of "UK Consent" annoyance rules, such as IDCAC, Fanboy Cookie, etc?
 youtube.com##ytd-consent-bump-renderer
 ! - Forgot what does it do, but probably zuckest to download or open in app?
 youtube.com##ytd-popup-container.ytd-app

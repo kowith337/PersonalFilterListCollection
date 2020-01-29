@@ -1,7 +1,7 @@
 ! uMatrix: Ruleset recipes 1.4.0
 ! Title: Self Custom Ruleset
-! Version: 201909052214
-! VersionNumber: 0.32.1
+! Version: 202001300052
+! VersionNumber: 0.33.0
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
@@ -9,12 +9,14 @@
 
 Gelbooru
 	gelbooru.com *
-		! Note: You must use with uBlock Origin or Nano, this only allow
-		!       something that really need and prevent unwanted connections,
-		!       not for unbreak antiuser tactics that their made.
-		! Note2: I won't turn on Google reCaptcha by default, you can turn it
-		!        on with default recipe that already provided by uMatrix
-		!        or use my recipe that allow workers (Dangerous!)
+		! Note: You must use with uBlock Origin or Nano, this only
+		!       something that really need and prevent unwanted
+		!       connections, not for unbreak antiuser tactics that
+		!       their made.
+		! Note2: I won't turn on Google reCaptcha by default, you
+		!        can turn it on with default recipe that already
+		!        provided by uMatrix or use my recipe that allow
+		!        workers (This may dangerous!)
 		_ 1st-party script
 		_ ajax.googleapis.com script
 		_ maxcdn.bootstrapcdn.com script
@@ -26,17 +28,28 @@ Google Custom Search
 
 Google reCaptcha (Allow SW)
 	* www.google.com
-		! Directly copied from official English Recipe, but I've added allow
-		! workers rules because you cannot get the enhanced version of
-		! reCaptcha (picture challenges) and even cannot click checkbox to
-		! get any challenges unless you've enable web workers, however,
-		! it may allow other workers to be running (like cryptominer, etc.)
+		! Directly copied from official English Recipe, but I've
+		! added 'allow workers' rules because you cannot get the
+		! enhanced version of reCaptcha (picture challenges) or even
+		! cannot click checkbox to get any challenges unless you've
+		! enable web workers, however, it may allow other workers to
+		! be running (like cryptominer, etc.)
 		no-workers: _ false
 		_ www.google.com *
 		_ www.google.com script
 		_ www.google.com frame
 		_ www.gstatic.com *
 		_ www.gstatic.com script
+
+Google Translate (Chrome Internal)
+	* translate.googleapis.com
+		! The ruleset will not appear unless you've trigger the
+		! 'Translate to <language>' from right-click menu in Chrome
+		! or any Chromium-based browsers (e.g. Cent, Slimjet, etc.)
+		! However, you may need to refresh once after apply ruleset
+		! and try click that menu again in order to allow Chrome
+		! translate current page properly.
+		_ translate.googleapis.com xhr
 
 Netflix Fast Internet Test
 	fast.com *
