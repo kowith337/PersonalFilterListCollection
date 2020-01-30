@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202001300045
+# Version: 202001302214
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -37,6 +37,7 @@ g06.*
 g07.*
 g08.*
 g09.*
+inscname.net
 
 # Use CSP as abusive way, anyone who use that in their server are said and pretend that use for capture problems, however, using
 # this ability may also send some sensitive information that enough for fingerprinting, such as User Agent, OS, CPU, Memory, etc.
@@ -850,6 +851,7 @@ getridofmylien.com
 gexiuyixibai.com
 ggtwpviko.tk
 gigth.com
+gigya.com
 girlsonfire.mobi
 girlsvideosonline.info
 gizmobi.mobi
@@ -1006,6 +1008,7 @@ klinikasmara.com
 km928bonprabang.club
 knsbet.tk
 koapkmobi.com
+kochava.com
 kodfin.com
 kodporno.com
 kodsextoy.com
@@ -1689,6 +1692,7 @@ waypeach.pw
 wealthandwealth.com
 wealthclick.net
 weatherpembe.com
+webspectator.com
 weddingdayphotographerparis.com
 wesliptu.pw
 whatshelp.io
