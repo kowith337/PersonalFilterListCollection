@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202001302214
+# Version: 202002021343
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -73,6 +73,8 @@ openx.*
 parkingcrew.*
 popclck.*
 truehits.*
+vpn*plus*.*
+vpn*plus.*
 
 # Prevent Firefox use CaptivePortal for check connectivity (ping network status)
 detectportal.*

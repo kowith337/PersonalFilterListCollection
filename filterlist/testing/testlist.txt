@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 202001302124
+! Version: 202002021757
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -10,11 +10,6 @@
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Taobao Mobile] Remove header anchor navigator
 m.intl.taobao.com##.App .toolbar .toolbar__anchor-wrapper
-
-! [YouTube Non-polymer] Aim to remove UK consent dialog overlay and overhaul
-youtube.com###yt-consent-dialog
-youtube.com###yt-dialog-bg
-youtube.com##.yt-dialog[id*="privacy"]
 
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Taobao Mobile] Remove bottom anchor (quickly add to cart / buy menu pane)
@@ -80,8 +75,6 @@ facebook.com,instagram.com,messenger.com##script:inject(cookie-remover.js, x-ref
 ! - Testing stage: Remove META
 akibatan.com##script:inject(remove-meta.js, onesignal)
 facebook.com##script:inject(remove-meta.js, referrer)
-! - Testing stage: Remove inline scripts (New toy for chromium-based users as inline element filtering like Firefox)
-akibatan.com##script:inject(remove-inline-script.js, /googlesyndication|mi_track_user|monsterinsights_frontend|window.OneSignal|window._stq|_Hasync/)
 ! - Testing stage: I want to try re-enable XSS protection on Facebook
 facebook.com,instagram.com,messenger.com##script:inject(set-respheader.js, x-xss-protection, 1)
 ! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
@@ -90,11 +83,10 @@ facebook.com,instagram.com,messenger.com##script:inject(cookie-set.js, noscript,
 ! - Strip unnecessary URL parameters (mostly use for tracking users internally)
 aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(go|main)_item(_id|id)=\d+/)
 aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(pvid|scm|sourceType|sm|spm|ttid|ut_sk|utparam)=.+[\&]/)
-f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(__(rv|so|tn)__)=.+[\&]/)
-f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(__m_async_page__|__m_log_async__)=\d+/)
+f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(__rv__|__so__|__tn__)=.+[\&]/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(__xts__\[\d\]|__xts__\%5B\d\%5D)=.+[\&]/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(_ft_|__ccr)=.+[\&]/)
-f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(_rdc|mt_nav)=\d+/)
+f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(_rdc|__m_async_page__|__m_log_async__|mt_nav)=\d+/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(acontext|bacr|dti|eid|entrypoint|fb_dtsg_ag|fbclid|lst|ref|referrer|refid|refsrc|session_id|settings_tracking|sw_fnr_id|source)=.+[\&]/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(app|entry|privacy)_\w+=.+[\&]/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(aref|fref|hc_ref|loc_ref|pn_ref)=.+[\&]/)
@@ -102,7 +94,7 @@ f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)\
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)ref\w+=.+[\&]/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)ref_\w+=.+[\&]/)
 google.com##script:inject(query-stripper.js, /(?<=\?|\&)(aqs|ei|gs_l|gs_r|oq|stick|usg|ved)=.+[\&]/)
-google.com##script:inject(query-stripper.js, /(?<=\?|\&)(bih|biw|ibh|ibw|ust|vet/)=.+[\&]/)
+google.com##script:inject(query-stripper.js, /(?<=\?|\&)(bih|biw|ibh|ibw|ust|vet)=.+[\&]/)
 google.com##script:inject(query-stripper.js, /(?<=\?|\&)sa=\w/)
 google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(?<=\?|\&)utm=.+[\&]/)
 google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(?<=\?|\&)utm_\w+=.+[\&]/)
@@ -113,4 +105,11 @@ steamcommunity.com,steampowered.com##script:inject(query-stripper.js, /(?<=\?|\&
 twitter.com,t.co##script:inject(query-stripper.js, /(?<=\?|\&)amp=\d/)
 youtube.com##script:inject(query-stripper.js, /(?<=\?|\&)feature=.+[\&]/)
 youtube.com##script:inject(query-stripper.js, /(?<=\?|\&)redir_token=.+[\&]/)
+
+! Platform specific - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+!#if env_chrome
+! - Remove inline scripts (New toy for chromium-based users as inline element filtering like Firefox)
+!   However, using this may cause webpage to load as `wyciwyg` scheme instead and any blocking rules maybe allowed or disabled.
+akibatan.com##script:inject(remove-inline-script.js, /googlesyndication|mi_track_user|monsterinsights_frontend|window.OneSignal|window._stq|_Hasync/)
+!#endif
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
