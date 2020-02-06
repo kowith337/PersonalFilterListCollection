@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202002021342
+! Version: 202002062033
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -76,6 +76,9 @@ twitter.com##div[class^="MomentsPermalinkPage"] .MomentsPermalinkPage-related
 ! [WallGif]
 wallgif.com##content .big-modal
 wallgif.com##content .big_modal_bg
+
+! [Wikipedia] "Wiki loves" overpromoted annoyances
+wikimedia.org,wikipedia.org###centralNotice:has(a[href*="Commons:Wiki_Loves"])
 
 ! [Wordpress Dashboard]
 wordpress.com##.reader-blank-suggestions
@@ -234,10 +237,6 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||google.*/async/irc?$important
 ||google.*/imgevent?ei=$important
 ||google.*/imgevent?*&ei=$important
-! - Block "sorry" spam protect page, I've often use browser searchbar itself instead of search new word with their search bar!
-!   Because they have `ved` parameter to obfuscase destination and also use for keep an eyes on you!! (indeed, tracking you!!!)
-!   This strict blocking will divide parameters and you may need to copy, then switch to another TLD, such as UK, JP, TH, etc.
-||google.*/sorry/index?$document,important
 
 ! [Linkis]
 ! ||linkis.com/ajax^$xmlhttprequest
@@ -299,6 +298,12 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||add0n.com$document
 ||add0n.com$popunder
 ||add0n.com$popup
+
+! [Google]
+! Block "sorry" spam protect page, I've often use browser searchbar itself instead of search new word with their search bar!
+! Because they have `ved` parameter to obfuscase destination and also use for keep an eyes on you!! (indeed, tracking you!!!)
+! This strict blocking will divide parameters and you may need to copy, then switch to another TLD, such as UK, JP, TH, etc.
+||google.*/sorry/index?$document,important
 
 ! [Mozilla AMO]
 ! Some extensions at Mozilla (mostly if it have suggest to contribute via donation) is redirect to open a developer profile page

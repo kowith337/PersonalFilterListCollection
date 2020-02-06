@@ -1,0 +1,22 @@
+[uBlock Origin 1.20.0]
+! Title: Outcome page stopping (Experimental)
+! Version: 202002062028
+! Expires: 2 days
+! Author: kowith337
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/OutcomePageStopping.txt
+! Description: This will block outcome page annoyances after you've done something before, e.g. installed or downloaded some apps
+!              and/or extensions.
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Mozilla AMO]
+! Some extensions at Mozilla (mostly if it have suggest to contribute via donation) is redirect to open a developer profile page
+! after installed some extension(s), currently all legacy extensions are purged out, so that's mean only post-quantum version of
+! Firefox is actually support and/or suppose to use strict block below, however...
+! For post-quantum Firefox users, the filter may not work unless you've de-whitelist WebExtension exception and make config prefs
+! to resist fingerprinting on mozilla addons page, see "Privileged Pages" information and how-tos in uBlock wiki below...
+! https://github.com/gorhill/uBlock/wiki/Privileged-Pages
+||addons.mozilla.org/*/addon/*/developers$document
+
+! [SourceForge] Block post download pages
+||sourceforge.net/*/postdownload$document
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !

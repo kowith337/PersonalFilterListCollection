@@ -1,7 +1,7 @@
 ! uMatrix: Ruleset recipes 1.4.0
 ! Title: Self Custom Ruleset
-! Version: 202001300052
-! VersionNumber: 0.33.0
+! Version: 202002042337
+! VersionNumber: 0.34.0
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
@@ -50,6 +50,10 @@ Google Translate (Chrome Internal)
 		! and try click that menu again in order to allow Chrome
 		! translate current page properly.
 		_ translate.googleapis.com xhr
+
+Invidious (Non-proxy mode)
+	invidio.us *
+		_ googlevideo.com media
 
 Netflix Fast Internet Test
 	fast.com *

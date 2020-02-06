@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 202002021757
+! Version: 202002021800
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -17,7 +17,7 @@ m.intl.taobao.com##.App .bar:has(a.bar-item[href^="//shop.m.taobao.com/shop/shop
 
 ! [ImgUr] Try to remove non-main images that linked from/to (mobile site only)
 !         * this may cause to hide all non-first images if it load next items in album!
-!         ** Beware about extra data use because the site will fetch next images endlessly!!
+!         ** Beware about extra data and system resources use because the site will fetch next images endlessly!!
 !#if env_mobile
 imgur.com##.GalleryHandler-postContainer:not(:nth-of-type(2))
 imgur.com##.GalleryHandler-postContainer .Gallery-moreOnImgur
