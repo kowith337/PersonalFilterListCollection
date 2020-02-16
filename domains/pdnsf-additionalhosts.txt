@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202002021343
+# Version: 202002170130
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -37,7 +37,6 @@ g06.*
 g07.*
 g08.*
 g09.*
-inscname.net
 
 # Use CSP as abusive way, anyone who use that in their server are said and pretend that use for capture problems, however, using
 # this ability may also send some sensitive information that enough for fingerprinting, such as User Agent, OS, CPU, Memory, etc.
@@ -80,6 +79,7 @@ vpn*plus.*
 detectportal.*
 
 # Google CNAME Penetration (Mostly "Google L" subdomains, wildcard rules)
+*-google*.l.google.com
 *-google-analytics.*
 *-googlead*.*
 *-googletag*.*
@@ -101,6 +101,7 @@ ati-host.net
 dnsdelegation.io
 ebis.ne.jp
 eulerian.net
+inscname.net
 intentmedia.net
 keyade.com
 oghub.io
@@ -276,7 +277,7 @@ photosdata-pa.googleapis.com
 # Facebook Zero Substances (aka. "Free Basics", wait, no! "Free BaZUCKS")
 # Allow these connections below means they can use additional tricks for keep track you with old tech, such WAP and MSISDN!
 # It's very clear before login on the mobile browsers + cellular data that Facebook will obtain some data from "HTTP header"
-#   at the beginning! plus, their system can easily to determine that it's really you because the SHAME quality of WAP protocal!!
+#   at the beginning! plus, their system can easily to determine that it's really you because the SHAME quality of WAP protocol!!
 # Some HTTP header data (aka. MSISDN) are ship with your mobile phone numbers and can be leak to ANYONE who want to capture it!!!
 # - Obviously! How many bad reputations, news and shoutouts about privacy while using Facebook right now!?
 # - If you've previously pair your phone numbers with your account, well, RIP your privacy, I cannot do anothing more...
@@ -287,8 +288,9 @@ photosdata-pa.googleapis.com
 #   for silently subscribe garbage contents and/or simply charging additional costs in billing or deduct prepaid calling balance,
 #   with or without anything sending right to your mobile phone! (by SMS, MMS, WAP Push, etc.)
 # Even their Free Basics domains was blocked, they can still tracking you from the main and sub hosts with that methods as well!
-# Note: They will binding your "DATR" cookie with mobile carrier name that you're using and also store it for 2-3 days, you can
-#       check with diagnostics page at `https://mbasic.facebook.com/diagnostics` and see "Recent carriers (DATR)" data.
+# Note: They will binding your "DATR" cookie with mobile carrier name that you're using and also store it for 2-3 days, if you're
+#       avoid using Facebook on mobile data during, you can check with diagnostics page at `https://m.facebook.com/diagnostics`
+#       and see "Recent carriers (DATR)" data.
 *-z-*.facebook.com
 *-z-*.facebook.net
 *-z-*.fbcdn.net
@@ -453,6 +455,7 @@ affxx.com
 ahyoyo.com
 aielber.com
 airpush.com
+ais-coth.com
 akazoo.com
 alawael-news.com
 alert301.com
@@ -890,6 +893,7 @@ guru3step.com
 gw2cloud.com
 gzazone.com
 hack-dragon-city.com
+hacking-incidents.com
 halocell.com
 handysms.com
 hao123.com
