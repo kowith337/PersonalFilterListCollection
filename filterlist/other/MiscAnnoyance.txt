@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202002062033
+! Version: 202002232117
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -53,6 +53,13 @@ old.reddit.com##.listingsignupbar
 m.intl.taobao.com,m.taobao.com##.App div[class^="smartbanner"]
 m.intl.taobao.com,m.taobao.com##.zebra-oversea-smartbanner
 
+! [SaveFrom] aka. SSYouTube
+! - I prefer Invidious or NewPipe / SkyTube (if you use Android), otherwise, you may face some scam sites below...
+!   > https://github.com/kowith337/ThaiConsentHosts/commit/1cb2b174ba5a094c969b131804a4a10089aee97c
+!   > https://github.com/kowith337/ThaiConsentHosts/commit/03109c2fc60f13c514ee18310d00a8500fd04763
+savefrom.net###js-install-now
+savefrom.net###sf_result .extra[data-ga-event*="helper-promo"]
+
 ! [Twitter New]
 ! - Generic
 twitter.com##main[role] div[class] > div[class][data-testid="sidebarColumn"] div[class][style] > div[class] aside[role="complementary"][aria-label^="Relevant"]
@@ -85,19 +92,22 @@ wordpress.com##.reader-blank-suggestions
 wordpress.com##.reader-recommended-sites
 wordpress.com##.sidebar-streams__discover
 
-! [YouTube Non-Polymer]
+! [YouTube Non-Polymer] This will soon deprecated due to they want to force users to use with Chrome with thier "Polymer" things!
+!     I heard some rumor that even post-quantum Firefox (aka. Servo) cannot handle that, for site performance, but not privacy!!
 ! - Remove BS survey (give stars about how satisfying, etc.)
 youtube.com###hats-container[data-survey-id]
 ! - Remove related search results
 youtube.com###results .section-list .item-section li .branded-page-box
 youtube.com###results .section-list .item-section li .search-refinements
 ! -Aim to remove UK consent dialog overlay and overhaul
+youtube.com###ticker-content .yt-consent
 youtube.com###yt-consent-dialog
 youtube.com###yt-dialog-bg
 youtube.com##.yt-dialog[id*="privacy"]
 
 ! [YouTube Polymer]
 ! - I should file this rules to any repo that include kind of "UK Consent" annoyance rules, such as IDCAC, Fanboy Cookie, etc?
+! - However, any data that separately stored for UK users may soon move back to their origin servers after Brexit happened...
 youtube.com##ytd-consent-bump-renderer
 ! - Forgot what does it do, but probably zuckest to download or open in app?
 youtube.com##ytd-popup-container.ytd-app
@@ -320,6 +330,7 @@ minecraftforge.net##script:inject(abort-current-inline-script.js, _comscore)
 minecraftforge.net##script:inject(abort-current-inline-script.js, window.factorem)
 randomnessthing.com##script:inject(abort-on-property-read.js, Criteo)
 randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptableAdIfAdblocked)
+savefrom.net##script:inject(abort-current-inline-script.js, tplYouTubePopupHelper)
 
 ! Specific Use! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [GitHub] I don't mind if I'm still use XUL Legacy version of Firefox and get noticed that the site won't support older Firefox
