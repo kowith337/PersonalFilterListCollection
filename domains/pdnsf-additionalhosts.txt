@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202002170130
+# Version: 202003022349
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -84,11 +84,14 @@ detectportal.*
 *-googlead*.*
 *-googletag*.*
 *2mdn*.google.com
+beacon.gvt*.com
+beacon*.gvt*.com
 google-analytics.*
 googlead*.*
 googletag*.*
 pagead*.doubleclick.*
 pagead-*.l.google.com
+redirector.gvt*.com
 
 # [Generic Reason]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Abusive DNS Cloaking (Don't forget to set 'checkCNAME = true' in 'DNSFilter.conf')
@@ -125,20 +128,25 @@ orpheusdroid.com
 
 # I want to say sorry to anyone who use CloudFlare DNS resolvers, but it's just my opinion to block due to Firefox's wrong turn!
 # e.g. Out-of-box config of Firefox use "TRR" resolvers (aka. DoH) from CloudFlare by default!
+#      Currently apply in US right now with include NextDNS as a fellow alternative choice, but it's still use CloudFlare first!!
 cloudflare-dns.com
 
 # More privacy enhanced for Firefox users, make sure you've disable their internal TRR first.
 ciscobinary.openh264.org
 location.services.mozilla.com
 
+# [Hola Block]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# See also: https://github.com/lightswitch05/hosts/issues/129
+hola.org
+l-agent.me
+lum-sdk.io
+luminati-china.io
+luminati.io
+luminatinet.com
+lumtest.com
+
 # [Big Brother - Non-Google fanboy] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# Note that some domains are neccessary but it's also shady at a same time, e.g. "Google Play Store" use gvt1~gvt3 domains for
-# updating apps, while use randomized subdomains for phoning home (contains "beacon" in hostname) during, you may need to
-# whitelisted it's app manually, however, I prefer you to looking for "Aurora" or "Yalp" and whitelist those apps instead if
-# you don't want to use their official store app for update anything about applications in your phone.*
-# Futhurmore, Youtube also use 'redirector.gvt1.com' to redirect ad videos as well.
-# * Note that some apps are check "Installation source" that it's actually come from "Play Store" or not, you may lost some
-#   feature or you can't even use app if it's detected that you're not installed from desired source that they want!
+# Note that some domains are neccessary but it's also shady at a same time...
 2mdn.net
 admob.com
 adsensecustomsearchads.com
@@ -155,15 +163,6 @@ googlesyndication.com
 googletagmanager.com
 googletagservices.com
 googletraveladservices.com
-gvt1.com
-gvt2.com
-gvt3.com
-gvt4.com
-gvt5.com
-gvt6.com
-gvt7.com
-gvt8.com
-gvt9.com
 metric.gstatic.com
 urchin.com
 
@@ -172,14 +171,34 @@ urchin.com
 # YouTube, Google Chrome, Google Play Store itself, etc. and especially Google Play Service, because every update will reset
 # device admin state, e.g. "Find my device"
 # (even you've turned off already, but it will re-enable after update it or reboot! and it's no way for disable permanently!!)*
-# * Unless your device was rooted or use another OS ROM that not ship with any G-APPS!!!
+# * Unless your device was rooted, updated to Android 10 (Q) or use another OS ROM that not ship with any G-APPS!!!
 # Also, I don't want to use Chrome and YouTube, but unfortunately, I cannot find any proper way to keep stop updating it without
 # that method!
 # Futhurmore, because "Android 6+" can force use Google Chrome as System WebView, it's likely impossible for disabling that!
-# Unless you're running "Android 9" and install "Shelter" app, you need to create work profile by that, then "Freeze" Chrome and
-# also "DON'T EVEN UNFREEZE AND/OR USE IT!" once you've done that, Android will pick default SystemWebView and you will unable to
-# use Chrome as WebView anymore because Android will think that not all profiles are enabled Chrome for ready to use as WebView!
+# Unless you're running "Android 9" or newer and install "Shelter" app, you need to create work profile by that, then "Freeze"
+# Chrome in Shelter profile and also "DON'T EVEN UNFREEZE AND/OR USE IT!" once you've done that, Android will pick default
+# SystemWebView and you will unable to use Chrome as WebView anymore because Android will think that not all profiles are enabled
+# Chrome for ready to use as WebView!
 connectivitycheck.gstatic.com
+
+# Even you've allowed connectivity check above, "Google Play Store" use `gvt1` domains for updating apps, but they also use
+# randomized subdomains for phoning home (contains "beacon" in hostname) during, you may need to whitelist it manually, however,
+# I prefer you to looking for "Aurora" or "Yalp" and whitelist those apps instead if you don't want to use their official store
+# app for update anything about applications in your phone!
+# Futhurmore, Youtube also commonly use 'redirector.gvt1.com' to redirect ad videos as well.
+# Note that some apps are check "Installation source" that it's actually come from "Play Store" or not, you may lost some feature
+# or you can't even use app if it's detected that you're not installed from desired source that they want!
+# Reminder: I've commented it instead of whitelisting, in other words, rest of other `gvt` servers that not `gvt1` should be
+#           blocked entirely due to it's mostly use for attempt to "beacon" back to home servers...
+# gvt1.com
+gvt2.com
+gvt3.com
+gvt4.com
+gvt5.com
+gvt6.com
+gvt7.com
+gvt8.com
+gvt9.com
 
 # Google CNAME Penetration (Mostly "Google L" subdomains, non-wildcard section)
 gstaticadssl.l.google.com
@@ -254,6 +273,7 @@ instantmessaging-pa.googleapis.com
 mdh-pa.googleapis.com
 
 # Phoninig home about network quality and also measuring? (Good to block, we should not submit any network info back to Google!)
+# You can whitelist it if you have some problems like issue no. #50
 mobilenetworkscoring-pa.googleapis.com
 
 # Again, probably same as GTalk GCM mirroring, blocking this may cause lots of notifications never be arrive.
@@ -288,9 +308,9 @@ photosdata-pa.googleapis.com
 #   for silently subscribe garbage contents and/or simply charging additional costs in billing or deduct prepaid calling balance,
 #   with or without anything sending right to your mobile phone! (by SMS, MMS, WAP Push, etc.)
 # Even their Free Basics domains was blocked, they can still tracking you from the main and sub hosts with that methods as well!
-# Note: They will binding your "DATR" cookie with mobile carrier name that you're using and also store it for 2-3 days, if you're
-#       avoid using Facebook on mobile data during, you can check with diagnostics page at `https://m.facebook.com/diagnostics`
-#       and see "Recent carriers (DATR)" data.
+# Note: They will binding your "DATR" cookie with mobile carrier name that you're using and also store it for 2-3 days even
+#       you've already avoid using Facebook on mobile data during, you can check with diagnostics page at
+#       `https://m.facebook.com/diagnostics` and see "Recent carriers (DATR)" data.
 *-z-*.facebook.com
 *-z-*.facebook.net
 *-z-*.fbcdn.net
@@ -559,6 +579,7 @@ bptr88.com
 braverymobtracking.com
 brazzers93.com
 breathing-love.com
+bridgemob.com
 browsehappy.com
 brucelead.com
 brvaffs.com
@@ -677,7 +698,6 @@ datapremium.net
 datelocalteens.com
 datinggirls.info
 datingsexy.org
-daznservices.com
 ddzey.com
 dealsonline24-7.com
 dealwifi.com
@@ -724,6 +744,7 @@ enfothe.pw
 engage.wixapps.net
 enjoy108.com
 enpocket.com
+enquetes-today-online.com
 eskimi.com
 espabit.net
 etexator.pw
@@ -855,6 +876,7 @@ getfeelgood.com
 getridofmylien.com
 gexiuyixibai.com
 ggtwpviko.tk
+gift4u.today
 gigth.com
 gigya.com
 girlsonfire.mobi
@@ -922,6 +944,7 @@ hm5.me
 hoguhotels.com
 hollywoodmobile.com
 hombet.tk
+homedeal.xyz
 hornygirls.mobi
 horolive.com
 horotalk.com
@@ -1312,6 +1335,7 @@ peerfly.com
 perfonspot.com
 performancerevenues.com
 phadoo-mobile.com
+phone-notify.com
 phonemobileapps.com
 phubbers.com
 pickeringtown.info
@@ -1430,6 +1454,7 @@ samartdigitalmedia.com
 samartmedia.com
 samartpay.com
 sanookde.com
+satisfactional-survey-platform.com
 sbobet-365.com
 sbobet-onlinecasino.com
 sbobet-sports.com
@@ -1448,6 +1473,7 @@ scr888th.com
 scr888th.live
 scr888thcasino.com
 scr888thslot.com
+scratch-surveys.co
 seacom.co.th
 seaman2u.com
 secudatago.com
@@ -1545,6 +1571,7 @@ sunmob.net
 sunnygames.club
 supergirls.one
 surfto.mobi
+surveyprizedraw.com
 sutanrajacirebon.com
 svkrg.com
 sybyrl.com
@@ -1585,7 +1612,9 @@ thieferwi.pw
 thinksmart.co.th
 thisilike.net
 thmobi.com
+thquestionnaire.com
 thstats.com
+thsurveys.com
 thtrackingap.com
 thumbr.com
 thumbsms.com
@@ -1620,6 +1649,7 @@ trktoken.com
 truevid.mobi
 truevids.mobi
 truevivid.mobi
+tryacf01.com
 tsalebag.com
 tubecorporate.com
 tubidy.mobi

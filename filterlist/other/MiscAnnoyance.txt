@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202002232117
+! Version: 202003022354
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -60,6 +60,11 @@ m.intl.taobao.com,m.taobao.com##.zebra-oversea-smartbanner
 savefrom.net###js-install-now
 savefrom.net###sf_result .extra[data-ga-event*="helper-promo"]
 
+! [Naver Line Store] Experimental
+! - Dealing against attempts to add official account
+store.line.me##.FnAddStoreOaAsFriendPopup
+store.line.me##.LyMain .MdOverlay01
+
 ! [Twitter New]
 ! - Generic
 twitter.com##main[role] div[class] > div[class][data-testid="sidebarColumn"] div[class][style] > div[class] aside[role="complementary"][aria-label^="Relevant"]
@@ -96,6 +101,8 @@ wordpress.com##.sidebar-streams__discover
 !     I heard some rumor that even post-quantum Firefox (aka. Servo) cannot handle that, for site performance, but not privacy!!
 ! - Remove BS survey (give stars about how satisfying, etc.)
 youtube.com###hats-container[data-survey-id]
+! - Remove yellow alert, even it's not yet enforce apply new UI right now...
+youtube.com###old-browser-alert
 ! - Remove related search results
 youtube.com###results .section-list .item-section li .branded-page-box
 youtube.com###results .section-list .item-section li .search-refinements
@@ -168,7 +175,7 @@ m.youtube.com##ytm-compact-video-renderer .compact-media-item:has(.compact-media
 ! - Try remove any highlights that inject directly to notification lists (aka. In case that you've missed)
 twitter.com##div[aria-label^="Timeline:"] div > article[role="article"]:has(div[class] > svg g path[fill="#794BC4"])
 ! - Remove new layout overlay notify popup
-twitter.com##div[data-reactroot] div[class] > div[data-focusable][tabindex][class] div[class]:has(div[class] > div[class][style] img[alt][src^="https://ton.twimg.com/twitter_shared_public/responsive-web"])
+twitter.com##div[data-reactroot] div[class] > div[data-focusable][tabindex][class] div[class]:has(div[class] > div[class][style] img[alt][src*="/twitter_shared_public/responsive-web"])
 
 ! [WallGif] Disable AdBlock...? HOW ABOUT NO!!
 wallgif.com###overlay:has(img[alt="Loader"])
@@ -210,7 +217,7 @@ randomnessthing.com##script:contains(Criteo)
 
 ! CSS Modify  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Google] Restore context of search result that was hidden by a things named as "People also search for", the hidden action will
-!          be triggered when you've open some result into new tab or window, then return back to Google search result tab...
+!          be triggered when you've open some result into new tab or window, then return back to Google search result tab after.
 google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname] hr[style^="visibility: hidden"]:style(visibility: visible !important)
 google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][style^="display: none"]:style(display: block !important)
 
@@ -227,7 +234,7 @@ chocolateminecraft.com###content table[style*="width:100%"] td a[href*="netb.ee/
 !   - Prevent clicking on all big icon links that appear as latest and/or recommended (because it contains AdFocus hyperlink) and
 !     leave only changelog can be clickable.
 !   - All download URLs will not have underline an also unable to click, the only way to download is just click the (i) icon beside
-!     "Download" text, that's only the way you can get the direct download for this.
+!     "Download" text, that's the only way you can get the direct download for it.
 minecraftforge.net##.download-list-wrapper .download-files .download-links li a[href*="adfoc.us/"]:style(pointer-events: none !important; text-decoration: none !important)
 minecraftforge.net##.downloads .download .links .link-left:has(a[href*="adfoc.us/"]):style(pointer-events: none !important)
 minecraftforge.net##.downloads .download .links .links-right .link:has(a[href*="adfoc.us/"]):style(pointer-events: none !important)
@@ -242,11 +249,16 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ! Network Requests - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Google]
 ! - Tracking users with some parameter tag (e.g. 'ei', 'vet')
-||google.*/async/bgasy?ei=*$important
+||google.*/*?*&ei=$image,xmlhttprequest,important
+||google.*/*?ei=$image,xmlhttprequest,important
+||google.*/VisualFrontendUi/browserinfo$important
 ||google.*/async/bgasy?*&ei=*$important
+||google.*/async/bgasy?ei=*$important
 ||google.*/async/irc?$important
-||google.*/imgevent?ei=$important
+||google.*/gen_204?*&ei=$important
+||google.*/gen_204?ei=$important
 ||google.*/imgevent?*&ei=$important
+||google.*/imgevent?ei=$important
 
 ! [Linkis]
 ! ||linkis.com/ajax^$xmlhttprequest
@@ -321,7 +333,7 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ! Firefox is actually support and/or suppose to use strict block below, however...
 ! For post-quantum Firefox users, the filter may not work unless you've de-whitelist WebExtension exception and make config prefs
 ! to resist fingerprinting on mozilla addons page, see "Privileged Pages" information and how-tos in uBlock wiki below...
-! https://github.com/gorhill/uBlock/wiki/Privileged-Pages
+! > https://github.com/gorhill/uBlock/wiki/Privileged-Pages
 ||addons.mozilla.org/*/addon/*/developers$document
 
 ! Scriplets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
