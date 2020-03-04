@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
-! Title: GelboLube (Chromium/WebExt) [Freezing]
-! Version: 201911130025
+! Title: GelboLube (Universal) [stack menubar modified]
+! Version: 202003042124
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -11,10 +11,11 @@
 !    etc. and regularly auto check itself when it's outdated more than 2 days.
 ! 2. This rules not completely to hide ads and collapse space, but it still remove ads and unwanted resources.
 !    (e.g. subdocuments and other scripts file that no need to load them)
-! 3. Author/Owner/Contributor of gelbooru.com will frequently update their sites to keep ads appear.
-! 4. for uB0 1.2.0 + Firefox 42 (and/or both newer) but Firefox <57 and installed uB0 Legacy, please look at 'legacy' version for
-!    better privacy (because it still prevent ExoClick ads deployment and still load thumbnail without any problem) as long as
-!    they didn't update their site to survive blocking so much...
+! 3. Author/Owner/Contributor of "gelbooru.com" will frequently update their sites to keep ads from their partners appear.
+! 4. This is a universal version that compatible for any browsers, even some of browsers market share aren't use modern engine
+!    like most big brands. (thanks for the `!#if` and `!#endif` directive)
+! 5. Split menu bar are deprecated and move to "legacy" version, you can still subscribe if you've still missing it even it's
+!    still ugly until now.
 
 ! ------------------------------------------------------ GelboLube Core -------------------------------------------------------- !
 ! Element Hiding - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -51,12 +52,8 @@ gelbooru.com##div[id^="adtoniq-"]
 
 ! Filtered procedural hiding  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Element hiding in tags list pane that also insert tall banner ads
-gelbooru.com###paginater a:has(img)
-gelbooru.com###pagination a:has(img)
-gelbooru.com###paginator a:has(img)
-gelbooru.com##.paginater a:has(img)
-gelbooru.com##.pagination a:has(img)
-gelbooru.com##.paginator a:has(img)
+gelbooru.com##div[class^="paginat"] a:has(img)
+gelbooru.com##div[id^="paginat"] a:has(img)
 
 ! 2. To block hyperlink ads that appear under the tag lists (currently know it's promote r18.com and jabcomix.com)
 gelbooru.com##div[class^="sidebar"] a[target]:has(img)
@@ -99,7 +96,7 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ||gelbooru.com$script
 ||gelbooru.com$subdocument
 
-! Block extra things (Banner images that promote their shirts)
+! Block extra things (Banner images that promote their shi{r}ts)
 ||gelbooru.com/extras/$image,other
 ||gelbooru.com/mind/$image,other
 
@@ -140,7 +137,7 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 @@||gelbooru.com/ads.js?$script
 @@||youhate.us/ads.js?$script
 
-! 6. Allow lazyload script to be loaded because function to load thumbnail is depend on this, since 2017/10/03
+! 6. Allow lazyload script to be loaded because function to load thumbnail is depend on this, since 2017/10/03 (Now they halt?)
 @@||*/script/lazyload.js?$script,domain=gelbooru.com
 @@||gelbooru.com/script/lazyload.js?$script,first-party
 
@@ -165,6 +162,7 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ||gelbooru.com^$first-party,image,badfilter
 
 ! 4. Counter and override AdGuard GenericHide whitelist!
+@@||gelbooru.com$generichide,badfilter
 ||gelbooru.com$generichide,important
 
 ! Strict blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -199,8 +197,8 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ! 3. Block "JabComix" promo, /r19/ strict!
 ||gelbooru.com/r19/$important
 
-! 4. Block hostile scripts that load as php, it's an ad script that foolish exception rule and loaded as php doc.
-!    Additional note: license.* js file is similar to holstile script for survive ad-blocking that used in openload.
+! 4. Block hostile scripts that load as php, it's an ad script that foolish exception rule and loaded as php document.
+!    Additional note: license.* js file is similar to holstile script for survive ad-blocking that used in "OpenLoad".
 ||gelbooru.com//script/application.js.php$important
 ||gelbooru.com//script/bed.php$important
 ||gelbooru.com//script/bed2.php$important
@@ -223,7 +221,7 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ! 5. Pre-blocking images ahead to prevent advert images that placed as '/thumbnails/0X/', this will supply by Unbreak #4 that
 !    actually load legitimate thumbnails, I've reduced priority for [*.jpg] due to it's use for other appearance, such as
 !    recent comments that load thumbnail images without '?<PostID>' referrer, also prevent repetitive (and abusive) requests
-!    that their currently using, like re-request every images as "other" instead of request as it's own type.
+!    that their currently using, like re-request every images as "other" instead of request as it's own type from first time.
 ||gelbooru.com/thumbnails/*.jpg|
 ||gelbooru.com/thumbnails/*.gif|$important
 ||gelbooru.com/thumbnails/*.png|$important
@@ -252,47 +250,57 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ! Inject Scriptlets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Prevent Google Analytics to be executed, but it works only inline script due to they recently add asynchronous script after
 !    document loaded.
-gelbooru.com##+js(abort-on-property-write.js, GoogleAnalyticsObject)
+gelbooru.com##script:inject(abort-on-property-write.js, GoogleAnalyticsObject)
 
 ! 2. Prevent JuicyAds execute, same behavior as Google Analytics
-gelbooru.com##+js(abort-on-property-write.js, adsbyjuicy)
+gelbooru.com##script:inject(abort-on-property-write.js, adsbyjuicy)
 
 ! 3. Experimental, to foil ILS function for Chromium / Firefox WebExt
-gelbooru.com##+js(abort-current-inline-script.js, AddZone, idzone)
-gelbooru.com##+js(abort-current-inline-script.js, ImplicityBreakingSite)
-gelbooru.com##+js(abort-current-inline-script.js, adtoniq)
-gelbooru.com##+js(abort-current-inline-script.js, cookieName, gelcomPoop)
-gelbooru.com##+js(abort-current-inline-script.js, domain_base, exosrv.com)
-gelbooru.com##+js(abort-current-inline-script.js, serve, script_url)
-gelbooru.com##+js(abort-current-inline-script.js, window.dataLayer, gtag)
+gelbooru.com##script:inject(abort-current-inline-script.js, AddZone, idzone)
+gelbooru.com##script:inject(abort-current-inline-script.js, ImplicityBreakingSite)
+gelbooru.com##script:inject(abort-current-inline-script.js, adtoniq)
+gelbooru.com##script:inject(abort-current-inline-script.js, cookieName, gelcomPoop)
+gelbooru.com##script:inject(abort-current-inline-script.js, domain_base, exosrv.com)
+gelbooru.com##script:inject(abort-current-inline-script.js, serve, script_url)
+gelbooru.com##script:inject(abort-current-inline-script.js, window.dataLayer, gtag)
 
 ! 4. Inject constant value (Only a value that not match to specific string will be applied)
-gelbooru.com##+js(set-constant.js, ExoDetector, noopfunc)
-gelbooru.com##+js(set-constant.js, adtoniq, noopfunc)
+gelbooru.com##script:inject(set-constant.js, ExoDetector, noopfunc)
+gelbooru.com##script:inject(set-constant.js, adtoniq, noopfunc)
 
 ! CSS Re-design / Mobile Improvement  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! 1. Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space
-!    almost half of screen from top, this will surely conflict when you request desktop view or when you're already use desktop
-!    browser.
-gelbooru.com###navbar ul li a:style(font-weight: normal !important; padding-left: 4px !important; padding-right: 4px !important)
-gelbooru.com###navbar ul li a b:style(font-weight: normal !important; padding-left: 0px !important; padding-right: 0px !important)
-gelbooru.com###navbar2 ul li a:style(font-weight: normal !important; padding-left: 4px !important; padding-right: 4px !important)
-gelbooru.com###navbar2 ul li a b:style(font-weight: normal !important; padding-left: 0px !important; padding-right: 0px !important)
-gelbooru.com###navbar2 .navbar-nav:style(direction:rtl !important)
-gelbooru.com###navbar2:style(float: right !important)
-gelbooru.com##.navbar#submenu:style(float: right !important; width: 50% !important)
-gelbooru.com##.navbar-header .navbar-brand:style(font-size: 12px !important)
-gelbooru.com##.navbar.navbar-default .navbar-header button.navbar-toggle:style(float:left !important; margin-left: 10px !important; margin-right: 0px !important)
-gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
-! gelbooru.com###post-view #right-col div #image[src*="sample"]:style(width: 100% !important)
+! 1. Overall adjust menu bar to reduce thickness of them, previously, I've use this section to divide each menu bars but for now
+!    they have increase menu items more and more and cause my old "half divide" style looks very ugly!
+!    this will surely conflict when you request desktop view or when you're already use desktop browser.
+gelbooru.com##.navbar:style(min-height: 24px !important)
+gelbooru.com##.navbar#submenu:style(margin: 0px !important; position: relative !important; width:100% !important; z-index: initial !important)
 
-! 2. Remove blur overlay for images requiring an account
+! 2. Adjust padding between menu items, also reduce priority of "Bold highlight" items by revert back to normal font weight.
+gelbooru.com##.navbar .navbar-nav li a:style(font-weight: normal !important; padding-left: 4px !important; padding-right: 4px !important; padding-top: 10px !important; padding-bottom: 10px !important; line-height: 20px !important)
+gelbooru.com##.navbar .navbar-nav li a b:style(font-weight: normal !important; padding-left: 0px !important; padding-right: 0px !important)
+
+! 3. Adjust "light bulb" icon size and positioning (aka. toggle dark mode)
+gelbooru.com##.navbar .navbar-nav li a.ui-icon-lightbulb:after:style(font-size: 16px !important; position: relative !important)
+
+! 4. Adjust to reduce thickness of "soft alert" height and expand maximum width (old value use 15px, so, reduce to 8px instead.)
+gelbooru.com##.padding15 .alert.alert-info:style(padding: 8px 15px !important; margin: 8px 0px !important; width: auto 100% !important)
+
+! 5. Replace "Gelbooru Logo" to "text" (Indeed!)
+gelbooru.com##.navbar-header .navbar-brand:style(background: none 0px transparent !important; font-size: 12px !important; height: 20px !important; line-height: 20px !important; padding-top: 10px !important; padding-bottom: 10px !important)
+gelbooru.com##.navbar-header .navbar-brand:after:style(content: "Gelbooru" !important)
+
+! 6. Reduce heigh of toggle menu bar button to 8px, reduce margin between top and bottom to 4px.
+!    * Mobile site user experience
+gelbooru.com##nav.navbar .navbar-toggle:style(padding: 8px !important; margin-top: 4px !important; margin-bottom: 4px !important)
+
+! 7. Remove blur overlay for images requiring an account
 gelbooru.com##body img:style(filter:none !important)
 
-! 3. Fix extra-long search bar caused by padding adjust. (reported from Twitter DM, so I won't shout reporter name.)
-gelbooru.com##.padding15:style(padding: 15px !important)
+! 8. Fix extra-long search bar caused by padding adjust. (reported from Twitter DM, so I won't shout reporter name.)
+!    * Re-adjust to reduce space between top and bottom
+gelbooru.com##.padding15:style(padding: 8px 15px !important)
 
-! HTML filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! HTML filtering (Firefox quantum only, maybe old Microsoft Edge) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! able to remove some specific path inside the non-filtered document before it's load
 ! currently require 1.14.23 beta and run on Firefox Quantum (57+)
 !#if cap_html_filtering
@@ -312,6 +320,36 @@ gelbooru.com##^script[src*="/script/try.js"]
 gelbooru.com##^script[src*="/script/tryt.js"]
 gelbooru.com##^script[src^="https://ads.exoclick.com"]
 ! gelbooru.com##^script:has-text(abvertDar)
+!#endif
+
+! Firefox + uBO Legacy Only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! ##script rules are work only uBlock0 1.2.0 + Firefox 42 or newer, but make sure it's not over than 56, if your Firefox version
+! over than that, you will be forced to install WebExtension version and need to look for "Chromium/WebExt" version...
+! Note: Fennec F-Droid also work, Not sure for IceCat and Pale Moon because it based on ESR build...
+! - I can confirmed these inline script filter rules below can collaps space that caused from every immoral ads, for now.
+! - Only the legacy version of uBlock Origin can be used these rules, the legacy version will be no longer release and get updated
+!   when stable version of Firefox 57 released, or maybe need someone to clone and port to keep extended support beyond EoL!
+! - Keep in mind because they may rename some function to survive blocking, such as change [advertVar] to [abvertDar]
+!#if env_firefox
+gelbooru.com##script:contains(.AddZone)
+gelbooru.com##script:contains(.addZone)
+gelbooru.com##script:contains(.serve)
+gelbooru.com##script:contains(BetterJsPop)
+gelbooru.com##script:contains(EXoDetector)
+gelbooru.com##script:contains(ExoDetector)
+gelbooru.com##script:contains(ExoLoader)
+gelbooru.com##script:contains(GoogleAnalyticsObject)
+gelbooru.com##script:contains(ImplicityBreakingSite)
+gelbooru.com##script:contains(_gaq.push)
+gelbooru.com##script:contains(ad_idzone)
+gelbooru.com##script:contains(adtoniq)
+gelbooru.com##script:contains(adsbyjuicy)
+gelbooru.com##script:contains(advertVar)
+gelbooru.com##script:contains(function gtag)
+gelbooru.com##script:contains(gelcomPoop)
+gelbooru.com##script:contains(trw_domain)
+! gelbooru.com##script:contains(abvertDar)
+! gelbooru.com##script:contains(adnOpt)
 !#endif
 
 ! Specific rules to use for some case or unless some requirement are met  - - - - - - - - - - - - - - - - - - - - - - - - - - - !

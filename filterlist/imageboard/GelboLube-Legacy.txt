@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
-! Title: GelboLube (Firefox Legacy) [Freezing]
-! Version: 201911130025
+! Title: GelboLube (Legacy) [old split menubar]
+! Version: 202003042124
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/legacy/gelbolube.txt
@@ -11,9 +11,9 @@
 !    etc. and regularly auto check itself when it's outdated more than 2 days.
 ! 2. This rules not completely to hide ads and collapse space, but it still remove ads and unwanted resources.
 !    (e.g. subdocuments and other scripts file that no need to load them)
-! 3. Author/Owner/Contributor of gelbooru.com will frequently update their sites to keep ads appear.
-! 4. for Chromium, uB0 WebExtension, Firefox 57+ users, you can move to normal version at your own risk! because blocking
-!    ExoLoader function is also prevent 'lazyload' to be execute, I've allowed them because I have no choice (right now)
+! 3. Author/Owner/Contributor of "gelbooru.com" will frequently update their sites to keep ads from their partners appear.
+! 4. This changed of legacy version are now support to major browsers with "split menu bar" still apply, however, due to their
+!    put many items in menu too much, menu bar appearance still ugly until now.
 
 ! ------------------------------------------------------ GelboLube Core -------------------------------------------------------- !
 ! Element Hiding - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -50,12 +50,8 @@ gelbooru.com##div[id^="adtoniq-"]
 
 ! Filtered procedural hiding  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Element hiding in tags list pane that also insert tall banner ads
-gelbooru.com###paginater a:has(img)
-gelbooru.com###pagination a:has(img)
-gelbooru.com###paginator a:has(img)
-gelbooru.com##.paginater a:has(img)
-gelbooru.com##.pagination a:has(img)
-gelbooru.com##.paginator a:has(img)
+gelbooru.com##div[class^="paginat"] a:has(img)
+gelbooru.com##div[id^="paginat"] a:has(img)
 
 ! 2. To block hyperlink ads that appear under the tag lists (currently know it's promote r18.com and jabcomix.com)
 gelbooru.com##div[class^="sidebar"] a[target]:has(img)
@@ -98,7 +94,7 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ||gelbooru.com$script
 ||gelbooru.com$subdocument
 
-! Block extra things (Banner images that promote their shirts)
+! Block extra things (Banner images that promote their shi{r}ts)
 ||gelbooru.com/extras/$image,other
 ||gelbooru.com/mind/$image,other
 
@@ -139,7 +135,7 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 @@||gelbooru.com/ads.js?$script
 @@||youhate.us/ads.js?$script
 
-! 6. Allow lazyload script to be loaded because function to load thumbnail is depend on this, since 2017/10/03
+! 6. Allow lazyload script to be loaded because function to load thumbnail is depend on this, since 2017/10/03 (Now they halt?)
 @@||*/script/lazyload.js?$script,domain=gelbooru.com
 @@||gelbooru.com/script/lazyload.js?$script,first-party
 
@@ -164,6 +160,7 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ||gelbooru.com^$first-party,image,badfilter
 
 ! 4. Counter and override AdGuard GenericHide whitelist!
+@@||gelbooru.com$generichide,badfilter
 ||gelbooru.com$generichide,important
 
 ! Strict blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -198,8 +195,8 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ! 3. Block "JabComix" promo, /r19/ strict!
 ||gelbooru.com/r19/$important
 
-! 4. Block hostile scripts that load as php, it's an ad script that foolish exception rule and loaded as php doc.
-!    Additional note: license.* js file is similar to holstile script for survive ad-blocking that used in openload.
+! 4. Block hostile scripts that load as php, it's an ad script that foolish exception rule and loaded as php document.
+!    Additional note: license.* js file is similar to holstile script for survive ad-blocking that used in "OpenLoad".
 ||gelbooru.com//script/application.js.php$important
 ||gelbooru.com//script/bed.php$important
 ||gelbooru.com//script/bed2.php$important
@@ -222,7 +219,7 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ! 5. Pre-blocking images ahead to prevent advert images that placed as '/thumbnails/0X/', this will supply by Unbreak #4 that
 !    actually load legitimate thumbnails, I've reduced priority for [*.jpg] due to it's use for other appearance, such as
 !    recent comments that load thumbnail images without '?<PostID>' referrer, also prevent repetitive (and abusive) requests
-!    that their currently using, like re-request every images as "other" instead of request as it's own type.
+!    that their currently using, like re-request every images as "other" instead of request as it's own type from first time.
 ||gelbooru.com/thumbnails/*.jpg|
 ||gelbooru.com/thumbnails/*.gif|$important
 ||gelbooru.com/thumbnails/*.png|$important
@@ -266,8 +263,8 @@ gelbooru.com##script:inject(abort-current-inline-script.js, serve, script_url)
 gelbooru.com##script:inject(abort-current-inline-script.js, window.dataLayer, gtag)
 
 ! 4. Inject constant value (Only a value that not match to specific string will be applied)
-gelbooru.com##+js(set-constant.js, ExoDetector, noopFunc)
-gelbooru.com##+js(set-constant.js, adtoniq, noopFunc)
+gelbooru.com##script:inject(set-constant.js, ExoDetector, noopfunc)
+gelbooru.com##script:inject(set-constant.js, adtoniq, noopfunc)
 
 ! CSS Re-design / Mobile Improvement  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space
@@ -279,7 +276,7 @@ gelbooru.com###navbar2 ul li a:style(font-weight: normal !important; padding-lef
 gelbooru.com###navbar2 ul li a b:style(font-weight: normal !important; padding-left: 0px !important; padding-right: 0px !important)
 gelbooru.com###navbar2 .navbar-nav:style(direction:rtl !important)
 gelbooru.com###navbar2:style(float: right !important)
-gelbooru.com##.navbar#submenu:style(float: right !important; width: 50% !important)
+gelbooru.com##.navbar#submenu:style(float: right !important; width: 50% !important; z-index: initial !important)
 gelbooru.com##.navbar-header .navbar-brand:style(font-size: 12px !important)
 gelbooru.com##.navbar.navbar-default .navbar-header button.navbar-toggle:style(float:left !important; margin-left: 10px !important; margin-right: 0px !important)
 gelbooru.com##.navbar.navbar-default:style(float: left; width: 50% !important)
@@ -290,6 +287,28 @@ gelbooru.com##body img:style(filter:none !important)
 
 ! 3. Fix extra-long search bar caused by padding adjust. (reported from Twitter DM, so I won't shout reporter name.)
 gelbooru.com##.padding15:style(padding: 15px !important)
+
+! HTML filtering (Firefox quantum only, maybe old Microsoft Edge) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! able to remove some specific path inside the non-filtered document before it's load
+! currently require 1.14.23 beta and run on Firefox Quantum (57+)
+!#if cap_html_filtering
+gelbooru.com##^div[id^="adtoniq-msg-bar"]
+gelbooru.com##^ins[class="adsbytrafficjunky"]
+! gelbooru.com##^script:has-text(BPJS)
+! gelbooru.com##^script:has-text(BetterJsPop)
+gelbooru.com##^script:has-text(EXoDetector)
+gelbooru.com##^script:has-text(adtoniq)
+gelbooru.com##^script:has-text(fuckingnormieswry)
+gelbooru.com##^script[async][src^="https://media.trafficjunky.net"]
+gelbooru.com##^script[async][src^="https://www.googletagmanager.com"]
+gelbooru.com##^script[src*="/autoDebug.js"]
+gelbooru.com##^script[src*="/script/bpjs.js"]
+gelbooru.com##^script[src*="/script/license"]
+gelbooru.com##^script[src*="/script/try.js"]
+gelbooru.com##^script[src*="/script/tryt.js"]
+gelbooru.com##^script[src^="https://ads.exoclick.com"]
+! gelbooru.com##^script:has-text(abvertDar)
+!#endif
 
 ! Firefox + uBO Legacy Only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! ##script rules are work only uBlock0 1.2.0 + Firefox 42 or newer, but make sure it's not over than 56, if your Firefox version
