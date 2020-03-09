@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202002230012
+# Version: 202003092323
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -45,8 +45,10 @@
 0.0.0.0 tpc.googlesyndication.com
 #
 # {Google APIs}
+# cryptauthenrollment.googleapis.com
 0.0.0.0 datasaver.googleapis.com
 0.0.0.0 digitalassetlinks.googleapis.com
+0.0.0.0 firebaseinstallations.googleapis.com
 0.0.0.0 firebaseremoteconfig.googleapis.com
 0.0.0.0 imasdk.googleapis.com
 0.0.0.0 mobilecrashreporting.googleapis.com
@@ -96,6 +98,12 @@
 0.0.0.0 android-safebrowsing.googleapis.com
 # 0.0.0.0 safebrowsing.google.com
 # 0.0.0.0 safebrowsing.googleapis.com
+#
+# {GVT Subs}
+0.0.0.0 beacons.gcp.gvt2.com
+0.0.0.0 beacons.gvt2.com
+0.0.0.0 beacons-handoff.gcp.gvt2.com
+# 0.0.0.0 redirector.gvt1.com
 #
 # {Google L} Can I block DNS name?
 0.0.0.0 adservice.l.google.com
