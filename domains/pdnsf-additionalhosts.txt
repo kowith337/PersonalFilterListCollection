@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202003022349
+# Version: 202003062257
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -378,6 +378,7 @@ fbpigeon.com
 125-telecom.com
 12horo.com
 12mob.com
+12xlwin3.net
 133ms2u.com
 157gamestudios.com
 181818.com.my
@@ -430,6 +431,7 @@ acme-mobile.com
 acupofcafeconleche.com
 ad5media.com
 ad5network.com
+adadept.space
 adasiaholdings.com
 adcamie.com
 adcolony.com
@@ -478,6 +480,7 @@ airpush.com
 ais-coth.com
 akazoo.com
 alawael-news.com
+alert-cleaner.club
 alert301.com
 alexametrics.com
 alice2appsmart.com
@@ -659,6 +662,7 @@ contentdd.net
 contentfall.com
 contentformen.mobi
 contentsdaily.com
+cook-giant-under-leg.xyz
 cool4mob.com
 coolzee.net
 cosmik-ltd.com
@@ -1375,6 +1379,7 @@ powerlion.space
 premiumtraff.com
 previsupe.pw
 primaria9.com
+privacy-protect-webs-phone.club
 privatebay.tv
 privatevideoz.com
 privatewant.com
@@ -1638,6 +1643,7 @@ trackjs.com
 trackmeplease.com
 trackvoluum.com
 traffic-c.com
+trafficshark.pro
 traffikflow.com
 trakkthisfor.info
 travelpayouts.com
@@ -1668,6 +1674,7 @@ ude182.com
 ugjbet.tk
 umeng.com
 umobi.biz
+unithese-resteven.icu
 unpuzzled.net
 upp.st
 user-api.com
@@ -1764,6 +1771,7 @@ yibsee.com
 yim88.tk
 youlaugh.online
 your-sweet-girls1.com
+yourstukov.com
 ypzsls.com
 yu0123456.com
 yuppytv.com
