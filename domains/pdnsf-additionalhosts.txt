@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202003062257
+# Version: 202003112237
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -56,6 +56,7 @@ tons*.com
 ww*.mobilelife.co.th
 
 # Other unwanted
+alert-*.club
 amp.*
 ampproject.*
 beacon*.*
@@ -66,6 +67,7 @@ firebase*.*
 geniee*.*
 innity.*
 mtburn.*
+notice-*.club
 nr-data.*
 nuffnang.*
 openx.*
@@ -1310,6 +1312,7 @@ openx.notebookspec.com
 openxmarket.asia
 operastarz.com
 operonsh.pw
+optad360.io
 opticks.io
 optsearch.net
 orepic.com
