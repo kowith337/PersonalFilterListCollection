@@ -1,7 +1,7 @@
-! uMatrix: Ruleset recipes 1.4.0
+! uMatrix: Ruleset recipes 1.4.1
 ! Title: Self Custom Ruleset
-! Version: 202002042337
-! VersionNumber: 0.34.0
+! Version: 202003170852
+! VersionNumber: 0.40.0
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
@@ -49,7 +49,7 @@ Google Translate (Chrome Internal)
 		! However, you may need to refresh once after apply ruleset
 		! and try click that menu again in order to allow Chrome
 		! translate current page properly.
-		_ translate.googleapis.com xhr
+		_ translate.googleapis.com fetch
 
 Invidious (Non-proxy mode)
 	invidio.us *
@@ -57,18 +57,18 @@ Invidious (Non-proxy mode)
 
 Netflix Fast Internet Test
 	fast.com *
-		_ netflix.com xhr
-		_ nflxvideo.net xhr
+		_ netflix.com fetch
+		_ nflxvideo.net fetch
 		
 Ookla SpeedTest
 	speedtest.net *
 		_ cdnst.net script
-		_ ooklaserver.net xhr
+		_ ooklaserver.net fetch
 
 Radio-Browser
 	radio-browser.info *
 		_ * media
-		_ * xhr
+		_ * fetch
 		_ cdn.jsdelivr.net script
 
 YouTube Privacy Embed
@@ -76,10 +76,10 @@ YouTube Privacy Embed
 		_ youtube-nocookie.com *
 		_ youtube-nocookie.com frame
 		_ youtube-nocookie.com script
-		_ googlevideo.com xhr
+		_ googlevideo.com fetch
 		_ ytimg.com script
 
 YouTube Privacy Embed (Direct Page)
 	youtube-nocookie.com *
-		_ googlevideo.com xhr
+		_ googlevideo.com fetch
 		_ ytimg.com script

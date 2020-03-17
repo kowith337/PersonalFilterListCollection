@@ -1,7 +1,7 @@
-! uMatrix: Ruleset recipes 1.4.0
+! uMatrix: Ruleset recipes 1.4.1
 ! Title: Rulesets for Thai sites (alpha test)
-! Version: 201909052214
-! VersionNumber: 0.18.0
+! Version: 202003170852
+! VersionNumber: 0.20.0
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/ruleset/readme.md
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
@@ -12,12 +12,12 @@ Amarin TV
 		! Unbreak video player by disable referrer spoofing,
 		! JWPlayer cannot play anything if you spoof referrer header.
 		referrer-spoof: _ false
-		_ 203.151.179.100 xhr
-		_ 203.151.179.101 xhr
-		_ 203.151.179.102 xhr
-		_ 203.151.179.103 xhr
-		_ 210.4.150.104 xhr
-		_ amarin2.live14.com xhr
+		_ 203.151.179.100 fetch
+		_ 203.151.179.101 fetch
+		_ 203.151.179.102 fetch
+		_ 203.151.179.103 fetch
+		_ 210.4.150.104 fetch
+		_ amarin2.live14.com fetch
 		_ ssl.p.jwpcdn.com script
 
 LINE Today
@@ -30,14 +30,14 @@ LINE TV
 		_ line-apps.com script
 		_ pstatic.net script
 		_ tv-line.pstatic.net script
-		_ tv-line.pstatic.net xhr
+		_ tv-line.pstatic.net fetch
 
 MCOT Radio - Active Radio
 	fm99activeradio.com *
 		referrer-spoof: _ false
 		_ cdn.mcot.net script
-		_ cdn.mcot.net xhr
-		_ mcotn-api.mcot.net xhr
+		_ cdn.mcot.net fetch
+		_ mcotn-api.mcot.net fetch
 		_ ssl.p.jwpcdn.com script
 
 MCOT Radio - Mellow
@@ -51,9 +51,9 @@ MCOT Radio - MET
 	met107.fm *
 		referrer-spoof: _ false
 		_ cdn.mcot.net script
-		_ cdn.mcot.net xhr
+		_ cdn.mcot.net fetch
 		_ maxcdn.bootstrapcdn.com script
-		_ mcotn-api.mcot.net xhr
+		_ mcotn-api.mcot.net fetch
 		_ ssl.p.jwpcdn.com script
 
 MCOT Radio - News Network (Fallback)
