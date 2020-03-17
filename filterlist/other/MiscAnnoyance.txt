@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202003091333
+! Version: 202003151309
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -151,8 +151,9 @@ pantip.com##.pt-list-item:has(.pt-list-item__title h2 a:has-text([BR] ))
 pantip.com##.pt-list-item:has(.pt-list-item__title h2 a:has-text([SR] ))
 ! - Remove all images inserted from anybody who have "Organization" roles
 !   Often see at MBK forum, mostly come from mobile operator accounts (esp. AIS), it's bullshit idea and produced wasteful space!
-pantip.com##.m-post-comment .m-comment-wrapper:has(a.icon-memberbadge-organization) .m-display-post-story .img-in-post
+pantip.com##.m-comment-wrapper:has(a.icon-memberbadge-organization) .m-display-post-story .img-in-post
 pantip.com##.section-comment:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post
+pantip.com##div[id^="bestanswer"]:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post
 ! - Someone poisoned the 'CoViD-19' tag by posting bias political news inside this tag, remove for de-intrusive only, not my POV!
 pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(JJNY : ))
 
