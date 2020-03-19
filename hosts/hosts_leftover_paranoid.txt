@@ -1,0 +1,50 @@
+# [uMatrix 1.3.11.100]
+# Title: Leftover Paranoid Hosts
+# Version: 202003191741
+# Author: kowith337
+# Expires: 2 days
+# Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
+# Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
+# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/hosts/test/hosts_google_paranoid.txt
+# Description: Since the issue of #50 and #51, I've decide to keep blocking those domains because those connections or features
+#              that depend to connect to specific domains of `goolag` are really not neccessary for me, nor impact to real usage
+#              and/or functionality of it, include compromise features, such as in-browser credentials (password manager),
+#              telephone spam check (while you're make an outgoing calls), SafeBrowsing, etc.
+# WARNING: USING THIS BLOCKLIST IS MEAN YOU ARE AGREE TO NOT REQUEST FOR WHITELISTS ANY HOSTS BELOW, IF NOT, JUST DON'T USE THIS!
+#          IF YOU CAN APPLY WHITELISTS IN YOUR APPLICATIONS OR PROGRAMS, JUST DO IT BY YOURSELF, NOT ME!!
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Google]
+#   {Anti-SafeBrowsing}
+0.0.0.0 android-safebrowsing.googleapis.com
+0.0.0.0 safebrowsing.google.com
+0.0.0.0 safebrowsing.googleapis.com
+#
+#   {Anti-Chrome Credential Sensitive}
+0.0.0.0 chromesyncpasswords-pa.googleapis.com
+0.0.0.0 cryptauthenrollment.googleapis.com
+#
+#   {Anti-Phone Numbers Lookup / Upload}
+0.0.0.0 dialercallinfolookup-pa.googleapis.com
+0.0.0.0 myphonenumbers-pa.googleapis.com
+0.0.0.0 telephonyspamprotect-pa.googleapis.com
+#
+#   {Anti-Cloud MESSaging / Calendar Reminder}
+0.0.0.0 notifications-pa.googleapis.com
+0.0.0.0 reminders-pa.googleapis.com
+#
+#   {Anti-Network Location Lookup?}
+0.0.0.0 geomobileservices-pa.googleapis.com
+#
+#   {Anti-Network Quality Measure}
+0.0.0.0 mobilenetworkscoring-pa.googleapis.com
+#
+#   {Google Accounts Info?}
+0.0.0.0 mdh-pa.googleapis.com
+0.0.0.0 people-pa.googleapis.com
+#
+#   {Really safety?}
+0.0.0.0 personalsafety-pa.googleapis.com
+#
+#   {GPlay Store and YouTube trying to connect this while ads are loading in your face}
+0.0.0.0 redirector.gvt1.com
+# End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #

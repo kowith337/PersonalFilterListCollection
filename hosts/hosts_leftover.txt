@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202003181327
+# Version: 202003181741
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -45,7 +45,6 @@
 0.0.0.0 tpc.googlesyndication.com
 #
 # {Google APIs}
-# cryptauthenrollment.googleapis.com
 0.0.0.0 datasaver.googleapis.com
 0.0.0.0 digitalassetlinks.googleapis.com
 0.0.0.0 firebaseinstallations.googleapis.com
@@ -55,11 +54,6 @@
 0.0.0.0 suggestqueries.googleapis.com
 #
 # PA-ranoid!
-# 0.0.0.0 geomobileservices-pa.googleapis.com
-# 0.0.0.0 personalsafety-pa.googleapis.com
-# 0.0.0.0 people-pa.googleapis.com
-# 0.0.0.0 reminders-pa.googleapis.com
-# 0.0.0.0 telephonyspamprotect-pa.googleapis.com
 0.0.0.0 androidsuggesthub-pa.googleapis.com
 0.0.0.0 appinvite-ipv4-pa.googleapis.com
 0.0.0.0 appinvite-ipv6-pa.googleapis.com
@@ -68,42 +62,32 @@
 0.0.0.0 chromecontentsuggestions-pa.googleapis.com
 0.0.0.0 chromefeedcontentsuggestions-pa.googleapis.com
 0.0.0.0 chromereader-pa.googleapis.com
-# 0.0.0.0 chromesyncpasswords-pa.googleapis.com
 0.0.0.0 clientmetrics-pa.googleapis.com
 0.0.0.0 datamixer-pa.googleapis.com
-0.0.0.0 dialercallinfolookup-pa.googleapis.com
 0.0.0.0 exploresites-pa.googleapis.com
 0.0.0.0 firebaseperusertopics-pa.googleapis.com
 0.0.0.0 footprints-pa.googleapis.com
 0.0.0.0 ging-chromecontentsuggestions-pa.googleapis.com
 0.0.0.0 growth-pa.googleapis.com
 0.0.0.0 instantmessaging-pa.googleapis.com
-# 0.0.0.0 mdh-pa.googleapis.com
-# 0.0.0.0 mobilenetworkscoring-pa.googleapis.com
-0.0.0.0 myphonenumbers-pa.googleapis.com
-# 0.0.0.0 notifications-pa.googleapis.com
 0.0.0.0 offlinepages-pa.googleapis.com
 0.0.0.0 playatoms-pa.googleapis.com
 0.0.0.0 staging-chromecontentsuggestions-pa.googleapis.com
 0.0.0.0 voledevice-pa.googleapis.com
 #
 # {G-Static}
-# 0.0.0.0 connectivitycheck.gstatic.com
 #
 # {Redirector}
 0.0.0.0 redirector.gvt1.com
 0.0.0.0 redirector.googlevideo.com
 #
-# {SafeBrowsing De-Trust}
-0.0.0.0 android-safebrowsing.googleapis.com
-# 0.0.0.0 safebrowsing.google.com
-# 0.0.0.0 safebrowsing.googleapis.com
-#
-# {GVT Subs}
-0.0.0.0 beacons.gcp.gvt2.com
-0.0.0.0 beacons.gvt2.com
+# {GVT Beacons}
+0.0.0.0 beacons-handoff.gcp.gvt1.com
 0.0.0.0 beacons-handoff.gcp.gvt2.com
-# 0.0.0.0 redirector.gvt1.com
+0.0.0.0 beacons.gcp.gvt1.com
+0.0.0.0 beacons.gcp.gvt2.com
+0.0.0.0 beacons.gvt1.com
+0.0.0.0 beacons.gvt2.com
 #
 # {Google L} Can I block DNS name?
 0.0.0.0 adservice.l.google.com
@@ -419,6 +403,7 @@
 0.0.0.0 go1.aniview.com
 0.0.0.0 go2.aniview.com
 0.0.0.0 go3.aniview.com
+0.0.0.0 googleads.github.io
 0.0.0.0 graph.sanook.com
 0.0.0.0 hits.truehits.in.th
 0.0.0.0 ho.lazada.co.th
