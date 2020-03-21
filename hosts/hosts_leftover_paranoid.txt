@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Leftover Paranoid Hosts
-# Version: 202003191741
+# Version: 20200321709
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -34,6 +34,10 @@
 #
 #   {Anti-Network Location Lookup?}
 0.0.0.0 geomobileservices-pa.googleapis.com
+#
+#   {Anti-MESSages Desktop Sync/Access}
+#      Blocked due to it's attempt to connect even you're not use that features...
+0.0.0.0 instantmessaging-pa.googleapis.com
 #
 #   {Anti-Network Quality Measure}
 0.0.0.0 mobilenetworkscoring-pa.googleapis.com
