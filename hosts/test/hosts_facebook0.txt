@@ -1,6 +1,6 @@
 # [uMatrix 1.3.15.100]
 # Title: Facebook Zero Hosts Block (Test unit)
-# Version: 202003241338
+# Version: 202003241535
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/hosts
@@ -17,13 +17,13 @@
 #              and let it's service invade and interrupt the privacy, functionality and usability of Facebook itself.
 #              I'm against to that shady services because when I connect to Facebook over mobile data, it's start to show various
 #              of annoyance that likely Facebook trying to force me and all of other users to use that, include nasty and
-#              insecure traffic redirect, showing balloon party cover, inject purple bar above of page or in-app screen or even
-#              prevent any videos to play on mobile data, although many users in my country are ok to use the unlimited data plan
-#              but limited the connectivity speed.
+#              insecure traffic redirect, showing balloon party cover, inject purple bar above of page or in-app screen, show
+#              nagging pop-ups to buy mobile internet package or even prevent any videos to play on mobile data, although many
+#              users in my country are OK to use the unlimited data plan but limited the connectivity speed.
 #              In my opinion, I will keep block those connections, no matter about breaking the functionality and usability for
 #              using Facebook on mobile data plan until they abandone that services and return all connections to the original
-#              favor, no redirects, no non-HTTPS, no nagging to buy internet packages or forcing to use that service, just let it
-#              should be normal like I and/or we accessing Facebook at home or via Proxy/VPN!
+#              favor, no redirects, no non-HTTPS, no nagging pop-ups to buy internet packages or forcing to use that service,
+#              just let it should be normal like I and/or we accessing Facebook at home or via Proxy/VPN!
 # Note: All rules below will be use as test unit for @funilrys's "Dead Hosts" tools (aka. PyFunceble), however, some hosts entry
 #       are duplicated based from hosts name that found by myself and more entry from [Credits] source, Currently I'm still don't
 #       know how many "Free Basics" hosts name and servers are really existed?
@@ -77,8 +77,10 @@
 0.0.0.0 free.beta.facebook.com
 0.0.0.0 h.beta.facebook.com
 0.0.0.0 mobile.beta.facebook.com
+0.0.0.0 mzero.beta.facebook.com
 0.0.0.0 o.beta.facebook.com
 0.0.0.0 web.beta.facebook.com
+0.0.0.0 z.beta.facebook.com
 0.0.0.0 zero.beta.facebook.com
 # API for upload (text, images, videos, etc.) over data - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 z-p1-upload.facebook.com

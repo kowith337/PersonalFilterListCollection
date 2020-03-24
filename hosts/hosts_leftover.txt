@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202003241125
+# Version: 202003241544
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -14,7 +14,6 @@
 # [Untrusted Google Hosts]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # {Generic}
 0.0.0.0 adservice.google.com
-0.0.0.0 assistant.google.com
 0.0.0.0 google-analytics.com
 0.0.0.0 googleadservices.com
 0.0.0.0 googlesyndication.com
@@ -23,7 +22,6 @@
 0.0.0.0 id.google.com
 0.0.0.0 mail-ads.google.com
 0.0.0.0 ssl.google-analytics.com
-0.0.0.0 www.assistant.google.com
 0.0.0.0 www.google-analytics.com
 0.0.0.0 www.googleadservices.com
 0.0.0.0 www.googletagmanager.com
@@ -85,7 +83,6 @@
 0.0.0.0 www.chromecontentsuggestions-pa.googleapis.com
 #
 # {Redirector}
-0.0.0.0 redirector.gvt1.com
 0.0.0.0 redirector.googlevideo.com
 #
 # {GVT Beacons}
@@ -110,7 +107,6 @@
 0.0.0.0 s1-2mdn-net.l.google.com
 0.0.0.0 s2-2mdn-net.l.google.com
 0.0.0.0 ssl-google-analytics.l.google.com
-0.0.0.0 stun.l.google.com
 0.0.0.0 video-stats.l.google.com
 0.0.0.0 www-google-analytics.l.google.com
 0.0.0.0 www-googleadservices.l.google.com
@@ -135,12 +131,6 @@
 # Topic source: /r/pihole > https://redd.it/aknq5t
 #               /r/privacy > https://redd.it/7oqj1a
 0.0.0.0 lithium.facebook.com
-#
-# {Facebook tracking link parking} you should modify URLs by yourself or use with uBlock/uMatrix in order to resolve actual URLs
-0.0.0.0 l.facebook.com
-0.0.0.0 l.messenger.com
-0.0.0.0 lm.facebook.com
-0.0.0.0 lm.messenger.com
 #
 # {API/Graph domains} include alternative, error reporting and "PIXEL" domains
 # Note that I've disable blocking some API and Graph because you cannot get the feed loaded if block certain domains of that.
@@ -168,13 +158,11 @@
 # Telemetry, Health Report, Personalise content zuckestions , based on 2 sources below...
 # - http://utaukitune.ldblog.jp/archives/65725024.html
 # - https://github.com/jmdugan/blocklists/tree/master/corporations/mozilla/all.txt
-0.0.0.0 api.getpocket.com
 0.0.0.0 broker-live.mozillamessaging.com
 0.0.0.0 crash-stats.mozilla.com
 0.0.0.0 data.mozilla.com
 0.0.0.0 fhr.cdn.mozilla.net
 0.0.0.0 fhr.data.mozilla.com
-0.0.0.0 getpocket.com
 0.0.0.0 hang-reports.mozilla.org
 0.0.0.0 incoming.telemetry.mozilla.org
 0.0.0.0 input.mozilla.com

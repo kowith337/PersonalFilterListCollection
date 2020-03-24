@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
-# Title: Aggressive leftover hosts
-# Version: 202003241227
+# Title: Aggressive custom leftover hosts
+# Version: 202003241547
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -29,6 +29,10 @@
 0.0.0.0 android-safebrowsing.googleapis.com
 0.0.0.0 safebrowsing.google.com
 0.0.0.0 safebrowsing.googleapis.com
+#
+# - {Anti-ASSistant}
+0.0.0.0 assistant.google.com
+0.0.0.0 www.assistant.google.com
 #
 # - {Anti-AutoFill}
 0.0.0.0 autofill.googleapis.com
@@ -111,6 +115,10 @@
 #
 # - {GPlay store and YouTube trying to connect this while ads are loading into your face!}
 0.0.0.0 redirector.gvt1.com
+0.0.0.0 redirector.googlevideo.com
+#
+# - {Anti-Google WebRTC STUN}
+0.0.0.0 stun.l.google.com
 #
 # - {Anti-hotword suggestions that use GoogleAPIs endpoint}
 0.0.0.0 suggestqueries.googleapis.com
@@ -158,10 +166,23 @@
 0.0.0.0 www.sticker-pa.googleapis.com
 0.0.0.0 www.telephonyspamprotect-pa.googleapis.com
 0.0.0.0 www.tracedepot-pa.googleapis.com
-#
-# [Facebook]
-# - {Block WebRTC STUN} THIS POSSIBLY BREAK MESSENGER CALLS!!
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Facebook]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - {Block WebRTC STUN}
+#   - This possibly break messenger calls!
 0.0.0.0 edge-stun.facebook.com
 0.0.0.0 stun.c10r.facebook.com
 0.0.0.0 stun.facebook.com
+#
+# - {Facebook tracking link parking}
+#   - you should modify URLs by yourself or use with uBlock/uMatrix in order to resolve actual URLs
+0.0.0.0 l.facebook.com
+0.0.0.0 l.messenger.com
+0.0.0.0 lm.facebook.com
+0.0.0.0 lm.messenger.com
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Firefox Betrayals]
+# - {Anti-Pocket}
+0.0.0.0 api.getpocket.com
+0.0.0.0 getpocket.com
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
