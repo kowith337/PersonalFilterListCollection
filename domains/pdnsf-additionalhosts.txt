@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202003112237
+# Version: 202003241122
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -275,12 +275,14 @@ instantmessaging-pa.googleapis.com
 mdh-pa.googleapis.com
 
 # Phoninig home about network quality and also measuring? (Good to block, we should not submit any network info back to Google!)
-# You can whitelist it if you have some problems like issue no. #50
+# - You can whitelist it if you have some problems like issue no. #50
 mobilenetworkscoring-pa.googleapis.com
 
-# Again, probably same as GTalk GCM mirroring, blocking this may cause lots of notifications never be arrive.
-# * Commented, just in case.
-# notifications-pa.googleapis.com
+# Google MESSages desktop sync/access
+# - At desktop side, it's require to connect this domain for showing QR code, in order to use your phone for scan and pair. (#52)
+# - At mobile device side, it have many attemps to ping this domain, even you didn't use above feature.
+# - This connections will not neccessary if you're using another default SMS apps.
+notifications-pa.googleapis.com
 
 # Google Contacts? (This may cause "Google account avatar" won't show!)
 # * In doubt, but commented...
