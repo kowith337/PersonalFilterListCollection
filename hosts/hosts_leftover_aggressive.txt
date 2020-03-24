@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive leftover hosts
-# Version: 202003241122
+# Version: 202003241227
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -42,17 +42,31 @@
 0.0.0.0 chromesyncpassword-pa.googleapis.com
 0.0.0.0 chromesyncpasswords-pa.googleapis.com
 #
-# - {Anti-Cloud}
+# - {Anti-cloud}
 0.0.0.0 cloudpartnerdirectory-pa.googleapis.com
 0.0.0.0 cloudsearchdata-pa.googleapis.com
 0.0.0.0 cloudtrace.googleapis.com
 #
-# - {Anti-Authentication enrollment}
+# - {Anti-authentication enrollment}
 0.0.0.0 cryptauthenrollment.googleapis.com
+#
+# - {Anti-DataReporting}
+0.0.0.0 dataprep.googleapis.com
+#
+# - {Anti-DataMixer}
+0.0.0.0 datamixer-pa.googleapis.com
+0.0.0.0 plusmixer-pa.googleapis.com
+#
+# - {Anti-DigitalAssets}
+0.0.0.0 digitalassetlinks.googleapis.com
+0.0.0.0 digitalassetlinks.mtls.googleapis.com
 #
 # - {Anti-phone numbers lookup / upload}
 0.0.0.0 dialercallinfolookup-pa.googleapis.com
 0.0.0.0 telephonyspamprotect-pa.googleapis.com
+#
+# - {Anti-discover}
+0.0.0.0 discover-pa.googleapis.com
 #
 # - {Anti-network-based location lookup?}
 0.0.0.0 geomobileservices-pa.googleapis.com
@@ -82,28 +96,28 @@
 0.0.0.0 mdh-pa.googleapis.com
 0.0.0.0 people-pa.googleapis.com
 #
-# - {Anti-Google News}
+# - {Anti-GoogleNews Apps}
 0.0.0.0 newslegacy-pa.googleapis.com
 # - {Really safety?}
 0.0.0.0 personalsafety-pa.googleapis.com
 #
-# - {Anti-Device Certify}
+# - {Anti-device certify}
 0.0.0.0 phonedeviceverification-pa.googleapis.com
 0.0.0.0 voledevice-pa.googleapis.com
+#
+# - {Anti-recommender}
+0.0.0.0 recommender.clients6.google.com
+0.0.0.0 recommender.googleapis.com
 #
 # - {GPlay store and YouTube trying to connect this while ads are loading into your face!}
 0.0.0.0 redirector.gvt1.com
 #
-# - {Anti-Hotword suggestions that use GoogleAPIs endpoint}
+# - {Anti-hotword suggestions that use GoogleAPIs endpoint}
 0.0.0.0 suggestqueries.googleapis.com
 #
-# - {HTTP/S subservers}
-0.0.0.0 httpauditrecording-pa.googleapis.com
-0.0.0.0 httpinstantmessaging-pa.googleapis.com
-0.0.0.0 httpphotosdata-pa.googleapis.com
-0.0.0.0 httpsauditrecording-pa.googleapis.com
-0.0.0.0 httpsinstantmessaging-pa.googleapis.com
-0.0.0.0 httpsphotosdata-pa.googleapis.com
+# - {YouTube video ads stats?}
+#   - Use NewPipe, SkyTube and/or Invidious instead, damnit!
+0.0.0.0 video-ad-stats.googlesyndication.com
 #
 # - {Content subservers}
 0.0.0.0 content-adexchangebuyer2.googleapis.com
@@ -114,6 +128,14 @@
 0.0.0.0 content-cloudusersettings-pa.googleapis.com
 0.0.0.0 content-people-pa.googleapis.com
 0.0.0.0 content-reminders-pa.googleapis.com
+#
+# - {HTTP/S subservers}
+0.0.0.0 httpauditrecording-pa.googleapis.com
+0.0.0.0 httpinstantmessaging-pa.googleapis.com
+0.0.0.0 httpphotosdata-pa.googleapis.com
+0.0.0.0 httpsauditrecording-pa.googleapis.com
+0.0.0.0 httpsinstantmessaging-pa.googleapis.com
+0.0.0.0 httpsphotosdata-pa.googleapis.com
 #
 # - {WWW subserver}
 0.0.0.0 www.chromecontentsuggestions-pa.googleapis.com
@@ -131,11 +153,12 @@
 0.0.0.0 www.phonedeviceverification-pa.googleapis.com
 0.0.0.0 www.photosdata-pa.googleapis.com
 0.0.0.0 www.playatoms-pa.googleapis.com
+0.0.0.0 www.plusmixer-pa.googleapis.com
 0.0.0.0 www.reminders-pa.googleapis.com
 0.0.0.0 www.sticker-pa.googleapis.com
 0.0.0.0 www.telephonyspamprotect-pa.googleapis.com
 0.0.0.0 www.tracedepot-pa.googleapis.com
-
+#
 # [Facebook]
 # - {Block WebRTC STUN} THIS POSSIBLY BREAK MESSENGER CALLS!!
 0.0.0.0 edge-stun.facebook.com

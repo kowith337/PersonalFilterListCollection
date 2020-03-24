@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202003241122
+# Version: 202003241345
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -57,6 +57,7 @@ ww*.mobilelife.co.th
 
 # Other unwanted
 alert-*.club
+alert-*.site
 amp.*
 ampproject.*
 beacon*.*
@@ -68,11 +69,14 @@ geniee*.*
 innity.*
 mtburn.*
 notice-*.club
+notice-*.site
 nr-data.*
 nuffnang.*
 openx.*
 parkingcrew.*
 popclck.*
+protection-*.club
+protection-*.site
 truehits.*
 vpn*plus*.*
 vpn*plus.*
@@ -321,6 +325,7 @@ photosdata-pa.googleapis.com
 *-z-*.fbsbx.com
 *-z-*.messenger.com
 0.facebook.com
+expresswifi.com
 free.facebook.com
 freebasics.com
 h.facebook.com
@@ -331,6 +336,11 @@ headers-*.fbsbx.com
 headers-*.messenger.com
 internet.org
 mobile.facebook.com
+nz-*.facebook.com
+nz-*.facebook.net
+nz-*.fbcdn.net
+nz-*.fbsbx.com
+nz-*.messenger.com
 o.facebook.com
 p.facebook.com
 vvv.facebook.com
