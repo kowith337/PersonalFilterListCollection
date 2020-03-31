@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202003151309
+! Version: 202003312200
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -319,6 +319,14 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||cloudfront.net/x.js$domain=speedtest.net,script,important,redirect=noopjs
 
 ! Block Page(s) / Redirect annoyance - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Thai broadband annoyance]
+! They abuse the captive portal for self-promo related products, such as subscribe streaming account, show notice for register
+! to increase network speed, etc. for good examples by each providers, you can view topics in Pantip below...
+! - 3Broadband: https://pantip.com/topic/38945629 + https://pantip.com/topic/38963195 + https://pantip.com/topic/38969958
+! - True Internet: https://pantip.com/topic/39762480 + https://pantip.com/topic/39763510
+||110.164.252.137/wpwarn/monomax$important
+||services.trueinternet.co.th/vasspeedboost$important 
+
 ! [Add0n] Some extensions that hosted with add0n are show the popup
 ||add0n.com$document
 ||add0n.com$popunder

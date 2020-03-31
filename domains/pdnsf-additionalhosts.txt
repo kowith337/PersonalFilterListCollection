@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202003241345
+# Version: 202003312207
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -22,6 +22,11 @@
 EMPTY
 WPAD
 wpad
+
+# [Abusive TLD] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+club
+icu
+site
 
 # [Wildcard]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # "Retard Logic" use the random subdomains of any website who use that things to make sure all ads are survived blocking!
@@ -80,6 +85,8 @@ protection-*.site
 truehits.*
 vpn*plus*.*
 vpn*plus.*
+www.*.club
+www.*.site
 
 # Prevent Firefox use CaptivePortal for check connectivity (ping network status)
 detectportal.*
@@ -135,6 +142,7 @@ orpheusdroid.com
 # I want to say sorry to anyone who use CloudFlare DNS resolvers, but it's just my opinion to block due to Firefox's wrong turn!
 # e.g. Out-of-box config of Firefox use "TRR" resolvers (aka. DoH) from CloudFlare by default!
 #      Currently apply in US right now with include NextDNS as a fellow alternative choice, but it's still use CloudFlare first!!
+#      Note: I've also see Chrome also use CloudFlare DoH and pointed to `chrome.cloudflare-dns.com`, so this will block both!!!
 cloudflare-dns.com
 
 # More privacy enhanced for Firefox users, make sure you've disable their internal TRR first.
@@ -169,7 +177,6 @@ googlesyndication.com
 googletagmanager.com
 googletagservices.com
 googletraveladservices.com
-metric.gstatic.com
 urchin.com
 
 # Blocking connection check mean "Google Play" cannot trigger app updates and/or downloads unless you've once allow it!
@@ -224,6 +231,7 @@ subscriptionsmanagement-pa.googleapis.com
 datamixer-pa.googleapis.com
 digitalassetlinks.googleapis.com
 footprints-pa.googleapis.com
+infinitedata-pa.googleapis.com
 personalsafety-pa.googleapis.com
 sticker-pa.googleapis.com
 
@@ -252,6 +260,7 @@ id.l.google.com
 # Prefer to block if you don't trust their DNS services, e.g. DoT and DoH resolvers, maybe include "Chrome" it's own (async) DNS!
 dns.google
 dns.google.com
+metric.gstatic.com
 
 # Hotword (aka. suggestion keyowrd) blocking
 suggestqueries.google.*
