@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202003312207
+# Version: 202004011059
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -25,7 +25,9 @@ wpad
 
 # [Abusive TLD] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 club
+fun
 icu
+mobi
 site
 
 # [Wildcard]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
@@ -62,6 +64,7 @@ ww*.mobilelife.co.th
 
 # Other unwanted
 alert-*.club
+alert-*.fun
 alert-*.site
 amp.*
 ampproject.*
@@ -74,6 +77,7 @@ geniee*.*
 innity.*
 mtburn.*
 notice-*.club
+notice-*.fun
 notice-*.site
 nr-data.*
 nuffnang.*
@@ -81,6 +85,7 @@ openx.*
 parkingcrew.*
 popclck.*
 protection-*.club
+protection-*.fun
 protection-*.site
 truehits.*
 vpn*plus*.*
