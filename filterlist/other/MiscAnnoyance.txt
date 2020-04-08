@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202003312200
+! Version: 202004082356
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -149,6 +149,13 @@ pantip.com##.m-thumb:has(a .subject:has-text([BR] ))
 pantip.com##.m-thumb:has(a .subject:has-text([SR] ))
 pantip.com##.pt-list-item:has(.pt-list-item__title h2 a:has-text([BR] ))
 pantip.com##.pt-list-item:has(.pt-list-item__title h2 a:has-text([SR] ))
+! - Re-remove panel that failed to load (I've blocking all assets from `frukt.pantip.com` because the main scripts is have low or
+!   less code about site features, but mostly of code intent to load ads and tracking.
+pantip.com##.container .row .pt-block-purple-2:has(.pt-block-header h6:has-text(Pantip Trend))
+pantip.com###sidebar-container #sidebar-fixed .pt-tabs-a:has(section[class^="pt-tab_"])
+pantip.com###sidebar-container #sidebar-fixed .pt-block:has(.pt-block-header a[href*="pantip.com/club"])
+pantip.com###sidebar-container #sidebar-fixed .pt-block:has(.pt-block-header-img a.gtm-bloggang-all)
+pantip.com###sidebar-container #sidebar-fixed .pt-block:has(.pt-block-header-img a.gtm-pantipmarket-all)
 ! - Remove all images inserted from anybody who have "Organization" roles
 !   Often see at MBK forum, mostly come from mobile operator accounts (esp. AIS), it's bullshit idea and produced wasteful space!
 pantip.com##.m-comment-wrapper:has(a.icon-memberbadge-organization) .m-display-post-story .img-in-post

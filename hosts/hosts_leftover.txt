@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202003241544
+# Version: 202004072002
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -150,14 +150,11 @@
 0.0.0.0 graph.fbpigeon.com
 0.0.0.0 pixel.facebook.com
 0.0.0.0 pixel.fbpigeon.com
-#
-# {FREE BASUCKS!}
-# - Deprecated, please look into `hosts_facebook0.txt` instead
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Firefox Betrayed Backend Domains]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Telemetry, Health Report, Personalise content zuckestions , based on 2 sources below...
 # - http://utaukitune.ldblog.jp/archives/65725024.html
-# - https://github.com/jmdugan/blocklists/tree/master/corporations/mozilla/all.txt
+# - https://github.com/jmdugan/blocklists/tree/master/corporations/mozilla/all
 0.0.0.0 broker-live.mozillamessaging.com
 0.0.0.0 crash-stats.mozilla.com
 0.0.0.0 data.mozilla.com
@@ -266,7 +263,7 @@
 0.0.0.0 xm.com
 0.0.0.0 yengo.com
 #
-# [Generic Sublevel]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Generic Sublevel]
 0.0.0.0 3326.tm.zedo.com
 0.0.0.0 acds.vidible.tv
 0.0.0.0 ad.doubleclick.net
@@ -510,7 +507,6 @@
 0.0.0.0 www.ublock.org
 0.0.0.0 www.yengo.com
 0.0.0.0 www2.silkspan.com
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Adware Root] (Same as Generic Root)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 360tools.org
 0.0.0.0 555.in.th
@@ -534,7 +530,7 @@
 0.0.0.0 yac.mx
 0.0.0.0 wisemana.com
 #
-# [Adware Sublevel] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Adware Sublevel]
 0.0.0.0 antivirus.baidu.com
 0.0.0.0 baidu-pc-faster.en.softonic.com
 0.0.0.0 baidu-spark-browser.en.softonic.com
@@ -676,7 +672,7 @@
 0.0.0.0 ukrb-uk.com
 0.0.0.0 vt-rbs.com
 #
-# [RayBan Scam Add WWW] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [RayBan Scam Add WWW]
 0.0.0.0 www.2015goodsunglasses.com
 0.0.0.0 www.br-rbso.com
 0.0.0.0 www.cheapsunglasses.cn
