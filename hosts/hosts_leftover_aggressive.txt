@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202003241547
+# Version: 202004112050
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -30,7 +30,7 @@
 0.0.0.0 safebrowsing.google.com
 0.0.0.0 safebrowsing.googleapis.com
 #
-# - {Anti-ASSistant}
+# - {Anti-"ASS"-istant}
 0.0.0.0 assistant.google.com
 0.0.0.0 www.assistant.google.com
 #
@@ -38,7 +38,7 @@
 0.0.0.0 autofill.googleapis.com
 #
 # - {Anti-Chrome}
-#     - Yes, I stop syncing with it!
+#   > Yes, I stop syncing with it!
 0.0.0.0 chromecontentsuggestions-pa.googleapis.com
 0.0.0.0 chromefeedcontentsuggestions-pa.googleapis.com
 0.0.0.0 chromereader-pa.googleapis.com
@@ -86,7 +86,7 @@
 0.0.0.0 reminders-pa.googleapis.com
 #
 # - {Anti-MESSages desktop sync/access}
-#     - Due to it's attempt to connect even you're not use that features, those connections sould not happen until you use it!
+#   > Due to it's attempt to connect even you're not use that features, those connections sould not happen until you use it!
 0.0.0.0 instantmessaging-pa.googleapis.com
 #
 # - {Anti-Lens}
@@ -102,6 +102,7 @@
 #
 # - {Anti-GoogleNews Apps}
 0.0.0.0 newslegacy-pa.googleapis.com
+#
 # - {Really safety?}
 0.0.0.0 personalsafety-pa.googleapis.com
 #
@@ -124,7 +125,7 @@
 0.0.0.0 suggestqueries.googleapis.com
 #
 # - {YouTube video ads stats?}
-#   - Use NewPipe, SkyTube and/or Invidious instead, damnit!
+#   > Use NewPipe, SkyTube and/or Invidious instead, damnit!
 0.0.0.0 video-ad-stats.googlesyndication.com
 #
 # - {Content subservers}
@@ -169,13 +170,13 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Facebook]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # - {Block WebRTC STUN}
-#   - This possibly break messenger calls!
+#   > This possibly break messenger calls!
 0.0.0.0 edge-stun.facebook.com
 0.0.0.0 stun.c10r.facebook.com
 0.0.0.0 stun.facebook.com
 #
 # - {Facebook tracking link parking}
-#   - you should modify URLs by yourself or use with uBlock/uMatrix in order to resolve actual URLs
+#   > you should modify URLs by yourself or use with uBlock/uMatrix in order to resolve actual URLs
 0.0.0.0 l.facebook.com
 0.0.0.0 l.messenger.com
 0.0.0.0 lm.facebook.com

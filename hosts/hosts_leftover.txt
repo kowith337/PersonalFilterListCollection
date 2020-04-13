@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202004072002
+# Version: 202004131945
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -12,7 +12,7 @@
 #          you can use this at your own risk!
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Untrusted Google Hosts]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# {Generic}
+# - {Generic}
 0.0.0.0 adservice.google.com
 0.0.0.0 google-analytics.com
 0.0.0.0 googleadservices.com
@@ -27,7 +27,7 @@
 0.0.0.0 www.googletagmanager.com
 0.0.0.0 www.googletagservices.com
 #
-# {DoubleClick} Also include syndication
+# - {DoubleClick} Also include syndication
 0.0.0.0 googleads.g.doubleclick.net
 0.0.0.0 pagead.googleadservices.com
 0.0.0.0 pagead.googlesyndication.com
@@ -42,7 +42,7 @@
 0.0.0.0 static.doubleclick.net
 0.0.0.0 tpc.googlesyndication.com
 #
-# {Google APIs}
+# - {Google APIs}
 0.0.0.0 clouderrorreporting.googleapis.com
 0.0.0.0 datasaver.googleapis.com
 0.0.0.0 digitalassetlinks.googleapis.com
@@ -57,7 +57,7 @@
 0.0.0.0 mobilecrashreporting.googleapis.com
 0.0.0.0 recommendationengine.googleapis.com
 #
-# PA-ranoid!
+# - {PA-ranoid!}
 0.0.0.0 1.chromefeedcontentsuggestions-pa.googleapis.com
 0.0.0.0 androidsuggesthub-pa.googleapis.com
 0.0.0.0 appinvite-ipv4-pa.googleapis.com
@@ -82,10 +82,10 @@
 0.0.0.0 test-chromecontentsuggestions-pa.googleapis.com
 0.0.0.0 www.chromecontentsuggestions-pa.googleapis.com
 #
-# {Redirector}
+# - {Redirector}
 0.0.0.0 redirector.googlevideo.com
 #
-# {GVT Beacons}
+# - {GVT Beacons}
 0.0.0.0 beacons-handoff.gcp.gvt1.com
 0.0.0.0 beacons-handoff.gcp.gvt2.com
 0.0.0.0 beacons.gcp.gvt1.com
@@ -93,7 +93,7 @@
 0.0.0.0 beacons.gvt1.com
 0.0.0.0 beacons.gvt2.com
 #
-# {Google L} Can I block DNS name?
+# - {Google L} Can I block DNS name?
 0.0.0.0 adservice.l.google.com
 0.0.0.0 googleadapis.l.google.com
 0.0.0.0 gstaticadssl.l.google.com
@@ -114,26 +114,31 @@
 0.0.0.0 www-googletagservices.l.google.com
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Facebook Hosts]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# {Contacts Importer} Probaly prevent uploading phone contacts due to privacy concerns that use your uploaded phone contacts and
-# resell as data for advertisers on their platforms!
+# - {Contacts Importer}
+#   > Probaly prevent uploading phone contacts due to privacy concerns that use your uploaded phone contacts and resell as data
+#     for advertisers on their platforms!
 0.0.0.0 contactimporter.facebook.com
 #
-# {Pigeon} Block as main level!
+# - {Pigeon}
+#   > Block as main level!
 0.0.0.0 fbpigeon.com
 #
-# {p.facebook.com} use for ping mobile OS intent with new subdomains, aim to enforce open official app while break functionality
-# of mobile browsers, however, any users who spoofed user agents to escape mobile browser detection maybe not affected, I hope...
+# - {p.facebook.com}
+#   > Use for ping mobile OS intent with new subdomains, aim to enforce open official app while break functionality of mobile
+#     browsers, however, any users who spoofed user agents to escape mobile browser detection maybe not affected, I hope...
 0.0.0.0 p.facebook.com
 #
-# {In-app DNS resolver?} Randomly found after testing the main app after I've stopped using it for a long time.
-# I'm also search and found some reddit thread said that it's the DNS resolver to bypassing any attempt that blocked certain
-# Facebook subdomains that use for serving ads, keep tracking your behalf on the phone or something...
-# Topic source: /r/pihole > https://redd.it/aknq5t
-#               /r/privacy > https://redd.it/7oqj1a
+# - {In-app DNS resolver?}
+#   > Randomly found after testing the main app after I've stopped using it for a long time.
+#   > I'm also search and found some reddit thread said that it's the DNS resolver to bypassing any attempt that blocked certain
+#     Facebook subdomains that use for serving ads, keep tracking your behalf on the phone or something...
+#   > Topic source: reddit/r/pihole > https://redd.it/aknq5t
+#                   reddit/r/privacy > https://redd.it/7oqj1a
 0.0.0.0 lithium.facebook.com
 #
-# {API/Graph domains} include alternative, error reporting and "PIXEL" domains
-# Note that I've disable blocking some API and Graph because you cannot get the feed loaded if block certain domains of that.
+# - {API/Graph domains}
+#   > include alternative, error reporting and "PIXEL" domains
+#   > Note that I've disable blocking some API and Graph because you cannot get the feed loaded if block certain domains of that.
 # 0.0.0.0 a-api.facebook.com
 0.0.0.0 a-error.facebook.com
 # 0.0.0.0 a-graph.facebook.com
@@ -179,7 +184,8 @@
 0.0.0.0 token.services.mozilla.com
 0.0.0.0 tracking.services.mozilla.com
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# [Generic Root] (Recommended for uMatrix to block as top level, regardless of sub-domains)
+# [Generic Root]
+# - Recommended for uMatrix to block as top level, regardless of sub-domains.
 0.0.0.0 aaxads.com
 0.0.0.0 adasiaholdings.com
 0.0.0.0 addthisedge.com
@@ -226,6 +232,7 @@
 0.0.0.0 innity.net
 0.0.0.0 instant.page
 0.0.0.0 izooto.com
+0.0.0.0 linksynergy.com
 0.0.0.0 mathtag.com
 0.0.0.0 netcpms.com
 0.0.0.0 newrelic.com
@@ -242,6 +249,8 @@
 0.0.0.0 perfectmarket.com
 0.0.0.0 petametrics.com
 0.0.0.0 pikdo.net
+0.0.0.0 qgr.ph
+0.0.0.0 r42tag.com
 0.0.0.0 rgvqcsxqge.com
 0.0.0.0 run-syndicate.com
 0.0.0.0 sharethis.com
@@ -268,6 +277,7 @@
 0.0.0.0 acds.vidible.tv
 0.0.0.0 ad.doubleclick.net
 0.0.0.0 adaptv.advertising.com
+0.0.0.0 adasiatagmanager.appspot.com
 0.0.0.0 adnetwork.adasiaholdings.com
 0.0.0.0 ads.bumq.com
 0.0.0.0 ads.imprezzer.com
@@ -330,6 +340,7 @@
 0.0.0.0 cdn.izooto.com
 0.0.0.0 cdn.onesignal.com
 0.0.0.0 cdn.onthe.io
+0.0.0.0 cdn.qgr.ph
 0.0.0.0 cdn.run-syndicate.com
 0.0.0.0 cdn.trackjs.com
 0.0.0.0 cdn.yengo.com
@@ -414,6 +425,7 @@
 0.0.0.0 pubads.g.doubleclick.net
 0.0.0.0 quantcast.mgr.consensu.org
 0.0.0.0 rcm.amazon.com
+0.0.0.0 rd.linksynergy.com
 0.0.0.0 remote.cutedev.net
 0.0.0.0 repair.cutedev.net
 0.0.0.0 report-uri.cloudflare.com
@@ -476,6 +488,9 @@
 0.0.0.0 ta.sanook.com
 0.0.0.0 taboola-d.openx.net
 0.0.0.0 tag.gammaplatform.com
+0.0.0.0 tags.adnuntius.com
+0.0.0.0 tags.rd.linksynergy.com
+0.0.0.0 tdn.r42tag.com
 0.0.0.0 th-ssl.effectivemeasure.net
 0.0.0.0 thn.gratonrewardcenter.icu
 0.0.0.0 tm.zedo.com
@@ -507,7 +522,9 @@
 0.0.0.0 www.ublock.org
 0.0.0.0 www.yengo.com
 0.0.0.0 www2.silkspan.com
-# [Adware Root] (Same as Generic Root)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Adware Root]
+# - Same as Generic Root
 0.0.0.0 360tools.org
 0.0.0.0 555.in.th
 0.0.0.0 ao0c.club
@@ -626,7 +643,8 @@
 0.0.0.0 www.wisemana.com
 0.0.0.0 www.yac.mx
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# RayBan Scam Domains (Based on https://blog.eset.co.th/2016/04/08/%E0%B8%81%E0%B8%A5%E0%B9%82%E0%B8%81%E0%B8%87%E0%B8%9A%E0%B8%99-facebook-ray-bans-on-sale)
+# [RayBan Scam Domains]
+# - Based on https://blog.eset.co.th/2016/04/08/%E0%B8%81%E0%B8%A5%E0%B9%82%E0%B8%81%E0%B8%87%E0%B8%9A%E0%B8%99-facebook-ray-bans-on-sale)
 0.0.0.0 2015goodsunglasses.com
 0.0.0.0 br-rbso.com
 0.0.0.0 cheapsunglasses.cn
