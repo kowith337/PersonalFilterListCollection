@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 202002021800
+! Version: 202004150048
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -22,6 +22,21 @@ m.intl.taobao.com##.App .bar:has(a.bar-item[href^="//shop.m.taobao.com/shop/shop
 imgur.com##.GalleryHandler-postContainer:not(:nth-of-type(2))
 imgur.com##.GalleryHandler-postContainer .Gallery-moreOnImgur
 !#endif
+
+! [YouTube Non-Polymer]
+! - Remove any "recommended" channel and topic lists at home feed
+youtube.com###feed-main-what_to_watch ol li:has(.feed-item-dismissable:has(.shelf-title-row h2 span:has-text(Recommended )))
+youtube.com##.individual-feed li .branded-page-box:has(.feed-item-dismissable:has(span.shelf-subscription-button button[data-style-type="branded"]))
+! - Remove overpromoted "Premium" appear in sidebar
+youtube.com##.guide-section .guide-item-container ul li:has(a[href*="/premium"])
+
+! [YouTube Polymer]
+! - Hide "New ToS" announcement
+youtube.com###alert-banner [alert-style]:has(a[href*="youtube.com/t/terms"])
+! - Remove "Sign in" prompt at top bar
+youtube.com###masthead #end #buttons ytd-button-renderer:has(a[href*="accounts.google.com/ServiceLogin?"])
+! - Try remove "Premium" link at sidebar
+!youtube.com##.ytd-guide-renderer:has(#items ytd-guide-entry-renderer:has(a[href*="/premium"]))
 
 ! Non-basic characters filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Pantip] Explicit and spam topic name
@@ -81,6 +96,9 @@ facebook.com,instagram.com,messenger.com##script:inject(set-respheader.js, x-xss
 facebook.com,instagram.com,messenger.com##script:inject(cookie-set.js, noscript, 0)
 
 ! - Strip unnecessary URL parameters (mostly use for tracking users internally)
+!   - "Query Stripper" ceased to functional because upstream scriptlets was removed that function for a while ago, I may looking
+!     back into his past commits and maybe copy that function for make these rules below working again, however, I won't forget
+!     to give his proper credits and licenses.
 aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(go|main)_item(_id|id)=\d+/)
 aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(pvid|scm|sourceType|sm|spm|ttid|ut_sk|utparam)=.+[\&]/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(__rv__|__so__|__tn__)=.+[\&]/)
@@ -110,6 +128,7 @@ youtube.com##script:inject(query-stripper.js, /(?<=\?|\&)redir_token=.+[\&]/)
 !#if env_chrome
 ! - Remove inline scripts (New toy for chromium-based users as inline element filtering like Firefox)
 !   However, using this may cause webpage to load as `wyciwyg` scheme instead and any blocking rules maybe allowed or disabled.
+! - This require @uBlock-user's scriptlets, same as external scriptlets above.
 akibatan.com##script:inject(remove-inline-script.js, /googlesyndication|mi_track_user|monsterinsights_frontend|window.OneSignal|window._stq|_Hasync/)
 !#endif
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !

@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202004082356
+! Version: 202004150048
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -190,21 +190,6 @@ twitter.com##div[data-reactroot] div[class] > div[data-focusable][tabindex][clas
 ! [WallGif] Disable AdBlock...? HOW ABOUT NO!!
 wallgif.com###overlay:has(img[alt="Loader"])
 wallgif.com##content div[id^=block_modal]
-
-! [YouTube Non-Polymer]
-! - Remove any "recommended" channel and topic lists at home feed
-youtube.com###feed-main-what_to_watch ol li:has(.feed-item-dismissable:has(.shelf-title-row h2 span:has-text(Recommended )))
-youtube.com##.individual-feed li .branded-page-box:has(.feed-item-dismissable:has(span.shelf-subscription-button button[data-style-type="branded"]))
-! - Remove overpromoted "Premium" appear in sidebar
-youtube.com##.guide-section .guide-item-container ul li:has(a[href*="/premium"])
-
-! [YouTube Polymer]
-! - Hide "New ToS" announcement
-youtube.com###alert-banner [alert-style]:has(a[href*="youtube.com/t/terms"])
-! - Remove "Sign in" prompt at top bar
-youtube.com###masthead #end #buttons ytd-button-renderer:has(a[href*="accounts.google.com/ServiceLogin?"])
-! - Try remove "Premium" link at sidebar
-youtube.com##.ytd-guide-renderer:has(#items ytd-guide-entry-renderer:has(a[href*="/premium"]))
 
 ! HTML Filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: This may work only FF quantum + uB0 WebExt
