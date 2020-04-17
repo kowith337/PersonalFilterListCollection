@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202003131257
+! Version: 202004172058
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -44,6 +44,10 @@
 ||youtube.com/redirect?redir_token=$xmlhttprequest
 
 ! Internal
+||duckduckgo.com/l/?$document,subdocument,important
+||duckduckgo.com/l/?$xmlhttprequest
+||duckduckgo.com/l?$document,subdocument,important
+||duckduckgo.com/l?$xmlhttprequest
 ||facebook.com/*&__tn__=$document,subdocument,important
 ||facebook.com/*&__tn__=$xmlhttprequest
 ||facebook.com/*&__xts__%5B0%5D=$document,subdocument,important

@@ -1,11 +1,27 @@
 ! uMatrix: Ruleset recipes 1.4.1
 ! Title: Self Custom Ruleset
-! Version: 202003170852
-! VersionNumber: 0.40.0
+! Version: 202004172113
+! VersionNumber: 0.41.0
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/ruleset/recipes_custom.txt
+
+Bing Translator (Edge Internal)
+	* edge.microsoft.com
+		! The ruleset will not appear unless you've trigger the
+		! 'Translate to <language>' from right-click menu in Edge.
+		! However, you may need to refresh once after apply ruleset
+		! and try click that menu again in order to allow Edge
+		! translate current page properly.
+		_ edge.microsoft.com fetch
+		_ api.cognitive.microsofttranslator.com fetch
+
+Etterna Online
+	etternaonline.com *
+		_ cdn.datatables.net script
+		_ cdn.jsdelivr.net script
+		_ code.highcharts.com script
 
 Gelbooru
 	gelbooru.com *
@@ -21,6 +37,10 @@ Gelbooru
 		_ ajax.googleapis.com script
 		_ maxcdn.bootstrapcdn.com script
 
+GitHub (Basic Viewing)
+		github.com *
+		_ githubassets.com script
+
 Google Custom Search
 	* cse.google.com
 		_ cse.google.com script
@@ -30,10 +50,10 @@ Google reCaptcha (Allow SW)
 	* www.google.com
 		! Directly copied from official English Recipe, but I've
 		! added 'allow workers' rules because you cannot get the
-		! enhanced version of reCaptcha (picture challenges) or even
-		! cannot click checkbox to get any challenges unless you've
-		! enable web workers, however, it may allow other workers to
-		! be running (like cryptominer, etc.)
+		! enhanced version of reCaptcha (picture challenges) or
+		! even cannot click checkbox to get any challenges unless
+		! you've enable web workers, however, it may allow other
+		! workers to be running (like cryptominer, etc.)
 		no-workers: _ false
 		_ www.google.com *
 		_ www.google.com script
@@ -53,6 +73,10 @@ Google Translate (Chrome Internal)
 
 Invidious (Non-proxy mode)
 	invidio.us *
+		! Recommend to use another instance that set to proxy
+		! streams by default (I prefer "Snopyta" one...)
+		! or else, add `(?|&)local=1` parameter after in your
+		! browser address bar.
 		_ googlevideo.com media
 
 Netflix Fast Internet Test

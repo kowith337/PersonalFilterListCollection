@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 202004150048
+! Version: 202004172057
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -105,7 +105,7 @@ f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(__xts__\[\d\]|__xts__\%5B\d\%5D)=.+[\&]/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(_ft_|__ccr)=.+[\&]/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(_rdc|__m_async_page__|__m_log_async__|mt_nav)=\d+/)
-f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(acontext|bacr|dti|eid|entrypoint|fb_dtsg_ag|fbclid|lst|ref|referrer|refid|refsrc|session_id|settings_tracking|sw_fnr_id|source)=.+[\&]/)
+f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(acontext|bacr|dti|eid|entrypoint|fb_dtsg_ag|fbclid|lst|page_source|ref|referrer|refid|refsrc|session_id|settings_tracking|sw_fnr_id|source)=.+[\&]/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(app|entry|privacy)_\w+=.+[\&]/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(aref|fref|hc_ref|loc_ref|pn_ref)=.+[\&]/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)\w+_ref=.+[\&]/)
