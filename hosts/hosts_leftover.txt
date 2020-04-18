@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202004131945
+# Version: 202004190209
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -193,6 +193,7 @@
 0.0.0.0 adjust.com
 0.0.0.0 adnium.com
 0.0.0.0 adnuntius.com
+0.0.0.0 adop.cc
 0.0.0.0 adsoptimal.com
 0.0.0.0 alexametrics.com
 0.0.0.0 aniview.com
@@ -214,6 +215,7 @@
 0.0.0.0 easylist.club
 0.0.0.0 effectivemeasure.net
 0.0.0.0 evidon.com
+0.0.0.0 exposebox.com
 0.0.0.0 fhanierio.me
 0.0.0.0 footprint.net
 0.0.0.0 fout.jp
@@ -226,6 +228,7 @@
 0.0.0.0 gsspat.jp
 0.0.0.0 gssprt.jp
 0.0.0.0 igmedianow.com
+0.0.0.0 impact-ad.jp
 0.0.0.0 imprezzer.com
 0.0.0.0 imrworldwide.com
 0.0.0.0 innity.com
@@ -234,6 +237,7 @@
 0.0.0.0 izooto.com
 0.0.0.0 linksynergy.com
 0.0.0.0 mathtag.com
+0.0.0.0 metaadsnet.com
 0.0.0.0 netcpms.com
 0.0.0.0 newrelic.com
 0.0.0.0 nordvpn.com
@@ -249,7 +253,11 @@
 0.0.0.0 perfectmarket.com
 0.0.0.0 petametrics.com
 0.0.0.0 pikdo.net
+0.0.0.0 popin.cc
+0.0.0.0 powerlinks.com
 0.0.0.0 qgr.ph
+0.0.0.0 qgraph.io
+0.0.0.0 quantumgraph.com
 0.0.0.0 r42tag.com
 0.0.0.0 rgvqcsxqge.com
 0.0.0.0 run-syndicate.com
@@ -258,10 +266,13 @@
 0.0.0.0 sombes.com
 0.0.0.0 stats.in.th
 0.0.0.0 storygize.net
+0.0.0.0 svtrd.com
 0.0.0.0 synergy-e.com
 0.0.0.0 thstats.com
+0.0.0.0 tpmn.co.kr
 0.0.0.0 trackjs.com
 0.0.0.0 traffic-sharing.com
+0.0.0.0 truehits.in.th
 0.0.0.0 ublock.org
 0.0.0.0 va-endpoint.com
 0.0.0.0 vidible.tv
@@ -270,15 +281,19 @@
 0.0.0.0 visualwebsiteoptimizer.com
 0.0.0.0 waust.at
 0.0.0.0 xm.com
+0.0.0.0 yengo.asia
 0.0.0.0 yengo.com
 #
 # [Generic Sublevel]
 0.0.0.0 3326.tm.zedo.com
+0.0.0.0 a.svtrd.com
 0.0.0.0 acds.vidible.tv
 0.0.0.0 ad.doubleclick.net
+0.0.0.0 ad.tpmn.co.kr
 0.0.0.0 adaptv.advertising.com
 0.0.0.0 adasiatagmanager.appspot.com
 0.0.0.0 adnetwork.adasiaholdings.com
+0.0.0.0 adopdmp.adop.cc
 0.0.0.0 ads.bumq.com
 0.0.0.0 ads.imprezzer.com
 0.0.0.0 ads.pantip.com
@@ -316,6 +331,7 @@
 0.0.0.0 analytics.orpheusdroid.com
 0.0.0.0 android.bugly.qq.com
 0.0.0.0 api.cxense.com
+0.0.0.0 api.popin.cc
 0.0.0.0 api.userstyles.org
 0.0.0.0 app.adjust.com
 0.0.0.0 appsflyer-report.honkaiimpact3.com
@@ -341,19 +357,23 @@
 0.0.0.0 cdn.onesignal.com
 0.0.0.0 cdn.onthe.io
 0.0.0.0 cdn.qgr.ph
+0.0.0.0 cdn.qgraph.io
 0.0.0.0 cdn.run-syndicate.com
 0.0.0.0 cdn.trackjs.com
+0.0.0.0 cdn.yengo.asia
 0.0.0.0 cdn.yengo.com
 0.0.0.0 certify-js.alexametrics.com
 0.0.0.0 code.nytive.com
 0.0.0.0 code.yengo.com
 0.0.0.0 collector.newrelic.com
+0.0.0.0 compass.adop.cc
 0.0.0.0 convammp.taboola.com
 0.0.0.0 cs.gssprt.jp
 0.0.0.0 d.audiencerun.com
 0.0.0.0 d1.yengo.com
 0.0.0.0 d2.yengo.com
 0.0.0.0 d3.yengo.com
+0.0.0.0 data.adop.cc
 0.0.0.0 dev.visualwebsiteoptimizer.com
 0.0.0.0 engage.wixapps.net
 0.0.0.0 firmware.cutedev.net
@@ -387,6 +407,7 @@
 0.0.0.0 imprammp.taboola.com
 0.0.0.0 improving.duckduckgo.com
 0.0.0.0 info.internet.org
+0.0.0.0 inrecsys.popin.cc
 0.0.0.0 ioms.bfmio.com
 0.0.0.0 ipmcdn.avast.com
 0.0.0.0 isgstat.sanook.com
@@ -397,6 +418,7 @@
 0.0.0.0 live.demand.supply
 0.0.0.0 loadbalancer.visitor-analytics.io
 0.0.0.0 log-api.aillis.net
+0.0.0.0 log.popin.cc
 0.0.0.0 lvs.truehits.in.th
 0.0.0.0 lvs2.truehits.in.th
 0.0.0.0 lvs3.truehits.in.th
@@ -414,6 +436,7 @@
 0.0.0.0 n.ads7-adnow.com
 0.0.0.0 n.ads8-adnow.com
 0.0.0.0 n.ads9-adnow.com
+0.0.0.0 one.impact-ad.jp
 0.0.0.0 openx.notebookspec.com
 0.0.0.0 opps.taboola.com
 0.0.0.0 ping.ublock.org
@@ -423,14 +446,18 @@
 0.0.0.0 player.aniview.com
 0.0.0.0 prod.vidible.tv
 0.0.0.0 pubads.g.doubleclick.net
+0.0.0.0 px.powerlinks.com
 0.0.0.0 quantcast.mgr.consensu.org
+0.0.0.0 r.popin.cc
 0.0.0.0 rcm.amazon.com
 0.0.0.0 rd.linksynergy.com
 0.0.0.0 remote.cutedev.net
 0.0.0.0 repair.cutedev.net
 0.0.0.0 report-uri.cloudflare.com
 0.0.0.0 rfp.fout.jp
+0.0.0.0 rlog.popin.cc
 0.0.0.0 rt.gsspat.jp
+0.0.0.0 s.svtrd.com
 0.0.0.0 s1.thstats.com
 0.0.0.0 s2.thstats.com
 0.0.0.0 s3.thstats.com
@@ -438,6 +465,7 @@
 0.0.0.0 sch.line.me
 0.0.0.0 secure.footprint.net
 0.0.0.0 securepubads.g.doubleclick.net
+0.0.0.0 server.exposebox.com
 0.0.0.0 shepherd.ff.avast.com
 0.0.0.0 show.bumq.com
 0.0.0.0 simage1.pubmatic.com
@@ -485,6 +513,7 @@
 0.0.0.0 synad3.nuffnang.co.th
 0.0.0.0 syndication.twimg.com
 0.0.0.0 syndication.twitter.com
+0.0.0.0 t.svtrd.com
 0.0.0.0 ta.sanook.com
 0.0.0.0 taboola-d.openx.net
 0.0.0.0 tag.gammaplatform.com
@@ -492,6 +521,7 @@
 0.0.0.0 tags.rd.linksynergy.com
 0.0.0.0 tdn.r42tag.com
 0.0.0.0 th-ssl.effectivemeasure.net
+0.0.0.0 th.popin.cc
 0.0.0.0 thn.gratonrewardcenter.icu
 0.0.0.0 tm.zedo.com
 0.0.0.0 track.opticks.io
@@ -522,6 +552,7 @@
 0.0.0.0 www.ublock.org
 0.0.0.0 www.yengo.com
 0.0.0.0 www2.silkspan.com
+0.0.0.0 y.one.impact-ad.jp
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Adware Root]
 # - Same as Generic Root

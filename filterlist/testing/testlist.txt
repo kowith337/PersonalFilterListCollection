@@ -70,6 +70,8 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 ! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+||google.*/ads/^$important
+||google.*/ads/ga-audiences?$important
 
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
@@ -95,7 +97,7 @@ facebook.com,instagram.com,messenger.com##script:inject(set-respheader.js, x-xss
 ! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
 facebook.com,instagram.com,messenger.com##script:inject(cookie-set.js, noscript, 0)
 
-! - Strip unnecessary URL parameters (mostly use for tracking users internally)
+! - Strip unnecessary URL parameters (mostly use for tracking users)
 !   - "Query Stripper" ceased to functional because upstream scriptlets was removed that function for a while ago, I may looking
 !     back into his past commits and maybe copy that function for make these rules below working again, however, I won't forget
 !     to give his proper credits and licenses.
@@ -127,7 +129,8 @@ youtube.com##script:inject(query-stripper.js, /(?<=\?|\&)redir_token=.+[\&]/)
 ! Platform specific - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 !#if env_chrome
 ! - Remove inline scripts (New toy for chromium-based users as inline element filtering like Firefox)
-!   However, using this may cause webpage to load as `wyciwyg` scheme instead and any blocking rules maybe allowed or disabled.
+!   However, using this may cause webpage to load as `wyciwyg` scheme instead and any blocking rules maybe allowed or disabled,
+!   e.g. uMatrix are allow `wyciwyg-scheme` by default.
 ! - This require @uBlock-user's scriptlets, same as external scriptlets above.
 akibatan.com##script:inject(remove-inline-script.js, /googlesyndication|mi_track_user|monsterinsights_frontend|window.OneSignal|window._stq|_Hasync/)
 !#endif
