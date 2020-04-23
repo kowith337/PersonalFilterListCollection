@@ -12,9 +12,9 @@ As for your safe state and if your privacy is matter enough, try looking to othe
 | **Style** | **Subscribe** | **Direct Link** |
 | ------------ | ------------- |  ------------- |
 | Universal (with modded stack menu bar) | [:cat:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fimageboard%2FGelboLube.txt&amp;title=GelboLube%20for%20Chromium%20or%20Firefox%20WebExt) [:pill:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgitlab.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fimageboard%2FGelboLube.txt&amp;title=GelboLube%20for%20Chromium%20or%20Firefox%20WebExt) | [:cat:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/imageboard/GelboLube.txt) [:pill:](https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/imageboard/GelboLube.txt) |
-| Legacy (split menu bar) {deprecate soon} | [:cat:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fimageboard%2FGelboLube-Legacy.txt&amp;title=GelboLube%20for%20Firefox%20Legacy) [:pill:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgitlab.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fimageboard%2FGelboLube-Legacy.txt&amp;title=GelboLube%20for%20Firefox%20Legacy) | [:cat:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/imageboard/GelboLube-Legacy.txt) [:pill:](https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/imageboard/GelboLube-Legacy.txt) |
+| Legacy (old custom split menu bar) | [:cat:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgithub.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fimageboard%2FGelboLube-Legacy.txt&amp;title=GelboLube%20for%20Firefox%20Legacy) [:pill:](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fgitlab.com%2Fkowith337%2FPersonalFilterListCollection%2Fraw%2Fmaster%2Ffilterlist%2Fimageboard%2FGelboLube-Legacy.txt&amp;title=GelboLube%20for%20Firefox%20Legacy) | [:cat:](https://github.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/imageboard/GelboLube-Legacy.txt) [:pill:](https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/imageboard/GelboLube-Legacy.txt) |
 
-This aim to eliminate every ads on `Gelbooru` without allowing any ads, even it's served or generated from site itself.
+This aim to redesign cripped layouts and eliminate every ads on `Gelbooru` without allowing any ads, even it's served or generated from site itself.
 
 But this list was designed to use with **uBlock Origin** only, I strongly **not support AdBlockPlus**.
 
@@ -24,8 +24,6 @@ Also I'm not responsible of any broken function on that site if you use this lis
 
 > Unless you've found my filterlist was broke some function and surely it's this filterlist false, if you're not sure, you can check the logger and report back to me via [issue dashboard](https://github.com/kowith337/PersonalFilterListCollection/issues/labels/Site%3A%20Gelbooru).
 
-I recommended to use other lists, such as Hosts File, AdGuard or any lists that really understand your privacy. 
+I recommended to use other lists, such as Hosts File, AdGuard or any lists that really understand your privacy.
 
 > meaning it's not allow third party resources to load for unbreak, such as allow ads script from `ExoClick` to prevent **[Plan B](https://github.com/kowith337/GelboLube/wiki/Blocking-rule-explanation#ublock-resource-injection-rule)** method to serve ads.
-
-This will work greater if you use with **uBo + Firefox** (or any fork that's suitable to you, such as ABrowser, CyberFox, IceCat, Pale Moon, WaterFox, etc.)
