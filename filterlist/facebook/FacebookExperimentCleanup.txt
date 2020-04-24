@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202001010150
+! Version: 202004241338
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -66,6 +66,11 @@ facebook.com###contentArea div[class] > :has(table div[data-onclick*="VideoHomeC
 ! Remove related videos while you're viewing the video as direct permalink post
 ! * WARNING: This rule doesn't work for Firefox Legacy
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root[role="main"]:has(#m_story_permalink_view) div[class]:has(div i):has(div a[href*="/videos/"])
+
+! Try making "CoViD-19" information hub as read only, no need to "Follow" because you can access them directly from header menu.
+! - Next update will trying to remove all pages lists that show for suggesting to follow them and leave only news feed about it.
+0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[role="article"] div > table[role="presentation"] a[href*="a/subscribe.php?"][href*="coronavirus_info"]
+0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[role="article"] table[role="presentation"]:has(a[href*="coronavirus_info/follow"])
 
 ! [Facebook Touch]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Facebook want you to see friends stories again before they're gone, by re-injecting stories tiles into feed streams!
@@ -144,6 +149,13 @@ facebook.com###contentArea div[class] > :has(table div[data-onclick*="VideoHomeC
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href="/home.php"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href="/home.php"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=4748854339"]))
+
+! Trying to hide "Allow" button in the business section of advert preferences, it's mean if you disallow advertisers to use your
+! information to advertise, your choice must be permanent choice and no need to undo!
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article a[href*="/help/568137493302217"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article div[class]:has-text(Your Facebook ad preferences)
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article div[id][class] #ex_allow
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article div[id][class] #in_allow
 
 ! [Network blocking section] -------------------------------------------------------------------------------------------------- !
 ! Prevent modules connections that autoplay GIF comments (May doesn't work at all!)
