@@ -1,0 +1,29 @@
+[uBlock Origin for Firefox Legacy 1.16.4.12]
+! Title: C o V i D   E n g a g e m e n t   D i s t a n c i n g   F i l t e r s
+! Version: 202004272253
+! Expires: 2 days
+! Author: kowith337
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/CoViD-Info-Distancing.txt
+! Description: I'll agree to any recommendations guide to protecting yourslef and everyone for keep your safe agains the current
+!              and ongoing pandemic from Corona Virus (CoViD-19 or SARS-CoV2), but some platform also offer ways to follow and/or
+!              subscribe for getting informations from your local organisations or showing repetitive and annoyance placeholders,
+!              I think it's too much and it should clean up, it's recommend to keep up to date by your organic engagement by
+!              entering the specific information hub that collected by platform itself and it's already available, without the
+!              need to follow specific pages or accounts by any other means.
+
+! {Search Engine}
+!   [DuckDuckGo] Quick button for search about...
+duckduckgo.com##.ia-module-covid.module
+duckduckgo.com##.tag-home__alert[href*="q=covid-19"]
+
+! {Social Networks}
+!   [Facebook] Sorry, but I can't make proper rules for any desktop users because of new interface overhaul...
+!   - Basucks, oops! basic mode...
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[role="article"] table[role="presentation"]:has(a[href*="coronavirus_info/follow"])
+d.facebook.com,m.facebook.com,mbasic.facebook.com##div[role="article"] div > table[role="presentation"] a[href*="a/subscribe.php?"][href*="coronavirus_info"]
+d.facebook.com,m.facebook.com,mbasic.facebook.com###root div[role="article"] div[class] > table[role="presentation"]:has(a[href*="a/subscribe.php?"][href*="coronavirus"])
+
+!   - Touch mode...
+m.facebook.com,mtouch.facebook.com,touch.facebook.com###viewport #page #root div[class][data-store-id] > div[data-nt*="BOX"] div[data-nt*="CHILD"] .scrollArea:has(div[data-nt*="CHILD"] div[data-nt*="COMPONENT_SWITCH"] div[aria-label^="Follow"])
+m.facebook.com,mtouch.facebook.com,touch.facebook.com###viewport #page #root div[class][data-store-id] div[data-nt*="BOX"] div[data-nt*="CHILD"]:has(div[data-nt*="DECOR"][aria-label*="COVID-19"])

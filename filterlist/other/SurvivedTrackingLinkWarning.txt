@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 202004172058
+! Version: 202004272044
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -17,13 +17,11 @@
 ||t.co/*?amp=$document,important
 
 ! Common Extrenal
-||*&__cf_chl_jschl_tk__=$document,important
 ||*&amp_*=*&usqp=*$document,important
 ||*&fbclid$document,important
 ||*&gclid$document,important
 ||*&utm_*=$document,important
 ||*&yclid$document,important
-||*?__cf_chl_jschl_tk__=$document,important
 ||*?amp_*=*&usqp=*$document,important
 ||*?fbclid$document,important
 ||*?gclid$document,important
@@ -51,8 +49,11 @@
 ||facebook.com/*&entrypoint=$document,important
 ||facebook.com/*&fb_dtsg_ag=$document,important
 ||facebook.com/*&fref=$document,important
+||facebook.com/*&hc_location=$document,important
 ||facebook.com/*&hc_ref=$document,important
 ||facebook.com/*&lst=$document,important
+||facebook.com/*&pn_location=$document,important
+||facebook.com/*&pn_ref=$document,important
 ||facebook.com/*&referrer=$document,important
 ||facebook.com/*&refsrc=$document,important
 ||facebook.com/*&settings_tracking=$document,important
@@ -65,7 +66,10 @@
 ||facebook.com/*?entrypoint=$document,important
 ||facebook.com/*?fb_dtsg_ag=$document,important
 ||facebook.com/*?fref=$document,important
+||facebook.com/*?hc_location=$document,important
 ||facebook.com/*?hc_ref=$document,important
+||facebook.com/*?lst=$document,important
+||facebook.com/*?pn_location=$document,important
 ||facebook.com/*?pn_ref=$document,important
 ||facebook.com/*?referrer=$document,important
 ||facebook.com/*?refsrc=$document,important
@@ -86,8 +90,11 @@
 ||messenger.com/*&entrypoint=$document,important
 ||messenger.com/*&fb_dtsg_ag=$document,important
 ||messenger.com/*&fref=$document,important
+||messenger.com/*&hc_location=$document,important
 ||messenger.com/*&hc_ref=$document,important
 ||messenger.com/*&lst=$document,important
+||messenger.com/*&pn_location=$document,important
+||messenger.com/*&pn_ref=$document,important
 ||messenger.com/*&referrer=$document,important
 ||messenger.com/*&refsrc=$document,important
 ||messenger.com/*&settings_tracking=$document,important
@@ -100,7 +107,10 @@
 ||messenger.com/*?entrypoint=$document,important
 ||messenger.com/*?fb_dtsg_ag=$document,important
 ||messenger.com/*?fref=$document,important
+||messenger.com/*?hc_location=$document,important
 ||messenger.com/*?hc_ref=$document,important
+||messenger.com/*?lst=$document,important
+||messenger.com/*?pn_location=$document,important
 ||messenger.com/*?pn_ref=$document,important
 ||messenger.com/*?referrer=$document,important
 ||messenger.com/*?refsrc=$document,important
@@ -111,5 +121,14 @@
 ||steampowered.com/*?snr=$document,important
 
 ! Problematic, at your own risk!
+! [CloudFlare DDoS JS Challenge]
+!   Blocking attempt to access websites with parameters below will cause problem because this parameter are neccessary for check
+!   that you're passing the test or not, however, this will pre-warning that the website are use its server and you may get 
+!   tracked by that company, also.
+||*&__cf_chl_jschl_tk__=$document,important
+||*?__cf_chl_jschl_tk__=$document,important
+
+! [Pantip]
+!   They also apply to related topics and external URLs.
 ||pantip.com/l/http*$document,important
 ||pantip.com/r/http*$document,important

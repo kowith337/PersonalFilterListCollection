@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202004172058
+! Version: 202004272044
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -19,13 +19,11 @@
 ||t.co/*?amp=$document,subdocument,xmlhttprequest,important
 
 ! Common Extrenal
-||*&__cf_chl_jschl_tk__=$document,subdocument,xmlhttprequest,important
 ||*&amp_*=*&usqp=*$document,subdocument,xmlhttprequest,important
 ||*&fbclid$document,subdocument,xmlhttprequest,important
 ||*&gclid$document,subdocument,xmlhttprequest,important
 ||*&utm_*=$document,subdocument,xmlhttprequest,important
 ||*&yclid$document,subdocument,xmlhttprequest,important
-||*?__cf_chl_jschl_tk__=$document,subdocument,xmlhttprequest,important
 ||*?amp_*=*&usqp=*$document,subdocument,xmlhttprequest,important
 ||*?fbclid$document,subdocument,xmlhttprequest,important
 ||*?gclid$document,subdocument,xmlhttprequest,important
@@ -69,16 +67,24 @@
 ||facebook.com/*&fb_dtsg_ag=$document,important
 ||facebook.com/*&fref=$document,subdocument,important
 ||facebook.com/*&fref=$xmlhttprequest
+||facebook.com/*&hc_location=$document,subdocument,important
+||facebook.com/*&hc_location=$xmlhttprequest
 ||facebook.com/*&hc_ref=$document,subdocument,important
 ||facebook.com/*&hc_ref=$xmlhttprequest
 ||facebook.com/*&lst=$document,subdocument,important
 ||facebook.com/*&lst=$xmlhttprequest
+||facebook.com/*&pn_location=$document,subdocument,important
+||facebook.com/*&pn_location=$xmlhttprequest
+||facebook.com/*&pn_ref=$document,subdocument,important
+||facebook.com/*&pn_ref=$xmlhttprequest
 ||facebook.com/*&referrer=$document,subdocument,important
 ||facebook.com/*&referrer=$xmlhttprequest
 ||facebook.com/*&refsrc=$document,subdocument,important
 ||facebook.com/*&refsrc=$xmlhttprequest
 ||facebook.com/*&settings_tracking=$document,subdocument,important
 ||facebook.com/*&settings_tracking=$xmlhttprequest
+||facebook.com/*&sfnsn=$document,subdocument,important
+||facebook.com/*&sfnsn=$xmlhttprequest
 ||facebook.com/*?__tn__=$document,subdocument,important
 ||facebook.com/*?__tn__=$xmlhttprequest
 ||facebook.com/*?__xts__%5B0%5D=$document,subdocument,important
@@ -100,16 +106,24 @@
 ||facebook.com/*?fb_dtsg_ag=$document,important
 ||facebook.com/*?fref=$document,subdocument,important
 ||facebook.com/*?fref=$xmlhttprequest
+||facebook.com/*?hc_location=$document,subdocument,important
+||facebook.com/*?hc_location=$xmlhttprequest
 ||facebook.com/*?hc_ref=$document,subdocument,important
 ||facebook.com/*?hc_ref=$xmlhttprequest
 ||facebook.com/*?lst=$document,subdocument,important
 ||facebook.com/*?lst=$xmlhttprequest
+||facebook.com/*?pn_location=$document,subdocument,important
+||facebook.com/*?pn_location=$xmlhttprequest
+||facebook.com/*?pn_ref=$document,subdocument,important
+||facebook.com/*?pn_ref=$xmlhttprequest
 ||facebook.com/*?referrer=$document,subdocument,important
 ||facebook.com/*?referrer=$xmlhttprequest
 ||facebook.com/*?refsrc=$document,subdocument,important
 ||facebook.com/*?refsrc=$xmlhttprequest
 ||facebook.com/*?settings_tracking=$document,subdocument,important
 ||facebook.com/*?settings_tracking=$xmlhttprequest
+||facebook.com/*?sfnsn=$document,subdocument,important
+||facebook.com/*?sfnsn=$xmlhttprequest
 ||facebook.com/ads/*&session_id=$document,subdocument,important
 ||facebook.com/ads/*&session_id=$xmlhttprequest
 ||facebook.com/ads/*?session_id=$document,subdocument,important
@@ -161,16 +175,24 @@
 ||messenger.com/*&fb_dtsg_ag=$document,important
 ||messenger.com/*&fref=$document,subdocument,important
 ||messenger.com/*&fref=$xmlhttprequest
+||messenger.com/*&hc_location=$document,subdocument,important
+||messenger.com/*&hc_location=$xmlhttprequest
 ||messenger.com/*&hc_ref=$document,subdocument,important
 ||messenger.com/*&hc_ref=$xmlhttprequest
 ||messenger.com/*&lst=$document,subdocument,important
 ||messenger.com/*&lst=$xmlhttprequest
+||messenger.com/*&pn_location=$document,subdocument,important
+||messenger.com/*&pn_location=$xmlhttprequest
+||messenger.com/*&pn_ref=$document,subdocument,important
+||messenger.com/*&pn_ref=$xmlhttprequest
 ||messenger.com/*&referrer=$document,subdocument,important
 ||messenger.com/*&referrer=$xmlhttprequest
 ||messenger.com/*&refsrc=$document,subdocument,important
 ||messenger.com/*&refsrc=$xmlhttprequest
 ||messenger.com/*&settings_tracking=$document,subdocument,important
 ||messenger.com/*&settings_tracking=$xmlhttprequest
+||messenger.com/*&sfnsn=$document,subdocument,important
+||messenger.com/*&sfnsn=$xmlhttprequest
 ||messenger.com/*?__tn__=$document,subdocument,important
 ||messenger.com/*?__tn__=$xmlhttprequest
 ||messenger.com/*?__xts__%5B0%5D=$document,subdocument,important
@@ -190,16 +212,24 @@
 ||messenger.com/*?fb_dtsg_ag=$document,important
 ||messenger.com/*?fref=$document,subdocument,important
 ||messenger.com/*?fref=$xmlhttprequest
+||messenger.com/*?hc_location=$document,subdocument,important
+||messenger.com/*?hc_location=$xmlhttprequest
 ||messenger.com/*?hc_ref=$document,subdocument,important
 ||messenger.com/*?hc_ref=$xmlhttprequest
 ||messenger.com/*?lst=$document,subdocument,important
 ||messenger.com/*?lst=$xmlhttprequest
+||messenger.com/*?pn_location=$document,subdocument,important
+||messenger.com/*?pn_location=$xmlhttprequest
+||messenger.com/*?pn_ref=$document,subdocument,important
+||messenger.com/*?pn_ref=$xmlhttprequest
 ||messenger.com/*?referrer=$document,subdocument,important
 ||messenger.com/*?referrer=$xmlhttprequest
 ||messenger.com/*?refsrc=$document,subdocument,important
 ||messenger.com/*?refsrc=$xmlhttprequest
 ||messenger.com/*?settings_tracking=$document,subdocument,important
 ||messenger.com/*?settings_tracking=$xmlhttprequest
+||messenger.com/*?sfnsn=$document,subdocument,important
+||messenger.com/*?sfnsn=$xmlhttprequest
 ||play.google.com/*&pcampaignid=$document,subdocument,important
 ||play.google.com/*&pcampaignid=$xmlhttprequest
 ||play.google.com/*&referrer=$document,subdocument,important
@@ -214,6 +244,15 @@
 ||steampowered.com/*?snr=$document,subdocument,xmlhttprequest,important
 
 ! Problematic, at your own risk!
+! [CloudFlare DDoS JS Challenge]
+!   Blocking attempt to access websites with parameters below will cause problem because this parameter are neccessary for check
+!   that you're passing the test or not, however, this will pre-warning that the website are use its server and you may get 
+!   tracked by that company, also.
+||*&__cf_chl_jschl_tk__=$document,subdocument,xmlhttprequest,important
+||*?__cf_chl_jschl_tk__=$document,subdocument,xmlhttprequest,important
+
+! [Pantip]
+!   They also apply to related topics and external URLs.
 ||pantip.com/l/http*$document,subdocument,xmlhttprequest,important
 ||pantip.com/r/http*$document,subdocument,xmlhttprequest,important
 ||pantip.com/r/*/http^$document,subdocument,xmlhttprequest,important
