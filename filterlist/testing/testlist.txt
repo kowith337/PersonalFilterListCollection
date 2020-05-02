@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 202004172057
+! Version: 202005022222
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -41,6 +41,7 @@ youtube.com###masthead #end #buttons ytd-button-renderer:has(a[href*="accounts.g
 ! Non-basic characters filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Pantip] Explicit and spam topic name
 pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(วรพจน์))
+pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(มาลาริน/))
 
 ! [Taobao Mobile] Aim to remove "you may also like" items, but using the chinese word (MiscAnnoyance use `nth-of-type` method)
 m.intl.taobao.com##.App .recommend .recommend-list-wrapper:has(.recommend-title:has-text(邻家好货))
