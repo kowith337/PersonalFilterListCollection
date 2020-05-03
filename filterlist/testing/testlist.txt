@@ -1,6 +1,6 @@
 [uBlock Origin 1.19.0]
 ! Title: kowith337's Test List
-! Version: 202005022222
+! Version: 202005031356
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -87,7 +87,14 @@ facebook.com,instagram.com,messenger.com##script:inject(cookie-remover.js, x-ref
 
 ! [External scriptlets]
 ! Requirement for this section: @uBlock-user's scriptlets: https://github.com/uBlock-user/uBO-Scriptlets
-! Raw: https://raw.githubusercontent.com/uBlock-user/uBO-Scriptlets/master/scriptlets.txt
+! Raw: https://raw.githubusercontent.com/uBlock-user/uBO-Scriptlets/master/scriptlets.js
+! - Giving S**t against "Goolag" in BrowserLeaks test.
+browserleaks.com##+js(cookie-set, __gads, FUCK)
+browserleaks.com##+js(cookie-set, _ga, FUCK)
+browserleaks.com##+js(cookie-set, _gat, FUCK)
+browserleaks.com##+js(cookie-set, _gid, FUCK)
+browserleaks.com##+js(cookie-set, bl_gad, 1)
+browserleaks.com##+js(cookie-set, bl_gaq, 1)
 ! - Tesing stage: Remove internal tag
 ! google.com##script:inject(remove-div-tag.js, data-ved) // Broken due to it's remove everything entirely!
 ! - Testing stage: Remove META
