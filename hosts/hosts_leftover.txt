@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202005012149
+# Version: 202005090001
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -223,6 +223,7 @@
 0.0.0.0 genieessp.com
 0.0.0.0 genieesspv.jp
 0.0.0.0 geoplugin.net
+0.0.0.0 giraff.io
 0.0.0.0 go2speed.org
 0.0.0.0 gratonrewardcenter.icu
 0.0.0.0 gsspat.jp
@@ -274,6 +275,7 @@
 0.0.0.0 traffic-sharing.com
 0.0.0.0 truehits.in.th
 0.0.0.0 ublock.org
+0.0.0.0 useinsider.com
 0.0.0.0 va-endpoint.com
 0.0.0.0 vidible.tv
 0.0.0.0 vidoomy.com
@@ -332,6 +334,7 @@
 0.0.0.0 android.bugly.qq.com
 0.0.0.0 api.cxense.com
 0.0.0.0 api.popin.cc
+0.0.0.0 api.useinsider.com
 0.0.0.0 api.userstyles.org
 0.0.0.0 app.adjust.com
 0.0.0.0 appsflyer-report.honkaiimpact3.com
@@ -364,6 +367,7 @@
 0.0.0.0 cdn.yengo.com
 0.0.0.0 certify-js.alexametrics.com
 0.0.0.0 code.nytive.com
+0.0.0.0 code.th.giraff.io
 0.0.0.0 code.yengo.com
 0.0.0.0 collector.newrelic.com
 0.0.0.0 compass.adop.cc
@@ -389,6 +393,7 @@
 0.0.0.0 go3.aniview.com
 0.0.0.0 googleads.github.io
 0.0.0.0 graph.sanook.com
+0.0.0.0 hit.api.useinsider.com
 0.0.0.0 hits.truehits.in.th
 0.0.0.0 ho.lazada.co.th
 0.0.0.0 hw-cdn.contentabc.com
@@ -465,6 +470,7 @@
 0.0.0.0 sch.line.me
 0.0.0.0 secure.footprint.net
 0.0.0.0 securepubads.g.doubleclick.net
+0.0.0.0 sentinel.api.useinsider.com
 0.0.0.0 server.exposebox.com
 0.0.0.0 shepherd.ff.avast.com
 0.0.0.0 show.bumq.com
@@ -521,7 +527,9 @@
 0.0.0.0 tags.rd.linksynergy.com
 0.0.0.0 tdn.r42tag.com
 0.0.0.0 th-ssl.effectivemeasure.net
+0.0.0.0 th.giraff.io
 0.0.0.0 th.popin.cc
+0.0.0.0 thairath.api.useinsider.com
 0.0.0.0 thn.gratonrewardcenter.icu
 0.0.0.0 tm.zedo.com
 0.0.0.0 track.opticks.io
@@ -533,6 +541,7 @@
 0.0.0.0 tracker.stats.in.th
 0.0.0.0 trc.sanook.com
 0.0.0.0 trend.igmedianow.com
+0.0.0.0 v1.api.useinsider.com
 0.0.0.0 vidstat.taboola.com
 0.0.0.0 view-stat.komchadluek.net
 0.0.0.0 vz-cdn.contentabc.com
