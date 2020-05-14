@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202005111443
+# Version: 202005111826
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -98,9 +98,6 @@ www.*.club
 www.*.site
 yengo.*
 
-# Prevent Firefox use CaptivePortal for check connectivity (ping network status)
-detectportal.*
-
 # Google CNAME Penetration (Mostly "Google L" subdomains, wildcard rules)
 *-google*.l.google.com
 *-google-analytics.*
@@ -115,6 +112,9 @@ googletag*.*
 pagead*.doubleclick.*
 pagead-*.l.google.com
 redirector.gvt*.com
+
+# Prevent any Firefox-based browsers use "CaptivePortal" for check connectivity (ping for network availability)
+detectportal.*
 
 # [Generic Reason]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Abusive DNS Cloaking (Don't forget to set 'checkCNAME = true' in 'DNSFilter.conf')
@@ -150,18 +150,18 @@ booking.com
 orpheusdroid.com
 
 # [Firefox Related] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# I want to say sorry to anyone who use CloudFlare DNS resolvers, but it's just my opinion to block due to Firefox's wrong turn!
+# Sorry for anyone who use CloudFlare DNS resolvers, but it's just my opinion to block due to Firefox's wrong turn!
 # e.g. Out-of-box config of Firefox use "TRR" resolvers (aka. DoH) from CloudFlare by default!
 #      Currently apply in US right now with include NextDNS as a fellow alternative choice, but it's still use CloudFlare first!!
 #      Note: I've also see Chrome also use CloudFlare DoH that pointed to `chrome.cloudflare-dns.com`, so this will block both!!!
 cloudflare-dns.com
 
-# Pocket is betrayal services that serve zuckested contents right in browser default home page.
-getpocket.com
-
 # More privacy enhanced for Firefox users, make sure you've disable their internal TRR first.
 ciscobinary.openh264.org
 location.services.mozilla.com
+
+# Pocket is betrayal services that serve zuckested contents right in browser default home page in Firefox-based browsers.
+getpocket.com
 
 # [Hola Block]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # See also: https://github.com/lightswitch05/hosts/issues/129
@@ -232,6 +232,8 @@ gvt9.com
 gstaticadssl.l.google.com
 id.l.google.com
 mail-ads.google.com
+sb.l.google.com
+stun.l.google.com
 video-stats.l.google.com
 
 # Google play features (include play services, e.g. app invite, growth, phone number, subscriptions, etc.)
@@ -262,15 +264,11 @@ offlinepages-pa.googleapis.com
 android-safebrowsing.google.com
 #safebrowsing.google.com
 #safebrowsing.googleapis.com
-sb.l.google.com
 
 # It's upload incoming phone numbers to check spam calls.
 # * Concern to anyone who touching phone numbers and contacts since various "Facebook" violations (please blame "ZUCK" for that!)
 dialercallinfolookup-pa.googleapis.com
 telephonyspamprotect-pa.googleapis.com
-
-# Google "AdService" and "ID" subdomains (You can see those connections while you're use their serach engine and services!)
-id.l.google.com
 
 # Prefer to block if you don't trust their DNS services, e.g. DoT and DoH resolvers, maybe include "Chrome" it's own (async) DNS!
 dns.google
@@ -286,10 +284,6 @@ voledevice-pa.googleapis.com
 
 # Block ASS-istant
 assistant.google.com
-
-# Prevent use Google STUN ("WebRTC" IP address leaks issue) Any voice and/or video call that rely to this will surely break!
-# e.g. Facebook, Google Duo, Hangouts, LINE, Skype, etc.
-stun.l.google.com
 
 # Geolocation?
 geomobileservices-pa.googleapis.com
