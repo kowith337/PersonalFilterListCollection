@@ -17,12 +17,13 @@
 ### I will...
 - Aim to support preventing internal ads, tracking, phone home, **zuckestions**, etc.
   - Disclaimer\: *I'm not guarantee for desktop version about removing in-feed ad posts!*
+    - And also, I have no interests to handle new desktop layout that use shattered `REACT` engine that scrambled every elements name, yet.
 - Keep away from any attempts that **zuckest** to installing `unfriendly for your privacy` [official apps](https://play.google.com/store/apps/developer?id=Facebook).
 - Keep away from any attempts that **zuckest** to use and/or register for related products. (Instagram for good example!)
-- Keep away from any attempts that **zuckest** to follow their related products of Facebook, include related peoples under its company.
+- Keep away from any attempts that **zuckest** to follow their related products of Facebook and related peoples under its company.
 - Make something easier and clearly (e.g. managing adverts preferences)
 - Remove unnecessary things that rarely need (e.g. Fun facts)
-- Also (currently mainly) support mobile site version, both...
+- (currently mainly) support mobile site version, both...
   - [Basic feature phone](https://mbasic.facebook.com) or
   - [Smart phone](https://touch.facebook.com) (likely official app layout, except some random tabs like Marketplace, Videos, etc.)
 
