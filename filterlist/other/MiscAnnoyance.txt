@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202004150048
+! Version: 202004172341
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -317,7 +317,12 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ! - 3Broadband: https://pantip.com/topic/38945629 + https://pantip.com/topic/38963195 + https://pantip.com/topic/38969958
 ! - True Internet: https://pantip.com/topic/39762480 + https://pantip.com/topic/39763510
 ||110.164.252.137/wpwarn/monomax$important
-||services.trueinternet.co.th/vasspeedboost$important 
+||services.trueinternet.co.th/vasspeedboost$important
+
+! It's also happen on mobile data, too! for just only promote their app, WTF!? (https://pantip.com/topic/39906276)
+||*&url=www3.truecorp.co.th$important
+||*?url=www3.truecorp.co.th$important
+||trueid.net/detail/E1MM2bLKePX1$important
 
 ! [Add0n] Some extensions that hosted with add0n are show the popup
 ||add0n.com$document
