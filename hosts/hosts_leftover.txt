@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202005142233
+# Version: 202005190052
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -191,14 +191,18 @@
 0.0.0.0 adasiaholdings.com
 0.0.0.0 addthisedge.com
 0.0.0.0 addtoany.com
+0.0.0.0 adingo.jp
 0.0.0.0 adjust.com
 0.0.0.0 adnium.com
 0.0.0.0 adnuntius.com
 0.0.0.0 adop.cc
 0.0.0.0 adsoptimal.com
+0.0.0.0 aidata.io
 0.0.0.0 alexametrics.com
 0.0.0.0 aniview.com
+0.0.0.0 ants.vn
 0.0.0.0 app-measurement.com
+0.0.0.0 appier.net
 0.0.0.0 audiencerun.com
 0.0.0.0 beachfrontmedia.com
 0.0.0.0 bfmio.com
@@ -213,6 +217,7 @@
 0.0.0.0 dapxl.com
 0.0.0.0 demand.supply
 0.0.0.0 dentsu360th.com
+0.0.0.0 digitru.st
 0.0.0.0 easylist.club
 0.0.0.0 effectivemeasure.net
 0.0.0.0 evidon.com
@@ -240,12 +245,14 @@
 0.0.0.0 linksynergy.com
 0.0.0.0 mathtag.com
 0.0.0.0 metaadsnet.com
+0.0.0.0 mox.tv
 0.0.0.0 netcpms.com
 0.0.0.0 newrelic.com
 0.0.0.0 nordvpn.com
 0.0.0.0 nr-data.net
 0.0.0.0 nuffnang.co.th
 0.0.0.0 nytive.com
+0.0.0.0 omnithrottle.com
 0.0.0.0 onesignal.com
 0.0.0.0 onthe.io
 0.0.0.0 openx.net
@@ -289,9 +296,11 @@
 #
 # [Generic Sublevel]
 0.0.0.0 3326.tm.zedo.com
+0.0.0.0 a.c.appier.net
 0.0.0.0 a.svtrd.com
 0.0.0.0 acds.vidible.tv
 0.0.0.0 ad.doubleclick.net
+0.0.0.0 ad.mox.tv
 0.0.0.0 ad.tpmn.co.kr
 0.0.0.0 adaptv.advertising.com
 0.0.0.0 adasiatagmanager.appspot.com
@@ -331,8 +340,10 @@
 0.0.0.0 ads9.matichon.co.th
 0.0.0.0 adsbybumq.bumq.com
 0.0.0.0 adsense.codev.wixapps.net
+0.0.0.0 aiqua-sdk.c.appier.net
 0.0.0.0 analytics.orpheusdroid.com
 0.0.0.0 android.bugly.qq.com
+0.0.0.0 anylist.c.appier.net
 0.0.0.0 api.cxense.com
 0.0.0.0 api.popin.cc
 0.0.0.0 api.useinsider.com
@@ -341,17 +352,22 @@
 0.0.0.0 appsflyer-report.honkaiimpact3.com
 0.0.0.0 as.innity.com
 0.0.0.0 as.innity.net
+0.0.0.0 au.ants.vn
 0.0.0.0 autolike.cutedev.net
 0.0.0.0 autopost.cutedev.net
 0.0.0.0 avd.innity.com
 0.0.0.0 avd.innity.net
 0.0.0.0 bam.nr-data.net
+0.0.0.0 bgstats.mox.tv
 0.0.0.0 bingsu.devpantip.com
 0.0.0.0 bingsu.pantip.com
 0.0.0.0 blog.cutedev.net
+0.0.0.0 bsw.digitru.st
 0.0.0.0 bugly.qq.com
 0.0.0.0 byteark-analytics.thairath.co.th
 0.0.0.0 c.aaxads.com
+0.0.0.0 c.appier.net
+0.0.0.0 c.c.appier.net
 0.0.0.0 c.evidon.com
 0.0.0.0 cdn-gl.imrworldwide.com
 0.0.0.0 cdn-ssl.vidible.tv
@@ -374,6 +390,7 @@
 0.0.0.0 collector.newrelic.com
 0.0.0.0 compass.adop.cc
 0.0.0.0 convammp.taboola.com
+0.0.0.0 cs.adingo.jp
 0.0.0.0 cs.gssprt.jp
 0.0.0.0 d.audiencerun.com
 0.0.0.0 d1.yengo.com
@@ -393,6 +410,7 @@
 0.0.0.0 go1.aniview.com
 0.0.0.0 go2.aniview.com
 0.0.0.0 go3.aniview.com
+0.0.0.0 gocm.c.appier.net
 0.0.0.0 googleads.github.io
 0.0.0.0 graph.sanook.com
 0.0.0.0 hit.api.useinsider.com
@@ -423,6 +441,7 @@
 0.0.0.0 js.mtburn.com
 0.0.0.0 js.mtburn.jp
 0.0.0.0 js.rfp.fout.jp
+0.0.0.0 jscdn.appier.net
 0.0.0.0 live.demand.supply
 0.0.0.0 loadbalancer.visitor-analytics.io
 0.0.0.0 log-api.aillis.net
@@ -452,6 +471,7 @@
 0.0.0.0 play.aniview.com
 0.0.0.0 player-cdn.beachfrontmedia.com
 0.0.0.0 player.aniview.com
+0.0.0.0 popup.taboola.com
 0.0.0.0 prod.vidible.tv
 0.0.0.0 pubads.g.doubleclick.net
 0.0.0.0 px.powerlinks.com
@@ -465,6 +485,7 @@
 0.0.0.0 rfp.fout.jp
 0.0.0.0 rlog.popin.cc
 0.0.0.0 rt.gsspat.jp
+0.0.0.0 s.c.appier.net
 0.0.0.0 s.svtrd.com
 0.0.0.0 s1.thstats.com
 0.0.0.0 s2.thstats.com
@@ -517,6 +538,7 @@
 0.0.0.0 static.gammaplatform.com
 0.0.0.0 statmt.matichon.co.th
 0.0.0.0 stats.waterfox.net
+0.0.0.0 subscription.omnithrottle.com
 0.0.0.0 synad1.nuffnang.co.th
 0.0.0.0 synad2.nuffnang.co.th
 0.0.0.0 synad3.nuffnang.co.th
@@ -542,6 +564,7 @@
 0.0.0.0 tracker.bumq.com
 0.0.0.0 tracker.dome.cloud
 0.0.0.0 tracker.stats.in.th
+0.0.0.0 transaction-tracking-dot-mfec-martech.appspot.com
 0.0.0.0 trc.sanook.com
 0.0.0.0 trend.igmedianow.com
 0.0.0.0 v1.api.useinsider.com
@@ -566,6 +589,7 @@
 0.0.0.0 www.ublock.org
 0.0.0.0 www.yengo.com
 0.0.0.0 www2.silkspan.com
+0.0.0.0 x01.aidata.io
 0.0.0.0 y.one.impact-ad.jp
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Adware Root]
