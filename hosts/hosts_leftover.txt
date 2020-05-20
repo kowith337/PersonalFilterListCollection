@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202005190052
+# Version: 202005192202
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -241,6 +241,7 @@
 0.0.0.0 innity.com
 0.0.0.0 innity.net
 0.0.0.0 instant.page
+0.0.0.0 invol.co
 0.0.0.0 izooto.com
 0.0.0.0 linksynergy.com
 0.0.0.0 mathtag.com
