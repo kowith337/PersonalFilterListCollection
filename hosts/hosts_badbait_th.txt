@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.1]
 # Title: Thai BadBait Lists (Top level only)
-# Version: 202004022254
+# Version: 202005240810
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -47,7 +47,7 @@
 0.0.0.0 www.toosthai.com
 0.0.0.0 www.wanmreos.com
 # Twitter mention spam train  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# Credits: https://twitter.com/thammarith/status/1110399142168166400
+# Credits: https://twitter.com/i/status/1110399142168166400
 0.0.0.0 darachilli.com
 0.0.0.0 lekded369.com
 0.0.0.0 linkis.com
@@ -66,4 +66,13 @@
 0.0.0.0 www.tricksex.net
 0.0.0.0 www.you-health.net
 0.0.0.0 you-health.net
+# CoViD-19 fake website (trying to spoof as ThaiChana Platform)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Credits: https://www.thaicert.or.th/newsbite/2020-05-23-01.html
+#          https://twitter.com/SureAndShare/status/1264234831216443394
+0.0.0.0 thaichana.asia
+0.0.0.0 thai-chana.asia
+0.0.0.0 thaichana.pro
+0.0.0.0 www.thaichana.asia
+0.0.0.0 www.thai-chana.asia
+0.0.0.0 www.thaichana.pro
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
