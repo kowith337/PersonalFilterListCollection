@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202005021956
+# Version: 202005251443
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -18,10 +18,6 @@
 # - {Anti-AMP}
 0.0.0.0 acceleratedmobilepageurl.googleapis.com
 #
-# - {Anti-Analytics Related}
-0.0.0.0 analyticsinsights-pa.googleapis.com
-0.0.0.0 analyticssearch-pa.googleapis.com
-#
 # - {Anti-AndroidAuto}
 0.0.0.0 androidauto-pa.googleapis.com
 #
@@ -29,6 +25,7 @@
 0.0.0.0 android-safebrowsing.googleapis.com
 0.0.0.0 safebrowsing.google.com
 0.0.0.0 safebrowsing.googleapis.com
+0.0.0.0 sb-ssl.google.com
 0.0.0.0 sb.l.google.com
 #
 # - {Anti-"ASS"-istant}
@@ -73,6 +70,10 @@
 # - {Anti-discover}
 0.0.0.0 discover-pa.googleapis.com
 #
+# - {Anti-Firebase Install}
+#   > Some apps are rely to that, especially for deploy GDPR, personal data concerns agreement, etc.
+0.0.0.0 firebaseinstallations.googleapis.com
+#
 # - {Anti-network-based location lookup?}
 0.0.0.0 geomobileservices-pa.googleapis.com
 #
@@ -112,10 +113,13 @@
 0.0.0.0 voledevice-pa.googleapis.com
 #
 # - {Anti-recommender}
+0.0.0.0 recommender.clients4.google.com
 0.0.0.0 recommender.clients6.google.com
 0.0.0.0 recommender.googleapis.com
 #
-# - {GPlay store and YouTube trying to connect this while ads are loading into your face!}
+# - {Anti-Redirector}
+#   > GPlay store and YouTube trying to connect this while ads are loading into your face!
+#   > However, it's also break some users who buy/rent and watch movies from Google Play.
 0.0.0.0 redirector.gvt1.com
 0.0.0.0 redirector.googlevideo.com
 #
@@ -130,11 +134,8 @@
 0.0.0.0 video-ad-stats.googlesyndication.com
 #
 # - {Content subservers}
-0.0.0.0 content-adexchangebuyer2.googleapis.com
-0.0.0.0 content-analyticsinsights-pa.googleapis.com
 0.0.0.0 content-autofill.googleapis.com
 0.0.0.0 content-calendar-pa.googleapis.com
-0.0.0.0 content-cloudcommerceinventoryconsumer-pa.googleapis.com
 0.0.0.0 content-cloudusersettings-pa.googleapis.com
 0.0.0.0 content-people-pa.googleapis.com
 0.0.0.0 content-reminders-pa.googleapis.com
@@ -179,12 +180,18 @@
 # - {Facebook tracking link parking}
 #   > you should modify URLs by yourself or use with uBlock/uMatrix in order to resolve actual URLs
 0.0.0.0 l.facebook.com
+0.0.0.0 l.freebasics.com
 0.0.0.0 l.messenger.com
 0.0.0.0 lm.facebook.com
+0.0.0.0 lm.freebasics.com
 0.0.0.0 lm.messenger.com
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Firefox Betrayals]
 # - {Anti-Pocket}
 0.0.0.0 api.getpocket.com
 0.0.0.0 getpocket.com
+# - {GeoLocation}
+0.0.0.0 location.services.mozilla.com
+# - {Web Notifications Endpoint?}
+0.0.0.0 push.services.mozilla.com
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
