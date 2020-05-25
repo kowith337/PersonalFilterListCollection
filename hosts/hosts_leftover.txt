@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202005251443
+# Version: 202005251503
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -153,38 +153,29 @@
 0.0.0.0 pixel.fbpigeon.com
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Firefox Betrayed Backend Domains]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# Telemetry, Health Report, Personalise content zuckestions , based on 2 sources below...
+# Telemetry, Health Report, Personalise content zuckestions , based on 3 sources below...
 # - http://utaukitune.ldblog.jp/archives/65725024.html
 # - https://github.com/jmdugan/blocklists/tree/master/corporations/mozilla/all.txt
-0.0.0.0 activations.cdn.mozilla.net
+# - https://www.ghacks.net/2018/10/10/firefox-update-security-audit-results-published (Yuliya's comment)
 0.0.0.0 broker-live.mozillamessaging.com
 0.0.0.0 crash-stats.mozilla.com
 0.0.0.0 data.mozilla.com
-0.0.0.0 detectportal.firefox.com
-0.0.0.0 experiments.mozilla.org
 0.0.0.0 fhr.cdn.mozilla.net
 0.0.0.0 fhr.data.mozilla.com
-0.0.0.0 getpocket.cdn.mozilla.net
 0.0.0.0 hang-reports.mozilla.org
 0.0.0.0 incoming.telemetry.mozilla.org
 0.0.0.0 input.mozilla.com
 0.0.0.0 input.mozilla.org
-0.0.0.0 install.mozilla.org
-0.0.0.0 live.mozillamessaging.com
-0.0.0.0 loop.services.mozilla.com
 0.0.0.0 onyx_tiles.stage.mozaws.net
 0.0.0.0 ostats.mozilla.com
 0.0.0.0 qsurvey.mozilla.com
 0.0.0.0 reporter.mozilla.org
-0.0.0.0 search.services.mozilla.com
 0.0.0.0 self-repair.mozilla.org
-0.0.0.0 setup.services.mozilla.com
 0.0.0.0 snippets.cdn.mozilla.net
 0.0.0.0 snippets.mozilla.com
 0.0.0.0 support.live.mozillamessaging.com
 0.0.0.0 telemetry-experiment.cdn.mozilla.net
 0.0.0.0 telemetry.mozilla.org
-0.0.0.0 testpilot.mozillalabs.com
 0.0.0.0 tiles.services.mozilla.com
 0.0.0.0 tiles.up.mozillalabs.com
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #

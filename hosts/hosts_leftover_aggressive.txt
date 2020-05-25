@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202005251443
+# Version: 202005251500
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -190,8 +190,33 @@
 # - {Anti-Pocket}
 0.0.0.0 api.getpocket.com
 0.0.0.0 getpocket.com
+0.0.0.0 getpocket.cdn.mozilla.net
+#
+# - {Browser Activation}
+0.0.0.0 activations.cdn.mozilla.net
+#
+# - {Captive Portal}
+0.0.0.0 detectportal.firefox.com
+#
+# - {Experiment}
+0.0.0.0 experiments.mozilla.org
+#
+# - {Installer}
+0.0.0.0 install.mozilla.org
+#
+# - {Firefox Hello / WebRTC/ PeerConnections}
+0.0.0.0 live.mozillamessaging.com
+0.0.0.0 loop.services.mozilla.com
+#
 # - {GeoLocation}
 0.0.0.0 location.services.mozilla.com
+#
 # - {Web Notifications Endpoint?}
 0.0.0.0 push.services.mozilla.com
+#
+# - {Geo Default Search?}
+0.0.0.0 search.services.mozilla.com
+#
+# - {OOB Setup?}
+0.0.0.0 setup.services.mozilla.com
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
