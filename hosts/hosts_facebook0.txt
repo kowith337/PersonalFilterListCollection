@@ -1,6 +1,6 @@
 # [uMatrix 1.3.15.100]
 # Title: Facebook Zero Hosts Block (dead-hosts verified version)
-# Version: 202004132029 (rearrangement)
+# Version: 202005251520 (rearrangement)
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/hosts
@@ -72,6 +72,7 @@
 0.0.0.0 airtel-expresswifi-com.airtel.in.expresswifi.com
 0.0.0.0 airtel.in.expresswifi.com
 0.0.0.0 airtel.internet.org
+0.0.0.0 ais.co.th.0.freebasics.com
 0.0.0.0 akamaized.freebasics.com
 0.0.0.0 akmai.freebasics.com
 0.0.0.0 alpha.0.freebasics.com
@@ -138,22 +139,6 @@
 0.0.0.0 dtac.freebasics.com
 0.0.0.0 dw.com.0.freebasics.com
 0.0.0.0 e.internet.org
-0.0.0.0 edge-z-1-p2-shv-01-arn2.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-atl3.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-bru2.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-gmp1.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-iad3.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-lga3.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-mad1.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-mxp1.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-nrt1.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-sea1.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-sin6.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-sof1.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-syd2.facebook.com
-0.0.0.0 edge-z-1-p2-shv-01-vie1.facebook.com
-0.0.0.0 edge-z-1-p2-shv-02-dfw5.facebook.com
-0.0.0.0 edge-z-1-p2-shv-02-hkg3.facebook.com
 0.0.0.0 edge-z-m-mini-shv-01-any2.facebook.com
 0.0.0.0 edge-z-m-mini-shv-01-arn2.facebook.com
 0.0.0.0 edge-z-m-mini-shv-01-cdg2.facebook.com
@@ -439,6 +424,7 @@
 0.0.0.0 mobile.facebook.com
 0.0.0.0 mobile.freebasics.com
 0.0.0.0 mobile.internet.org
+0.0.0.0 mobilelife.co.th.0.freebasics.com
 0.0.0.0 mx.freebasics.com
 0.0.0.0 mycb-ml.0.freebasics.com
 0.0.0.0 mzero.beta.facebook.com
@@ -765,8 +751,6 @@
 0.0.0.0 z-1-video.fpoa10-1.fna.fbcdn.net
 0.0.0.0 z-1-video.fszb1-1.fna.fbcdn.net
 0.0.0.0 z-1-video.xx.fbcdn.net
-0.0.0.0 z-1.c10r.facebook.com
-0.0.0.0 z-1.facebook.com
 0.0.0.0 z-graph.expresswifi.com
 0.0.0.0 z-m-any-api.facebook.com
 0.0.0.0 z-m-api.facebook.com
@@ -824,8 +808,6 @@
 0.0.0.0 z-m-scontent.facc5-1.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fbgt1-2.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fbgw4-2.fna.fbcdn.net
-0.0.0.0 z-m-scontent.fbkk1-3.fna.fbcdn.net
-0.0.0.0 z-m-scontent.fbkk1-4.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fbkk2-3.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fbkk2-4.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fbkk2-5.fna.fbcdn.net
@@ -852,6 +834,8 @@
 0.0.0.0 z-m-scontent.fbkk22-2.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fbkk22-3.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fbkk22-4.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk22-5.fna.fbcdn.net
+0.0.0.0 z-m-scontent.fbkk22-6.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fbog2-2.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fbsr11-1.fna.fbcdn.net
 0.0.0.0 z-m-scontent.fceb1-1.fna.fbcdn.net
@@ -1024,8 +1008,6 @@
 0.0.0.0 z-p3-scontent.fbcn8-2.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbey14-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbgw3-1.fna.fbcdn.net
-0.0.0.0 z-p3-scontent.fbkk1-3.fna.fbcdn.net
-0.0.0.0 z-p3-scontent.fbkk1-4.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbkk2-3.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbkk2-4.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbkk2-5.fna.fbcdn.net
@@ -1055,8 +1037,9 @@
 0.0.0.0 z-p3-scontent.fbkk22-2.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbkk22-3.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbkk22-4.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk22-5.fna.fbcdn.net
+0.0.0.0 z-p3-scontent.fbkk22-6.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbog2-3.fna.fbcdn.net
-0.0.0.0 z-p3-scontent.fbos1-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbsb1-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fbsb11-1.fna.fbcdn.net
 0.0.0.0 z-p3-scontent.fcgh11-1.fna.fbcdn.net
