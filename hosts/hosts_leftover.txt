@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202005251503
+# Version: 202005251552
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -563,6 +563,7 @@
 0.0.0.0 transaction-tracking-dot-mfec-martech.appspot.com
 0.0.0.0 trc.sanook.com
 0.0.0.0 trend.igmedianow.com
+0.0.0.0 unitus.synergy-e.com
 0.0.0.0 v1.api.useinsider.com
 0.0.0.0 vidstat.taboola.com
 0.0.0.0 view-stat.komchadluek.net
