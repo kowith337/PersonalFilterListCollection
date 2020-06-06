@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202005251500
+# Version: 202006061056
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -219,4 +219,16 @@
 #
 # - {OOB Setup?}
 0.0.0.0 setup.services.mozilla.com
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Others]
+# - {Captive portal abuse}
+#   https://pantip.com/topic/39955561
+#   https://pantip.com/topic/39959278
+#   - Blocking these domains cause internet unusable, these domains are mainly use for blocking connections and show billing due
+#     in the past, but now they use for abusing end-users by showing ads and self promo for subscribe promotions, I will keep
+#     blocking these until they're stopping do those kinds of shame advertising and marketing.
+0.0.0.0 service.truecorp.co.th
+0.0.0.0 service.trueinternet.co.th
+0.0.0.0 services.truecorp.co.th
+0.0.0.0 services.trueinternet.co.th
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
