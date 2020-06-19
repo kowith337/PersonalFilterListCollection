@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202005251500
+# Version: 202006191749
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -37,8 +37,6 @@
 #
 # - {Anti-Chrome}
 #   > Yes, I stop syncing with it!
-0.0.0.0 chromecontentsuggestions-pa.googleapis.com
-0.0.0.0 chromefeedcontentsuggestions-pa.googleapis.com
 0.0.0.0 chromereader-pa.googleapis.com
 0.0.0.0 chromesyncentities-pa.googleapis.com
 0.0.0.0 chromesyncpassword-pa.googleapis.com
@@ -56,12 +54,8 @@
 0.0.0.0 dataprep.googleapis.com
 #
 # - {Anti-DataMixer}
-0.0.0.0 datamixer-pa.googleapis.com
-0.0.0.0 plusmixer-pa.googleapis.com
 #
 # - {Anti-DigitalAssets}
-0.0.0.0 digitalassetlinks.googleapis.com
-0.0.0.0 digitalassetlinks.mtls.googleapis.com
 #
 # - {Anti-phone numbers lookup / upload}
 0.0.0.0 dialercallinfolookup-pa.googleapis.com
@@ -72,6 +66,8 @@
 #
 # - {Anti-Firebase Install}
 #   > Some apps are rely to that, especially for deploy GDPR, personal data concerns agreement, etc.
+#   > However, "Firebase" are widely know as bug tracker and data analytic capturer!
+#   > so, not just only app devs know those data, but "Google" also knows, too!!
 0.0.0.0 firebaseinstallations.googleapis.com
 #
 # - {Anti-network-based location lookup?}
@@ -89,6 +85,7 @@
 #
 # - {Anti-MESSages desktop sync/access}
 #   > Due to it's attempt to connect even you're not use that features, those connections sould not happen until you use it!
+#   > And it's become useless if you've switched to any alternative SMS/MMS apps, rather than Google!!
 0.0.0.0 instantmessaging-pa.googleapis.com
 #
 # - {Anti-Lens}
@@ -96,7 +93,6 @@
 0.0.0.0 lensphotos-pa.googleapis.com
 #
 # - {Anti-network quality measure}
-0.0.0.0 mobilenetworkscoring-pa.googleapis.com
 #
 # - {Google accounts info?}
 0.0.0.0 mdh-pa.googleapis.com
@@ -120,8 +116,7 @@
 # - {Anti-Redirector}
 #   > GPlay store and YouTube trying to connect this while ads are loading into your face!
 #   > However, it's also break some users who buy/rent and watch movies from Google Play.
-0.0.0.0 redirector.gvt1.com
-0.0.0.0 redirector.googlevideo.com
+#   > Revert back to generic leftover because of failing to provide proper reason of "neccessary" and "matter" to allow them!
 #
 # - {Anti-Google WebRTC STUN}
 0.0.0.0 stun.l.google.com
@@ -185,26 +180,33 @@
 0.0.0.0 lm.facebook.com
 0.0.0.0 lm.freebasics.com
 0.0.0.0 lm.messenger.com
+#
+# - {API/Graph domains, include alternate}
+#   > Useful if you intent to not use any official "Facebook" apps and keep using on web browsers, include WebView wrapper apps.
+0.0.0.0 a-api.facebook.com
+0.0.0.0 a-graph.facebook.com
+0.0.0.0 b-api.facebook.com
+0.0.0.0 b-graph.facebook.com
+0.0.0.0 graph.facebook.com
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Firefox Betrayals]
 # - {Anti-Pocket}
-0.0.0.0 api.getpocket.com
-0.0.0.0 getpocket.com
-0.0.0.0 getpocket.cdn.mozilla.net
+#   > Misleading to add "Chrome Android-alike" NTP (breaking) news feed feature, privacy compromised!
+#   > Worst than "Chrome" because they implement this feature in both Desktop and Mobile!!
+#   > Moved to generic leftover because "WEB BROWSER" IS AIN'T NEWS READER / MAGAZINE / TABLOID / ...!!!
+#     * Unless you directly and/or manually read them on those websites, any preloaded/recommended/zuckested are not welcome!
+#   > IF SOMEBODY USE ITS FEATURE, JUST STOP USING MY LEFTOVER LIST IS THE BEST AND LAST CHOICE THAT I CAN PREFER!!!!
 #
 # - {Browser Activation}
-0.0.0.0 activations.cdn.mozilla.net
 #
 # - {Captive Portal}
-0.0.0.0 detectportal.firefox.com
 #
 # - {Experiment}
-0.0.0.0 experiments.mozilla.org
 #
 # - {Installer}
 0.0.0.0 install.mozilla.org
 #
-# - {Firefox Hello / WebRTC/ PeerConnections}
+# - {Firefox Hello / WebRTC / PeerConnections} (Probably deprecated)
 0.0.0.0 live.mozillamessaging.com
 0.0.0.0 loop.services.mozilla.com
 #

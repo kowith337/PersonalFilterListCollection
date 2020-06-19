@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202005111826
+# Version: 202006191835
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -67,9 +67,7 @@ ww*.mobilelife.co.th
 
 # Other unwanted
 adasiatagmanager.*
-alert-*.club
-alert-*.fun
-alert-*.site
+alert-*.*
 amp.*
 ampproject.*
 beacon*.*
@@ -80,30 +78,27 @@ firebase*.*
 geniee*.*
 innity.*
 mtburn.*
-notice-*.club
-notice-*.fun
-notice-*.site
+notice-*.*
+notification-*.*
 nr-data.*
 nuffnang.*
 openx.*
 parkingcrew.*
 popclck.*
-protection-*.club
-protection-*.fun
-protection-*.site
+protection-*.*
+secure-guard.*
+secure-mobile.*
 truehits.*
 vpn*plus*.*
 vpn*plus.*
-www.*.club
-www.*.site
 yengo.*
 
-# Google CNAME Penetration (Mostly "Google L" subdomains, wildcard rules)
+# Google CNAME Penetration (Mostly "Google L" and some "GVT" subdomains, wildcard rules)
 *-google*.l.google.com
 *-google-analytics.*
 *-googlead*.*
 *-googletag*.*
-*2mdn*.google.com
+*-2mdn-*.google.com
 beacon.gvt*.com
 beacon*.gvt*.com
 google-analytics.*
@@ -112,9 +107,6 @@ googletag*.*
 pagead*.doubleclick.*
 pagead-*.l.google.com
 redirector.gvt*.com
-
-# Prevent any Firefox-based browsers use "CaptivePortal" for check connectivity (ping for network availability)
-detectportal.*
 
 # [Generic Reason]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Abusive DNS Cloaking (Don't forget to set 'checkCNAME = true' in 'DNSFilter.conf')
@@ -134,6 +126,7 @@ oghub.io
 omtrdc.net
 storetail.io
 tagcommander.com
+trafficmanager.net
 webtrekk.net
 wizaly.com
 wt-eu02.net
@@ -160,8 +153,42 @@ cloudflare-dns.com
 ciscobinary.openh264.org
 location.services.mozilla.com
 
-# Pocket is betrayal services that serve zuckested contents right in browser default home page in Firefox-based browsers.
-getpocket.com
+# Deprecated "HELLo" broker, endpoints, etc.
+loop.services.mozilla.com
+mozillamessaging.com
+
+# Push notifications
+push.services.mozilla.com
+
+# Probably auto load Geo-based default search!
+search.services.mozilla.com
+
+# OOB Setup?
+setup.services.mozilla.com
+
+# Related wildcard for this section!
+*-experiment*.mozilla.*
+*-experiment.mozilla.*
+*-report.mozilla.*
+*-reports.mozilla.*
+*tiles.*.mozilla*
+crash-stats.mozilla.*
+data.mozilla.*
+detectportal.*
+experiment*.mozilla.*
+experiment.mozilla.*
+fhr.*.mozilla.*
+getpocket.*
+input.mozilla.*.
+ostats.mozilla.*
+qsurvey.mozilla.*
+reporter.mozilla.*
+self-repair.mozilla.*
+snippets.*.mozilla.*
+snippets.mozilla.*
+telemetry.*.mozilla.*
+telemetry.mozilla.*
+tiles.*.mozilla*
 
 # [Hola Block]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # See also: https://github.com/lightswitch05/hosts/issues/129
@@ -233,25 +260,24 @@ gstaticadssl.l.google.com
 id.l.google.com
 mail-ads.google.com
 sb.l.google.com
+sb-ssl.l.google.com
 stun.l.google.com
 video-stats.l.google.com
 
-# Google play features (include play services, e.g. app invite, growth, phone number, subscriptions, etc.)
-androidsuggesthub-pa.googleapis.com
-growth-pa.googleapis.com
-myphonenumbers-pa.googleapis.com
-playatoms-pa.googleapis.com
-subscriptionsmanagement-pa.googleapis.com
-
 # PA-ranoid GoogleAPI connections
 acceleratedmobilepageurl.googleapis.com
+androidsuggesthub-pa.googleapis.com
+clientmetrics-pa.googleapis.
+clouderrorreporting.googleapis.com
 datamixer-pa.googleapis.com
 digitalassetlinks.googleapis.com
-digitalassetlinks.mtls.googleapis.com
 discover-pa.googleapis.com
 footprints-pa.googleapis.com
+growth-pa.googleapis.com
 infinitedata-pa.googleapis.com
+myphonenumbers-pa.googleapis.com
 personalsafety-pa.googleapis.com
+playatoms-pa.googleapis.com
 plusmixer-pa.googleapis.com
 sticker-pa.googleapis.com
 
@@ -267,20 +293,19 @@ android-safebrowsing.google.com
 
 # It's upload incoming phone numbers to check spam calls.
 # * Concern to anyone who touching phone numbers and contacts since various "Facebook" violations (please blame "ZUCK" for that!)
+# Commented spam protect endpoint, I hope it's only use for download/synchronise blocklist database.
 dialercallinfolookup-pa.googleapis.com
-telephonyspamprotect-pa.googleapis.com
+# telephonyspamprotect-pa.googleapis.com
 
 # Prefer to block if you don't trust their DNS services, e.g. DoT and DoH resolvers, maybe include "Chrome" it's own (async) DNS!
 dns.google
 dns.google.com
 metric.gstatic.com
 
-# Hotword (aka. suggestion keyowrd) blocking
-suggestqueries.googleapis.com
-
-# Google Play device certify?
-phonedeviceverification-pa.googleapis.com
-voledevice-pa.googleapis.com
+# Google Play subscriptions
+# - Needed to manage Google Play subscriptions that related to payments (game pass, app features unlock, remove ads in app, ...)
+# - it's good to block if you're not intent to use, make and or bought any IAP transactions.
+# subscriptionsmanagement-pa.googleapis.com
 
 # Block ASS-istant
 assistant.google.com
@@ -288,6 +313,13 @@ assistant.google.com
 # Geolocation?
 geomobileservices-pa.googleapis.com
 gmbmobile-pa.googleapis.com
+
+# Google MESSages desktop sync/access
+# - At desktop side, it's require to connect this domain for showing QR code, in order to use your phone for scan and pair. (#52)
+# - At mobile device side, it have many attemps to ping this domain, even you didn't use above feature.
+# - This connections will not neccessary if you're using another default SMS apps.
+instantmessaging-pa.googleapis.com
+notifications-pa.googleapis.com
 
 # Block Google Lens
 lens-pa.googleapis.com
@@ -297,22 +329,20 @@ lensphotos-pa.googleapis.com
 mdh-pa.googleapis.com
 
 # Phoninig home about network quality and also measuring? (Good to block, we should not submit any network info back to Google!)
-# - You can whitelist it if you have some problems like issue no. #50
+# - I prefer to block because of privacy compromise, why some app devs want to know how good of user's network connectivity?
+# - In case if you've face problems like issue #50, just whitelist or comment rules below.
 mobilenetworkscoring-pa.googleapis.com
-
-# Google MESSages desktop sync/access
-# - At desktop side, it's require to connect this domain for showing QR code, in order to use your phone for scan and pair. (#52)
-# - At mobile device side, it have many attemps to ping this domain, even you didn't use above feature.
-# - This connections will not neccessary if you're using another default SMS apps.
-instantmessaging-pa.googleapis.com
-notifications-pa.googleapis.com
 
 # Block Google News
 newslegacy-pa.googleapis.com
 
-# Google Contacts? (This may cause "Google account avatar" won't show!)
-# * In doubt, but commented...
-# people-pa.googleapis.com
+# People (This may cause "Google account avatar" won't show!?)
+# - If you store phone/mail contacts with alternative way and not to sync with Google, it's good to block this!
+people-pa.googleapis.com
+
+# Google Play device certify?
+phonedeviceverification-pa.googleapis.com
+voledevice-pa.googleapis.com
 
 # Google Photos?
 # * I won't comment because It doesn't mean to trade-off by using their space to upload and give their permissions to use them,
@@ -326,12 +356,16 @@ recommender.googleapis.com
 # * Commented in case is somebody still stuck to that!
 # reminders-pa.googleapis.com
 
+# Hotword (aka. suggestion keyowrd) blocking
+suggestqueries.googleapis.com
+
 # Wildcard goes here!
 *-chrome*-pa.googleapis.com
 adservice.google.*
 appinvite-*.googleapis.com
 chrome*-pa.googleapis.com
 content-*.googleapis.com
+digitalassetlinks.*.googleapis.com
 http*-pa.googleapis.com
 id.google.*
 recommender.*.google.com
@@ -452,6 +486,7 @@ fbpigeon.com
 360tools.org
 3mobilecontents.net
 3storage.net
+430.com
 4mobilefunz.com
 4v4jfe79erfxfu8z8.com
 54646.co
@@ -465,6 +500,7 @@ fbpigeon.com
 70characters.com
 755m.com
 7banana.com
+7eleven-th.club
 7me.co
 8086.com.tw
 81wm.com
@@ -477,6 +513,7 @@ fbpigeon.com
 9yam.com
 a1n.in
 a81.me
+aaxads.com
 ab4hr.com
 abis-com.com
 ablepnort.pw
@@ -496,13 +533,17 @@ add0n.com
 addictiveads.com
 addlink.mobi
 addtechhub.com
+addthisedge.com
+addtoany.com
 adelleandrew.com
 adfries.net
 adfrigate.com
+adingo.jp
 adiquity.com
 adjust.com
 admblink.xyz
 adn.ais.co.th
+adnium.com
 adnlog.ais.co.th
 adnuntius.com
 adok.asia
@@ -533,7 +574,9 @@ affmoney.top
 afftrack-data.com
 afftrack.com
 affxx.com
+agoodplus.com
 ahyoyo.com
+aidata.io
 aielber.com
 airpush.com
 ais-coth.com
@@ -547,15 +590,18 @@ alivetoyou.com
 allbet24hr.com
 allforbetthailand.com
 alpha-mobi.com
+alphacell.co
 ametechnology.co.th
 amkomobile.com
 amkoonline.com
 amung.us
 androidappsfree.mobi
 angellanguageacademy.com
+aniview.com
 anolog.mobi
 anonymousdemographics.com
 answireless.net
+ants.vn
 ao0c.club
 apiv9.com
 aplay.tv
@@ -563,6 +609,7 @@ aplaydigital.com
 aplaymusic.com
 app-measurement.com
 appave.mobi
+appier.net
 appk.mobi
 apple-warning.com
 applikteca.mobi
@@ -589,6 +636,7 @@ atmail.nl
 audiencerun.com
 authbill.com
 autoportal.com
+auulala.com
 aviasales.ru
 awap.tv
 awolf.mobi
@@ -605,14 +653,17 @@ bajajcapital.com
 bakerssolution.com
 ballhotclub.com
 bamobile.com
+ban-terng.com
 bandlane.com
 bbcmvdo.com
 bbcontent.co.th
 bcomnetwork.com
+beachfrontmedia.com
 beacstyle.pw
 beezzi.com
 belombrea.com
 bemobtrk.com
+beonixom.com
 bestgamebook.mobi
 bestgamebox.mobi
 bestgameworld.mobi
@@ -622,7 +673,9 @@ bestperform3nce.com
 bestphoneapps.mobi
 bestwomenintown.com
 betreat.com
+bfmio.com
 bigdoremi.com
+biggerthanyou14.live
 bigolives.tv
 bikesales.com.au
 billmscurlrev.com
@@ -688,6 +741,7 @@ chickcell.com
 chickyclub.net
 chiencenter.com
 chilliclubs.com
+chillmoby.com
 chocoboard.com
 chooseandwinit.com
 chupa.mobi
@@ -700,6 +754,7 @@ clausiafze.com
 click404.net
 clickadu.com
 clickdealer.com
+clickdedee.com
 clickmlife.com
 clickmultimedia.co.th
 clicksgear.com
@@ -707,6 +762,7 @@ clickstk.com
 clickwinks.com
 clip.vu
 clipcute.info
+clipdonjai.com
 closetologie.com
 cloudcnt.com
 cloudify.cc
@@ -740,9 +796,12 @@ cpactions.com
 cpgnrotationurl.com
 cpinfantil.com
 cpitraffic.com
+cpsee.com
 cpweb.com
 crashlytics.com
 crazyegg.com
+criteo.com
+criteo.net
 crwdcntrl.net
 cryptobrowser.site
 csi.gstatic.com
@@ -750,6 +809,7 @@ cswinpz.com
 ct9.me
 ctrackz.net
 cuteclub.tv
+cutedev.net
 cuteforyou.mobi
 cutties.net
 cxense.com
@@ -785,6 +845,7 @@ dgmobix.com
 digitalmerkat.com
 digitalngo.com
 digitalzoneng.com
+digitru.st
 dindo.co.th
 dinoraptzor.org
 dittolite.com
@@ -798,12 +859,14 @@ dosbuy.com
 downloadhub.me
 downloadwap.co.uk
 downloadwap.com
+dreamgame33.com
 dsglp.com
 dsgpy.com
 dtacplay.com
 dtscout.com
 durarenti.pw
 e668ou.com
+easylist.club
 ebizmobile.com
 ectionma.pw
 edenadoptionagency.com
@@ -825,6 +888,7 @@ etexator.pw
 etopgame.com
 etracker.cc
 etsthailand.com
+evidon.com
 exdynsrv.com
 exezhanqun.com
 exoclick.com
@@ -862,8 +926,10 @@ footballzean.com
 footprint.net
 formulawire.com
 fout.jp
+frechint.com
 free8888content.com
 freecot.pw
+freemineapplicationads.icu
 freezone.mobi
 frukt.devpantip.com
 frukt.pantip.com
@@ -944,6 +1010,7 @@ gdmconvtrck.com
 gdmgsecure.com
 generaltagcom.ga
 genieessp.com
+genieesspv.jp
 geoplugin.net
 get-express-vpn.com
 get-intouch.com
@@ -987,12 +1054,16 @@ govome.com
 grabmobitraffic.com
 grandmobi.net
 graph.sanook.com
+gratonrewardcenter.icu
 greatestapps.mobi
 greatmobilegames.mobi
 grenadatradecentre.com
+gsspat.jp
+gssprt.jp
 gtzlz.com
 guideball.com
 guru3step.com
+guruhahey.com
 gw2cloud.com
 gzazone.com
 hack-dragon-city.com
@@ -1080,6 +1151,7 @@ instant.page
 instantbabes.mobi
 integrativeanalytic.com
 interchan.com
+invol.co
 ipxxxzeed.com
 iqwmxn.com
 isc888th.com
@@ -1095,6 +1167,8 @@ ivalent.com
 iyfnzgb.com
 izenmobi.com
 izooto.com
+jadjann.com
+jamloey.com
 jibhd.com
 jinshengpacking.com
 jiudianzhaopin.com
@@ -1110,6 +1184,7 @@ kangsom.com
 karysale.pw
 katrac.com
 key-travel.com
+kfc-box.club
 khelbazar.in
 kilomniadstaz.info
 kingstar.pw
@@ -1192,13 +1267,16 @@ ma3.co
 maciejdoryk.com
 macrokiosk.com
 maejaow.com
+maesot168.com
 magent.my
 magikmobile.mobi
 mai88.com
 malanden.pw
 manymy.com
+marhasanook.com
 mastermovie-hd.mobi
 matchme.com.ng
+mathtag.com
 maxforecast.com
 maxmall.pw
 may91.vn
@@ -1267,6 +1345,7 @@ mobilefunny.com
 mobilegameblast.com
 mobilegamepass.com
 mobilejmp.com
+mobilephonechance.site
 mobilesenses.com
 mobilesexlife.mobi
 mobilesitexxx.com
@@ -1310,6 +1389,7 @@ monomax.me
 monomaxx.com
 monotechnology.com
 monozone.com
+monthlywinners.com
 moo.mn
 moobig.com
 mookjoke.com
@@ -1317,6 +1397,7 @@ moserv.co.th
 moserv.mobi
 moviegroups88.com
 movilfun4u.com
+mox.tv
 mp3-shared.com
 mrlittlejohn.com
 mtburn.com
@@ -1368,9 +1449,12 @@ njysmy.com
 nkrbt.com
 nmpcenter.com
 noclef.com
+nordvpn.com
 notesdav.pw
 nowportal.net
+nr-data.net
 nrs-group.com
+nuffnang.co.th
 nusa-putra.com
 nytive.com
 obet88.tk
@@ -1387,6 +1471,7 @@ okjojihgv.com
 okyesmobi.com
 oli.tools
 omaharlog.pw
+omnithrottle.com
 onclasrv.com
 onclickads.net
 onelinkgroup.com
@@ -1394,10 +1479,12 @@ oneroofbi.com
 onesignal.com
 online-clip.com
 onlytopoffers.com
+onthe.io
 onwardinated.com
 oomph.club
 opencurvemedia.com
 opendayz.com
+openx.net
 openx.notebookspec.com
 openxmarket.asia
 operastarz.com
@@ -1406,6 +1493,7 @@ optad360.io
 opticks.io
 optsearch.net
 orepic.com
+orpheusdroid.com
 ourbestcontent.com
 outputfx.com
 overtleva.pw
@@ -1430,8 +1518,10 @@ peakonspot.com
 peakperformsrv.com
 peavidev.pw
 peerfly.com
+perfectmarket.com
 perfonspot.com
 performancerevenues.com
+petametrics.com
 phadoo-mobile.com
 phone-notify.com
 phonemobileapps.com
@@ -1458,6 +1548,7 @@ playwinasia.com
 playwork.co.th
 playzone.mobi
 pleasurehere.com
+plern-jai.com
 plista.com
 pluckyaff.com
 pluckynetwork.com
@@ -1484,6 +1575,7 @@ privatevideoz.com
 privatewant.com
 privatewow.tv
 programablecontrol.com
+protectad.online
 protectbrowser.info
 ptengine.com
 pubmt.ch
@@ -1513,6 +1605,7 @@ re1store.com
 real-prizesday.life
 realcenter-mobileapps2.com
 realgirls.mobi
+reallyspcials.com
 redclub.mobi
 redporntube.xyz
 regaming.com
@@ -1531,6 +1624,7 @@ rewardnow.com
 rfebet.tk
 rgvqcsxqge.com
 rhmobi.com
+right-team.digital
 ringtoneth.com
 ro88ro.tk
 robotcaptcha2.info
@@ -1576,14 +1670,6 @@ scan-do.com
 scattertraff.com
 scientiamobile.com
 scorecardresearch.com
-scr888-vip.com
-scr888hd.com
-scr888rdg.com
-scr888sp.com
-scr888th.com
-scr888th.live
-scr888thcasino.com
-scr888thslot.com
 scratch-surveys.co
 seacom.co.th
 seaman2u.com
@@ -1606,6 +1692,7 @@ sexyinvaders.com
 sexyjung.com
 sexytubes.mobi
 shakingclicks.com
+sharethis.com
 shemaroo.com
 shieldministry.com
 shinee.com
@@ -1652,6 +1739,7 @@ softwood.pw
 sohs.co
 solutiononeholding.com
 somaticiens.com
+sombes.com
 sosmob.mobi
 spak.me
 sparklemob.com
@@ -1668,17 +1756,20 @@ stats.in.th
 stats.wp.com
 stormobi.com
 storyberl.pw
+storygize.net
 stream-flix.mobi
 stream-flixth.com
 streamflix.mobi
 streamsharp.com
 studiox-babes.com
 success-is-in-reach.com
+sudjad.com
 suffonect.pw
 suhtbneyq.cf
 sumome.com
 sumone.mobi
 sun-system.com
+suncity.online
 sunmob.net
 sunnygames.club
 supergirls.one
@@ -1698,6 +1789,7 @@ taboola.com
 tagserve.asia
 tapad.com
 tc-clicks.com
+tcplndr.club
 tdedlove.com
 tdedteng.com
 tdedthai.com
@@ -1705,6 +1797,7 @@ tdsjsext1.com
 tech-vault.com
 temenjalan.com
 terragonbase.com
+tescolotus-th.club
 th-scr888.com
 th1cs.com
 thai-iphone.com
@@ -1721,6 +1814,7 @@ thaiza.com
 tharbadir.com
 thepind.mobi
 thestandardlife.com
+thetacar.com
 thevelnit.pw
 thieferwi.pw
 thinksmart.co.th
@@ -1754,6 +1848,7 @@ trackmeplease.com
 tracksz.co
 trackvoluum.com
 traffic-c.com
+traffic-sharing.com
 trafficshark.pro
 traffikflow.com
 trakkthisfor.info
@@ -1765,6 +1860,7 @@ trend-tech.net
 trippointz.com
 trk-indexmobi.com
 trktoken.com
+truehits.in.th
 truevid.mobi
 truevids.mobi
 truevivid.mobi
@@ -1783,6 +1879,7 @@ tynt.com
 tzkbet.tk
 u-nee.com
 ubic-global.com
+ublock.org
 ude182.com
 ugjbet.tk
 umeng.com
@@ -1790,6 +1887,7 @@ umobi.biz
 unithese-resteven.icu
 unpuzzled.net
 upp.st
+uropportunity.com
 useinsider.com
 user-api.com
 user-clicks.com
@@ -1813,6 +1911,7 @@ videos4men.com
 videosondemand.online
 videosthai.com
 videowap.net
+vidible.tv
 vidoomy.com
 vilandsoft.com
 vilangames.xyz
@@ -1820,6 +1919,7 @@ vipcliphd.com
 vipgames.me
 viral-mix.com
 visitor-analytics.io
+visualwebsiteoptimizer.com
 vitalgall.pw
 vodbinny.pw
 voluumtrk.com
@@ -1827,7 +1927,6 @@ voluumtrk2.com
 vovivooo.com
 vplaynow.com
 vpnprotectplus.com
-vpnshieldplus2.com
 vrscr888.com
 vsjcommsource.com
 vstyle4u.com
@@ -1844,6 +1943,7 @@ waphub.mobi
 waplog.com
 waremode.com
 wathspap.com
+waust.at
 waveparadise.xyz
 waypeach.pw
 wealthandwealth.com
@@ -1881,6 +1981,8 @@ xn--42cn1aug7dc0hrhc1gd.net
 xn--r3cpjgt3b.com
 xspicyvideos.com
 yasune360.com
+yengo.asia
+yengo.com
 yibsee.com
 yim88.tk
 youlaugh.online
@@ -1891,6 +1993,7 @@ yu0123456.com
 yuppytv.com
 yuppyuppytv.com
 yuqazate.com
+z8.com
 zagmob.com
 zeanhot.com
 zeankickoff.com
