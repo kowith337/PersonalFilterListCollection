@@ -1,6 +1,6 @@
-[uBlock Origin 1.19.0]
+[uBlock Origin 1.27.11]
 ! Title: kowith337's Test List
-! Version: 202005031358
+! Version: 202006221921
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -80,37 +80,82 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 ! [Legacy internal scriptlets]
 ! Use only internal scriptlets provided by uBO for this section.
 ! - Remove unnecessary cookies (Currently it's caveat due to scriptlets cannot modify or delete domain-level + HTTP only cookies)
-facebook.com,instagram.com,messenger.com##script:inject(cookie-remover.js, _js_datr)
-facebook.com,instagram.com,messenger.com##script:inject(cookie-remover.js, datr)
-facebook.com,instagram.com,messenger.com##script:inject(cookie-remover.js, noscript)
-facebook.com,instagram.com,messenger.com##script:inject(cookie-remover.js, x-referer)
+facebook.com,instagram.com,messenger.com##+js(cookie-remover, _js_datr)
+facebook.com,instagram.com,messenger.com##+js(cookie-remover, datr)
+facebook.com,instagram.com,messenger.com##+js(cookie-remover, noscript)
+facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-referer)
 
 ! [External scriptlets]
 ! Requirement for this section: @uBlock-user's scriptlets: https://github.com/uBlock-user/uBO-Scriptlets
 ! Raw: https://raw.githubusercontent.com/uBlock-user/uBO-Scriptlets/master/scriptlets.js
 ! - Giving S**t against "Goolag" in BrowserLeaks test.
+browserleaks.com##+js(cookie-set, __gads, FUCK)
+browserleaks.com##+js(cookie-set, _ga, FUCK)
+browserleaks.com##+js(cookie-set, _gat, FUCK)
+browserleaks.com##+js(cookie-set, _gid, FUCK)
+browserleaks.com##+js(cookie-set, bl_gad, 1)
+browserleaks.com##+js(cookie-set, bl_gaq, 1)
+! - Tesing stage: Remove internal tag
+! google.com##+js(remove-div-tag, data-ved) // Broken due to it's remove everything entirely!
+! - Testing stage: Remove META
+akibatan.com##+js(remove-meta, onesignal)
+facebook.com##+js(remove-meta, referrer)
+! - Testing stage: I want to try re-enable XSS protection on Facebook
+facebook.com,instagram.com,messenger.com##+js(set-respheader, x-xss-protection, 1)
+! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
+facebook.com,instagram.com,messenger.com##+js(cookie-set, noscript, 0)
+
+! - Strip unnecessary URL parameters (mostly use for tracking users)
+!   - "Query Stripper" ceased to functional because upstream scriptlets was removed that function for a while ago, I may looking
+!     back into his past commits and maybe copy that function for make these rules below working again, however, I won't forget
+!     to give his proper credits and licenses.
+aliexpress.com,taobao.com,tmall.com##+js(query-stripper, /(?<=\?|\&)(go|main)_item(_id|id)=\d+/)
+aliexpress.com,taobao.com,tmall.com##+js(query-stripper, /(?<=\?|\&)(pvid|scm|sourceType|sm|spm|ttid|ut_sk|utparam)=.+[\&]/)
+f8.com,facebook.com,messenger.com##+js(query-stripper, /(?<=\?|\&)(__rv__|__so__|__tn__)=.+[\&]/)
+f8.com,facebook.com,messenger.com##+js(query-stripper, /(?<=\?|\&)(__xts__\[\d\]|__xts__\%5B\d\%5D)=.+[\&]/)
+f8.com,facebook.com,messenger.com##+js(query-stripper, /(?<=\?|\&)(_ft_|__ccr)=.+[\&]/)
+f8.com,facebook.com,messenger.com##+js(query-stripper, /(?<=\?|\&)(_rdc|__m_async_page__|__m_log_async__|mt_nav)=\d+/)
+f8.com,facebook.com,messenger.com##+js(query-stripper, /(?<=\?|\&)(acontext|bacr|dti|eid|entrypoint|fb_dtsg_ag|fbclid|lst|page_source|ref|referrer|refid|refsrc|session_id|settings_tracking|sw_fnr_id|source)=.+[\&]/)
+f8.com,facebook.com,messenger.com##+js(query-stripper, /(?<=\?|\&)(app|entry|privacy)_\w+=.+[\&]/)
+f8.com,facebook.com,messenger.com##+js(query-stripper, /(?<=\?|\&)(aref|fref|hc_ref|loc_ref|pn_ref)=.+[\&]/)
+f8.com,facebook.com,messenger.com##+js(query-stripper, /(?<=\?|\&)\w+_ref=.+[\&]/)
+f8.com,facebook.com,messenger.com##+js(query-stripper, /(?<=\?|\&)ref\w+=.+[\&]/)
+f8.com,facebook.com,messenger.com##+js(query-stripper, /(?<=\?|\&)ref_\w+=.+[\&]/)
+google.com##+js(query-stripper, /(?<=\?|\&)(aqs|ei|gs_l|gs_r|oq|stick|usg|ved)=.+[\&]/)
+google.com##+js(query-stripper, /(?<=\?|\&)(bih|biw|ibh|ibw|ust|vet)=.+[\&]/)
+google.com##+js(query-stripper, /(?<=\?|\&)sa=\w/)
+google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##+js(query-stripper, /(?<=\?|\&)utm=.+[\&]/)
+google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##+js(query-stripper, /(?<=\?|\&)utm_\w+=.+[\&]/)
+instagram.com##+js(query-stripper, /(?<=\?|\&)igshid=.+[\&]/)
+mozilla.com,mozilla.net,mozilla.org##+js(query-stripper, /(?<=\?|\&)src=.+[\&]/)
+play.google.com##+js(query-stripper, /(?<=\?|\&)(pcampaignid|referrer)=.+[\&]/)
+steamcommunity.com,steampowered.com##+js(query-stripper, /(?<=\?|\&)snr=.+[\&]/)
+twitter.com,t.co##+js(query-stripper, /(?<=\?|\&)amp=\d/)
+youtube.com##+js(query-stripper, /(?<=\?|\&)feature=.+[\&]/)
+youtube.com##+js(query-stripper, /(?<=\?|\&)redir_token=.+[\&]/)
+
+! Platform specific - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+!#if env_chrome
+! - Remove inline scripts (New toy for chromium-based users as inline element filtering like Firefox)
+!   However, using this may cause webpage to load as `wyciwyg` scheme instead and any blocking rules maybe allowed or disabled,
+!   e.g. uMatrix are allow `wyciwyg-scheme` by default.
+! - This require @uBlock-user's scriptlets, same as external scriptlets above.
+akibatan.com##+js(remove-inline-script, /googlesyndication|mi_track_user|monsterinsights_frontend|window.OneSignal|window._stq|_Hasync/)
+!#endif
+
+!#if env_firefox
+! - Backward compatibility because old script inject method will cease to support since 1.27.11 and will be no longer support
+!   publically once the stable version (1.27.12) are available.
+akibatan.com##script:inject(remove-inline-script.js, /googlesyndication|mi_track_user|monsterinsights_frontend|window.OneSignal|window._stq|_Hasync/)
+akibatan.com##script:inject(remove-meta.js, onesignal)
+aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(go|main)_item(_id|id)=\d+/)
+aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(pvid|scm|sourceType|sm|spm|ttid|ut_sk|utparam)=.+[\&]/)
 browserleaks.com##script:inject(cookie-set.js, __gads, FUCK)
 browserleaks.com##script:inject(cookie-set.js, _ga, FUCK)
 browserleaks.com##script:inject(cookie-set.js, _gat, FUCK)
 browserleaks.com##script:inject(cookie-set.js, _gid, FUCK)
 browserleaks.com##script:inject(cookie-set.js, bl_gad, 1)
 browserleaks.com##script:inject(cookie-set.js, bl_gaq, 1)
-! - Tesing stage: Remove internal tag
-! google.com##script:inject(remove-div-tag.js, data-ved) // Broken due to it's remove everything entirely!
-! - Testing stage: Remove META
-akibatan.com##script:inject(remove-meta.js, onesignal)
-facebook.com##script:inject(remove-meta.js, referrer)
-! - Testing stage: I want to try re-enable XSS protection on Facebook
-facebook.com,instagram.com,messenger.com##script:inject(set-respheader.js, x-xss-protection, 1)
-! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
-facebook.com,instagram.com,messenger.com##script:inject(cookie-set.js, noscript, 0)
-
-! - Strip unnecessary URL parameters (mostly use for tracking users)
-!   - "Query Stripper" ceased to functional because upstream scriptlets was removed that function for a while ago, I may looking
-!     back into his past commits and maybe copy that function for make these rules below working again, however, I won't forget
-!     to give his proper credits and licenses.
-aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(go|main)_item(_id|id)=\d+/)
-aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(pvid|scm|sourceType|sm|spm|ttid|ut_sk|utparam)=.+[\&]/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(__rv__|__so__|__tn__)=.+[\&]/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(__xts__\[\d\]|__xts__\%5B\d\%5D)=.+[\&]/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(_ft_|__ccr)=.+[\&]/)
@@ -121,6 +166,13 @@ f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)\w+_ref=.+[\&]/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)ref\w+=.+[\&]/)
 f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)ref_\w+=.+[\&]/)
+facebook.com##script:inject(remove-meta.js, referrer)
+facebook.com,instagram.com,messenger.com##script:inject(cookie-remover.js, _js_datr)
+facebook.com,instagram.com,messenger.com##script:inject(cookie-remover.js, datr)
+facebook.com,instagram.com,messenger.com##script:inject(cookie-remover.js, noscript)
+facebook.com,instagram.com,messenger.com##script:inject(cookie-remover.js, x-referer)
+facebook.com,instagram.com,messenger.com##script:inject(cookie-set.js, noscript, 0)
+facebook.com,instagram.com,messenger.com##script:inject(set-respheader.js, x-xss-protection, 1)
 google.com##script:inject(query-stripper.js, /(?<=\?|\&)(aqs|ei|gs_l|gs_r|oq|stick|usg|ved)=.+[\&]/)
 google.com##script:inject(query-stripper.js, /(?<=\?|\&)(bih|biw|ibh|ibw|ust|vet)=.+[\&]/)
 google.com##script:inject(query-stripper.js, /(?<=\?|\&)sa=\w/)
@@ -133,13 +185,5 @@ steamcommunity.com,steampowered.com##script:inject(query-stripper.js, /(?<=\?|\&
 twitter.com,t.co##script:inject(query-stripper.js, /(?<=\?|\&)amp=\d/)
 youtube.com##script:inject(query-stripper.js, /(?<=\?|\&)feature=.+[\&]/)
 youtube.com##script:inject(query-stripper.js, /(?<=\?|\&)redir_token=.+[\&]/)
-
-! Platform specific - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-!#if env_chrome
-! - Remove inline scripts (New toy for chromium-based users as inline element filtering like Firefox)
-!   However, using this may cause webpage to load as `wyciwyg` scheme instead and any blocking rules maybe allowed or disabled,
-!   e.g. uMatrix are allow `wyciwyg-scheme` by default.
-! - This require @uBlock-user's scriptlets, same as external scriptlets above.
-akibatan.com##script:inject(remove-inline-script.js, /googlesyndication|mi_track_user|monsterinsights_frontend|window.OneSignal|window._stq|_Hasync/)
 !#endif
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !

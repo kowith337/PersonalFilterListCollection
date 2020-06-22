@@ -1,6 +1,6 @@
-[uBlock Origin 1.20.0]
+[uBlock Origin 1.27.11]
 ! Title: Miscellaneous Annoyance
-! Version: 202004172341
+! Version: 202006221924
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -345,12 +345,12 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||addons.mozilla.org/*/addon/*/developers$document
 
 ! Scriplets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-m.intl.taobao.com,m.taobao.com##script:inject(addEventListener-defuser.js, load, getFB_GOOLE_trackJs)
-minecraftforge.net##script:inject(abort-current-inline-script.js, _comscore)
-minecraftforge.net##script:inject(abort-current-inline-script.js, window.factorem)
-randomnessthing.com##script:inject(abort-on-property-read.js, Criteo)
-randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptableAdIfAdblocked)
-savefrom.net##script:inject(abort-current-inline-script.js, tplYouTubePopupHelper)
+m.intl.taobao.com,m.taobao.com##+js(aeld, load, getFB_GOOLE_trackJs)
+minecraftforge.net##+js(acis, _comscore)
+minecraftforge.net##+js(acis, window.factorem)
+randomnessthing.com##+js(aopr, Criteo)
+randomnessthing.com##+js(aopw, DisplayAcceptableAdIfAdblocked)
+savefrom.net##+js(acis, tplYouTubePopupHelper)
 
 ! Specific Use! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [GitHub] I don't mind if I'm still use XUL Legacy version of Firefox and get noticed that the site won't support older Firefox
@@ -367,9 +367,19 @@ imgur.com##.FloatingOIA-container
 imgur.com##.get-app-block
 !#endif
 
-! [Backup since uBO 1.20 doesn't support standalone use of `~document` exception]
+! [Backward compatibility]
 !#if env_firefox
+! - uBO 1.20 and newer doesn't support standalone use of `~document` exception
 ||redditmedia.com/gtm^$important,~document
 ||redditstatic.com/gtm^$important,~document
+
+! - uBO 1.27.12 will cease to support old `##script:inject()` code and need to change to new `##+js()` instead.
+!   For now, it will stop supporting since 1.27.11 and onward.
+m.intl.taobao.com,m.taobao.com##script:inject(addEventListener-defuser.js, load, getFB_GOOLE_trackJs)
+minecraftforge.net##script:inject(abort-current-inline-script.js, _comscore)
+minecraftforge.net##script:inject(abort-current-inline-script.js, window.factorem)
+randomnessthing.com##script:inject(abort-on-property-read.js, Criteo)
+randomnessthing.com##script:inject(abort-on-property-write.js, DisplayAcceptableAdIfAdblocked)
+savefrom.net##script:inject(abort-current-inline-script.js, tplYouTubePopupHelper)
 !#endif
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !

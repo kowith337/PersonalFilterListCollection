@@ -1,6 +1,6 @@
-[uBlock Origin 1.16.7.2]
+[uBlock Origin 1.27.11]
 ! Title: GelboLube (Legacy) [old split menubar]
-! Version: 202003042124
+! Version: 202006221913
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/legacy/gelbolube.txt
@@ -248,23 +248,23 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ! Inject Scriptlets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Prevent Google Analytics to be executed, but it works only inline script due to they recently add asynchronous script after
 !    document loaded.
-gelbooru.com##script:inject(abort-on-property-write.js, GoogleAnalyticsObject)
+gelbooru.com##+js(aopw, GoogleAnalyticsObject)
 
 ! 2. Prevent JuicyAds execute, same behavior as Google Analytics
-gelbooru.com##script:inject(abort-on-property-write.js, adsbyjuicy)
+gelbooru.com##+js(aopw, adsbyjuicy)
 
 ! 3. Experimental, to foil ILS function for Chromium / Firefox WebExt
-gelbooru.com##script:inject(abort-current-inline-script.js, AddZone, idzone)
-gelbooru.com##script:inject(abort-current-inline-script.js, ImplicityBreakingSite)
-gelbooru.com##script:inject(abort-current-inline-script.js, adtoniq)
-gelbooru.com##script:inject(abort-current-inline-script.js, cookieName, gelcomPoop)
-gelbooru.com##script:inject(abort-current-inline-script.js, domain_base, exosrv.com)
-gelbooru.com##script:inject(abort-current-inline-script.js, serve, script_url)
-gelbooru.com##script:inject(abort-current-inline-script.js, window.dataLayer, gtag)
+gelbooru.com##+js(acis, AddZone, idzone)
+gelbooru.com##+js(acis, ImplicityBreakingSite)
+gelbooru.com##+js(acis, adtoniq)
+gelbooru.com##+js(acis, cookieName, gelcomPoop)
+gelbooru.com##+js(acis, domain_base, exosrv.com)
+gelbooru.com##+js(acis, serve, script_url)
+gelbooru.com##+js(acis, window.dataLayer, gtag)
 
 ! 4. Inject constant value (Only a value that not match to specific string will be applied)
-gelbooru.com##script:inject(set-constant.js, ExoDetector, noopfunc)
-gelbooru.com##script:inject(set-constant.js, adtoniq, noopfunc)
+gelbooru.com##+js(set, ExoDetector, noopfunc)
+gelbooru.com##+js(set, adtoniq, noopfunc)
 
 ! CSS Re-design / Mobile Improvement  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Remove alert bar and adjusting header menu position to use half screen of each instead of stacking because it ate up space
@@ -344,4 +344,20 @@ gelbooru.com##script:contains(trw_domain)
 ! 1. Cancel hiding "Switch layout" for actual mobile devices, sometime it's needed to do, I guess.
 !#if !env_mobile
 gelbooru.com##.alert-info:has(a[href*="?page=ihnt"])
+!#endif
+
+! 2. Backward compatibility of XUL-based Firefox (aka. Legacy) because these are no longer support since 1.27.11 and will
+!    completely not supported once stable release (1.27.12) are publically available for update.
+!#if env_firefox
+gelbooru.com##script:inject(abort-current-inline-script.js, AddZone, idzone)
+gelbooru.com##script:inject(abort-current-inline-script.js, ImplicityBreakingSite)
+gelbooru.com##script:inject(abort-current-inline-script.js, adtoniq)
+gelbooru.com##script:inject(abort-current-inline-script.js, cookieName, gelcomPoop)
+gelbooru.com##script:inject(abort-current-inline-script.js, domain_base, exosrv.com)
+gelbooru.com##script:inject(abort-current-inline-script.js, serve, script_url)
+gelbooru.com##script:inject(abort-current-inline-script.js, window.dataLayer, gtag)
+gelbooru.com##script:inject(abort-on-property-write.js, GoogleAnalyticsObject)
+gelbooru.com##script:inject(abort-on-property-write.js, adsbyjuicy)
+gelbooru.com##script:inject(set-constant.js, ExoDetector, noopfunc)
+gelbooru.com##script:inject(set-constant.js, adtoniq, noopfunc)
 !#endif
