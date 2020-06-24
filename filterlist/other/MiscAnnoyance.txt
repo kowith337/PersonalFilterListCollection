@@ -1,6 +1,6 @@
 [uBlock Origin 1.27.11]
 ! Title: Miscellaneous Annoyance
-! Version: 202006221924
+! Version: 202006222112
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -33,6 +33,10 @@ linkis.com##.other-pages-holder .right-column
 linkis.com##.popup_force-auth
 linkis.com##.theme15-authorize
 
+! [Taobao Mobile]
+m.intl.taobao.com,m.taobao.com##.App div[class^="smartbanner"]
+m.intl.taobao.com,m.taobao.com##.zebra-oversea-smartbanner
+
 ! [Minecraft] Forge Ads Pane
 minecraftforge.net##.ad-container
 minecraftforge.net##.ad-container-framed
@@ -48,10 +52,6 @@ old.reddit.com##.ProfileVoiceAd
 old.reddit.com##.TrendingProfilesSidebar
 old.reddit.com##.commentsignupbar
 old.reddit.com##.listingsignupbar
-
-! [Taobao Mobile]
-m.intl.taobao.com,m.taobao.com##.App div[class^="smartbanner"]
-m.intl.taobao.com,m.taobao.com##.zebra-oversea-smartbanner
 
 ! [SaveFrom] aka. SSYouTube
 ! - I prefer Invidious or NewPipe / SkyTube (if you use Android), otherwise, you may face some scam sites below...
@@ -88,6 +88,17 @@ twitter.com##div[class^="MomentsPermalinkPage"] .MomentsPermalinkPage-related
 ! [WallGif]
 wallgif.com##content .big-modal
 wallgif.com##content .big_modal_bg
+
+! [Line WebToons]
+! - Taunting against users who didn't download their official apps are bad practice of promoting their own apps!
+m.webtoons.com###_appDownloadPopup
+m.webtoons.com##.viewer_cont_wrap div[class^="downapp"]
+m.webtoons.com##footer p[class^="downapp"]
+webtoons.com###footer .foot_app
+! - "Share" panel shouldn't have any extra words that doesn't helpful and/or seems to force to do so...
+m.webtoons.com##.ly_share .inner .dsc_encourage
+! - Unbreak "Thai Adblock filters" due to it's hide episode lists on desktop site version.
+webtoons.com#@#.banner
 
 ! [Wikipedia] "Wiki loves" overpromoted annoyances
 wikimedia.org,wikipedia.org###centralNotice:has(a[href*="Commons:Wiki_Loves"])
@@ -190,6 +201,11 @@ twitter.com##div[data-reactroot] div[class] > div[data-focusable][tabindex][clas
 ! [WallGif] Disable AdBlock...? HOW ABOUT NO!!
 wallgif.com###overlay:has(img[alt="Loader"])
 wallgif.com##content div[id^=block_modal]
+
+! Special procedurual - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Note: require uB0 version 1.26.0 or above
+! - Remove promoted comic overlay (include dimmed)
+m.webtoons.com##div[id^="layerNoticePopup"]:remove()
 
 ! HTML Filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: This may work only FF quantum + uB0 WebExt
