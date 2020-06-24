@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202004272044
+! Version: 202006241612
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -62,9 +62,11 @@
 ||facebook.com/*&dti=$xmlhttprequest
 ||facebook.com/*&eid=$document,subdocument,important
 ||facebook.com/*&eid=$xmlhttprequest
+||facebook.com/*&entry_*=$document,subdocument,important
+||facebook.com/*&entry_*=$xmlhttprequest
 ||facebook.com/*&entrypoint=$document,subdocument,important
 ||facebook.com/*&entrypoint=$xmlhttprequest
-||facebook.com/*&fb_dtsg_ag=$document,important
+||facebook.com/*&fb_dtsg*$document,important
 ||facebook.com/*&fref=$document,subdocument,important
 ||facebook.com/*&fref=$xmlhttprequest
 ||facebook.com/*&hc_location=$document,subdocument,important
@@ -101,9 +103,11 @@
 ||facebook.com/*?dti=$xmlhttprequest
 ||facebook.com/*?eid=$document,subdocument,important
 ||facebook.com/*?eid=$xmlhttprequest
+||facebook.com/*?entry_*=$document,subdocument,important
+||facebook.com/*?entry_*=$xmlhttprequest
 ||facebook.com/*?entrypoint=$document,subdocument,important
 ||facebook.com/*?entrypoint=$xmlhttprequest
-||facebook.com/*?fb_dtsg_ag=$document,important
+||facebook.com/*?fb_dtsg*$document,important
 ||facebook.com/*?fref=$document,subdocument,important
 ||facebook.com/*?fref=$xmlhttprequest
 ||facebook.com/*?hc_location=$document,subdocument,important
@@ -170,9 +174,11 @@
 ||messenger.com/*&dti=$xmlhttprequest
 ||messenger.com/*&eid=$document,subdocument,important
 ||messenger.com/*&eid=$xmlhttprequest
+||messenger.com/*&entry_*=$document,subdocument,important
+||messenger.com/*&entry_*=$xmlhttprequest
 ||messenger.com/*&entrypoint=$document,subdocument,important
 ||messenger.com/*&entrypoint=$xmlhttprequest
-||messenger.com/*&fb_dtsg_ag=$document,important
+||messenger.com/*&fb_dtsg*$document,important
 ||messenger.com/*&fref=$document,subdocument,important
 ||messenger.com/*&fref=$xmlhttprequest
 ||messenger.com/*&hc_location=$document,subdocument,important
@@ -207,9 +213,11 @@
 ||messenger.com/*?dti=$xmlhttprequest
 ||messenger.com/*?eid=$document,subdocument,important
 ||messenger.com/*?eid=$xmlhttprequest
+||messenger.com/*?entry_*=$document,subdocument,important
+||messenger.com/*?entry_*=$xmlhttprequest
 ||messenger.com/*?entrypoint=$document,subdocument,important
 ||messenger.com/*?entrypoint=$xmlhttprequest
-||messenger.com/*?fb_dtsg_ag=$document,important
+||messenger.com/*?fb_dtsg*$document,important
 ||messenger.com/*?fref=$document,subdocument,important
 ||messenger.com/*?fref=$xmlhttprequest
 ||messenger.com/*?hc_location=$document,subdocument,important
@@ -238,10 +246,14 @@
 ||play.google.com/*?pcampaignid=$xmlhttprequest
 ||play.google.com/*?referrer=$document,subdocument,important
 ||play.google.com/*?referrer=$xmlhttprequest
-||steamcommunity.com/*&snr=$document,subdocument,xmlhttprequest,important
-||steamcommunity.com/*?snr=$document,subdocument,xmlhttprequest,important
-||steampowered.com/*&snr=$document,subdocument,xmlhttprequest,important
-||steampowered.com/*?snr=$document,subdocument,xmlhttprequest,important
+||steamcommunity.com/*&snr=$document,subdocument,important
+||steamcommunity.com/*&snr=$xmlhttprequest
+||steamcommunity.com/*?snr=$document,subdocument,important
+||steamcommunity.com/*?snr=$xmlhttprequest
+||steampowered.com/*&snr=$document,subdocument,important
+||steampowered.com/*&snr=$xmlhttprequest
+||steampowered.com/*?snr=$document,subdocument,important
+||steampowered.com/*?snr=$xmlhttprequest
 
 ! Problematic, at your own risk!
 ! [CloudFlare DDoS JS Challenge]
