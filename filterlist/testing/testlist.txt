@@ -1,6 +1,6 @@
 [uBlock Origin 1.27.11]
 ! Title: kowith337's Test List
-! Version: 202006241726
+! Version: 202006241732
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -32,14 +32,13 @@ steampowered.com##.home_ctn.discovery_queue_ctn
 steampowered.com##.home_ctn.live_streams_ctn
 ! - Remove "Recommended by Steam Labs" pane
 steampowered.com##.home_ctn.recommended_by_steam_labs_ctn
-! - Remove a pane that zuckested by "Because you've played <GameName>"
-steampowered.com##.home_page_content.deep_dive_block
-
 ! - Remove "Takeover" pane that promote publisher, annual sales, etc.
 steampowered.com##.home_page_body_ctn .fullscreen-bg
 steampowered.com##.home_page_body_ctn .static_takeover_ctn div[class^="page_background_holder"]
 steampowered.com##.home_page_body_ctn .store_bg_overlay
 steampowered.com##.home_page_body_ctn div[class^="home_page_takeover"]
+! - Remove a pane that zuckested by "Because you've played <GameName>"
+steampowered.com##.home_page_content.deep_dive_block
 
 ! [Taobao Mobile] Remove header anchor navigator
 m.intl.taobao.com##.App .toolbar .toolbar__anchor-wrapper
