@@ -1,6 +1,6 @@
 [uBlock Origin 1.27.11]
 ! Title: kowith337's Test List
-! Version: 202006221921
+! Version: 202006241726
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -8,6 +8,39 @@
 ! Description: This list is for experimental and testing only, all rules in here maybe changed and/or remove at anytime!
 
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Steam Store] (Mostly main page)
+! - Remove a pane that need you to login to see suggested contents!
+steampowered.com###content_login.page_content_ctn
+! - Remove "For You" text at flyout menu bar, leave only your mini avatar icon!
+steampowered.com###foryou_tab span.pulldown a.pulldown_desktop
+steampowered.com###foryou_tab span.pulldown a.pulldown_mobile
+! - Remove "Explore", "Recommended for you", "Related game tags" and its hint!
+steampowered.com###foryou_flyout .popup_menu #foryou_yourtags
+steampowered.com###foryou_flyout .popup_menu .popup_menu_item[href*="/explore"]
+steampowered.com###foryou_flyout .popup_menu .popup_menu_item[href*="/recommender"]
+steampowered.com###foryou_flyout .popup_menu .popup_menu_subheader:has(.popup_menu_hint)
+! - Remove "Recommended" tab while browsing games by tags.
+steampowered.com##.page_content .tabarea .tag_browse_option[data-browseoption="recommended"]
+! - Remove "View your queue" button in full game details page.
+steampowered.com##.game .block .queue_ctn .queue_actions_ctn a.right[href*="/explore/"]
+! - Now you've already logged in, what then?
+steampowered.com##.home_content_ctn #content_more
+steampowered.com##.home_content_ctn #content_out.dark .home_page_content .more_content_desc
+! - Remove "Discover queue" pane in home page
+steampowered.com##.home_ctn.discovery_queue_ctn
+! - Remove "Live Stream" pane in home page
+steampowered.com##.home_ctn.live_streams_ctn
+! - Remove "Recommended by Steam Labs" pane
+steampowered.com##.home_ctn.recommended_by_steam_labs_ctn
+! - Remove a pane that zuckested by "Because you've played <GameName>"
+steampowered.com##.home_page_content.deep_dive_block
+
+! - Remove "Takeover" pane that promote publisher, annual sales, etc.
+steampowered.com##.home_page_body_ctn .fullscreen-bg
+steampowered.com##.home_page_body_ctn .static_takeover_ctn div[class^="page_background_holder"]
+steampowered.com##.home_page_body_ctn .store_bg_overlay
+steampowered.com##.home_page_body_ctn div[class^="home_page_takeover"]
+
 ! [Taobao Mobile] Remove header anchor navigator
 m.intl.taobao.com##.App .toolbar .toolbar__anchor-wrapper
 
@@ -22,6 +55,12 @@ m.intl.taobao.com##.App .bar:has(a.bar-item[href^="//shop.m.taobao.com/shop/shop
 imgur.com##.GalleryHandler-postContainer:not(:nth-of-type(2))
 imgur.com##.GalleryHandler-postContainer .Gallery-moreOnImgur
 !#endif
+
+! [Steam]
+! - Remove "Scroll more for related contents" pane
+steampowered.com###content_callout.dark:has(.more_content_title)
+! - Remove curators/publishers pane that show zuckested to follow instead of curators/publishers that you've already following
+steampowered.com###steam_curators_not_empty:has(.curator_recommendation_capsule)
 
 ! [YouTube Non-Polymer]
 ! - Remove any "recommended" channel and topic lists at home feed
@@ -38,10 +77,14 @@ youtube.com###masthead #end #buttons ytd-button-renderer:has(a[href*="accounts.g
 ! - Try remove "Premium" link at sidebar
 !youtube.com##.ytd-guide-renderer:has(#items ytd-guide-entry-renderer:has(a[href*="/premium"]))
 
-! Non-basic characters filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! [Pantip] Explicit and spam topic name
+! Non-basic filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Pantip] Explicit and spam topic name (Use Thai unicode characters because most language of this site are mainly in Thai)
 pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(วรพจน์))
 pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(มาลาริน/))
+
+! [Steam] Make use of `:remove()` for delete unwanted DOM pane without leaving any nodes (require uB0 version 1.26.0 or above)
+steampowered.com##.home_ctn.labs_cluster:remove()
+steampowered.com##.home_ctn.marketingmessage_area:remove()
 
 ! [Taobao Mobile] Aim to remove "you may also like" items, but using the chinese word (MiscAnnoyance use `nth-of-type` method)
 m.intl.taobao.com##.App .recommend .recommend-list-wrapper:has(.recommend-title:has-text(邻家好货))
@@ -50,6 +93,23 @@ m.intl.taobao.com##.App .recommend .recommend-list-wrapper:has(.recommend-title:
 ! [Facebook]
 ! Uncorrupted Facebook Stories design because your profile picture in story card will not fulfilled if you didn't have any posts.
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###MStoriesTray div[class] > #m-stories-add-item.profilePic i.profpic[role=img]:style(width: 100% !important; height: 100% !important)
+
+! [Steam]
+! - Sometime you're embarassing to see how many times spent on the related games that you're currently looking and/or trying to
+!   buy, I've hide the playtime and show only related game banner that you've played, this make you not feeling shamed at it,
+!   at least.
+steampowered.com##.game .game_meta_data .recommendation_reasons .similar_recent_apps_container .app_impression_tracked:style(color: transparent !important; font-size: 0px !important)
+! - Restore padding size of top scroll banner that caused by "Takeover" pane
+steampowered.com##.home_cluster_ctn.home_ctn .home_page_content:style(padding-left: 0px !important)
+! - Aggressively remove "Recommended by Steam Labs" pane, I've force apply style because sometime they want to override CSS
+!   values and resist to allowing content blockers for hide them normally.
+steampowered.com##.home_ctn.labs_cluster:style(display: none !important; width: 0px !important; height: 0px !important)
+! - Remove special offers pane that seems probably "marketed", share same tactics as above.
+steampowered.com##.home_ctn.marketingmessage_area:style(display: none !important; width: 0px !important; height: 0px !important)
+! - When your perform "Search again without filtered" and you're barely see banner of filtered games because very low opacity,
+!   now I've increased it to 50% (old value is set to show only 5% of it's original image, that's too dark!!)
+steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .col.search_capsule:style(opacity: 0.5 !important)
+steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .platform_img:style(opacity: 0.5 !important)
 
 ! [Taobao Mobile]
 ! - Make top bar placeholder transparent
@@ -69,6 +129,12 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell"] [data-testid*="follow"])
 
 ! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Steam]
+! - Prevent them read your interactions data for nearly-perfectly disable recommendations!
+||steampowered.com/explore/logfeedview$important,~document
+||steampowered.com/explore/logfeedview$xmlhttprequest,important,redirect=nooptext
+||steampowered.com/explore/recommended$important,~document
+||steampowered.com/explore/recommended$xmlhttprequest,important,redirect=nooptext
 
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||google.*/ads/^$important
