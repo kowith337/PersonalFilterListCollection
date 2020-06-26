@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202006242101
+# Version: 202006261346
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -195,15 +195,19 @@
 # - Recommended for uMatrix to block as top level, regardless of sub-domains.
 0.0.0.0 aaxads.com
 0.0.0.0 accesstrade.in.th
+0.0.0.0 ad-m.asia
 0.0.0.0 adasiaholdings.com
 0.0.0.0 addthisedge.com
 0.0.0.0 addtoany.com
+0.0.0.0 adform.net
 0.0.0.0 adingo.jp
 0.0.0.0 adjust.com
+0.0.0.0 adkernel.com
 0.0.0.0 adnium.com
 0.0.0.0 adnuntius.com
 0.0.0.0 adop.cc
 0.0.0.0 adsoptimal.com
+0.0.0.0 agkn.com
 0.0.0.0 aidata.io
 0.0.0.0 alexametrics.com
 0.0.0.0 aniview.com
@@ -215,6 +219,8 @@
 0.0.0.0 bfmio.com
 0.0.0.0 browsehappy.com
 0.0.0.0 bumq.com
+0.0.0.0 cauly.co.kr
+0.0.0.0 connexity.net
 0.0.0.0 consensu.org
 0.0.0.0 cpsee.com
 0.0.0.0 criteo.com
@@ -225,6 +231,7 @@
 0.0.0.0 demand.supply
 0.0.0.0 dentsu360th.com
 0.0.0.0 digitru.st
+0.0.0.0 e-volution.ai
 0.0.0.0 easylist.club
 0.0.0.0 effectivemeasure.net
 0.0.0.0 evidon.com
@@ -232,6 +239,7 @@
 0.0.0.0 fhanierio.me
 0.0.0.0 footprint.net
 0.0.0.0 fout.jp
+0.0.0.0 fw-ad.jp
 0.0.0.0 gammaplatform.com
 0.0.0.0 genieessp.com
 0.0.0.0 genieesspv.jp
@@ -241,6 +249,7 @@
 0.0.0.0 gratonrewardcenter.icu
 0.0.0.0 gsspat.jp
 0.0.0.0 gssprt.jp
+0.0.0.0 hariken.co
 0.0.0.0 igmedianow.com
 0.0.0.0 impact-ad.jp
 0.0.0.0 imprezzer.com
@@ -253,6 +262,8 @@
 0.0.0.0 linksynergy.com
 0.0.0.0 mathtag.com
 0.0.0.0 metaadsnet.com
+0.0.0.0 ml314.com
+0.0.0.0 mookie1.com
 0.0.0.0 mox.tv
 0.0.0.0 netcpms.com
 0.0.0.0 newrelic.com
@@ -261,6 +272,7 @@
 0.0.0.0 nuffnang.co.th
 0.0.0.0 nytive.com
 0.0.0.0 omnithrottle.com
+0.0.0.0 onaudience.com
 0.0.0.0 onesignal.com
 0.0.0.0 onthe.io
 0.0.0.0 openx.net
@@ -270,6 +282,7 @@
 0.0.0.0 perfectmarket.com
 0.0.0.0 petametrics.com
 0.0.0.0 pikdo.net
+0.0.0.0 pippio.com
 0.0.0.0 popin.cc
 0.0.0.0 powerlinks.com
 0.0.0.0 qgr.ph
@@ -281,6 +294,7 @@
 0.0.0.0 sharethis.com
 0.0.0.0 silkspan.com
 0.0.0.0 sombes.com
+0.0.0.0 spotxchange.com
 0.0.0.0 stats.in.th
 0.0.0.0 storygize.net
 0.0.0.0 svtrd.com
@@ -301,11 +315,14 @@
 0.0.0.0 xm.com
 0.0.0.0 yengo.asia
 0.0.0.0 yengo.com
+0.0.0.0 yieldmo.com
+0.0.0.0 zeotap.com
 #
 # [Generic Sublevel]
 0.0.0.0 3326.tm.zedo.com
 0.0.0.0 a.c.appier.net
 0.0.0.0 a.svtrd.com
+0.0.0.0 aa.agkn.com
 0.0.0.0 acds.vidible.tv
 0.0.0.0 ad.doubleclick.net
 0.0.0.0 ad.mox.tv
@@ -319,6 +336,7 @@
 0.0.0.0 ads.pantip.com
 0.0.0.0 ads.thaiware.com
 0.0.0.0 ads.vidoomy.com
+0.0.0.0 ads.yieldmo.com
 0.0.0.0 ads1-adnow.com
 0.0.0.0 ads1.bangkokpost.co.th
 0.0.0.0 ads1.matichon.co.th
@@ -357,6 +375,7 @@
 0.0.0.0 api.useinsider.com
 0.0.0.0 api.userstyles.org
 0.0.0.0 app.adjust.com
+0.0.0.0 app.cauly.co.kr
 0.0.0.0 appsflyer-report.honkaiimpact3.com
 0.0.0.0 as.innity.com
 0.0.0.0 as.innity.net
@@ -377,6 +396,9 @@
 0.0.0.0 c.appier.net
 0.0.0.0 c.c.appier.net
 0.0.0.0 c.evidon.com
+0.0.0.0 c1.adform.net
+0.0.0.0 c2.adform.net
+0.0.0.0 c3.adform.net
 0.0.0.0 cdn-gl.imrworldwide.com
 0.0.0.0 cdn-ssl.vidible.tv
 0.0.0.0 cdn.adnuntius.com
@@ -404,8 +426,10 @@
 0.0.0.0 d1.yengo.com
 0.0.0.0 d2.yengo.com
 0.0.0.0 d3.yengo.com
+0.0.0.0 dap.fw-ad.jp
 0.0.0.0 data.adop.cc
 0.0.0.0 dev.visualwebsiteoptimizer.com
+0.0.0.0 dsp.adkernel.com
 0.0.0.0 engage.wixapps.net
 0.0.0.0 firmware.cutedev.net
 0.0.0.0 frukt.devpantip.com
@@ -420,6 +444,7 @@
 0.0.0.0 go2.aniview.com
 0.0.0.0 go3.aniview.com
 0.0.0.0 gocm.c.appier.net
+0.0.0.0 google.dap.fw-ad.jp
 0.0.0.0 googleads.github.io
 0.0.0.0 graph.sanook.com
 0.0.0.0 hit.api.useinsider.com
@@ -463,6 +488,7 @@
 0.0.0.0 media.innity.net
 0.0.0.0 mgr.consensu.org
 0.0.0.0 mobile-collector.newrelic.com
+0.0.0.0 mwzeom.zeotap.com
 0.0.0.0 n.ads1-adnow.com
 0.0.0.0 n.ads2-adnow.com
 0.0.0.0 n.ads3-adnow.com
@@ -472,10 +498,12 @@
 0.0.0.0 n.ads7-adnow.com
 0.0.0.0 n.ads8-adnow.com
 0.0.0.0 n.ads9-adnow.com
+0.0.0.0 odr.mookie1.com
 0.0.0.0 one.impact-ad.jp
 0.0.0.0 openx.notebookspec.com
 0.0.0.0 opps.taboola.com
 0.0.0.0 ping.ublock.org
+0.0.0.0 pixel.onaudience.com
 0.0.0.0 platform-api.sharethis.com
 0.0.0.0 play.aniview.com
 0.0.0.0 player-cdn.beachfrontmedia.com
@@ -484,6 +512,7 @@
 0.0.0.0 prod.vidible.tv
 0.0.0.0 pubads.g.doubleclick.net
 0.0.0.0 px.powerlinks.com
+0.0.0.0 pxl.connexity.net
 0.0.0.0 quantcast.mgr.consensu.org
 0.0.0.0 r.popin.cc
 0.0.0.0 rcm.amazon.com
@@ -494,6 +523,9 @@
 0.0.0.0 rfp.fout.jp
 0.0.0.0 rlog.popin.cc
 0.0.0.0 rt.gsspat.jp
+0.0.0.0 rtb1-useast.e-volution.ai
+0.0.0.0 rtb2-useast.e-volution.ai
+0.0.0.0 rtb3-useast.e-volution.ai
 0.0.0.0 s.c.appier.net
 0.0.0.0 s.svtrd.com
 0.0.0.0 s1.thstats.com
@@ -501,6 +533,7 @@
 0.0.0.0 s3.thstats.com
 0.0.0.0 scdn.cxense.com
 0.0.0.0 sch.line.me
+0.0.0.0 search.spotxchange.com
 0.0.0.0 secure.footprint.net
 0.0.0.0 securepubads.g.doubleclick.net
 0.0.0.0 sentinel.api.useinsider.com
@@ -551,12 +584,15 @@
 0.0.0.0 synad1.nuffnang.co.th
 0.0.0.0 synad2.nuffnang.co.th
 0.0.0.0 synad3.nuffnang.co.th
+0.0.0.0 sync-dsp.ad-m.asia
+0.0.0.0 sync.search.spotxchange.com
 0.0.0.0 syndication.twimg.com
 0.0.0.0 syndication.twitter.com
 0.0.0.0 t.svtrd.com
 0.0.0.0 ta.sanook.com
 0.0.0.0 taboola-d.openx.net
 0.0.0.0 tag.gammaplatform.com
+0.0.0.0 tag.hariken.co
 0.0.0.0 tags.adnuntius.com
 0.0.0.0 tags.rd.linksynergy.com
 0.0.0.0 tdn.r42tag.com
