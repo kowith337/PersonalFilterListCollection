@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: kowith337's Test List
-! Version: 202007041345
+! Version: 202007041930
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -168,6 +168,13 @@ facebook.com,instagram.com,messenger.com##+js(cookie-remover, _js_datr)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, datr)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, noscript)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-referer)
+
+! - Prohibit Steam website to detect touch screen from first touch, this cause the proper touch screen malfunction, especially
+!   when you snap and resize browser screen or rotate screen vertically.
+!   * Note that it may require to delete `strResponsiveViewPrefs` cookie first to make this script injection work properly.
+!   * This will helpful in case if you don't want to let `Steam` showing responsive header and menu bar, but you still want to
+!     browse that website as proper desktop site, while use touch screen function as mouse click only.
+steamcommunity.com,steampowered.com##+js(remove-attr, Responsive_InitTouchDetection)
 
 ! [External scriptlets]
 ! Requirement for this section: @uBlock-user's scriptlets: https://github.com/uBlock-user/uBO-Scriptlets
