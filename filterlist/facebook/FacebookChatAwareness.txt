@@ -1,6 +1,6 @@
-[uBlock Origin 1.27.11]
+[uBlock Origin 1.28.0]
 ! Title: kowith337's Facebook Chat Awareness
-! Version: 202006221852
+! Version: 202007041337
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/facebook
@@ -46,9 +46,5 @@ messenger.com##+js(cookie-remover, datr)
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
 ! [Backward Compatibility] ---------------------------------------------------------------------------------------------------- !
-!#if env_firefox
-messenger.com##script:inject(cookie-remover.js, datr)
-messenger.com##script:inject(cookie-remover.js, x-referer)
-!#endif
 
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !

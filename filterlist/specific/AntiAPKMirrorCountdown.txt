@@ -1,6 +1,6 @@
-[uBlock Origin 1.27.11]
+[uBlock Origin 1.28.0]
 ! Title: Anti APKMirror Ads and Countdown
-! Version: 202006221921
+! Version: 202007041435
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -39,11 +39,3 @@ apkmirror.com##+js(aopr, visibleAds)
 apkmirror.com##+js(aopw, #downloadCountdownBar)
 apkmirror.com##+js(aopw, ranTwice)
 apkmirror.com##+js(aopw, timerInterval)
-
-! Backward compatibility after 1.27.11
-!#if env_firefox
-apkmirror.com##script:inject(abort-on-property-read.js, visibleAds)
-apkmirror.com##script:inject(abort-on-property-write.js, #downloadCountdownBar)
-apkmirror.com##script:inject(abort-on-property-write.js, ranTwice)
-apkmirror.com##script:inject(abort-on-property-write.js, timerInterval)
-!#endif

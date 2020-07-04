@@ -1,6 +1,6 @@
-[uBlock Origin 1.27.11]
+[uBlock Origin 1.28.0]
 ! Title: GelboLube (Legacy) [old split menubar]
-! Version: 202006221913
+! Version: 202007041338
 ! Expires: 2 days
 ! Author: kowith337, TankedThomas and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/legacy/gelbolube.txt
@@ -344,20 +344,4 @@ gelbooru.com##script:contains(trw_domain)
 ! 1. Cancel hiding "Switch layout" for actual mobile devices, sometime it's needed to do, I guess.
 !#if !env_mobile
 gelbooru.com##.alert-info:has(a[href*="?page=ihnt"])
-!#endif
-
-! 2. Backward compatibility of XUL-based Firefox (aka. Legacy) because these are no longer support since 1.27.11 and will
-!    completely not supported once stable release (1.27.12) are publically available for update.
-!#if env_firefox
-gelbooru.com##script:inject(abort-current-inline-script.js, AddZone, idzone)
-gelbooru.com##script:inject(abort-current-inline-script.js, ImplicityBreakingSite)
-gelbooru.com##script:inject(abort-current-inline-script.js, adtoniq)
-gelbooru.com##script:inject(abort-current-inline-script.js, cookieName, gelcomPoop)
-gelbooru.com##script:inject(abort-current-inline-script.js, domain_base, exosrv.com)
-gelbooru.com##script:inject(abort-current-inline-script.js, serve, script_url)
-gelbooru.com##script:inject(abort-current-inline-script.js, window.dataLayer, gtag)
-gelbooru.com##script:inject(abort-on-property-write.js, GoogleAnalyticsObject)
-gelbooru.com##script:inject(abort-on-property-write.js, adsbyjuicy)
-gelbooru.com##script:inject(set-constant.js, ExoDetector, noopfunc)
-gelbooru.com##script:inject(set-constant.js, adtoniq, noopfunc)
 !#endif

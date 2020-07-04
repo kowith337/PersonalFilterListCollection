@@ -1,6 +1,6 @@
-[uBlock Origin 1.27.11]
+[uBlock Origin 1.28.0]
 ! Title: kowith337's Test List
-! Version: 202006241732
+! Version: 202007041345
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -8,35 +8,45 @@
 ! Description: This list is for experimental and testing only, all rules in here maybe changed and/or remove at anytime!
 
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! [Steam Store] (Mostly main page)
+! [Steam Store] (Mostly main page and currently only apply when no large sales campaign running)
 ! - Remove a pane that need you to login to see suggested contents!
 steampowered.com###content_login.page_content_ctn
+
 ! - Remove "For You" text at flyout menu bar, leave only your mini avatar icon!
 steampowered.com###foryou_tab span.pulldown a.pulldown_desktop
 steampowered.com###foryou_tab span.pulldown a.pulldown_mobile
+
 ! - Remove "Explore", "Recommended for you", "Related game tags" and its hint!
 steampowered.com###foryou_flyout .popup_menu #foryou_yourtags
 steampowered.com###foryou_flyout .popup_menu .popup_menu_item[href*="/explore"]
 steampowered.com###foryou_flyout .popup_menu .popup_menu_item[href*="/recommender"]
 steampowered.com###foryou_flyout .popup_menu .popup_menu_subheader:has(.popup_menu_hint)
+
 ! - Remove "Recommended" tab while browsing games by tags.
 steampowered.com##.page_content .tabarea .tag_browse_option[data-browseoption="recommended"]
+
 ! - Remove "View your queue" button in full game details page.
 steampowered.com##.game .block .queue_ctn .queue_actions_ctn a.right[href*="/explore/"]
+
 ! - Now you've already logged in, what then?
 steampowered.com##.home_content_ctn #content_more
 steampowered.com##.home_content_ctn #content_out.dark .home_page_content .more_content_desc
+
 ! - Remove "Discover queue" pane in home page
 steampowered.com##.home_ctn.discovery_queue_ctn
+
 ! - Remove "Live Stream" pane in home page
 steampowered.com##.home_ctn.live_streams_ctn
+
 ! - Remove "Recommended by Steam Labs" pane
 steampowered.com##.home_ctn.recommended_by_steam_labs_ctn
+
 ! - Remove "Takeover" pane that promote publisher, annual sales, etc.
 steampowered.com##.home_page_body_ctn .fullscreen-bg
 steampowered.com##.home_page_body_ctn .static_takeover_ctn div[class^="page_background_holder"]
 steampowered.com##.home_page_body_ctn .store_bg_overlay
 steampowered.com##.home_page_body_ctn div[class^="home_page_takeover"]
+
 ! - Remove a pane that zuckested by "Because you've played <GameName>"
 steampowered.com##.home_page_content.deep_dive_block
 
@@ -58,6 +68,7 @@ imgur.com##.GalleryHandler-postContainer .Gallery-moreOnImgur
 ! [Steam]
 ! - Remove "Scroll more for related contents" pane
 steampowered.com###content_callout.dark:has(.more_content_title)
+
 ! - Remove curators/publishers pane that show zuckested to follow instead of curators/publishers that you've already following
 steampowered.com###steam_curators_not_empty:has(.curator_recommendation_capsule)
 
@@ -65,14 +76,17 @@ steampowered.com###steam_curators_not_empty:has(.curator_recommendation_capsule)
 ! - Remove any "recommended" channel and topic lists at home feed
 youtube.com###feed-main-what_to_watch ol li:has(.feed-item-dismissable:has(.shelf-title-row h2 span:has-text(Recommended )))
 youtube.com##.individual-feed li .branded-page-box:has(.feed-item-dismissable:has(span.shelf-subscription-button button[data-style-type="branded"]))
+
 ! - Remove overpromoted "Premium" appear in sidebar
 youtube.com##.guide-section .guide-item-container ul li:has(a[href*="/premium"])
 
 ! [YouTube Polymer]
 ! - Hide "New ToS" announcement
 youtube.com###alert-banner [alert-style]:has(a[href*="youtube.com/t/terms"])
+
 ! - Remove "Sign in" prompt at top bar
-youtube.com###masthead #end #buttons ytd-button-renderer:has(a[href*="accounts.google.com/ServiceLogin?"])
+youtube.com###masthead #end #buttons ytd-button-renderer:has(a[href*="/ServiceLogin?"])
+
 ! - Try remove "Premium" link at sidebar
 !youtube.com##.ytd-guide-renderer:has(#items ytd-guide-entry-renderer:has(a[href*="/premium"]))
 
@@ -98,13 +112,17 @@ m.intl.taobao.com##.App .recommend .recommend-list-wrapper:has(.recommend-title:
 !   buy, I've hide the playtime and show only related game banner that you've played, this make you not feeling shamed at it,
 !   at least.
 steampowered.com##.game .game_meta_data .recommendation_reasons .similar_recent_apps_container .app_impression_tracked:style(color: transparent !important; font-size: 0px !important)
+
 ! - Restore padding size of top scroll banner that caused by "Takeover" pane
 steampowered.com##.home_cluster_ctn.home_ctn .home_page_content:style(padding-left: 0px !important)
+
 ! - Aggressively remove "Recommended by Steam Labs" pane, I've force apply style because sometime they want to override CSS
 !   values and resist to allowing content blockers for hide them normally.
 steampowered.com##.home_ctn.labs_cluster:style(display: none !important; width: 0px !important; height: 0px !important)
+
 ! - Remove special offers pane that seems probably "marketed", share same tactics as above.
 steampowered.com##.home_ctn.marketingmessage_area:style(display: none !important; width: 0px !important; height: 0px !important)
+
 ! - When your perform "Search again without filtered" and you're barely see banner of filtered games because very low opacity,
 !   now I've increased it to 50% (old value is set to show only 5% of it's original image, that's too dark!!)
 steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .col.search_capsule:style(opacity: 0.5 !important)
@@ -114,6 +132,7 @@ steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .plat
 ! - Make top bar placeholder transparent
 m.intl.taobao.com##.App .toolbar.transformed:style(background-color: transparent !important)
 ! - Make placeholder button (back / add to cart) have circle background alpha under button and use custom color permanently
+
 m.intl.taobao.com##.App .toolbar .toolbar__btn i.iconfont:style(color: white !important)
 m.intl.taobao.com##.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,0,0.4) !important)
 
@@ -160,13 +179,17 @@ browserleaks.com##+js(cookie-set, _gat, FUCK)
 browserleaks.com##+js(cookie-set, _gid, FUCK)
 browserleaks.com##+js(cookie-set, bl_gad, 1)
 browserleaks.com##+js(cookie-set, bl_gaq, 1)
+
 ! - Tesing stage: Remove internal tag
 ! google.com##+js(remove-div-tag, data-ved) // Broken due to it's remove everything entirely!
+
 ! - Testing stage: Remove META
 akibatan.com##+js(remove-meta, onesignal)
 facebook.com##+js(remove-meta, referrer)
+
 ! - Testing stage: I want to try re-enable XSS protection on Facebook
 facebook.com,instagram.com,messenger.com##+js(set-respheader, x-xss-protection, 1)
+
 ! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
 facebook.com,instagram.com,messenger.com##+js(cookie-set, noscript, 0)
 
@@ -186,11 +209,11 @@ f8.com,facebook.com,messenger.com##+js(query-stripper, /(?<=\?|\&)(aref|fref|hc_
 f8.com,facebook.com,messenger.com##+js(query-stripper, /(?<=\?|\&)\w+_ref=.+[\&]/)
 f8.com,facebook.com,messenger.com##+js(query-stripper, /(?<=\?|\&)ref\w+=.+[\&]/)
 f8.com,facebook.com,messenger.com##+js(query-stripper, /(?<=\?|\&)ref_\w+=.+[\&]/)
-google.com##+js(query-stripper, /(?<=\?|\&)(aqs|ei|gs_l|gs_r|oq|stick|usg|ved)=.+[\&]/)
-google.com##+js(query-stripper, /(?<=\?|\&)(bih|biw|ibh|ibw|ust|vet)=.+[\&]/)
-google.com##+js(query-stripper, /(?<=\?|\&)sa=\w/)
-google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##+js(query-stripper, /(?<=\?|\&)utm=.+[\&]/)
-google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##+js(query-stripper, /(?<=\?|\&)utm_\w+=.+[\&]/)
+google.*##+js(query-stripper, /(?<=\?|\&)(aqs|ei|gs_l|gs_r|oq|stick|usg|ved)=.+[\&]/)
+google.*##+js(query-stripper, /(?<=\?|\&)(bih|biw|ibh|ibw|ust|vet)=.+[\&]/)
+google.*##+js(query-stripper, /(?<=\?|\&)sa=\w/)
+google.*,mozilla.com,mozilla.net,mozilla.org,reddit.com##+js(query-stripper, /(?<=\?|\&)utm=.+[\&]/)
+google.*,mozilla.com,mozilla.net,mozilla.org,reddit.com##+js(query-stripper, /(?<=\?|\&)utm_\w+=.+[\&]/)
 instagram.com##+js(query-stripper, /(?<=\?|\&)igshid=.+[\&]/)
 mozilla.com,mozilla.net,mozilla.org##+js(query-stripper, /(?<=\?|\&)src=.+[\&]/)
 play.google.com##+js(query-stripper, /(?<=\?|\&)(pcampaignid|referrer)=.+[\&]/)
@@ -206,49 +229,5 @@ youtube.com##+js(query-stripper, /(?<=\?|\&)redir_token=.+[\&]/)
 !   e.g. uMatrix are allow `wyciwyg-scheme` by default.
 ! - This require @uBlock-user's scriptlets, same as external scriptlets above.
 akibatan.com##+js(remove-inline-script, /googlesyndication|mi_track_user|monsterinsights_frontend|window.OneSignal|window._stq|_Hasync/)
-!#endif
-
-!#if env_firefox
-! - Backward compatibility because old script inject method will cease to support since 1.27.11 and will be no longer support
-!   publically once the stable version (1.27.12) are available.
-akibatan.com##script:inject(remove-inline-script.js, /googlesyndication|mi_track_user|monsterinsights_frontend|window.OneSignal|window._stq|_Hasync/)
-akibatan.com##script:inject(remove-meta.js, onesignal)
-aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(go|main)_item(_id|id)=\d+/)
-aliexpress.com,taobao.com,tmall.com##script:inject(query-stripper.js, /(?<=\?|\&)(pvid|scm|sourceType|sm|spm|ttid|ut_sk|utparam)=.+[\&]/)
-browserleaks.com##script:inject(cookie-set.js, __gads, FUCK)
-browserleaks.com##script:inject(cookie-set.js, _ga, FUCK)
-browserleaks.com##script:inject(cookie-set.js, _gat, FUCK)
-browserleaks.com##script:inject(cookie-set.js, _gid, FUCK)
-browserleaks.com##script:inject(cookie-set.js, bl_gad, 1)
-browserleaks.com##script:inject(cookie-set.js, bl_gaq, 1)
-f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(__rv__|__so__|__tn__)=.+[\&]/)
-f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(__xts__\[\d\]|__xts__\%5B\d\%5D)=.+[\&]/)
-f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(_ft_|__ccr)=.+[\&]/)
-f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(_rdc|__m_async_page__|__m_log_async__|mt_nav)=\d+/)
-f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(acontext|bacr|dti|eid|entrypoint|fb_dtsg_ag|fbclid|lst|page_source|ref|referrer|refid|refsrc|session_id|settings_tracking|sw_fnr_id|source)=.+[\&]/)
-f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(app|entry|privacy)_\w+=.+[\&]/)
-f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)(aref|fref|hc_ref|loc_ref|pn_ref)=.+[\&]/)
-f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)\w+_ref=.+[\&]/)
-f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)ref\w+=.+[\&]/)
-f8.com,facebook.com,messenger.com##script:inject(query-stripper.js, /(?<=\?|\&)ref_\w+=.+[\&]/)
-facebook.com##script:inject(remove-meta.js, referrer)
-facebook.com,instagram.com,messenger.com##script:inject(cookie-remover.js, _js_datr)
-facebook.com,instagram.com,messenger.com##script:inject(cookie-remover.js, datr)
-facebook.com,instagram.com,messenger.com##script:inject(cookie-remover.js, noscript)
-facebook.com,instagram.com,messenger.com##script:inject(cookie-remover.js, x-referer)
-facebook.com,instagram.com,messenger.com##script:inject(cookie-set.js, noscript, 0)
-facebook.com,instagram.com,messenger.com##script:inject(set-respheader.js, x-xss-protection, 1)
-google.com##script:inject(query-stripper.js, /(?<=\?|\&)(aqs|ei|gs_l|gs_r|oq|stick|usg|ved)=.+[\&]/)
-google.com##script:inject(query-stripper.js, /(?<=\?|\&)(bih|biw|ibh|ibw|ust|vet)=.+[\&]/)
-google.com##script:inject(query-stripper.js, /(?<=\?|\&)sa=\w/)
-google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(?<=\?|\&)utm=.+[\&]/)
-google.com,mozilla.com,mozilla.net,mozilla.org,reddit.com##script:inject(query-stripper.js, /(?<=\?|\&)utm_\w+=.+[\&]/)
-instagram.com##script:inject(query-stripper.js, /(?<=\?|\&)igshid=.+[\&]/)
-mozilla.com,mozilla.net,mozilla.org##script:inject(query-stripper.js, /(?<=\?|\&)src=.+[\&]/)
-play.google.com##script:inject(query-stripper.js, /(?<=\?|\&)(pcampaignid|referrer)=.+[\&]/)
-steamcommunity.com,steampowered.com##script:inject(query-stripper.js, /(?<=\?|\&)snr=.+[\&]/)
-twitter.com,t.co##script:inject(query-stripper.js, /(?<=\?|\&)amp=\d/)
-youtube.com##script:inject(query-stripper.js, /(?<=\?|\&)feature=.+[\&]/)
-youtube.com##script:inject(query-stripper.js, /(?<=\?|\&)redir_token=.+[\&]/)
 !#endif
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !

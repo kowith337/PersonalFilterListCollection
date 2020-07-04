@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202006241612
+! Version: 202007041434
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -16,35 +16,36 @@
 
 ! Prevent AMP on Twitter
 ! Based on https://old.reddit.com/r/uBlockOrigin/comments/a650rk/how_can_i_block_google_amp_links/ebsye7c
-||t.co/*?amp=$document,subdocument,xmlhttprequest,important
+||t.co/*?amp=$document,subdocument,xmlhttprequest,important,domain=~Prohibit shortened URL from Twitter to requesting AMP version for redirected URL through this parameter
 
 ! Common Extrenal
-||*&amp_*=*&usqp=*$document,subdocument,xmlhttprequest,important
-||*&fbclid$document,subdocument,xmlhttprequest,important
-||*&gclid$document,subdocument,xmlhttprequest,important
-||*&utm_*=$document,subdocument,xmlhttprequest,important
-||*&yclid$document,subdocument,xmlhttprequest,important
-||*?amp_*=*&usqp=*$document,subdocument,xmlhttprequest,important
-||*?fbclid$document,subdocument,xmlhttprequest,important
-||*?gclid$document,subdocument,xmlhttprequest,important
-||*?utm_*=$document,subdocument,xmlhttprequest,important
-||*?yclid$document,subdocument,xmlhttprequest,important
+||*&amp_*=*&usqp=*$document,subdocument,xmlhttprequest,important,domain=~Prohibit Google AMP parameters and recommended to find direct links instead of AMP page version
+||*&fbclid$document,subdocument,xmlhttprequest,important,domain=~Please blame ZUCK for this about overtracking users as mush as they can
+||*&gclid$document,subdocument,xmlhttprequest,important,domain=~Google wants to use same thing that Facebook currently doing
+||*&utm_*=$document,subdocument,xmlhttprequest,important,domain=~This contains Google Urchin tracking parameters
+||*&yclid$document,subdocument,xmlhttprequest,important,domain=~Yahoo wants to use same thing that Facebook currently doing
+||*?amp_*=*&usqp=*$document,subdocument,xmlhttprequest,important,domain=~Prohibit Google AMP parameters and recommended to find direct links instead of AMP page version
+||*?fbclid$document,subdocument,xmlhttprequest,important,domain=~Please blame ZUCK for this about overtracking users as mush as they can
+||*?gclid$document,subdocument,xmlhttprequest,important,domain=~Google wants to use same thing that Facebook currently doing
+||*?utm_*=$document,subdocument,xmlhttprequest,important,domain=~This contains Google Urchin tracking parameters
+||*?yclid$document,subdocument,xmlhttprequest,important,domain=~Yahoo wants to use same thing that Facebook currently doing
 
 ! Shady outgoing prompt from first party service
+||facebook.com/l.php$document,subdocument,xmlhttprequest,important,domain=~This will block external URL page redirecting that made by Facebook that may contain some random parameters to keep track users externally
+||facebookcorewwi.onion/l.php$document,subdocument,xmlhttprequest,important,domain=~This will block external URL page redirecting that made by Facebook that may contain some random parameters to keep track users externally
 ||gate.sc$document,subdocument,xmlhttprequest,important
-||l.facebook.com$document,subdocument,xmlhttprequest,important
-||l.messenger.com$document,subdocument,xmlhttprequest,important
-||lm.facebook.com$document,subdocument,xmlhttprequest,important
-||lm.messenger.com$document,subdocument,xmlhttprequest,important
-||youtube.com/redirect?*&redir_token=$document,subdocument,important
-||youtube.com/redirect?*&redir_token=$xmlhttprequest
-||youtube.com/redirect?redir_token=$document,subdocument,important
-||youtube.com/redirect?redir_token=$xmlhttprequest
+||l.facebook.com$document,subdocument,xmlhttprequest,important,domain=~This is a subdomain of Facebook tracking link parking and redirecting
+||l.messenger.com$document,subdocument,xmlhttprequest,important,domain=~This is a subdomain of Facebook tracking link parking and redirecting
+||lm.facebook.com$document,subdocument,xmlhttprequest,important,domain=~This is a subdomain of Facebook tracking link parking and redirecting
+||lm.messenger.com$document,subdocument,xmlhttprequest,important,domain=~This is a subdomain of Facebook tracking link parking and redirecting
+||messenger.com/l.php$document,subdocument,xmlhttprequest,important,domain=~This is a subdomain of Facebook tracking link parking and redirecting
+||youtube.com/redirect?*&redir_token=$document,subdocument,xmlhttprequest,important,domain=~YouTube external URL redirect page is contain random token string that possibly to track users externally
+||youtube.com/redirect?redir_token=$document,subdocument,xmlhttprequest,important,domain=~YouTube external URL redirect page is contain random token string that possibly to track users externally
 
 ! Internal
-||duckduckgo.com/l/?$document,subdocument,important
+||duckduckgo.com/l/?$document,subdocument,important,domain=~Prohibit DDG use redirect links due to privacy concerns
 ||duckduckgo.com/l/?$xmlhttprequest
-||duckduckgo.com/l?$document,subdocument,important
+||duckduckgo.com/l?$document,subdocument,important,domain=~Prohibit DDG use redirect links due to privacy concerns
 ||duckduckgo.com/l?$xmlhttprequest
 ||facebook.com/*&__tn__=$document,subdocument,important
 ||facebook.com/*&__tn__=$xmlhttprequest
@@ -83,9 +84,9 @@
 ||facebook.com/*&referrer=$xmlhttprequest
 ||facebook.com/*&refsrc=$document,subdocument,important
 ||facebook.com/*&refsrc=$xmlhttprequest
-||facebook.com/*&settings_tracking=$document,subdocument,important
+||facebook.com/*&settings_tracking=$document,subdocument,important,domain=~Why they want to track even when users trying to manage profile settings
 ||facebook.com/*&settings_tracking=$xmlhttprequest
-||facebook.com/*&sfnsn=$document,subdocument,important
+||facebook.com/*&sfnsn=$document,subdocument,important,domain=~This is a remark from Facebook that this link come from Facebook and just shared externally
 ||facebook.com/*&sfnsn=$xmlhttprequest
 ||facebook.com/*?__tn__=$document,subdocument,important
 ||facebook.com/*?__tn__=$xmlhttprequest
@@ -124,41 +125,45 @@
 ||facebook.com/*?referrer=$xmlhttprequest
 ||facebook.com/*?refsrc=$document,subdocument,important
 ||facebook.com/*?refsrc=$xmlhttprequest
-||facebook.com/*?settings_tracking=$document,subdocument,important
+||facebook.com/*?settings_tracking=$document,subdocument,important,domain=~Why they want to track even when users trying to manage profile settings
 ||facebook.com/*?settings_tracking=$xmlhttprequest
-||facebook.com/*?sfnsn=$document,subdocument,important
+||facebook.com/*?sfnsn=$document,subdocument,important,domain=~This is just a remark of Facebook links that was shared externally
 ||facebook.com/*?sfnsn=$xmlhttprequest
-||facebook.com/ads/*&session_id=$document,subdocument,important
+||facebook.com/ads/*&session_id=$document,subdocument,important,domain=~This reveal your Ads session ID and not really neccessary while you trying to manage ads preferences
 ||facebook.com/ads/*&session_id=$xmlhttprequest
-||facebook.com/ads/*?session_id=$document,subdocument,important
+||facebook.com/ads/*?session_id=$document,subdocument,important,domain=~This reveal your Ads session ID and not really neccessary while you trying to manage ads preferences
 ||facebook.com/ads/*?session_id=$xmlhttprequest
-||google.*/*?*&ei=$document,subdocument,important
+||google.*/*?*&bih=$document,subdocument,important,domain=~Want to knowing device screen height is not a neccessary part of searching
+||google.*/*?*&bih=$xmlhttprequest
+||google.*/*?*&biw=$document,subdocument,important,domain=~Want to knowing device screen width is not a neccessary part of searching
+||google.*/*?*&biw=$xmlhttprequest
+||google.*/*?*&ei=$document,subdocument,important,domain=~They want to track users about which time that user perform some action about search or go to next results page
 ||google.*/*?*&ei=$xmlhttprequest
-||google.*/*?*&usg=$document,subdocument,important
+||google.*/*?*&rlz=$document,subdocument,important,domain=~RLZ parameter is surely track Google Chrome users and mostly appear when you install from other sources than Google Chrome website
+||google.*/*?*&rlz=$xmlhttprequest
+||google.*/*?*&usg=$document,subdocument,important,domain=~This random string is surely use for track users
 ||google.*/*?*&usg=$xmlhttprequest
-||google.*/*?*&ved=$document,subdocument,important
-||google.*/*?*&ved=$document,subdocument,important
+||google.*/*?*&ved=$document,subdocument,important,domain=~This random string is surely use for track users
 ||google.*/*?*&ved=$xmlhttprequest
-||google.*/*?*&ved=$xmlhttprequest
-||google.*/*?*&vet=$document,subdocument,important
-||google.*/*?*&vet=$document,subdocument,important
+||google.*/*?*&vet=$document,subdocument,important,domain=~I think this may same as ved
 ||google.*/*?*&vet=$xmlhttprequest
-||google.*/*?*&vet=$xmlhttprequest
-||google.*/*?ei=$document,subdocument,important
+||google.*/*?bih=$document,subdocument,important,domain=~Want to knowing device screen height is not a neccessary part of searching
+||google.*/*?bih=$xmlhttprequest
+||google.*/*?biw=$document,subdocument,important,domain=~Want to knowing device screen width is not a neccessary part of searching
+||google.*/*?biw=$xmlhttprequest
+||google.*/*?ei=$document,subdocument,important,domain=~They want to track users about which time that user perform some action about search or go to next results page
 ||google.*/*?ei=$xmlhttprequest
-||google.*/*?usg=$document,subdocument,important
+||google.*/*?rlz=$document,subdocument,important,domain=~RLZ parameter is surely track Google Chrome users and mostly appear when you install from other sources than Google Chrome website
+||google.*/*?rlz=$xmlhttprequest
+||google.*/*?usg=$document,subdocument,important,,domain=~This random string is surely use for track users
 ||google.*/*?usg=$xmlhttprequest
-||google.*/*?ved=$document,subdocument,important
-||google.*/*?ved=$document,subdocument,important
+||google.*/*?ved=$document,subdocument,important,domain=~This random string is surely use for track users
 ||google.*/*?ved=$xmlhttprequest
-||google.*/*?ved=$xmlhttprequest
-||google.*/*?vet=$document,subdocument,important
-||google.*/*?vet=$document,subdocument,important
+||google.*/*?vet=$document,subdocument,important,domain=~I think this may same as ved
 ||google.*/*?vet=$xmlhttprequest
-||google.*/*?vet=$xmlhttprequest
-||instagram.com/*&igshid=$document,subdocument,important
+||instagram.com/*&igshid=$document,subdocument,important,domain=~This may a Facebook tracking style because they even want to track shared links
 ||instagram.com/*&igshid=$xmlhttprequest
-||instagram.com/*?igshid=$document,subdocument,important
+||instagram.com/*?igshid=$document,subdocument,important,domain=~This may a Facebook tracking style because they even want to track shared links
 ||instagram.com/*?igshid=$xmlhttprequest
 ||messenger.com/*&__tn__=$document,subdocument,important
 ||messenger.com/*&__tn__=$xmlhttprequest
@@ -195,9 +200,9 @@
 ||messenger.com/*&referrer=$xmlhttprequest
 ||messenger.com/*&refsrc=$document,subdocument,important
 ||messenger.com/*&refsrc=$xmlhttprequest
-||messenger.com/*&settings_tracking=$document,subdocument,important
+||messenger.com/*&settings_tracking=$document,subdocument,important,domain=~Why they want to track even when users trying to manage profile settings
 ||messenger.com/*&settings_tracking=$xmlhttprequest
-||messenger.com/*&sfnsn=$document,subdocument,important
+||messenger.com/*&sfnsn=$document,subdocument,important,domain=~This is a remark from Facebook that this link come from Facebook and just shared externally
 ||messenger.com/*&sfnsn=$xmlhttprequest
 ||messenger.com/*?__tn__=$document,subdocument,important
 ||messenger.com/*?__tn__=$xmlhttprequest
@@ -234,25 +239,25 @@
 ||messenger.com/*?referrer=$xmlhttprequest
 ||messenger.com/*?refsrc=$document,subdocument,important
 ||messenger.com/*?refsrc=$xmlhttprequest
-||messenger.com/*?settings_tracking=$document,subdocument,important
+||messenger.com/*?settings_tracking=$document,subdocument,important,domain=~Why they want to track even when users trying to manage profile settings
 ||messenger.com/*?settings_tracking=$xmlhttprequest
-||messenger.com/*?sfnsn=$document,subdocument,important
+||messenger.com/*?sfnsn=$document,subdocument,important,domain=~This is a remark from Facebook that this link come from Facebook and just shared externally
 ||messenger.com/*?sfnsn=$xmlhttprequest
-||play.google.com/*&pcampaignid=$document,subdocument,important
+||play.google.com/*&pcampaignid=$document,subdocument,important,domain=~Often see this when users click ads link and redirect back to GPlay
 ||play.google.com/*&pcampaignid=$xmlhttprequest
-||play.google.com/*&referrer=$document,subdocument,important
+||play.google.com/*&referrer=$document,subdocument,important,domain=~Often see this when users click ads link and redirect back to GPlay
 ||play.google.com/*&referrer=$xmlhttprequest
-||play.google.com/*?pcampaignid=$document,subdocument,important
+||play.google.com/*?pcampaignid=$document,subdocument,important,domain=~Often see this when users click ads link and redirect back to GPlay
 ||play.google.com/*?pcampaignid=$xmlhttprequest
-||play.google.com/*?referrer=$document,subdocument,important
+||play.google.com/*?referrer=$document,subdocument,important,domain=~Often see this when users click ads link and redirect back to GPlay
 ||play.google.com/*?referrer=$xmlhttprequest
-||steamcommunity.com/*&snr=$document,subdocument,important
+||steamcommunity.com/*&snr=$document,subdocument,important,domain=~Possibly track user interaction while browsing games to buy or play
 ||steamcommunity.com/*&snr=$xmlhttprequest
-||steamcommunity.com/*?snr=$document,subdocument,important
+||steamcommunity.com/*?snr=$document,subdocument,important,domain=~Possibly track user interaction while browsing games to buy or play
 ||steamcommunity.com/*?snr=$xmlhttprequest
-||steampowered.com/*&snr=$document,subdocument,important
+||steampowered.com/*&snr=$document,subdocument,important,domain=~Possibly track user interaction while browsing games to buy or play
 ||steampowered.com/*&snr=$xmlhttprequest
-||steampowered.com/*?snr=$document,subdocument,important
+||steampowered.com/*?snr=$document,subdocument,important,domain=~Possibly track user interaction while browsing games to buy or play
 ||steampowered.com/*?snr=$xmlhttprequest
 
 ! Problematic, at your own risk!
@@ -260,8 +265,8 @@
 !   Blocking attempt to access websites with parameters below will cause problem because this parameter are neccessary for check
 !   that you're passing the test or not, however, this will pre-warning that the website are use its server and you may get 
 !   tracked by that company, also.
-||*&__cf_chl_jschl_tk__=$document,subdocument,xmlhttprequest,important
-||*?__cf_chl_jschl_tk__=$document,subdocument,xmlhttprequest,important
+||*&__cf_chl_jschl_tk__=$document,subdocument,xmlhttprequest,important,domain=~Beware that CloudFlare can track you with this parameter but this neccessary for each session only and you can dismiss this parameter once you temporary allowed
+||*?__cf_chl_jschl_tk__=$document,subdocument,xmlhttprequest,important,domain=~Beware that CloudFlare can track you with this parameter but this neccessary for each session only and you can dismiss this parameter once you temporary allowed
 
 ! [Pantip]
 !   They also apply to related topics and external URLs.
