@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: kowith337's Test List
-! Version: 202007071315
+! Version: 202007071329
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -21,6 +21,9 @@ steampowered.com###foryou_flyout .popup_menu #foryou_yourtags
 steampowered.com###foryou_flyout .popup_menu .popup_menu_item[href*="/explore"]
 steampowered.com###foryou_flyout .popup_menu .popup_menu_item[href*="/recommender"]
 steampowered.com###foryou_flyout .popup_menu .popup_menu_subheader:has(.popup_menu_hint)
+
+! - Remove "2020 Summer sales" drop-down long banner
+steampowered.com###promo_header_banner[class*="promotionDetailsBar"]
 
 ! - Remove "Recommended" tab while browsing games by tags.
 steampowered.com##.page_content .tabarea .tag_browse_option[data-browseoption="recommended"]
@@ -69,7 +72,8 @@ imgur.com##.GalleryHandler-postContainer .Gallery-moreOnImgur
 ! - Remove "Scroll more for related contents" pane
 steampowered.com###content_callout.dark:has(.more_content_title)
 
-! - Remove curators/publishers pane that show zuckested to follow instead of curators/publishers that you've already following
+! - Remove curators/publishers pane that show zuckested to follow instead of curators/publishers that you've already following*
+!   * Or you've bought games from related publishers...
 steampowered.com###steam_curators_not_empty:has(.curator_recommendation_capsule)
 
 ! [YouTube Non-Polymer]
@@ -146,6 +150,11 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/))
 twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell"] [data-testid*="follow"])
 
+! Special procedurual - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Note: require uB0 version 1.26.0 or above
+! [Steam] In case if they want to override CSS styles for keep showing "2020 Road Trip", this will permanently remove DOM nodes!
+steampowered.com###promo_header_banner[class*="promotionDetailsBar"]:remove()
+
 ! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Steam]
 ! - Prevent them read your interactions data for nearly-perfectly disable recommendations!
@@ -168,6 +177,10 @@ facebook.com,instagram.com,messenger.com##+js(cookie-remover, _js_datr)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, datr)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, noscript)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-referer)
+
+! Remove some unnecessary cookies in Steam
+steamcommunity.com,steampowered.com##+js(cookie-remover, app_impressions)
+steamcommunity.com,steampowered.com##+js(cookie-remover, strResponsiveViewPrefs)
 
 ! - Prohibit Steam website to detect touch screen from first touch, this cause the proper touch screen malfunction, especially
 !   when you snap and resize browser screen or rotate screen vertically.
