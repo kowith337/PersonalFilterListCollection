@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: kowith337's Test List
-! Version: 202007071403
+! Version: 202007071642
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -105,6 +105,7 @@ pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(มาลาริน/))
 ! [Steam] Make use of `:remove()` for delete unwanted DOM pane without leaving any nodes (require uB0 version 1.26.0 or above)
 steampowered.com##.home_ctn.labs_cluster:remove()
 steampowered.com##.home_ctn.marketingmessage_area:remove()
+steampowered.com###promo_header_banner[class*="promotionDetailsBar"]:remove()
 
 ! [Taobao Mobile] Aim to remove "you may also like" items, but using the chinese word (MiscAnnoyance use `nth-of-type` method)
 m.intl.taobao.com##.App .recommend .recommend-list-wrapper:has(.recommend-title:has-text(邻家好货))
@@ -152,11 +153,6 @@ twitter.com##div[class][data-reactroot] div[class] > main div[class] > section d
 twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(a[href^="/i/related_users"])
 twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/))
 twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell"] [data-testid*="follow"])
-
-! Special procedurual - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Note: require uB0 version 1.26.0 or above
-! [Steam] In case if they want to override CSS styles for keep showing "2020 Road Trip", this will permanently remove DOM nodes!
-steampowered.com###promo_header_banner[class*="promotionDetailsBar"]:remove()
 
 ! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Steam]

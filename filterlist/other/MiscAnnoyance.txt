@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202007041351
+! Version: 202007071641
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -363,8 +363,13 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ! to increase network speed, etc. for good examples by each providers, you can view topics in Pantip below...
 ! - 3Broadband: https://pantip.com/topic/38945629 + https://pantip.com/topic/38963195 + https://pantip.com/topic/38969958
 ! - True Internet: https://pantip.com/topic/39762480 + https://pantip.com/topic/39763510
-||110.164.252.137/wpwarn/monomax$important
-||services.trueinternet.co.th/vasspeedboost$important
+||110.164.252.137/wpwarn$document
+||service.truecorp.co.th$document,important
+||service.trueinternet.co.th$document,important
+||services.truecorp.co.th$document,important
+||services.trueinternet.co.th$document,important
+@@||110.164.252.137/wpwarn/hard$document
+@@||110.164.252.137/wpwarn/soft$document
 
 ! It's also happen on mobile data, too! for just only promote their app, WTF!? (https://pantip.com/topic/39906276)
 ||*&url=www3.truecorp.co.th$important
