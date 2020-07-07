@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: kowith337's Test List
-! Version: 202007071329
+! Version: 202007071403
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -40,6 +40,8 @@ steampowered.com##.home_ctn.discovery_queue_ctn
 
 ! - Remove "Live Stream" pane in home page
 steampowered.com##.home_ctn.live_streams_ctn
+! - This for 2020 sales layout only...
+steampowered.com##.home_page_body_ctn .main_content_ctn .live_streams_ctn
 
 ! - Remove "Recommended by Steam Labs" pane
 steampowered.com##.home_ctn.recommended_by_steam_labs_ctn
@@ -51,6 +53,7 @@ steampowered.com##.home_page_body_ctn .store_bg_overlay
 steampowered.com##.home_page_body_ctn div[class^="home_page_takeover"]
 
 ! - Remove a pane that zuckested by "Because you've played <GameName>"
+steampowered.com###sale_category_blocks:has(a.see_more_link[href*="/recommender"])
 steampowered.com##.home_page_content.deep_dive_block
 
 ! [Taobao Mobile] Remove header anchor navigator
@@ -157,17 +160,30 @@ steampowered.com###promo_header_banner[class*="promotionDetailsBar"]:remove()
 
 ! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Steam]
+! Prevent retrieving partner's live stream promo
+||steampowered.com/broadcast/ajaxgetpopularpartnerbroadcasts$important,~xmlhttprequest
+
 ! - Prevent them read your interactions data for nearly-perfectly disable recommendations!
-||steampowered.com/explore/logfeedview$important,~document
-||steampowered.com/explore/logfeedview$xmlhttprequest,important,redirect=nooptext
-||steampowered.com/explore/recommended$important,~document
-||steampowered.com/explore/recommended$xmlhttprequest,important,redirect=nooptext
+||steampowered.com/dynamicstore/userdata$important,~xmlhttprequest
+||steampowered.com/dynamicstore/userdata$xmlhttprequest
+||steampowered.com/explore/logfeedview$important,~xmlhttprequest
+||steampowered.com/explore/logfeedview$xmlhttprequest
+||steampowered.com/explore/recommended$important,~xmlhttprequest
+||steampowered.com/explore/recommended$xmlhttprequest
 
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||google.*/ads/^$important
 ||google.*/ads/ga-audiences?$important
 
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+||steampowered.com/broadcast/ajaxgetpopularpartnerbroadcasts$xmlhttprequest,important,redirect=nooptext
+||steampowered.com/explore/logfeedview$xmlhttprequest,important,redirect=nooptext
+||steampowered.com/explore/recommended$xmlhttprequest,important,redirect=nooptext
+
+! Trusted or Allowed only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Allow "DynamicStore" information to sent only when you're logged out!
+@@||steampowered.com/dynamicstore/userdata/?id=0$xmlhttprequest
+@@||steampowered.com/dynamicstore/userdata?id=0$xmlhttprequest
 
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Legacy internal scriptlets]
@@ -179,8 +195,10 @@ facebook.com,instagram.com,messenger.com##+js(cookie-remover, noscript)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-referer)
 
 ! Remove some unnecessary cookies in Steam
-steamcommunity.com,steampowered.com##+js(cookie-remover, app_impressions)
-steamcommunity.com,steampowered.com##+js(cookie-remover, strResponsiveViewPrefs)
+steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, app_impressions)
+steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, home_scroll)
+steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, recentapps)
+steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, strResponsiveViewPrefs)
 
 ! - Prohibit Steam website to detect touch screen from first touch, this cause the proper touch screen malfunction, especially
 !   when you snap and resize browser screen or rotate screen vertically.
