@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202007071639
+# Version: 202007102119
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -67,7 +67,8 @@
 # - {Anti-Firebase Install}
 #   > Some apps are rely to that, especially for deploy GDPR, personal data concerns agreement, etc.
 #   > However, "Firebase" are widely know as bug tracker and data analytic capturer!
-#   > so, not just only app devs know those data, but "Google" also knows, too!!
+#   > So, not just only app devs know those data, but "Google" also knows, too!!
+#   > Even though all informations are anonymous, it doesn't mean they have rights to collect and use them!!!
 0.0.0.0 firebaseinstallations.googleapis.com
 #
 # - {Anti-network-based location lookup?}
@@ -84,7 +85,8 @@
 0.0.0.0 reminders-pa.googleapis.com
 #
 # - {Anti-MESSages desktop sync/access}
-#   > Due to it's attempt to connect even you're not use that features, those connections sould not happen until you use it!
+#   > Due to many connection attempts regardless that you're using this features or not, those connections sould not happen
+#     until you really want to use it!
 #   > And it's become useless if you've switched to any alternative SMS/MMS apps, rather than Google!!
 0.0.0.0 instantmessaging-pa.googleapis.com
 #
@@ -115,7 +117,7 @@
 #
 # - {Anti-Redirector}
 #   > GPlay store and YouTube trying to connect this while ads are loading into your face!
-#   > However, it's also break some users who buy/rent and watch movies from Google Play.
+#   > However, it's also break some(one) users who buy or rent, then download and watch movies from Google Play.
 #   > Revert back to generic leftover because of failing to provide proper reason of "neccessary" and "matter" to allow them!
 #
 # - {Anti-Google WebRTC STUN}
@@ -191,10 +193,12 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Firefox Betrayals]
 # - {Anti-Pocket}
-#   > Misleading to add "Chrome Android-alike" NTP (breaking) news feed feature, privacy compromised!
-#   > Worst than "Chrome" because they implement this feature in both Desktop and Mobile!!
-#   > Moved to generic leftover because "WEB BROWSER" IS AIN'T NEWS READER / MAGAZINE / TABLOID / ...!!!
-#     * Unless you directly and/or manually read them on those websites, any preloaded/recommended/zuckested are not welcome!
+#   > Misleading to add "Chrome Android-alike" NTP (breaking) news feed feature, this thing make it's browser "compromised"
+#     about "privacy" !
+#   > This make "Firefox" worse than "Chrome" because they implement this feature in both Desktop and Mobile!!
+#   > Moved to generic leftover because "WEB BROWSER" IS "AIN'T NEWS READER" / "MAGAZINE" / "TABLOID" / ...!!!
+#     * Unless you directly and/or manually read them on those websites or subscribe through RSS Feed and read them as your want!
+#     * Any preloaded/recommended/zuckested especially if it based on country, region and even user's activities ARE NOT WELCOME!
 #   > IF SOMEBODY USE ITS FEATURE, JUST STOP USING MY LEFTOVER LIST IS THE BEST AND LAST CHOICE THAT I CAN PREFER!!!!
 #
 # - {Browser Activation}
