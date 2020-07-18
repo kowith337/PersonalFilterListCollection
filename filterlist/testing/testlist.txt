@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: kowith337's Test List
-! Version: 202007071642
+! Version: 202007181431
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -194,6 +194,7 @@ facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-referer)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, app_impressions)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, home_scroll)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, recentapps)
+steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, recentlyVisitedAppHubs)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, strResponsiveViewPrefs)
 
 ! - Prohibit Steam website to detect touch screen from first touch, this cause the proper touch screen malfunction, especially
