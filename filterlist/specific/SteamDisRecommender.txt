@@ -1,0 +1,142 @@
+[uBlock Origin 1.28.0]
+! Title: Steam Dis-Recommender Filters
+! Version: 202007211418
+! Expires: 2 days
+! Author: kowith337
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/specific/SteamDisRecommender.txt
+
+! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! All rules are focused to mostly desktop page with no ongoing sales campaign...
+! - Remove a pane that need you to login to see zuckested contents!
+steampowered.com###content_login.page_content_ctn
+
+! - Remove horizontal paging items because it's also include "Because you've played <GameName>"
+steampowered.com##.home_page_content .carousel_container.maincap
+
+! - Remove "For You" text at flyout menu bar, leave only your mini avatar icon!
+steampowered.com###foryou_tab span.pulldown a.pulldown_desktop
+steampowered.com###foryou_tab span.pulldown a.pulldown_mobile
+
+! - Remove "Explore", "Recommended for you", "Related game tags" and its hint!
+steampowered.com###foryou_flyout .popup_menu #foryou_yourtags
+steampowered.com###foryou_flyout .popup_menu .popup_menu_item[href*="/explore"]
+steampowered.com###foryou_flyout .popup_menu .popup_menu_item[href*="/recommender"]
+steampowered.com###foryou_flyout .popup_menu .popup_menu_subheader:has(.popup_menu_hint)
+
+! - Remove "Recommended" tab while browsing games by tags.
+steampowered.com##.page_content .tabarea .tag_browse_option[data-browseoption="recommended"]
+
+! - Remove "View your queue" button in full game details page.
+steampowered.com##.game .block .queue_ctn .queue_actions_ctn a.right[href*="/explore/"]
+
+! - Now you've already logged in, what then?
+steampowered.com##.home_content_ctn #content_more
+steampowered.com##.home_content_ctn #content_out.dark
+
+! - Remove "Discover queue" pane in home page
+steampowered.com##.home_ctn.discovery_queue_ctn
+
+! - Remove "Live Stream" pane in home page
+steampowered.com##.home_ctn.live_streams_ctn
+
+! - Remove "Recommended by Steam Labs" pane
+steampowered.com##.home_ctn.recommended_by_steam_labs_ctn
+
+! - Remove "Takeover" pane that promote big publisher, franchise sales, etc.
+steampowered.com##.home_page_body_ctn .fullscreen-bg
+steampowered.com##.home_page_body_ctn .static_takeover_ctn div[class^="page_background_holder"]
+steampowered.com##.home_page_body_ctn .store_bg_overlay
+steampowered.com##.home_page_body_ctn div[class^="home_page_takeover"]
+
+! - Remove a pane that zuckested by "Because you've played <GameName>"
+steampowered.com###sale_category_blocks:has(a.see_more_link[href*="/recommender"])
+steampowered.com##.home_page_content.deep_dive_block
+
+! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! - Remove "Scroll more for related contents" pane
+steampowered.com###content_callout.dark:has(.more_content_title)
+
+! - Remove curators/publishers pane that show zuckested to follow instead of curators/publishers that you've already following*
+!   * Or you've bought games from related curators/publishers...
+steampowered.com###steam_curators_not_empty:has(.curator_recommendation_capsule)
+
+! Non-basic filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Make use of `:remove()` for delete unwanted DOM pane without leaving any nodes (require uB0 version 1.26.0 or above)
+steampowered.com##.home_ctn.labs_cluster:remove()
+steampowered.com##.home_ctn.marketingmessage_area:remove()
+steampowered.com###promo_header_banner[class*="promotionDetailsBar"]:remove()
+
+! - Include `:upward()` rules for horizontal paging items that also remove leftover header.
+steampowered.com##.home_page_content .carousel_container.maincap:upward(2)
+
+! CSS Modification  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! - Sometime you're embarassing to see how many times spent on the related games that you're currently looking and/or trying to
+!   buy, I've hide the playtime and show only related game banner that you've played, this make you not feeling shamed at it,
+!   at least.
+steampowered.com##.game .game_meta_data .recommendation_reasons .similar_recent_apps_container .app_impression_tracked:style(color: transparent !important; font-size: 0px !important)
+
+! - Restore padding size of top scroll banner that caused by "Takeover" pane
+steampowered.com##.home_cluster_ctn.home_ctn .home_page_content:style(padding-left: 0px !important)
+
+! - Aggressively remove "Recommended by Steam Labs" pane, I've force apply style because sometime they want to override CSS
+!   values and resist to allowing content blockers for hide them normally.
+steampowered.com##.home_ctn.labs_cluster:style(display: none !important; width: 0px !important; height: 0px !important)
+
+! - Remove special offers pane that seems probably "marketed", share same tactics as above.
+steampowered.com##.home_ctn.marketingmessage_area:style(display: none !important; width: 0px !important; height: 0px !important)
+
+! - When your perform "Search again without filtered" and you're barely see banner of filtered games because very low opacity,
+!   now I've increased it to 50% (old value is set to show only 5% of it's original image, that's too dark!!)
+steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .col.search_capsule:style(opacity: 0.5 !important)
+steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .platform_img:style(opacity: 0.5 !important)
+
+! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! - Prevent retrieving partner's live stream promo
+||steampowered.com/broadcast/ajaxgetpopularpartnerbroadcasts$important,~xmlhttprequest
+||steampowered.com/broadcast/ajaxgetpopularpartnerbroadcasts$xmlhttprequest
+
+! - Prevent them read your interactions data for nearly-perfect disable recommendations!
+||steampowered.com/dynamicstore/userdata$important,~xmlhttprequest
+||steampowered.com/dynamicstore/userdata$xmlhttprequest
+||steampowered.com/explore/logfeedview$important,~xmlhttprequest
+||steampowered.com/explore/logfeedview$xmlhttprequest
+||steampowered.com/explore/recommended$important,~xmlhttprequest
+||steampowered.com/explore/recommended$xmlhttprequest
+
+! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+||steampowered.com/broadcast/ajaxgetpopularpartnerbroadcasts$xmlhttprequest,important,redirect=nooptext
+||steampowered.com/explore/logfeedview$xmlhttprequest,important,redirect=nooptext
+||steampowered.com/explore/recommended$xmlhttprequest,important,redirect=nooptext
+
+! Trusted or Allowed only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Allow "DynamicStore" information to sent **only when you're logged out!**
+@@||steampowered.com/dynamicstore/userdata/?id=0$xmlhttprequest
+@@||steampowered.com/dynamicstore/userdata?id=0$xmlhttprequest
+
+! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! These are not necessary, except for use for tracking purpose!
+steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, app_impressions)
+steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, home_scroll)
+steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, recentapps)
+steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, recentlyVisitedAppHubs)
+steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, strResponsiveViewPrefs)
+
+! - Prohibit Steam website to detect touch screen from first touch, however, **this cause major site features malfunction!**
+!   * Note that it may require to delete `strResponsiveViewPrefs` cookie first to make this script injection work properly.
+!   * This will helpful in case if you don't want to let `Steam` showing responsive header and menu bar, but you still want to
+!     browse that website as proper desktop site, while use touch screen function as mouse click only.
+steamcommunity.com,steampowered.com##+js(set-constant, Responsive_InitTouchDetection, noopFunc)
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Ranting Zone! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
+! Thanks for the SimpleWall and neither ContextMenu Firewall apps that appear in Tweaking Software or EasyContextMenu, I've also
+! block some shady steam EXEs that not necessary for my life anymore, include SteamServices, SteamWebHelper, SteamErrorReporter,
+! etc. pluse those EXEs are ruined my precious notebook performance too much like a potato chips while I've just running only the
+! main steam client! I give no thanks for new UI and... FUCK THOSE EXPERIMENTAL LABS THAT MOSTLY DO TRACKING US FOR JUST OFFER 
+! PRECIOUSLY TARGETED AND IMPACT ZUCKESTIONS, AND WE CANNOT OPT OUT AT ANY WAY!!
+! Now I've ended up to launch steam client without activating any browsers modules from it, anything that I need to do while
+! playing games will ended to browsers (and sometime mobile app) only, include subscribe and managing workshop contents.
+! Even I've also use android app that linked to personal account, but I will only use for workshop related functions, not for
+! looking to other games and/or software through its apps unless I've open in the browsers that can install either uBlock0 or
+! NanoAdblocker!!!
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
