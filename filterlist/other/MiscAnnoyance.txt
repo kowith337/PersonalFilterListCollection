@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202007242112
+! Version: 202007242152
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -9,6 +9,11 @@
 !              the specific site or category are have enough rules.
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [GamingDose]
+gamingdose.com##a[href*="/linkout/"]
+gamingdose.com##a[href*="cdkeys.com"]
+gamingdose.com##a[onclick^="gtag"][onclick*="send_to"]
+
 ! [GitHub]
 github.com##.repository-content .protip
 github.com##div[class^="signup-prompt"]
@@ -241,15 +246,27 @@ m.webtoons.com##div[id^="layerNoticePopup"]:remove()
 ! HTML Filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: This may work only FF quantum + uB0 WebExt
 !#if cap_html_filtering
+gamingdose.com##^link[rel="amphtml"]
+gamingdose.com##^link[rel="dns-prefetch"]
+gamingdose.com##^noscript
+gamingdose.com##^script:has-text(advads)
+gamingdose.com##^script:has-text(advanced_ads_ready)
+gamingdose.com##^script:has-text(gtm.start)
+gamingdose.com##^script:has-text(r42tag)
+gamingdose.com##^script[data-ad-client]
+gamingdose.com##^script[src*="google-tracking"]
+gamingdose.com##^script[src*="googlesyndication"]
+gamingdose.com##^script[src*="googletagmanager"]
+gamingdose.com##^script[src*="r42tag"]
+greasyfork.org##^.post-install
+m.intl.taobao.com,m.taobao.com##^script:has-text(getFB_GOOLE_trackJs)
 minecraftforge.net##^.promo-container
 minecraftforge.net##^.promos-wrapper
 minecraftforge.net##^div img[src*="imrworldwide.com/cgi-bin/m?"]
 minecraftforge.net##^div img[src^="data:image/gif;base64,"]
-greasyfork.org##^.post-install
-m.intl.taobao.com,m.taobao.com##^script:has-text(getFB_GOOLE_trackJs)
 !#endif
 
-! Inline Script Filtering
+! Inline Script Filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: HTML Filtering for Firefox pre-quantum (aka. XUL Legacy), mainly to support removing matched inline script block
 !#if env_firefox
 m.intl.taobao.com,m.taobao.com##script:contains(getFB_GOOLE_trackJs)
@@ -289,6 +306,12 @@ optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadL
 m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none !important)
 
 ! Network Requests - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [CloudFlare Beacon]
+||cloudflareinsights.com/beacon.$important
+
+! [GamingDose] Prohibit infinite scroll article reader
+||gamingdose.com/wp-content/plugins/ajax-load-more$script,stylesheet
+
 ! [Google]
 ! - Tracking users with some parameter tag (e.g. 'ei', 'vet')
 ||google.*/*?*&ei=$image,xmlhttprequest,important
