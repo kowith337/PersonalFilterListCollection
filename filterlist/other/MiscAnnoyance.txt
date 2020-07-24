@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202007211539
+! Version: 202007242112
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -421,16 +421,6 @@ savefrom.net##+js(acis, tplYouTubePopupHelper)
 !          You can look for henrypp's "ChrLauncher" if you want to do so... (Windows users only!)
 !#if env_firefox
 github.com##.unsupported-browser
-!#endif
-
-!#if env_firefox
-! [Pantip] Aim to reduce third parties connections, such as Google Ads Platform, Innity, etc.
-pantip.com##^noscript
-pantip.com##^script:has-text(avd.innity.net)
-pantip.com##^script:has-text(gtm.start)
-pantip.com##^script[async][src*="doubleclick"]
-pantip.com##^script[async][src*="googletagservices"]
-pantip.com##^script[async][src*="innity.net"]
 !#endif
 
 ! [IMGUr Mobile View] Hide zuckestions to download and/or open in app
