@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202007102119
+# Version: 202007301316
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -204,6 +204,9 @@
 # - {Browser Activation}
 #
 # - {Captive Portal}
+0.0.0.0 detectportal.firefox.com
+0.0.0.0 detectportal.prod.mozaws.net
+0.0.0.0 detectportal.firefox.com-v2.edgesuite.net
 #
 # - {Experiment}
 #
@@ -218,6 +221,8 @@
 0.0.0.0 location.services.mozilla.com
 #
 # - {Web Notifications Endpoint?}
+#   I'm also see these connections whenever start using Firefox (even with fresh profiles)
+0.0.0.0 autopush.prod.mozaws.net
 0.0.0.0 push.services.mozilla.com
 #
 # - {Geo Default Search?}
