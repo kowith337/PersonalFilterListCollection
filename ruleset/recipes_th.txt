@@ -1,7 +1,7 @@
 ! uMatrix: Ruleset recipes 1.4.1
 ! Title: Rulesets for Thai sites (alpha test)
-! Version: 202003170852
-! VersionNumber: 0.20.0
+! Version: 202008011829
+! VersionNumber: 0.21.0
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/ruleset/readme.md
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
@@ -10,7 +10,7 @@
 Amarin TV
 	amarintv.com *
 		! Unbreak video player by disable referrer spoofing,
-		! JWPlayer cannot play anything if you spoof referrer header.
+		! JWPlayer cannot play anything if you spoof referrer.
 		referrer-spoof: _ false
 		_ 203.151.179.100 fetch
 		_ 203.151.179.101 fetch
@@ -29,7 +29,6 @@ LINE TV
 	tv.line.me *
 		_ line-apps.com script
 		_ pstatic.net script
-		_ tv-line.pstatic.net script
 		_ tv-line.pstatic.net fetch
 
 MCOT Radio - Active Radio
@@ -56,18 +55,8 @@ MCOT Radio - MET
 		_ mcotn-api.mcot.net fetch
 		_ ssl.p.jwpcdn.com script
 
-MCOT Radio - News Network (Fallback)
-	news1005.mcot.net *
-		referrer-spoof: _ false
-		_ ssl.p.jwpcdn.com script
-
-MCOT Radio - Thinking Radio (Fallback)
-	thinkingradio.mcot.net *
-		referrer-spoof: _ false
-		_ cdn.jwplayer.com script
-
-MCOT Radio - Luktung Mahanakorn
-	ltmfm95.mcot.net *
+MCOT Radio - Wide scope
+	mcot.net *
 		referrer-spoof: _ false
 		_ ssl.p.jwpcdn.com script
 

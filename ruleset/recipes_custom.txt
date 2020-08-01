@@ -1,7 +1,7 @@
 ! uMatrix: Ruleset recipes 1.4.1
 ! Title: Self Custom Ruleset
-! Version: 202004172113
-! VersionNumber: 0.41.0
+! Version: 202008011829
+! VersionNumber: 0.42.0
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
@@ -26,9 +26,9 @@ Etterna Online
 Gelbooru
 	gelbooru.com *
 		! Note: You must use with uBlock Origin or Nano, this only
-		!       something that really need and prevent unwanted
-		!       connections, not for unbreak antiuser tactics that
-		!       their made.
+		!       allow something that really need and prevent any
+		!       unwanted connections, not for unbreak antiuser
+		!       tactics that their made.
 		! Note2: I won't turn on Google reCaptcha by default, you
 		!        can turn it on with default recipe that already
 		!        provided by uMatrix or use my recipe that allow
@@ -37,7 +37,7 @@ Gelbooru
 		_ ajax.googleapis.com script
 		_ maxcdn.bootstrapcdn.com script
 
-GitHub (Basic Viewing)
+GitHub (Basic Viewing only)
 		github.com *
 		_ githubassets.com script
 
@@ -73,9 +73,13 @@ Google Translate (Chrome Internal)
 
 Invidious (Non-proxy mode)
 	invidio.us *
+	invidious.13ad.de *
+	invidious.fdn.fr *
+	invidious.ggc-project.de *
+	yewtu.be *
 		! Recommend to use another instance that set to proxy
 		! streams by default (I prefer "Snopyta" one...)
-		! or else, add `(?|&)local=1` parameter after in your
+		! or else, append `(?|&)local=1` parameter in your
 		! browser address bar.
 		_ googlevideo.com media
 

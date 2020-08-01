@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202007071625
+# Version: 202008011921
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -251,6 +251,7 @@
 0.0.0.0 gsspat.jp
 0.0.0.0 gssprt.jp
 0.0.0.0 hariken.co
+0.0.0.0 hbplatform.com
 0.0.0.0 igmedianow.com
 0.0.0.0 impact-ad.jp
 0.0.0.0 imprezzer.com
@@ -314,6 +315,7 @@
 0.0.0.0 visitor-analytics.io
 0.0.0.0 visualwebsiteoptimizer.com
 0.0.0.0 waust.at
+0.0.0.0 webana.io
 0.0.0.0 xm.com
 0.0.0.0 yengo.asia
 0.0.0.0 yengo.com
@@ -406,6 +408,7 @@
 0.0.0.0 cdn-ssl.vidible.tv
 0.0.0.0 cdn.adnuntius.com
 0.0.0.0 cdn.adsoptimal.com
+0.0.0.0 cdn.hbplatform.com
 0.0.0.0 cdn.izooto.com
 0.0.0.0 cdn.onesignal.com
 0.0.0.0 cdn.onthe.io
@@ -633,11 +636,13 @@
 0.0.0.0 www.adsoptimal.com
 0.0.0.0 www.cpsee.com
 0.0.0.0 www.cutedev.net
+0.0.0.0 www.hbplatform.com
 0.0.0.0 www.netcpms.com
 0.0.0.0 www.silkspan.com
 0.0.0.0 www.storygize.net
 0.0.0.0 www.traffic-sharing.com
 0.0.0.0 www.ublock.org
+0.0.0.0 www.webana.io
 0.0.0.0 www.yengo.com
 0.0.0.0 www2.silkspan.com
 0.0.0.0 x01.aidata.io
