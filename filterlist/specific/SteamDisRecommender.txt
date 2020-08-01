@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Steam Dis-Recommender Filters
-! Version: 202007211418
+! Version: 202008011959
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -125,14 +125,15 @@ steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, 
 ! - Prohibit Steam website to detect touch screen from first touch, however, **this cause major site features malfunction!**
 !   * Note that it may require to delete `strResponsiveViewPrefs` cookie first to make this script injection work properly.
 !   * This will helpful in case if you don't want to let `Steam` showing responsive header and menu bar, but you still want to
-!     browse that website as proper desktop site, while use touch screen function as mouse click only.
-steamcommunity.com,steampowered.com##+js(set-constant, Responsive_InitTouchDetection, noopFunc)
+!     browse that website as proper desktop site, while use touch screen function as mouse click and page scrolling.
+steamcommunity.com,steampowered.com##+js(addEventListener-defuser, touchstart)
+! steamcommunity.com,steampowered.com##+js(set-constant, Responsive_InitTouchDetection, noopFunc)
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Ranting Zone! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
 ! Thanks for the SimpleWall and neither ContextMenu Firewall apps that appear in Tweaking Software or EasyContextMenu, I've also
 ! block some shady steam EXEs that not necessary for my life anymore, include SteamServices, SteamWebHelper, SteamErrorReporter,
-! etc. pluse those EXEs are ruined my precious notebook performance too much like a potato chips while I've just running only the
-! main steam client! I give no thanks for new UI and... FUCK THOSE EXPERIMENTAL LABS THAT MOSTLY DO TRACKING US FOR JUST OFFER 
+! etc. pluse those EXEs are ruined my precious notebook performance too much like a potato chips even I just run only the main
+! steam client! I give no thanks for new UI and... FUCK THOSE EXPERIMENTAL LABS THAT MOSTLY DO TRACKING US FOR JUST OFFER
 ! PRECIOUSLY TARGETED AND IMPACT ZUCKESTIONS, AND WE CANNOT OPT OUT AT ANY WAY!!
 ! Now I've ended up to launch steam client without activating any browsers modules from it, anything that I need to do while
 ! playing games will ended to browsers (and sometime mobile app) only, include subscribe and managing workshop contents.
