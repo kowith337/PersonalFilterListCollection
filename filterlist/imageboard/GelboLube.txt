@@ -118,6 +118,8 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 @@||gelbooru.com/script/application.js|$script,first-party
 @@||gelbooru.com/script/miscJs.js?$script,first-party
 @@||gelbooru.com/script/miscJs.js|$script,first-party
+@@||gelbooru.com/script/autocomplete.*.js?$script,first-party
+@@||gelbooru.com/script/autocomplete.*.js|$script,first-party
 
 ! 3. Actual WebM Videos (Legitimate WebM vids are loaded from /images/ only, otherwise is adverts!)
 @@||gelbooru.com/images/$media
