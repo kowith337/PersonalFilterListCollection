@@ -1,8 +1,8 @@
 [uBlock Origin 1.28.0]
 ! Title: GelboLube (Universal) [stack menubar modified]
-! Version: 202007041338
+! Version: 202008042032
 ! Expires: 2 days
-! Author: kowith337, TankedThomas and contributors
+! Author: kowith337 and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/imageboard
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/imageboard/GelboLube.txt
@@ -108,18 +108,28 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 @@||gelbooru.com/script/jquery*$script,first-party
 
 ! 2. Useful scripts
-! - [application.js] is questionable due to it's have "ExoLoader" function inside that script.
-! - [miscJs.js] is allowed for autocomplete search
+! - [application3.js] is questionable due to it's have `BPJS` function inside that script.
+! - [autocomplete.js] is allowed for autocomplete search
+! - [miscJs.js] HayStack or something that I can't understand, but allowed because it doesn't have anything harm to end users.
+!   Note that they have lately rename main script file, (previously was `application.js`), but I'm not sure that they still want
+!   to abuse my exclusion (and may include uAssets) or not, as well as new autocomplete script that named `autocomplete.old.js`
+!   that not sure they will inject hostile script and name it like `autocomplete.<shadynamehere>.js`, and any otherwise...
 @@||*/script/application.js?$script,domain=gelbooru.com
-@@||*/script/application.js|$script,domain=gelbooru.com
+@@||*/script/application.js?$script,domain=gelbooru.com
+@@||*/script/application3.js|$script,domain=gelbooru.com
+@@||*/script/application3.js|$script,domain=gelbooru.com
+@@||*/script/autocomplete.*.js?$script,domain=gelbooru.com
+@@||*/script/autocomplete.*.js|$script,domain=gelbooru.com
 @@||*/script/miscJs.js?$script,domain=gelbooru.com
 @@||*/script/miscJs.js|$script,domain=gelbooru.com
 @@||gelbooru.com/script/application.js?$script,first-party
 @@||gelbooru.com/script/application.js|$script,first-party
-@@||gelbooru.com/script/miscJs.js?$script,first-party
-@@||gelbooru.com/script/miscJs.js|$script,first-party
+@@||gelbooru.com/script/application3.js?$script,first-party
+@@||gelbooru.com/script/application3.js|$script,first-party
 @@||gelbooru.com/script/autocomplete.*.js?$script,first-party
 @@||gelbooru.com/script/autocomplete.*.js|$script,first-party
+@@||gelbooru.com/script/miscJs.js?$script,first-party
+@@||gelbooru.com/script/miscJs.js|$script,first-party
 
 ! 3. Actual WebM Videos (Legitimate WebM vids are loaded from /images/ only, otherwise is adverts!)
 @@||gelbooru.com/images/$media
@@ -261,14 +271,14 @@ gelbooru.com##+js(aopw, adsbyjuicy)
 gelbooru.com##+js(acis, AddZone, idzone)
 gelbooru.com##+js(acis, ImplicityBreakingSite)
 gelbooru.com##+js(acis, adtoniq)
-gelbooru.com##+js(acis, cookieName, gelcomPoop)
 gelbooru.com##+js(acis, domain_base, exosrv.com)
 gelbooru.com##+js(acis, serve, script_url)
 gelbooru.com##+js(acis, window.dataLayer, gtag)
 
 ! 4. Inject constant value (Only a value that not match to specific string will be applied)
-gelbooru.com##+js(set, ExoDetector, noopfunc)
-gelbooru.com##+js(set, adtoniq, noopfunc)
+gelbooru.com##+js(set, BPJS, noopFunc)
+gelbooru.com##+js(set, ExoDetector, noopFunc)
+gelbooru.com##+js(set, adtoniq, noopFunc)
 
 ! CSS Re-design / Mobile Improvement  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Overall adjust menu bar to reduce thickness of them, previously, I've use this section to divide each menu bars but for now
