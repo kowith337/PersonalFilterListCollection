@@ -11,7 +11,7 @@ Currently known have filterlist for
 - uBlock Origin / Nano Adblocker
   - APKMirror
   - Facebook (Mostly mobile layout)
-  - Gelbooru + TheDoujin [(Moved from this repo)](https://github.com/kowith337/gelbolube)
+  - Gelbooru [(Moved from this repo)](https://github.com/kowith337/gelbolube)
   - Uncategorised sites
 - Hosts File
   - block leftover and/or (not|un-) blocked hosts
