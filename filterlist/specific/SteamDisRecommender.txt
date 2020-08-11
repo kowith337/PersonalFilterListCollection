@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Steam Dis-Recommender Filters
-! Version: 202008120028
+! Version: 202008120047
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -117,6 +117,10 @@ steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .plat
 @@||steampowered.com/dynamicstore/userdata/?id=0$xmlhttprequest
 @@||steampowered.com/dynamicstore/userdata?id=0$xmlhttprequest
 
+! Allow continuous scrolling while search and view game lists.
+! - Please note, the AJAX requests still bundle with `snr` parameter, this might be trade-off your privacy for that function!
+@@||steampowered.com/search/results/*&infinite=$xmlhttprequest,domain=store.steampowered.com
+
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! These are not necessary, except for use for tracking purpose!
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, app_impressions)
@@ -130,17 +134,16 @@ steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, 
 !   * This will helpful in case if you don't want to let `Steam` showing responsive header and menu bar, but you still want to
 !     browse that website as proper desktop site, while use touch screen function as mouse click and page scrolling.
 steamcommunity.com,steampowered.com##+js(addEventListener-defuser, touchstart)
-! steamcommunity.com,steampowered.com##+js(set-constant, Responsive_InitTouchDetection, noopFunc)
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Ranting Zone! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
+! [Ranting Zone!] ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
 ! Thanks for the SimpleWall and neither ContextMenu Firewall apps that appear in Tweaking Software or EasyContextMenu, I've also
 ! block some shady steam EXEs that not necessary for my life anymore, include SteamServices, SteamWebHelper, SteamErrorReporter,
-! etc. pluse those EXEs are ruined my precious notebook performance too much like a potato chips even I just run only the main
-! steam client! I give no thanks for new UI and... FUCK THOSE EXPERIMENTAL LABS THAT MOSTLY DO TRACKING US FOR JUST OFFER
-! PRECIOUSLY TARGETED AND IMPACT ZUCKESTIONS, AND WE CANNOT OPT OUT AT ANY WAY!!
-! Now I've ended up to launch steam client without activating any browsers modules from it, anything that I need to do while
+! etc. plus those EXEs are ruined my precious notebook performance too much like a potato chips! even I just run only the main
+! steam client!! I give no thanks for new UI and... FUCK THOSE EXPERIMENTAL LABS THAT MOSTLY DO TRACKING US FOR JUST OFFER
+! PRECIOUSLY TARGETED AND IMPACT ZUCKESTIONS, AND WE CANNOT OPT OUT AT ANY WAY!!!
+! Now I've giving up and launch steam client without activating any browsers modules from it, anything that I need to do while
 ! playing games will ended to browsers (and sometime mobile app) only, include subscribe and managing workshop contents.
 ! Even I've also use android app that linked to personal account, but I will only use for workshop related functions, not for
-! looking to other games and/or software through its apps unless I've open in the browsers that can install either uBlock0 or
-! NanoAdblocker!!!
+! looking to other games and/or software through its apps anymore, unless I've open in the browsers that can install either
+! uBlock0 or NanoAdblocker!!!!
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
