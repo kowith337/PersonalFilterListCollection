@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Steam Dis-Recommender Filters
-! Version: 202008011959
+! Version: 202008120028
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -29,6 +29,9 @@ steampowered.com##.page_content .tabarea .tag_browse_option[data-browseoption="r
 
 ! - Remove "View your queue" button in full game details page.
 steampowered.com##.game .block .queue_ctn .queue_actions_ctn a.right[href*="/explore/"]
+
+! - Remove "More like this" zuckestions in full game details page.
+steampowered.com##.game_description_column #recommended_block
 
 ! - Now you've already logged in, what then?
 steampowered.com##.home_content_ctn #content_more
