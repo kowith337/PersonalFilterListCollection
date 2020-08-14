@@ -1,7 +1,7 @@
 ! uMatrix: Ruleset recipes 1.4.1
 ! Title: Self Custom Ruleset
-! Version: 202008011829
-! VersionNumber: 0.42.0
+! Version: 202008142321
+! VersionNumber: 0.42.1
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
@@ -14,8 +14,8 @@ Bing Translator (Edge Internal)
 		! However, you may need to refresh once after apply ruleset
 		! and try click that menu again in order to allow Edge
 		! translate current page properly.
-		_ edge.microsoft.com fetch
-		_ api.cognitive.microsofttranslator.com fetch
+			_ edge.microsoft.com fetch
+			_ api.cognitive.microsofttranslator.com fetch
 
 Etterna Online
 	etternaonline.com *
@@ -28,14 +28,15 @@ Gelbooru
 		! Note: You must use with uBlock Origin or Nano, this only
 		!       allow something that really need and prevent any
 		!       unwanted connections, not for unbreak antiuser
-		!       tactics that their made.
+		!       tactics that their made because some ads and
+		!       tracking assets also loaded from this site itself.
 		! Note2: I won't turn on Google reCaptcha by default, you
 		!        can turn it on with default recipe that already
 		!        provided by uMatrix or use my recipe that allow
 		!        workers (This may dangerous!)
-		_ 1st-party script
-		_ ajax.googleapis.com script
-		_ maxcdn.bootstrapcdn.com script
+			_ 1st-party script
+			_ ajax.googleapis.com script
+			_ maxcdn.bootstrapcdn.com script
 
 GitHub (Basic Viewing only)
 		github.com *
@@ -54,12 +55,12 @@ Google reCaptcha (Allow SW)
 		! even cannot click checkbox to get any challenges unless
 		! you've enable web workers, however, it may allow other
 		! workers to be running (like cryptominer, etc.)
-		no-workers: _ false
-		_ www.google.com *
-		_ www.google.com script
-		_ www.google.com frame
-		_ www.gstatic.com *
-		_ www.gstatic.com script
+			no-workers: _ false
+			_ www.google.com *
+			_ www.google.com script
+			_ www.google.com frame
+			_ www.gstatic.com *
+			_ www.gstatic.com script
 
 Google Translate (Chrome Internal)
 	* translate.googleapis.com
@@ -69,19 +70,33 @@ Google Translate (Chrome Internal)
 		! However, you may need to refresh once after apply ruleset
 		! and try click that menu again in order to allow Chrome
 		! translate current page properly.
-		_ translate.googleapis.com fetch
+			_ translate.googleapis.com fetch
 
-Invidious (Non-proxy mode)
-	invidio.us *
+Invidious [Instances where proxy was set to force off]
 	invidious.13ad.de *
-	invidious.fdn.fr *
-	invidious.ggc-project.de *
-	yewtu.be *
-		! Recommend to use another instance that set to proxy
-		! streams by default (I prefer "Snopyta" one...)
-		! or else, append `(?|&)local=1` parameter in your
-		! browser address bar.
+	invidious.tube *
+	watch.nettohikari.com *
 		_ googlevideo.com media
+
+Invidious [Neutral]
+	! You can append `(?|&)local=1` parameter in your browser
+	! address bar to force proxy video or you can use another
+	! instance that set to proxy streams by default
+	! * Only "Snopyta" are supported at this moment
+	!
+	! However, not all instances are support and resprct proxy
+	! state parameter, some place doesn't allowed you to do
+	! due to server performance, storage limitations and
+	! specific reasons from owner of its instance...
+		invidiou.site *
+		invidious.fdn.fr *
+		invidious.ggc-project.de *
+		invidious.site *
+		invidious.toot.koeln *
+		vid.mint.lgbt *
+		yewtu.be *
+		yt.iswleuven.be *
+			_ googlevideo.com media
 
 Netflix Fast Internet Test
 	fast.com *

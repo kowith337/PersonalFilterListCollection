@@ -1,7 +1,7 @@
 ! uMatrix: Ruleset recipes 1.4.1
 ! Title: Rulesets for Thai sites (alpha test)
-! Version: 202008011829
-! VersionNumber: 0.21.0
+! Version: 202008142321
+! VersionNumber: 0.21.1
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/ruleset/readme.md
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
@@ -30,6 +30,7 @@ LINE TV
 		_ line-apps.com script
 		_ pstatic.net script
 		_ tv-line.pstatic.net fetch
+		_ tv-line.pstatic.net media
 
 MCOT Radio - Active Radio
 	fm99activeradio.com *
