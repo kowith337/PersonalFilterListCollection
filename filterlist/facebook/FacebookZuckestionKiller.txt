@@ -215,10 +215,10 @@
 ! [Super lightweight Facebook enhancement]
 ! It's no need to load anything that not matter to use, because `mbasic.facebook.com` can work fine without external JavaScript,
 ! iframe and third party resources.
-! ||$inline-script,domain=d.facebook.com,mbasic.facebook.com
-||$script,domain=d.facebook.com,mbasic.facebook.com
-||$subdocument,domain=d.facebook.com,mbasic.facebook.com
-||$websocket,domain=d.facebook.com,mbasic.facebook.com
+! ||$inline-script,domain=d.facebook.com|mbasic.facebook.com
+||$script,domain=d.facebook.com|mbasic.facebook.com
+||$subdocument,domain=d.facebook.com|mbasic.facebook.com
+||$websocket,domain=d.facebook.com|mbasic.facebook.com
 
 ! SOUND annoyances
 ! This may break sounds in messages, but I have no choice about this, because Facebook Touch site is now play some sounds when
