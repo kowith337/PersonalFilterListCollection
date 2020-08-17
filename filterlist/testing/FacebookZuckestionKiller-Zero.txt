@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 202008171827
+! Version: 202008172002
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -21,10 +21,12 @@
 ! Remark: If you're using uBlock0 or Nano, try click the magnifier icon to expand all parameters for getting real URL
 ||*&fbclid=$document,xmlhttprequest,important
 ||*?fbclid=$document,xmlhttprequest,important
+||facebook.com/l.php$document,xmlhttprequest,important
 ||l.facebook.com$document,xmlhttprequest,important
 ||l.messenger.com$document,xmlhttprequest,important
 ||lm.facebook.com$document,xmlhttprequest,important
 ||lm.messenger.com$document,xmlhttprequest,important
+||messenger.com/l.php$document,xmlhttprequest,important
 
 ! Network Blocking
 ! to prevent sending requests to show related contents, determine user action about how users use Facebook, nasty redirect, etc.
@@ -441,7 +443,6 @@ facebook.com##:xpath(//div[@id="stream_pagelet"]//div[starts-with(@data-ownerid,
 facebook.com##:xpath(//div[@id="stream_pagelet"]//div[starts-with(@data-ownerid,"u_jsonp_")][//div/text()="Related"])
 facebook.com##:xpath(//div[@id="timeline-medley"]//div//span[.//button/text()="Tag Suggestions"])
 facebook.com##[id^=hyperfeed_story_id_]:has(a[href*="client_token"])
-facebook.com##[id^=hyperfeed_story_id_]:has(a[href*="utm_campaign"])
 facebook.com##div ul[role="menu"] li:has(a[href*="campaign/landing.php?"])
 facebook.com##div[data-referrer="pagelet_side_ads"]
 facebook.com##div[data-referrer="timeline_collections_section_title"] > div:has(div[id^="pagelet_recommendation"])

@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202008011818
+# Version: 202008171950
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -84,10 +84,9 @@
 0.0.0.0 notifications-pa.googleapis.com
 0.0.0.0 reminders-pa.googleapis.com
 #
-# - {Anti-MESSages desktop sync/access}
-#   > Due to many connection attempts regardless that you're using this features or not, those connections sould not happen
-#     until you really want to use it!
-#   > And it's become useless if you've switched to any alternative SMS/MMS apps, rather than Google!!
+# - {Anti-App Preview MESSages}
+#   Make sure you've disable "App Preview Messages" first before load this hosts file, otherwise, you cannot change state of that
+#   feature.
 0.0.0.0 instantmessaging-pa.googleapis.com
 #
 # - {Anti-Lens}

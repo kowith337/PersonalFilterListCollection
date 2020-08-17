@@ -1,6 +1,6 @@
 # [uMatrix 1.3.15.100]
 # Title: Facebook Zero Hosts Block (Test unit)
-# Version: 202004091953
+# Version: 202008171958
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/hosts
@@ -35,6 +35,7 @@
 #      confirmations from user's side.
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Top Level - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 discoverapp.com
 0.0.0.0 expresswifi.com
 0.0.0.0 freebasics.com
 0.0.0.0 internet.org
@@ -91,6 +92,11 @@
 0.0.0.0 z-p42-rupload.facebook.com
 0.0.0.0 z-p42-upload.facebook.com
 0.0.0.0 z-upload.facebook.com
+# DiscoverApp - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 0.discoverapp.com
+0.0.0.0 mobile.discoverapp.com
+0.0.0.0 web.discoverapp.com
+0.0.0.0 www.discoverapp.com
 # ExpressWiFi - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 airjaldi-expresswifi-com.airjaldi.in.expresswifi.com
 0.0.0.0 airjaldi.in.expresswifi.com
