@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202008011921
+# Version: 202008182050
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -557,6 +557,7 @@
 0.0.0.0 simage7.pubmatic.com
 0.0.0.0 simage8.pubmatic.com
 0.0.0.0 simage9.pubmatic.com
+0.0.0.0 snowplow.trx.gitlab.net
 0.0.0.0 ssl-avd.innity.com
 0.0.0.0 ssl-avd.innity.net
 0.0.0.0 ssl.geoplugin.net
@@ -620,6 +621,7 @@
 0.0.0.0 transaction-tracking-dot-mfec-martech.appspot.com
 0.0.0.0 trc.sanook.com
 0.0.0.0 trend.igmedianow.com
+0.0.0.0 trx.gitlab.net
 0.0.0.0 unitus.synergy-e.com
 0.0.0.0 v1.api.useinsider.com
 0.0.0.0 vidstat.taboola.com
