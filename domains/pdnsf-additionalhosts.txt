@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202006191835
+# Version: 202008182126
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -74,7 +74,6 @@ beacon*.*
 beacon.*
 byteark-analytics.*
 criteo.*
-firebase*.*
 geniee*.*
 innity.*
 mtburn.*
@@ -93,21 +92,6 @@ vpn*plus*.*
 vpn*plus.*
 yengo.*
 
-# Google CNAME Penetration (Mostly "Google L" and some "GVT" subdomains, wildcard rules)
-*-google*.l.google.com
-*-google-analytics.*
-*-googlead*.*
-*-googletag*.*
-*-2mdn-*.google.com
-beacon.gvt*.com
-beacon*.gvt*.com
-google-analytics.*
-googlead*.*
-googletag*.*
-pagead*.doubleclick.*
-pagead-*.l.google.com
-redirector.gvt*.com
-
 # [Generic Reason]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Abusive DNS Cloaking (Don't forget to set 'checkCNAME = true' in 'DNSFilter.conf')
 # Credits: https://github.com/nextdns/cname-cloaking-blocklist/raw/master/domains
@@ -116,6 +100,7 @@ a8.net
 affex.org
 at-o.net
 ati-host.net
+bp01.net
 dnsdelegation.io
 ebis.ne.jp
 eulerian.net
@@ -142,7 +127,7 @@ booking.com
 # App owner's rant message: https://gitlab.com/vijai/screenrecorder/issues/72#note_180783854
 orpheusdroid.com
 
-# [Firefox Related] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Wound ashes fox] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Sorry for anyone who use CloudFlare DNS resolvers, but it's just my opinion to block due to Firefox's wrong turn!
 # e.g. Out-of-box config of Firefox use "TRR" resolvers (aka. DoH) from CloudFlare by default!
 #      Currently apply in US right now with include NextDNS as a fellow alternative choice, but it's still use CloudFlare first!!
@@ -153,7 +138,7 @@ cloudflare-dns.com
 ciscobinary.openh264.org
 location.services.mozilla.com
 
-# Deprecated "HELLo" broker, endpoints, etc.
+# Deprecated "HELL-o" broker, endpoints, etc.
 loop.services.mozilla.com
 mozillamessaging.com
 
@@ -174,7 +159,8 @@ setup.services.mozilla.com
 *tiles.*.mozilla*
 crash-stats.mozilla.*
 data.mozilla.*
-detectportal.*
+detectportal.firefox.*
+detectportal.mozilla.*
 experiment*.mozilla.*
 experiment.mozilla.*
 fhr.*.mozilla.*
@@ -207,11 +193,7 @@ admob.com
 adsensecustomsearchads.com
 adwords.com
 crashlytics.com
-doubleclick.com
-doubleclick.net
 fabric.io
-firebase.google.com
-firebaseio.com
 google-analytics.com
 googleadservices.com
 googlesyndication.com
@@ -248,12 +230,6 @@ connectivitycheck.gstatic.com
 # gvt1.com
 gvt2.com
 gvt3.com
-gvt4.com
-gvt5.com
-gvt6.com
-gvt7.com
-gvt8.com
-gvt9.com
 
 # Google CNAME Penetration (Mostly "Google L" subdomains, non-wildcard section)
 gstaticadssl.l.google.com
@@ -314,10 +290,12 @@ assistant.google.com
 geomobileservices-pa.googleapis.com
 gmbmobile-pa.googleapis.com
 
-# Google MESSages desktop sync/access
+# Google MESSages desktop sync/access (App preview messages)
 # - At desktop side, it's require to connect this domain for showing QR code, in order to use your phone for scan and pair. (#52)
 # - At mobile device side, it have many attemps to ping this domain, even you didn't use above feature.
 # - This connections will not neccessary if you're using another default SMS apps.
+# - Make sure you've disable "App Preview Messages" first before load this hosts file, otherwise, you cannot change state of that
+#   feature.
 instantmessaging-pa.googleapis.com
 notifications-pa.googleapis.com
 
@@ -325,19 +303,20 @@ notifications-pa.googleapis.com
 lens-pa.googleapis.com
 lensphotos-pa.googleapis.com
 
- No idea, I though it's related to Google Fit?
+# No idea, I though it's related to Google Fit?
 mdh-pa.googleapis.com
 
 # Phoninig home about network quality and also measuring? (Good to block, we should not submit any network info back to Google!)
-# - I prefer to block because of privacy compromise, why some app devs want to know how good of user's network connectivity?
-# - In case if you've face problems like issue #50, just whitelist or comment rules below.
+# - I prefer to block because of privacy compromise, why some app devs want to know how good of user's network quality?
+# - In case if you've face problems like issue #50, just whitelist or comment rules by your own!
 mobilenetworkscoring-pa.googleapis.com
 
 # Block Google News
 newslegacy-pa.googleapis.com
 
 # People (This may cause "Google account avatar" won't show!?)
-# - If you store phone/mail contacts with alternative way and not to sync with Google, it's good to block this!
+# - It's good to block this if you store phone/mail contacts with alternative way and intent to not sync with Google!
+#   e.g. DAVx5, DecSync, NextCloud, etc.
 people-pa.googleapis.com
 
 # Google Play device certify?
@@ -360,15 +339,29 @@ recommender.googleapis.com
 suggestqueries.googleapis.com
 
 # Wildcard goes here!
+*-2mdn-*.google.*
 *-chrome*-pa.googleapis.com
+*-google*.l.google.com
+*-google-analytics.*
+*-googlead*.*
+*-googletag*.*
 adservice.google.*
 appinvite-*.googleapis.com
+beacon*.gvt*.com
+beacon.gvt*.com
 chrome*-pa.googleapis.com
 content-*.googleapis.com
 digitalassetlinks.*.googleapis.com
+doubleclick.*
+firebase*.*
+google-analytics.*
+googlead*.*
+googletag*.*
 http*-pa.googleapis.com
 id.google.*
+pagead-*.l.google.com
 recommender.*.google.com
+redirector.gvt*.com
 suggestqueries.google.*
 www.*-pa.googleapis.com
 
@@ -400,6 +393,7 @@ alt*-mtalk.google.com
 *-z-*.fbsbx.com
 *-z-*.messenger.com
 0.facebook.com
+discoverapp.com
 expresswifi.com
 free.facebook.com
 freebasics.com
@@ -435,16 +429,23 @@ zero.facebook.com
 # tracking code on that sites, in other words, you can blame site owner who have done that!!
 # However, since Facebook improve ability to track users by make use of "fbclid", even you've use another browsers to open links
 # from Facebook, you may better use something to strip them out! e.g.
-# - ViolentMonkey* + User scripts that capable to remove unwanted parameters...
-# - Ryack's Avoision (Sideload PC Browser Extension for Chrome/Firefox): https://github.com/dryack/avoision
+# - UntrackMe [Full Version] (Strip tracking params and Redirect to privacy-friendly instances)
+#   > : https://f-droid.org/packages/app.fedilab.nitterizeme
 # - Stoutner's Privacy Browser (Android): https://f-droid.org/packages/com.stoutner.privacybrowser.standard
+# - Ryack's Avoision (Sideload PC Browser Extension for Chrome/Firefox): https://github.com/dryack/avoision
+#   > Or use my fork: https://github.com/kowith337/avoision/tree/custom
 # - Anti Survived Tracking Link Warning (uBO, Nano List): Look into `/filterlists/other/` select between "Normal" and "Overdone"
+# - ViolentMonkey* + User scripts that capable to remove unwanted parameters... (pick one script below)
+#   - [noisys] Affiliate Killer: https://greasyfork.org/scripts/456
+#   - [wOxxOm] Decloak Links and open directly: https://greasyfork.org/scripts/7596
+#   - [IzzySoft] Link Untracker: https://greasyfork.org/scripts/35605
 #   * Other script extensions like GreaseMonkey and TamperMonkey have ability to phone home! (Telemetry, anonymous stats, etc.)
-#     while ViolentMonkey aren't do that shady things like that!!
+#     while ViolentMonkey aren't do that shady things like those!!
 connect.facebook.net
 
 # Pixel domain tracking prevention (Good to block)
 pixel.facebook.com
+pixel.freebasics.com
 pixel.messenger.com
 
 # I think this will break MESSenger net call due to using "STUN", that's surely it use "WebRTC" and possibly to leaks your IP!
@@ -461,6 +462,7 @@ fbpigeon.com
 
 # Wildcards
 *-pixel.facebook.com
+*-pixel.freebasics.com
 *-pixel.messenger.com
 
 # [Copied from ThaiConsentHosts + ThaiParanoidBlock, this must block entirely, no matter what!] - - - - - - - - - - - - - - - - !
@@ -523,6 +525,7 @@ achelous.mobi
 acl-wireless.com
 acme-mobile.com
 acupofcafeconleche.com
+ad-m.asia
 ad5media.com
 ad5network.com
 adadept.space
@@ -536,11 +539,13 @@ addtechhub.com
 addthisedge.com
 addtoany.com
 adelleandrew.com
+adform.net
 adfries.net
 adfrigate.com
 adingo.jp
 adiquity.com
 adjust.com
+adkernel.com
 admblink.xyz
 adn.ais.co.th
 adnium.com
@@ -574,6 +579,7 @@ affmoney.top
 afftrack-data.com
 afftrack.com
 affxx.com
+agkn.com
 agoodplus.com
 ahyoyo.com
 aidata.io
@@ -703,6 +709,7 @@ browsehappy.com
 brucelead.com
 brvaffs.com
 bsnlhellotv.in
+bstatic.com
 btrkpro.com
 btstatic.com
 bu1now.com
@@ -723,6 +730,7 @@ caravancampingsales.com.au
 carlydibona.com
 carriersignal.info
 carsales.com.au
+cauly.co.kr
 cd-mob.com
 cdnfiber.com
 celeryleek.com
@@ -777,6 +785,7 @@ com-giveaway5.info
 comedy-club.mobi
 comedymunch.com
 comudjet.pw
+connexity.net
 connextra.com
 consensu.org
 consested-opplyield.com
@@ -865,6 +874,7 @@ dsgpy.com
 dtacplay.com
 dtscout.com
 durarenti.pw
+e-volution.ai
 e668ou.com
 easylist.club
 ebizmobile.com
@@ -960,6 +970,7 @@ funzone.mobi
 funzytv.com
 fusetracking.com
 future2you.com
+fw-ad.jp
 fyybox.com
 g-mm.co
 g2afse.com
@@ -980,6 +991,7 @@ gameroom.dtacplay.com
 games-unlimited.mobi
 gamescentreom.com
 gamesclub.tv
+gamesteka.com
 gameth.net
 gamezine.in
 gameziz.com
@@ -1058,6 +1070,7 @@ gratonrewardcenter.icu
 greatestapps.mobi
 greatmobilegames.mobi
 grenadatradecentre.com
+gs-jp.com
 gsspat.jp
 gssprt.jp
 gtzlz.com
@@ -1074,9 +1087,11 @@ hao123.com
 happytube.mobi
 happywinning.com
 harddayforall30.icu
+hariken.co
 havfun.mobi
 hayhaa.com
 hbengineeringworks.com
+hbplatform.com
 hclips.net
 hd0y.com
 hdfreemovie007.com
@@ -1251,6 +1266,7 @@ lpalice2appsmart.com
 lpaosub.com
 lqmbet.tk
 ltvperf.com
+lucabetasia.com
 lucky6lucky.club
 luckydrawservice.com
 luckymobileuser.club
@@ -1263,6 +1279,7 @@ m2mobile.com
 m3shoppe.in.th
 m3tech.co.th
 m88.com
+m9s.in
 ma3.co
 maciejdoryk.com
 macrokiosk.com
@@ -1271,6 +1288,8 @@ maesot168.com
 magent.my
 magikmobile.mobi
 mai88.com
+mainroll.com
+makeprogress.shop
 malanden.pw
 manymy.com
 marhasanook.com
@@ -1278,6 +1297,7 @@ mastermovie-hd.mobi
 matchme.com.ng
 mathtag.com
 maxforecast.com
+maximob4u.com
 maxmall.pw
 may91.vn
 mayrondigital.com
@@ -1310,6 +1330,7 @@ min4.com
 minivideo.club
 mitsuiict.com
 mktrack.com
+ml314.com
 mli.me
 mmtgo.me
 mmtk88.tk
@@ -1392,6 +1413,7 @@ monozone.com
 monthlywinners.com
 moo.mn
 moobig.com
+mookie1.com
 mookjoke.com
 moserv.co.th
 moserv.mobi
@@ -1451,6 +1473,7 @@ nmpcenter.com
 noclef.com
 nordvpn.com
 notesdav.pw
+notifguide.online
 nowportal.net
 nr-data.net
 nrs-group.com
@@ -1472,6 +1495,7 @@ okyesmobi.com
 oli.tools
 omaharlog.pw
 omnithrottle.com
+onaudience.com
 onclasrv.com
 onclickads.net
 onelinkgroup.com
@@ -1523,6 +1547,7 @@ perfonspot.com
 performancerevenues.com
 petametrics.com
 phadoo-mobile.com
+phoemobi.com
 phone-notify.com
 phonemobileapps.com
 phonespeedmineinstalls.club
@@ -1533,6 +1558,7 @@ piesogue.pw
 pikdo.net
 ping-fast.com
 pingdom.net
+pippio.com
 pixeldigitalstudios.com
 pixeleads.com
 pixelmagicnet.com
@@ -1629,12 +1655,14 @@ ringtoneth.com
 ro88ro.tk
 robotcaptcha2.info
 rockymobi.com
+romsupport.com
 rotatemyurls.com
 rotationurls.com
 royalads.net
 rsalcch.com
 ruay.com
 run-syndicate.com
+runewfugift.xyz
 runtnc.net
 rushvip.net
 ruu-dee.com
@@ -1745,6 +1773,7 @@ spak.me
 sparklemob.com
 spicyvideos.mobi
 splanetproject.com
+spotxchange.com
 sptslmtrafms.com
 sswap.mobi
 starchef.mobi
@@ -1852,6 +1881,7 @@ traffic-sharing.com
 trafficshark.pro
 traffikflow.com
 trakkthisfor.info
+transcendent.shop
 travelpayouts.com
 travid.mobi
 trck2020.club
@@ -1950,6 +1980,7 @@ wealthandwealth.com
 wealthclick.net
 weatherpembe.com
 web-parcel-tracking.com
+webana.io
 webspectator.com
 weddingdayphotographerparis.com
 wesliptu.pw
@@ -1981,24 +2012,26 @@ xn--42cn1aug7dc0hrhc1gd.net
 xn--r3cpjgt3b.com
 xspicyvideos.com
 yasune360.com
-yengo.asia
-yengo.com
 yibsee.com
+yieldmo.com
 yim88.tk
 youlaugh.online
 your-sweet-girls1.com
 yourstukov.com
+youwinner.info
 ypzsls.com
 yu0123456.com
 yuppytv.com
 yuppyuppytv.com
 yuqazate.com
 z8.com
+z8888.app
 zagmob.com
 zeanhot.com
 zeankickoff.com
 zedo.com
 zemanta.com
+zeotap.com
 zigifun.com
 zim88.tk
 zingmobiledev.com
