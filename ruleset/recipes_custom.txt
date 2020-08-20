@@ -1,7 +1,7 @@
 ! uMatrix: Ruleset recipes 1.4.1
 ! Title: Self Custom Ruleset
-! Version: 202008142321
-! VersionNumber: 0.42.1
+! Version: 202008202335
+! VersionNumber: 0.43.0
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
@@ -107,6 +107,21 @@ Ookla SpeedTest
 	speedtest.net *
 		_ cdnst.net script
 		_ ooklaserver.net fetch
+
+Pixiv (Only allow referrer and 'pximg' script)
+	pixiv.net *
+	! Somehow Pixiv images doesn't show if you spoof referrer or
+	! due to browser settings, esp. in Firefox Private Window.
+		referrer-spoof: _ false
+		_ pximg.net script
+
+Pixivision (Formerly Pixiv Spotlight)
+	pixivision.net *
+	! Somehow Pixiv images doesn't show if you spoof referrer or
+	! due to browser settings, esp. in Firefox Private Window.
+	! Note: Allowing script to load embed artworks in article.
+		referrer-spoof: _ false
+		_ pximg.net script
 
 Radio-Browser
 	radio-browser.info *

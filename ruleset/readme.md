@@ -17,6 +17,7 @@ referrer-spoof: * true
 * * doc inherit
 * * frame block
 * * image allow
+* * other block
 * 1st-party * allow
 * 1st-party cookie allow
 * 1st-party frame allow
@@ -34,4 +35,4 @@ referrer-spoof: * true
 #### About turning off `noscript-spoof` globally by default
 Disable all of JavaScript doesn't mean to allow secondary or alternative function to be run, If users decide to not allow any scripts, even inline scripts, then leave it as is and don't call any alternative function at all!
 
-The `noscript` are often use for abusive, such as reload ads and/or tracking code, images, frames, etc. in alternative way, and their also know that the ads and tracking were loaded while JavaScript was turned off.
+The `noscript` are often use for abusive, such as reload ads and/or tracking code, images, frames, etc. in alternative way, and their also easily identify that the ads and\/or tracking are loaded while JavaScript was turned off.
