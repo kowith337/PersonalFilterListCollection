@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202008211530
+# Version: 202008211535
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -329,6 +329,10 @@ recommender.googleapis.com
 # Google calendar reminder (Because I use another calendar client and combo, e.g. Etar + ICSx5)
 # * Commented in case is somebody still stuck to that!
 # reminders-pa.googleapis.com
+
+# De-trust SafeBrowsing (Shortened subdomain, non-wildcard)
+#sb.l.google.com
+#sb-ssl.google.com
 
 # Hotword (aka. suggestion keyowrd) blocking
 suggestqueries.googleapis.com
