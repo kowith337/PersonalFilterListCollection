@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202008211507
+# Version: 202008211530
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -262,11 +262,6 @@ datasaver.googleapis.com
 exploresites-pa.googleapis.com
 offlinepages-pa.googleapis.com
 
-# De-trust Safebrowsing, tend to disabled for publically, just in case...? (except Android)
-android-safebrowsing.google.com
-#safebrowsing.google.com
-#safebrowsing.googleapis.com
-
 # It's upload incoming phone numbers to check spam calls.
 # * Concern to anyone who touching phone numbers and contacts since various "Facebook" violations (please blame "ZUCK" for that!)
 # Commented spam protect endpoint, I hope it's only use for download/synchronise blocklist database.
@@ -368,6 +363,12 @@ www.*-pa.googleapis.com
 # Disable alternate "Google Talk" servers, contacting only main server is enough!
 # This may impact to all notifications that rely to "GCM/GMS", even you're using non-GApps ROMs.
 alt*-mtalk.google.com
+
+# De-trust Safebrowsing (If your know what you're doing)
+#*-safebrowsing.google.*
+#*-safebrowsing.google*.*
+#safebrowsing.google.*
+#safebrowsing.google*.*
 
 # [Big Brother - This is so zucky!] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Facebook Zero Substances (aka. "Free Basics", wait, no! "Free BaZUCKS")
