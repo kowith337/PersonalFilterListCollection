@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202008211535
+# Version: 202008211622
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -87,6 +87,8 @@ popclck.*
 protection-*.*
 secure-guard.*
 secure-mobile.*
+sentry.*
+sentry-*.*
 truehits.*
 vpn*plus*.*
 vpn*plus.*
