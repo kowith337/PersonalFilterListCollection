@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202008211622
+# Version: 202008250009
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -23,7 +23,9 @@ EMPTY
 WPAD
 wpad
 
-# [Abusive TLD] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Abusive and untrusted TLD] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# They are often use for shady mobile content supscriptions, gambling site spam, fake survey, giveaway scam, etc.
+# Sorry if it block some legitimate things...
 best
 club
 digital
@@ -50,7 +52,7 @@ g09.*
 
 # Use CSP as abusive way, anyone who use that in their server are said and pretend that use for capture problems, however, using
 # this ability may also send some sensitive information that enough for fingerprinting, such as User Agent, OS, CPU, Memory, etc.
-# even "CloudFlare" also use this!
+# even "CrapFlare" also use this!
 csp.withgoogle.com
 report-to.*
 report-uri.*
@@ -113,7 +115,7 @@ oghub.io
 omtrdc.net
 storetail.io
 tagcommander.com
-trafficmanager.net
+#trafficmanager.net
 webtrekk.net
 wizaly.com
 wt-eu02.net
@@ -123,6 +125,7 @@ wt-eu02.net
 # Thai article (translated from original article below): https://www.blognone.com/node/110342
 # AndroidPolice: https://www.androidpolice.com/2019/06/13/huawei-apparently-decides-it-needs-more-bad-press-puts-ads-on-phone-lock-screens
 booking.com
+bstatic.com
 
 # Block "ScreenCam" app owner's domain due to his own analytics inside that app until he really fix it's own problem!
 # See also: https://gitlab.com/fdroid/fdroiddata/issues/1745#note_206628341
@@ -218,7 +221,7 @@ urchin.com
 # Chrome in Shelter profile and also "DON'T EVEN UNFREEZE AND/OR USE IT!" once you've done that, Android will pick default
 # SystemWebView and you will unable to use Chrome as WebView anymore because Android will think that not all profiles are enabled
 # Chrome for ready to use as WebView!
-connectivitycheck.gstatic.com
+#connectivitycheck.gstatic.com
 
 # Even you've allowed connectivity check above, "Google Play Store" use `gvt1` domains for updating apps, but they also use
 # randomized subdomains for phoning home (contains "beacon" in hostname) during, you may need to whitelist it manually, however,
@@ -229,7 +232,7 @@ connectivitycheck.gstatic.com
 # or you can't even use app if it's detected that you're not installed from desired source that they want!
 # Reminder: I've commented it instead of whitelisting, in other words, rest of other `gvt` servers that not `gvt1` should be
 #           blocked entirely due to it's mostly use for attempt to "beacon" back to home servers...
-# gvt1.com
+#gvt1.com
 gvt2.com
 gvt3.com
 
@@ -268,7 +271,7 @@ offlinepages-pa.googleapis.com
 # * Concern to anyone who touching phone numbers and contacts since various "Facebook" violations (please blame "ZUCK" for that!)
 # Commented spam protect endpoint, I hope it's only use for download/synchronise blocklist database.
 dialercallinfolookup-pa.googleapis.com
-# telephonyspamprotect-pa.googleapis.com
+#telephonyspamprotect-pa.googleapis.com
 
 # Prefer to block if you don't trust their DNS services, e.g. DoT and DoH resolvers, maybe include "Chrome" it's own (async) DNS!
 dns.google
@@ -277,8 +280,8 @@ metric.gstatic.com
 
 # Google Play subscriptions
 # - Needed to manage Google Play subscriptions that related to payments (game pass, app features unlock, remove ads in app, ...)
-# - it's good to block if you're not intent to use, make and or bought any IAP transactions.
-# subscriptionsmanagement-pa.googleapis.com
+# - it's good to block if you're not intent or interest to use, make and or bought any IAP payments.
+#subscriptionsmanagement-pa.googleapis.com
 
 # Block ASS-istant
 assistant.google.com
@@ -323,16 +326,16 @@ voledevice-pa.googleapis.com
 # Google Photos?
 # * I won't comment because It doesn't mean to trade-off by using their space to upload and give their permissions to use them,
 #   such as AI study samples!
-photosdata-pa.googleapis.com
+#photosdata-pa.googleapis.com
 
 # Anti-Recommender
 recommender.googleapis.com
 
 # Google calendar reminder (Because I use another calendar client and combo, e.g. Etar + ICSx5)
 # * Commented in case is somebody still stuck to that!
-# reminders-pa.googleapis.com
+#reminders-pa.googleapis.com
 
-# De-trust SafeBrowsing (Shortened subdomain, non-wildcard)
+# De-trust SafeBrowsing (Shortened subdomain, non-wildcard) {Commented, just in case...}
 #sb.l.google.com
 #sb-ssl.google.com
 
@@ -370,7 +373,7 @@ www.*-pa.googleapis.com
 # This may impact to all notifications that rely to "GCM/GMS", even you're using non-GApps ROMs.
 alt*-mtalk.google.com
 
-# De-trust Safebrowsing (If your know what you're doing)
+# Wildcard for de-trust Safebrowsing (you can uncomment if your know what you're doing)
 #*-safebrowsing.google.*
 #*-safebrowsing.google*.*
 #safebrowsing.google.*
@@ -447,7 +450,8 @@ zero.facebook.com
 #   - [wOxxOm] Decloak Links and open directly: https://greasyfork.org/scripts/7596
 #   - [IzzySoft] Link Untracker: https://greasyfork.org/scripts/35605
 #   * Other script extensions like GreaseMonkey and TamperMonkey have ability to phone home! (Telemetry, anonymous stats, etc.)
-#     while ViolentMonkey aren't do that shady things like those!!
+#     esp. TamperMonkey who show popup/overlay for donation too often when you trying to entering script management page, while
+#     ViolentMonkey aren't do that shady things like those!!
 connect.facebook.net
 
 # Pixel domain tracking prevention (Good to block)
@@ -456,8 +460,6 @@ pixel.freebasics.com
 pixel.messenger.com
 
 # I think this will break MESSenger net call due to using "STUN", that's surely it use "WebRTC" and possibly to leaks your IP!
-edge-stun.facebook.com
-stun.c10r.facebook.com
 stun.facebook.com
 
 # Tell me if it's break something, however, if you didn't use their official apps!!
@@ -471,6 +473,8 @@ fbpigeon.com
 *-pixel.facebook.com
 *-pixel.freebasics.com
 *-pixel.messenger.com
+*-stun.facebook.com
+stun.*.facebook.com
 
 # [Copied from ThaiConsentHosts + ThaiParanoidBlock, this must block entirely, no matter what!] - - - - - - - - - - - - - - - - !
 0frmluki.tw
@@ -716,7 +720,6 @@ browsehappy.com
 brucelead.com
 brvaffs.com
 bsnlhellotv.in
-bstatic.com
 btrkpro.com
 btstatic.com
 bu1now.com
