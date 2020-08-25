@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: kowith337's Test List
-! Version: 202008011935
+! Version: 202008251416
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -12,6 +12,9 @@
 m.intl.taobao.com##.App .toolbar .toolbar__anchor-wrapper
 
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Blognone] Disable comment news that have topics about "Thailand", any news that have this tags may fully bias!
+blognone.com##.content-container:has(.meta span.terms .field-item a[href*="/thailand"]) #comment-area
+
 ! [Taobao Mobile] Remove bottom anchor (quickly add to cart / buy menu pane)
 m.intl.taobao.com##.App .bar:has(a.bar-item[href^="//shop.m.taobao.com/shop/shop_index.htm?"])
 
