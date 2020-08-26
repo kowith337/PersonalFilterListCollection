@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
 ! Title: Google AdService and ID.Google tracking hosts (for Adblock Plus or AdGuard)
-! Version: 202008252311
+! Version: 202008270008
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -141,6 +141,7 @@
 ||adservice.google.gp^
 ||adservice.google.gr^
 ||adservice.google.gy^
+||adservice.google.hk^
 ||adservice.google.hn^
 ||adservice.google.hr^
 ||adservice.google.ht^
@@ -203,6 +204,7 @@
 ||adservice.google.tn^
 ||adservice.google.to^
 ||adservice.google.tt^
+||adservice.google.tw^
 ||adservice.google.vg^
 ||adservice.google.vu^
 ||adservice.google.ws
@@ -340,6 +342,7 @@
 ||id.google.gp^
 ||id.google.gr^
 ||id.google.gy^
+||id.google.hk^
 ||id.google.hn^
 ||id.google.hr^
 ||id.google.ht^
@@ -402,6 +405,7 @@
 ||id.google.tn^
 ||id.google.to^
 ||id.google.tt^
+||id.google.tw^
 ||id.google.vg^
 ||id.google.vu^
 ||id.google.ws
