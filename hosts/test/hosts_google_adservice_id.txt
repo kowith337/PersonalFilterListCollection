@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Google AdService and ID.Google tracking hosts (Use for test)
-# Version: 201908202020
+# Version: 202008270003
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -141,6 +141,7 @@
 0.0.0.0 adservice.google.gp
 0.0.0.0 adservice.google.gr
 0.0.0.0 adservice.google.gy
+0.0.0.0 adservice.google.hk
 0.0.0.0 adservice.google.hn
 0.0.0.0 adservice.google.hr
 0.0.0.0 adservice.google.ht
@@ -203,6 +204,7 @@
 0.0.0.0 adservice.google.tn
 0.0.0.0 adservice.google.to
 0.0.0.0 adservice.google.tt
+0.0.0.0 adservice.google.tw
 0.0.0.0 adservice.google.vg
 0.0.0.0 adservice.google.vu
 0.0.0.0 adservice.google.ws
@@ -340,6 +342,7 @@
 0.0.0.0 id.google.gp
 0.0.0.0 id.google.gr
 0.0.0.0 id.google.gy
+0.0.0.0 id.google.hk
 0.0.0.0 id.google.hn
 0.0.0.0 id.google.hr
 0.0.0.0 id.google.ht
@@ -402,6 +405,7 @@
 0.0.0.0 id.google.tn
 0.0.0.0 id.google.to
 0.0.0.0 id.google.tt
+0.0.0.0 id.google.tw
 0.0.0.0 id.google.vg
 0.0.0.0 id.google.vu
 0.0.0.0 id.google.ws
