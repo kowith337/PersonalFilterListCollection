@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202008171950
+# Version: 202008290828
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -64,12 +64,13 @@
 # - {Anti-discover}
 0.0.0.0 discover-pa.googleapis.com
 #
-# - {Anti-Firebase Install}
+# - {Anti-Firebase}
 #   > Some apps are rely to that, especially for deploy GDPR, personal data concerns agreement, etc.
 #   > However, "Firebase" are widely know as bug tracker and data analytic capturer!
 #   > So, not just only app devs know those data, but "Google" also knows, too!!
 #   > Even though all informations are anonymous, it doesn't mean they have rights to collect and use them!!!
 0.0.0.0 firebaseinstallations.googleapis.com
+0.0.0.0 firebaseremoteconfig.googleapis.com
 #
 # - {Anti-network-based location lookup?}
 0.0.0.0 geomobileservices-pa.googleapis.com
