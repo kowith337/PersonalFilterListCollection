@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202008250009
+# Version: 202008292304
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -240,8 +240,6 @@ gvt3.com
 gstaticadssl.l.google.com
 id.l.google.com
 mail-ads.google.com
-sb.l.google.com
-sb-ssl.l.google.com
 stun.l.google.com
 video-stats.l.google.com
 
@@ -269,7 +267,7 @@ offlinepages-pa.googleapis.com
 
 # It's upload incoming phone numbers to check spam calls.
 # * Concern to anyone who touching phone numbers and contacts since various "Facebook" violations (please blame "ZUCK" for that!)
-# Commented spam protect endpoint, I hope it's only use for download/synchronise blocklist database.
+# ** Commented spam protect endpoint, I hope it's only use for download/synchronise blocklist database.
 dialercallinfolookup-pa.googleapis.com
 #telephonyspamprotect-pa.googleapis.com
 
@@ -294,8 +292,8 @@ gmbmobile-pa.googleapis.com
 # - At desktop side, it's require to connect this domain for showing QR code, in order to use your phone for scan and pair. (#52)
 # - At mobile device side, it have many attemps to ping this domain, even you didn't use above feature.
 # - This connections will not neccessary if you're using another default SMS apps.
-# - Make sure you've disable "App Preview Messages" first before load this hosts file, otherwise, you cannot change state of that
-#   feature.
+# - Make sure you've disable "App Preview Messages" first before re-enable rules or temporary disable blocking in pDNSF app,
+#   otherwise, you cannot change state of that feature.
 instantmessaging-pa.googleapis.com
 notifications-pa.googleapis.com
 
@@ -317,15 +315,15 @@ newslegacy-pa.googleapis.com
 # People (This may cause "Google account avatar" won't show!?)
 # - It's good to block this if you store phone/mail contacts with alternative way and intent to not sync with Google!
 #   e.g. DAVx5, DecSync, NextCloud, etc.
-people-pa.googleapis.com
+#people-pa.googleapis.com
 
 # Google Play device certify?
 phonedeviceverification-pa.googleapis.com
 voledevice-pa.googleapis.com
 
 # Google Photos?
-# * I won't comment because It doesn't mean to trade-off by using their space to upload and give their permissions to use them,
-#   such as AI study samples!
+# * I will uncomment for my own usage because It doesn't mean to trade-off by using their space to upload and give their
+#   permissions to use them, such as AI study samples!
 #photosdata-pa.googleapis.com
 
 # Anti-Recommender
@@ -345,7 +343,7 @@ suggestqueries.googleapis.com
 # Wildcard goes here!
 *-2mdn-*.google.*
 *-chrome*-pa.googleapis.com
-*-google*.l.google.com
+#*-google*.l.google.com
 *-google-analytics.*
 *-googlead*.*
 *-googletag*.*
@@ -354,14 +352,14 @@ appinvite-*.googleapis.com
 beacon*.gvt*.com
 beacon.gvt*.com
 chrome*-pa.googleapis.com
-content-*.googleapis.com
+#content-*.googleapis.com
 digitalassetlinks.*.googleapis.com
 doubleclick.*
 firebase*.*
 google-analytics.*
 googlead*.*
 googletag*.*
-http*-pa.googleapis.com
+#http*-pa.googleapis.com
 id.google.*
 pagead-*.l.google.com
 recommender.*.google.com
@@ -369,9 +367,9 @@ redirector.gvt*.com
 suggestqueries.google.*
 www.*-pa.googleapis.com
 
-# Disable alternate "Google Talk" servers, contacting only main server is enough!
+# Recommendation: Disable alternate "Google Talk" servers, contacting only main server is enough!
 # This may impact to all notifications that rely to "GCM/GMS", even you're using non-GApps ROMs.
-alt*-mtalk.google.com
+#alt*-mtalk.google.com
 
 # Wildcard for de-trust Safebrowsing (you can uncomment if your know what you're doing)
 #*-safebrowsing.google.*
