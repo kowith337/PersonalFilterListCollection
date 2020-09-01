@@ -116,6 +116,10 @@ m.webtoons.com##.ly_share .inner .dsc_encourage
 ! - Unbreak "Thai Adblock filters" due to it's hide episode lists on desktop site version.
 webtoons.com#@#.banner
 
+! [Cure / WCP] Backup from ThaiParanoidBlock
+worldcosplay.net###registerPopup
+worldcosplay.net##.registration-modal-bg
+
 ! [Wikipedia] "Wiki loves" overpromoted annoyances
 wikimedia.org,wikipedia.org###centralNotice:has(a[href*="Commons:Wiki_Loves"])
 

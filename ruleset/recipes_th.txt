@@ -1,11 +1,21 @@
 ! uMatrix: Ruleset recipes 1.4.1
 ! Title: Rulesets for Thai sites (alpha test)
-! Version: 202008142321
-! VersionNumber: 0.21.1
+! Version: 202009012231
+! VersionNumber: 0.22.0
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/ruleset/readme.md
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/ruleset/recipes_th.txt
+
+AdIntrend Live TV
+	adintrend.tv *
+		! Have problems with AdBlock/uBlock/Nano because
+		! "VideoJS Contrib Ads" script was blocked,
+		! Consider to view in private window instead.
+		referrer-spoof: _ false
+		_ cdn.vet fetch
+		_ cdn.vet script
+		_ cdnjs.cloudflare.com script
 
 Amarin TV
 	amarintv.com *
@@ -19,6 +29,11 @@ Amarin TV
 		_ 210.4.150.104 fetch
 		_ amarin2.live14.com fetch
 		_ ssl.p.jwpcdn.com script
+
+Bugaboo TV (BBTV CH7)
+	bugaboo.tv *
+		_ players.brightcove.net script
+		_ static.ch7.com script
 
 LINE Today
 	today.line.me *
