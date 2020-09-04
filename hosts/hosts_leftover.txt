@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202008290828
+# Version: 202009041517
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -267,6 +267,7 @@
 0.0.0.0 ml314.com
 0.0.0.0 mookie1.com
 0.0.0.0 mox.tv
+0.0.0.0 nanobricks.io
 0.0.0.0 netcpms.com
 0.0.0.0 newrelic.com
 0.0.0.0 nordvpn.com
