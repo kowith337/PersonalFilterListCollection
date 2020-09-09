@@ -1,6 +1,6 @@
 [uBlock Origin 1.20.0]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 202008172002
+! Version: 202009092221
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -183,7 +183,7 @@
 ||messenger.com/*/mark_seen.php$important
 ||messenger.com/*/typ.php$important
 
-! Give the warning if you're using Facebook on some cellular data provider that can redirect to smartphone-focused site,
+! Give the warning if you're using Facebook on some cellular data provider that got redirected to smartphone-focused site,
 ! not an actual version of it!
 ! e.g. when you want to go 'mbasic.faecbook.com' for super lightweight Facebook mobile version, but you get redirected to
 ! 'm.facebook.com' or 'mobile.facebook.com' then show the suggestion page to use Facebook under "Free Basics" campaign,
@@ -196,6 +196,7 @@
 ! ||*&_nc_fbs=*$important,domain=facebook.com|instagram.com|messenger.com|freebasics.com|internet.org
 ! ||*?_nc_fbs=*$important,domain=facebook.com|instagram.com|messenger.com|freebasics.com|internet.org
 ! ||0.facebook.com$important
+! ||discoverapp.com$important
 ! ||edge-z-*.facebook.com$important
 ! ||edge-z-*.facebook.net$important
 ! ||edge-z-*.fbcdn.net$important
@@ -290,6 +291,7 @@ facebook.com###left_nav_section_nodes ul li[id="navItem_526732794016279"]
 facebook.com###left_nav_section_nodes ul li[id="navItem_645191315628772"]
 facebook.com###left_nav_section_nodes ul li[id="navItem_762992637108088"]
 facebook.com###left_nav_section_nodes ul li[id="navItem_1728807357362356"]
+facebook.com###left_nav_section_nodes ul li[id="navItem_2805739562851096"]
 facebook.com###marketplace_bsg_explore_div #sale_groups_landing_page_recommended_groups div[id^="group_browse"] div[id^="GroupSuggestionCard"]
 facebook.com###mobile_login_bar
 facebook.com###mobile_related_video_feed_pagelet
@@ -365,6 +367,7 @@ facebook.com##iframe[id^="fbsbx-sig-iframe-"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root .scrollArea[data-sigil*="friends-center-nav"] a[data-ajaxify-href*="/friends/center/suggestions/"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div > a[href^="/friends/center/suggestions"][href*="empty_feed"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div > div[data-store*="actor_id"] div[data-sigil^="m-promo"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div a.sub[href*="?sk=h_nor"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root[data-sigil*="context-layer-root"] article div a[href*="/ads/preferences/interest_suggestions/"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###viewport #header #mJewelNav #feed_jewel.hasCount a div span[data-sigil="count"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root article div[class] > [id][data-autoid] img[data-sigil="redirect_to_interest"]
@@ -493,7 +496,6 @@ facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div[data-ft]:has(a[href*="netego_suggestion"])
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root table div:has(div[id^="page_suggestion"]:has(div a[href*="&origin=mobile_page_browser&"]))
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root table td > div:has-text(/^Suggested/):has(ul li:has(table))
-0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root table[role] div > div:has(a[href*="facebook.com/click.php?redir_url"])
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###sub_profile_pic_content div > div:has(table a[href*="/search/"])
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###sub_profile_pic_content div > div:has(table[role]:has(td div:has-text(/^People also like/)))
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###sub_profile_pic_content div div[class] > :has(div[id][class] table[role="presentation"] div:has-text(/^Related/))
@@ -559,7 +561,6 @@ facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###pages_msite_body_contents div[data-store-id] > div[data-store-id] :has(div[data-store-id] > div[style^="flex-grow"] .scrollArea)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###pages_msite_body_contents div[data-store-id] > div[data-store-id] > div[data-nt] > div[data-nt]:has(.scrollArea):has(.scrollAreaBody[data-ad-preview])
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div > div[data-sigil^="m_login_upsell"]:has(.grouped a[href*="facebook.com/click.php?redir_url"])
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div a.sub[href*="?sk=h_nor"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root[role="main"] div[class] div[style="text-align: center"]:has(a[data-sigil*="AppGrowthCtaButton"])
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root[role="main"] div[style][data-store-id] > div[style^="flex"][data-nt] div[style^="flex"][data-nt] > :has(div[aria-label="Suggested Streamers"])
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###timelineProfileTiles div > div[data-autoid]:has(a[href*="?v=fun_facts&"])
@@ -570,6 +571,8 @@ facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href^="/pages/"]:has(div:has-text(/^Suggested/))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-gaming #root div[class][data-store-id] > div[class] > :has(a[href^="fb://gaming/"])
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-gaming #root div[class][data-store-id] > section:has(div[data-store-id] div[class][style^="flex-grow"] .scrollArea)
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-groups #root div[class] > div div[class] > a[class][href="/groups_browse/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-onthisday #root div[class][data-store-id] > div[class] > div a[href^="/onthisday/subscribe/?"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-pages #root .async_fan:has(.like_thumb_container)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-watch #root div[class] > div[id][class]:has(.story_body_container header div[class] a[href*="tracking_source.video_home"][href*="originated_from_recommendation"])
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a span:has-text(Instagram)))
@@ -585,6 +588,7 @@ facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=645191315628772"]))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=762992637108088"]))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=1728807357362356"]))
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=2805739562851096"]))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="instagram.com"]))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="/appcenter/165907476854626?"]))
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="/lite/?loc_ref"]))
@@ -612,6 +616,7 @@ facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##div[data-sigil="comment"] section.touchable:has(div header h3)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##section article .story_body_container .story_body_container > div > div:has(.scrollArea .scrollAreaColumn)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##section article:has(.scrollArea):has(a[href*="instagram.com"])
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##section article:has(div[id^="TRAY"] div[data-testid="story_tray"])
 
 ! DOM Hiding - Level 3: Same as level 2, but include :not
 ! Note: some rules still results false positive, e.g. remove panel that zuckest to download 'Facebook Lite', but it also
@@ -621,6 +626,10 @@ facebook.com##div[role="feed"] div[id^="mall_post"][id*="SUGGESTED_IN_MALL"]
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div:not(#objects_container) > table[class] td a[href*="lm.facebook.com/l.php?"][target="_blank"]:has(span)
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div:not([id]) > table[role]:has(td a[href^="/a/language.php?"][href*="ref_component=mbasic_footer"])
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root[role="main"] div[class] a[data-sigil="AppGrowthCtaButton"]:style(pointer-events: none !important)
+
+! DOM Hiding - Level 4: Remove it instead!
+! Note: These rules designed for modern uBO, start from 1.28.0 and onward, sorry for XUL legacy users.
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div[class][data-sigil="loggedout_mobile_cta_footer"]:upward(1):remove()
 
 ! CSS Modification
 ! This may modify some element instead of hiding

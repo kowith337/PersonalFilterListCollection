@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202004241338
+! Version: 202009092214
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -64,26 +64,17 @@ facebook.com###contentArea div[class] > :has(table div[data-onclick*="VideoHomeC
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###events_card_list div[class] > :has(a span:has-text(/^Discover/))
 
 ! Remove related videos while you're viewing the video as direct permalink post
-! * WARNING: This rule doesn't work for Firefox Legacy
+! * WARNING: This rule doesn't work for Firefox Legacy due to multiple outbound chains
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root[role="main"]:has(#m_story_permalink_view) div[class]:has(div i):has(div a[href*="/videos/"])
 
 ! Try making "CoViD-19" information hub as read only, no need to "Follow" because you can access them directly from header menu.
-! - Next update will trying to remove all pages lists that show for suggesting to follow them and leave only news feed about it.
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[role="article"] div > table[role="presentation"] a[href*="a/subscribe.php?"][href*="coronavirus_info"]
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[role="article"] table[role="presentation"]:has(a[href*="coronavirus_info/follow"])
 
 ! [Facebook Touch]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Facebook want you to see friends stories again before they're gone, by re-injecting stories tiles into feed streams!
-!   This will remove any stories panel that injected later between feed posts and keep only the legitimate one on the top!
-0.facebook.com,free.facebook.com,m.facebook.com,mtouch.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##section article:has(div[id^="TRAY"] div[data-testid="story_tray"])
-
 ! Try to remove "Paid partnership" posts where the sponsored pages hiring some other pages (mostly viral) to post or announcing.
 !   This may break other posts that show (i) indicator, such as external links from the commonly known branded pages or sites.
 0.facebook.com,free.facebook.com,m.facebook.com,mtouch.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##section.storyStream article[data-xt][data-xt-vimp]:has(a[data-sigil*="flyout-causal"])
-
-! Remove hyperlink of "Discover" appear when you access group lists, ensure to focus your groups that you've joined and/or
-! managing only and forgot to find a new one...
-0.facebook.com,free.facebook.com,m.facebook.com,mtouch.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-groups #root div[class] > div div[class] > a[class][href="/groups_browse/"]
 
 ! Remove "Big Like" button in message chat, the button will auto change to "Send" once you've start focusing to text box, but it
 ! will change to "Like" button once the text box lost focus, I remove it to prevent sending "Big Like" by mistake!
@@ -94,9 +85,6 @@ facebook.com###contentArea div[class] > :has(table div[data-onclick*="VideoHomeC
 
 ! Remove the "Add" ads interest after you've removed it
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads .accelerate div[class] > div[class][style] div[class] > a[data-sigil="add"]
-
-! Remove a button to subscribe notifications for "On This Day"
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-onthisday #root div[class][data-store-id] > div[class] > div a[href^="/onthisday/subscribe/?"]
 
 ! Remove zuckestion placeholder top bar item (Only affect who get white top bar style)
 !   4th items of top bar, I think their system will pick between marketplace and videos and will be determined by your usage.
