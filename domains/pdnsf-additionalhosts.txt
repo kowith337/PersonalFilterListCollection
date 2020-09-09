@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202009091817
+# Version: 202009091958
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -489,8 +489,10 @@ fbpigeon.com
 2abdanismanlik.com
 2get2load.com
 321load.com
+32255.com
 33luo.com
 360tools.org
+38.net
 3mobilecontents.net
 3storage.net
 430.com
@@ -1064,6 +1066,7 @@ godnearme.com
 gogameportal.com
 golden-slot.com
 gomasti.in
+goodymoby.com
 goohd.tv
 goorulife.com
 gotd.mobi
@@ -1453,6 +1456,7 @@ n-content.com
 n-d.bz
 n-mobile.net
 nanobricks.io
+nbryb.com
 ncontent.tv
 ncontentmobile.com
 ncontentmv.com
@@ -1669,6 +1673,7 @@ rotationurls.com
 royalads.net
 rsalcch.com
 ruay.com
+ruay.com
 run-syndicate.com
 runewfugift.xyz
 runtnc.net
@@ -1773,6 +1778,7 @@ socialclip.mobi
 socialnews.mobi
 softwood.pw
 sohs.co
+sol222.com
 solutiononeholding.com
 somaticiens.com
 sombes.com
