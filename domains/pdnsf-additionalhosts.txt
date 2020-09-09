@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202008292304
+# Version: 202009091817
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -14,7 +14,7 @@
 #              You may need to regularly copy and update this file with your own way, futhurmore, you need to backup previous
 #              custom hosts list if you have anything existed before use this file as a replacement.
 #              Since this filter cannot load as remote rules, if you think I've overdone blocking something, try add "!" or "#"
-#              (w/o quote) to unblock or whitelist it manually, e.g. below.
+#              (w/o quote) to unblock or whitelist it manually, example below.
 #              !google.co.th (This is a whitelist rule, that's mean anything from 'google.co.th' can be bypassed, include subs.)
 #              #facebook.com (This will turn blocked rules as comment instead, other remote rules may still block if it have.)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
@@ -33,6 +33,7 @@ fun
 icu
 mobi
 online
+shop
 site
 
 # [Wildcard]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
@@ -76,6 +77,7 @@ beacon*.*
 beacon.*
 byteark-analytics.*
 criteo.*
+gak.*
 geniee*.*
 innity.*
 mtburn.*
@@ -91,7 +93,10 @@ secure-guard.*
 secure-mobile.*
 sentry.*
 sentry-*.*
+sentryio.*
+snowpole.*.gitlab.*
 truehits.*
+trx.gitlab.*
 vpn*plus*.*
 vpn*plus.*
 yengo.*
@@ -115,7 +120,7 @@ oghub.io
 omtrdc.net
 storetail.io
 tagcommander.com
-#trafficmanager.net
+#trafficmanager.net #{Conflict with some known companies CDN (MS for example)}
 webtrekk.net
 wizaly.com
 wt-eu02.net
@@ -135,8 +140,9 @@ orpheusdroid.com
 # [Wound ashes fox] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Sorry for anyone who use CloudFlare DNS resolvers, but it's just my opinion to block due to Firefox's wrong turn!
 # e.g. Out-of-box config of Firefox use "TRR" resolvers (aka. DoH) from CloudFlare by default!
-#      Currently apply in US right now with include NextDNS as a fellow alternative choice, but it's still use CloudFlare first!!
-#      Note: I've also see Chrome also use CloudFlare DoH that pointed to `chrome.cloudflare-dns.com`, so this will block both!!!
+#      Currently applying now with include NextDNS as a fellow alternative choice, but it's still use CloudFlare by default!
+#      Note: I've also see Chrome also use CloudFlare DoH that pointed to `chrome.cloudflare-dns.com`, so this will block both,
+#            also include `family`, `malware` and `security` servers.
 cloudflare-dns.com
 
 # More privacy enhanced for Firefox users, make sure you've disable their internal TRR first.
@@ -161,13 +167,15 @@ setup.services.mozilla.com
 *-experiment.mozilla.*
 *-report.mozilla.*
 *-reports.mozilla.*
+*tiles.*.mozaws.*
 *tiles.*.mozilla*
+activations.cdn.mozilla.*
 crash-stats.mozilla.*
 data.mozilla.*
 detectportal.firefox.*
 detectportal.mozilla.*
-experiment*.mozilla.*
 experiment.mozilla.*
+experiments.mozilla.*
 fhr.*.mozilla.*
 getpocket.*
 input.mozilla.*
@@ -192,6 +200,33 @@ luminatinet.com
 lumtest.com
 
 # [Big Brother - Non-Google fanboy] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Wildcard section!
+*-2mdn-*.google.*
+*-chrome*-pa.googleapis.com
+#*-google*.l.google.com
+*-google-analytics.*
+*-googlead*.*
+*-googletag*.*
+adservice.google.*
+appinvite-*.googleapis.com
+beacon*.gvt*.com
+beacon.gvt*.com
+chrome*-pa.googleapis.com
+#content-*.googleapis.com
+digitalassetlinks.*.googleapis.com
+doubleclick.*
+firebase*.*
+google-analytics.*
+googlead*.*
+googletag*.*
+http*-pa.googleapis.com
+id.google.*
+pagead-*.l.google.com
+recommender.*.google.com
+redirector.gvt*.com
+www.*-pa.googleapis.com
+
+# Domain-wide
 # Note that some domains are neccessary but it's also shady at a same time...
 2mdn.net
 admob.com
@@ -207,6 +242,40 @@ googletagservices.com
 googletraveladservices.com
 redirector.googlevideo.com
 urchin.com
+
+# CNAME Penetration (Mostly "Google L" subdomains, non-wildcard section)
+gstaticadssl.l.google.com
+id.l.google.com
+mail-ads.google.com
+stun.l.google.com
+video-stats.l.google.com
+
+# PA-ranoid API connections
+acceleratedmobilepageurl.googleapis.com
+androidsuggesthub-pa.googleapis.com
+clientmetrics-pa.googleapis.
+clouderrorreporting.googleapis.com
+datamixer-pa.googleapis.com
+datasaver.googleapis.com
+digitalassetlinks.googleapis.com
+discover-pa.googleapis.com
+exploresites-pa.googleapis.com
+footprints-pa.googleapis.com
+geomobileservices-pa.googleapis.com
+gmbmobile-pa.googleapis.com
+growth-pa.googleapis.com
+infinitedata-pa.googleapis.com
+lens-pa.googleapis.com
+lensphotos-pa.googleapis.com
+myphonenumbers-pa.googleapis.com
+newslegacy-pa.googleapis.com
+offlinepages-pa.googleapis.com
+#personalsafety-pa.googleapis.com
+playatoms-pa.googleapis.com
+plusmixer-pa.googleapis.com
+recommender.googleapis.com
+sticker-pa.googleapis.com
+#suggestqueries.google.*
 
 # Blocking connection check mean "Google Play" cannot trigger app updates and/or downloads unless you've once allow it!
 # However, it's may prevent some unexpected behaviour, such as update disabled system apps without intent, e.g.
@@ -236,35 +305,6 @@ urchin.com
 gvt2.com
 gvt3.com
 
-# Google CNAME Penetration (Mostly "Google L" subdomains, non-wildcard section)
-gstaticadssl.l.google.com
-id.l.google.com
-mail-ads.google.com
-stun.l.google.com
-video-stats.l.google.com
-
-# PA-ranoid GoogleAPI connections
-acceleratedmobilepageurl.googleapis.com
-androidsuggesthub-pa.googleapis.com
-clientmetrics-pa.googleapis.
-clouderrorreporting.googleapis.com
-datamixer-pa.googleapis.com
-digitalassetlinks.googleapis.com
-discover-pa.googleapis.com
-footprints-pa.googleapis.com
-growth-pa.googleapis.com
-infinitedata-pa.googleapis.com
-myphonenumbers-pa.googleapis.com
-personalsafety-pa.googleapis.com
-playatoms-pa.googleapis.com
-plusmixer-pa.googleapis.com
-sticker-pa.googleapis.com
-
-# Chrome BULLSH!T features (data saver, offline pages, auto download articles, etc.)
-datasaver.googleapis.com
-exploresites-pa.googleapis.com
-offlinepages-pa.googleapis.com
-
 # It's upload incoming phone numbers to check spam calls.
 # * Concern to anyone who touching phone numbers and contacts since various "Facebook" violations (please blame "ZUCK" for that!)
 # ** Commented spam protect endpoint, I hope it's only use for download/synchronise blocklist database.
@@ -284,10 +324,6 @@ metric.gstatic.com
 # Block ASS-istant
 assistant.google.com
 
-# Geolocation?
-geomobileservices-pa.googleapis.com
-gmbmobile-pa.googleapis.com
-
 # Google MESSages desktop sync/access (App preview messages)
 # - At desktop side, it's require to connect this domain for showing QR code, in order to use your phone for scan and pair. (#52)
 # - At mobile device side, it have many attemps to ping this domain, even you didn't use above feature.
@@ -297,10 +333,6 @@ gmbmobile-pa.googleapis.com
 instantmessaging-pa.googleapis.com
 notifications-pa.googleapis.com
 
-# Block Google Lens
-lens-pa.googleapis.com
-lensphotos-pa.googleapis.com
-
 # No idea, I though it's related to Google Fit?
 mdh-pa.googleapis.com
 
@@ -308,9 +340,6 @@ mdh-pa.googleapis.com
 # - I prefer to block because of privacy compromise, why some app devs want to know how good of user's network quality?
 # - In case if you've face problems like issue #50, just whitelist or comment rules by your own!
 mobilenetworkscoring-pa.googleapis.com
-
-# Block Google News
-newslegacy-pa.googleapis.com
 
 # People (This may cause "Google account avatar" won't show!?)
 # - It's good to block this if you store phone/mail contacts with alternative way and intent to not sync with Google!
@@ -326,9 +355,6 @@ voledevice-pa.googleapis.com
 #   permissions to use them, such as AI study samples!
 #photosdata-pa.googleapis.com
 
-# Anti-Recommender
-recommender.googleapis.com
-
 # Google calendar reminder (Because I use another calendar client and combo, e.g. Etar + ICSx5)
 # * Commented in case is somebody still stuck to that!
 #reminders-pa.googleapis.com
@@ -338,37 +364,11 @@ recommender.googleapis.com
 #sb-ssl.google.com
 
 # Hotword (aka. suggestion keyowrd) blocking
-suggestqueries.googleapis.com
+# Commented for proper users, even though it's recommend to block for preventing submit keystroke and trade for suggested words.
+#suggestqueries.googleapis.com
 
-# Wildcard goes here!
-*-2mdn-*.google.*
-*-chrome*-pa.googleapis.com
-#*-google*.l.google.com
-*-google-analytics.*
-*-googlead*.*
-*-googletag*.*
-adservice.google.*
-appinvite-*.googleapis.com
-beacon*.gvt*.com
-beacon.gvt*.com
-chrome*-pa.googleapis.com
-#content-*.googleapis.com
-digitalassetlinks.*.googleapis.com
-doubleclick.*
-firebase*.*
-google-analytics.*
-googlead*.*
-googletag*.*
-#http*-pa.googleapis.com
-id.google.*
-pagead-*.l.google.com
-recommender.*.google.com
-redirector.gvt*.com
-suggestqueries.google.*
-www.*-pa.googleapis.com
-
-# Recommendation: Disable alternate "Google Talk" servers, contacting only main server is enough!
-# This may impact to all notifications that rely to "GCM/GMS", even you're using non-GApps ROMs.
+# Disable contacting to alternate "Google Talk" servers, contacting only main server is enough!
+# Commented due to it's may impact to all notifications that rely to "GCM/GMS", even you're using non-GApps ROMs.
 #alt*-mtalk.google.com
 
 # Wildcard for de-trust Safebrowsing (you can uncomment if your know what you're doing)
@@ -378,6 +378,29 @@ www.*-pa.googleapis.com
 #safebrowsing.google*.*
 
 # [Big Brother - This is so zucky!] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Wildcard section
+*-pixel.facebook.*
+*-pixel.freebasics.*
+*-pixel.messenger.*
+*-stun.facebook.*
+*-z-*.facebook.*
+*-z-*.fbcdn.*
+*-z-*.fbsbx.*
+*-z-*.messenger.*
+headers-*.facebook.*
+headers-*.fbcdn.*
+headers-*.fbsbx.*
+headers-*.messenger.*
+nz-*.facebook.*
+nz-*.fbcdn.*
+nz-*.fbsbx.*
+nz-*.messenger.*
+stun.*.facebook.*
+z-*.facebook.*
+z-*.fbcdn.*
+z-*.fbsbx.*
+z-*.messenger.*
+
 # Facebook Zero Substances (aka. "Free Basics", wait, no! "Free BaZUCKS")
 # Allow these connections below means they can use additional tricks for keep track you with old tech, such WAP and MSISDN!
 # It's very clear before login on the mobile browsers + cellular data that Facebook will obtain some data from "HTTP header"
@@ -392,41 +415,21 @@ www.*-pa.googleapis.com
 #   for silently subscribe garbage contents and/or simply charging additional costs in billing or deduct prepaid calling balance,
 #   with or without anything sending right to your mobile phone! (by SMS, MMS, WAP Push, etc.)
 # Even their Free Basics domains was blocked, they can still tracking you from the main and sub hosts with that methods as well!
-# Note: They will binding your "DATR" cookie with mobile carrier name that you're using and also store it for 2-3 days even
+# Note: They will binding your "DATR" cookie with mobile carrier name that you're using and also store it for 2-3 days, even
 #       you've already avoid using Facebook on mobile data during, you can check with diagnostics page at
-#       `https://m.facebook.com/diagnostics` and see "Recent carriers (DATR)" data.
-*-z-*.facebook.com
-*-z-*.facebook.net
-*-z-*.fbcdn.net
-*-z-*.fbsbx.com
-*-z-*.messenger.com
+#       `https://m.facebook.com/diagnostics` and see if they show "Recent carriers (DATR)" data and remembered it or not.
 0.facebook.com
 discoverapp.com
 expresswifi.com
 free.facebook.com
 freebasics.com
 h.facebook.com
-headers-*.facebook.com
-headers-*.facebook.net
-headers-*.fbcdn.net
-headers-*.fbsbx.com
-headers-*.messenger.com
 internet.org
 mobile.facebook.com
-nz-*.facebook.com
-nz-*.facebook.net
-nz-*.fbcdn.net
-nz-*.fbsbx.com
-nz-*.messenger.com
 o.facebook.com
 p.facebook.com
 vvv.facebook.com
 web.facebook.com
-z-*.facebook.com
-z-*.facebook.net
-z-*.fbcdn.net
-z-*.fbsbx.com
-z-*.messenger.com
 z.facebook.com
 zero.facebook.com
 
@@ -466,13 +469,6 @@ update.fbsbx.com
 
 # Pigeon servers? What does it can do!?
 fbpigeon.com
-
-# Wildcards
-*-pixel.facebook.com
-*-pixel.freebasics.com
-*-pixel.messenger.com
-*-stun.facebook.com
-stun.*.facebook.com
 
 # [Copied from ThaiConsentHosts + ThaiParanoidBlock, this must block entirely, no matter what!] - - - - - - - - - - - - - - - - !
 0frmluki.tw
@@ -797,6 +793,7 @@ connexity.net
 connextra.com
 consensu.org
 consested-opplyield.com
+consummate.shop
 content-cafe.com
 contentbox.stream
 contentdd.net
@@ -1195,6 +1192,7 @@ jamloey.com
 jibhd.com
 jinshengpacking.com
 jiudianzhaopin.com
+jkuailai.com
 jmtt.co.th
 joker123xo.com
 joox-affiliate.sanook.com
@@ -1298,6 +1296,7 @@ magikmobile.mobi
 mai88.com
 mainroll.com
 makeprogress.shop
+makingcompensate.shop
 malanden.pw
 manymy.com
 marhasanook.com
@@ -1453,6 +1452,7 @@ mystyletip.com
 n-content.com
 n-d.bz
 n-mobile.net
+nanobricks.io
 ncontent.tv
 ncontentmobile.com
 ncontentmv.com
@@ -1837,12 +1837,15 @@ terragonbase.com
 tescolotus-th.club
 th-scr888.com
 th1cs.com
+thai-chana.asia
 thai-iphone.com
 thai-sms.com
 thai-voucher.com
 thai2mobi.com
 thaibetsite.com
 thaiboxwap.com
+thaichana.asia
+thaichana.pro
 thaifun4u.com
 thaimobile.com
 thaisync.com
