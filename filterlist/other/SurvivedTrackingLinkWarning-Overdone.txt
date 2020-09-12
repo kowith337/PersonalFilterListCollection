@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202007041434
+! Version: 202009122031
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -38,11 +38,13 @@
 ||l.messenger.com$document,subdocument,xmlhttprequest,important,domain=~This is a subdomain of Facebook tracking link parking and redirecting
 ||lm.facebook.com$document,subdocument,xmlhttprequest,important,domain=~This is a subdomain of Facebook tracking link parking and redirecting
 ||lm.messenger.com$document,subdocument,xmlhttprequest,important,domain=~This is a subdomain of Facebook tracking link parking and redirecting
-||messenger.com/l.php$document,subdocument,xmlhttprequest,important,domain=~This is a subdomain of Facebook tracking link parking and redirecting
+||messenger.com/l.php$document,subdocument,xmlhttprequest,important,domain=~This will block external URL page redirecting that made by Facebook that may contain some random parameters to keep track users externally
 ||youtube.com/redirect?*&redir_token=$document,subdocument,xmlhttprequest,important,domain=~YouTube external URL redirect page is contain random token string that possibly to track users externally
 ||youtube.com/redirect?redir_token=$document,subdocument,xmlhttprequest,important,domain=~YouTube external URL redirect page is contain random token string that possibly to track users externally
 
 ! Internal
+||bibliogram.*/*&igshid=$document,subdocument,important,domain=~Please no worry about this because this is just a parameter that was done by Instagram
+||bibliogram.*/*?igshid=$document,subdocument,important,domain=~Please no worry about this because this is just a parameter that was done by Instagram
 ||duckduckgo.com/l/?$document,subdocument,important,domain=~Prohibit DDG use redirect links due to privacy concerns
 ||duckduckgo.com/l/?$xmlhttprequest
 ||duckduckgo.com/l?$document,subdocument,important,domain=~Prohibit DDG use redirect links due to privacy concerns

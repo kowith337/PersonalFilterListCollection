@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Steam Dis-Recommender Filters
-! Version: 202008120047
+! Version: 202009112111
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -73,6 +73,9 @@ steampowered.com###promo_header_banner[class*="promotionDetailsBar"]:remove()
 ! - Include `:upward()` rules for horizontal paging items that also remove leftover header.
 steampowered.com##.home_page_content .carousel_container.maincap:upward(2)
 
+! Remove the "Funny" button in user review dialog.
+steampowered.com##.review_box .vote_button_ctn a span i.funny:upward(2)
+
 ! CSS Modification  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - Sometime you're embarassing to see how many times spent on the related games that you're currently looking and/or trying to
 !   buy, I've hide the playtime and show only related game banner that you've played, this make you not feeling shamed at it,
@@ -117,9 +120,9 @@ steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .plat
 @@||steampowered.com/dynamicstore/userdata/?id=0$xmlhttprequest
 @@||steampowered.com/dynamicstore/userdata?id=0$xmlhttprequest
 
-! Allow continuous scrolling while search and view game lists.
+! Allow tag change and continuous scrolling while search and view game lists.
 ! - Please note, the AJAX requests still bundle with `snr` parameter, this might be trade-off your privacy for that function!
-@@||steampowered.com/search/results/*&infinite=$xmlhttprequest,domain=store.steampowered.com
+@@||steampowered.com/search/results$xmlhttprequest,domain=store.steampowered.com
 
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! These are not necessary, except for use for tracking purpose!
