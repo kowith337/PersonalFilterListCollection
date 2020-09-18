@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202007242152
+! Version: 202009172014
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -238,8 +238,12 @@ wallgif.com##content div[id^=block_modal]
 
 ! Special procedurual - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: require uB0 version 1.26.0 or above
-! [Google] Cannot remember about this, but related to "Related search" mini zuckestion box
+! [Google]
+! - Cannot remember about this, but related to "Related search" mini zuckestion box
 google.*###search #rso .rc[data-hveid][data-ved] div[id^="eob_"][jscontroller]:remove()
+
+! - Remove UK consent prompt overlay that also load iframe
+google.*###cnt.big div[class] span[jsslot] #cnsw:upward(4):remove()
 
 ! [Pantip] Remove app promo pane inside drop-down menu
 pantip.com###pantipOthers #inOtherMenu .flexbox img[alt="Pantip Application"]:upward(2)
