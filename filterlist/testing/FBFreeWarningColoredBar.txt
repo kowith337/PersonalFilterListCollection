@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: Facebook Free Basics Warning (TopBar Colored Redesign)
-! Version: 201912252042
+! Version: 202009212226
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -8,10 +8,13 @@
 ! Description: Just only redesign Facebook touch mode menu bar on the free basics domains (for now)
 
 ! [Touch] They often detect this version if your browser are modern enough...
-0.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###header[data-sigil="MTopBlueBarHeader"]:style(background-color: plum !important)
 0.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###header[data-sigil="MTopBlueBarHeader"] .popoverOpen:style(background-color: mediumorchid  !important)
+0.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###header[data-sigil="MTopBlueBarHeader"]:style(background-color: orchid !important)
+0.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mFuturePageHeader:style(background-color: darkorchid  !important)
 
 ! [Basic] If Facebook detected you as older browsers, they can apply basic layout! (Mostly if you use or spoof as older Firefox)
+!         Note: `d.facebook.com` use the `z-m-` backend server, however, anybody can access this subdomain regardless of using
+!               this under real mobile network (that have `Free Basics` available) or not, unless you've blocked their CNAME.
 0.facebook.com,d.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_top_blue_bar_header:style(background-color: mediumorchid !important)
 0.facebook.com,d.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div[class] > #header:style(background-color: mediumorchid !important)
 0.facebook.com,d.facebook.com,free.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport #header:style(background-color: mediumorchid !important)

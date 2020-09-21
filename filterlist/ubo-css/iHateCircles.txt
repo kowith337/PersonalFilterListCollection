@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: iHateCircles
-! Version: 202006261610
+! Version: 202009212215
 ! Expires: 2 days
 ! Author: kowith337, DandelionSprout and contributors
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css
@@ -18,6 +18,8 @@ discordapp.com##div[class^="wrapper-"] > svg > mask
 discordapp.com##div[class^="wrapper-"]:style(border-radius: 0px !important)
 discordapp.com##div[style*="avatars"]:style(border-radius: 0px !important; -webkit-mask: none !important)
 facebook.com##*:after:style(border-radius: 0px !important)
+facebook.com##div[id^="mount"] div[class] > svg[data-visualcompletion] mask circle:upward(1)
+facebook.com##div[id^="mount"] div[class] > svg[data-visualcompletion] g[mask] circle
 instagram.com##canvas
 mewe.com##*:not([class*="dot"]):style(border-radius: 0px !important)
 pantip.com###openUserMenu img[alt="profile-avatar"]:style(border-radius: 0% !important)

@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202009172014
+! Version: 202009212243
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -250,6 +250,13 @@ pantip.com###pantipOthers #inOtherMenu .flexbox img[alt="Pantip Application"]:up
 
 ! [Line WebToons] Remove promoted comic overlay (include dimmed)
 m.webtoons.com##div[id^="layerNoticePopup"]:remove()
+
+! [YouTube Mobile]
+! - Force remove new consent dialog + dim that force users to press "Accept" before playing/watching anything!
+m.youtube.com##.consent-bump-lightbox:remove()
+! - Also force remove new overlay dialog + dim that forcing visitor to sign-in with account before watching!!
+!   Although, you can press "No thanks", but paint-over with forced dialog is overdone dark patterns!!!
+m.youtube.com##.upsell-dialog-lightbox:has(.upsell-dialog-body-text a[href*="sign_in"]):remove()
 
 ! HTML Filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: This may work only FF quantum + uB0 WebExt
