@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202009041517
+# Version: 202009240027
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -100,6 +100,7 @@
 #
 # - {Google L} Can I block DNS name?
 0.0.0.0 adservice.l.google.com
+0.0.0.0 google-analytics.l.google.com
 0.0.0.0 googleadapis.l.google.com
 0.0.0.0 gstaticadssl.l.google.com
 0.0.0.0 id.l.google.com

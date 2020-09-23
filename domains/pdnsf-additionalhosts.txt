@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202009091958
+# Version: 202009240026
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -91,8 +91,8 @@ popclck.*
 protection-*.*
 secure-guard.*
 secure-mobile.*
-sentry.*
 sentry-*.*
+sentry.*
 sentryio.*
 snowpole.*.gitlab.*
 truehits.*
@@ -110,6 +110,7 @@ affex.org
 at-o.net
 ati-host.net
 bp01.net
+cloudapp.net
 dnsdelegation.io
 ebis.ne.jp
 eulerian.net
@@ -124,6 +125,27 @@ tagcommander.com
 webtrekk.net
 wizaly.com
 wt-eu02.net
+
+# LeadForenSucks! (I found from "Chocolatey" website that use make6pain domain and lead me to reddit thread @/r/pihole)
+# * I won't give reddit short links due to new reddit and/or browsing with mobile browser is sucks because they want to force you
+#   download goddamn official apps (with goolag and many trackings, ofc.) so, OLD REDDIT IS THE BEST, NEW REDDIT SHOULD BE DEAD!!
+# https://old.reddit.com/r/pihole/comments/g7qv3e
+1-cl0ud.com
+mon-com-01.com
+nyctrl32.com
+pdxor02.com
+secure.*0*.com
+secure.*1*.com
+secure.*2*.com
+secure.*3*.com
+secure.*4*.com
+secure.*5*.com
+secure.*6*.com
+secure.*7*.com
+secure.*8*.com
+secure.*9*.com
+snta0034.com
+tm1-001.com
 
 # For honor of Huawei phone users! (Include Honor {Huawei sub-brand} and some Xiaomi, RealMe, too!)
 # Problematic due to shady advertisement in their OS ROM that load low quality wallpapers and apply without user intent!
