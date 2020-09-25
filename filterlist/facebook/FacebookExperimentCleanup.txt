@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202009092214
+! Version: 202009251350
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -144,6 +144,9 @@ facebook.com###contentArea div[class] > :has(table div[data-onclick*="VideoHomeC
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article div[class]:has-text(Your Facebook ad preferences)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article div[id][class] #ex_allow
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article div[id][class] #in_allow
+
+! De-metric in new bookmark menu (remove blue dot and text span that count how many new contents you've not seen)
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div[class] > a div[class] i.singleDot:upward(2)
 
 ! [Network blocking section] -------------------------------------------------------------------------------------------------- !
 ! Prevent modules connections that autoplay GIF comments (May doesn't work at all!)
