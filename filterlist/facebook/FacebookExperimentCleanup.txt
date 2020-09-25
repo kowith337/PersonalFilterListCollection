@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202009251350
+! Version: 202009252209
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -12,6 +12,19 @@
 ! [Apply as root, no matter what!]
 ! Hide form dialog to add phone numbers (confirmed affect to any mobile site layout, no idea for desktop site breakage?)
 facebook.com###root form[action^="/phoneacqwrite"]
+
+! [Newer Facebook Desktop]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Caution: This still under testing stage!
+! - Remove "MESSenger rooms" promo that injected into feed
+www.facebook.com##div[id^="mount"] div[data-pagelet="root"] div[class] div[data-pagelet="VideoChatHomeUnit"]
+
+! - Remove system promoted feed (e.g. On this day)
+www.facebook.com##div[role="article"]:has(div[class] > a[class][href*="promotion_feed_story"])
+
+! - Reduce intrusive of posts that attract to play instant game by remove the play button and prevent click image, clicking it
+!   doesn't enlarge pictures, but it's directly sent you to instant game!
+www.facebook.com##div[role="article"] div[class] > a[href^="/instantgames/play/"] div[class]:has(i[class*="sp_"][class*="sx_"])
+www.facebook.com##div[role="article"] div[class] > a[href^="/instantgames/play/"]:style(pointer-events: none !important)
 
 ! [Facebook Desktop]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove "Top Picks" product from marketplace lists, only work for english UI users only (UK, US)
