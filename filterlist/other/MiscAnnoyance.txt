@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202009212243
+! Version: 202009251255
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -252,6 +252,7 @@ pantip.com###pantipOthers #inOtherMenu .flexbox img[alt="Pantip Application"]:up
 m.webtoons.com##div[id^="layerNoticePopup"]:remove()
 
 ! [YouTube Mobile]
+! Please note that force remove overlay below may cause prevent scroll down!
 ! - Force remove new consent dialog + dim that force users to press "Accept" before playing/watching anything!
 m.youtube.com##.consent-bump-lightbox:remove()
 ! - Also force remove new overlay dialog + dim that forcing visitor to sign-in with account before watching!!

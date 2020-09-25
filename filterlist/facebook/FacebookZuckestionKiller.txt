@@ -1,6 +1,6 @@
-[uBlock Origin 1.20.0]
+[uBlock Origin 1.28.0]
 ! Title: Facebook Zuckestion Killer
-! Version: 202009092221
+! Version: 202009251336
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -338,6 +338,7 @@ facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .mtm .FriendButton
 facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .mtm span a[ajaxify^="/ajax/follow/"]
 facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .mtm span[class*="uiLikePageButton"]
 facebook.com##div[role="feed"] div[id^="hyperfeed_story_id"] .mtm span[class*="uiPageLikeButton"]
+facebook.com##div[role="navigation"] > div a[href^="/groups/?"][href*="discover_category_id=103418383389257"]
 facebook.com##div[role="navigation"] > div a[href^="/groups/?"][href*="discover_category_id=212609529249058"]
 facebook.com##div[role="navigation"] > div a[href^="/groups/?"][href*="discover_category_id=234383826903707"]
 facebook.com##div[role="navigation"] > div a[href^="/groups/?"][href*="discover_category_id=470739743275782"]
@@ -347,10 +348,11 @@ d.facebook.com,m.facebook.com,mbasic.facebook.com###bookmarkmenu table td a[href
 d.facebook.com,m.facebook.com,mbasic.facebook.com###m_loginbar_login_button
 d.facebook.com,m.facebook.com,mbasic.facebook.com###m_loginbar_reg_button
 d.facebook.com,m.facebook.com,mbasic.facebook.com###m_newsfeed_stream div > div[data-ft*="saved_for_later"]
+d.facebook.com,m.facebook.com,mbasic.facebook.com###root div[data-ft][data-xt*="sponsored"]
+d.facebook.com,m.facebook.com,mbasic.facebook.com###root section article[data-ft*="quick_promotion_id"]
 d.facebook.com,m.facebook.com,mbasic.facebook.com###root table > div table > a[href*="freebasics.com"]
 d.facebook.com,m.facebook.com,mbasic.facebook.com##div[id^="u_0_"][data-ft*="ego_id"]
 d.facebook.com,m.facebook.com,mbasic.facebook.com##div[role="article"] table td a[href^="/messenger-destination/cta/?"]
-d.facebook.com,m.facebook.com,mbasic.facebook.com##root div[data-ft][data-xt*="sponsored"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###MNewsFeed section article[data-store*="originated_from_recommendation"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###MNewsFeed section div[data-store*="originated_from_recommendation"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###header #MBackNavBar
@@ -393,6 +395,7 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com##article[data-ft][data-xt*
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##article[data-store*="is_sponsored.1"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##article[data-store*="quick_promotion_id"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##article[data-xt*="is_sponsored.1"]
+m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[class^="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=103418383389257"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[class^="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=212609529249058"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[class^="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=234383826903707"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[class^="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=470739743275782"]
@@ -406,8 +409,11 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[id^="composer"] div[d
 facebook.com###ads_preferences_desktop_root div[tabindex][role="button"] button[data-hover][data-tooltip-content="Add"]:has(span:has-text(Add))
 facebook.com###contentArea div[class] div[id][class]:has(a[href*="/login/?"])
 facebook.com###content[role="main"] .clearfix div[data-referrer] > div .stat_elem:has(button.PageLikeButton i[class*="sx_"])
+facebook.com###content[role="main"] div .clearfix div[class] > div[class] > :has(a[href^="/groups_browse/see_all/?"][href*="103418383389257"])
 facebook.com###content[role="main"] div .clearfix div[class] > div[class] > :has(a[href^="/groups_browse/see_all/?"][href*="212609529249058"])
 facebook.com###content[role="main"] div .clearfix div[class] > div[class] > :has(a[href^="/groups_browse/see_all/?"][href*="234383826903707"])
+facebook.com###content[role="main"] div .clearfix div[class] > div[class] > :has(a[href^="/groups_browse/see_all/?"][href*="470739743275782"])
+facebook.com###content[role="main"] div .clearfix div[class] > div[class] > :has(a[href^="/groups_browse/see_all/?"][href*="1801122086782345"])
 facebook.com###content[role="main"] div .clearfix div[class] > div[class] > :has(div[role="heading"] span:has-text(/More Suggestions/))
 facebook.com###content[role=main] > div .clearfix .stat_elem:has(div a[class^="_fbPageBrowserSubscriptionCardItem"])
 facebook.com###content_container div > div[id^="u_fetchstream"] div :has(div[id^="u_fetchstream"] .uiTypeahead div input[aria-controls^="typeahead_list_u_fetchstream"][aria-label^="Invite"])
@@ -465,6 +471,7 @@ facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div
 facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div[style] a[href^="https://www.facebook.com/help/"])
 facebook.com##div[itemscope] #content_container div.clearfix div[class][id][style] div[class]:has(div.uiTypeahead div input[placeholder][aria-controls][aria-label^="Invite"])
 facebook.com##div[itemscope] div > #content_container div > div[style]:has(#pagelet_growth_expanding_cta)
+facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=103418383389257"])
 facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=212609529249058"])
 facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=234383826903707"])
 facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=470739743275782"])
@@ -520,6 +527,7 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com###MNewsFeed section articl
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div[data-store*="share_id"] .story_body_container div div:has(.scrollArea:has(a[href^="/commerce/products/"]))
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###MNewsFeed section article:has(.scrollArea:has(a#pyml_infinite_scroll_loading))
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###events_dashboard_activity_feed section article:has(.scrollArea:has(.fbEventsEgoScroller))
+m.facebook.com,mtouch.facebook.com,touch.facebook.com###group-discover-lading-column div:has(div[id^="group-discover-card-"] a[href^="/groups/?"][href*="discover_category_id=103418383389257"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###group-discover-lading-column div:has(div[id^="group-discover-card-"] a[href^="/groups/?"][href*="discover_category_id=212609529249058"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###group-discover-lading-column div:has(div[id^="group-discover-card-"] a[href^="/groups/?"][href*="discover_category_id=234383826903707"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###group-discover-lading-column div:has(div[id^="group-discover-card-"] a[href^="/groups/?"][href*="discover_category_id=470739743275782"])
@@ -544,6 +552,12 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com###page[class^="-hardstate"
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###pages_msite_body_contents div > div[style^="flex"][data-nt]:has(div[style^="flex"][data-nt*="CHILD"]):has(button[data-nt][data-sigil="touchable"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###pages_msite_body_contents div[data-store-id] > div[data-store-id] :has(div[data-store-id] > div[style^="flex-grow"] .scrollArea)
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###pages_msite_body_contents div[data-store-id] > div[data-store-id] > div[data-nt] > div[data-nt]:has(.scrollArea):has(.scrollAreaBody[data-ad-preview])
+m.facebook.com,mtouch.facebook.com,touch.facebook.com###root div > div[class] a[href*="category_id=103418383389257"]:upward(5)
+m.facebook.com,mtouch.facebook.com,touch.facebook.com###root div > div[class] a[href*="category_id=212609529249058"]:upward(5)
+m.facebook.com,mtouch.facebook.com,touch.facebook.com###root div > div[class] a[href*="category_id=234383826903707"]:upward(5)
+m.facebook.com,mtouch.facebook.com,touch.facebook.com###root div > div[class] a[href*="category_id=470739743275782"]:upward(5)
+m.facebook.com,mtouch.facebook.com,touch.facebook.com###root div > div[class] a[href*="category_id=1801122086782345"]:upward(5)
+m.facebook.com,mtouch.facebook.com,touch.facebook.com###root div > div[class] a[href*="groups_browse/interests"]:upward(5)
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###root div > div[data-sigil^="m_login_upsell"]:has(.grouped a[href*="facebook.com/click.php?redir_url"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###root[role="main"] div[class] div[style="text-align: center"]:has(a[data-sigil*="AppGrowthCtaButton"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###root[role="main"] div[style][data-store-id] > div[style^="flex"][data-nt] div[style^="flex"][data-nt] > :has(div[aria-label="Suggested Streamers"])
@@ -582,11 +596,13 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com##.mSideMenu li:has(.toucha
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href^="https://free.facebook.com/home.php?ref"]))
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##.storyStream section article:has(footer:has(a[data-ajaxify-href^="/qp/action/redirect/?"]))
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##:xpath(//section//article[.//header//div//span/text()="Sponsored"])
+m.facebook.com,mtouch.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href^="/groups_browse/"][href*="103418383389257"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href^="/groups_browse/"][href*="212609529249058"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href^="/groups_browse/"][href*="234383826903707"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href^="/groups_browse/"][href*="470739743275782"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href^="/groups_browse/"][href*="1801122086782345"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href^="/groups_browse/interests/"])
+m.facebook.com,mtouch.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="103418383389257"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="212609529249058"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="234383826903707"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##[class^="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="470739743275782"])
@@ -620,6 +636,9 @@ d.facebook.com,m.facebook.com,mbasic.facebook.com###viewport div:not([id]) > tab
 
 ! DOM Hiding - Level 4: Remove it instead!
 ! Note: These rules designed for modern uBO, start from 1.28.0 and onward, sorry for XUL legacy users.
+d.facebook.com,m.facebook.com,mbasic.facebook.com###root section article[data-ft*="quick_promotion_id"]:remove()
+d.facebook.com,m.facebook.com,mbasic.facebook.com###root table div:has(div[id^="page_suggestion"]:has(div a[href*="&origin=mobile_page_browser&"])):remove()
+d.facebook.com,m.facebook.com,mbasic.facebook.com###root table td > div:has-text(/^Suggested/):has(ul li:has(table)):remove()
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###root div[class][data-sigil="loggedout_mobile_cta_footer"]:upward(1):remove()
 
 ! CSS Modification
