@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202009252209
+! Version: 202009282316
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -163,7 +163,7 @@ facebook.com###contentArea div[class] > :has(table div[data-onclick*="VideoHomeC
 
 ! [Network blocking section] -------------------------------------------------------------------------------------------------- !
 ! Prevent modules connections that autoplay GIF comments (May doesn't work at all!)
-!   Noticed that Facebook start to autoplay GIF images in comments when you scroll to it, same behaviour of autoplay videos, maybe.
+! - Noticed that Facebook start to autoplay GIF images in comments when you scroll to it, same behaviour of autoplay videos.
 ||facebook.com/*?modules=FeedAnimatedImageShare$important
 ||facebook.com/*?modules=UFI2CommentAnimatedImageAttachmentPlayer$important
 
@@ -174,15 +174,15 @@ facebook.com###contentArea div[class] > :has(table div[data-onclick*="VideoHomeC
 ||facebook.com/*?modules=TimeSliceInteractionsLiteTypedLogger$important
 
 ! Prevent connections to retrieve lists of zuckested pages to like or follow. (Desktop site only)
-!   Probably not recommended because you will not allow to remove or delete those pages zuckestions!
-!   I recommended to remove it out by copy bookmarklet scripts below before blocking this connections.
+! - Probably not recommended because you will not allow to remove or delete those pages zuckestions!
+! - I recommended to remove it out by copy bookmarklet scripts below before blocking this connections.
 !   * Note: Bookmarklet script is only work for english UI users only (UK, US)
 !     javascript:(function()%7Bvar%20divs%20%3D%20document.querySelectorAll('a%5Brole%3Dbutton%5D%5Bdata-tooltip-content%3D%22Remove%20Suggestion%22%5D')%3B%20for%20(i%20%3D%200%3B%20i%20%3C%20divs.length%3B%20%2B%2Bi)%20%7Bdivs%5Bi%5D.click()%3B%7D%7D)()
 ||facebook.com/ajax/pagelet/generic.php/PagesBrowserTopSuggestionsPagelet$xmlhttprequest,important,redirect=nooptext
 
 ! Prevent using "Phone Confirmation" (This request will triggered when use desktop site and push "Add a phone" button)
-!   You think you are added that for security reason, but unfortunately, do you know what will happen next!?
-!   It's described clear enough before you adding it, so if you really want to do that, just whitelist my rules manually!
+! - You think you are added that for security reason, but unfortunately, do you know what will happen next!?
+! - It's described clear enough before you adding it, so if you really want to do that, just whitelist my rules manually!
 ||facebook.com/ajax/phone/confirmation$important
 ||facebook.com/ajax/phone/confirmation$xmlhttprequest,important,redirect=nooptext
 

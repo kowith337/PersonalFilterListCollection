@@ -17,19 +17,19 @@
 ### I will...
 - Aim to support preventing internal ads, tracking, phone home, **zuckestions**, etc.
   - Disclaimer\: *I'm not guarantee for desktop version about removing in-feed ad posts!*
-    - And also, I have no interests to handle new desktop layout that use shattered `REACT` engine that scrambled every elements name, yet.
+    - And also, *I have no interests to handle new desktop layout that use shattered `REACT` engine that scrambled every elements name, yet.*
 - Keep away from any attempts that **zuckest** to installing `unfriendly for your privacy` [official apps](https://play.google.com/store/apps/developer?id=Facebook).
 - Keep away from any attempts that **zuckest** to use and/or register for related products. (Instagram for good example!)
 - Keep away from any attempts that **zuckest** to follow their related products of Facebook and related peoples under its company.
 - Make something easier and clearly (e.g. managing adverts preferences)
 - Remove unnecessary things that rarely need (e.g. Fun facts)
-- (currently mainly) support mobile site version, both...
+- (currently mainly) Support mobile site version, both...
   - [Basic feature phone](https://mbasic.facebook.com) or
   - [Smart phone](https://touch.facebook.com) (likely official app layout, except some random tabs like Marketplace, Videos, etc.)
 
 ### I will not...
 - Support all of **beta** subdomains!
-- Support anything that related to `Free Basics`, `internet.org` and others like.
+- Support anything that related to `Free Basics`, `internet.org`, `Discover` and others like.
   - Instead, I will prevent connections to those related services due to it's really broke the internet, even Facebook itself.
     - For example, if you trying to open `mbasic.facebook.com` for access the minimal version of Facebook mobile site (aka. Feature phone mode), you will get redirect to `h.facebook.com` **without HTTPS connections**, then redirect you back to `mobile.facebook.com` and may force to use the cripped smart phone layout like visiting `m.facebook.com` or `touch.facebook.com`.
 	  > depend on what your browser's user agent that you are...

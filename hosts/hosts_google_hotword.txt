@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Google Suggest Queries Hosts
-# Version: 202003191735
+# Version: 202009282314
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -144,6 +144,7 @@
 0.0.0.0 suggestqueries.google.gp
 0.0.0.0 suggestqueries.google.gr
 0.0.0.0 suggestqueries.google.gy
+0.0.0.0 suggestqueries.google.hk
 0.0.0.0 suggestqueries.google.hn
 0.0.0.0 suggestqueries.google.hr
 0.0.0.0 suggestqueries.google.ht
@@ -206,6 +207,7 @@
 0.0.0.0 suggestqueries.google.tn
 0.0.0.0 suggestqueries.google.to
 0.0.0.0 suggestqueries.google.tt
+0.0.0.0 suggestqueries.google.tw
 0.0.0.0 suggestqueries.google.vg
 0.0.0.0 suggestqueries.google.vu
 0.0.0.0 suggestqueries.google.ws

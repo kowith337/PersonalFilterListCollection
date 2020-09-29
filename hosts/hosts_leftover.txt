@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202009240027
+# Version: 202009282314
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -85,12 +85,18 @@
 0.0.0.0 beacons-handoff.gcp.gvt1.com
 0.0.0.0 beacons-handoff.gcp.gvt2.com
 0.0.0.0 beacons-handoff.gcp.gvt3.com
+0.0.0.0 beacons-handoff.gcp.gvt4.com
+0.0.0.0 beacons-handoff.gcp.gvt5.com
 0.0.0.0 beacons.gcp.gvt1.com
 0.0.0.0 beacons.gcp.gvt2.com
 0.0.0.0 beacons.gcp.gvt3.com
+0.0.0.0 beacons.gcp.gvt4.com
+0.0.0.0 beacons.gcp.gvt5.com
 0.0.0.0 beacons.gvt1.com
 0.0.0.0 beacons.gvt2.com
 0.0.0.0 beacons.gvt3.com
+0.0.0.0 beacons.gvt4.com
+0.0.0.0 beacons.gvt5.com
 #
 # - {Redirector}
 0.0.0.0 redirector.gvt1.com
