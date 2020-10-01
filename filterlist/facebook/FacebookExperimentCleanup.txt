@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202009282316
+! Version: 202009282342
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -65,6 +65,10 @@ facebook.com##.userContentWrapper div > div a[ajaxify^="/living_room/share_dialo
 ! Remove related video lists (permalink that have `/videos/` path in URL only)
 !  Assumed by DevTools point of view, it's may also logging and/or tracking you if clicked into that?
 facebook.com###contentArea div[class] > :has(table div[data-onclick*="VideoHomeClickLogger"])
+
+! Completely remove "Related pages" side panel instead of hiding by detecting `py_c` in `ref` parameter that can remarkable if
+! users clicked fome of those links. (uBO 1.28.0 or higher is required, this doesn't support XUL versions)
+www.facebook.com###rightCol[role] div[class] div > ul.uiCollapsedList:has(li div a[href*="ref=py_c"]):upward(2):remove()
 
 ! [Facebook Feature Phone Basic]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 ! Finally, weird space between comments also come to this version, freaking cool!!
