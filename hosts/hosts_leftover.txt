@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202009282314
+# Version: 202010082054
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -184,6 +184,8 @@
 0.0.0.0 incoming.telemetry.mozilla.org
 0.0.0.0 input.mozilla.com
 0.0.0.0 input.mozilla.org
+0.0.0.0 normandy-cdn.services.mozilla.com
+0.0.0.0 normandy.cdn.mozilla.net
 0.0.0.0 onyx_tiles.stage.mozaws.net
 0.0.0.0 ostats.mozilla.com
 0.0.0.0 qsurvey.mozilla.com
