@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Facebook Zuckestion Killer (Allow Zero ver.)
-! Version: 202009251357
+! Version: 202010111944
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/testing
@@ -71,6 +71,14 @@
 ||facebook.com/common/referer_frame.php$important
 ||facebook.com/dlite/skywalker_topic$important,~xmlhttprequest
 ||facebook.com/dlite/skywalker_topic$xmlhttprequest
+||facebook.com/ds/$all,~document
+||facebook.com/ds/ad_choices$important
+||facebook.com/ds/growth$important
+||facebook.com/ds/manager/ajax/check_tip_qe$important
+||facebook.com/ds/manager/ajax/list_tips$important
+||facebook.com/ds/manager/ajax/megaphone_story$important
+||facebook.com/ds/preferences/mobile_log/?$important
+||facebook.com/ds/qe/$important
 ||facebook.com/ego/$important,~xmlhttprequest
 ||facebook.com/ego/$xmlhttprequest
 ||facebook.com/ego/feed$important,~xmlhttprequest
@@ -160,6 +168,28 @@
 @@||facebook.com/ads/viewer_permissions/?$first-party
 @@||facebook.com/ajax/groups/mall/mall_post_menu.php$first-party,xmlhttprequest
 @@||facebook.com/ajax/settings/account/advertising_email.php?$first-party,xmlhttprequest
+@@||facebook.com/ds/advertiser_guidance/server_msg/$first-party,xmlhttprequest
+@@||facebook.com/ds/ajax/account_close/?$xmlhttprequest,first-party
+@@||facebook.com/ds/ajax/close_account_dialog.php?$xmlhttprequest,first-party
+@@||facebook.com/ds/can_change_business_country_reason/?$first-party
+@@||facebook.com/ds/can_change_currency_timezone_reason/?$first-party
+@@||facebook.com/ds/library$all,first-party
+@@||facebook.com/ds/library/$all,first-party
+@@||facebook.com/ds/manage/$first-party
+@@||facebook.com/ds/manager/$first-party
+@@||facebook.com/ds/preferences/$first-party,popup
+@@||facebook.com/ds/preferences/*&__m_async_page__$first-party,xmlhttprequest
+@@||facebook.com/ds/preferences/*?__m_async_page__$first-party,xmlhttprequest
+@@||facebook.com/ds/preferences/ad_report/$first-party,xmlhttprequest
+@@||facebook.com/ds/preferences/advertiser_hideall$first-party
+@@||facebook.com/ds/preferences/edit_interests/?*action=del$first-party
+@@||facebook.com/ds/preferences/edit_sensitive_topics$first-party,xmlhttprequest
+@@||facebook.com/ds/preferences/report$first-party,xmlhttprequest
+@@||facebook.com/ds/preferences?__m_async_page__$first-party,xmlhttprequest
+@@||facebook.com/ds/profile/advertisers$first-party,xmlhttprequest
+@@||facebook.com/ds/profile/interests$first-party,xmlhttprequest
+@@||facebook.com/ds/tax_id_collection_config/?$first-party
+@@||facebook.com/ds/viewer_permissions/?$first-party
 @@||facebook.com/ego/feed/logging/xout/?$first-party,xmlhttprequest
 @@||facebook.com/feed/options_menu$first-party,xmlhttprequest
 @@||facebook.com/friends/center/suggestions/?ppk=$first-party,xmlhttprequest
@@ -174,6 +204,9 @@
 ||facebook.com/ads/preferences/advertiser_hideall/?*undo=true$important
 ||facebook.com/ads/preferences/edit_interests/?action=add$important
 ||facebook.com/ads/preferences/edit_sensitive_topics*duration_in_days=0$important
+||facebook.com/ds/preferences/advertiser_hideall/?*undo=true$important
+||facebook.com/ds/preferences/edit_interests/?action=add$important
+||facebook.com/ds/preferences/edit_sensitive_topics*duration_in_days=0$important
 
 ! Facebook Messaging Privacy Aware (is typing, seen message)
 ||facebook.com/*/change_read_status.php$important
@@ -474,8 +507,7 @@ facebook.com##div[id^="hyperfeed_story_id"]:has(span a:has-text(/Sponsored/))
 facebook.com##div[id^="hyperfeed_story_id"]:has(span a[href*="[is_sponsored]=1"])
 facebook.com##div[id^="hyperfeed_story_id"]:has(span a[href*="is_sponsored=1"])
 facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(.userContentWrapper div[class] a[target][data-hovercard*="directed_target_id"])
-facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div[style] a[href^="https://web.facebook.com/help/"])
-facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div[style] a[href^="https://www.facebook.com/help/"])
+facebook.com##div[id^="hyperfeed_story_id"][role="article"]:has(div[class] > div[style] a[href*="facebook.com/help/"])
 facebook.com##div[itemscope] #content_container div.clearfix div[class][id][style] div[class]:has(div.uiTypeahead div input[placeholder][aria-controls][aria-label^="Invite"])
 facebook.com##div[itemscope] div > #content_container div > div[style]:has(#pagelet_growth_expanding_cta)
 facebook.com##div[role="article"] div:has(span a[href^="/groups/?"][href*="discover_category_id=103418383389257"])

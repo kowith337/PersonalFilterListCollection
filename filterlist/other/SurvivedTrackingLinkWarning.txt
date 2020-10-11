@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 202009122031
+! Version: 202010111928
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -17,34 +17,34 @@
 ||t.co/*?amp=$document,important
 
 ! Common Extrenal
-||*&amp_*=*&usqp=*$document,important,domain=~Prohibit Google AMP parameters and recommended to find direct links instead of AMP page version
-||*&fbclid$document,important,domain=~Please blame ZUCK for this about overtracking users as mush as they can
-||*&gclid$document,important,domain=~Google wants to use same thing that Facebook currently doing
-||*&utm_*=$document,important,domain=~This contains Google Urchin tracking parameters
-||*&yclid$document,important,domain=~Yahoo wants to use same thing that Facebook currently doing
-||*?amp_*=*&usqp=*$document,important,domain=~Prohibit Google AMP parameters and recommended to find direct links instead of AMP page version
-||*?fbclid$document,important,domain=~Please blame ZUCK for this about overtracking users as mush as they can
-||*?gclid$document,important,domain=~Google wants to use same thing that Facebook currently doing
-||*?utm_*=$document,important,domain=~This contains Google Urchin tracking parameters
-||*?yclid$document,important,domain=~Yahoo wants to use same thing that Facebook currently doing
+||*&amp_*=*&usqp=*$document,important
+||*&fbclid$document,important
+||*&gclid$document,important
+||*&utm_*=$document,important
+||*&yclid$document,important
+||*?amp_*=*&usqp=*$document,important
+||*?fbclid$document,important
+||*?gclid$document,important
+||*?utm_*=$document,important
+||*?yclid$document,important
 
 ! Shady outgoing prompt from first party service
-||facebook.com/l.php$document,important,domain=~This will block external URL page redirecting that made by Facebook that may contain some random parameters to keep track users externally
-||facebookcorewwwi.onion/l.php$document,important,domain=~This will block external URL page redirecting that made by Facebook that may contain some random parameters to keep track users externally
+||facebook.com/l.php$document,important
+||facebookcorewwwi.onion/l.php$document,important
 ||gate.sc$document,important
-||l.facebook.com$document,important,domain=~This is a subdomain of Facebook tracking link parking and redirecting
-||l.messenger.com$document,important,domain=~This is a subdomain of Facebook tracking link parking and redirecting
-||lm.facebook.com$document,important,domain=~This is a subdomain of Facebook tracking link parking and redirecting
-||lm.messenger.com$document,important,domain=~This is a subdomain of Facebook tracking link parking and redirecting
-||messenger.com/l.php$document,important,domain=~This will block external URL page redirecting that made by Facebook that may contain some random parameters to keep track users externally
-||youtube.com/redirect?*&redir_token=$document,important,domain=~YouTube external URL redirect page is contain random token string that possibly to track users externally
-||youtube.com/redirect?redir_token=$document,important,domain=~YouTube external URL redirect page is contain random token string that possibly to track users externally
+||l.facebook.com$document,important
+||l.messenger.com$document,important
+||lm.facebook.com$document,important
+||lm.messenger.com$document,important
+||messenger.com/l.php$document,important
+||youtube.com/redirect?*&redir_token=$document,important
+||youtube.com/redirect?redir_token=$document,important
 
 ! Internal
-||bibliogram.*/*&igshid=$document,subdocument,important,domain=~Please no worry about this because this is just a parameter that was done by Instagram
-||bibliogram.*/*?igshid=$document,subdocument,important,domain=~Please no worry about this because this is just a parameter that was done by Instagram
-||duckduckgo.com/l/?$document,important,domain=~Prohibit DDG use redirect links due to privacy concerns
-||duckduckgo.com/l?$document,important,domain=~Prohibit DDG use redirect links due to privacy concerns
+||bibliogram.*/*&igshid=$document,subdocument,important
+||bibliogram.*/*?igshid=$document,subdocument,important
+||duckduckgo.com/l/?$document,important
+||duckduckgo.com/l?$document,important
 ||facebook.com/*&__xts__%5B0%5D=$document,important
 ||facebook.com/*&__xts__*=$document,important
 ||facebook.com/*&__xts__[0]=$document,important
@@ -62,8 +62,8 @@
 ||facebook.com/*&pn_ref=$document,important
 ||facebook.com/*&referrer=$document,important
 ||facebook.com/*&refsrc=$document,important
-||facebook.com/*&settings_tracking=$document,important,domain=~Why they want to track even when users trying to manage profile settings
-||facebook.com/*&sfnsn=$document,important,domain=~This is a remark from Facebook that this link come from Facebook and just shared externally
+||facebook.com/*&settings_tracking=$document,important
+||facebook.com/*&sfnsn=$document,important
 ||facebook.com/*?__xts__%5B0%5D=$document,important
 ||facebook.com/*?__xts__*=$document,important
 ||facebook.com/*?__xts__[0]=$document,important
@@ -81,26 +81,26 @@
 ||facebook.com/*?pn_ref=$document,important
 ||facebook.com/*?referrer=$document,important
 ||facebook.com/*?refsrc=$document,important
-||facebook.com/*?settings_tracking=$document,important,domain=~Why they want to track even when users trying to manage profile settings
-||facebook.com/*?sfnsn=$document,important,domain=~This is a remark from Facebook that this link come from Facebook and just shared externally
+||facebook.com/*?settings_tracking=$document,important
+||facebook.com/*?sfnsn=$document,important
 ||facebook.com/ads/*&session_id=$document,important
 ||facebook.com/ads/*?session_id=$document,important
-||google.*/*?*&ei=$document,important,domain=~They want to track users about which time that user perform some action about search or go to next results page
-||google.*/*?*&rlz=$document,important,domain=~RLZ parameter is surely track Google Chrome users and mostly appear when you install from other sources than Google Chrome website
-||google.*/*?*&usg=$document,important,domain=~This random string is surely use for track users
-||google.*/*?*&ved=$document,important,domain=~This random string is surely use for track users
-||google.*/*?*&vet=$document,important,domain=~I think this may same as ved
-||google.*/*?*&bih=$document,important,domain=~Want to knowing device screen height is not a neccessary part of searching
-||google.*/*?*&biw=$document,important,domain=~Want to knowing device screen width is not a neccessary part of searching
-||google.*/*?ei=$document,important,domain=~They want to track users about which time that user perform some action about search or go to next results page
-||google.*/*?rlz=$document,important,domain=~RLZ parameter is surely track Google Chrome users and mostly appear when you install from other sources than Google Chrome website
-||google.*/*?usg=$document,important,,domain=~This random string is surely use for track users
-||google.*/*?ved=$document,important,domain=~This random string is surely use for track users
-||google.*/*?vet=$document,important,domain=~I think this may same as ved
-||google.*/*?bih=$document,important,domain=~Want to knowing device screen height is not a neccessary part of searching
-||google.*/*?biw=$document,important,domain=~Want to knowing device screen width is not a neccessary part of searching
-||instagram.com/*&igshid=$document,important,domain=~This may a Facebook tracking style because they even want to track shared links
-||instagram.com/*?igshid=$document,important,domain=~This may a Facebook tracking style because they even want to track shared links
+||google.*/*?*&ei=$document,important
+||google.*/*?*&rlz=$document,important
+||google.*/*?*&usg=$document,important
+||google.*/*?*&ved=$document,important
+||google.*/*?*&vet=$document,important
+||google.*/*?*&bih=$document,important
+||google.*/*?*&biw=$document,important
+||google.*/*?ei=$document,important
+||google.*/*?rlz=$document,important
+||google.*/*?usg=$document,important,
+||google.*/*?ved=$document,important
+||google.*/*?vet=$document,important
+||google.*/*?bih=$document,important
+||google.*/*?biw=$document,important
+||instagram.com/*&igshid=$document,important
+||instagram.com/*?igshid=$document,important
 ||messenger.com/*&__xts__%5B0%5D=$document,important
 ||messenger.com/*&__xts__*=$document,important
 ||messenger.com/*&__xts__[0]=$document,important
@@ -118,8 +118,8 @@
 ||messenger.com/*&pn_ref=$document,important
 ||messenger.com/*&referrer=$document,important
 ||messenger.com/*&refsrc=$document,important
-||messenger.com/*&settings_tracking=$document,important,domain=~Why they want to track even when users trying to manage profile settings
-||messenger.com/*&sfnsn=$document,important,domain=~This is a remark from Facebook that this link come from Facebook and just shared externally
+||messenger.com/*&settings_tracking=$document,important
+||messenger.com/*&sfnsn=$document,important
 ||messenger.com/*?__xts__%5B0%5D=$document,important
 ||messenger.com/*?__xts__*=$document,important
 ||messenger.com/*?__xts__[0]=$document,important
@@ -137,24 +137,24 @@
 ||messenger.com/*?pn_ref=$document,important
 ||messenger.com/*?referrer=$document,important
 ||messenger.com/*?refsrc=$document,important
-||messenger.com/*?settings_tracking=$document,important,domain=~Why they want to track even when users trying to manage profile settings
-||messenger.com/*?sfnsn=$document,important,domain=~This is a remark from Facebook that this link come from Facebook and just shared externally
-||play.google.com/*&pcampaignid=$document,important,domain=~Often see this when users click ads link and redirect back to GPlay
-||play.google.com/*&referrer=$document,important,domain=~Often see this when users click ads link and redirect back to GPlay
-||play.google.com/*?pcampaignid=$document,important,domain=~Often see this when users click ads link and redirect back to GPlay
-||play.google.com/*?referrer=$document,important,domain=~Often see this when users click ads link and redirect back to GPlay
-||steamcommunity.com/*&snr=$document,important,domain=~Possibly track user interaction while browsing games to buy or play
-||steamcommunity.com/*?snr=$document,important,domain=~Possibly track user interaction while browsing games to buy or play
-||steampowered.com/*&snr=$document,important,domain=~Possibly track user interaction while browsing games to buy or play
-||steampowered.com/*?snr=$document,important,domain=~Possibly track user interaction while browsing games to buy or play
+||messenger.com/*?settings_tracking=$document,important
+||messenger.com/*?sfnsn=$document,important
+||play.google.com/*&pcampaignid=$document,important
+||play.google.com/*&referrer=$document,important
+||play.google.com/*?pcampaignid=$document,important
+||play.google.com/*?referrer=$document,important
+||steamcommunity.com/*&snr=$document,important
+||steamcommunity.com/*?snr=$document,important
+||steampowered.com/*&snr=$document,important
+||steampowered.com/*?snr=$document,important
 
 ! Problematic, at your own risk!
 ! [CloudFlare DDoS JS Challenge]
 !   Blocking attempt to access websites with parameters below will cause problem because this parameter are neccessary for check
 !   that you're passing the test or not, however, this will pre-warning that the website are use its server and you may get 
 !   tracked by that company, also.
-||*&__cf_chl_jschl_tk__=$document,important,domain=~Beware that CloudFlare can track you with this parameter but this neccessary for each session only and you can dismiss this parameter once you temporary allowed
-||*?__cf_chl_jschl_tk__=$document,important,domain=~Beware that CloudFlare can track you with this parameter but this neccessary for each session only and you can dismiss this parameter once you temporary allowed
+||*&__cf_chl_jschl_tk__=$document,important
+||*?__cf_chl_jschl_tk__=$document,important
 
 ! [Pantip]
 !   They also apply to related topics and external URLs.

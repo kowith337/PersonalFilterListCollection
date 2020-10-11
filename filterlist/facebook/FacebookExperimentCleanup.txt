@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202009282342
+! Version: 202010111952
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -13,18 +13,34 @@
 ! Hide form dialog to add phone numbers (confirmed affect to any mobile site layout, no idea for desktop site breakage?)
 facebook.com###root form[action^="/phoneacqwrite"]
 
+! Try apply DOM rules that share the `article` role, Facebook start to add the role name for each post items in every versions,
+! even basic site.
+facebook.com##div[role="article"] div:has(div > span a[href*="/zero/optin/legal/"])
+facebook.com##div[role="article"] div:has(table a[href*="mbasic_feed_post_like_chaining"])
+facebook.com##div[role="article"] div:has(table a[href*="mbasic_feed_share_like_chaining"])
+facebook.com##div[role="article"] table td a[href^="/messenger-destination/cta/?"]
+facebook.com##div[role="article"] table[role="presentation"]:has(td a[href^="/profilepicframes"])
+facebook.com##div[role="article"]:has(.fbEventsSuggestionItem)
+facebook.com##div[role="article"]:has(.userContentWrapper div[class] a[target][data-hovercard*="directed_target_id"])
+facebook.com##div[role="article"]:has(div a[href*="/friends/center/"])
+facebook.com##div[role="article"]:has(div[class] > div[style] a[href*="facebook.com/help/"])
+facebook.com##div[role="article"]:has(div[class] > div[style] a[href^="https://web.facebook.com/help/"])
+facebook.com##div[role="article"]:has(div[data-ft*="ego_id"]:has(a[href*="?ref=psym_feed"]))
+facebook.com##div[role="article"]:has(iframe[src^="/xti.php?"])
+facebook.com##div[role="article"]:has(span:has-text(/Sponsored/))
+
 ! [Newer Facebook Desktop]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Caution: This still under testing stage!
 ! - Remove "MESSenger rooms" promo that injected into feed
-www.facebook.com##div[id^="mount"] div[data-pagelet="root"] div[class] div[data-pagelet="VideoChatHomeUnit"]
+facebook.com##div[id^="mount"] div[data-pagelet="root"] div[class] div[data-pagelet="VideoChatHomeUnit"]
 
 ! - Remove system promoted feed (e.g. On this day)
-www.facebook.com##div[role="article"]:has(div[class] > a[class][href*="promotion_feed_story"])
+facebook.com##div[role="article"]:has(div[class] > a[class][href*="promotion_feed_story"])
 
 ! - Reduce intrusive of posts that attract to play instant game by remove the play button and prevent click image, clicking it
 !   doesn't enlarge pictures, but it's directly sent you to instant game!
-www.facebook.com##div[role="article"] div[class] > a[href^="/instantgames/play/"] div[class]:has(i[class*="sp_"][class*="sx_"])
-www.facebook.com##div[role="article"] div[class] > a[href^="/instantgames/play/"]:style(pointer-events: none !important)
+facebook.com##div[role="article"] div[class] > a[href^="/instantgames/play/"] div[class]:has(i[class*="sp_"][class*="sx_"])
+facebook.com##div[role="article"] div[class] > a[href^="/instantgames/play/"]:style(pointer-events: none !important)
 
 ! [Facebook Desktop]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove "Top Picks" product from marketplace lists, only work for english UI users only (UK, US)
