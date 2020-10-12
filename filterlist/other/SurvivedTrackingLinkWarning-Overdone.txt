@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202010111928
+! Version: 202010122038
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -49,6 +49,12 @@
 ||duckduckgo.com/l/?$xmlhttprequest
 ||duckduckgo.com/l?$document,subdocument,important
 ||duckduckgo.com/l?$xmlhttprequest
+||facebook.com/*&__cft__%5B0%5D=$document,subdocument,important
+||facebook.com/*&__cft__%5B0%5D=$xmlhttprequest
+||facebook.com/*&__cft__*=$document,subdocument,important
+||facebook.com/*&__cft__*=$xmlhttprequest
+||facebook.com/*&__cft__[0]=$document,subdocument,important
+||facebook.com/*&__cft__[0]=$xmlhttprequest
 ||facebook.com/*&__tn__=$document,subdocument,important
 ||facebook.com/*&__tn__=$xmlhttprequest
 ||facebook.com/*&__xts__%5B0%5D=$document,subdocument,important
@@ -90,6 +96,12 @@
 ||facebook.com/*&settings_tracking=$xmlhttprequest
 ||facebook.com/*&sfnsn=$document,subdocument,important
 ||facebook.com/*&sfnsn=$xmlhttprequest
+||facebook.com/*?__cft__%5B0%5D=$document,subdocument,important
+||facebook.com/*?__cft__%5B0%5D=$xmlhttprequest
+||facebook.com/*?__cft__*=$document,subdocument,important
+||facebook.com/*?__cft__*=$xmlhttprequest
+||facebook.com/*?__cft__[0]=$document,subdocument,important
+||facebook.com/*?__cft__[0]=$xmlhttprequest
 ||facebook.com/*?__tn__=$document,subdocument,important
 ||facebook.com/*?__tn__=$xmlhttprequest
 ||facebook.com/*?__xts__%5B0%5D=$document,subdocument,important
@@ -167,6 +179,12 @@
 ||instagram.com/*&igshid=$xmlhttprequest
 ||instagram.com/*?igshid=$document,subdocument,important
 ||instagram.com/*?igshid=$xmlhttprequest
+||messenger.com/*&__cft__%5B0%5D=$document,subdocument,important
+||messenger.com/*&__cft__%5B0%5D=$xmlhttprequest
+||messenger.com/*&__cft__*=$document,subdocument,important
+||messenger.com/*&__cft__*=$xmlhttprequest
+||messenger.com/*&__cft__[0]=$document,subdocument,important
+||messenger.com/*&__cft__[0]=$xmlhttprequest
 ||messenger.com/*&__tn__=$document,subdocument,important
 ||messenger.com/*&__tn__=$xmlhttprequest
 ||messenger.com/*&__xts__%5B0%5D=$document,subdocument,important
@@ -206,6 +224,12 @@
 ||messenger.com/*&settings_tracking=$xmlhttprequest
 ||messenger.com/*&sfnsn=$document,subdocument,important
 ||messenger.com/*&sfnsn=$xmlhttprequest
+||messenger.com/*?__cft__%5B0%5D=$document,subdocument,important
+||messenger.com/*?__cft__%5B0%5D=$xmlhttprequest
+||messenger.com/*?__cft__*=$document,subdocument,important
+||messenger.com/*?__cft__*=$xmlhttprequest
+||messenger.com/*?__cft__[0]=$document,subdocument,important
+||messenger.com/*?__cft__[0]=$xmlhttprequest
 ||messenger.com/*?__tn__=$document,subdocument,important
 ||messenger.com/*?__tn__=$xmlhttprequest
 ||messenger.com/*?__xts__%5B0%5D=$document,subdocument,important

@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 202010111928
+! Version: 202010122038
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -45,6 +45,9 @@
 ||bibliogram.*/*?igshid=$document,subdocument,important
 ||duckduckgo.com/l/?$document,important
 ||duckduckgo.com/l?$document,important
+||facebook.com/*&__cft__%5B0%5D=$document,important
+||facebook.com/*&__cft__*=$document,important
+||facebook.com/*&__cft__[0]=$document,important
 ||facebook.com/*&__xts__%5B0%5D=$document,important
 ||facebook.com/*&__xts__*=$document,important
 ||facebook.com/*&__xts__[0]=$document,important
@@ -64,6 +67,9 @@
 ||facebook.com/*&refsrc=$document,important
 ||facebook.com/*&settings_tracking=$document,important
 ||facebook.com/*&sfnsn=$document,important
+||facebook.com/*?__cft__%5B0%5D=$document,important
+||facebook.com/*?__cft__*=$document,important
+||facebook.com/*?__cft__[0]=$document,important
 ||facebook.com/*?__xts__%5B0%5D=$document,important
 ||facebook.com/*?__xts__*=$document,important
 ||facebook.com/*?__xts__[0]=$document,important
@@ -101,6 +107,9 @@
 ||google.*/*?biw=$document,important
 ||instagram.com/*&igshid=$document,important
 ||instagram.com/*?igshid=$document,important
+||messenger.com/*&__cft__%5B0%5D=$document,important
+||messenger.com/*&__cft__*=$document,important
+||messenger.com/*&__cft__[0]=$document,important
 ||messenger.com/*&__xts__%5B0%5D=$document,important
 ||messenger.com/*&__xts__*=$document,important
 ||messenger.com/*&__xts__[0]=$document,important
@@ -120,6 +129,9 @@
 ||messenger.com/*&refsrc=$document,important
 ||messenger.com/*&settings_tracking=$document,important
 ||messenger.com/*&sfnsn=$document,important
+||messenger.com/*?__cft__%5B0%5D=$document,important
+||messenger.com/*?__cft__*=$document,important
+||messenger.com/*?__cft__[0]=$document,important
 ||messenger.com/*?__xts__%5B0%5D=$document,important
 ||messenger.com/*?__xts__*=$document,important
 ||messenger.com/*?__xts__[0]=$document,important
