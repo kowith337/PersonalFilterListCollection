@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 202010122038
+! Version: 202010172246
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -14,161 +14,152 @@
 
 ! Prevent AMP on Twitter
 ! Based on https://old.reddit.com/r/uBlockOrigin/comments/a650rk/how_can_i_block_google_amp_links/ebsye7c
-||t.co/*?amp=$document,important
+||t.co/*?amp=$document,important,domain=~Caution_Twitter-ShortLink-ForceAmpPage
 
 ! Common Extrenal
-||*&amp_*=*&usqp=*$document,important
-||*&fbclid$document,important
-||*&gclid$document,important
-||*&utm_*=$document,important
-||*&yclid$document,important
-||*?amp_*=*&usqp=*$document,important
-||*?fbclid$document,important
-||*?gclid$document,important
-||*?utm_*=$document,important
-||*?yclid$document,important
+||*&amp_*=*&usqp=*$document,important,domain=~Caution_Google-AMP-Page-MultiParams
+||*&fbclid$document,important,domain=~ClickTrack_FacebookClickID
+||*&gclid$document,important,domain=~ClickTrack_Google-aka-FacebookCopyCat
+||*&utm_*=$document,important,domain=~ClickTrack_Google-UrChin
+||*&yclid$document,important,domain=~ClickTrack_Yandex-aka-FacebookCopyCat
+||*?amp_*=*&usqp=*$document,important,domain=~Caution_Google-AMP-Page-MultiParams
+||*?fbclid$document,important,domain=~ClickTrack_FacebookClickID
+||*?gclid$document,important,domain=~ClickTrack_Google-aka-FacebookCopyCat
+||*?utm_*=$document,important,domain=~ClickTrack_Google-UrChin
+||*?yclid$document,important,domain=~ClickTrack_Yandex-aka-FacebookCopyCat
 
 ! Shady outgoing prompt from first party service
-||facebook.com/l.php$document,important
-||facebookcorewwwi.onion/l.php$document,important
-||gate.sc$document,important
-||l.facebook.com$document,important
-||l.messenger.com$document,important
-||lm.facebook.com$document,important
-||lm.messenger.com$document,important
-||messenger.com/l.php$document,important
-||youtube.com/redirect?*&redir_token=$document,important
-||youtube.com/redirect?redir_token=$document,important
+||facebook.com/l.php$document,important,domain=~FacebookExternalLinkParking-PHP-Document
+||facebookcorewwi.onion/l.php$document,important,domain=~FacebookExternalLinkParking-Onion
+||gate.sc$document,important,domain=~SoundCloudExternalParking
+||l.facebook.com$document,important,domain=~FacebookExternalLinkParking-Domain
+||l.messenger.com$document,important,domain=~FacebookExternalLinkParking-Domain
+||lm.facebook.com$document,important,domain=~FacebookExternalLinkParking-Domain
+||lm.messenger.com$document,important,domain=~FacebookExternalLinkParking-Domain
+||messenger.com/l.php$document,important,domain=~FacebookExternalLinkParking-PHP-Document
+||youtube.com/redirect?*&redir_token=$document,important,domain=~YouTubeExternalLinkParking-Token
+||youtube.com/redirect?redir_token=$document,important,domain=~YouTubeExternalLinkParking-Token
 
 ! Internal
-||bibliogram.*/*&igshid=$document,subdocument,important
-||bibliogram.*/*?igshid=$document,subdocument,important
-||duckduckgo.com/l/?$document,important
-||duckduckgo.com/l?$document,important
-||facebook.com/*&__cft__%5B0%5D=$document,important
-||facebook.com/*&__cft__*=$document,important
-||facebook.com/*&__cft__[0]=$document,important
-||facebook.com/*&__xts__%5B0%5D=$document,important
-||facebook.com/*&__xts__*=$document,important
-||facebook.com/*&__xts__[0]=$document,important
-||facebook.com/*&acontext=$document,important
-||facebook.com/*&dti=$document,important
-||facebook.com/*&eid=$document,important
-||facebook.com/*&entry_*=$document,important
-||facebook.com/*&entrypoint=$document,important
-||facebook.com/*&fb_dtsg*$document,important
-||facebook.com/*&fref=$document,important
-||facebook.com/*&hc_location=$document,important
-||facebook.com/*&hc_ref=$document,important
-||facebook.com/*&lst=$document,important
-||facebook.com/*&pn_location=$document,important
-||facebook.com/*&pn_ref=$document,important
-||facebook.com/*&referrer=$document,important
-||facebook.com/*&refsrc=$document,important
-||facebook.com/*&settings_tracking=$document,important
-||facebook.com/*&sfnsn=$document,important
-||facebook.com/*?__cft__%5B0%5D=$document,important
-||facebook.com/*?__cft__*=$document,important
-||facebook.com/*?__cft__[0]=$document,important
-||facebook.com/*?__xts__%5B0%5D=$document,important
-||facebook.com/*?__xts__*=$document,important
-||facebook.com/*?__xts__[0]=$document,important
-||facebook.com/*?acontext=$document,important
-||facebook.com/*?dti=$document,important
-||facebook.com/*?eid=$document,important
-||facebook.com/*?entry_*=$document,important
-||facebook.com/*?entrypoint=$document,important
-||facebook.com/*?fb_dtsg*$document,important
-||facebook.com/*?fref=$document,important
-||facebook.com/*?hc_location=$document,important
-||facebook.com/*?hc_ref=$document,important
-||facebook.com/*?lst=$document,important
-||facebook.com/*?pn_location=$document,important
-||facebook.com/*?pn_ref=$document,important
-||facebook.com/*?referrer=$document,important
-||facebook.com/*?refsrc=$document,important
-||facebook.com/*?settings_tracking=$document,important
-||facebook.com/*?sfnsn=$document,important
-||facebook.com/ads/*&session_id=$document,important
-||facebook.com/ads/*?session_id=$document,important
-||google.*/*?*&ei=$document,important
-||google.*/*?*&rlz=$document,important
-||google.*/*?*&usg=$document,important
-||google.*/*?*&ved=$document,important
-||google.*/*?*&vet=$document,important
-||google.*/*?*&bih=$document,important
-||google.*/*?*&biw=$document,important
-||google.*/*?ei=$document,important
-||google.*/*?rlz=$document,important
-||google.*/*?usg=$document,important,
-||google.*/*?ved=$document,important
-||google.*/*?vet=$document,important
-||google.*/*?bih=$document,important
-||google.*/*?biw=$document,important
-||instagram.com/*&igshid=$document,important
-||instagram.com/*?igshid=$document,important
-||messenger.com/*&__cft__%5B0%5D=$document,important
-||messenger.com/*&__cft__*=$document,important
-||messenger.com/*&__cft__[0]=$document,important
-||messenger.com/*&__xts__%5B0%5D=$document,important
-||messenger.com/*&__xts__*=$document,important
-||messenger.com/*&__xts__[0]=$document,important
-||messenger.com/*&acontext=$document,important
-||messenger.com/*&dti=$document,important
-||messenger.com/*&eid=$document,important
-||messenger.com/*&entry_*=$document,important
-||messenger.com/*&entrypoint=$document,important
-||messenger.com/*&fb_dtsg*$document,important
-||messenger.com/*&fref=$document,important
-||messenger.com/*&hc_location=$document,important
-||messenger.com/*&hc_ref=$document,important
-||messenger.com/*&lst=$document,important
-||messenger.com/*&pn_location=$document,important
-||messenger.com/*&pn_ref=$document,important
-||messenger.com/*&referrer=$document,important
-||messenger.com/*&refsrc=$document,important
-||messenger.com/*&settings_tracking=$document,important
-||messenger.com/*&sfnsn=$document,important
-||messenger.com/*?__cft__%5B0%5D=$document,important
-||messenger.com/*?__cft__*=$document,important
-||messenger.com/*?__cft__[0]=$document,important
-||messenger.com/*?__xts__%5B0%5D=$document,important
-||messenger.com/*?__xts__*=$document,important
-||messenger.com/*?__xts__[0]=$document,important
-||messenger.com/*?acontext=$document,important
-||messenger.com/*?dti=$document,important
-||messenger.com/*?eid=$document,important
-||messenger.com/*?entry_*=$document,important
-||messenger.com/*?entrypoint=$document,important
-||messenger.com/*?fb_dtsg*$document,important
-||messenger.com/*?fref=$document,important
-||messenger.com/*?hc_location=$document,important
-||messenger.com/*?hc_ref=$document,important
-||messenger.com/*?lst=$document,important
-||messenger.com/*?pn_location=$document,important
-||messenger.com/*?pn_ref=$document,important
-||messenger.com/*?referrer=$document,important
-||messenger.com/*?refsrc=$document,important
-||messenger.com/*?settings_tracking=$document,important
-||messenger.com/*?sfnsn=$document,important
-||play.google.com/*&pcampaignid=$document,important
-||play.google.com/*&referrer=$document,important
-||play.google.com/*?pcampaignid=$document,important
-||play.google.com/*?referrer=$document,important
-||steamcommunity.com/*&snr=$document,important
-||steamcommunity.com/*?snr=$document,important
-||steampowered.com/*&snr=$document,important
-||steampowered.com/*?snr=$document,important
+||bibliogram.*/*&igshid=$document,important,domain=~Leftover_Instagram-ExternalShareID
+||bibliogram.*/*?igshid=$document,important,domain=~Leftover_Instagram-ExternalShareID
+||duckduckgo.com/l/?$document,important,domain=~Precaution_DuckDuckGo-Redirect-UDDG
+||duckduckgo.com/l?$document,important,domain=~Precaution_DuckDuckGo-Redirect-UDDG
+||facebook.com/*&__cft__%5B0%5D=$document,important,domain=~FacebookInternalTracking_CFT
+||facebook.com/*&__cft__*=$document,important,domain=~FacebookInternalTracking_CFT
+||facebook.com/*&__cft__[0]=$document,important,domain=~FacebookInternalTracking_CFT
+! ||facebook.com/*&__tn__=$document,important,domain=~FacebookInternalTracking_TN
+||facebook.com/*&__xts__%5B0%5D=$document,important,domain=~FacebookInternalTracking_XTS
+||facebook.com/*&__xts__*=$document,important,domain=~FacebookInternalTracking_XTS
+||facebook.com/*&__xts__[0]=$document,important,domain=~FacebookInternalTracking_XTS
+||facebook.com/*&acontext=$document,important,domain=~FacebookInternalTracking_AContext
+||facebook.com/*&dti=$document,important,domain=~FacebookInternalTracking_DTI
+||facebook.com/*&eid=$document,important,domain=~FacebookInternalTracking_EID
+||facebook.com/*&entry*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
+||facebook.com/*&fb_dtsg*$document,important,domain=~FacebookInternalTracking_DTSG-Wild
+||facebook.com/*&fref=$document,important,domain=~FacebookInternalTracking_FRef
+||facebook.com/*&hc_*=$document,important,domain=~FacebookInternalTracking_HC-Wild
+||facebook.com/*&lst=$document,important,domain=~FacebookInternalTracking_LST
+||facebook.com/*&pn_*=$document,important,domain=~FacebookInternalTracking_PN-Wild
+||facebook.com/*&ref*=$document,subdocument,important,important,domain=~FacebookInternalTracking_Ref-Wild
+||facebook.com/*&settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
+||facebook.com/*&sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
+||facebook.com/*?__cft__%5B0%5D=$document,important,domain=~FacebookInternalTracking_CFT
+||facebook.com/*?__cft__*=$document,important,domain=~FacebookInternalTracking_CFT
+||facebook.com/*?__cft__[0]=$document,important,domain=~FacebookInternalTracking_CFT
+! ||facebook.com/*?__tn__=$document,important,domain=~FacebookInternalTracking_TN
+||facebook.com/*?__xts__%5B0%5D=$document,important,domain=~FacebookInternalTracking_XTS
+||facebook.com/*?__xts__*=$document,important,domain=~FacebookInternalTracking_XTS
+||facebook.com/*?__xts__[0]=$document,important,domain=~FacebookInternalTracking_XTS
+||facebook.com/*?acontext=$document,important,domain=~FacebookInternalTracking_AContext
+||facebook.com/*?dti=$document,important,domain=~FacebookInternalTracking_DTI
+||facebook.com/*?eid=$document,important,domain=~FacebookInternalTracking_EID
+||facebook.com/*?entry*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
+||facebook.com/*?fb_dtsg*$document,important,domain=~FacebookInternalTracking_DTSG-Wild
+||facebook.com/*?fref=$document,important,domain=~FacebookInternalTracking_FRef
+||facebook.com/*?hc_*=$document,important,domain=~FacebookInternalTracking_HC-Wild
+||facebook.com/*?lst=$document,important,domain=~FacebookInternalTracking_LST
+||facebook.com/*?pn_*=$document,important,domain=~FacebookInternalTracking_PN-Wild
+||facebook.com/*?ref*=$document,subdocument,important,important,domain=~FacebookInternalTracking_Ref-Wild
+||facebook.com/*?settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
+||facebook.com/*?sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
+||facebook.com/ads/*&session_id=$document,important,domain=~FacebookUnneccessaryParams_AdPrefs-SessionID
+||facebook.com/ads/*?session_id=$document,important,domain=~FacebookUnneccessaryParams_AdPrefs-SessionID
+||google.*/*?*&bih=$document,important,domain=~GoogleTracking-BrowserScreenHeight
+||google.*/*?*&biw=$document,important,domain=~GoogleTracking-BrowserScreenWidth
+||google.*/*?*&ei=$document,important,domain=~GoogleTracking-EncrypyedEpochTimeInteraction
+||google.*/*?*&rlz=$document,important,domain=~GoogleTracking-RLZ-AKA-ChromeInstallerID
+||google.*/*?*&sxsrf=$document,important,domain=~GoogleTracking-SXSRF
+||google.*/*?*&usg=$document,important,domain=~GoogleTracking-SearchResult_USG-ClickTrack
+||google.*/*?*&ved=$document,important,domain=~GoogleTracking-SearchResult_VED-ClickTrack
+||google.*/*?*&vet=$document,important,domain=~GoogleTracking-VET-PlainEpochTimer
+||google.*/*?bih=$document,important,domain=~GoogleTracking-BrowserScreenHeight
+||google.*/*?biw=$document,important,domain=~GoogleTracking-BrowserScreenWidth
+||google.*/*?ei=$document,important,domain=~GoogleTracking-EncrypyedEpochTimeInteraction
+||google.*/*?rlz=$document,important,domain=~GoogleTracking-RLZ-AKA-ChromeInstallerID
+||google.*/*?sxsrf=$document,important,domain=~GoogleTracking-SXSRF
+||google.*/*?usg=$document,important,domain=~GoogleTracking-SearchResult-USG
+||google.*/*?ved=$document,important,domain=~GoogleTracking-SearchResult-VED
+||google.*/*?vet=$document,important,domain=~GoogleTracking-VET-PlainEpochTimer
+||instagram.com/*&igshid=$document,important,domain=~Instagram-ExternalShareID
+||instagram.com/*?igshid=$document,important,domain=~Instagram-ExternalShareID
+||messenger.com/*&__cft__%5B0%5D=$document,important,domain=~FacebookInternalTracking_CFT
+||messenger.com/*&__cft__*=$document,important,domain=~FacebookInternalTracking_CFT
+||messenger.com/*&__cft__[0]=$document,important,domain=~FacebookInternalTracking_CFT
+! ||messenger.com/*&__tn__=$document,important,domain=~FacebookInternalTracking_TN
+||messenger.com/*&__xts__%5B0%5D=$document,important,domain=~FacebookInternalTracking_XTS
+||messenger.com/*&__xts__*=$document,important,domain=~FacebookInternalTracking_XTS
+||messenger.com/*&__xts__[0]=$document,important,domain=~FacebookInternalTracking_XTS
+||messenger.com/*&acontext=$document,important,domain=~FacebookInternalTracking_AContext
+||messenger.com/*&dti=$document,important,domain=~FacebookInternalTracking_DTI
+||messenger.com/*&eid=$document,important,domain=~FacebookInternalTracking_EID
+||messenger.com/*&entry*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
+||messenger.com/*&fb_dtsg*$document,important,domain=~FacebookInternalTracking_DTSG-Wild
+||messenger.com/*&fref=$document,important,domain=~FacebookInternalTracking_FRef
+||messenger.com/*&hc_*=$document,important,domain=~FacebookInternalTracking_HC_Wild
+||messenger.com/*&lst=$document,important,domain=~FacebookInternalTracking_LST
+||messenger.com/*&pn_*=$document,important,domain=~FacebookInternalTracking_PN_Wild
+||messenger.com/*&ref*=$document,subdocument,important,important,domain=~FacebookInternalTracking_Ref-Wild
+||messenger.com/*&settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
+||messenger.com/*&sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
+||messenger.com/*?__cft__%5B0%5D=$document,important,domain=~FacebookInternalTracking_CFT
+||messenger.com/*?__cft__*=$document,important,domain=~FacebookInternalTracking_CFT
+||messenger.com/*?__cft__[0]=$document,important,domain=~FacebookInternalTracking_CFT
+! ||messenger.com/*?__tn__=$document,important,domain=~FacebookInternalTracking_TN
+||messenger.com/*?__xts__%5B0%5D=$document,important,domain=~FacebookInternalTracking_XTS
+||messenger.com/*?__xts__*=$document,important,domain=~FacebookInternalTracking_XTS
+||messenger.com/*?__xts__[0]=$document,important,domain=~FacebookInternalTracking_XTS
+||messenger.com/*?acontext=$document,important,domain=~FacebookInternalTracking_AContext
+||messenger.com/*?dti=$document,important,domain=~FacebookInternalTracking_DTI
+||messenger.com/*?eid=$document,important,domain=~FacebookInternalTracking_EID
+||messenger.com/*?entry_*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
+||messenger.com/*?entrypoint=$document,important,domain=~FacebookInternalTracking_EntryPoint
+||messenger.com/*?fb_dtsg*$document,important,domain=~FacebookInternalTracking_DTSG-Wild
+||messenger.com/*?fref=$document,important,domain=~FacebookInternalTracking_FRef
+||messenger.com/*?hc_*=$document,important,domain=~FacebookInternalTracking_HC_Wild
+||messenger.com/*?lst=$document,important,domain=~FacebookInternalTracking_LST
+||messenger.com/*?pn_*=$document,important,domain=~FacebookInternalTracking_PN_Wild
+||messenger.com/*?ref*=$document,subdocument,important,important,domain=~FacebookInternalTracking_Ref-Wild
+||messenger.com/*?settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
+||messenger.com/*?sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
+||play.google.com/*&pcampaignid=$document,important,domain=~GPlayTracking_PromotedCampaignID
+||play.google.com/*&referrer=$document,important,domain=~GPlayTracking_Referrer
+||play.google.com/*?pcampaignid=$document,important,domain=~GPlayTracking_PromotedCampaignID
+||play.google.com/*?referrer=$document,important,domain=~GPlayTracking_Referrer
+||steamcommunity.com/*&snr=$document,important,domain=~SteamTracking_SNR
+||steamcommunity.com/*?snr=$document,important,domain=~SteamTracking_SNR
+||steampowered.com/*&snr=$document,important,domain=~SteamTracking_SNR
+||steampowered.com/*?snr=$document,important,domain=~SteamTracking_SNR
 
 ! Problematic, at your own risk!
 ! [CloudFlare DDoS JS Challenge]
 !   Blocking attempt to access websites with parameters below will cause problem because this parameter are neccessary for check
-!   that you're passing the test or not, however, this will pre-warning that the website are use its server and you may get 
+!   that you're really human visitors or not, however, this will pre-warning that the website are use its server and you may get 
 !   tracked by that company, also.
-||*&__cf_chl_jschl_tk__=$document,important
-||*?__cf_chl_jschl_tk__=$document,important
+||*&__cf_chl_jschl_tk__=$document,important,domain=~Precaution_Site-use-CloudFlare-DDoS-Challenge
+||*?__cf_chl_jschl_tk__=$document,important,domain=~Precaution_Site-use-CloudFlare-DDoS-Challenge
 
 ! [Pantip]
 !   They also apply to related topics and external URLs.
-||pantip.com/l/http*$document,important
-||pantip.com/r/http*$document,important
+||pantip.com/l/http*$document,important,domain=~Precaution_Pantip-Redirect
+||pantip.com/r/http*$document,important,domain=~Precaution_Pantip-Redirect
