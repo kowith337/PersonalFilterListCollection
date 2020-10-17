@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202010172246
+! Version: 202010172300
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -74,7 +74,7 @@
 ||facebook.com/*&entry*=$document,subdocument,important,domain=~FacebookInternalTracking_Entry-Wild
 ||facebook.com/*&entry*=$xmlhttprequest
 ||facebook.com/*&fb_dtsg*$document,subdocument,important,domain=~FacebookInternalTracking_DTSG-Wild
-||facebook.com/*&fb_dtsg*$xmlhttprequest
+! ||facebook.com/*&fb_dtsg*$xmlhttprequest
 ||facebook.com/*&fref=$document,subdocument,important,domain=~FacebookInternalTracking_FRef
 ||facebook.com/*&fref=$xmlhttprequest
 ||facebook.com/*&hc_*=$document,subdocument,important,domain=~FacebookInternalTracking_HC-Wild
@@ -112,7 +112,7 @@
 ||facebook.com/*?entry*=$document,subdocument,important,domain=~FacebookInternalTracking_Entry-Wild
 ||facebook.com/*?entry*=$xmlhttprequest
 ||facebook.com/*?fb_dtsg*$document,subdocument,important,domain=~FacebookInternalTracking_DTSG-Wild
-||facebook.com/*?fb_dtsg*$xmlhttprequest
+! ||facebook.com/*?fb_dtsg*$xmlhttprequest
 ||facebook.com/*?fref=$document,subdocument,important,domain=~FacebookInternalTracking_FRef
 ||facebook.com/*?fref=$xmlhttprequest
 ||facebook.com/*?hc_*=$document,subdocument,important,domain=~FacebookInternalTracking_HC-Wild
@@ -190,7 +190,7 @@
 ||messenger.com/*&entry*=$document,subdocument,important,domain=~FacebookInternalTracking_Entry-Wild
 ||messenger.com/*&entry*=$xmlhttprequest
 ||messenger.com/*&fb_dtsg*$document,subdocument,important,domain=~FacebookInternalTracking_DTSG-Wild
-||messenger.com/*&fb_dtsg*$xmlhttprequest
+! ||messenger.com/*&fb_dtsg*$xmlhttprequest
 ||messenger.com/*&fref=$document,subdocument,important,domain=~FacebookInternalTracking_FRef
 ||messenger.com/*&fref=$xmlhttprequest
 ||messenger.com/*&hc_*=$document,subdocument,important,domain=~FacebookInternalTracking_HC_Wild
@@ -230,7 +230,7 @@
 ||messenger.com/*?entrypoint=$document,subdocument,important,domain=~FacebookInternalTracking_EntryPoint
 ||messenger.com/*?entrypoint=$xmlhttprequest
 ||messenger.com/*?fb_dtsg*$document,subdocument,important,domain=~FacebookInternalTracking_DTSG-Wild
-||messenger.com/*?fb_dtsg*$xmlhttprequest
+! ||messenger.com/*?fb_dtsg*$xmlhttprequest
 ||messenger.com/*?fref=$document,subdocument,important,domain=~FacebookInternalTracking_FRef
 ||messenger.com/*?fref=$xmlhttprequest
 ||messenger.com/*?hc_*=$document,subdocument,important,domain=~FacebookInternalTracking_HC_Wild
