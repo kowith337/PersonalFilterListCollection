@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202009251255
+! Version: 202010181323
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -329,7 +329,8 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||gamingdose.com/wp-content/plugins/ajax-load-more$script,stylesheet
 
 ! [Google]
-! - Tracking users with some parameter tag (e.g. 'ei', 'vet')
+! - Tracking users with some parameter tag (e.g. 'ei', 'vet'), also try to "ping" every actions!
+||google.*$beacon,ping,important
 ||google.*/*?*&ei=$image,xmlhttprequest,important
 ||google.*/*?ei=$image,xmlhttprequest,important
 ||google.*/VisualFrontendUi/browserinfo$important
