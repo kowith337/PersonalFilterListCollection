@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202010172300
+! Version: 202010190831
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -57,6 +57,10 @@
 ||facebook.com/*&__cft__*=$xmlhttprequest
 ||facebook.com/*&__cft__[0]=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
 ||facebook.com/*&__cft__[0]=$xmlhttprequest
+||facebook.com/*&__rv__=$document,subdocument,important,domain=~FacebookInternalTracking_Videos-RV
+||facebook.com/*&__rv__=$xmlhttprequest
+||facebook.com/*&__so__=$document,subdocument,important,domain=~FacebookInternalTracking_Videos-SO
+||facebook.com/*&__so__=$xmlhttprequest
 ||facebook.com/*&__tn__=$document,subdocument,important,domain=~FacebookInternalTracking_TN
 ||facebook.com/*&__tn__=$xmlhttprequest
 ||facebook.com/*&__xts__%5B0%5D=$document,subdocument,important,domain=~FacebookInternalTracking_XTS
@@ -95,6 +99,10 @@
 ||facebook.com/*?__cft__*=$xmlhttprequest
 ||facebook.com/*?__cft__[0]=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
 ||facebook.com/*?__cft__[0]=$xmlhttprequest
+||facebook.com/*?__rv__=$document,subdocument,important,domain=~FacebookInternalTracking_Videos-RV
+||facebook.com/*?__rv__=$xmlhttprequest
+||facebook.com/*?__so__=$document,subdocument,important,domain=~FacebookInternalTracking_Videos-SO
+||facebook.com/*?__so__=$xmlhttprequest
 ||facebook.com/*?__tn__=$document,subdocument,important,domain=~FacebookInternalTracking_TN
 ||facebook.com/*?__tn__=$xmlhttprequest
 ||facebook.com/*?__xts__%5B0%5D=$document,subdocument,important,domain=~FacebookInternalTracking_XTS
