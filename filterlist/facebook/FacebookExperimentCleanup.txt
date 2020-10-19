@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202010111952
+! Version: 202010191334
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -16,17 +16,16 @@ facebook.com###root form[action^="/phoneacqwrite"]
 ! Try apply DOM rules that share the `article` role, Facebook start to add the role name for each post items in every versions,
 ! even basic site.
 facebook.com##div[role="article"] div:has(div > span a[href*="/zero/optin/legal/"])
-facebook.com##div[role="article"] div:has(table a[href*="mbasic_feed_post_like_chaining"])
-facebook.com##div[role="article"] div:has(table a[href*="mbasic_feed_share_like_chaining"])
-facebook.com##div[role="article"] table td a[href^="/messenger-destination/cta/?"]
-facebook.com##div[role="article"] table[role="presentation"]:has(td a[href^="/profilepicframes"])
+facebook.com##div[role="article"] div:has(table a[href*="chaining"])
+facebook.com##div[role="article"] div:has(table a[href*="chaining"])
+facebook.com##div[role="article"] table td a[href*="/messenger-destination/cta/?"]
+facebook.com##div[role="article"] table[role="presentation"]:has(td a[href*="/profilepicframes"])
 facebook.com##div[role="article"]:has(.fbEventsSuggestionItem)
 facebook.com##div[role="article"]:has(.userContentWrapper div[class] a[target][data-hovercard*="directed_target_id"])
 facebook.com##div[role="article"]:has(div a[href*="/friends/center/"])
 facebook.com##div[role="article"]:has(div[class] > div[style] a[href*="facebook.com/help/"])
-facebook.com##div[role="article"]:has(div[class] > div[style] a[href^="https://web.facebook.com/help/"])
 facebook.com##div[role="article"]:has(div[data-ft*="ego_id"]:has(a[href*="?ref=psym_feed"]))
-facebook.com##div[role="article"]:has(iframe[src^="/xti.php?"])
+facebook.com##div[role="article"]:has(iframe[src*="/xti.php?"])
 facebook.com##div[role="article"]:has(span:has-text(/Sponsored/))
 
 ! [Newer Facebook Desktop]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -39,8 +38,8 @@ facebook.com##div[role="article"]:has(div[class] > a[class][href*="promotion_fee
 
 ! - Reduce intrusive of posts that attract to play instant game by remove the play button and prevent click image, clicking it
 !   doesn't enlarge pictures, but it's directly sent you to instant game!
-facebook.com##div[role="article"] div[class] > a[href^="/instantgames/play/"] div[class]:has(i[class*="sp_"][class*="sx_"])
-facebook.com##div[role="article"] div[class] > a[href^="/instantgames/play/"]:style(pointer-events: none !important)
+facebook.com##div[role="article"] div[class] > a[href*="/instantgames/play/"] div[class]:has(i[class*="sp_"][class*="sx_"])
+facebook.com##div[role="article"] div[class] > a[href*="/instantgames/play/"]:style(pointer-events: none !important)
 
 ! [Facebook Desktop]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove "Top Picks" product from marketplace lists, only work for english UI users only (UK, US)
@@ -75,7 +74,7 @@ facebook.com###globalContainer #content[role="main"] div[class] > .clearfix div[
 facebook.com##div[data-testid^="UFI2Comment/root"] div[data-testid^="UFI2Comment/body"] a:has(img[src^="/images/assets"][src*="/facebook_icons/diamond_filled"])
 
 ! Remove zuckestions to watch videos in "Party" mode!
-facebook.com##.uiStreamStory div[class] > div div[class] >:has(a[href^="/watch/"])
+facebook.com##.uiStreamStory div[class] > div div[class] >:has(a[href*="/watch/"])
 facebook.com##.userContentWrapper div > div a[ajaxify^="/living_room/share_dialog/"]
 
 ! Remove related video lists (permalink that have `/videos/` path in URL only)
@@ -135,29 +134,29 @@ www.facebook.com###rightCol[role] div[class] div > ul.uiCollapsedList:has(li div
 
 ! Remove non-same origin meun out of list (affect Pages Menu [your pages, liked, zuckested], Gaming, Explore, Fundarise, Instant Games)
 ! - New Bookmarks (visit https://touch.facebook.com/bookmarks)
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href^="https://m.facebook.com/fundraisers/"]
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href^="https://m.facebook.com/local_surface/"]
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href^="https://m.facebook.com/nt/"]
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href^="https://web.facebook.com/games/?"]
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href^="https://www.facebook.com/games/?"]
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="fb://"]
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://m.facebook.com/fundraisers/"]
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://m.facebook.com/local_surface/"]
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://m.facebook.com/nt/"]
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://web.facebook.com/games/?"]
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="https://www.facebook.com/games/?"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href*="m.facebook.com/fundraisers/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href*="m.facebook.com/local_surface/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href*="m.facebook.com/nt/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href*="web.facebook.com/games/?"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href*="www.facebook.com/games/?"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href*="fb://"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href*="m.facebook.com/fundraisers/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href*="m.facebook.com/local_surface/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href*="m.facebook.com/nt/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href*="web.facebook.com/games/?"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href*="www.facebook.com/games/?"]
 ! - Old Bookmarks (manual press three dash icon)
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="fb://"])
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="https://m.facebook.com/fundraisers/"])
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="https://m.facebook.com/local_surface/"])
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="https://m.facebook.com/nt/"])
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="https://web.facebook.com/games/?"])
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="https://www.facebook.com/games/?"])
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href*="fb://"])
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href*="m.facebook.com/fundraisers/"])
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href*="m.facebook.com/local_surface/"])
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href*="m.facebook.com/nt/"])
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href*="web.facebook.com/games/?"])
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href*="www.facebook.com/games/?"])
 
 ! Remove "Watch" out of menu, this thing is useless because it's also pull your ads profile data for inject more related videos
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href^="/watch/"]
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href^="/watch/"]
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href^="/watch/"])
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > a[href*="/watch/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root div[class] > ul li > a[href*="/watch/"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu .touchable:has(a[href*="/watch/"])
 
 ! Remove feed item appear in "On This Day" to watch and/or share auto generated friendship videos. (Work on specific language)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-onthisday #root div > article:has(div[style^="flex-"] div[aria-label*="Friendship"]):has(div[aria-label^="Friendship"])
