@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: kowith337's Test List
-! Version: 202008251423
+! Version: 202010222006
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -47,6 +47,11 @@ youtube.com###masthead #end #buttons ytd-button-renderer:has(a[href*="/ServiceLo
 
 ! - Try remove "Premium" link at sidebar (Disabled due to unknown usage problem that cause unable to click anything)
 !youtube.com##.ytd-guide-renderer:has(#items ytd-guide-entry-renderer:has(a[href*="/premium"]))
+
+! DOM Permanent Remover - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Facebook] Blame to AdGuard
+facebook.com##.AdBox:remove()
+facebook.com##.post-ads:remove()
 
 ! Non-basic filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Blognone] In case if modern browsers support to remove node entirely
