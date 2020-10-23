@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: iHateCircles
-! Version: 202010012235
+! Version: 202010232027
 ! Expires: 2 days
 ! Author: kowith337, DandelionSprout and contributors
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css
@@ -8,7 +8,7 @@
 ! Description: Circles? Material Design? All of that is too mainstream! Just bring back all the squares!!
 
 ! Multi-domain
-aminoapps.com,answers.yahoo.com,douyin.com,facebook.com,github.com,ifunny.co,instagram.com,minds.com,ok.ru,pixiv.net,quora.com,reddit.com,tiktok.com,tumblr.com,twitter.com,vk.com,google.*##*:style(border-radius: 0px !important)
+aminoapps.com,answers.yahoo.com,douyin.com,github.com,ifunny.co,instagram.com,minds.com,ok.ru,pixiv.net,quora.com,reddit.com,tiktok.com,tumblr.com,twitter.com,vk.com,google.*##*:style(border-radius: 0px !important)
 facebook.com,google.com,pixiv.net##*:before:style(border-radius: 0px !important)
 
 ! Single-domain
@@ -18,6 +18,7 @@ discordapp.com##div[class^="wrapper-"] > svg > mask
 discordapp.com##div[class^="wrapper-"]:style(border-radius: 0px !important)
 discordapp.com##div[style*="avatars"]:style(border-radius: 0px !important; -webkit-mask: none !important)
 facebook.com##*:after:style(border-radius: 0px !important)
+facebook.com##*:style(border-radius: 0px !important; border-bottom-left-radius: 0px !important; border-bottom-right-radius: 0px !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important)
 facebook.com##div[id^="mount"] div[class] > svg[data-visualcompletion] g[mask] circle
 facebook.com##div[id^="mount"] div[class] > svg[data-visualcompletion] g[mask] rect
 facebook.com##div[id^="mount"] div[class] > svg[data-visualcompletion] mask circle:upward(1)
