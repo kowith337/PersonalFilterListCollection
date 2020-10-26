@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Facebook Zuckestion Killer
-! Version: 202010192014
+! Version: 202010261310
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -17,7 +17,7 @@
 ! Remark: If you're using uBlock0 or Nano, try click the magnifier icon to expand all parameters for getting real URL
 ||*&fbclid=$document,xhr,important,domain=~TRACKING-FBCLID_PARAMS
 ||*?fbclid=$document,xhr,important,domain=~TRACKING-FBCLID_PARAMS
-||facebook.com/flx/**h=$document,xhr,important,domain=~TRACKING-OUTGOING_WARN_UNWANTED_H_PARAM
+||facebook.com/flx/*&h=$document,xhr,important,domain=~TRACKING-OUTGOING_WARN_UNWANTED_H_PARAM
 ||facebook.com/flx/*?h=$document,xhr,important,domain=~TRACKING-OUTGOING_WARN_UNWANTED_H_PARAM
 ||facebook.com/l.php$document,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_PHP
 ||l.facebook.com$document,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_DOMAIN

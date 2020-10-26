@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 202010190831
+! Version: 202010261322
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -29,7 +29,11 @@
 ||*?yclid$document,important,domain=~ClickTrack_Yandex-aka-FacebookCopyCat
 
 ! Shady outgoing prompt from first party service
+||facebook.com/flx/*&h=$document,important,domain=~FacebookExternalLinkWarning-H-Tracking-Param
+||facebook.com/flx/*?h=$document,important,domain=~FacebookExternalLinkWarning-H-Tracking-Param
 ||facebook.com/l.php$document,important,domain=~FacebookExternalLinkParking-PHP-Document
+||facebookcorewwi.onion/*&h=$document,important,domain=~FacebookExternalLinkWarning-H-Tracking-Param
+||facebookcorewwi.onion/flx/*?h=$document,important,domain=~FacebookExternalLinkWarning-H-Tracking-Param
 ||facebookcorewwi.onion/l.php$document,important,domain=~FacebookExternalLinkParking-Onion
 ||gate.sc$document,important,domain=~SoundCloudExternalParking
 ||l.facebook.com$document,important,domain=~FacebookExternalLinkParking-Domain
