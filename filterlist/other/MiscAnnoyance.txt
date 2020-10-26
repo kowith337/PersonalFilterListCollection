@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202010181323
+! Version: 202010262227
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -342,6 +342,7 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||google.*/images/phd/px.gif$important
 ||google.*/imgevent?*&ei=$important
 ||google.*/imgevent?ei=$important
+||google.*/log?$important
 
 ! [Linkis]
 ! ||linkis.com/ajax^$xmlhttprequest
