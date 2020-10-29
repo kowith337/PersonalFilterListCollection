@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202010261322
+! Version: 202010292124
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -45,6 +45,10 @@
 ||youtube.com/redirect?redir_token=$document,subdocument,xmlhttprequest,important,domain=~YouTubeExternalLinkParking-Token
 
 ! Internal
+! ||facebook.com/*&fb_dtsg*$xmlhttprequest
+! ||facebook.com/*?fb_dtsg*$xmlhttprequest
+! ||messenger.com/*&fb_dtsg*$xmlhttprequest
+! ||messenger.com/*?fb_dtsg*$xmlhttprequest
 ||bibliogram.*/*&igshid=$document,subdocument,important,domain=~Leftover_Instagram-ExternalShareID
 ||bibliogram.*/*&igshid=$xmlhttprequest
 ||bibliogram.*/*?igshid=$document,subdocument,important,domain=~Leftover_Instagram-ExternalShareID
@@ -80,7 +84,6 @@
 ||facebook.com/*&entry*=$document,subdocument,important,domain=~FacebookInternalTracking_Entry-Wild
 ||facebook.com/*&entry*=$xmlhttprequest
 ||facebook.com/*&fb_dtsg*$document,subdocument,important,domain=~FacebookInternalTracking_DTSG-Wild
-! ||facebook.com/*&fb_dtsg*$xmlhttprequest
 ||facebook.com/*&fref=$document,subdocument,important,domain=~FacebookInternalTracking_FRef
 ||facebook.com/*&fref=$xmlhttprequest
 ||facebook.com/*&hc_*=$document,subdocument,important,domain=~FacebookInternalTracking_HC-Wild
@@ -89,6 +92,8 @@
 ||facebook.com/*&lst=$xmlhttprequest
 ||facebook.com/*&pn_*=$document,subdocument,important,domain=~FacebookInternalTracking_PN-Wild
 ||facebook.com/*&pn_*=$xmlhttprequest
+||facebook.com/*&privacy_mutation_token=$document,subdocument,important,domain=~FacebookInternalTracking_Shady-param-register
+||facebook.com/*&privacy_mutation_token=$xmlhttprequest
 ||facebook.com/*&ref*=$document,subdocument,important,important,domain=~FacebookInternalTracking_Ref-Wild
 ||facebook.com/*&ref*=$xmlhttprequest
 ||facebook.com/*&settings_tracking=$document,subdocument,important,domain=~FacebookInternalTracking_SettingsTracking
@@ -122,7 +127,6 @@
 ||facebook.com/*?entry*=$document,subdocument,important,domain=~FacebookInternalTracking_Entry-Wild
 ||facebook.com/*?entry*=$xmlhttprequest
 ||facebook.com/*?fb_dtsg*$document,subdocument,important,domain=~FacebookInternalTracking_DTSG-Wild
-! ||facebook.com/*?fb_dtsg*$xmlhttprequest
 ||facebook.com/*?fref=$document,subdocument,important,domain=~FacebookInternalTracking_FRef
 ||facebook.com/*?fref=$xmlhttprequest
 ||facebook.com/*?hc_*=$document,subdocument,important,domain=~FacebookInternalTracking_HC-Wild
@@ -131,6 +135,8 @@
 ||facebook.com/*?lst=$xmlhttprequest
 ||facebook.com/*?pn_*=$document,subdocument,important,domain=~FacebookInternalTracking_PN-Wild
 ||facebook.com/*?pn_*=$xmlhttprequest
+||facebook.com/*?privacy_mutation_token=$document,subdocument,important,domain=~FacebookInternalTracking_Shady-param-register
+||facebook.com/*?privacy_mutation_token=$xmlhttprequest
 ||facebook.com/*?ref*=$document,subdocument,important,important,domain=~FacebookInternalTracking_Ref-Wild
 ||facebook.com/*?ref*=$xmlhttprequest
 ||facebook.com/*?settings_tracking=$document,subdocument,important,domain=~FacebookInternalTracking_SettingsTracking
@@ -200,7 +206,6 @@
 ||messenger.com/*&entry*=$document,subdocument,important,domain=~FacebookInternalTracking_Entry-Wild
 ||messenger.com/*&entry*=$xmlhttprequest
 ||messenger.com/*&fb_dtsg*$document,subdocument,important,domain=~FacebookInternalTracking_DTSG-Wild
-! ||messenger.com/*&fb_dtsg*$xmlhttprequest
 ||messenger.com/*&fref=$document,subdocument,important,domain=~FacebookInternalTracking_FRef
 ||messenger.com/*&fref=$xmlhttprequest
 ||messenger.com/*&hc_*=$document,subdocument,important,domain=~FacebookInternalTracking_HC_Wild
@@ -209,6 +214,8 @@
 ||messenger.com/*&lst=$xmlhttprequest
 ||messenger.com/*&pn_*=$document,subdocument,important,domain=~FacebookInternalTracking_PN_Wild
 ||messenger.com/*&pn_*=$xmlhttprequest
+||messenger.com/*&privacy_mutation_token=$document,subdocument,important,domain=~FacebookInternalTracking_Shady-param-register
+||messenger.com/*&privacy_mutation_token=$xmlhttprequest
 ||messenger.com/*&ref*=$document,subdocument,important,important,domain=~FacebookInternalTracking_Ref-Wild
 ||messenger.com/*&ref*=$xmlhttprequest
 ||messenger.com/*&settings_tracking=$document,subdocument,important,domain=~FacebookInternalTracking_SettingsTracking
@@ -240,7 +247,6 @@
 ||messenger.com/*?entrypoint=$document,subdocument,important,domain=~FacebookInternalTracking_EntryPoint
 ||messenger.com/*?entrypoint=$xmlhttprequest
 ||messenger.com/*?fb_dtsg*$document,subdocument,important,domain=~FacebookInternalTracking_DTSG-Wild
-! ||messenger.com/*?fb_dtsg*$xmlhttprequest
 ||messenger.com/*?fref=$document,subdocument,important,domain=~FacebookInternalTracking_FRef
 ||messenger.com/*?fref=$xmlhttprequest
 ||messenger.com/*?hc_*=$document,subdocument,important,domain=~FacebookInternalTracking_HC_Wild
@@ -249,6 +255,8 @@
 ||messenger.com/*?lst=$xmlhttprequest
 ||messenger.com/*?pn_*=$document,subdocument,important,domain=~FacebookInternalTracking_PN_Wild
 ||messenger.com/*?pn_*=$xmlhttprequest
+||messenger.com/*?privacy_mutation_token=$document,subdocument,important,domain=~FacebookInternalTracking_Shady-param-register
+||messenger.com/*?privacy_mutation_token=$xmlhttprequest
 ||messenger.com/*?ref*=$document,subdocument,important,important,domain=~FacebookInternalTracking_Ref-Wild
 ||messenger.com/*?ref*=$xmlhttprequest
 ||messenger.com/*?settings_tracking=$document,subdocument,important,domain=~FacebookInternalTracking_SettingsTracking

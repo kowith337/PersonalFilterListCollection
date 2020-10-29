@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202010262231
+! Version: 202010292137
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -382,11 +382,11 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ! - I don't know about this connection but I've found 'ei' parameter inside that already blocked by my another list called
 !   "Anti survived tracking warning (overdone ver.)" , expected that the request use for ping back to phone home and/or keep
 !   tracking users periodically, right...?
-||google.*/async/bgasy?$xmlhttprequest,important,redirect=nooptext
-||google.*/imgevent?$xmlhttprequest,important,redirect=nooptext
+||google.*/async/bgasy?$xmlhttprequest,important,redirect=noop.txt
+||google.*/imgevent?$xmlhttprequest,important,redirect=noop.txt
 
 ! - This request use 'vet' parameter and random strings value
-||google.*/async/irc?$xmlhttprequest,important,redirect=nooptext
+||google.*/async/irc?$xmlhttprequest,important,redirect=noop.txt
 
 ! - Possibly pixel image tracking
 ||google.*/images/phd/px.gif$image,important,domain=google.com|google.*,redirect=1x1.gif
@@ -394,12 +394,12 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ! [GreasyFork] added ping request while installing script (inside the "Install Script" green button) via 'data-ping-url' that
 ! cause promoted script to be shown and the site also get user data about it, eliminate this requests and fake sent data with
 ! 'nooptext' can solve this thing also.
-||greasyfork.org/scripts/*/install-ping?$xmlhttprequest,important,redirect=nooptext
+||greasyfork.org/scripts/*/install-ping?$xmlhttprequest,important,redirect=noop.txt
 
 ! [Reddit]
 ! - GoogleTag Frame
-||redditmedia.com/gtm^$subdocument,important,redirect=noopframe
-||redditstatic.com/gtm^$subdocument,important,redirect=noopframe
+||redditmedia.com/gtm^$subdocument,important,redirect=noop.php
+||redditstatic.com/gtm^$subdocument,important,redirect=noop.php
 
 ! - Also PNG PIXEL TRACKING!?
 ||reddit.com/static/pixel.png$image,important,redirect=1x1-transparent.png
@@ -413,30 +413,31 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ! to increase network speed, etc. for good examples by each providers, you can view topics in Pantip below...
 ! - 3Broadband: https://pantip.com/topic/38945629 + https://pantip.com/topic/38963195 + https://pantip.com/topic/38969958
 ! - True Internet: https://pantip.com/topic/39762480 + https://pantip.com/topic/39763510 + https://youtu.be/UhxFeX49S2M
-||110.164.252.137/wpwarn$document,domain=~Only legitimate bill due warning are allowed to bypass due to they once use for promote their streaming platform named MonoMax
-||service.truecorp.co.th$document,important,domain=~This will block until True Corporation stop abusing captive portal for just promote promotions from themselves
-||service.trueinternet.co.th$document,important,domain=~This will block until True Corporation stop abusing captive portal for just promote promotions from themselves
-||services.truecorp.co.th$document,important,domain=~This will block until True Corporation stop abusing captive portal for just promote promotions from themselves
-||services.trueinternet.co.th$document,important,domain=~This will block until True Corporation stop abusing captive portal for just promote promotions from themselves
+||110.164.252.137/wpwarn$document,domain=~CaptivePortalAbuse_3BB-NonBillWarning
+||service.truecorp.co.th$document,important,domain=~CaptivePortalAbuse_TrueCorp-promotional
+||service.trueinternet.co.th$document,important,domain=~CaptivePortalAbuse_TrueCorp-promotional
+||services.truecorp.co.th$document,important,domain=~CaptivePortalAbuse_TrueCorp-promotional
+||services.trueinternet.co.th$document,important,domain=~CaptivePortalAbuse_TrueCorp-promotional
 @@||110.164.252.137/wpwarn/hard$document
 @@||110.164.252.137/wpwarn/soft$document
 
 ! It's also happen on mobile data, too! for just only promote their app, WTF!? (https://pantip.com/topic/39906276)
-||*&url=www3.truecorp.co.th$important,domain=~This will block until True Corporation stop abusing captive portal for just promote their companion app
-||*?url=www3.truecorp.co.th$important,domain=~This will block until True Corporation stop abusing captive portal for just promote their companion app
-||home.trueid.net$document,important,domain=~This will block until True Corporation stop abusing captive portal for just promote their companion app
-||trueid.net/detail/E1MM2bLKePX1$important,domain=~This will block until True Corporation stop abusing captive portal for just promote their companion app
+||*&url=www3.truecorp.co.th$important,domain=~CaptivePortalAbuse_TrueCorp-Companion-app
+||*?url=www3.truecorp.co.th$important,domain=~CaptivePortalAbuse_TrueCorp-Companion-app
+||home.trueid.net$document,important,domain=~CaptivePortalAbuse_TrueCorp-Companion-app
+||trueid.net/detail/E1MM2bLKePX1$important,domain=~CaptivePortalAbuse_TrueCorp-Companion-app
 
 ! [Add0n] Some extensions that hosted with add0n are show the popup
-||add0n.com$document
+||add0n.com$document,important,domain=~VeryAnnoy_Browser-add0n-redirect-after-install
 ||add0n.com$popunder
 ||add0n.com$popup
 
 ! [Google]
 ! Block "sorry" spam protect page, I've often use browser searchbar itself instead of search new word with their search bar!
-! Because they have `ved` parameter to obfuscase destination and also use for keep an eyes on you!! (indeed, tracking you!!!)
+! Because they have `ved` parameter to obfuscase destination and also use for keep an eyes on you!!
+! * Indeed, tracking you with reCaptcha + possibly also browser fingerprinting!!!
 ! This strict blocking will divide parameters and you may need to copy, then switch to another TLD, such as UK, JP, TH, etc.
-||google.*/sorry/index?$document,important,domain=~Using spam protect against suspicious IP address with reCaptcha are surely they can really identify users by fingerprinting technique
+||google.*/sorry/index?$document,important,domain=~Precaution_Google-Sorry-Spam-reCaptcha-Fingerprint
 
 ! [Mozilla AMO]
 ! Some extensions at Mozilla (mostly if it have suggest to contribute via donation) is redirect to open a developer profile page
@@ -445,7 +446,7 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ! For post-quantum Firefox users, the filter may not work unless you've de-whitelist WebExtension exception and make config prefs
 ! to resist fingerprinting on mozilla addons page, see "Privileged Pages" information and how-tos in uBlock wiki below...
 ! > https://github.com/gorhill/uBlock/wiki/Privileged-Pages
-||addons.mozilla.org/*/addon/*/developers$document
+||addons.mozilla.org/*/addon/*/developers$document,domain=~Precaution_Mozilla-AMO-addons-contribute-redirect
 
 ! Scriplets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 m.intl.taobao.com,m.taobao.com##+js(aeld, load, getFB_GOOLE_trackJs)

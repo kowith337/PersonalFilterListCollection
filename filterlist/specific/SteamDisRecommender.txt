@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Steam Dis-Recommender Filters
-! Version: 202009112111
+! Version: 202009292133
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -111,9 +111,9 @@ steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .plat
 ||steampowered.com/explore/recommended$xmlhttprequest
 
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-||steampowered.com/broadcast/ajaxgetpopularpartnerbroadcasts$xmlhttprequest,important,redirect=nooptext
-||steampowered.com/explore/logfeedview$xmlhttprequest,important,redirect=nooptext
-||steampowered.com/explore/recommended$xmlhttprequest,important,redirect=nooptext
+||steampowered.com/broadcast/ajaxgetpopularpartnerbroadcasts$xmlhttprequest,important,redirect=noop.txt
+||steampowered.com/explore/logfeedview$xmlhttprequest,important,redirect=noop.txt
+||steampowered.com/explore/recommended$xmlhttprequest,important,redirect=noop.txt
 
 ! Trusted or Allowed only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Allow "DynamicStore" information to sent **only when you're logged out!**
