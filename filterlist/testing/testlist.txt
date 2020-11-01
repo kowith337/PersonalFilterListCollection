@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: kowith337's Test List
-! Version: 202011012024
+! Version: 202011012326
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -93,18 +93,22 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 ! Info: Only handling some query that not necessary to binding in for specific requests rather than `document`, this may conflict
 !       with "Anti survived tracking link warning" filterlist that strictly blocked page when shady parameters are binding with
 !       any URLs for keep tracking users whenever you're visiting some sites out of social platform.
-! Note: This still under developement, require uBO 1.30.9b1 or above, sideload extenstion may also required!
-||facebook.com/a/*?fb_dtsg$queryprune=|fb_dtsg
-||facebook.com/a/*&fb_dtsg$queryprune=|fb_dtsg
-||facebook.com/ajax/*?fb_dtsg$queryprune=|fb_dtsg
-||facebook.com/ajax/*&fb_dtsg$queryprune=|fb_dtsg
-||facebook.com/*?privacy_mutation_token=$xhr,queryprune=privacy_mutation_token
+! Note: This still under developement, require uBO 1.30.9b1 or above and modern browsers, sideload extenstion may also required!
 ||facebook.com/*&privacy_mutation_token=$xhr,queryprune=privacy_mutation_token
-||fbcdn.net/*?_nc_fbs=$all,domain=facebook.com|messenger.com,queryprune=_nc_fbs
+||facebook.com/*?privacy_mutation_token=$xhr,queryprune=privacy_mutation_token
+||facebook.com/a/*&fb_dtsg$queryprune=|fb_dtsg
+||facebook.com/a/*?fb_dtsg$queryprune=|fb_dtsg
+||facebook.com/ajax/*&fb_dtsg$queryprune=|fb_dtsg
+||facebook.com/ajax/*?fb_dtsg$queryprune=|fb_dtsg
 ||fbcdn.net/*&_nc_fbs=$all,domain=facebook.com|messenger.com,queryprune=_nc_fbs
-||fbcdn.net/*?_nc_x=$all,domain=facebook.com|messenger.com,queryprune=_nc_x
 ||fbcdn.net/*&_nc_x=$all,domain=facebook.com|messenger.com,queryprune=_nc_x
+||fbcdn.net/*?_nc_fbs=$all,domain=facebook.com|messenger.com,queryprune=_nc_fbs
+||fbcdn.net/*?_nc_x=$all,domain=facebook.com|messenger.com,queryprune=_nc_x
 ||google.*$queryprune=bih|biw|ei|ved
+||steampowered.com/*&curator_clanid=$queryprune=curator_clanid
+||steampowered.com/*&snr=$queryprune=snr,important
+||steampowered.com/*?curator_clanid=$queryprune=curator_clanid
+||steampowered.com/*?snr=$queryprune=snr,important
 
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||google.*/ads/^$important
