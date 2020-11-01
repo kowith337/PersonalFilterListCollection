@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202010291325
+# Version: 202011011238
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -74,6 +74,7 @@ ww*.mobilelife.co.th
 
 # Other unwanted
 adasiatagmanager.*
+adjust.*
 alert-*.*
 amp.*
 ampproject.*
@@ -162,6 +163,9 @@ bstatic.com
 # See also: https://gitlab.com/fdroid/fdroiddata/issues/1745#note_206628341
 # App owner's rant message: https://gitlab.com/vijai/screenrecorder/issues/72#note_180783854
 orpheusdroid.com
+
+# Prohibit zuckestions to use 3p domains for downloading official (with lots of ads and tracking codes) apps!
+app.link
 
 # [Wound ashes fox] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Sorry for anyone who use CloudFlare DNS resolvers, but it's just my opinion to block due to Firefox's wrong turn!

@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: kowith337's Test List
-! Version: 202010222006
+! Version: 202011012024
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -88,7 +88,23 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/))
 twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell"] [data-testid*="follow"])
 
-! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Specific requests filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! "Query Prune" experiment
+! Info: Only handling some query that not necessary to binding in for specific requests rather than `document`, this may conflict
+!       with "Anti survived tracking link warning" filterlist that strictly blocked page when shady parameters are binding with
+!       any URLs for keep tracking users whenever you're visiting some sites out of social platform.
+! Note: This still under developement, require uBO 1.30.9b1 or above, sideload extenstion may also required!
+||facebook.com/a/*?fb_dtsg$queryprune=|fb_dtsg
+||facebook.com/a/*&fb_dtsg$queryprune=|fb_dtsg
+||facebook.com/ajax/*?fb_dtsg$queryprune=|fb_dtsg
+||facebook.com/ajax/*&fb_dtsg$queryprune=|fb_dtsg
+||facebook.com/*?privacy_mutation_token=$xhr,queryprune=privacy_mutation_token
+||facebook.com/*&privacy_mutation_token=$xhr,queryprune=privacy_mutation_token
+||fbcdn.net/*?_nc_fbs=$all,domain=facebook.com|messenger.com,queryprune=_nc_fbs
+||fbcdn.net/*&_nc_fbs=$all,domain=facebook.com|messenger.com,queryprune=_nc_fbs
+||fbcdn.net/*?_nc_x=$all,domain=facebook.com|messenger.com,queryprune=_nc_x
+||fbcdn.net/*&_nc_x=$all,domain=facebook.com|messenger.com,queryprune=_nc_x
+||google.*$queryprune=bih|biw|ei|ved
 
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||google.*/ads/^$important

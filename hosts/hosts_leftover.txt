@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202010082054
+# Version: 202011011901
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -210,6 +210,9 @@
 0.0.0.0 adform.net
 0.0.0.0 adingo.jp
 0.0.0.0 adjust.com
+0.0.0.0 adjust.net
+0.0.0.0 adjust.net.in
+0.0.0.0 adjust.world
 0.0.0.0 adkernel.com
 0.0.0.0 adnium.com
 0.0.0.0 adnuntius.com
@@ -389,6 +392,10 @@
 0.0.0.0 api.useinsider.com
 0.0.0.0 api.userstyles.org
 0.0.0.0 app.adjust.com
+0.0.0.0 app.adjust.com
+0.0.0.0 app.adjust.net
+0.0.0.0 app.adjust.net.in
+0.0.0.0 app.adjust.world
 0.0.0.0 app.cauly.co.kr
 0.0.0.0 appsflyer-report.honkaiimpact3.com
 0.0.0.0 as.innity.com
