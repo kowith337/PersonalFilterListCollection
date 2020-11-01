@@ -1,6 +1,6 @@
-[uBlock Origin 1.28.0]
+[uBlock Origin 1.30.9.1]
 ! Title: kowith337's Test List
-! Version: 202011012326
+! Version: 202011012358
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
