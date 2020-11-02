@@ -1,6 +1,6 @@
 [uBlock Origin 1.30.9.1]
 ! Title: kowith337's Test List
-! Version: 202011022028
+! Version: 202011022327
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -94,7 +94,15 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 !       with "Anti survived tracking link warning" filterlist that strictly blocked page when shady parameters are binding with
 !       any URLs for keep tracking users whenever you're visiting some sites out of social platform.
 ! Note: This still under developement, require uBO 1.30.9b1 or above and modern browsers, sideload extenstion may also required!
+||facebook.com/*&__cft__*=$queryprune=|__cft__
+||facebook.com/*&__tn__=$xhr,important,queryprune=__tn__
+||facebook.com/*&__xts__*=$queryprune=|__xts__
+||facebook.com/*&entry^$xhr,important,queryprune=|entry
 ||facebook.com/*&privacy_mutation_token=$xhr,queryprune=privacy_mutation_token
+||facebook.com/*?__cft__*=$queryprune=|__cft__
+||facebook.com/*?__tn__=$xhr,important,queryprune=__tn__
+||facebook.com/*?__xts__*=$queryprune=|__xts__
+||facebook.com/*?entry^$xhr,important,queryprune=|entry
 ||facebook.com/*?privacy_mutation_token=$xhr,queryprune=privacy_mutation_token
 ||facebook.com/a/*&fb_dtsg$queryprune=|fb_dtsg
 ||facebook.com/a/*?fb_dtsg$queryprune=|fb_dtsg
