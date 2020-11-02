@@ -1,6 +1,6 @@
 [uBlock Origin 1.30.9.1]
 ! Title: kowith337's Test List
-! Version: 202011012358
+! Version: 202011022028
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -109,9 +109,13 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 ||steampowered.com/*&snr=$queryprune=snr,important
 ||steampowered.com/*?curator_clanid=$queryprune=curator_clanid
 ||steampowered.com/*?snr=$queryprune=snr,important
+||youtube-nocookie.com/get_video_info?*&ei=$xhr,queryprune=ei
+||youtube-nocookie.com/get_video_info?ei=$xhr,queryprune=ei
+||youtube.com/get_video_info?*&ei=$xhr,queryprune=ei
+||youtube.com/get_video_info?ei=$xhr,queryprune=ei
 
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-||google.*/ads/^$important
+||google.*/ads/*$important
 ||google.*/ads/ga-audiences?$important
 
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
