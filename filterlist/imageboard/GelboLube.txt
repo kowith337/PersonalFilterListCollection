@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: GelboLube (Universal) [stack menubar modified]
-! Version: 202008042032
+! Version: 202011041343
 ! Expires: 2 days
 ! Author: kowith337 and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -31,6 +31,7 @@ gelbooru.com##a[href*="mnfclub.com"]
 gelbooru.com##a[href^="http://"][href*="/track/"]
 gelbooru.com##a[href^="https://"][href*="/track/"]
 gelbooru.com##a[rel="nofollow"] video
+gelbooru.com##.contain-push a[href*="tdForward.php"]
 
 ! 2. Block ExoClick iFrame (Not sure is it still exist?)
 gelbooru.com##iframe[src*="exoclick"]
@@ -58,8 +59,9 @@ gelbooru.com##div[id^="paginat"] a:has(img)
 ! 2. To block hyperlink ads that appear under the tag lists (currently know it's promote r18.com and jabcomix.com)
 gelbooru.com##div[class^="sidebar"] a[target]:has(img)
 
-! 3. Hide hyperlink that link to '/extra/', e.g. shirt promo, internal redirect before sent to external ads sites.
+! 3. Hide hyperlink that link to '/extra/', e.g. shirt promo, TheDoujin, internal redirect before sent to external ads sites.
 gelbooru.com##.contain-push a:has(img[src^="/extras/"])
+gelbooru.com##.contain-push a:has(img[src*="thedoujin"])
 
 ! 4. Remove leftover frame that serve ads from 'ContentABC'
 gelbooru.com##.contain-push center .hidden-xs:has(iframe[name^="spot_id"])
@@ -96,9 +98,10 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 ||gelbooru.com$script
 ||gelbooru.com$subdocument
 
-! Block extra things (Banner images that promote their shi{r}ts)
+! Block extra things (Banner images that promote their shi{r}ts, TheDoujin rebirth)
 ||gelbooru.com/extras/$image,other
 ||gelbooru.com/mind/$image,other
+||gelbooru.com/thedoujin*$image,other
 
 ! Unbreak - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Allow jQuery from GoogleAPIs and BootStrap (suggested by toshiya44)
@@ -109,19 +112,19 @@ gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
 
 ! 2. Useful scripts
 ! - [application3.js] is questionable due to it's have `BPJS` function inside that script.
-! - [autocomplete.js] is allowed for autocomplete search
+! - [autocomplete.js] is allowed for autocomplete search.
 ! - [miscJs.js] HayStack or something that I can't understand, but allowed because it doesn't have anything harm to end users.
 !   Note that they have lately rename main script file, (previously was `application.js`), but I'm not sure that they still want
 !   to abuse my exclusion (and may include uAssets) or not, as well as new autocomplete script that named `autocomplete.old.js`
 !   that not sure they will inject hostile script and name it like `autocomplete.<shadynamehere>.js`, and any otherwise...
-@@||*/script/application.js?$script,domain=gelbooru.com
-@@||*/script/application.js?$script,domain=gelbooru.com
-@@||*/script/application3.js|$script,domain=gelbooru.com
-@@||*/script/application3.js|$script,domain=gelbooru.com
-@@||*/script/autocomplete.*.js?$script,domain=gelbooru.com
-@@||*/script/autocomplete.*.js|$script,domain=gelbooru.com
-@@||*/script/miscJs.js?$script,domain=gelbooru.com
-@@||*/script/miscJs.js|$script,domain=gelbooru.com
+@@/script/application.js?$script,domain=gelbooru.com
+@@/script/application.js|$script,domain=gelbooru.com
+@@/script/application3.js?$script,domain=gelbooru.com
+@@/script/application3.js|$script,domain=gelbooru.com
+@@/script/autocomplete.*.js?$script,domain=gelbooru.com
+@@/script/autocomplete.*.js|$script,domain=gelbooru.com
+@@/script/miscJs.js?$script,domain=gelbooru.com
+@@/script/miscJs.js|$script,domain=gelbooru.com
 @@||gelbooru.com/script/application.js?$script,first-party
 @@||gelbooru.com/script/application.js|$script,first-party
 @@||gelbooru.com/script/application3.js?$script,first-party

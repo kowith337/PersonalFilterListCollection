@@ -1,6 +1,6 @@
 [uBlock Origin 1.30.9.1]
 ! Title: kowith337's Test List
-! Version: 202011022327
+! Version: 202011041346
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -147,15 +147,14 @@ checkkorn.com##+js(alert-buster)
 ! [External scriptlets - NanoAdblocker]
 ! Requirement for this section: NanoAdblocker (or uBO Additional setup if you've installed NanoDefender along with)
 ! Guide: https://jspenguin2017.github.io/uBlockProtector#extra-installation-steps-for-ublock-origin
-! Raw: https://gitcdn.xyz/repo/NanoAdblocker/NanoFilters/master/NanoFilters/NanoResources.txt
+! Raw: https://github.com/NanoAdblocker/NanoCore2/raw/master/src/snippets.js
 ! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
-facebook.com,instagram.com,messenger.com##+js(nanop-easy-set-cookie.js, noscript=0)
+facebook.com,instagram.com,messenger.com##+js(nanop-set-cookie, noscript=0)
 ! - This is for test by fake grant notifications, these sites below are mostly related to Khaosod and Matichon, their also
 !   insert many ads and trackings (55+ and more domains connected while visiting, holy sh**!), those sites itself doesn't provide
 !   any proper use of web notifications for legitimate way (newer news and updates), but it's used by iZooto to inject ads through
 !   that function that given by browser providers!
-khaosod.co.th,khaosodenglish.com,matichon.co.th,matichonacademy.com,matichonbook.com,matichonelibrary.com,matichonweekly.com,prachachat.net,sentangsedtee.com,silpa-mag.com,technologychaoban.com##+js(nano-grant-fake-notification)
-bangkokbiznews.com,komchadluek.net,nationtv.tv,nationweekend.com,springnews.co.th,thansettakij.com,tnews.co.th##+js(nano-grant-fake-notification)
+bangkokbiznews.com,khaosod.co.th,khaosodenglish.com,komchadluek.net,matichon.co.th,matichonacademy.com,matichonbook.com,matichonelibrary.com,matichonweekly.com,nationtv.tv,nationweekend.com,prachachat.net,sentangsedtee.com,silpa-mag.com,springnews.co.th,technologychaoban.com,thansettakij.com,tnews.co.th##+js(nano-grant-fake-notification)
 
 ! [External scriptlets - uBlock-user]
 ! Older rules are deprecated by upstream scriptlets because they've already removed some functions.
