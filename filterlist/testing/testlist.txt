@@ -1,6 +1,6 @@
 [uBlock Origin 1.30.9.1]
 ! Title: kowith337's Test List
-! Version: 202011042235
+! Version: 202011042258
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -108,8 +108,8 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 ||facebook.com/a/*?fb_dtsg$queryprune=|fb_dtsg
 ||facebook.com/ajax/*&fb_dtsg$queryprune=|fb_dtsg
 ||facebook.com/ajax/*?fb_dtsg$queryprune=|fb_dtsg
-||fbcdn.net/*&_nc_*=$all,domain=facebook.com|messenger.com,queryprune=|_nc_
-||fbcdn.net/*?_nc_*=$all,domain=facebook.com|messenger.com,queryprune=|_nc_
+||fbcdn.net/*&_nc_*=$css,script,domain=facebook.com|messenger.com,queryprune=|_nc_
+||fbcdn.net/*?_nc_*=$css,script,domain=facebook.com|messenger.com,queryprune=|_nc_
 ||google.*$queryprune=bih|biw|ei|ved
 ||steampowered.com/*&curator_clanid=$queryprune=curator_clanid
 ||steampowered.com/*&snr=$queryprune=snr,important
