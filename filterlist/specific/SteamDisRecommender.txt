@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Steam Dis-Recommender Filters
-! Version: 202009292133
+! Version: 202011062007
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -74,6 +74,7 @@ steampowered.com###promo_header_banner[class*="promotionDetailsBar"]:remove()
 steampowered.com##.home_page_content .carousel_container.maincap:upward(2)
 
 ! Remove the "Funny" button in user review dialog.
+! Please note that this cannot hide text phrase that report how many `x person(s) found this review [helpful/funny].`
 steampowered.com##.review_box .vote_button_ctn a span i.funny:upward(2)
 
 ! CSS Modification  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -121,12 +122,14 @@ steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .plat
 @@||steampowered.com/dynamicstore/userdata?id=0$xmlhttprequest
 
 ! Allow tag change and continuous scrolling while search and view game lists.
-! - Please note, the AJAX requests still bundle with `snr` parameter, this might be trade-off your privacy for that function!
+! - Please note, the AJAX requests still bundle with `snr` parameter, this might be trade-off your privacy for that function.
 @@||steampowered.com/search/results$xmlhttprequest,domain=store.steampowered.com
 
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! These are not necessary, except for use for tracking purpose!
+! These are not necessary, except it use for tracking purpose!
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, app_impressions)
+steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, deep_dive_carousel_focused_app)
+steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, deep_dive_carousel_method)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, home_scroll)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, recentapps)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, recentlyVisitedAppHubs)
@@ -135,7 +138,7 @@ steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, 
 ! - Prohibit Steam website to detect touch screen from first touch, however, **this cause major site features malfunction!**
 !   * Note that it may require to delete `strResponsiveViewPrefs` cookie first to make this script injection work properly.
 !   * This will helpful in case if you don't want to let `Steam` showing responsive header and menu bar, but you still want to
-!     browse that website as proper desktop site, while use touch screen function as mouse click and page scrolling.
+!     browse that website as proper desktop site, while use touch screen function as for mouse click and page scrolling.
 steamcommunity.com,steampowered.com##+js(addEventListener-defuser, touchstart)
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Ranting Zone!] ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
