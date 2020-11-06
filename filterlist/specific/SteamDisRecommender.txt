@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Steam Dis-Recommender Filters
-! Version: 202011062007
+! Version: 202011062251
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -8,6 +8,7 @@
 
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! All rules are focused to mostly desktop page with no ongoing sales campaign...
+! [Store Zone]
 ! - Remove a pane that need you to login to see zuckested contents!
 steampowered.com###content_login.page_content_ctn
 
@@ -56,6 +57,29 @@ steampowered.com##.home_page_body_ctn div[class^="home_page_takeover"]
 steampowered.com###sale_category_blocks:has(a.see_more_link[href*="/recommender"])
 steampowered.com##.home_page_content.deep_dive_block
 
+! [Faded community zone]
+! WHAT COULD GO WRONG!?
+! -  Because I have no interests to decorate my profiles, rarely to collect cards or do some interactions just for get emoticons,
+!    upgrade favourite's games and community badge (obviously, need to expose interactions on the platform!?), trading items,
+!    whatever that not touch the games that already bought and just play them, leveling up profile for me is meaningless, even
+!    it's seems to be cool to have something special on appearance, but is it really improve somethign in real life at the end?
+! Remove playtimes
+steamcommunity.com##.games_list .hours_played
+
+! Hide yourself (and also all of peoples) about games that recently played.
+steamcommunity.com##.profile_recentgame_header
+steamcommunity.com##.recent_games
+
+! Remove non-games badge progress info box! (e.g. Community actions, Seasonal sales, etc.)
+! - Also include 2010 potato shacks?
+steamcommunity.com##.badges_sheet .badge_row:has(a.badge_row_overlay:not([href*="gamecards"]))
+steamcommunity.com##.badges_sheet .badge_row:has(a.badge_row_overlay[href*="gamecards/335590"])
+
+! Hide (your shameful) playtimes spent, green button to download or play game, even FAQ about "How to get card drops" links!
+steamcommunity.com##.badge_title_stats .badge_title_playgame
+steamcommunity.com##.badge_title_stats .badge_title_stats_playtime
+steamcommunity.com##.badge_title_stats .how_to_get_card_drops_ctn
+
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - Remove "Scroll more for related contents" pane
 steampowered.com###content_callout.dark:has(.more_content_title)
@@ -64,17 +88,23 @@ steampowered.com###content_callout.dark:has(.more_content_title)
 !   * Or you've bought games from related curators/publishers...
 steampowered.com###steam_curators_not_empty:has(.curator_recommendation_capsule)
 
+! - If the games you've played are no longer drops card anymore, hide its text instead! (Work only "English" UI)
+steamcommunity.com##.badge_title_stats .progress_info_bold:has-text(/^No /)
+
 ! Non-basic filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Make use of `:remove()` for delete unwanted DOM pane without leaving any nodes (require uB0 version 1.26.0 or above)
+steamcommunity.com##.badge_title_stats .badge_title_playgame:remove()
+steamcommunity.com##.badge_title_stats .badge_title_stats_playtime:remove()
+steamcommunity.com##.badge_title_stats .how_to_get_card_drops_ctn:remove()
+steampowered.com###promo_header_banner[class*="promotionDetailsBar"]:remove()
 steampowered.com##.home_ctn.labs_cluster:remove()
 steampowered.com##.home_ctn.marketingmessage_area:remove()
-steampowered.com###promo_header_banner[class*="promotionDetailsBar"]:remove()
 
 ! - Include `:upward()` rules for horizontal paging items that also remove leftover header.
 steampowered.com##.home_page_content .carousel_container.maincap:upward(2)
 
 ! Remove the "Funny" button in user review dialog.
-! Please note that this cannot hide text phrase that report how many `x person(s) found this review [helpful/funny].`
+! * Please note that this cannot hide text phrase that report how many `x person(s) found this review [helpful/funny].`
 steampowered.com##.review_box .vote_button_ctn a span i.funny:upward(2)
 
 ! CSS Modification  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -145,11 +175,10 @@ steamcommunity.com,steampowered.com##+js(addEventListener-defuser, touchstart)
 ! Thanks for the SimpleWall and neither ContextMenu Firewall apps that appear in Tweaking Software or EasyContextMenu, I've also
 ! block some shady steam EXEs that not necessary for my life anymore, include SteamServices, SteamWebHelper, SteamErrorReporter,
 ! etc. plus those EXEs are ruined my precious notebook performance too much like a potato chips! even I just run only the main
-! steam client!! I give no thanks for new UI and... FUCK THOSE EXPERIMENTAL LABS THAT MOSTLY DO TRACKING US FOR JUST OFFER
-! PRECIOUSLY TARGETED AND IMPACT ZUCKESTIONS, AND WE CANNOT OPT OUT AT ANY WAY!!!
+! steam client!! I give no thanks for new UI and FUCK THOSE EXPERIMENTAL LABS THAT MOSTLY DO TRACKING US FOR JUST OFFER PRECIOUS
+! TARGETED AND IMPACT ZUCKESTIONS, AND WE CANNOT OPT OUT FROM THEM FOR SURE!!!
 ! Now I've giving up and launch steam client without activating any browsers modules from it, anything that I need to do while
 ! playing games will ended to browsers (and sometime mobile app) only, include subscribe and managing workshop contents.
 ! Even I've also use android app that linked to personal account, but I will only use for workshop related functions, not for
-! looking to other games and/or software through its apps anymore, unless I've open in the browsers that can install either
-! uBlock0 or NanoAdblocker!!!!
+! looking to other games and/or software through its apps anymore, unless I've open in the browsers that can install uBlock0!!!!
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
