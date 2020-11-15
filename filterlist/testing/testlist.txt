@@ -1,6 +1,6 @@
 [uBlock Origin 1.30.9.1]
 ! Title: kowith337's Test List
-! Version: 202011042258
+! Version: 202011152122
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -142,9 +142,11 @@ facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-src)
 ! Often show alert dialog when users click to links, also when users trying to right-click.
 checkkorn.com##+js(alert-buster)
 
-! [External scriptlets - NanoAdblocker]
-! Requirement for this section: NanoAdblocker (or uBO Additional setup if you've installed NanoDefender along with)
-! Guide: https://jspenguin2017.github.io/uBlockProtector#extra-installation-steps-for-ublock-origin
+! [External scriptlets from former NanoAdblocker]
+!   Due to owner has archived his/her works and lately known that it had been sold to third party for sure, the scriptlets may
+!   not work due to priviledge functions that set by its script.
+!   Please note that I'm mainly use and sideload the GitHub version from owner's repo directly, unlile Firefox that are ported by
+!   other person, archived repo may means it not longer get any updates or the code will changed by other ppls who bought that!
 ! Raw: https://github.com/NanoAdblocker/NanoCore2/raw/master/src/snippets.js
 ! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
 facebook.com,instagram.com,messenger.com##+js(nanop-set-cookie, noscript=0)

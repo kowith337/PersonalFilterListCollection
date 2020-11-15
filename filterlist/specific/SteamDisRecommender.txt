@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Steam Dis-Recommender Filters
-! Version: 202011062251
+! Version: 202011132043
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -59,23 +59,23 @@ steampowered.com##.home_page_content.deep_dive_block
 
 ! [Faded community zone]
 ! WHAT COULD GO WRONG!?
-! -  Because I have no interests to decorate my profiles, rarely to collect cards or do some interactions just for get emoticons,
-!    upgrade favourite's games and community badge (obviously, need to expose interactions on the platform!?), trading items,
-!    whatever that not touch the games that already bought and just play them, leveling up profile for me is meaningless, even
-!    it's seems to be cool to have something special on appearance, but is it really improve somethign in real life at the end?
-! Remove playtimes
+!   Because I have no interests to decorate my profiles, rarely to collect cards or do some interactions just for get emoticons,
+!   upgrade favourite's games and community badge (obviously, need to expose interactions on the platform!?), trading items,
+!   whatever that not touch the games that already bought and just play them, leveling up profile for me is meaningless, even
+!   it's seems to be cool to have something special on appearance, but is it really improve somethign in real life at the end?
+! - Remove playtimes
 steamcommunity.com##.games_list .hours_played
 
-! Hide yourself (and also all of peoples) about games that recently played.
+! - Hide yourself (and also all of peoples) about games that recently played.
 steamcommunity.com##.profile_recentgame_header
 steamcommunity.com##.recent_games
 
-! Remove non-games badge progress info box! (e.g. Community actions, Seasonal sales, etc.)
-! - Also include 2010 potato shacks?
+! - Remove non-games badge progress info box! (e.g. Community actions, Seasonal sales, etc.)
+!   * Also include 2010 potato shacks?
 steamcommunity.com##.badges_sheet .badge_row:has(a.badge_row_overlay:not([href*="gamecards"]))
 steamcommunity.com##.badges_sheet .badge_row:has(a.badge_row_overlay[href*="gamecards/335590"])
 
-! Hide (your shameful) playtimes spent, green button to download or play game, even FAQ about "How to get card drops" links!
+! - Hide (your shameful) playtimes spent, green button to download or play game, even FAQ about "How to get card drops" links!
 steamcommunity.com##.badge_title_stats .badge_title_playgame
 steamcommunity.com##.badge_title_stats .badge_title_stats_playtime
 steamcommunity.com##.badge_title_stats .how_to_get_card_drops_ctn
@@ -92,7 +92,7 @@ steampowered.com###steam_curators_not_empty:has(.curator_recommendation_capsule)
 steamcommunity.com##.badge_title_stats .progress_info_bold:has-text(/^No /)
 
 ! Non-basic filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Make use of `:remove()` for delete unwanted DOM pane without leaving any nodes (require uB0 version 1.26.0 or above)
+! - Make use of `:remove()` for delete unwanted DOM pane without leaving any nodes (require uB0 version 1.26.0 or above)
 steamcommunity.com##.badge_title_stats .badge_title_playgame:remove()
 steamcommunity.com##.badge_title_stats .badge_title_stats_playtime:remove()
 steamcommunity.com##.badge_title_stats .how_to_get_card_drops_ctn:remove()
@@ -103,8 +103,8 @@ steampowered.com##.home_ctn.marketingmessage_area:remove()
 ! - Include `:upward()` rules for horizontal paging items that also remove leftover header.
 steampowered.com##.home_page_content .carousel_container.maincap:upward(2)
 
-! Remove the "Funny" button in user review dialog.
-! * Please note that this cannot hide text phrase that report how many `x person(s) found this review [helpful/funny].`
+! - Remove the "Funny" button in user review dialog.
+!   * Please note that I cannot hide text phrase that report how many `x person(s) found this review [helpful/funny].`
 steampowered.com##.review_box .vote_button_ctn a span i.funny:upward(2)
 
 ! CSS Modification  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -124,7 +124,7 @@ steampowered.com##.home_ctn.labs_cluster:style(display: none !important; width: 
 steampowered.com##.home_ctn.marketingmessage_area:style(display: none !important; width: 0px !important; height: 0px !important)
 
 ! - When your perform "Search again without filtered" and you're barely see banner of filtered games because very low opacity,
-!   now I've increased it to 50% (old value is set to show only 5% of it's original image, that's too dark!!)
+!   now I've increased it to 50% (old value is set to show only 5% of it's original opacy, that's too dark!!)
 steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .col.search_capsule:style(opacity: 0.5 !important)
 steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .platform_img:style(opacity: 0.5 !important)
 
@@ -133,7 +133,7 @@ steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .plat
 ||steampowered.com/broadcast/ajaxgetpopularpartnerbroadcasts$important,~xmlhttprequest
 ||steampowered.com/broadcast/ajaxgetpopularpartnerbroadcasts$xmlhttprequest
 
-! - Prevent them read your interactions data for nearly-perfect disable recommendations!
+! - Prevent them read and return your interactions data for nearly-perfect disable recommendations!
 ||steampowered.com/dynamicstore/userdata$important,~xmlhttprequest
 ||steampowered.com/dynamicstore/userdata$xmlhttprequest
 ||steampowered.com/explore/logfeedview$important,~xmlhttprequest
@@ -142,18 +142,30 @@ steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .plat
 ||steampowered.com/explore/recommended$xmlhttprequest
 
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-||steampowered.com/broadcast/ajaxgetpopularpartnerbroadcasts$xmlhttprequest,important,redirect=noop.txt
-||steampowered.com/explore/logfeedview$xmlhttprequest,important,redirect=noop.txt
-||steampowered.com/explore/recommended$xmlhttprequest,important,redirect=noop.txt
+||steampowered.com/broadcast/ajaxgetpopularpartnerbroadcasts$xmlhttprequest,important,redirect=nooptext
+||steampowered.com/explore/logfeedview$xmlhttprequest,important,redirect=nooptext
+||steampowered.com/explore/recommended$xmlhttprequest,important,redirect=nooptext
 
 ! Trusted or Allowed only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Allow "DynamicStore" information to sent **only when you're logged out!**
-@@||steampowered.com/dynamicstore/userdata/?id=0$xmlhttprequest
-@@||steampowered.com/dynamicstore/userdata?id=0$xmlhttprequest
+@@||steampowered.com/dynamicstore/userdata/?id=0&$xmlhttprequest
+@@||steampowered.com/dynamicstore/userdata/?id=0|$xmlhttprequest
+@@||steampowered.com/dynamicstore/userdata?id=0&$xmlhttprequest
+@@||steampowered.com/dynamicstore/userdata?id=0|$xmlhttprequest
 
 ! Allow tag change and continuous scrolling while search and view game lists.
 ! - Please note, the AJAX requests still bundle with `snr` parameter, this might be trade-off your privacy for that function.
 @@||steampowered.com/search/results$xmlhttprequest,domain=store.steampowered.com
+
+! Requests query strip (require uBO 1.30.9b1 or above!) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! - This is still under ongoing test, followed until new functions are implemented at final releases, mainly aim to handle any
+!   requests that trying to shift with `snr` parameter, especially when you perfom product search with continuous scrolling,
+!   you can see that I've allowed search results `xhr` but these rules below will still keep catching and blocking requests that
+!   still contain `snr`, then strip its parameter and re-requests again without it!
+||steampowered.com/*&curator_clanid=$queryprune=curator_clanid
+||steampowered.com/*&snr=$queryprune=snr,important
+||steampowered.com/*?curator_clanid=$queryprune=curator_clanid
+||steampowered.com/*?snr=$queryprune=snr,important
 
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! These are not necessary, except it use for tracking purpose!

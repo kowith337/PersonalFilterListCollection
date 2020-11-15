@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202010222006
+! Version: 202011132056
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -42,17 +42,21 @@ web.facebook.com,www.facebook.com##div[role="article"] div[class] > a[href*="/in
 web.facebook.com,www.facebook.com##div[role="article"] div[class] > a[href*="/instantgames/play/"]:style(pointer-events: none !important)
 
 ! - Remove Login overlay
-!   Note: The overlay will re-appear even apply `:remove()` chain if you're navigating within the page, rather than open in new
-!         tab or window.
-web.facebook.com,www.facebook.com##div[data-pagelet="root"] [data-pagelet="page"] div[class] > a[aria-label][href*="/login/"]:upward(8)
+!   Note: The overlay for new version of Facebook will appear in photo post or post from public group, the overlay may re-appear
+!         even apply `:remove()` procedurual chain if you're navigating within the page, rather than open in new tab or window.
+web.facebook.com,www.facebook.com##div[data-pagelet="root"] div[data-pagelet="page"] div[class] > div[class] a[href^="/login/?"]:upward(8)
 
-! [Facebook Desktop]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! - Also cookie notice overlay, although it's not very annoy like old style of Facebook that try to force users to pressing
+!   "Allow all" button to continue browsing when you're not logged in!
+web.facebook.com,www.facebook.com##div[data-pagelet="root"] div[class] div[data-cookiebanner]
+
+! [(Old) Facebook Desktop]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove "Top Picks" product from marketplace lists, only work for english UI users only (UK, US)
 facebook.com##div[data-testid="marketplace_home_feed"] div[class] > div[class]:has(span[itemcomponent]:has-text(/^Top picks/))
 
 ! Top videos for you...? No! Not Me and You! but for someone else!!
-! Test case to hide every zuckestions of videos and leave only channel list from pages you're following... (pages tiles)
-! See example at https://imgur.com/a/PAORHlg
+!   Test case to hide every zuckestions of videos and leave only channel list from pages you're following... (pages tiles)
+!   See example at https://imgur.com/a/PAORHlg
 facebook.com##.fb_content div[class] > div[class] > #watch_feed
 facebook.com##.fb_content div[class] > div[class] > #watch_feed div[class] div[class][data-ft]:has(div span > div span a[href*="?referrer=video_home"])
 
@@ -87,8 +91,12 @@ facebook.com##.userContentWrapper div > div a[ajaxify^="/living_room/share_dialo
 facebook.com###contentArea div[class] > :has(table div[data-onclick*="VideoHomeClickLogger"])
 
 ! Completely remove "Related pages" side panel instead of hiding by detecting `py_c` in `ref` parameter that can remarkable if
-! users clicked fome of those links. (uBO 1.28.0 or higher is required, this doesn't support XUL versions)
-www.facebook.com###rightCol[role] div[class] div > ul.uiCollapsedList:has(li div a[href*="ref=py_c"]):upward(2):remove()
+!   users clicked some of those links. (uBO 1.28.0 or higher is required, this doesn't support XUL versions)
+www.facebook.com###rightCol[role] div[class] div > ul.uiCollapsedList:has(li div a[href*="ref=py_c"]):upward(2):remove
+
+! Try remove (forceful to accept) cookie overlay and restore page scrolling function that stuck by `position: fixed`
+web.facebook.com,www.facebook.com##body.hasCookieBanner div[style^="top:"]:style(position: initial !important)
+web.facebook.com,www.facebook.com##body.hasCookieBanner ._31e:style(position: initial !important)
 
 ! [Facebook Feature Phone Basic]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 ! Finally, weird space between comments also come to this version, freaking cool!!
@@ -114,7 +122,7 @@ www.facebook.com###rightCol[role] div[class] div > ul.uiCollapsedList:has(li div
 0.facebook.com,free.facebook.com,m.facebook.com,mtouch.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##section.storyStream article[data-xt][data-xt-vimp]:has(a[data-sigil*="flyout-causal"])
 
 ! Remove "Big Like" button in message chat, the button will auto change to "Send" once you've start focusing to text box, but it
-! will change to "Like" button once the text box lost focus, I remove it to prevent sending "Big Like" by mistake!
+!   will change to "Like" button once the text box lost focus, I remove it to prevent sending "Big Like" by mistake!
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-messages #root #message-reply-composer form div[data-sigil="marea"] div[class] > button.iconOnly[name="like"]
 
 ! Try to remove weird square box that divide almost every comments
@@ -176,7 +184,7 @@ www.facebook.com###rightCol[role] div[class] div > ul.uiCollapsedList:has(li div
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=4748854339"]))
 
 ! Trying to hide "Allow" button in the business section of advert preferences, it's mean if you disallow advertisers to use your
-! information to advertise, your choice must be permanent choice and no need to undo!
+!   information to advertise, your choice must be permanent choice and no need to undo!
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article a[href*="/help/568137493302217"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article div[class]:has-text(Your Facebook ad preferences)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article div[id][class] #ex_allow
@@ -185,7 +193,7 @@ www.facebook.com###rightCol[role] div[class] div > ul.uiCollapsedList:has(li div
 ! De-metric in new bookmark menu (remove blue dot and text span that count how many new contents you've not seen)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div[class] > a div[class] i.singleDot:upward(2)
 
-! [Network blocking section] -------------------------------------------------------------------------------------------------- !
+! [Network blocking section]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Prevent modules connections that autoplay GIF comments (May doesn't work at all!)
 ! - Noticed that Facebook start to autoplay GIF images in comments when you scroll to it, same behaviour of autoplay videos.
 ||facebook.com/*?modules=FeedAnimatedImageShare$important
