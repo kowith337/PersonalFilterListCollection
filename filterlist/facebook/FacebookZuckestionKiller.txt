@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Facebook Zuckestion Killer
-! Version: 202011012359
+! Version: 202011192031
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -258,10 +258,10 @@
 ! [Super lightweight Facebook enhancement]
 ! It's no need to load anything that not matter to use, because `mbasic.facebook.com` can work fine without external JavaScript,
 ! iframe and third party resources.
-! ||$inline-script,domain=d.facebook.com|mbasic.facebook.com
-||$script,domain=d.facebook.com|mbasic.facebook.com
-||$frame,domain=d.facebook.com|mbasic.facebook.com
-||$websocket,domain=d.facebook.com|mbasic.facebook.com
+! ||$inline-script,domain=mbasic.facebook.com
+||$script,domain=mbasic.facebook.com
+||$frame,domain=mbasic.facebook.com
+||$websocket,domain=mbasic.facebook.com
 
 ! SOUND annoyances
 ! This may break sounds in messages, but I have no choice about this, because Facebook Touch site is now play some sounds when

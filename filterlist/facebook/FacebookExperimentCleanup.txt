@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202011132056
+! Version: 202011192031
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -98,6 +98,9 @@ www.facebook.com###rightCol[role] div[class] div > ul.uiCollapsedList:has(li div
 web.facebook.com,www.facebook.com##body.hasCookieBanner div[style^="top:"]:style(position: initial !important)
 web.facebook.com,www.facebook.com##body.hasCookieBanner ._31e:style(position: initial !important)
 
+! - Remove CEO's signature in lookback page, plus with "Facebook team" phrase!
+web.facebook.com,www.facebook.com###content[role="main"] div[class] > a[href*="/zuck"]:has(img._5q1x[alt]):upward(1):remove()
+
 ! [Facebook Feature Phone Basic]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 ! Finally, weird space between comments also come to this version, freaking cool!!
 ! Note: I have no idea about breakage effect if I put those rules below into FZK, just put into here for testing is good for now.
@@ -115,6 +118,9 @@ web.facebook.com,www.facebook.com##body.hasCookieBanner ._31e:style(position: in
 ! Try making "CoViD-19" information hub as read only, no need to "Follow" because you can access them directly from header menu.
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[role="article"] div > table[role="presentation"] a[href*="a/subscribe.php?"][href*="coronavirus_info"]
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[role="article"] table[role="presentation"]:has(a[href*="coronavirus_info/follow"])
+
+! - Remove CEO's signature in lookback page, plus with "Facebook team" phrase!
+d.facebook.com,m.facebook.com,mbasic.facebook.com###root table[role] div[class] > a[href*="/zuck"]:has(img[alt="Mark"]):upward(1):remove()
 
 ! [Facebook Touch]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Try to remove "Paid partnership" posts where the sponsored pages hiring some other pages (mostly viral) to post or announcing.
@@ -193,6 +199,9 @@ web.facebook.com,www.facebook.com##body.hasCookieBanner ._31e:style(position: in
 ! De-metric in new bookmark menu (remove blue dot and text span that count how many new contents you've not seen)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div[class] > a div[class] i.singleDot:upward(2)
 
+! - Remove CEO's signature in lookback page, plus with "Facebook team" phrase!
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div[class] > a[href*="/zuck"]:has(i[aria-label="Mark"]):upward(1):remove()
+
 ! [Network blocking section]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Prevent modules connections that autoplay GIF comments (May doesn't work at all!)
 ! - Noticed that Facebook start to autoplay GIF images in comments when you scroll to it, same behaviour of autoplay videos.
@@ -207,9 +216,6 @@ web.facebook.com,www.facebook.com##body.hasCookieBanner ._31e:style(position: in
 
 ! Prevent connections to retrieve lists of zuckested pages to like or follow. (Desktop site only)
 ! - Probably not recommended because you will not allow to remove or delete those pages zuckestions!
-! - I recommended to remove it out by copy bookmarklet scripts below before blocking this connections.
-!   * Note: Bookmarklet script is only work for english UI users only (UK, US)
-!     javascript:(function()%7Bvar%20divs%20%3D%20document.querySelectorAll('a%5Brole%3Dbutton%5D%5Bdata-tooltip-content%3D%22Remove%20Suggestion%22%5D')%3B%20for%20(i%20%3D%200%3B%20i%20%3C%20divs.length%3B%20%2B%2Bi)%20%7Bdivs%5Bi%5D.click()%3B%7D%7D)()
 ||facebook.com/ajax/pagelet/generic.php/PagesBrowserTopSuggestionsPagelet$xmlhttprequest,important,redirect=nooptext
 
 ! Prevent using "Phone Confirmation" (This request will triggered when use desktop site and push "Add a phone" button)

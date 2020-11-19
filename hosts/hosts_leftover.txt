@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202011011901
+# Version: 202011192035
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -347,6 +347,7 @@
 0.0.0.0 adasiatagmanager.appspot.com
 0.0.0.0 adnetwork.adasiaholdings.com
 0.0.0.0 adopdmp.adop.cc
+0.0.0.0 ads-api.twitter.com
 0.0.0.0 ads.bumq.com
 0.0.0.0 ads.imprezzer.com
 0.0.0.0 ads.pantip.com
@@ -391,7 +392,6 @@
 0.0.0.0 api.popin.cc
 0.0.0.0 api.useinsider.com
 0.0.0.0 api.userstyles.org
-0.0.0.0 app.adjust.com
 0.0.0.0 app.adjust.com
 0.0.0.0 app.adjust.net
 0.0.0.0 app.adjust.net.in

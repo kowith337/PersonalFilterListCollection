@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202010292124
+! Version: 202011192036
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -45,10 +45,6 @@
 ||youtube.com/redirect?redir_token=$document,subdocument,xmlhttprequest,important,domain=~YouTubeExternalLinkParking-Token
 
 ! Internal
-! ||facebook.com/*&fb_dtsg*$xmlhttprequest
-! ||facebook.com/*?fb_dtsg*$xmlhttprequest
-! ||messenger.com/*&fb_dtsg*$xmlhttprequest
-! ||messenger.com/*?fb_dtsg*$xmlhttprequest
 ||bibliogram.*/*&igshid=$document,subdocument,important,domain=~Leftover_Instagram-ExternalShareID
 ||bibliogram.*/*&igshid=$xmlhttprequest
 ||bibliogram.*/*?igshid=$document,subdocument,important,domain=~Leftover_Instagram-ExternalShareID
@@ -57,6 +53,32 @@
 ||duckduckgo.com/l/?$xmlhttprequest
 ||duckduckgo.com/l?$document,subdocument,important,domain=~Precaution_DuckDuckGo-Redirect-UDDG
 ||duckduckgo.com/l?$xmlhttprequest
+||facebook.com/*&acontext=$document,subdocument,important,domain=~FacebookInternalTracking_AContext
+||facebook.com/*&acontext=$xmlhttprequest
+||facebook.com/*&dti=$document,subdocument,important,domain=~FacebookInternalTracking_DTI
+||facebook.com/*&dti=$xmlhttprequest
+||facebook.com/*&eid=$document,subdocument,important,domain=~FacebookInternalTracking_EID
+||facebook.com/*&eid=$xmlhttprequest
+||facebook.com/*&entry*=$document,subdocument,important,domain=~FacebookInternalTracking_Entry-Wild
+||facebook.com/*&entry*=$xmlhttprequest
+||facebook.com/*&fb_dtsg*$document,subdocument,important,domain=~FacebookInternalTracking_DTSG-Wild
+||facebook.com/*&fb_dtsg*$xmlhttprequest
+||facebook.com/*&fref=$document,subdocument,important,domain=~FacebookInternalTracking_FRef
+||facebook.com/*&fref=$xmlhttprequest
+||facebook.com/*&hc_*=$document,subdocument,important,domain=~FacebookInternalTracking_HC-Wild
+||facebook.com/*&hc_*=$xmlhttprequest
+||facebook.com/*&lst=$document,subdocument,important,domain=~FacebookInternalTracking_LST
+||facebook.com/*&lst=$xmlhttprequest
+||facebook.com/*&pn_*=$document,subdocument,important,domain=~FacebookInternalTracking_PN-Wild
+||facebook.com/*&pn_*=$xmlhttprequest
+||facebook.com/*&privacy_mutation_token=$document,subdocument,important,domain=~FacebookInternalTracking_Shady-param-register
+||facebook.com/*&privacy_mutation_token=$xmlhttprequest
+||facebook.com/*&ref*=$document,subdocument,important,important,domain=~FacebookInternalTracking_Ref-Wild
+||facebook.com/*&ref*=$xmlhttprequest
+||facebook.com/*&settings_tracking=$document,subdocument,important,domain=~FacebookInternalTracking_SettingsTracking
+||facebook.com/*&settings_tracking=$xmlhttprequest
+||facebook.com/*&sfnsn=$document,subdocument,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
+||facebook.com/*&sfnsn=$xmlhttprequest
 ||facebook.com/*&__cft__%5B0%5D=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
 ||facebook.com/*&__cft__%5B0%5D=$xmlhttprequest
 ||facebook.com/*&__cft__*=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
@@ -75,31 +97,32 @@
 ||facebook.com/*&__xts__*=$xmlhttprequest
 ||facebook.com/*&__xts__[0]=$document,subdocument,important,domain=~FacebookInternalTracking_XTS
 ||facebook.com/*&__xts__[0]=$xmlhttprequest
-||facebook.com/*&acontext=$document,subdocument,important,domain=~FacebookInternalTracking_AContext
-||facebook.com/*&acontext=$xmlhttprequest
-||facebook.com/*&dti=$document,subdocument,important,domain=~FacebookInternalTracking_DTI
-||facebook.com/*&dti=$xmlhttprequest
-||facebook.com/*&eid=$document,subdocument,important,domain=~FacebookInternalTracking_EID
-||facebook.com/*&eid=$xmlhttprequest
-||facebook.com/*&entry*=$document,subdocument,important,domain=~FacebookInternalTracking_Entry-Wild
-||facebook.com/*&entry*=$xmlhttprequest
-||facebook.com/*&fb_dtsg*$document,subdocument,important,domain=~FacebookInternalTracking_DTSG-Wild
-||facebook.com/*&fref=$document,subdocument,important,domain=~FacebookInternalTracking_FRef
-||facebook.com/*&fref=$xmlhttprequest
-||facebook.com/*&hc_*=$document,subdocument,important,domain=~FacebookInternalTracking_HC-Wild
-||facebook.com/*&hc_*=$xmlhttprequest
-||facebook.com/*&lst=$document,subdocument,important,domain=~FacebookInternalTracking_LST
-||facebook.com/*&lst=$xmlhttprequest
-||facebook.com/*&pn_*=$document,subdocument,important,domain=~FacebookInternalTracking_PN-Wild
-||facebook.com/*&pn_*=$xmlhttprequest
-||facebook.com/*&privacy_mutation_token=$document,subdocument,important,domain=~FacebookInternalTracking_Shady-param-register
-||facebook.com/*&privacy_mutation_token=$xmlhttprequest
-||facebook.com/*&ref*=$document,subdocument,important,important,domain=~FacebookInternalTracking_Ref-Wild
-||facebook.com/*&ref*=$xmlhttprequest
-||facebook.com/*&settings_tracking=$document,subdocument,important,domain=~FacebookInternalTracking_SettingsTracking
-||facebook.com/*&settings_tracking=$xmlhttprequest
-||facebook.com/*&sfnsn=$document,subdocument,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
-||facebook.com/*&sfnsn=$xmlhttprequest
+||facebook.com/*?acontext=$document,subdocument,important,domain=~FacebookInternalTracking_AContext
+||facebook.com/*?acontext=$xmlhttprequest
+||facebook.com/*?dti=$document,subdocument,important,domain=~FacebookInternalTracking_DTI
+||facebook.com/*?dti=$xmlhttprequest
+||facebook.com/*?eid=$document,subdocument,important,domain=~FacebookInternalTracking_EID
+||facebook.com/*?eid=$xmlhttprequest
+||facebook.com/*?entry*=$document,subdocument,important,domain=~FacebookInternalTracking_Entry-Wild
+||facebook.com/*?entry*=$xmlhttprequest
+||facebook.com/*?fb_dtsg*$document,subdocument,important,domain=~FacebookInternalTracking_DTSG-Wild
+||facebook.com/*?fb_dtsg*$xmlhttprequest
+||facebook.com/*?fref=$document,subdocument,important,domain=~FacebookInternalTracking_FRef
+||facebook.com/*?fref=$xmlhttprequest
+||facebook.com/*?hc_*=$document,subdocument,important,domain=~FacebookInternalTracking_HC-Wild
+||facebook.com/*?hc_*=$xmlhttprequest
+||facebook.com/*?lst=$document,subdocument,important,domain=~FacebookInternalTracking_LST
+||facebook.com/*?lst=$xmlhttprequest
+||facebook.com/*?pn_*=$document,subdocument,important,domain=~FacebookInternalTracking_PN-Wild
+||facebook.com/*?pn_*=$xmlhttprequest
+||facebook.com/*?privacy_mutation_token=$document,subdocument,important,domain=~FacebookInternalTracking_Shady-param-register
+||facebook.com/*?privacy_mutation_token=$xmlhttprequest
+||facebook.com/*?ref*=$document,subdocument,important,important,domain=~FacebookInternalTracking_Ref-Wild
+||facebook.com/*?ref*=$xmlhttprequest
+||facebook.com/*?settings_tracking=$document,subdocument,important,domain=~FacebookInternalTracking_SettingsTracking
+||facebook.com/*?settings_tracking=$xmlhttprequest
+||facebook.com/*?sfnsn=$document,subdocument,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
+||facebook.com/*?sfnsn=$xmlhttprequest
 ||facebook.com/*?__cft__%5B0%5D=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
 ||facebook.com/*?__cft__%5B0%5D=$xmlhttprequest
 ||facebook.com/*?__cft__*=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
@@ -118,31 +141,6 @@
 ||facebook.com/*?__xts__*=$xmlhttprequest
 ||facebook.com/*?__xts__[0]=$document,subdocument,important,domain=~FacebookInternalTracking_XTS
 ||facebook.com/*?__xts__[0]=$xmlhttprequest
-||facebook.com/*?acontext=$document,subdocument,important,domain=~FacebookInternalTracking_AContext
-||facebook.com/*?acontext=$xmlhttprequest
-||facebook.com/*?dti=$document,subdocument,important,domain=~FacebookInternalTracking_DTI
-||facebook.com/*?dti=$xmlhttprequest
-||facebook.com/*?eid=$document,subdocument,important,domain=~FacebookInternalTracking_EID
-||facebook.com/*?eid=$xmlhttprequest
-||facebook.com/*?entry*=$document,subdocument,important,domain=~FacebookInternalTracking_Entry-Wild
-||facebook.com/*?entry*=$xmlhttprequest
-||facebook.com/*?fb_dtsg*$document,subdocument,important,domain=~FacebookInternalTracking_DTSG-Wild
-||facebook.com/*?fref=$document,subdocument,important,domain=~FacebookInternalTracking_FRef
-||facebook.com/*?fref=$xmlhttprequest
-||facebook.com/*?hc_*=$document,subdocument,important,domain=~FacebookInternalTracking_HC-Wild
-||facebook.com/*?hc_*=$xmlhttprequest
-||facebook.com/*?lst=$document,subdocument,important,domain=~FacebookInternalTracking_LST
-||facebook.com/*?lst=$xmlhttprequest
-||facebook.com/*?pn_*=$document,subdocument,important,domain=~FacebookInternalTracking_PN-Wild
-||facebook.com/*?pn_*=$xmlhttprequest
-||facebook.com/*?privacy_mutation_token=$document,subdocument,important,domain=~FacebookInternalTracking_Shady-param-register
-||facebook.com/*?privacy_mutation_token=$xmlhttprequest
-||facebook.com/*?ref*=$document,subdocument,important,important,domain=~FacebookInternalTracking_Ref-Wild
-||facebook.com/*?ref*=$xmlhttprequest
-||facebook.com/*?settings_tracking=$document,subdocument,important,domain=~FacebookInternalTracking_SettingsTracking
-||facebook.com/*?settings_tracking=$xmlhttprequest
-||facebook.com/*?sfnsn=$document,subdocument,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
-||facebook.com/*?sfnsn=$xmlhttprequest
 ||facebook.com/ads/*&session_id=$document,subdocument,important,domain=~FacebookUnneccessaryParams_AdPrefs-SessionID
 ||facebook.com/ads/*&session_id=$xmlhttprequest
 ||facebook.com/ads/*?session_id=$document,subdocument,important,domain=~FacebookUnneccessaryParams_AdPrefs-SessionID
@@ -183,20 +181,6 @@
 ||instagram.com/*&igshid=$xmlhttprequest
 ||instagram.com/*?igshid=$document,subdocument,important,domain=~Instagram-ExternalShareID
 ||instagram.com/*?igshid=$xmlhttprequest
-||messenger.com/*&__cft__%5B0%5D=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
-||messenger.com/*&__cft__%5B0%5D=$xmlhttprequest
-||messenger.com/*&__cft__*=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
-||messenger.com/*&__cft__*=$xmlhttprequest
-||messenger.com/*&__cft__[0]=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
-||messenger.com/*&__cft__[0]=$xmlhttprequest
-||messenger.com/*&__tn__=$document,subdocument,important,domain=~FacebookInternalTracking_TN
-||messenger.com/*&__tn__=$xmlhttprequest
-||messenger.com/*&__xts__%5B0%5D=$document,subdocument,important,domain=~FacebookInternalTracking_XTS
-||messenger.com/*&__xts__%5B0%5D=$xmlhttprequest
-||messenger.com/*&__xts__*=$document,subdocument,important,domain=~FacebookInternalTracking_XTS
-||messenger.com/*&__xts__*=$xmlhttprequest
-||messenger.com/*&__xts__[0]=$document,subdocument,important,domain=~FacebookInternalTracking_XTS
-||messenger.com/*&__xts__[0]=$xmlhttprequest
 ||messenger.com/*&acontext=$document,subdocument,important,domain=~FacebookInternalTracking_AContext
 ||messenger.com/*&acontext=$xmlhttprequest
 ||messenger.com/*&dti=$document,subdocument,important,domain=~FacebookInternalTracking_DTI
@@ -206,6 +190,7 @@
 ||messenger.com/*&entry*=$document,subdocument,important,domain=~FacebookInternalTracking_Entry-Wild
 ||messenger.com/*&entry*=$xmlhttprequest
 ||messenger.com/*&fb_dtsg*$document,subdocument,important,domain=~FacebookInternalTracking_DTSG-Wild
+||messenger.com/*&fb_dtsg*$xmlhttprequest
 ||messenger.com/*&fref=$document,subdocument,important,domain=~FacebookInternalTracking_FRef
 ||messenger.com/*&fref=$xmlhttprequest
 ||messenger.com/*&hc_*=$document,subdocument,important,domain=~FacebookInternalTracking_HC_Wild
@@ -222,31 +207,32 @@
 ||messenger.com/*&settings_tracking=$xmlhttprequest
 ||messenger.com/*&sfnsn=$document,subdocument,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
 ||messenger.com/*&sfnsn=$xmlhttprequest
-||messenger.com/*?__cft__%5B0%5D=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
-||messenger.com/*?__cft__%5B0%5D=$xmlhttprequest
-||messenger.com/*?__cft__*=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
-||messenger.com/*?__cft__*=$xmlhttprequest
-||messenger.com/*?__cft__[0]=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
-||messenger.com/*?__cft__[0]=$xmlhttprequest
-||messenger.com/*?__tn__=$document,subdocument,important,domain=~FacebookInternalTracking_TN
-||messenger.com/*?__tn__=$xmlhttprequest
-||messenger.com/*?__xts__%5B0%5D=$document,subdocument,important,domain=~FacebookInternalTracking_XTS
-||messenger.com/*?__xts__%5B0%5D=$xmlhttprequest
-||messenger.com/*?__xts__*=$document,subdocument,important,domain=~FacebookInternalTracking_XTS
-||messenger.com/*?__xts__*=$xmlhttprequest
-||messenger.com/*?__xts__[0]=$document,subdocument,important,domain=~FacebookInternalTracking_XTS
-||messenger.com/*?__xts__[0]=$xmlhttprequest
+||messenger.com/*&__cft__%5B0%5D=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
+||messenger.com/*&__cft__%5B0%5D=$xmlhttprequest
+||messenger.com/*&__cft__*=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
+||messenger.com/*&__cft__*=$xmlhttprequest
+||messenger.com/*&__cft__[0]=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
+||messenger.com/*&__cft__[0]=$xmlhttprequest
+||messenger.com/*&__tn__=$document,subdocument,important,domain=~FacebookInternalTracking_TN
+||messenger.com/*&__tn__=$xmlhttprequest
+||messenger.com/*&__xts__%5B0%5D=$document,subdocument,important,domain=~FacebookInternalTracking_XTS
+||messenger.com/*&__xts__%5B0%5D=$xmlhttprequest
+||messenger.com/*&__xts__*=$document,subdocument,important,domain=~FacebookInternalTracking_XTS
+||messenger.com/*&__xts__*=$xmlhttprequest
+||messenger.com/*&__xts__[0]=$document,subdocument,important,domain=~FacebookInternalTracking_XTS
+||messenger.com/*&__xts__[0]=$xmlhttprequest
 ||messenger.com/*?acontext=$document,subdocument,important,domain=~FacebookInternalTracking_AContext
 ||messenger.com/*?acontext=$xmlhttprequest
 ||messenger.com/*?dti=$document,subdocument,important,domain=~FacebookInternalTracking_DTI
 ||messenger.com/*?dti=$xmlhttprequest
 ||messenger.com/*?eid=$document,subdocument,important,domain=~FacebookInternalTracking_EID
 ||messenger.com/*?eid=$xmlhttprequest
-||messenger.com/*?entry_*=$document,subdocument,important,domain=~FacebookInternalTracking_Entry-Wild
-||messenger.com/*?entry_*=$xmlhttprequest
 ||messenger.com/*?entrypoint=$document,subdocument,important,domain=~FacebookInternalTracking_EntryPoint
 ||messenger.com/*?entrypoint=$xmlhttprequest
+||messenger.com/*?entry_*=$document,subdocument,important,domain=~FacebookInternalTracking_Entry-Wild
+||messenger.com/*?entry_*=$xmlhttprequest
 ||messenger.com/*?fb_dtsg*$document,subdocument,important,domain=~FacebookInternalTracking_DTSG-Wild
+||messenger.com/*?fb_dtsg*$xmlhttprequest
 ||messenger.com/*?fref=$document,subdocument,important,domain=~FacebookInternalTracking_FRef
 ||messenger.com/*?fref=$xmlhttprequest
 ||messenger.com/*?hc_*=$document,subdocument,important,domain=~FacebookInternalTracking_HC_Wild
@@ -263,6 +249,20 @@
 ||messenger.com/*?settings_tracking=$xmlhttprequest
 ||messenger.com/*?sfnsn=$document,subdocument,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
 ||messenger.com/*?sfnsn=$xmlhttprequest
+||messenger.com/*?__cft__%5B0%5D=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
+||messenger.com/*?__cft__%5B0%5D=$xmlhttprequest
+||messenger.com/*?__cft__*=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
+||messenger.com/*?__cft__*=$xmlhttprequest
+||messenger.com/*?__cft__[0]=$document,subdocument,important,domain=~FacebookInternalTracking_CFT
+||messenger.com/*?__cft__[0]=$xmlhttprequest
+||messenger.com/*?__tn__=$document,subdocument,important,domain=~FacebookInternalTracking_TN
+||messenger.com/*?__tn__=$xmlhttprequest
+||messenger.com/*?__xts__%5B0%5D=$document,subdocument,important,domain=~FacebookInternalTracking_XTS
+||messenger.com/*?__xts__%5B0%5D=$xmlhttprequest
+||messenger.com/*?__xts__*=$document,subdocument,important,domain=~FacebookInternalTracking_XTS
+||messenger.com/*?__xts__*=$xmlhttprequest
+||messenger.com/*?__xts__[0]=$document,subdocument,important,domain=~FacebookInternalTracking_XTS
+||messenger.com/*?__xts__[0]=$xmlhttprequest
 ||play.google.com/*&pcampaignid=$document,subdocument,important,domain=~GPlayTracking_PromotedCampaignID
 ||play.google.com/*&pcampaignid=$xmlhttprequest
 ||play.google.com/*&referrer=$document,subdocument,important,domain=~GPlayTracking_Referrer
@@ -283,7 +283,7 @@
 ! Problematic, at your own risk!
 ! [CloudFlare DDoS JS Challenge]
 !   Blocking attempt to access websites with parameters below will cause problem because this parameter are neccessary for check
-!   that you're really human visitors or not, however, this will pre-warning that the website are use its server and you may get 
+!   that you're really human visitors or not, however, this will pre-warning that the website are use its service and you may get
 !   tracked by that company, also.
 ||*&__cf_chl_jschl_tk__=$document,subdocument,xmlhttprequest,important,domain=~Precaution_Site-use-CloudFlare-DDoS-Challenge
 ||*?__cf_chl_jschl_tk__=$document,subdocument,xmlhttprequest,important,domain=~Precaution_Site-use-CloudFlare-DDoS-Challenge
