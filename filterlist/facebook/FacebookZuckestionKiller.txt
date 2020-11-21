@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Facebook Zuckestion Killer
-! Version: 202011192031
+! Version: 202011212156
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -105,6 +105,7 @@
 ||facebook.com/groups/membersuggestion$xmlhttprequest
 ||facebook.com/impression.php$important
 ||facebook.com/network_ads_common$important
+||facebook.com/nw/$important
 ||facebook.com/pages/launchpoint/discover/$document
 ||facebook.com/pages/qe/$important
 ||facebook.com/perf/device$important
@@ -271,27 +272,27 @@
 
 ! [Resources Replace] Instead of just blocking, then redirect to neutered resources
 ! Experimental for Facebook security pixels, this may break their functionality and security check.
-||facebook.com/ads/boosted_components/fetch_ad_account_data/$xhr,important,redirect=noop.txt
-||facebook.com/ads/coupon/read/offer_data/$xhr,important,redirect=noop.txt
-||facebook.com/ads/preferences/mobile_log/$xhr,important,redirect=noop.txt
-||facebook.com/ascend_mr_no$xhr,important,redirect=noop.txt
-||facebook.com/common/referer_frame.php$frame,important,redirect=noop.php
-||facebook.com/dlite/skywalker_topic$xhr,important,redirect=noop.txt
-||facebook.com/feed/badge/$xhr,important,redirect=noop.txt
-||facebook.com/feedtracking/$xhr,important,redirect=noop.txt
-||facebook.com/friends/center/suggestions/?ppk=*&tid=*$xhr,redirect=noop.txt
-||facebook.com/privacy/reminders/log_imp$xhr,important,redirect=noop.txt
-||facebook.com/pubcontent/suggestions/impression_logging$xhr,important,redirect=noop.txt
-||facebook.com/related-application/$xhr,important,redirect=noop.txt
+||facebook.com/ads/boosted_components/fetch_ad_account_data/$xhr,important,redirect=nooptext
+||facebook.com/ads/coupon/read/offer_data/$xhr,important,redirect=nooptext
+||facebook.com/ads/preferences/mobile_log/$xhr,important,redirect=nooptext
+||facebook.com/ascend_mr_no$xhr,important,redirect=nooptext
+||facebook.com/common/referer_frame.php$frame,important,redirect=noopframe
+||facebook.com/dlite/skywalker_topic$xhr,important,redirect=nooptext
+||facebook.com/feed/badge/$xhr,important,redirect=nooptext
+||facebook.com/feedtracking/$xhr,important,redirect=nooptext
+||facebook.com/friends/center/suggestions/?ppk=*&tid=*$xhr,redirect=nooptext
+||facebook.com/privacy/reminders/log_imp$xhr,important,redirect=nooptext
+||facebook.com/pubcontent/suggestions/impression_logging$xhr,important,redirect=nooptext
+||facebook.com/related-application/$xhr,important,redirect=nooptext
 ||facebook.com/security/hsts-pixel.gif$image,important,redirect=1x1.gif
-||facebook.com/sem_pixel/*$frame,important,redirect=noop.php
-||facebook.com/sketch_results$xhr,important,redirect=noop.txt
-||facebook.com/ufi/typing/*/start/$xhr,important,redirect=noop.txt
-||facebook.com/ufi/typing/*/stop/$xhr,important,redirect=noop.txt
-||facebook.com/video/instream_video/rapid_feedback$xhr,important,redirect=noop.txt
-||facebook.com/xsemc/$xhr,important,redirect=noop.txt
+||facebook.com/sem_pixel/*$frame,important,redirect=noopframe
+||facebook.com/sketch_results$xhr,important,redirect=nooptext
+||facebook.com/ufi/typing/*/start/$xhr,important,redirect=nooptext
+||facebook.com/ufi/typing/*/stop/$xhr,important,redirect=nooptext
+||facebook.com/video/instream_video/rapid_feedback$xhr,important,redirect=nooptext
+||facebook.com/xsemc/$xhr,important,redirect=nooptext
 ||facebook.com/xti.php$image,important,redirect=1x1.gif
-||facebook.com/xti.php$frame,important,redirect=noop.php
+||facebook.com/xti.php$frame,important,redirect=noopframe
 ||facebook.net/security/hsts-pixel.gif$image,important,redirect=1x1.gif
 ||fbcdn.net/hads-ak-*/*.png$image,important,redirect=2x2.png
 ||fbcdn.net/rsrc.php/*/-PAXP-*.gif$image,important,redirect=1x1.gif

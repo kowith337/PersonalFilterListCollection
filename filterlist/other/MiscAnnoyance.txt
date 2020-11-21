@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202010292137
+! Version: 202011212154
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -382,11 +382,11 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ! - I don't know about this connection but I've found 'ei' parameter inside that already blocked by my another list called
 !   "Anti survived tracking warning (overdone ver.)" , expected that the request use for ping back to phone home and/or keep
 !   tracking users periodically, right...?
-||google.*/async/bgasy?$xmlhttprequest,important,redirect=noop.txt
-||google.*/imgevent?$xmlhttprequest,important,redirect=noop.txt
+||google.*/async/bgasy?$xmlhttprequest,important,redirect=nooptext
+||google.*/imgevent?$xmlhttprequest,important,redirect=nooptext
 
 ! - This request use 'vet' parameter and random strings value
-||google.*/async/irc?$xmlhttprequest,important,redirect=noop.txt
+||google.*/async/irc?$xmlhttprequest,important,redirect=nooptext
 
 ! - Possibly pixel image tracking
 ||google.*/images/phd/px.gif$image,important,domain=google.com|google.*,redirect=1x1.gif
@@ -394,12 +394,12 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ! [GreasyFork] added ping request while installing script (inside the "Install Script" green button) via 'data-ping-url' that
 ! cause promoted script to be shown and the site also get user data about it, eliminate this requests and fake sent data with
 ! 'nooptext' can solve this thing also.
-||greasyfork.org/scripts/*/install-ping?$xmlhttprequest,important,redirect=noop.txt
+||greasyfork.org/scripts/*/install-ping?$xmlhttprequest,important,redirect=nooptext
 
 ! [Reddit]
 ! - GoogleTag Frame
-||redditmedia.com/gtm^$subdocument,important,redirect=noop.php
-||redditstatic.com/gtm^$subdocument,important,redirect=noop.php
+||redditmedia.com/gtm^$subdocument,important,redirect=noopframe
+||redditstatic.com/gtm^$subdocument,important,redirect=noopframe
 
 ! - Also PNG PIXEL TRACKING!?
 ||reddit.com/static/pixel.png$image,important,redirect=1x1-transparent.png
