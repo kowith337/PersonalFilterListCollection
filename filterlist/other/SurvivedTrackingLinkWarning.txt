@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 202011192034
+! Version: 202011212128
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -20,12 +20,12 @@
 ||*&amp_*=*&usqp=*$document,important,domain=~Caution_Google-AMP-Page-MultiParams
 ||*&fbclid$document,important,domain=~ClickTrack_FacebookClickID
 ||*&gclid$document,important,domain=~ClickTrack_Google-aka-FacebookCopyCat
-||*&utm_*=$document,important,domain=~ClickTrack_Google-UrChin
+||*&utm_*=$document,important,domain=~ClickTrack_Google-UrChin-Metadata
 ||*&yclid$document,important,domain=~ClickTrack_Yandex-aka-FacebookCopyCat
 ||*?amp_*=*&usqp=*$document,important,domain=~Caution_Google-AMP-Page-MultiParams
 ||*?fbclid$document,important,domain=~ClickTrack_FacebookClickID
 ||*?gclid$document,important,domain=~ClickTrack_Google-aka-FacebookCopyCat
-||*?utm_*=$document,important,domain=~ClickTrack_Google-UrChin
+||*?utm_*=$document,important,domain=~ClickTrack_Google-UrChin-Metadata
 ||*?yclid$document,important,domain=~ClickTrack_Yandex-aka-FacebookCopyCat
 
 ! Shady outgoing prompt from first party service
@@ -46,9 +46,13 @@
 
 ! Internal
 ! ||facebook.com/*&__tn__=$document,important,domain=~FacebookInternalTracking_TN
+! ||facebook.com/*&ref*=$document,important,domain=~FacebookInternalTracking_Ref-Wild
 ! ||facebook.com/*?__tn__=$document,important,domain=~FacebookInternalTracking_TN
+! ||facebook.com/*?ref*=$document,important,domain=~FacebookInternalTracking_Ref-Wild
 ! ||messenger.com/*&__tn__=$document,important,domain=~FacebookInternalTracking_TN
+! ||messenger.com/*&ref*=$document,important,domain=~FacebookInternalTracking_Ref-Wild
 ! ||messenger.com/*?__tn__=$document,important,domain=~FacebookInternalTracking_TN
+! ||messenger.com/*?ref*=$document,important,domain=~FacebookInternalTracking_Ref-Wild
 ||bibliogram.*/*&igshid=$document,important,domain=~Leftover_Instagram-ExternalShareID
 ||bibliogram.*/*?igshid=$document,important,domain=~Leftover_Instagram-ExternalShareID
 ||duckduckgo.com/l/?$document,important,domain=~Precaution_DuckDuckGo-Redirect-UDDG
@@ -65,13 +69,13 @@
 ||facebook.com/*&dti=$document,important,domain=~FacebookInternalTracking_DTI
 ||facebook.com/*&eid=$document,important,domain=~FacebookInternalTracking_EID
 ||facebook.com/*&entry*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
-||facebook.com/*&fb_dtsg*$document,important,domain=~FacebookInternalTracking_DTSG-Wild
+||facebook.com/*&fb_dtsg=$document,important,domain=~FacebookInternalTracking_DTSG
+||facebook.com/*&fb_dtsg_*=$document,important,domain=~FacebookInternalTracking_DTSG-Wild
 ||facebook.com/*&fref=$document,important,domain=~FacebookInternalTracking_FRef
 ||facebook.com/*&hc_*=$document,important,domain=~FacebookInternalTracking_HC-Wild
 ||facebook.com/*&lst=$document,important,domain=~FacebookInternalTracking_LST
 ||facebook.com/*&pn_*=$document,important,domain=~FacebookInternalTracking_PN-Wild
 ||facebook.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_Shady-param-register
-! ||facebook.com/*&ref*=$document,subdocument,important,important,domain=~FacebookInternalTracking_Ref-Wild
 ||facebook.com/*&settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||facebook.com/*&sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
 ||facebook.com/*?__cft__%5B0%5D=$document,important,domain=~FacebookInternalTracking_CFT
@@ -86,13 +90,13 @@
 ||facebook.com/*?dti=$document,important,domain=~FacebookInternalTracking_DTI
 ||facebook.com/*?eid=$document,important,domain=~FacebookInternalTracking_EID
 ||facebook.com/*?entry*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
-||facebook.com/*?fb_dtsg*$document,important,domain=~FacebookInternalTracking_DTSG-Wild
+||facebook.com/*?fb_dtsg=$document,important,domain=~FacebookInternalTracking_DTSG
+||facebook.com/*?fb_dtsg_*=$document,important,domain=~FacebookInternalTracking_DTSG-Wild
 ||facebook.com/*?fref=$document,important,domain=~FacebookInternalTracking_FRef
 ||facebook.com/*?hc_*=$document,important,domain=~FacebookInternalTracking_HC-Wild
 ||facebook.com/*?lst=$document,important,domain=~FacebookInternalTracking_LST
 ||facebook.com/*?pn_*=$document,important,domain=~FacebookInternalTracking_PN-Wild
 ||facebook.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_Shady-param-register
-! ||facebook.com/*?ref*=$document,subdocument,important,important,domain=~FacebookInternalTracking_Ref-Wild
 ||facebook.com/*?settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||facebook.com/*?sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
 ||facebook.com/ads/*&session_id=$document,important,domain=~FacebookUnneccessaryParams_AdPrefs-SessionID
@@ -125,13 +129,13 @@
 ||messenger.com/*&dti=$document,important,domain=~FacebookInternalTracking_DTI
 ||messenger.com/*&eid=$document,important,domain=~FacebookInternalTracking_EID
 ||messenger.com/*&entry*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
-||messenger.com/*&fb_dtsg*$document,important,domain=~FacebookInternalTracking_DTSG-Wild
+||messenger.com/*&fb_dtsg=$document,important,domain=~FacebookInternalTracking_DTSG
+||messenger.com/*&fb_dtsg_*=$document,important,domain=~FacebookInternalTracking_DTSG-Wild
 ||messenger.com/*&fref=$document,important,domain=~FacebookInternalTracking_FRef
 ||messenger.com/*&hc_*=$document,important,domain=~FacebookInternalTracking_HC_Wild
 ||messenger.com/*&lst=$document,important,domain=~FacebookInternalTracking_LST
 ||messenger.com/*&pn_*=$document,important,domain=~FacebookInternalTracking_PN_Wild
 ||messenger.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_Shady-param-register
-! ||messenger.com/*&ref*=$document,subdocument,important,important,domain=~FacebookInternalTracking_Ref-Wild
 ||messenger.com/*&settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||messenger.com/*&sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
 ||messenger.com/*?__cft__%5B0%5D=$document,important,domain=~FacebookInternalTracking_CFT
@@ -145,13 +149,13 @@
 ||messenger.com/*?eid=$document,important,domain=~FacebookInternalTracking_EID
 ||messenger.com/*?entry_*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
 ||messenger.com/*?entrypoint=$document,important,domain=~FacebookInternalTracking_EntryPoint
-||messenger.com/*?fb_dtsg*$document,important,domain=~FacebookInternalTracking_DTSG-Wild
+||messenger.com/*?fb_dtsg=$document,important,domain=~FacebookInternalTracking_DTSG
+||messenger.com/*?fb_dtsg_*=$document,important,domain=~FacebookInternalTracking_DTSG-Wild
 ||messenger.com/*?fref=$document,important,domain=~FacebookInternalTracking_FRef
 ||messenger.com/*?hc_*=$document,important,domain=~FacebookInternalTracking_HC_Wild
 ||messenger.com/*?lst=$document,important,domain=~FacebookInternalTracking_LST
 ||messenger.com/*?pn_*=$document,important,domain=~FacebookInternalTracking_PN_Wild
 ||messenger.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_Shady-param-register
-! ||messenger.com/*?ref*=$document,subdocument,important,important,domain=~FacebookInternalTracking_Ref-Wild
 ||messenger.com/*?settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||messenger.com/*?sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
 ||play.google.com/*&pcampaignid=$document,important,domain=~GPlayTracking_PromotedCampaignID
