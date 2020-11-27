@@ -1,6 +1,6 @@
 [uBlock Origin 1.30.9.1]
 ! Title: kowith337's Test List
-! Version: 202011212119
+! Version: 202011271406
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -142,6 +142,9 @@ facebook.com,instagram.com,messenger.com##+js(cookie-remover, datr)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, noscript)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-referer)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-src)
+
+! Make the related video function corrupted when you're viewing standalone video post on Facebook.
+m.facebook.com,mtouch.facebook.com,touch.facebook.com##+js(acis, requireLazy, mobile_related_video_feed_pagelet)
 
 ! Often show alert dialog when users click to links, also when users trying to right-click.
 checkkorn.com##+js(alert-buster)
