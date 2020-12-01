@@ -1,6 +1,6 @@
-[uBlock Origin 1.17.5.7]
+[uBlock Origin 1.31.0]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202011271914
+! Version: 202012011952
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -80,9 +80,7 @@
 ||facebook.com/*&entry*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
 ||facebook.com/*&entry*=$subdocument,xmlhttprequest
 ||facebook.com/*&fb_dtsg=$document,important,domain=~FacebookInternalTracking_DTSG
-||facebook.com/*&fb_dtsg=$subdocument,xmlhttprequest
 ||facebook.com/*&fb_dtsg_*=$document,important,domain=~FacebookInternalTracking_DTSG-Wild
-||facebook.com/*&fb_dtsg_*=$subdocument,xmlhttprequest
 ||facebook.com/*&fref=$document,important,domain=~FacebookInternalTracking_FRef
 ||facebook.com/*&fref=$subdocument,xmlhttprequest
 ||facebook.com/*&hc_*=$document,important,domain=~FacebookInternalTracking_HC-Wild
@@ -91,8 +89,7 @@
 ||facebook.com/*&lst=$subdocument,xmlhttprequest
 ||facebook.com/*&pn_*=$document,important,domain=~FacebookInternalTracking_PN-Wild
 ||facebook.com/*&pn_*=$subdocument,xmlhttprequest
-||facebook.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_Shady-param-register
-||facebook.com/*&privacy_mutation_token=$subdocument,xmlhttprequest
+||facebook.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
 ||facebook.com/*&ref=$document,important,domain=~FacebookInternalTracking_Ref
 ||facebook.com/*&ref=$subdocument,xmlhttprequest
 ||facebook.com/*&ref*=$document,important,domain=~FacebookInternalTracking_Ref-Wild
@@ -128,9 +125,7 @@
 ||facebook.com/*?entry*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
 ||facebook.com/*?entry*=$subdocument,xmlhttprequest
 ||facebook.com/*?fb_dtsg=$document,important,domain=~FacebookInternalTracking_DTSG
-||facebook.com/*?fb_dtsg=$subdocument,xmlhttprequest
 ||facebook.com/*?fb_dtsg_*=$document,important,domain=~FacebookInternalTracking_DTSG-Wild
-||facebook.com/*?fb_dtsg_*=$subdocument,xmlhttprequest
 ||facebook.com/*?fref=$document,important,domain=~FacebookInternalTracking_FRef
 ||facebook.com/*?fref=$subdocument,xmlhttprequest
 ||facebook.com/*?hc_*=$document,important,domain=~FacebookInternalTracking_HC-Wild
@@ -139,8 +134,7 @@
 ||facebook.com/*?lst=$subdocument,xmlhttprequest
 ||facebook.com/*?pn_*=$document,important,domain=~FacebookInternalTracking_PN-Wild
 ||facebook.com/*?pn_*=$subdocument,xmlhttprequest
-||facebook.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_Shady-param-register
-||facebook.com/*?privacy_mutation_token=$subdocument,xmlhttprequest
+||facebook.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
 ||facebook.com/*?ref=$document,important,domain=~FacebookInternalTracking_Ref
 ||facebook.com/*?ref=$subdocument,xmlhttprequest
 ||facebook.com/*?ref*=$document,important,domain=~FacebookInternalTracking_Ref-Wild
@@ -212,9 +206,7 @@
 ||messenger.com/*&entry*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
 ||messenger.com/*&entry*=$subdocument,xmlhttprequest
 ||messenger.com/*&fb_dtsg=$document,important,domain=~FacebookInternalTracking_DTSG
-||messenger.com/*&fb_dtsg=$subdocument,xmlhttprequest
 ||messenger.com/*&fb_dtsg_*=$document,important,domain=~FacebookInternalTracking_DTSG-Wild
-||messenger.com/*&fb_dtsg_*=$subdocument,xmlhttprequest
 ||messenger.com/*&fref=$document,important,domain=~FacebookInternalTracking_FRef
 ||messenger.com/*&fref=$subdocument,xmlhttprequest
 ||messenger.com/*&hc_*=$document,important,domain=~FacebookInternalTracking_HC_Wild
@@ -223,8 +215,7 @@
 ||messenger.com/*&lst=$subdocument,xmlhttprequest
 ||messenger.com/*&pn_*=$document,important,domain=~FacebookInternalTracking_PN_Wild
 ||messenger.com/*&pn_*=$subdocument,xmlhttprequest
-||messenger.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_Shady-param-register
-||messenger.com/*&privacy_mutation_token=$subdocument,xmlhttprequest
+||messenger.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
 ||messenger.com/*&ref=$document,important,domain=~FacebookInternalTracking_Ref
 ||messenger.com/*&ref=$subdocument,xmlhttprequest
 ||messenger.com/*&ref*=$document,important,domain=~FacebookInternalTracking_Ref-Wild
@@ -258,9 +249,7 @@
 ||messenger.com/*?entrypoint=$document,important,domain=~FacebookInternalTracking_EntryPoint
 ||messenger.com/*?entrypoint=$subdocument,xmlhttprequest
 ||messenger.com/*?fb_dtsg=$document,important,domain=~FacebookInternalTracking_DTSG
-||messenger.com/*?fb_dtsg=$subdocument,xmlhttprequest
 ||messenger.com/*?fb_dtsg_*=$document,important,domain=~FacebookInternalTracking_DTSG-Wild
-||messenger.com/*?fb_dtsg_*=$subdocument,xmlhttprequest
 ||messenger.com/*?fref=$document,important,domain=~FacebookInternalTracking_FRef
 ||messenger.com/*?fref=$subdocument,xmlhttprequest
 ||messenger.com/*?hc_*=$document,important,domain=~FacebookInternalTracking_HC_Wild
@@ -269,8 +258,7 @@
 ||messenger.com/*?lst=$subdocument,xmlhttprequest
 ||messenger.com/*?pn_*=$document,important,domain=~FacebookInternalTracking_PN_Wild
 ||messenger.com/*?pn_*=$subdocument,xmlhttprequest
-||messenger.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_Shady-param-register
-||messenger.com/*?privacy_mutation_token=$subdocument,xmlhttprequest
+||messenger.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
 ||messenger.com/*?ref=$document,important,domain=~FacebookInternalTracking_Ref
 ||messenger.com/*?ref=$subdocument,xmlhttprequest
 ||messenger.com/*?ref*=$document,important,domain=~FacebookInternalTracking_Ref-Wild
@@ -296,7 +284,25 @@
 ||steampowered.com/*?snr=$document,important,domain=~SteamTracking_SNR
 ||steampowered.com/*?snr=$subdocument,xmlhttprequest
 
-! Problematic, at your own risk!
+! Soft problematic!
+!   You cannot perform certain actions while using its website, so I've decided to add query prune rules for addition, but please
+!   note that `queryprune` will clean only first detected parameter (race condition), it cannot clear multiple parameters in each
+!   requests, probably some information still slipped through other parameters that cannot removed at that time.
+||facebook.com/*&fb_dtsg=$first-party,subdocument,xmlhttprequest,queryprune=fb_dtsg
+||facebook.com/*&fb_dtsg_*=$first-party,subdocument,xmlhttprequest,queryprune=|fb_dtsg_
+||facebook.com/*&privacy_mutation_token=$first-party,subdocument,xmlhttprequest,queryprune=privacy_mutation_token
+||facebook.com/*?fb_dtsg=$first-party,subdocument,xmlhttprequest,queryprune=fb_dtsg
+||facebook.com/*?fb_dtsg_*=$first-party,subdocument,xmlhttprequest,queryprune=|fb_dtsg_
+||facebook.com/*?privacy_mutation_token=$first-party,subdocument,xmlhttprequest,queryprune=privacy_mutation_token
+||messenger.com/*&fb_dtsg=$first-party,subdocument,xmlhttprequest,queryprune=fb_dtsg
+||messenger.com/*&fb_dtsg_*=$first-party,subdocument,xmlhttprequest,queryprune=|fb_dtsg_
+||messenger.com/*&privacy_mutation_token=$first-party,subdocument,xmlhttprequest,queryprune=privacy_mutation_token
+||messenger.com/*?fb_dtsg=$first-party,subdocument,xmlhttprequest,queryprune=fb_dtsg
+||messenger.com/*?fb_dtsg_*=$first-party,subdocument,xmlhttprequest,queryprune=|fb_dtsg_
+||messenger.com/*?privacy_mutation_token=$first-party,subdocument,xmlhttprequest,queryprune=privacy_mutation_token
+
+
+! Known breaking, at your own risk!
 ! [CloudFlare DDoS JS Challenge]
 !   Blocking attempt to access websites with parameters below will cause problem because this parameter are neccessary for check
 !   that you're really human visitors or not, however, this will pre-warning that the website are use its service and you may get

@@ -1,6 +1,6 @@
-[uBlock Origin 1.30.9.1]
+[uBlock Origin 1.31.0]
 ! Title: kowith337's Test List
-! Version: 202011271926
+! Version: 202012011941
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -94,27 +94,26 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 !       with "Anti survived tracking link warning" filterlist that strictly blocked page when shady parameters are binding with
 !       any URLs for keep tracking users whenever you're visiting some sites out of social platform.
 ! Note: This still under developement, require uBO 1.30.9b1 or above and modern browsers, sideload extenstion may also required!
-||facebook.com/*&entry*=$xhr,important,queryprune=|entry
-||facebook.com/*&privacy_*=$xhr,queryprune=|privacy_
-||facebook.com/*&__cft__*=$queryprune=|__cft__
-||facebook.com/*&__tn__=$xhr,important,queryprune=__tn__
-||facebook.com/*&__xts__*=$queryprune=|__xts__
-||facebook.com/*?entry*=$xhr,important,queryprune=|entry
-||facebook.com/*?privacy_*=$xhr,queryprune=|privacy_
-||facebook.com/*?__cft__*=$queryprune=|__cft__
-||facebook.com/*?__tn__=$xhr,important,queryprune=__tn__
-||facebook.com/*?__xts__*=$queryprune=|__xts__
-||facebook.com/a/*&fb_dtsg=$queryprune=fb_dtsg
-||facebook.com/a/*&fb_dtsg_*=$queryprune=|fb_dtsg_
-||facebook.com/a/*?fb_dtsg=$queryprune=fb_dtsg
-||facebook.com/a/*?fb_dtsg_*=$queryprune=|fb_dtsg_
-||facebook.com/ajax/*&fb_dtsg=$queryprune=fb_dtsg
-||facebook.com/ajax/*&fb_dtsg_*=$queryprune=|fb_dtsg_
-||facebook.com/ajax/*?fb_dtsg=$queryprune=fb_dtsg
-||facebook.com/ajax/*?fb_dtsg_*=$queryprune=|fb_dtsg_
+||facebook.com/*&entry*=$1p,xhr,important,queryprune=|entry
+||facebook.com/*&privacy_*=$1p,xhr,queryprune=|privacy_
+||facebook.com/*&__cft__*=$1p,queryprune=|__cft__
+||facebook.com/*&__tn__=$1p,xhr,important,queryprune=__tn__
+||facebook.com/*&__xts__*=$1p,queryprune=|__xts__
+||facebook.com/*?entry*=$1p,xhr,important,queryprune=|entry
+||facebook.com/*?privacy_*=$1p,xhr,queryprune=|privacy_
+||facebook.com/*?__cft__*=$1p,queryprune=|__cft__
+||facebook.com/*?__tn__=$1p,xhr,important,queryprune=__tn__
+||facebook.com/*?__xts__*=$1p,queryprune=|__xts__
+||facebook.com/a/*&fb_dtsg=$1p,queryprune=fb_dtsg
+||facebook.com/a/*&fb_dtsg_*=$1p,queryprune=|fb_dtsg_
+||facebook.com/a/*?fb_dtsg=$1p,queryprune=fb_dtsg
+||facebook.com/a/*?fb_dtsg_*=$1p,queryprune=|fb_dtsg_
+||facebook.com/ajax/*&fb_dtsg=$1p,queryprune=fb_dtsg
+||facebook.com/ajax/*&fb_dtsg_*=$1p,queryprune=|fb_dtsg_
+||facebook.com/ajax/*?fb_dtsg=$1p,queryprune=fb_dtsg
+||facebook.com/ajax/*?fb_dtsg_*=$1p,queryprune=|fb_dtsg_
 ||fbcdn.net/*&_nc_*=$css,script,domain=facebook.com|messenger.com,queryprune=|_nc_
 ||fbcdn.net/*?_nc_*=$css,script,domain=facebook.com|messenger.com,queryprune=|_nc_
-||google.*$queryprune=bih|biw|ei|ved
 ||steampowered.com/*&curator_clanid=$queryprune=curator_clanid
 ||steampowered.com/*&snr=$queryprune=snr,important
 ||steampowered.com/*?curator_clanid=$queryprune=curator_clanid

@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 202011212128
+! Version: 202012011956
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -75,7 +75,7 @@
 ||facebook.com/*&hc_*=$document,important,domain=~FacebookInternalTracking_HC-Wild
 ||facebook.com/*&lst=$document,important,domain=~FacebookInternalTracking_LST
 ||facebook.com/*&pn_*=$document,important,domain=~FacebookInternalTracking_PN-Wild
-||facebook.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_Shady-param-register
+||facebook.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
 ||facebook.com/*&settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||facebook.com/*&sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
 ||facebook.com/*?__cft__%5B0%5D=$document,important,domain=~FacebookInternalTracking_CFT
@@ -96,7 +96,7 @@
 ||facebook.com/*?hc_*=$document,important,domain=~FacebookInternalTracking_HC-Wild
 ||facebook.com/*?lst=$document,important,domain=~FacebookInternalTracking_LST
 ||facebook.com/*?pn_*=$document,important,domain=~FacebookInternalTracking_PN-Wild
-||facebook.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_Shady-param-register
+||facebook.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
 ||facebook.com/*?settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||facebook.com/*?sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
 ||facebook.com/ads/*&session_id=$document,important,domain=~FacebookUnneccessaryParams_AdPrefs-SessionID
@@ -135,7 +135,7 @@
 ||messenger.com/*&hc_*=$document,important,domain=~FacebookInternalTracking_HC_Wild
 ||messenger.com/*&lst=$document,important,domain=~FacebookInternalTracking_LST
 ||messenger.com/*&pn_*=$document,important,domain=~FacebookInternalTracking_PN_Wild
-||messenger.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_Shady-param-register
+||messenger.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
 ||messenger.com/*&settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||messenger.com/*&sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
 ||messenger.com/*?__cft__%5B0%5D=$document,important,domain=~FacebookInternalTracking_CFT
@@ -155,7 +155,7 @@
 ||messenger.com/*?hc_*=$document,important,domain=~FacebookInternalTracking_HC_Wild
 ||messenger.com/*?lst=$document,important,domain=~FacebookInternalTracking_LST
 ||messenger.com/*?pn_*=$document,important,domain=~FacebookInternalTracking_PN_Wild
-||messenger.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_Shady-param-register
+||messenger.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
 ||messenger.com/*?settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||messenger.com/*?sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
 ||play.google.com/*&pcampaignid=$document,important,domain=~GPlayTracking_PromotedCampaignID
@@ -167,7 +167,7 @@
 ||steampowered.com/*&snr=$document,important,domain=~SteamTracking_SNR
 ||steampowered.com/*?snr=$document,important,domain=~SteamTracking_SNR
 
-! Problematic, at your own risk!
+! Known breaking, at your own risk!
 ! [CloudFlare DDoS JS Challenge]
 !   Blocking attempt to access websites with parameters below will cause problem because this parameter are neccessary for check
 !   that you're really human visitors or not, however, this will pre-warning that the website are use its service and you may get

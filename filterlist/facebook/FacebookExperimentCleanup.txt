@@ -11,9 +11,9 @@
 ! [DOM Sectiom] --------------------------------------------------------------------------------------------------------------- !
 ! [Apply as root, no matter what!]
 ! Hide form dialog to add phone numbers (confirmed affect to any mobile site layout, no idea for desktop site breakage?)
-facebook.com###root form[action^="/phoneacqwrite"]
+facebook.com###root form[action*="/phoneacqwrite"]
 
-! Try apply DOM rules that share the `article` role, Facebook start to add the role name for each post items in every versions,
+! Try apply DOM rules that share the `article` role, Facebook start to add the role name for every post items in every versions,
 ! even basic site.
 facebook.com##div[role="article"] div:has(div > span a[href*="/zero/optin/legal/"])
 facebook.com##div[role="article"] div:has(table a[href*="chaining"])
@@ -37,7 +37,7 @@ web.facebook.com,www.facebook.com##div[id^="mount"] div[data-pagelet="root"] div
 web.facebook.com,www.facebook.com##div[role="article"]:has(div[class] > a[class][href*="promotion_feed_story"])
 
 ! - Reduce intrusive of posts that attract to play instant game by remove the play button and prevent click image, clicking it
-!   doesn't enlarge pictures, but it's directly sent you to instant game!
+!   doesn't enlarge pictures, but it's directly sent you to instant game that your friends are played!
 web.facebook.com,www.facebook.com##div[role="article"] div[class] > a[href*="/instantgames/play/"] div[class]:has(i[class*="sp_"][class*="sx_"])
 web.facebook.com,www.facebook.com##div[role="article"] div[class] > a[href*="/instantgames/play/"]:style(pointer-events: none !important)
 
@@ -46,8 +46,8 @@ web.facebook.com,www.facebook.com##div[role="article"] div[class] > a[href*="/in
 !         even apply `:remove()` procedurual chain if you're navigating within the page, rather than open in new tab or window.
 web.facebook.com,www.facebook.com##div[data-pagelet="root"] div[data-pagelet="page"] div[class] > div[class] a[href^="/login/?"]:upward(8)
 
-! - Also cookie notice overlay, although it's not very annoy like old style of Facebook that try to force users to pressing
-!   "Allow all" button to continue browsing when you're not logged in!
+! - Also cookie notice overlay, although it's not very annoy much, comparing to old style of Facebook that try to show overlay
+!   and tell (**force**) users to pressing "Allow all" button to continue browsing when you're not logged in!
 web.facebook.com,www.facebook.com##div[data-pagelet="root"] div[class] div[data-cookiebanner]
 
 ! [(Old) Facebook Desktop]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -94,8 +94,9 @@ facebook.com###contentArea div[class] > :has(table div[data-onclick*="VideoHomeC
 !   users clicked some of those links. (uBO 1.28.0 or higher is required, this doesn't support XUL versions)
 www.facebook.com###rightCol[role] div[class] div > ul.uiCollapsedList:has(li div a[href*="ref=py_c"]):upward(2):remove
 
-! Try remove (forceful to accept) cookie overlay and restore page scrolling function that stuck by `position: fixed`
+! Try remove (**forceful to accept**) cookie overlay and restore page scrolling function that stuck by `position: fixed`
 web.facebook.com,www.facebook.com##body.hasCookieBanner ._31e:style(position: initial !important)
+web.facebook.com,www.facebook.com##body.hasCookieBanner .uiLayer[data-testid="cookie-policy-banner"]
 web.facebook.com,www.facebook.com##body.hasCookieBanner .uiLayer[data-testid="cookie-policy-banner"]:remove()
 web.facebook.com,www.facebook.com##body.hasCookieBanner div[style^="top:"]:style(position: initial !important)
 
@@ -197,7 +198,7 @@ d.facebook.com,m.facebook.com,mbasic.facebook.com###root table[role] div[class] 
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article div[id][class] #ex_allow
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article div[id][class] #in_allow
 
-! Try remove (forceful to accept) cookie overlay for touchscreen version, this version doesn't override and lockdown page
+! Try remove (**forceful to accept**) cookie overlay for touchscreen version, this version doesn't override and lockdown page
 ! scrolling ability, so just remove overlay dialog is enough.
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.accelerate[data-sigil*="m-layer-root"]:has(div[data-sigil*="m-overlay-layer"] div[class] > a#cpn-pv-link):remove()
 
