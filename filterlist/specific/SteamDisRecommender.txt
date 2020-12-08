@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Steam Dis-Recommender Filters
-! Version: 202011132043
+! Version: 2020122053
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -70,11 +70,6 @@ steamcommunity.com##.games_list .hours_played
 steamcommunity.com##.profile_recentgame_header
 steamcommunity.com##.recent_games
 
-! - Remove non-games badge progress info box! (e.g. Community actions, Seasonal sales, etc.)
-!   * Also include 2010 potato shacks?
-steamcommunity.com##.badges_sheet .badge_row:has(a.badge_row_overlay:not([href*="gamecards"]))
-steamcommunity.com##.badges_sheet .badge_row:has(a.badge_row_overlay[href*="gamecards/335590"])
-
 ! - Hide (your shameful) playtimes spent, green button to download or play game, even FAQ about "How to get card drops" links!
 steamcommunity.com##.badge_title_stats .badge_title_playgame
 steamcommunity.com##.badge_title_stats .badge_title_stats_playtime
@@ -87,6 +82,12 @@ steampowered.com###content_callout.dark:has(.more_content_title)
 ! - Remove curators/publishers pane that show zuckested to follow instead of curators/publishers that you've already following*
 !   * Or you've bought games from related curators/publishers...
 steampowered.com###steam_curators_not_empty:has(.curator_recommendation_capsule)
+
+! [Faded community]
+! - Remove non-games badge progress info box! (e.g. Community actions, Seasonal sales, etc.)
+!   * Also include 2010 potato shacks?
+steamcommunity.com##.badges_sheet .badge_row:has(a.badge_row_overlay:not([href*="gamecards"]))
+steamcommunity.com##.badges_sheet .badge_row:has(a.badge_row_overlay[href*="gamecards/335590"])
 
 ! - If the games you've played are no longer drops card anymore, hide its text instead! (Work only "English" UI)
 steamcommunity.com##.badge_title_stats .progress_info_bold:has-text(/^No /)
@@ -155,9 +156,10 @@ steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .plat
 
 ! Allow tag change and continuous scrolling while search and view game lists.
 ! - Please note, the AJAX requests still bundle with `snr` parameter, this might be trade-off your privacy for that function.
+! - Don't worry, maybe `queryprune` below can help you...
 @@||steampowered.com/search/results$xmlhttprequest,domain=store.steampowered.com
 
-! Requests query strip (require uBO 1.30.9b1 or above!) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Requests query strip (require uBO 1.31.0 or above!) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - This is still under ongoing test, followed until new functions are implemented at final releases, mainly aim to handle any
 !   requests that trying to shift with `snr` parameter, especially when you perfom product search with continuous scrolling,
 !   you can see that I've allowed search results `xhr` but these rules below will still keep catching and blocking requests that
@@ -178,7 +180,8 @@ steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, 
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, strResponsiveViewPrefs)
 
 ! - Prohibit Steam website to detect touch screen from first touch, however, **this cause major site features malfunction!**
-!   * Note that it may require to delete `strResponsiveViewPrefs` cookie first to make this script injection work properly.
+!   * Note that it may require to delete `strResponsiveViewPrefs` cookie first to make this script injection work properly, if
+!     you've forgot to do that before, maybe the `cookie-remover` scriptlet rules will handle it!
 !   * This will helpful in case if you don't want to let `Steam` showing responsive header and menu bar, but you still want to
 !     browse that website as proper desktop site, while use touch screen function as for mouse click and page scrolling.
 steamcommunity.com,steampowered.com##+js(addEventListener-defuser, touchstart)
