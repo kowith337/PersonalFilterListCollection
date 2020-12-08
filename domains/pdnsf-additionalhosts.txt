@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202011011238
+# Version: 202012081332
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -792,6 +792,7 @@ bestwomenintown.com
 betreat.com
 bfmio.com
 bigdoremi.com
+bigfunspace.com
 biggerthanyou14.live
 bigolives.tv
 bikesales.com.au
@@ -810,6 +811,7 @@ bmobil.me
 bmobil.net
 bodelen.com
 bonbonmob.com
+boobi.biz
 bothtrk.com
 bptr88.com
 braverymobtracking.com
