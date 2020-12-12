@@ -1,7 +1,7 @@
 ! uMatrix: Ruleset recipes 1.4.1
 ! Title: Self Custom Ruleset
-! Version: 202008202335
-! VersionNumber: 0.43.0
+! Version: 202012121745
+! VersionNumber: 0.44.0
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
@@ -16,6 +16,13 @@ Bing Translator (Edge Internal)
 		! translate current page properly.
 			_ edge.microsoft.com fetch
 			_ api.cognitive.microsofttranslator.com fetch
+
+Discord (Mid-2020)
+	discord.com *
+		! You should block "Sentry" globally, no matter what!
+		! * sentry.io * block
+		_ discord.gg fetch
+		_ discord.media fetch
 
 Etterna Online
 	etternaonline.com *
