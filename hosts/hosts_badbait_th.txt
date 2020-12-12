@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.1]
 # Title: Thai BadBait Lists (Top level only)
-# Version: 202012082118
+# Version: 202012121112
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -77,6 +77,19 @@
 0.0.0.0 www.thaichana.pro
 # Fake banking identity scamming - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Credits: https://twitter.com/i/status/1336280733191553026
+#          https://pantip.com/topic/40379227
+0.0.0.0 bank777.vip
+0.0.0.0 gdscba.com
+0.0.0.0 scb.gdscba.com
+0.0.0.0 scb.th-help.live
+0.0.0.0 scbstar.com
+0.0.0.0 scheack.com
 0.0.0.0 scbupdateid.org
+0.0.0.0 th-help.live
+0.0.0.0 www.bank777.vip
+0.0.0.0 www.gdscba.com
+0.0.0.0 www.scbstar.com
 0.0.0.0 www.scbupdateid.org
+0.0.0.0 www.scheack.com
+0.0.0.0 www.th-help.live
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
