@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202012131328
+# Version: 202012132004
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -67,6 +67,7 @@ report-uri.*
 # Gambling, scamming and shady mobile supscription services that have some repetitve patterns
 account-th.*
 th-help.*
+th-info.*
 *88*.tk
 *horo.space
 38th*.*

@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.1]
 # Title: Thai BadBait Lists (Top level only)
-# Version: 202012131327
+# Version: 202012132005
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -79,6 +79,7 @@
 # Credits: https://twitter.com/i/status/1336280733191553026
 #          https://pantip.com/topic/40379227
 #          https://pantip.com/topic/40379985
+#          https://pantip.com/topic/40382585
 0.0.0.0 account-th.site
 0.0.0.0 bank777.vip
 0.0.0.0 cc.th-help.site
@@ -91,6 +92,10 @@
 0.0.0.0 scb.th-help.best
 0.0.0.0 scb.th-help.cyou
 0.0.0.0 scb.th-help.live
+0.0.0.0 scb.th-info.best
+0.0.0.0 scb.th-info.cyou
+0.0.0.0 scb.th-info.live
+0.0.0.0 scb.th-info.site
 0.0.0.0 scb.xycit33.top
 0.0.0.0 scb.zzdev.top
 0.0.0.0 scbpro.co.uk
@@ -101,6 +106,10 @@
 0.0.0.0 th-help.cyou
 0.0.0.0 th-help.live
 0.0.0.0 th-help.site
+0.0.0.0 th-info.best
+0.0.0.0 th-info.cyou
+0.0.0.0 th-info.live
+0.0.0.0 th-info.site
 0.0.0.0 www.account-th.site
 0.0.0.0 www.bank777.vip
 0.0.0.0 www.cc.th-help.site
@@ -112,6 +121,10 @@
 0.0.0.0 www.scb.th-help.best
 0.0.0.0 www.scb.th-help.cyou
 0.0.0.0 www.scb.th-help.live
+0.0.0.0 www.scb.th-info.best
+0.0.0.0 www.scb.th-info.cyou
+0.0.0.0 www.scb.th-info.live
+0.0.0.0 www.scb.th-info.site
 0.0.0.0 www.scbpro.co.uk
 0.0.0.0 www.scbstar.com
 0.0.0.0 www.scbupdateid.org
@@ -120,6 +133,10 @@
 0.0.0.0 www.th-help.cyou
 0.0.0.0 www.th-help.live
 0.0.0.0 www.th-help.site
+0.0.0.0 www.th-info.best
+0.0.0.0 www.th-info.cyou
+0.0.0.0 www.th-info.live
+0.0.0.0 www.th-info.site
 0.0.0.0 www.xycit33.top
 0.0.0.0 www.zzdev.top
 0.0.0.0 xycit33.top
