@@ -1,0 +1,53 @@
+[uBlock Origin 1.31.2]
+! Title: Discord Cut-Out! (DOM only)
+! Version: 202012142104
+! Expires: 2 days
+! Author: kowith337
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/specific/DiscordCutOut.txt
+! Description: Only support DOM for english users, probably aim for GB interface, no requests blocking rules yet...
+
+! Hide "Servers discovery" and "Download app" button
+discord.com##ul[data-list-id="guildsnav"] div[class^="listItem"]:has(div[class^="listItemWrapper"] div[data-list-item-id*="app-download-button"])
+discord.com##ul[data-list-id="guildsnav"] div[class^="listItem"]:has(div[class^="listItemWrapper"] div[data-list-item-id*="guild-discover-button"])
+
+! Remove "Add friends" green button on the top
+discord.com##div[class^="base"] section[class^="container"] div[role="tabbar"] div[aria-controls="ADD_FRIEND-tab"]
+
+! Remove all of extra badges that use SVGs and show in user lists in the server (probably all of Boost, Nitro, etc.)
+discord.com##div[id^="members"] div[class] > [class^="nameAndDecorators"] div[role] svg
+
+! Remove its Nitro button that suggest to buy its plan for use emoji outside current servers, while viewing custom emoji details.
+discord.com##div[class^="popoutContainer"] div[class^="emojiSection"] button:has(div[class*="premiumSubscribeButton"])
+
+! Remove emoji items that you cannot use (mostly GIF), unless you're already paid for its Nitrous!
+! However, scrolling may probably looks weird and produce some blank space between...
+discord.com##div[class^="emojiPicker"] div[class^="listItems"] ul li[class*="emojiItemDisabled"]:upward(1)
+
+! Remove unnecessary pane in case if you are't want to making any payments, integrations, subscribe (E-mail spam) newsletters.
+discord.com##div[aria-label="USER_SETTINGS"] nav[class^="sidebar"] div[role="tabbar"] div[class][aria-controls="Connections-tab"]
+discord.com##div[aria-label="USER_SETTINGS"] nav[class^="sidebar"] div[role="tabbar"] div[class][aria-controls^="Discord Nitro"]
+discord.com##div[aria-label="USER_SETTINGS"] nav[class^="sidebar"] div[role="tabbar"] div[class][aria-controls^="Hypesquad"]
+discord.com##div[aria-label="USER_SETTINGS"] nav[class^="sidebar"] div[role="tabbar"] div[class][aria-controls^="Nitro Server"]
+
+! Misc removing (sort by lines)
+!   1. Remove official client download hyperlink in keybind pane
+!   2. Remove hyperlink text under "No gift history"
+!   3. Remove button for add payment methods
+discord.com##div[aria-label="USER_SETTINGS"] div[class^="contentRegion"] div[class^="children"] div[class*="browserNotice"] div a[href*="download"]
+discord.com##div[aria-label="USER_SETTINGS"] div[class^="contentRegion"] div[class^="children"] div[class^="emptyState"] p[class^="emptyStateSubtext"]
+discord.com##div[class^="contentTransitionWrap"] main[class^="contentColumn"] div[class^="flex"] button[class*="lookFilled"]
+
+!#if !env_legacy
+! For non-legacy browsers that support the `:remove()` rules properly, to completely remove DOMs without any traces.
+discord.com##div[aria-label="USER_SETTINGS"] div[class^="contentRegion"] div[class^="children"] div[class*="browserNotice"] div a[href*="download"]:remove()
+discord.com##div[aria-label="USER_SETTINGS"] div[class^="contentRegion"] div[class^="children"] div[class^="emptyState"] p[class^="emptyStateSubtext"]:remove()
+discord.com##div[aria-label="USER_SETTINGS"] nav[class^="sidebar"] div[role="tabbar"] div[class][aria-controls="Connections-tab"]:remove()
+discord.com##div[aria-label="USER_SETTINGS"] nav[class^="sidebar"] div[role="tabbar"] div[class][aria-controls^="Discord Nitro"]:remove()
+discord.com##div[aria-label="USER_SETTINGS"] nav[class^="sidebar"] div[role="tabbar"] div[class][aria-controls^="Hypesquad"]:remove()
+discord.com##div[aria-label="USER_SETTINGS"] nav[class^="sidebar"] div[role="tabbar"] div[class][aria-controls^="Nitro Server"]:remove()
+discord.com##div[class^="base"] section[class^="container"] div[role="tabbar"] div[aria-controls="ADD_FRIEND-tab"]:remove()
+discord.com##div[class^="popoutContainer"] div[class^="emojiSection"] button:has(div[class*="premiumSubscribeButton"]):remove()
+discord.com##ul[data-list-id="guildsnav"] div[class^="listItem"]:has(div[class^="listItemWrapper"] div[data-list-item-id*="app-download-button"]):remove()
+discord.com##ul[data-list-id="guildsnav"] div[class^="listItem"]:has(div[class^="listItemWrapper"] div[data-list-item-id*="guild-discover-button"]):remove()
+!#endif
