@@ -1,6 +1,6 @@
 [uBlock Origin 1.31.2]
 ! Title: Discord Cut-Out! (DOM only)
-! Version: 202012142104
+! Version: 202012152058
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -10,6 +10,15 @@
 ! Hide "Servers discovery" and "Download app" button
 discord.com##ul[data-list-id="guildsnav"] div[class^="listItem"]:has(div[class^="listItemWrapper"] div[data-list-item-id*="app-download-button"])
 discord.com##ul[data-list-id="guildsnav"] div[class^="listItem"]:has(div[class^="listItemWrapper"] div[data-list-item-id*="guild-discover-button"])
+
+! Globally remove large badge in profile card
+discord.com##div[class*="profileBadges"]
+
+! Remove server level indicator
+discord.com##div[class^="guildIconContainer"] div[class^="flowerStarContainer"]
+
+! Remove server boost in popup menu
+discord.com###guild-header-popout div[role="group"]:has(div[class][role][id*="premium"])
 
 ! Remove "Add friends" green button on the top
 discord.com##div[class^="base"] section[class^="container"] div[role="tabbar"] div[aria-controls="ADD_FRIEND-tab"]
