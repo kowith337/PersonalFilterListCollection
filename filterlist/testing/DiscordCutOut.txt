@@ -1,6 +1,6 @@
 [uBlock Origin 1.31.2]
 ! Title: Discord Cut-Out! (DOM only)
-! Version: 202012152058
+! Version: 202012172120
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -20,6 +20,9 @@ discord.com##div[class^="guildIconContainer"] div[class^="flowerStarContainer"]
 ! Remove server boost in popup menu
 discord.com###guild-header-popout div[role="group"]:has(div[class][role][id*="premium"])
 
+! Remove "Send gift" button in type box.
+discord.com##main[class^="chatContent"] form div div[class^="buttons"] button[aria-label="Send a gift"]
+
 ! Remove "Add friends" green button on the top
 discord.com##div[class^="base"] section[class^="container"] div[role="tabbar"] div[aria-controls="ADD_FRIEND-tab"]
 
@@ -29,7 +32,7 @@ discord.com##div[id^="members"] div[class] > [class^="nameAndDecorators"] div[ro
 ! Remove its Nitro button that suggest to buy its plan for use emoji outside current servers, while viewing custom emoji details.
 discord.com##div[class^="popoutContainer"] div[class^="emojiSection"] button:has(div[class*="premiumSubscribeButton"])
 
-! Remove emoji items that you cannot use (mostly GIF), unless you're already paid for its Nitrous!
+! Remove emoji items that you cannot use (mostly GIF and/or cross-server emojis), unless you're already paid for its Nitrous!
 ! However, scrolling may probably looks weird and produce some blank space between...
 discord.com##div[class^="emojiPicker"] div[class^="listItems"] ul li[class*="emojiItemDisabled"]:upward(1)
 
@@ -49,14 +52,18 @@ discord.com##div[class^="contentTransitionWrap"] main[class^="contentColumn"] di
 
 !#if !env_legacy
 ! For non-legacy browsers that support the `:remove()` rules properly, to completely remove DOMs without any traces.
+discord.com###guild-header-popout div[role="group"]:has(div[class][role][id*="premium"]):remove()
 discord.com##div[aria-label="USER_SETTINGS"] div[class^="contentRegion"] div[class^="children"] div[class*="browserNotice"] div a[href*="download"]:remove()
 discord.com##div[aria-label="USER_SETTINGS"] div[class^="contentRegion"] div[class^="children"] div[class^="emptyState"] p[class^="emptyStateSubtext"]:remove()
 discord.com##div[aria-label="USER_SETTINGS"] nav[class^="sidebar"] div[role="tabbar"] div[class][aria-controls="Connections-tab"]:remove()
 discord.com##div[aria-label="USER_SETTINGS"] nav[class^="sidebar"] div[role="tabbar"] div[class][aria-controls^="Discord Nitro"]:remove()
 discord.com##div[aria-label="USER_SETTINGS"] nav[class^="sidebar"] div[role="tabbar"] div[class][aria-controls^="Hypesquad"]:remove()
 discord.com##div[aria-label="USER_SETTINGS"] nav[class^="sidebar"] div[role="tabbar"] div[class][aria-controls^="Nitro Server"]:remove()
+discord.com##div[class*="profileBadges"]:remove()
 discord.com##div[class^="base"] section[class^="container"] div[role="tabbar"] div[aria-controls="ADD_FRIEND-tab"]:remove()
+discord.com##div[class^="guildIconContainer"] div[class^="flowerStarContainer"]:remove()
 discord.com##div[class^="popoutContainer"] div[class^="emojiSection"] button:has(div[class*="premiumSubscribeButton"]):remove()
+discord.com##main[class^="chatContent"] form div div[class^="buttons"] button[aria-label="Send a gift"]:remove()
 discord.com##ul[data-list-id="guildsnav"] div[class^="listItem"]:has(div[class^="listItemWrapper"] div[data-list-item-id*="app-download-button"]):remove()
 discord.com##ul[data-list-id="guildsnav"] div[class^="listItem"]:has(div[class^="listItemWrapper"] div[data-list-item-id*="guild-discover-button"]):remove()
 !#endif
