@@ -1,6 +1,6 @@
 [uBlock Origin 1.31.2]
 ! Title: Discord Cut-Out! (DOM only)
-! Version: 202012172120
+! Version: 202012182136
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -23,7 +23,10 @@ discord.com###guild-header-popout div[role="group"]:has(div[class][role][id*="pr
 ! Remove "Send gift" button in type box.
 discord.com##main[class^="chatContent"] form div div[class^="buttons"] button[aria-label="Send a gift"]
 
-! Remove "Add friends" green button on the top
+! Remove graphic in my friends column in case if you've none of them!
+discord.com##div[class^="peopleColumn"] div[class^="emptyState"]
+
+! Remove "Add friends" green button on the top!
 discord.com##div[class^="base"] section[class^="container"] div[role="tabbar"] div[aria-controls="ADD_FRIEND-tab"]
 
 ! Remove all of extra badges that use SVGs and show in user lists in the server (probably all of Boost, Nitro, etc.)
@@ -62,6 +65,7 @@ discord.com##div[aria-label="USER_SETTINGS"] nav[class^="sidebar"] div[role="tab
 discord.com##div[class*="profileBadges"]:remove()
 discord.com##div[class^="base"] section[class^="container"] div[role="tabbar"] div[aria-controls="ADD_FRIEND-tab"]:remove()
 discord.com##div[class^="guildIconContainer"] div[class^="flowerStarContainer"]:remove()
+discord.com##div[class^="peopleColumn"] div[class^="emptyState"]:remove()
 discord.com##div[class^="popoutContainer"] div[class^="emojiSection"] button:has(div[class*="premiumSubscribeButton"]):remove()
 discord.com##main[class^="chatContent"] form div div[class^="buttons"] button[aria-label="Send a gift"]:remove()
 discord.com##ul[data-list-id="guildsnav"] div[class^="listItem"]:has(div[class^="listItemWrapper"] div[data-list-item-id*="app-download-button"]):remove()
