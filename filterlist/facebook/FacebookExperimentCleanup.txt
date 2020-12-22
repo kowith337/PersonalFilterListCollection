@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202011282211
+! Version: 202012222251
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -199,11 +199,23 @@ d.facebook.com,m.facebook.com,mbasic.facebook.com###root table[role] div[class] 
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article div[id][class] #in_allow
 
 ! Try remove (**forceful to accept**) cookie overlay for touchscreen version, this version doesn't override and lockdown page
-! scrolling ability, so just remove overlay dialog is enough.
+!   scrolling ability, so just remove overlay dialog is enough.
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.accelerate[data-sigil*="m-layer-root"]:has(div[data-sigil*="m-overlay-layer"] div[class] > a#cpn-pv-link):remove()
 
 ! De-metric in new bookmark menu (remove blue dot and text span that count how many new contents you've not seen)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div[class] > a div[class] i.singleDot:upward(2)
+
+! Also in the white bar at the touch screen version (mtouch, touch), since they've promoted "Watch" too often with numbers of
+!   zuckested/promoted videos that you didn't yet watched!
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###mJewelNav div[class] > span[data-sigil="count"]
+
+! Remove unwanted marketplace and videos mini navigator below blue navbar
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###mJewelNav #marketplace_jewel:upward(1)
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###mJewelNav #videos_tab_jewel:upward(1)
+!#if !env_legacy
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###mJewelNav #marketplace_jewel:upward(1):remove()
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###mJewelNav #videos_tab_jewel:upward(1):remove()
+!#endif
 
 ! - Remove CEO's signature in lookback page, plus with "Facebook team" phrase!
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div[class] > a[href*="/zuck"]:has(i[aria-label="Mark"]):upward(1):remove()
