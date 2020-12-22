@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Facebook Zuckestion Killer
-! Version: 202011212156
+! Version: 202012222146
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -216,9 +216,11 @@
 
 ! Facebook Messaging Privacy Aware (is typing, seen message)
 ||facebook.com/*/change_read_status.php$important
+||facebook.com/*/delivery_receipts.php$important
 ||facebook.com/*/mark_seen.php$important
 ||facebook.com/*/typ.php$important
 ||messenger.com/*/change_read_status.php$important
+||messenger.com/*/delivery_receipts.php$important
 ||messenger.com/*/mark_seen.php$important
 ||messenger.com/*/typ.php$important
 
