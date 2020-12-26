@@ -1,6 +1,6 @@
 [uBlock Origin 1.31.0]
 ! Title: kowith337's Test List
-! Version: 202012011941
+! Version: 202012262207
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -129,6 +129,13 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
+! Third parties denied (with some exceptions) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! This make use of `3p` block to block everything that not come from its domain itself, however, `denyallow` rules may included
+!   if some domains requied some other domains that necessary for loading with... (especially CDNs and some required resources)
+$3p,important,domain=greasyfork.org
+$3p,important,domain=pantip.com,denyallow=ptcdn.info
+$3p,important,domain=thairath.co.th,denyallow=byteark.com
+
 ! Unbreak or Allowed only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -141,9 +148,6 @@ facebook.com,instagram.com,messenger.com##+js(cookie-remover, datr)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, noscript)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-referer)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-src)
-
-! Make the related video function corrupted when you're viewing standalone video post on Facebook with `watch` link.
-m.facebook.com,mtouch.facebook.com,touch.facebook.com##+js(acis, requireLazy, mobile_related_video_feed_pagelet)
 
 ! Often show alert dialog when users click to links, also when users trying to right-click.
 checkkorn.com##+js(alert-buster)

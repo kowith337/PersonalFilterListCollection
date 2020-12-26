@@ -1,6 +1,6 @@
 [uBlock Origin 1.17.5.7]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202012222251
+! Version: 202012262206
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -219,6 +219,9 @@ d.facebook.com,m.facebook.com,mbasic.facebook.com###root table[role] div[class] 
 
 ! - Remove CEO's signature in lookback page, plus with "Facebook team" phrase!
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div[class] > a[href*="/zuck"]:has(i[aria-label="Mark"]):upward(1):remove()
+
+! Make the related video function corrupted when you're viewing standalone video post on Facebook with `watch` link.
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##+js(acis, requireLazy, mobile_related_video_feed_pagelet)
 
 ! [Network blocking section]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Prevent modules connections that autoplay GIF comments (May doesn't work at all!)
