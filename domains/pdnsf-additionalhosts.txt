@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202012132004
+# Version: 202101021345
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -130,6 +130,7 @@ intentmedia.net
 keyade.com
 oghub.io
 omtrdc.net
+shrfbdg004.com
 storetail.io
 tagcommander.com
 #trafficmanager.net #{Conflict with some known companies CDN (MS for example)}
@@ -139,8 +140,8 @@ wt-eu02.net
 
 # LeadForenSucks! (I found from "Chocolatey" website that use make6pain domain and lead me to reddit thread @/r/pihole)
 # * I won't give reddit short links due to new reddit and/or browsing with mobile browser is sucks because they want to force you
-#   download goddamn official apps (with goolag and many trackings, ofc.) so, OLD REDDIT IS THE BEST, NEW REDDIT SHOULD BE DEAD!!
-# https://old.reddit.com/r/pihole/comments/g7qv3e
+#   download goddamn official apps (with goolag and many trackings, ofc.) so, I've changed to "Teddit" instance instead!
+# https://teddit.net/r/pihole/comments/g7qv3e/leadforensics_tracking_domains_blacklist
 1-cl0ud.com
 mon-com-01.com
 nyctrl32.com
@@ -2126,6 +2127,7 @@ webana.io
 webdevwebsnew.club
 webspectator.com
 weddingdayphotographerparis.com
+werftipo.com
 wesliptu.pw
 whatshelp.io
 wheretobuydiettrex.com
