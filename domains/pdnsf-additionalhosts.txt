@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202101021345
+# Version: 202101021353
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -1341,6 +1341,7 @@ lovenights.net
 lpalice2appsmart.com
 lpaosub.com
 lqmbet.tk
+ltitrk.com
 ltvperf.com
 lucabetasia.com
 lucky6lucky.club

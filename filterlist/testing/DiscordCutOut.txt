@@ -1,6 +1,6 @@
 [uBlock Origin 1.31.2]
 ! Title: Discord Cut-Out! (DOM only)
-! Version: 202012182136
+! Version: 202101042004
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -53,8 +53,9 @@ discord.com##div[aria-label="USER_SETTINGS"] div[class^="contentRegion"] div[cla
 discord.com##div[aria-label="USER_SETTINGS"] div[class^="contentRegion"] div[class^="children"] div[class^="emptyState"] p[class^="emptyStateSubtext"]
 discord.com##div[class^="contentTransitionWrap"] main[class^="contentColumn"] div[class^="flex"] button[class*="lookFilled"]
 
-!#if !env_legacy
+!#if false
 ! For non-legacy browsers that support the `:remove()` rules properly, to completely remove DOMs without any traces.
+! FOR ANYONE WHO HAVE SOME FRIENDS, THIS WILL TOTALLY BREAK DISCORD AND YOU CANNOT ACCESS ANYTHING, SO I'VE DISABLED FOR NOW!
 discord.com###guild-header-popout div[role="group"]:has(div[class][role][id*="premium"]):remove()
 discord.com##div[aria-label="USER_SETTINGS"] div[class^="contentRegion"] div[class^="children"] div[class*="browserNotice"] div a[href*="download"]:remove()
 discord.com##div[aria-label="USER_SETTINGS"] div[class^="contentRegion"] div[class^="children"] div[class^="emptyState"] p[class^="emptyStateSubtext"]:remove()
