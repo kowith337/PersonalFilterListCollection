@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.1]
 # Title: Thai BadBait Lists (Top level only)
-# Version: 202012172131
+# Version: 202101062116
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -78,6 +78,7 @@
 # Fake banking identity scamming - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Credits: https://nitter.net/i/status/1336280733191553026
 #          https://nitter.net/i/status/1339435294970535936
+#          https://nitter.net/i/status/1346736595752292352
 #          https://pantip.com/topic/40379227
 #          https://pantip.com/topic/40379985
 #          https://pantip.com/topic/40382585
@@ -102,6 +103,7 @@
 0.0.0.0 scb.th-info.xyz
 0.0.0.0 scb.xycit33.top
 0.0.0.0 scb.zzdev.top
+0.0.0.0 scbkweb.com
 0.0.0.0 scbpro.co.uk
 0.0.0.0 scbstar.com
 0.0.0.0 scbupdateid.org
@@ -135,6 +137,7 @@
 0.0.0.0 www.scb.th-info.live
 0.0.0.0 www.scb.th-info.site
 0.0.0.0 www.scb.th-info.xyz
+0.0.0.0 www.scbkweb.com
 0.0.0.0 www.scbpro.co.uk
 0.0.0.0 www.scbstar.com
 0.0.0.0 www.scbupdateid.org
