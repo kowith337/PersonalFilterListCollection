@@ -1,6 +1,6 @@
-[uBlock Origin 1.28.0]
-! Title: Facebook Zuckestion Killer
-! Version: 202012222247
+[uBlock Origin 1.32.4]
+! Title: Facebook Zuckestion Killer - Base
+! Version: 202101112259
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -8,13 +8,15 @@
 ! Description: These rules below are pulled from "Thai Paranoid Block" that have some rules that I've created for hide and remove
 !              zuckestions, ads, related contents, also remove ability to link back to related application from Facebook, such as
 !              Instagram, MESSenger, even Facebook Lite.
+!              For anyone who noticed if this list now appear with `Base` text behind original name that never have it before,
+!              please see additional reason and/or descriptions in the other inclusive filters.
 !
 ! Note 1: Some rules below are too long due to use an xpath, or multiple procedural chaining to make sure it won't accidentally
 !         remove something that really need.
 ! Note 2: Inspired from report on https://github.com/collinbarrett/FilterLists/issues/282
 
 ! Proactive outbound tracking prevention, to prevent Facebook tracking you outside while click and open shared URL (see #19)
-! Remark: If you're using uBlock0 or Nano, try click the magnifier icon to expand all parameters for getting real URL
+! Remark: If you're seeing yellow warning page, try click the magnifier icon to expand all parameters for getting real URL!
 ||*&fbclid=$document,xhr,important,domain=~TRACKING-FBCLID_PARAMS
 ||*?fbclid=$document,xhr,important,domain=~TRACKING-FBCLID_PARAMS
 ||facebook.com/flx/*&h=$document,xhr,important,domain=~TRACKING-OUTGOING_WARN_UNWANTED_H_PARAM
@@ -69,12 +71,12 @@
 ||facebook.com/ajax/photos/logging$important
 ||facebook.com/ajax/react_composer/survey?$important
 ||facebook.com/ajax/typeahead/record_basic_metrics.php$important
-||facebook.com/ascend_mr_no$all,important
+||facebook.com/ascend_mr_no$important
+||facebook.com/async/social_good/$important,~xmlhttprequest
 ||facebook.com/async/social_good/$xmlhttprequest
 ||facebook.com/audience_network/$important
 ||facebook.com/common/referer_frame.php$important
-||facebook.com/dlite/skywalker_topic$important,~xmlhttprequest
-||facebook.com/dlite/skywalker_topic$xmlhttprequest
+||facebook.com/dlite/skywalker_topic$important
 ||facebook.com/ds/$all,~frame,inline-script
 ||facebook.com/ds/ad_choices$important
 ||facebook.com/ds/growth$important
@@ -122,6 +124,8 @@
 ||facebook.com/pubcontent/related_video$important
 ||facebook.com/pubcontent/suggestions$important,~xmlhttprequest
 ||facebook.com/pubcontent/suggestions$xmlhttprequest
+||facebook.com/pymk/$important,~xmlhttprequest
+||facebook.com/pymk/$~xmlhttprequest
 ||facebook.com/pymk/funnel_logging$important
 ||facebook.com/qp/action/redirect$important
 ||facebook.com/related-application/$important
@@ -129,7 +133,7 @@
 ||facebook.com/requests/interaction_history_logging$important
 ||facebook.com/sem_campaigns$important
 ||facebook.com/sem_pixel$important
-||facebook.com/sketch_results$all,important
+||facebook.com/sketch_results$important
 ||facebook.com/suggestions$important
 ||facebook.com/tr?$important
 ||facebook.com/typeahead/search/facebar/nullstate/$important
@@ -144,6 +148,8 @@
 ||facebook.net/*/xfbml.ad.js$script,important
 ||fbcdn.net/*?*facebook.com%2Fads%2F$important
 ||fbcdn.net/*?*facebook.com%2Fajax%2Fads%2F$important
+||fbcdn.net/*?*facebook.com%2Fajax%2Fds%2F$important
+||fbcdn.net/*?*facebook.com%2Fds%2F$importan
 ||fbcdn.net/hads-ak-*$important
 ||fbcdn.net/rsrc.php/*/-PAXP-*.gif$important
 
@@ -224,40 +230,6 @@
 ||messenger.com/*/mark_seen.php$important
 ||messenger.com/*/typ.php$important
 
-! Give the warning if you're using Facebook on some cellular data provider that got redirected to smartphone-focused site,
-! not an actual version of it!
-! e.g. when you want to go 'mbasic.faecbook.com' for super lightweight Facebook mobile version, but you get redirected to
-! 'm.facebook.com' or 'mobile.facebook.com' then show the suggestion page to use Facebook under "Free Basics" campaign,
-! Note: I don't know why it redirected to "h.facebook.com" under non-HTTPS? first before bouncing back to "m.facebook.com"
-!       or "mobile.facebook.com" ? so, I will blocking it!
-! Update: I will keep blocking this, no matter what, when and why...
-! Note 2: Sometime you're able to still use 'm.facebook.com' or 'touch.facebook.com' on mobile data,
-!         but it still make xhr to 'mobile.facebook.com', so it's good to block that!
-! Furthermore: I HATE FreakBasics by Facebook, internet.org also...
-||*&_nc_fbs=*$important,domain=facebook.com|instagram.com|messenger.com
-||*?_nc_fbs=*$important,domain=facebook.com|instagram.com|messenger.com
-||0.facebook.com$important,domain=~FREEBASICS-ZERO_DOMAIN
-||d.facebook.com$important,domain=~FREEBASICS-ZERO_DOMAIN
-||discoverapp.com$important,domain=~FREEBASICS-DISCOVER_SERVICE
-||edge-z-*.facebook.*$important,domain=~FREEBASICS-ZERO_CDN_SERVERS
-||edge-z-*.fbcdn.net$important,domain=~FREEBASICS-ZERO_CDN_SERVERS
-||edge-z-*.fbsbx.com$important,domain=~FREEBASICS-ZERO_CDN_SERVERS_SANDBOX
-||facebook.com/zero/policy$document,important,domain=~FREEBASICS-ZERO_POLICY_PROMPT
-||free.facebook.com$important,domain=~FREEBASICS-ZERO_DOMAIN
-||freebasics.com$important,domain=~FREEBASICS-ZERO_DOMAIN
-||h.facebook.com$important,domain=~FREEBASICS-ZERO_DOMAIN_INSECURE
-||internet.org$important,domain=~FREEBASICS-INTERNET_ORG
-||mobile.facebook.com$important,domain=~FREEBASICS-ZERO_DOMAIN
-||o.facebook.com$important,domain=~FREEBASICS-ZERO_DOMAIN
-||p.facebook.com$important,domain=~FREEBASICS-ZERO_DOMAIN
-||web.facebook.com$document,important,domain=~FREEBASICS-ZERO_DOMAIN
-||z-1-*.facebook.*$important,domain=~FREEBASICS-ZERO_CDN_SERVERS
-||z-1-*.fbcdn.net$important,domain=~FREEBASICS-ZERO_CDN_SERVERS
-||z-1-*.fbsbx.com$important,domain=~FREEBASICS-ZERO_CDN_SERVERS
-||z-m-*.facebook.*$important,domain=~FREEBASICS-ZERO_CDN_SERVERS
-||z-m-*.fbcdn.net$important,domain=~FREEBASICS-ZERO_CDN_SERVERS
-||z-m-*.fbsbx.com$important,domain=~FREEBASICS-ZERO_CDN_SERVERS
-
 ! [Super lightweight Facebook enhancement]
 ! It's no need to load anything that not matter to use, because `mbasic.facebook.com` can work fine without external JavaScript,
 ! iframe and third party resources.
@@ -274,6 +246,7 @@
 
 ! [Resources Replace] Instead of just blocking, then redirect to neutered resources
 ! Experimental for Facebook security pixels, this may break their functionality and security check.
+||facebook.com/*/delivery_receipts.php$xhr,important,redirect=nooptext
 ||facebook.com/ads/boosted_components/fetch_ad_account_data/$xhr,important,redirect=nooptext
 ||facebook.com/ads/coupon/read/offer_data/$xhr,important,redirect=nooptext
 ||facebook.com/ads/preferences/mobile_log/$xhr,important,redirect=nooptext
@@ -293,14 +266,17 @@
 ||facebook.com/ufi/typing/*/stop/$xhr,important,redirect=nooptext
 ||facebook.com/video/instream_video/rapid_feedback$xhr,important,redirect=nooptext
 ||facebook.com/xsemc/$xhr,important,redirect=nooptext
-||facebook.com/xti.php$image,important,redirect=1x1.gif
 ||facebook.com/xti.php$frame,important,redirect=noopframe
+||facebook.com/xti.php$image,important,redirect=1x1.gif
 ||facebook.net/security/hsts-pixel.gif$image,important,redirect=1x1.gif
 ||fbcdn.net/hads-ak-*/*.png$image,important,redirect=2x2.png
 ||fbcdn.net/rsrc.php/*/-PAXP-*.gif$image,important,redirect=1x1.gif
 ||fbcdn.net/security/hsts-pixel.gif$image,important,redirect=1x1.gif
 ||fbsbx.com/security/hsts-pixel.gif$image,important,redirect=1x1.gif
+||messenger.com/*/delivery_receipts.php$xhr,important,redirect=nooptext
 ||messenger.com/security/hsts-pixel.gif$image,important,redirect=1x1.gif
+
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
 ! DOM Hiding - Level 1: Known DOM id and class, some wildcard of element name
 facebook.com###GroupDiscoverCard_Local
@@ -523,6 +499,7 @@ facebook.com##div[role="feed"] div[id*="hyperfeed_story_id"] .mtm:has(div .uiLis
 facebook.com##div[role="feed"] div[id*="hyperfeed_story_id"] .userContentWrapper .mtm .mtm:has(ul.uiList:has(a[href*="/services"]))
 facebook.com##div[role="feed"] div[id*="hyperfeed_story_id"]:has(div ul.uiList:has(li[data-ft*="ego_id"]))
 facebook.com##div[role="feed"] div[id*="mall_post"][id*="SUGGESTED_IN_MALL"]
+facebook.com##div[role="feed"]> div[data-pagelet^="FeedUnit"] div > span > span > a > span:upward(div[data-pagelet^="FeedUnit"])
 m.facebook.com,mbasic.facebook.com###friends_center_main div:has(table tr:has(td a[href*="pymk_funnel_data"]))
 m.facebook.com,mbasic.facebook.com###m_group_stories_container article:has(footer a[href*="/groups/?ref=category_discover_landing"])
 m.facebook.com,mbasic.facebook.com###m_group_stories_container div:has(div a[href*="/findgroups/"])
@@ -728,10 +705,29 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com##article div > div[data-au
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[data-sigil="m-feed-voice-subtitle"] a[href*="/mobile/"][href*="/upsell_link/?"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##section article .story_body_container header div > div a[href*="facebook.com/lite/?"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
 ! Experimental
 ! This work only for specific platform, or for testing out!
+
+! [Apply as root, no matter what!]
+! Hide form dialog to add phone numbers (confirmed affect to any mobile site layout, no idea for desktop site breakage?)
+facebook.com###root form[action*="/phoneacqwrite"]
+
+! Try apply DOM rules that share the `article` role, Facebook start to add the role name for every post items in every versions,
+! even basic site.
+facebook.com##div[role="article"] div:has(div > span a[href*="/zero/optin/legal/"])
+facebook.com##div[role="article"] div:has(table a[href*="chaining"])
+facebook.com##div[role="article"] div:has(table a[href*="chaining"])
+facebook.com##div[role="article"] table td a[href*="/messenger-destination/cta/?"]
+facebook.com##div[role="article"] table[role="presentation"]:has(td a[href*="/profilepicframes"])
+facebook.com##div[role="article"]:has(.fbEventsSuggestionItem)
+facebook.com##div[role="article"]:has(.userContentWrapper div[class] a[target][data-hovercard*="directed_target_id"])
+facebook.com##div[role="article"]:has(div a[href*="/friends/center/"])
+facebook.com##div[role="article"]:has(div[class] > div[style] a[href*="facebook.com/help/"])
+facebook.com##div[role="article"]:has(div[data-ft*="ego_id"]:has(a[href*="?ref=psym_feed"]))
+facebook.com##div[role="article"]:has(iframe[src*="/xti.php?"])
+facebook.com##div[role="article"]:has(span:has-text(/Sponsored/))
 
 ! Hide zuckestions items pane to enforce Facebook fill up their zuckestions, but in fact you see none of any zuckestions at all!
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###friends_center_main div[data-pymk-id]

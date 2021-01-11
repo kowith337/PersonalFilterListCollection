@@ -1,6 +1,6 @@
-[uBlock Origin 1.17.5.7]
+[uBlock Origin 1.32.4]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202012262206
+! Version: 202101112259
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -9,24 +9,6 @@
 !        some functionality seems to be useless for me, not like it or even hate it!
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [DOM Sectiom] --------------------------------------------------------------------------------------------------------------- !
-! [Apply as root, no matter what!]
-! Hide form dialog to add phone numbers (confirmed affect to any mobile site layout, no idea for desktop site breakage?)
-facebook.com###root form[action*="/phoneacqwrite"]
-
-! Try apply DOM rules that share the `article` role, Facebook start to add the role name for every post items in every versions,
-! even basic site.
-facebook.com##div[role="article"] div:has(div > span a[href*="/zero/optin/legal/"])
-facebook.com##div[role="article"] div:has(table a[href*="chaining"])
-facebook.com##div[role="article"] div:has(table a[href*="chaining"])
-facebook.com##div[role="article"] table td a[href*="/messenger-destination/cta/?"]
-facebook.com##div[role="article"] table[role="presentation"]:has(td a[href*="/profilepicframes"])
-facebook.com##div[role="article"]:has(.fbEventsSuggestionItem)
-facebook.com##div[role="article"]:has(.userContentWrapper div[class] a[target][data-hovercard*="directed_target_id"])
-facebook.com##div[role="article"]:has(div a[href*="/friends/center/"])
-facebook.com##div[role="article"]:has(div[class] > div[style] a[href*="facebook.com/help/"])
-facebook.com##div[role="article"]:has(div[data-ft*="ego_id"]:has(a[href*="?ref=psym_feed"]))
-facebook.com##div[role="article"]:has(iframe[src*="/xti.php?"])
-facebook.com##div[role="article"]:has(span:has-text(/Sponsored/))
 
 ! [Newer Facebook Desktop]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Caution: This still under testing stage!
@@ -55,25 +37,25 @@ web.facebook.com,www.facebook.com##div[data-pagelet="root"] div[class] div[data-
 facebook.com##div[data-testid="marketplace_home_feed"] div[class] > div[class]:has(span[itemcomponent]:has-text(/^Top picks/))
 
 ! Top videos for you...? No! Not Me and You! but for someone else!!
-!   Test case to hide every zuckestions of videos and leave only channel list from pages you're following... (pages tiles)
-!   See example at https://imgur.com/a/PAORHlg
+! - Test case to hide every zuckestions of videos and leave only channel list from pages you're following... (pages tiles)
+! - You can see example at https://imgur.com/a/PAORHlg
 facebook.com##.fb_content div[class] > div[class] > #watch_feed
 facebook.com##.fb_content div[class] > div[class] > #watch_feed div[class] div[class][data-ft]:has(div span > div span a[href*="?referrer=video_home"])
 
 ! Remove "More items" (near you?)
-!   This will let your only focus to the products that you want to see more details, no zuckested and related trains.
+! - This will let your only focus to the products that you want to see more details, no zuckested and related trains.
 facebook.com###content.fb_content div[id] div[class] > div[role="main"] div > div:has(span[role=heading]):has(div a[data-testid="marketplace_feed_item"] section #marketplace-modal-dialog-title)
 ! facebook.com###content.fb_content div[id] div[class] > div[role="main"] div > div:has(span[role=heading]:has-text(/^More items/))
 
 ! Remove button and panel that appear under friend tiles (when directly view profile)
-!   However, this will hide entire friend tiles for your profile, but not for others...
+! - However, this will hide entire friend tiles for your profile, but not for others...
 facebook.com###profile_timeline_tiles_unit_pagelets_friends .fbTimelineUnit div[role="article"] div[class] > div[class]:has(div[class] button[data-onclick*="ProfileDiscoveryModalLauncher"])
 
 ! Remove group zuckestion that show in each categories
 facebook.com###GroupDiscoverCard_more_suggestions
 facebook.com###GroupDiscoverCard_top_suggestions
 
-! Block instant games overlay that show over and dim posted images to make attractions for play game(s)
+! Block instant games overlay that show over and dim posted images to make some attract elemtns for play their game(s)
 facebook.com##.userContentWrapper div[data-ft] .mtm a[ajaxify^="/games/quicksilver/spotlight/?"]
 
 ! Top zuckested pages to like (or batch remove via scriptlets) is survived again, expected ads code also survived as well.
@@ -87,11 +69,11 @@ facebook.com##.uiStreamStory div[class] > div div[class] >:has(a[href*="/watch/"
 facebook.com##.userContentWrapper div > div a[ajaxify^="/living_room/share_dialog/"]
 
 ! Remove related video lists (permalink that have `/videos/` path in URL only)
-!  Assumed by DevTools point of view, it's may also logging and/or tracking you if clicked into that?
+! - Assumed by DevTools point of view, it's may also logging and/or tracking you if clicked into that?
 facebook.com###contentArea div[class] > :has(table div[data-onclick*="VideoHomeClickLogger"])
 
 ! Completely remove "Related pages" side panel instead of hiding by detecting `py_c` in `ref` parameter that can remarkable if
-!   users clicked some of those links. (uBO 1.28.0 or higher is required, this doesn't support XUL versions)
+! users clicked some of those links. (uBO 1.28.0 or higher is required, this doesn't support XUL versions)
 www.facebook.com###rightCol[role] div[class] div > ul.uiCollapsedList:has(li div a[href*="ref=py_c"]):upward(2):remove
 
 ! Try remove (**forceful to accept**) cookie overlay and restore page scrolling function that stuck by `position: fixed`
@@ -101,7 +83,7 @@ web.facebook.com,www.facebook.com##body.hasCookieBanner .uiLayer[data-testid="co
 web.facebook.com,www.facebook.com##body.hasCookieBanner div[style^="top:"]:style(position: initial !important)
 
 ! - Remove CEO's signature in lookback page, plus with "Facebook team" phrase!
-web.facebook.com,www.facebook.com###content[role="main"] div[class] > a[href*="/zuck"]:has(img._5q1x[alt]):upward(1):remove()
+web.facebook.com,www.facebook.com###content[role="main"] div[class] > a[href*="/zuck"]:has(img[alt][class]):upward(1):remove()
 
 ! [Facebook Feature Phone Basic]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 ! Finally, weird space between comments also come to this version, freaking cool!!
@@ -126,11 +108,11 @@ d.facebook.com,m.facebook.com,mbasic.facebook.com###root table[role] div[class] 
 
 ! [Facebook Touch]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Try to remove "Paid partnership" posts where the sponsored pages hiring some other pages (mostly viral) to post or announcing.
-!   This may break other posts that show (i) indicator, such as external links from the commonly known branded pages or sites.
+! This may break other posts that show (i) indicator, such as external links from commonly known pages of brand, company or site.
 0.facebook.com,free.facebook.com,m.facebook.com,mtouch.facebook.com,mobile.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##section.storyStream article[data-xt][data-xt-vimp]:has(a[data-sigil*="flyout-causal"])
 
 ! Remove "Big Like" button in message chat, the button will auto change to "Send" once you've start focusing to text box, but it
-!   will change to "Like" button once the text box lost focus, I remove it to prevent sending "Big Like" by mistake!
+! will change to "Like" button once the text box lost focus, I remove it to prevent sending "Big Like" by mistake!
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-messages #root #message-reply-composer form div[data-sigil="marea"] div[class] > button.iconOnly[name="like"]
 
 ! Try to remove weird square box that divide almost every comments
@@ -140,7 +122,7 @@ d.facebook.com,m.facebook.com,mbasic.facebook.com###root table[role] div[class] 
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads .accelerate div[class] > div[class][style] div[class] > a[data-sigil="add"]
 
 ! Remove zuckestion placeholder top bar item (Only affect who get white top bar style)
-!   4th items of top bar, I think their system will pick between marketplace and videos and will be determined by your usage.
+! 4th items of top bar, I think their system will pick between marketplace and videos and will be determined by your usage.
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###mJewelNav div[class]:has(#marketplace_jewel)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###mJewelNav div[class]:has(#watch_jewel)
 
@@ -192,21 +174,21 @@ d.facebook.com,m.facebook.com,mbasic.facebook.com###root table[role] div[class] 
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=4748854339"]))
 
 ! Trying to hide "Allow" button in the business section of advert preferences, it's mean if you disallow advertisers to use your
-!   information to advertise, your choice must be permanent choice and no need to undo!
+! information to advertise or not advertise, your choice must be permanent choice and no need to undo!
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article a[href*="/help/568137493302217"]
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article div[class]:has-text(Your Facebook ad preferences)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article div[id][class] #ex_allow
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article div[id][class] #in_allow
 
 ! Try remove (**forceful to accept**) cookie overlay for touchscreen version, this version doesn't override and lockdown page
-!   scrolling ability, so just remove overlay dialog is enough.
+! scrolling ability, so just remove overlay dialog is enough.
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##.accelerate[data-sigil*="m-layer-root"]:has(div[data-sigil*="m-overlay-layer"] div[class] > a#cpn-pv-link):remove()
 
 ! De-metric in new bookmark menu (remove blue dot and text span that count how many new contents you've not seen)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div[class] > a div[class] i.singleDot:upward(2)
 
 ! Also in the white bar at the touch screen version (mtouch, touch), since they've promoted "Watch" too often with numbers of
-!   zuckested/promoted videos that you didn't yet watched!
+! zuckested/promoted videos that you didn't yet watched!
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###mJewelNav div[class] > span[data-sigil="count"]
 
 ! Remove unwanted marketplace and videos mini navigator below blue navbar

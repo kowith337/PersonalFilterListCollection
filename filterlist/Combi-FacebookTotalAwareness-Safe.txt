@@ -8,6 +8,7 @@
 !              your extension settings (uBlock0/Nano) that how frequently update will be triggered.
 !#if ext_ublock
 !#include facebook/FacebookZuckestionKiller.txt
+!#include facebook/FacebookZuckestionKiller-ZeroDenyAdd.txt
 !#include facebook/FacebookCommands.txt
 !#include facebook/FacebookChatAwareness.txt
 !#endif
