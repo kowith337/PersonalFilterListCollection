@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202101021353
+# Version: 202101132202
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -173,6 +173,10 @@ orpheusdroid.com
 
 # Prohibit zuckestions to use 3p domains for downloading official (with lots of ads and tracking codes) apps!
 app.link
+
+# Less privacy instance block, they've use the "Crapflare" for issuer and hosting, so it's not recommended to use on that hosts!
+#ggc-project.de
+#kavin.rocks
 
 # [Wound ashes fox] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Sorry for anyone who use CloudFlare DNS resolvers, but it's just my opinion to block due to Firefox's wrong turn!
@@ -862,6 +866,7 @@ cpinfantil.com
 cpitraffic.com
 cpsee.com
 cpweb.com
+crackdownon.com
 crashlytics.com
 crazyegg.com
 crazyregion.com
@@ -2047,6 +2052,7 @@ useinsider.com
 user-api.com
 user-clicks.com
 user-red.com
+useridbangkokbank.net
 uustoughtonma.org
 v432.com
 va-endpoint.com
