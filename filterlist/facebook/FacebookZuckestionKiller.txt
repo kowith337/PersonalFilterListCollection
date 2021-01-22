@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.4]
 ! Title: Facebook Zuckestion Killer - Base
-! Version: 202101112259
+! Version: 202101221329
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -41,7 +41,7 @@
 ||facebook.com/*/promotion_trigger_info$all,important
 ||facebook.com/ad_campaign/landing.php$important
 ||facebook.com/adnw_logging/$important
-||facebook.com/ads/$all,
+||facebook.com/ads/$all
 ||facebook.com/ads/ad_choices$important
 ||facebook.com/ads/growth$important
 ||facebook.com/ads/manager/ajax/check_tip_qe$important
@@ -50,7 +50,7 @@
 ||facebook.com/ads/preferences/mobile_log/$important
 ||facebook.com/ads/qe/$important
 ||facebook.com/ai.php$frame,important
-||facebook.com/ajax/$beacon,ping,important
+||facebook.com/ajax/$beacon,important
 ||facebook.com/ajax/ads/$important
 ||facebook.com/ajax/browse/null_state.php$important
 ||facebook.com/ajax/haste-response/?modules=*LinkshimLogController$important
@@ -149,7 +149,7 @@
 ||fbcdn.net/*?*facebook.com%2Fads%2F$important
 ||fbcdn.net/*?*facebook.com%2Fajax%2Fads%2F$important
 ||fbcdn.net/*?*facebook.com%2Fajax%2Fds%2F$important
-||fbcdn.net/*?*facebook.com%2Fds%2F$importan
+||fbcdn.net/*?*facebook.com%2Fds%2F$important
 ||fbcdn.net/hads-ak-*$important
 ||fbcdn.net/rsrc.php/*/-PAXP-*.gif$important
 
