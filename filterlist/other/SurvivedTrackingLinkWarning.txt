@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 202012011956
+! Version: 202102012218
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -104,15 +104,15 @@
 ||google.*/*?*&bih=$document,important,domain=~GoogleTracking-BrowserScreenHeight
 ||google.*/*?*&biw=$document,important,domain=~GoogleTracking-BrowserScreenWidth
 ||google.*/*?*&ei=$document,important,domain=~GoogleTracking-EncrypyedEpochTimeInteraction
-||google.*/*?*&rlz=$document,important,domain=~GoogleTracking-RLZ-AKA-ChromeInstallerID
+||google.*/*?*&rlz=$document,important,domain=~GoogleTracking-RLZ-ChromeInstallerID
 ||google.*/*?*&sxsrf=$document,important,domain=~GoogleTracking-SXSRF
 ||google.*/*?*&usg=$document,important,domain=~GoogleTracking-SearchResult_USG-ClickTrack
-||google.*/*?*&ved=$document,important,domain=~GoogleTracking-SearchResult_VED-ClickTrack
+||google.*/*?*&ved=$document,important,domain=~GoogleTracking-SearchResult_VED-UniqueSearchID
 ||google.*/*?*&vet=$document,important,domain=~GoogleTracking-VET-PlainEpochTimer
 ||google.*/*?bih=$document,important,domain=~GoogleTracking-BrowserScreenHeight
 ||google.*/*?biw=$document,important,domain=~GoogleTracking-BrowserScreenWidth
 ||google.*/*?ei=$document,important,domain=~GoogleTracking-EncrypyedEpochTimeInteraction
-||google.*/*?rlz=$document,important,domain=~GoogleTracking-RLZ-AKA-ChromeInstallerID
+||google.*/*?rlz=$document,important,domain=~GoogleTracking-RLZ-ChromeInstallerID
 ||google.*/*?sxsrf=$document,important,domain=~GoogleTracking-SXSRF
 ||google.*/*?usg=$document,important,domain=~GoogleTracking-SearchResult-USG
 ||google.*/*?ved=$document,important,domain=~GoogleTracking-SearchResult-VED
@@ -162,10 +162,14 @@
 ||play.google.com/*&referrer=$document,important,domain=~GPlayTracking_Referrer
 ||play.google.com/*?pcampaignid=$document,important,domain=~GPlayTracking_PromotedCampaignID
 ||play.google.com/*?referrer=$document,important,domain=~GPlayTracking_Referrer
-||steamcommunity.com/*&snr=$document,important,domain=~SteamTracking_SNR
-||steamcommunity.com/*?snr=$document,important,domain=~SteamTracking_SNR
-||steampowered.com/*&snr=$document,important,domain=~SteamTracking_SNR
-||steampowered.com/*?snr=$document,important,domain=~SteamTracking_SNR
+||steamcommunity.com/*&ser=$document,important,domain=~SteamTracking_EMailReferrer
+||steamcommunity.com/*?ser=$document,important,domain=~SteamTracking_EMailReferrer
+||steampowered.com/*&ser=$document,important,domain=~SteamTracking_EMailReferrer
+||steampowered.com/*?ser=$document,important,domain=~SteamTracking_EMailReferrer
+||steamcommunity.com/*&snr=$document,important,domain=~SteamTracking_NavigationReferrer
+||steamcommunity.com/*?snr=$document,important,domain=~SteamTracking_NavigationReferrer
+||steampowered.com/*&snr=$document,important,domain=~SteamTracking_NavigationReferrer
+||steampowered.com/*?snr=$document,important,domain=~SteamTracking_NavigationReferrer
 
 ! Known breaking, at your own risk!
 ! [CloudFlare DDoS JS Challenge]

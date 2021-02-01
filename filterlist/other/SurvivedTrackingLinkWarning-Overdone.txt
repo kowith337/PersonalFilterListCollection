@@ -1,6 +1,6 @@
 [uBlock Origin 1.31.0]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202012011952
+! Version: 202102012218
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -153,13 +153,13 @@
 ||google.*/*?*&biw=$subdocument,xmlhttprequest
 ||google.*/*?*&ei=$document,important,domain=~GoogleTracking-EncrypyedEpochTimeInteraction
 ||google.*/*?*&ei=$subdocument,xmlhttprequest
-||google.*/*?*&rlz=$document,important,domain=~GoogleTracking-RLZ-AKA-ChromeInstallerID
+||google.*/*?*&rlz=$document,important,domain=~GoogleTracking-RLZ-ChromeInstallerID
 ||google.*/*?*&rlz=$subdocument,xmlhttprequest
 ||google.*/*?*&sxsrf=$document,important,domain=~GoogleTracking-SXSRF
 ||google.*/*?*&sxsrf=$subdocument,xmlhttprequest
 ||google.*/*?*&usg=$document,important,domain=~GoogleTracking-SearchResult_USG-ClickTrack
 ||google.*/*?*&usg=$subdocument,xmlhttprequest
-||google.*/*?*&ved=$document,important,domain=~GoogleTracking-SearchResult_VED-ClickTrack
+||google.*/*?*&ved=$document,important,domain=~GoogleTracking-SearchResult_VED-UniqueSearchID
 ||google.*/*?*&ved=$subdocument,xmlhttprequest
 ||google.*/*?*&vet=$document,important,domain=~GoogleTracking-VET-PlainEpochTimer
 ||google.*/*?*&vet=$subdocument,xmlhttprequest
@@ -169,7 +169,7 @@
 ||google.*/*?biw=$subdocument,xmlhttprequest
 ||google.*/*?ei=$document,important,domain=~GoogleTracking-EncrypyedEpochTimeInteraction
 ||google.*/*?ei=$subdocument,xmlhttprequest
-||google.*/*?rlz=$document,important,domain=~GoogleTracking-RLZ-AKA-ChromeInstallerID
+||google.*/*?rlz=$document,important,domain=~GoogleTracking-RLZ-ChromeInstallerID
 ||google.*/*?rlz=$subdocument,xmlhttprequest
 ||google.*/*?sxsrf=$document,important,domain=~GoogleTracking-SXSRF
 ||google.*/*?sxsrf=$subdocument,xmlhttprequest
@@ -275,13 +275,21 @@
 ||play.google.com/*?pcampaignid=$subdocument,xmlhttprequest
 ||play.google.com/*?referrer=$document,important,domain=~GPlayTracking_Referrer
 ||play.google.com/*?referrer=$subdocument,xmlhttprequest
-||steamcommunity.com/*&snr=$document,important,domain=~SteamTracking_SNR
+||steamcommunity.com/*&ser=$document,important,domain=~SteamTracking_EMailReferrer
+||steamcommunity.com/*&ser=$subdocument,xmlhttprequest
+||steamcommunity.com/*&snr=$document,important,domain=~SteamTracking_NavigationReferrer
 ||steamcommunity.com/*&snr=$subdocument,xmlhttprequest
-||steamcommunity.com/*?snr=$document,important,domain=~SteamTracking_SNR
+||steamcommunity.com/*?ser=$document,important,domain=~SteamTracking_EMailReferrer
+||steamcommunity.com/*?ser=$subdocument,xmlhttprequest
+||steamcommunity.com/*?snr=$document,important,domain=~SteamTracking_NavigationReferrer
 ||steamcommunity.com/*?snr=$subdocument,xmlhttprequest
-||steampowered.com/*&snr=$document,important,domain=~SteamTracking_SNR
+||steampowered.com/*&ser=$document,important,domain=~SteamTracking_EMailReferrer
+||steampowered.com/*&ser=$subdocument,xmlhttprequest
+||steampowered.com/*&snr=$document,important,domain=~SteamTracking_NavigationReferrer
 ||steampowered.com/*&snr=$subdocument,xmlhttprequest
-||steampowered.com/*?snr=$document,important,domain=~SteamTracking_SNR
+||steampowered.com/*?ser=$document,important,domain=~SteamTracking_EMailReferrer
+||steampowered.com/*?ser=$subdocument,xmlhttprequest
+||steampowered.com/*?snr=$document,important,domain=~SteamTracking_NavigationReferrer
 ||steampowered.com/*?snr=$subdocument,xmlhttprequest
 
 ! Soft problematic!
