@@ -1,6 +1,6 @@
 [uBlock Origin 1.31.0]
 ! Title: kowith337's Test List
-! Version: 202102032045
+! Version: 202102032058
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -77,15 +77,15 @@ tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม็�
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม็อบ7"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม็อบ8"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม็อบ9"])
-twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*=hashtag/ม็อบ1"])
-twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*=hashtag/ม็อบ2"])
-twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*=hashtag/ม็อบ3"])
-twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*=hashtag/ม็อบ4"])
-twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*=hashtag/ม็อบ5"])
-twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*=hashtag/ม็อบ6"])
-twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*=hashtag/ม็อบ7"])
-twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*=hashtag/ม็อบ8"])
-twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*=hashtag/ม็อบ9"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ1"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ2"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ3"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ4"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ5"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ6"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ7"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ8"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ9"])
 
 
 ! [Pantip] Explicit and spam topic name (Use Thai unicode characters because most language of this site are mainly in Thai)
