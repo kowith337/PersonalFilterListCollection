@@ -121,15 +121,19 @@ affex.org
 at-o.net
 ati-host.net
 bp01.net
-cloudapp.net
+#cloudapp.net #{MS edge use subserver from this domain to serving setup and update files, finding other solutions.}
+data.adobedc.net
 dnsdelegation.io
 ebis.ne.jp
 eulerian.net
+ghochv3eng.trafficmanager.net
 inscname.net
+intent.com
 intentmedia.net
 keyade.com
 oghub.io
 omtrdc.net
+sc.adobedc.net
 shrfbdg004.com
 storetail.io
 tagcommander.com
@@ -175,15 +179,16 @@ orpheusdroid.com
 app.link
 
 # Less privacy instance block, they've use the "Crapflare" for issuer and hosting, so it's not recommended to use on that hosts!
+# Note: "GGC Project" maybe somewhat acceptable because of not use the "Crapflare" certificates and use "Let's encrypt" instead.
 #ggc-project.de
-#kavin.rocks
+kavin.rocks
 
 # [Wound ashes fox] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# Sorry for anyone who use CloudFlare DNS resolvers, but it's just my opinion to block due to Firefox's wrong turn!
-# e.g. Out-of-box config of Firefox use "TRR" resolvers (aka. DoH) from CloudFlare by default!
-#      Currently applying now with include NextDNS as a fellow alternative choice, but it's still use CloudFlare by default!
-#      Note: I've also see Chrome also use CloudFlare DoH that pointed to `chrome.cloudflare-dns.com`, so this will block both,
-#            also include `family`, `malware` and `security` servers.
+# Sorry for anyone who use "CrapFlare" DNS resolvers, but it's just my opinion to block due to Firefox's wrong turn!
+# e.g. Out-of-box config of Firefox use "TRR" resolvers (aka. DoH) from "CrapFlare" by default!
+#      Currently applying now with include "NextDNS" as a fellow alternative choice, but they still prfer "CrapFlare" by default!
+#      Note: I've also see Chromium-based use its DoH servers, such as `chrome.`, `opera.` and vise versa, so this will be block
+#            all of subservers, even `family`, `malware` and `security` servers!
 cloudflare-dns.com
 
 # More privacy enhanced for Firefox users, make sure you've disable their internal TRR first.

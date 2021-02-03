@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: iHateCircles
-! Version: 202101131340
+! Version: 202102031335
 ! Expires: 2 days
 ! Author: kowith337, DandelionSprout and contributors
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css
@@ -39,6 +39,7 @@ youtube.com##yt-img-shadow:style(border-radius: 0px !important)
 !            'Invidious', 'Nitter' and 'Teddit'
 !       2. Instances where it on "Onion" or "I2P" also ignored for more anonimity and privacy.
 bg.endl.site,bibliogram.13ad.de,bibliogram.art,bibliogram.ethibox.fr,bibliogram.hamster.dance,bibliogram.nixnet.services,bibliogram.pixelfed.uno,bibliogram.pussthecat.org,bibliogram.snopyta.org##*:style(border-radius: 0px !important)
+bg.endl.site,bibliogram.13ad.de,bibliogram.art,bibliogram.ethibox.fr,bibliogram.hamster.dance,bibliogram.nixnet.services,bibliogram.pixelfed.uno,bibliogram.pussthecat.org,bibliogram.snopyta.org##img.pfp:style(border-radius: 0px !important)
 invidiou.site,invidious.fdn.fr,invidious.mservice.ru.com,invidious.snopyta.org,invidious.tube,invidious.xyz,invidious.zapashcanon.fr,tube.connect.cafe,vid.mint.lgbt##*:style(border-radius: 0px !important)
 n.itoma.tech,nitter.13ad.de,nitter.1d4.us,nitter.42l.fr,nitter.cattube.org,nitter.fdn.fr,nitter.mastodont.cat,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##*:style(border-radius: 0px !important)
 teddit.net##*:style(border-radius: 0px !important)

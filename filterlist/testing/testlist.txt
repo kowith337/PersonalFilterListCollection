@@ -1,6 +1,6 @@
 [uBlock Origin 1.31.0]
 ! Title: kowith337's Test List
-! Version: 202101042130
+! Version: 202102031332
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -59,9 +59,10 @@ blognone.com##.content-container:has(.meta span.terms .field-item a[href*="/thai
 blognone.com###block-system-main .content .node:has(.meta span.terms .field-item a[href*="/thailand"]) .comment-comments:remove()
 
 ! [Pantip] Explicit and spam topic name (Use Thai unicode characters because most language of this site are mainly in Thai)
-pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(วรพจน์))
-pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(มาลาริน/))
 pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(ตระกองขวัญ))
+pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(มาลาริน/))
+pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(วรพจน์))
+pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(หล่อขวัญ))
 
 ! [Taobao Mobile] Aim to remove "you may also like" items, but using the chinese word (MiscAnnoyance use `nth-of-type` method)
 m.intl.taobao.com##.App .recommend .recommend-list-wrapper:has(.recommend-title:has-text(邻家好货))
@@ -82,7 +83,7 @@ m.intl.taobao.com##.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,
 ! [Twitter]
 ! - Aim to remove who to follow / related users (aka. ZUCKESTIONS)
 !   * Please note: these rules are produce huge problematic, it's also hide all user lists that have "Follow" button, no matter
-!     about any state of user following! you can keep using this if you're not intent to follow other peoples much!~
+!     about any state of user following! you can keep using this if you're not intent to follow other peoples too much!~
 twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(a[role="link"][data-focusable][href^="/i/"])
 twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(div[role="button"][data-focusable][data-testid="UserCell"] a[aria-hidden][tabindex][href]):has(a[role="link"][data-focusable] div[dir="auto"] span[dir="auto"])
 twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(a[href^="/i/related_users"])
@@ -91,20 +92,19 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 
 ! Specific requests filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! "Query Prune" experiment
-! Info: Only handling some query that not necessary to binding in for specific requests rather than `document`, this may conflict
+! Note: Only handling some query that not necessary to binding in for specific requests rather than `document`, this may conflict
 !       with "Anti survived tracking link warning" filterlist that strictly blocked page when shady parameters are binding with
-!       any URLs for keep tracking users whenever you're visiting some sites out of social platform.
-! Note: This still under developement, require uBO 1.30.9b1 or above and modern browsers, sideload extenstion may also required!
-||facebook.com/*&entry*=$1p,xhr,important,queryprune=|entry
-||facebook.com/*&privacy_*=$1p,xhr,queryprune=|privacy_
+!       any URLs for keep tracking users, even you're visiting some sites off-of social platform.
 ||facebook.com/*&__cft__*=$1p,queryprune=|__cft__
 ||facebook.com/*&__tn__=$1p,xhr,important,queryprune=__tn__
 ||facebook.com/*&__xts__*=$1p,queryprune=|__xts__
-||facebook.com/*?entry*=$1p,xhr,important,queryprune=|entry
-||facebook.com/*?privacy_*=$1p,xhr,queryprune=|privacy_
+||facebook.com/*&entry*=$1p,xhr,important,queryprune=|entry
+||facebook.com/*&privacy_*=$1p,xhr,queryprune=|privacy_
 ||facebook.com/*?__cft__*=$1p,queryprune=|__cft__
 ||facebook.com/*?__tn__=$1p,xhr,important,queryprune=__tn__
 ||facebook.com/*?__xts__*=$1p,queryprune=|__xts__
+||facebook.com/*?entry*=$1p,xhr,important,queryprune=|entry
+||facebook.com/*?privacy_*=$1p,xhr,queryprune=|privacy_
 ||facebook.com/a/*&fb_dtsg=$1p,queryprune=fb_dtsg
 ||facebook.com/a/*&fb_dtsg_*=$1p,queryprune=|fb_dtsg_
 ||facebook.com/a/*?fb_dtsg=$1p,queryprune=fb_dtsg
@@ -116,8 +116,10 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 ||fbcdn.net/*&_nc_*=$css,script,domain=facebook.com|messenger.com,queryprune=|_nc_
 ||fbcdn.net/*?_nc_*=$css,script,domain=facebook.com|messenger.com,queryprune=|_nc_
 ||steampowered.com/*&curator_clanid=$queryprune=curator_clanid
+||steampowered.com/*&ser=$queryprune=snr,important
 ||steampowered.com/*&snr=$queryprune=snr,important
 ||steampowered.com/*?curator_clanid=$queryprune=curator_clanid
+||steampowered.com/*?ser=$queryprune=snr,important
 ||steampowered.com/*?snr=$queryprune=snr,important
 ||youtube-nocookie.com/get_video_info?*&ei=$xhr,queryprune=ei
 ||youtube-nocookie.com/get_video_info?ei=$xhr,queryprune=ei
