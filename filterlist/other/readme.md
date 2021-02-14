@@ -30,10 +30,10 @@ As usual, only uBlock Origin (also other forks, but I don't recommend anything o
 
 ### Supported sites (for current)
 - Chocolate Minecraft [`chocolateminecraft.com`]
+- Chocolatey packages [`chocolatey.org`]
 - Google (wildcard TLD) [`google.*`]
 - GitHub [`github.com`]
 - GreasyFork [`greasyfork.org`]
-- ~~Linkis [`linkis.com`]~~
 - Minecraft Forge [`files.minecraftforge.net`]
 - Ookla Speed Test [`speedtest.net`]
 - Optifine [`optifine.net`]
