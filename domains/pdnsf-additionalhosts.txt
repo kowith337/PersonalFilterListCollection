@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202101132202
+# Version: 202102211359
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -33,6 +33,7 @@ digital
 fit
 fun
 icu
+link
 live
 mobi
 online
@@ -457,15 +458,15 @@ z-*.messenger.*
 # - Obviously! How many bad reputations, news and shoutouts about privacy while using Facebook right now!?
 # - If you've previously pair your phone numbers with your account, well, RIP your privacy, I cannot do anothing more...
 # - From above, it's become easy to use (very limitation without images and videos) Facebook and MESSenger for free under
-#   "Free BaSucks", oops! "Free Basics" if you do, then good luck out there, and again, RIP your privacy and phone numbers, too!!
-#   Expected telesales who retrieve your numbers by anyway that they can will mass spam call to your numbers more and more!?
+#   "Free BaSucks", oops! "Free Basics" if you do, then good luck out there and again, RIP your privacy and phone numbers, too!!
+#   * Expected telesales who retrieve your numbers by anyway that they can will mass spam call to your numbers more and more!?
 # - Some shady companies in my country are also use those method above to resolve phone numbers via those headers and protocol
 #   for silently subscribe garbage contents and/or simply charging additional costs in billing or deduct prepaid calling balance,
 #   with or without anything sending right to your mobile phone! (by SMS, MMS, WAP Push, etc.)
 # Even their Free Basics domains was blocked, they can still tracking you from the main and sub hosts with that methods as well!
-# Note: They will binding your "DATR" cookie with mobile carrier name that you're using and also store it for 2-3 days, even
-#       you've already avoid using Facebook on mobile data during, you can check with diagnostics page at
-#       `https://m.facebook.com/diagnostics` and see if they show "Recent carriers (DATR)" data and remembered it or not.
+# Note: They will binding your "DATR" cookie with mobile carrier name that you're using and also store it for 2-3 days or maybe
+#       longer, even you've already avoid using Facebook on mobile data during, you should check with diagnostics page at
+#       `https://m.facebook.com/diagnostics` and see if they show "Recent carriers (DATR)" name and still remembered it or not!?
 0.facebook.com
 discoverapp.com
 expresswifi.com
@@ -482,12 +483,12 @@ z.facebook.com
 zero.facebook.com
 
 # I knew it's will break anything that rely to Facebook, such as MESSenger, Login with, Play (instant) games, Comments, etc.
-# But in other words, make use of third party login button and/or plugins are mean allow its platform to tracking you easily,
-# regardless about that you've previously logged in to their service or not!
+#   But in other words, make use of third party login button and/or plugins are mean allow its platform to tracking you easily
+#   regardless about you've previously logged in to their service or not!
 # For more safety, Don't use in-app browser! Facebook know you are logged in if you enter any websites that put plugins and/or
-# tracking code on that sites, in other words, you can blame site owner who have done that!!
+#   tracking code on that sites, in other words, you can blame site owner who have done that too!!
 # However, since Facebook improve ability to track users by make use of "fbclid", even you've use another browsers to open links
-# from Facebook, you may better use something to strip them out! e.g.
+#   from Facebook, you may better use something to strip them out! e.g.
 # - UntrackMe [Full Version] (Strip tracking params and Redirect to privacy-friendly instances)
 #   > : https://f-droid.org/packages/app.fedilab.nitterizeme
 # - Stoutner's Privacy Browser (Android): https://f-droid.org/packages/com.stoutner.privacybrowser.standard
@@ -551,6 +552,7 @@ fbpigeon.com
 4v4jfe79erfxfu8z8.com
 54646.co
 55555getcontent.com
+55ve.cc
 5rio.com
 5sys.com
 6969jp.xyz
@@ -744,6 +746,7 @@ bigfunspace.com
 biggerthanyou14.live
 bigolives.tv
 bikesales.com.au
+biktv.com
 billmscurlrev.com
 billyaffcontent.com
 bingsu.devpantip.com
@@ -939,6 +942,7 @@ downloadhub.me
 downloadwap.co.uk
 downloadwap.com
 dreamgame33.com
+ds08.pw
 dsglp.com
 dsgpy.com
 dtacplay.com
@@ -1007,6 +1011,7 @@ focusonone.cc
 followyoutech.com
 footballzean.com
 footprint.net
+forest-interactive.com
 formulawire.com
 fout.jp
 frechint.com
@@ -1030,6 +1035,7 @@ fungame.mobi
 fungirl.mobi
 funmobile.com
 funmobileth.com
+funmunch.mobi
 funnyclub.tv
 funnytime.guru
 funseahk.com
@@ -1167,6 +1173,7 @@ hareebota.com
 hariken.co
 havfun.mobi
 hayhaa.com
+hb588.cc
 hbengineeringworks.com
 hbplatform.com
 hclips.net
@@ -1311,6 +1318,8 @@ laanbok.pw
 lalamobi.com
 landorum.pw
 larnload.com
+lawaapp.com
+lawaweb.com
 lbc8.tk
 lce9v.com
 leadboltapps.net
@@ -1335,6 +1344,7 @@ linksynergy.com
 lipsxipac.pw
 livingingroutfits.com
 ln.is
+load03.biz
 load55.com
 loadded.com
 loadfree2u.com
@@ -1522,6 +1532,7 @@ mustang-browser.com
 mv1.in
 mweb.com
 myappfree.com
+mychatpremium.com
 mydala.com
 myfortune.space
 mygirlshow.com
@@ -1636,6 +1647,7 @@ peakperformsrv.com
 peavidev.pw
 peerfly.com
 perfectmarket.com
+perfekt.cyou
 perfonspot.com
 performancerevenues.com
 petametrics.com
@@ -1816,7 +1828,9 @@ seacom.co.th
 seaman2u.com
 secudatago.com
 secure-guard.online
+secure-net.link
 securecloud-mb.com
+securitymobile.club
 sedapmeesiam.gold
 segimaid.com
 sendo.club
@@ -1950,6 +1964,7 @@ terragonbase.com
 tescolotus-th.club
 th-scr888.com
 th1cs.com
+thacyber.com
 thai-chana.asia
 thai-iphone.com
 thai-sms.com
@@ -1976,6 +1991,7 @@ thinksmart.co.th
 thisilike.net
 thmobi.com
 thquestionnaire.com
+thrillingo.com
 thstats.com
 thsurveys.com
 thtrackingap.com
@@ -2047,6 +2063,7 @@ ubic-global.com
 ublock.org
 ude182.com
 ugjbet.tk
+uikingfra.top
 umeng.com
 umobi.biz
 unithese-resteven.icu
@@ -2083,6 +2100,7 @@ vilandsoft.com
 vilangames.xyz
 vipcliphd.com
 vipgames.me
+vips.pw
 viral-mix.com
 visitor-analytics.io
 visualwebsiteoptimizer.com
@@ -2175,6 +2193,7 @@ yibsee.com
 yieldmo.com
 yim88.tk
 you-health.net
+youbbster.com
 youlaugh.online
 your-sweet-girls1.com
 yourstukov.com
