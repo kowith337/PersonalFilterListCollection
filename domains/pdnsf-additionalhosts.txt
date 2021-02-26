@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202102211359
+# Version: 202102262222
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -118,6 +118,8 @@ yengo.*
 # Credits: https://github.com/nextdns/cname-cloaking-blocklist/raw/master/domains
 2o7.net
 a8.net
+actonservice.com
+actonsoftware.com
 affex.org
 at-o.net
 ati-host.net
@@ -126,6 +128,7 @@ bp01.net
 data.adobedc.net
 dnsdelegation.io
 ebis.ne.jp
+eloqua.com
 eulerian.net
 ghochv3eng.trafficmanager.net
 inscname.net
@@ -134,19 +137,20 @@ intentmedia.net
 keyade.com
 oghub.io
 omtrdc.net
+pardot.com
 sc.adobedc.net
 shrfbdg004.com
 storetail.io
 tagcommander.com
-#trafficmanager.net #{Conflict with some known companies CDN (MS for example)}
+#trafficmanager.net #{Conflict with some known companies CDN and brake MS authen app that you cannot recieve login notifications}
 webtrekk.net
 wizaly.com
 wt-eu02.net
 
-# LeadForenSucks! (I found from "Chocolatey" website that use make6pain domain and lead me to reddit thread @/r/pihole)
+# LeadForenSucks! (I found from "Chocolatey" website that use `make6pain` domain and lead me to reddit thread @/r/pihole)
 # * I won't give reddit short links due to new reddit and/or browsing with mobile browser is sucks because they want to force you
-#   download goddamn official apps (with goolag and many trackings, ofc.) so, I've changed to "Teddit" instance instead!
-# https://teddit.net/r/pihole/comments/g7qv3e/leadforensics_tracking_domains_blacklist
+#   download goddamn official apps (with goolag and many trackings, ofc.) so, I've changed to "Teddit" instead!
+#   https://teddit.net/r/pihole/comments/g7qv3e
 1-cl0ud.com
 mon-com-01.com
 nyctrl32.com
