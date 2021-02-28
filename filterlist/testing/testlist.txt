@@ -1,6 +1,6 @@
 [uBlock Origin 1.31.0]
 ! Title: kowith337's Test List
-! Version: 202102032058
+! Version: 202102282258
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -87,7 +87,6 @@ twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ8"])
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ9"])
 
-
 ! [Pantip] Explicit and spam topic name (Use Thai unicode characters because most language of this site are mainly in Thai)
 pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(ตระกองขวัญ))
 pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(มาลาริน/))
@@ -135,13 +134,13 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 ||facebook.com/*?__xts__*=$1p,queryprune=|__xts__
 ||facebook.com/*?entry*=$1p,xhr,important,queryprune=|entry
 ||facebook.com/*?privacy_*=$1p,xhr,queryprune=|privacy_
-||facebook.com/a/*&fb_dtsg=$1p,queryprune=fb_dtsg
+||facebook.com/a/*&fb_dtsg=$1p,queryprune=fb_dtsg,domain=~mtouch.facebook.com|touch.facebook.com
 ||facebook.com/a/*&fb_dtsg_*=$1p,queryprune=|fb_dtsg_
-||facebook.com/a/*?fb_dtsg=$1p,queryprune=fb_dtsg
+||facebook.com/a/*?fb_dtsg=$1p,queryprune=fb_dtsg,domain=~mtouch.facebook.com|touch.facebook.com
 ||facebook.com/a/*?fb_dtsg_*=$1p,queryprune=|fb_dtsg_
-||facebook.com/ajax/*&fb_dtsg=$1p,queryprune=fb_dtsg
+||facebook.com/ajax/*&fb_dtsg=$1p,queryprune=fb_dtsg,domain=~mtouch.facebook.com|touch.facebook.com
 ||facebook.com/ajax/*&fb_dtsg_*=$1p,queryprune=|fb_dtsg_
-||facebook.com/ajax/*?fb_dtsg=$1p,queryprune=fb_dtsg
+||facebook.com/ajax/*?fb_dtsg=$1p,queryprune=fb_dtsg,domain=~mtouch.facebook.com|touch.facebook.com
 ||facebook.com/ajax/*?fb_dtsg_*=$1p,queryprune=|fb_dtsg_
 ||fbcdn.net/*&_nc_*=$css,script,domain=facebook.com|messenger.com,queryprune=|_nc_
 ||fbcdn.net/*?_nc_*=$css,script,domain=facebook.com|messenger.com,queryprune=|_nc_
@@ -163,8 +162,8 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
 ! Third parties denied (with some exceptions) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! This make use of `3p` block to block everything that not come from its domain itself, however, `denyallow` rules may included
-!   if some domains requied some other domains that necessary for loading with... (especially CDNs and some required resources)
+! - This make use of `3p` to block everything that not come from its domain itself, however, `denyallow` rules may included if
+!   some other domains are necessary to loading with... (especially CDNs and some required resources)
 $3p,important,domain=greasyfork.org
 $3p,important,domain=pantip.com,denyallow=ptcdn.info
 $3p,important,domain=thairath.co.th,denyallow=byteark.com
@@ -188,12 +187,13 @@ checkkorn.com##+js(alert-buster)
 ! [External scriptlets from former NanoAdblocker]
 !   Due to owner has archived his/her works and lately known that it had been sold to third party for sure, the scriptlets may
 !   not work due to priviledge functions that set by its script.
-!   Please note that I'm mainly use and sideload the GitHub version from owner's repo directly, unlile Firefox that are ported by
-!   other person, archived repo may means it not longer get any updates or the code will changed by other ppls who bought that!
+!   Please note that I'm mainly use and sideload the GitHub version from owner's repo directly, unlike Firefox that are ported by
+!   other person is the sold of Chrome extension won't affected to Firefox version, however, archived repo may means it no longer
+!   get any updates, unlike Chrome extension that possibility of source code will changed by other ppls who bought that!
 ! Raw: https://github.com/NanoAdblocker/NanoCore2/raw/master/src/snippets.js
 ! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
 facebook.com,instagram.com,messenger.com##+js(nanop-set-cookie, noscript=0)
-! - This is for test by fake grant notifications, these sites below are mostly related to Khaosod and Matichon, their also
+! - This is for test by fake grant notifications, these sites below are mostly related to "Khaosod" and "Matichon", their also
 !   insert many ads and trackings (55+ and more domains connected while visiting, holy sh**!), those sites itself doesn't provide
 !   any proper use of web notifications for legitimate way (newer news and updates), but it's used by iZooto to inject ads through
 !   that function that given by browser providers!
