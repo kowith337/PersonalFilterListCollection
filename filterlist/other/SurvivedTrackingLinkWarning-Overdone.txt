@@ -1,6 +1,6 @@
 [uBlock Origin 1.31.0]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202102012218
+! Version: 202102282112
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -296,10 +296,10 @@
 !   You cannot perform certain actions while using its website, so I've decided to add query prune rules for addition, but please
 !   note that `queryprune` will clean only first detected parameter (race condition), it cannot clear multiple parameters in each
 !   requests, probably some information still slipped through other parameters that cannot removed at that time.
-||facebook.com/*&fb_dtsg=$first-party,subdocument,xmlhttprequest,queryprune=fb_dtsg
+||facebook.com/*&fb_dtsg=$first-party,subdocument,xmlhttprequest,queryprune=fb_dtsg,domain=~mtouch.facebook.com|~touch.facebook.com
 ||facebook.com/*&fb_dtsg_*=$first-party,subdocument,xmlhttprequest,queryprune=|fb_dtsg_
 ||facebook.com/*&privacy_mutation_token=$first-party,subdocument,xmlhttprequest,queryprune=privacy_mutation_token
-||facebook.com/*?fb_dtsg=$first-party,subdocument,xmlhttprequest,queryprune=fb_dtsg
+||facebook.com/*?fb_dtsg=$first-party,subdocument,xmlhttprequest,queryprune=fb_dtsg,domain=~mtouch.facebook.com|~touch.facebook.com
 ||facebook.com/*?fb_dtsg_*=$first-party,subdocument,xmlhttprequest,queryprune=|fb_dtsg_
 ||facebook.com/*?privacy_mutation_token=$first-party,subdocument,xmlhttprequest,queryprune=privacy_mutation_token
 ||messenger.com/*&fb_dtsg=$first-party,subdocument,xmlhttprequest,queryprune=fb_dtsg
@@ -308,7 +308,6 @@
 ||messenger.com/*?fb_dtsg=$first-party,subdocument,xmlhttprequest,queryprune=fb_dtsg
 ||messenger.com/*?fb_dtsg_*=$first-party,subdocument,xmlhttprequest,queryprune=|fb_dtsg_
 ||messenger.com/*?privacy_mutation_token=$first-party,subdocument,xmlhttprequest,queryprune=privacy_mutation_token
-
 
 ! Known breaking, at your own risk!
 ! [CloudFlare DDoS JS Challenge]
