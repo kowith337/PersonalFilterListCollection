@@ -1,6 +1,6 @@
 [uBlock Origin 1.31.0]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202102282112
+! Version: 202103022141
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -151,33 +151,33 @@
 ||google.*/*?*&bih=$subdocument,xmlhttprequest
 ||google.*/*?*&biw=$document,important,domain=~GoogleTracking-BrowserScreenWidth
 ||google.*/*?*&biw=$subdocument,xmlhttprequest
-||google.*/*?*&ei=$document,important,domain=~GoogleTracking-EncrypyedEpochTimeInteraction
+||google.*/*?*&ei=$document,important,domain=~GoogleTracking-EncodedEpochTimeInteraction
 ||google.*/*?*&ei=$subdocument,xmlhttprequest
-||google.*/*?*&rlz=$document,important,domain=~GoogleTracking-RLZ-ChromeInstallerID
+||google.*/*?*&rlz=$document,important,domain=~GoogleTracking-RLZ_ChromeInstallerID
 ||google.*/*?*&rlz=$subdocument,xmlhttprequest
 ||google.*/*?*&sxsrf=$document,important,domain=~GoogleTracking-SXSRF
 ||google.*/*?*&sxsrf=$subdocument,xmlhttprequest
-||google.*/*?*&usg=$document,important,domain=~GoogleTracking-SearchResult_USG-ClickTrack
+||google.*/*?*&usg=$document,important,domain=~GoogleTracking-SearchResult_USG-EncodedEpochSearchTime
 ||google.*/*?*&usg=$subdocument,xmlhttprequest
 ||google.*/*?*&ved=$document,important,domain=~GoogleTracking-SearchResult_VED-UniqueSearchID
 ||google.*/*?*&ved=$subdocument,xmlhttprequest
-||google.*/*?*&vet=$document,important,domain=~GoogleTracking-VET-PlainEpochTimer
+||google.*/*?*&vet=$document,important,domain=~GoogleTracking-VET_PlainEpochTimer
 ||google.*/*?*&vet=$subdocument,xmlhttprequest
 ||google.*/*?bih=$document,important,domain=~GoogleTracking-BrowserScreenHeight
 ||google.*/*?bih=$subdocument,xmlhttprequest
 ||google.*/*?biw=$document,important,domain=~GoogleTracking-BrowserScreenWidth
 ||google.*/*?biw=$subdocument,xmlhttprequest
-||google.*/*?ei=$document,important,domain=~GoogleTracking-EncrypyedEpochTimeInteraction
+||google.*/*?ei=$document,important,domain=~GoogleTracking-EncodedEpochTimeInteraction
 ||google.*/*?ei=$subdocument,xmlhttprequest
 ||google.*/*?rlz=$document,important,domain=~GoogleTracking-RLZ-ChromeInstallerID
 ||google.*/*?rlz=$subdocument,xmlhttprequest
 ||google.*/*?sxsrf=$document,important,domain=~GoogleTracking-SXSRF
 ||google.*/*?sxsrf=$subdocument,xmlhttprequest
-||google.*/*?usg=$document,important,domain=~GoogleTracking-SearchResult-USG
+||google.*/*?usg=$document,important,domain=~GoogleTracking-SearchResult_USG-EncodedEpochSearchTime
 ||google.*/*?usg=$subdocument,xmlhttprequest
-||google.*/*?ved=$document,important,domain=~GoogleTracking-SearchResult-VED
+||google.*/*?ved=$document,important,domain=~GoogleTracking-SearchResult_VED-UniqueSearchID
 ||google.*/*?ved=$subdocument,xmlhttprequest
-||google.*/*?vet=$document,important,domain=~GoogleTracking-VET-PlainEpochTimer
+||google.*/*?vet=$document,important,domain=~GoogleTracking-VET_PlainEpochTimer
 ||google.*/*?vet=$subdocument,xmlhttprequest
 ||instagram.com/*&igshid=$document,important,domain=~Instagram-ExternalShareID
 ||instagram.com/*&igshid=$subdocument,xmlhttprequest
@@ -222,7 +222,7 @@
 ||messenger.com/*&ref*=$subdocument,xmlhttprequest
 ||messenger.com/*&settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||messenger.com/*&settings_tracking=$subdocument,xmlhttprequest
-||messenger.com/*&sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
+||messenger.com/*&sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShare
 ||messenger.com/*&sfnsn=$subdocument,xmlhttprequest
 ||messenger.com/*?__cft__%5B0%5D=$document,important,domain=~FacebookInternalTracking_CFT
 ||messenger.com/*?__cft__%5B0%5D=$subdocument,xmlhttprequest
@@ -265,7 +265,7 @@
 ||messenger.com/*?ref*=$subdocument,xmlhttprequest
 ||messenger.com/*?settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||messenger.com/*?settings_tracking=$subdocument,xmlhttprequest
-||messenger.com/*?sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
+||messenger.com/*?sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShare
 ||messenger.com/*?sfnsn=$subdocument,xmlhttprequest
 ||play.google.com/*&pcampaignid=$document,important,domain=~GPlayTracking_PromotedCampaignID
 ||play.google.com/*&pcampaignid=$subdocument,xmlhttprequest
@@ -319,6 +319,6 @@
 
 ! [Pantip]
 !   They also apply to related topics and external URLs.
-||pantip.com/l/http*$document,important,domain=~Precaution_Pantip-Redirect
-||pantip.com/r/http*$document,important,domain=~Precaution_Pantip-Redirect
-||pantip.com/r/*/http^$document,important,domain=~Precaution_Pantip-Redirect
+||pantip.com/l/http*$document,important,domain=~Precaution_Pantip-EncodedURLRedirect
+||pantip.com/r/http*$document,important,domain=~Precaution_Pantip-EncodedURLRedirect
+||pantip.com/r/*/http^$document,important,domain=~Precaution_Pantip-RelatedTopicRedirect
