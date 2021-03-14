@@ -1,6 +1,6 @@
 [uBlock Origin 1.31.0]
 ! Title: kowith337's Test List
-! Version: 202103051340
+! Version: 202103112016
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -15,8 +15,8 @@ m.intl.taobao.com##.App .toolbar .toolbar__anchor-wrapper
 ! [Blognone]
 ! - Disable comment news that have topics about "Thailand", any news that have this tags may fully biased comments!
 blognone.com##.content-container:has(span.terms .field-item a[href*="/thailand"]) #comment-area
-
-! - Also include comment counts, too!!
+!
+! - Also include comment counters, too!!
 blognone.com###block-system-main .content .node:has(span.terms .field-item a[href*="/thailand"]) .comment-comments
 
 ! [Taobao Mobile] Remove bottom anchor (quickly add to cart / buy menu pane)
@@ -34,46 +34,49 @@ imgur.com##.GalleryHandler-postContainer .Gallery-moreOnImgur
 ! - Remove any "recommended" channel and topic lists at home feed
 youtube.com###feed-main-what_to_watch ol li:has(.feed-item-dismissable:has(.shelf-title-row h2 span:has-text(Recommended )))
 youtube.com##.individual-feed li .branded-page-box:has(.feed-item-dismissable:has(span.shelf-subscription-button button[data-style-type="branded"]))
-
+!
 ! - Remove overpromoted "Premium" appear in sidebar
 youtube.com##.guide-section .guide-item-container ul li:has(a[href*="/premium"])
 
 ! [YouTube Polymer]
 ! - Hide "New ToS" announcement
 youtube.com###alert-banner [alert-style]:has(a[href*="youtube.com/t/terms"])
-
+!
 ! - Remove "Sign in" prompt at top bar
 youtube.com###masthead #end #buttons ytd-button-renderer:has(a[href*="/ServiceLogin?"])
-
+!
 ! - Try remove "Premium" link at sidebar (Disabled due to unknown usage problem that cause unable to click anything)
 !youtube.com##.ytd-guide-renderer:has(#items ytd-guide-entry-renderer:has(a[href*="/premium"]))
 
-! DOM Permanent Remover - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! [Facebook] Blame to AdGuard
-facebook.com##.AdBox:remove()
-facebook.com##.post-ads:remove()
-
 ! Non-basic filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! [Blognone] In case if modern browsers support to remove node entirely
-blognone.com##.content-container:has(.meta span.terms .field-item a[href*="/thailand"]) #comment-area:remove()
-blognone.com###block-system-main .content .node:has(.meta span.terms .field-item a[href*="/thailand"]) .comment-comments:remove()
-
-! Nitter
+! [Nitter]
 ! - For unclear reason, because I have use touchscreen notebook and found that I've redirected to donation page unintentionally,
 !   even I just tap onto the blank space, probably navigation header placement issue that will be a short time while page loading
 !   will be see some icon enlarged, absolutely it's liberapay logo are cover the page entirely at that moment!
-n.itoma.tech,nitter.13ad.de,nitter.1d4.us,nitter.42l.fr,nitter.cattube.org,nitter.fdn.fr,nitter.mastodont.cat,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.inner-nav a[href*="liberapay"]
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.inner-nav a[href*="liberapay"]
 
-! [Nitter + Twitter] BRUH for Thai mobs
-n.itoma.tech,nitter.13ad.de,nitter.1d4.us,nitter.42l.fr,nitter.cattube.org,nitter.fdn.fr,nitter.mastodont.cat,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ1"])
-n.itoma.tech,nitter.13ad.de,nitter.1d4.us,nitter.42l.fr,nitter.cattube.org,nitter.fdn.fr,nitter.mastodont.cat,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ2"])
-n.itoma.tech,nitter.13ad.de,nitter.1d4.us,nitter.42l.fr,nitter.cattube.org,nitter.fdn.fr,nitter.mastodont.cat,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ3"])
-n.itoma.tech,nitter.13ad.de,nitter.1d4.us,nitter.42l.fr,nitter.cattube.org,nitter.fdn.fr,nitter.mastodont.cat,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ4"])
-n.itoma.tech,nitter.13ad.de,nitter.1d4.us,nitter.42l.fr,nitter.cattube.org,nitter.fdn.fr,nitter.mastodont.cat,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ5"])
-n.itoma.tech,nitter.13ad.de,nitter.1d4.us,nitter.42l.fr,nitter.cattube.org,nitter.fdn.fr,nitter.mastodont.cat,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ6"])
-n.itoma.tech,nitter.13ad.de,nitter.1d4.us,nitter.42l.fr,nitter.cattube.org,nitter.fdn.fr,nitter.mastodont.cat,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ7"])
-n.itoma.tech,nitter.13ad.de,nitter.1d4.us,nitter.42l.fr,nitter.cattube.org,nitter.fdn.fr,nitter.mastodont.cat,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ8"])
-n.itoma.tech,nitter.13ad.de,nitter.1d4.us,nitter.42l.fr,nitter.cattube.org,nitter.fdn.fr,nitter.mastodont.cat,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ9"])
+! [BRUH for Thai mobs]
+! - Nitter
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ1"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ2"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ3"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ4"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ5"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ6"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ7"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ8"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ9"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม๊อบ1"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม๊อบ2"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม๊อบ3"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม๊อบ4"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม๊อบ5"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม๊อบ6"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม๊อบ7"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม๊อบ8"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม๊อบ9"])
+!
+! - Tweetdeck
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม็อบ1"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม็อบ2"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม็อบ3"])
@@ -83,6 +86,17 @@ tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม็�
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม็อบ7"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม็อบ8"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม็อบ9"])
+tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม๊อบ1"])
+tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม๊อบ2"])
+tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม๊อบ3"])
+tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม๊อบ4"])
+tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม๊อบ5"])
+tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม๊อบ6"])
+tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม๊อบ7"])
+tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม๊อบ8"])
+tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม๊อบ9"])
+!
+! - Twitter (Desktop only)
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ1"])
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ2"])
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ3"])
@@ -92,6 +106,15 @@ twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ7"])
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ8"])
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ9"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม๊อบ1"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม๊อบ2"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม๊อบ3"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม๊อบ4"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม๊อบ5"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม๊อบ6"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม๊อบ7"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม๊อบ8"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม๊อบ9"])
 
 ! [Pantip] Explicit and spam topic name (Use Thai unicode characters because most language of this site are mainly in Thai)
 pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(ตระกองขวัญ))
@@ -102,6 +125,18 @@ pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(หล่อขวัญ))
 ! [Taobao Mobile] Aim to remove "you may also like" items, but using the chinese word (MiscAnnoyance use `nth-of-type` method)
 m.intl.taobao.com##.App .recommend .recommend-list-wrapper:has(.recommend-title:has-text(邻家好货))
 
+! DOM Permanent Remover - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Blognone] In case if modern browsers support to remove node entirely
+blognone.com##.content-container:has(.meta span.terms .field-item a[href*="/thailand"]) #comment-area:remove()
+blognone.com###block-system-main .content .node:has(.meta span.terms .field-item a[href*="/thailand"]) .comment-comments:remove()
+
+! [Facebook] Blame to AdGuard
+facebook.com##.AdBox:remove()
+facebook.com##.post-ads:remove()
+
+! [Nitter]
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.inner-nav a[href*="liberapay"]:remove()
+
 ! CSS Modification  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Facebook]
 ! Uncorrupted Facebook Stories design because your profile picture in story card will not fulfilled if you didn't have any posts.
@@ -110,8 +145,8 @@ m.intl.taobao.com##.App .recommend .recommend-list-wrapper:has(.recommend-title:
 ! [Taobao Mobile]
 ! - Make top bar placeholder transparent
 m.intl.taobao.com##.App .toolbar.transformed:style(background-color: transparent !important)
+!
 ! - Make placeholder button (back / add to cart) have circle background alpha under button and use custom color permanently
-
 m.intl.taobao.com##.App .toolbar .toolbar__btn i.iconfont:style(color: white !important)
 m.intl.taobao.com##.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,0,0.4) !important)
 
@@ -167,7 +202,7 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
-! Third parties denied (with some exceptions) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Strong third parties denied (with some exceptions)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - This make use of `3p` to block everything that not come from its domain itself, however, `denyallow` rules may included if
 !   some other domains are necessary to loading with... (especially CDNs and some required resources)
 $3p,important,domain=greasyfork.org
@@ -179,6 +214,7 @@ $3p,important,domain=thairath.co.th,denyallow=byteark.com
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Legacy internal scriptlets]
 ! Use only internal scriptlets provided by uBO for this section.
+!
 ! - Remove unnecessary cookies (Currently it's caveat due to scriptlets cannot modify or delete domain-level + HTTP only cookies)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, _js_datr)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, act)
@@ -186,23 +222,25 @@ facebook.com,instagram.com,messenger.com##+js(cookie-remover, datr)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, noscript)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-referer)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-src)
-
-! Often show alert dialog when users click to links, also when users trying to right-click.
+!
+! - Often show alert dialog when users click to links, also when users trying to right-click.
 checkkorn.com##+js(alert-buster)
 
 ! [External scriptlets from former NanoAdblocker]
 !   Due to owner has archived his/her works and lately known that it had been sold to third party for sure, the scriptlets may
 !   not work due to priviledge functions that set by its script.
 !   Please note that I'm mainly use and sideload the GitHub version from owner's repo directly, unlike Firefox that are ported by
-!   other person is the sold of Chrome extension won't affected to Firefox version, however, archived repo may means it no longer
-!   get any updates, unlike Chrome extension that possibility of source code will changed by other ppls who bought that!
+!   other person, the sold of Chrome extension won't affected to Firefox version, however, archived repo may means it no longer
+!   get any future updates, except Chrome extension that possibility of source code will changed by other ppls who bought that!
 ! Raw: https://github.com/NanoAdblocker/NanoCore2/raw/master/src/snippets.js
+!
 ! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
 facebook.com,instagram.com,messenger.com##+js(nanop-set-cookie, noscript=0)
+!
 ! - This is for test by fake grant notifications, these sites below are mostly related to "Khaosod" and "Matichon", their also
 !   insert many ads and trackings (55+ and more domains connected while visiting, holy sh**!), those sites itself doesn't provide
 !   any proper use of web notifications for legitimate way (newer news and updates), but it's used by iZooto to inject ads through
-!   that function that given by browser providers!
+!   that browser feature and/or function!
 bangkokbiznews.com,khaosod.co.th,khaosodenglish.com,komchadluek.net,matichon.co.th,matichonacademy.com,matichonbook.com,matichonelibrary.com,matichonweekly.com,nationtv.tv,nationweekend.com,prachachat.net,sentangsedtee.com,silpa-mag.com,springnews.co.th,technologychaoban.com,thansettakij.com,tnews.co.th##+js(nano-grant-fake-notification)
 
 ! [External scriptlets - uBlock-user]

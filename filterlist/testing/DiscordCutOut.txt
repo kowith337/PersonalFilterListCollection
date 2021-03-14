@@ -14,7 +14,7 @@ discord.com##ul[data-list-id="guildsnav"] div[class^="listItem"]:has(div[class^=
 ! Globally remove large badge in profile card
 discord.com##div[class*="profileBadges"]
 
-! Remove server level indicator
+! Remove server levels indicator
 discord.com##div[class^="guildIconContainer"] div[class^="flowerStarContainer"]
 
 ! Remove server boost in popup menu
@@ -29,15 +29,18 @@ discord.com##div[class^="peopleColumn"] div[class^="emptyState"]
 ! Remove "Add friends" green button on the top!
 discord.com##div[class^="base"] section[class^="container"] div[role="tabbar"] div[aria-controls="ADD_FRIEND-tab"]
 
-! Remove all of extra badges that use SVGs and show in user lists in the server (probably all of Boost, Nitro, etc.)
+! Remove all of extra badges that use SVGs and show in user lists in the server (probably all of Boost, HypeSquad, Nitro, etc.)
 discord.com##div[id^="members"] div[class] > [class^="nameAndDecorators"] div[role] svg
-
-! Remove its Nitro button that suggest to buy its plan for use emoji outside current servers, while viewing custom emoji details.
-discord.com##div[class^="popoutContainer"] div[class^="emojiSection"] button:has(div[class*="premiumSubscribeButton"])
 
 ! Remove emoji items that you cannot use (mostly GIF and/or cross-server emojis), unless you're already paid for its Nitrous!
 ! However, scrolling may probably looks weird and produce some blank space between...
 discord.com##div[class^="emojiPicker"] div[class^="listItems"] ul li[class*="emojiItemDisabled"]:upward(1)
+
+! Remove its Nitro overpromote! (sort by line)
+!   1. A button that suggest to buy its plan for use emoji outside current servers, while viewing custom emoji details.
+!   2. A link with large icon that injected into your friends list.
+discord.com##div[class^="popoutContainer"] div[class^="emojiSection"] button:has(div[class*="premiumSubscribeButton"])
+discord.com##nav[class^="privateChannels"] #private-channels[role] a[role="listitem"][href^="/store"]
 
 ! Remove unnecessary pane in case if you are't want to making any payments, integrations, subscribe (E-mail spam) newsletters.
 discord.com##div[aria-label="USER_SETTINGS"] nav[class^="sidebar"] div[role="tabbar"] div[class][aria-controls="Connections-tab"]
