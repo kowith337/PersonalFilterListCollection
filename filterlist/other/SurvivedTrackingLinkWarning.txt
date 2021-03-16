@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 202103022141
+! Version: 202103161310
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -78,6 +78,7 @@
 ||facebook.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
 ||facebook.com/*&settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||facebook.com/*&sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
+||facebook.com/*&zero_*=$document,important,domain=~FacebookInternalTracking_FreeBasics-Wild
 ||facebook.com/*?__cft__%5B0%5D=$document,important,domain=~FacebookInternalTracking_CFT
 ||facebook.com/*?__cft__*=$document,important,domain=~FacebookInternalTracking_CFT
 ||facebook.com/*?__cft__[0]=$document,important,domain=~FacebookInternalTracking_CFT
@@ -99,6 +100,7 @@
 ||facebook.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
 ||facebook.com/*?settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||facebook.com/*?sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
+||facebook.com/*?zero_*=$document,important,domain=~FacebookInternalTracking_FreeBasics-Wild
 ||facebook.com/ads/*&session_id=$document,important,domain=~FacebookUnneccessaryParams_AdPrefs-SessionID
 ||facebook.com/ads/*?session_id=$document,important,domain=~FacebookUnneccessaryParams_AdPrefs-SessionID
 ||google.*/*?*&bih=$document,important,domain=~GoogleTracking-BrowserScreenHeight
@@ -138,6 +140,7 @@
 ||messenger.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
 ||messenger.com/*&settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||messenger.com/*&sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
+||messenger.com/*&zero_*=$document,important,domain=~FacebookInternalTracking_FreeBasics-Wild
 ||messenger.com/*?__cft__%5B0%5D=$document,important,domain=~FacebookInternalTracking_CFT
 ||messenger.com/*?__cft__*=$document,important,domain=~FacebookInternalTracking_CFT
 ||messenger.com/*?__cft__[0]=$document,important,domain=~FacebookInternalTracking_CFT
@@ -158,17 +161,18 @@
 ||messenger.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
 ||messenger.com/*?settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||messenger.com/*?sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
+||messenger.com/*?zero_*=$document,important,domain=~FacebookInternalTracking_FreeBasics-Wild
 ||play.google.com/*&pcampaignid=$document,important,domain=~GPlayTracking_PromotedCampaignID
 ||play.google.com/*&referrer=$document,important,domain=~GPlayTracking_Referrer
 ||play.google.com/*?pcampaignid=$document,important,domain=~GPlayTracking_PromotedCampaignID
 ||play.google.com/*?referrer=$document,important,domain=~GPlayTracking_Referrer
 ||steamcommunity.com/*&ser=$document,important,domain=~SteamTracking_EMailReferrer
-||steamcommunity.com/*?ser=$document,important,domain=~SteamTracking_EMailReferrer
-||steampowered.com/*&ser=$document,important,domain=~SteamTracking_EMailReferrer
-||steampowered.com/*?ser=$document,important,domain=~SteamTracking_EMailReferrer
 ||steamcommunity.com/*&snr=$document,important,domain=~SteamTracking_NavigationReferrer
+||steamcommunity.com/*?ser=$document,important,domain=~SteamTracking_EMailReferrer
 ||steamcommunity.com/*?snr=$document,important,domain=~SteamTracking_NavigationReferrer
+||steampowered.com/*&ser=$document,important,domain=~SteamTracking_EMailReferrer
 ||steampowered.com/*&snr=$document,important,domain=~SteamTracking_NavigationReferrer
+||steampowered.com/*?ser=$document,important,domain=~SteamTracking_EMailReferrer
 ||steampowered.com/*?snr=$document,important,domain=~SteamTracking_NavigationReferrer
 
 ! Known breaking, at your own risk!

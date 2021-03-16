@@ -1,19 +1,19 @@
 [uBlock Origin 1.32.4]
 ! Title: Facebook Zuckestion Killer - Zero denied inclusive
-! Version: 202101112300
+! Version: 202103161322
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/facebook/FacebookZuckestionKiller-ZeroDenyAdd.txt
 ! Description: This is an inclusive file of "Facebook Zuckestion Killer" that try to mimic like original version of base list
-!              before divided since I've seen some people forked and whitelisted some domains because I've blocked "Free Basics"
-!              backend servers, but I don't think to allow those kind of connections anyway, since it's a different servers that
-!              re-routed and/or redirected for mobile data users and they've blocked some functionality, such as prevent users to
-!              view feeds from basic site (mbasic.facebook.com) unless you've signed up for their "Free basics" campaign, it's
-!              kind of forcing users to register for its campaign, additional reason is "Facebook" themselves can know your phone
-!              numbers and sometime can pre-filled login dialog with that because they can extract phone numbers from WAP header,
-!              no matter about generation of mobile data technology, if you've heard a news about over 450 million phone numbers
-!              that was leaked before, you will get my though about why!
+!              before divided, since I've seen some people forked and whitelisted some domains because I've blocked "Free Basics"
+!              backend servers, but I don't think to allow those kind of connections anyway, because it's a different servers
+!              that re-routed and/or redirected for mobile data users and they've blocked some functionality, such as prevent
+!              users to view feeds from basic site (mbasic.facebook.com) unless you've signed up for their "Free basics"
+!              campaign, it's kind of forcing users to register for its campaign, additional reason is "Facebook" themselves can
+!              know your phone numbers and sometime can pre-filled login dialog with that because they can extract phone numbers
+!              from WAP header, no matter about generation of mobile data technology, if you've heard a news about over 450
+!              million phone numbers that was leaked before, you will get my though about why!
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Give the warning if you're using Facebook on some cellular data provider that got redirected to smartphone-focused site,
 ! not an actual version of it!
@@ -26,7 +26,9 @@
 !         but it still make xhr to 'mobile.facebook.com', so it's good to block that!
 ! Furthermore: I HATE FreakBasics by Facebook, internet.org also...
 ||*&_nc_fbs=*$important,domain=facebook.com|instagram.com|messenger.com
+||*&zero_*=*$important,domain=facebook.com|instagram.com|messenger.com
 ||*?_nc_fbs=*$important,domain=facebook.com|instagram.com|messenger.com
+||*?zero_*=*$important,domain=facebook.com|instagram.com|messenger.com
 ||0.facebook.com$important,domain=~FREEBASICS-ZERO_DOMAIN
 ||d.facebook.com$important,domain=~FREEBASICS-ZERO_DOMAIN
 ||discoverapp.com$important,domain=~FREEBASICS-INTERNET_ORG_DISCOVER_SERVICE

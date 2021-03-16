@@ -1,6 +1,6 @@
 [uBlock Origin 1.31.0]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202103022141
+! Version: 202103161310
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -90,14 +90,16 @@
 ||facebook.com/*&pn_*=$document,important,domain=~FacebookInternalTracking_PN-Wild
 ||facebook.com/*&pn_*=$subdocument,xmlhttprequest
 ||facebook.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
-||facebook.com/*&ref=$document,important,domain=~FacebookInternalTracking_Ref
-||facebook.com/*&ref=$subdocument,xmlhttprequest
 ||facebook.com/*&ref*=$document,important,domain=~FacebookInternalTracking_Ref-Wild
 ||facebook.com/*&ref*=$subdocument,xmlhttprequest
+||facebook.com/*&ref=$document,important,domain=~FacebookInternalTracking_Ref
+||facebook.com/*&ref=$subdocument,xmlhttprequest
 ||facebook.com/*&settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||facebook.com/*&settings_tracking=$subdocument,xmlhttprequest
 ||facebook.com/*&sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
 ||facebook.com/*&sfnsn=$subdocument,xmlhttprequest
+||facebook.com/*&zero_*=$document,important,domain=~FacebookInternalTracking_FreeBasics-Wild
+||facebook.com/*&zero_*=$subdocument,xmlhttprequest
 ||facebook.com/*?__cft__%5B0%5D=$document,important,domain=~FacebookInternalTracking_CFT
 ||facebook.com/*?__cft__%5B0%5D=$subdocument,xmlhttprequest
 ||facebook.com/*?__cft__*=$document,important,domain=~FacebookInternalTracking_CFT
@@ -135,14 +137,16 @@
 ||facebook.com/*?pn_*=$document,important,domain=~FacebookInternalTracking_PN-Wild
 ||facebook.com/*?pn_*=$subdocument,xmlhttprequest
 ||facebook.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
-||facebook.com/*?ref=$document,important,domain=~FacebookInternalTracking_Ref
-||facebook.com/*?ref=$subdocument,xmlhttprequest
 ||facebook.com/*?ref*=$document,important,domain=~FacebookInternalTracking_Ref-Wild
 ||facebook.com/*?ref*=$subdocument,xmlhttprequest
+||facebook.com/*?ref=$document,important,domain=~FacebookInternalTracking_Ref
+||facebook.com/*?ref=$subdocument,xmlhttprequest
 ||facebook.com/*?settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||facebook.com/*?settings_tracking=$subdocument,xmlhttprequest
 ||facebook.com/*?sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareType
 ||facebook.com/*?sfnsn=$subdocument,xmlhttprequest
+||facebook.com/*?zero_*=$document,important,domain=~FacebookInternalTracking_FreeBasics-Wild
+||facebook.com/*?zero_*=$subdocument,xmlhttprequest
 ||facebook.com/ads/*&session_id=$document,important,domain=~FacebookUnneccessaryParams_AdPrefs-SessionID
 ||facebook.com/ads/*&session_id=$subdocument,xmlhttprequest
 ||facebook.com/ads/*?session_id=$document,important,domain=~FacebookUnneccessaryParams_AdPrefs-SessionID
@@ -216,14 +220,16 @@
 ||messenger.com/*&pn_*=$document,important,domain=~FacebookInternalTracking_PN_Wild
 ||messenger.com/*&pn_*=$subdocument,xmlhttprequest
 ||messenger.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
-||messenger.com/*&ref=$document,important,domain=~FacebookInternalTracking_Ref
-||messenger.com/*&ref=$subdocument,xmlhttprequest
 ||messenger.com/*&ref*=$document,important,domain=~FacebookInternalTracking_Ref-Wild
 ||messenger.com/*&ref*=$subdocument,xmlhttprequest
+||messenger.com/*&ref=$document,important,domain=~FacebookInternalTracking_Ref
+||messenger.com/*&ref=$subdocument,xmlhttprequest
 ||messenger.com/*&settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||messenger.com/*&settings_tracking=$subdocument,xmlhttprequest
 ||messenger.com/*&sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShare
 ||messenger.com/*&sfnsn=$subdocument,xmlhttprequest
+||messenger.com/*&zero_*=$document,important,domain=~FacebookInternalTracking_FreeBasics-Wild
+||messenger.com/*&zero_*=$subdocument,xmlhttprequest
 ||messenger.com/*?__cft__%5B0%5D=$document,important,domain=~FacebookInternalTracking_CFT
 ||messenger.com/*?__cft__%5B0%5D=$subdocument,xmlhttprequest
 ||messenger.com/*?__cft__*=$document,important,domain=~FacebookInternalTracking_CFT
@@ -259,14 +265,16 @@
 ||messenger.com/*?pn_*=$document,important,domain=~FacebookInternalTracking_PN_Wild
 ||messenger.com/*?pn_*=$subdocument,xmlhttprequest
 ||messenger.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
-||messenger.com/*?ref=$document,important,domain=~FacebookInternalTracking_Ref
-||messenger.com/*?ref=$subdocument,xmlhttprequest
 ||messenger.com/*?ref*=$document,important,domain=~FacebookInternalTracking_Ref-Wild
 ||messenger.com/*?ref*=$subdocument,xmlhttprequest
+||messenger.com/*?ref=$document,important,domain=~FacebookInternalTracking_Ref
+||messenger.com/*?ref=$subdocument,xmlhttprequest
 ||messenger.com/*?settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
 ||messenger.com/*?settings_tracking=$subdocument,xmlhttprequest
 ||messenger.com/*?sfnsn=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShare
 ||messenger.com/*?sfnsn=$subdocument,xmlhttprequest
+||messenger.com/*?zero_*=$document,important,domain=~FacebookInternalTracking_FreeBasics-Wild
+||messenger.com/*?zero_*=$subdocument,xmlhttprequest
 ||play.google.com/*&pcampaignid=$document,important,domain=~GPlayTracking_PromotedCampaignID
 ||play.google.com/*&pcampaignid=$subdocument,xmlhttprequest
 ||play.google.com/*&referrer=$document,important,domain=~GPlayTracking_Referrer
