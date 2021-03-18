@@ -1,6 +1,6 @@
-[uBlock Origin 1.31.0]
+[uBlock Origin 1.34.1.2]
 ! Title: kowith337's Test List
-! Version: 202103112016
+! Version: 202103181355
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -201,6 +201,12 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 ||google.*/ads/ga-audiences?$important
 
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+
+! HTML document filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Note: Require post-quantum of Firefox or any forks to read these rules.
+!#if cap_html_filtering
+pantip.com##^responseheader(etag)
+!endif
 
 ! Strong third parties denied (with some exceptions)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - This make use of `3p` to block everything that not come from its domain itself, however, `denyallow` rules may included if
