@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202103082017
+# Version: 202103252053
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -828,6 +828,7 @@ chz.mobi
 chzmobi.net
 ciga.xyz
 circultural.com
+circus88th.com
 ckwizard.com
 clausiafze.com
 click404.net
@@ -954,6 +955,7 @@ dsgpy.com
 dtacplay.com
 dtscout.com
 durarenti.pw
+dxsrz.org.cn
 e668ou.com
 e-nee.co
 e-volution.ai
@@ -962,12 +964,15 @@ ebizmobile.com
 ectionma.pw
 edenadoptionagency.com
 edgesuite.net
+edtfiles-media.com
+edtguide.com
 effectivemeasure.net
 eggdigital.com
 eggreadyweb.com
 eiei.net
 eim88.tk
 ejobet.tk
+elinks.io
 enemy-adult-scared-there.xyz
 enfothe.pw
 engage.wixapps.net
@@ -1767,6 +1772,7 @@ rewardnow.com
 rfebet.tk
 rgvqcsxqge.com
 rhmobi.com
+richman77.com
 right-team.digital
 ringtoneth.com
 ro88ro.tk
