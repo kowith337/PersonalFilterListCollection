@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202103252053
+# Version: 202104031336
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -183,6 +183,12 @@ orpheusdroid.com
 
 # Prohibit zuckestions to use 3p domains for downloading official (with lots of ads and tracking codes) apps!
 app.link
+
+# Bad promoters!
+# - If they want more customers, they shouldn't promote them through suspicious way!
+#   * I've seen them often from iCal calendar spam, fake virus warning that use popup/popunder ads providers, etc.
+hotspotshield.com
+nordvpn.*
 
 # Less privacy instance block, they've use the "Crapflare" for issuer and hosting, so it's not recommended to use on that hosts!
 # Note: "GGC Project" maybe somewhat acceptable because of not use the "Crapflare" certificates and use "Let's encrypt" instead.
@@ -368,6 +374,8 @@ sticker-pa.googleapis.com
 #gvt1.com
 gvt2.com
 gvt3.com
+gvt4.com
+gvt5.com
 
 # It's upload incoming phone numbers to check spam calls.
 # * Concern to anyone who touching phone numbers and contacts since various "Facebook" violations (please blame "ZUCK" for that!)
@@ -394,6 +402,8 @@ assistant.google.com
 # - This connections will not neccessary if you're using another default SMS apps.
 # - Make sure you've disable "App Preview Messages" first before re-enable rules or temporary disable blocking in pDNSF app,
 #   otherwise, you cannot change state of that feature.
+# - Also possibly break RCS chat messaging that require your phone numbers and mobile operator info in order to use this feature,
+#   however, it's still safe to block if you didn't use its feature and bloated Google default messaging app!
 instantmessaging-pa.googleapis.com
 notifications-pa.googleapis.com
 
@@ -401,7 +411,7 @@ notifications-pa.googleapis.com
 mdh-pa.googleapis.com
 
 # Phoninig home about network quality and also measuring? (Good to block, we should not submit any network info back to Google!)
-# - I prefer to block because of privacy compromise, why some app devs want to know how good of user's network quality?
+# - I prefer to block because of privacy concerns, why some app devs want to know how good of user's network quality?
 # - In case if you've face problems like issue #50, just whitelist or comment rules by your own!
 mobilenetworkscoring-pa.googleapis.com
 
@@ -672,6 +682,7 @@ aniview.com
 anolog.mobi
 anonymousdemographics.com
 answireless.net
+antivi.xyz
 ants.vn
 ao0c.club
 apiv9.com
@@ -688,6 +699,7 @@ appsdorado.com
 appsflyer.com
 appsforyourphone.mobi
 appsilike.mobi
+apptrk.space
 apsalar.com
 aptrk5.com
 apxadtracking.net
@@ -927,6 +939,7 @@ dentsu360th.com
 department.limited
 desisilk.com
 despiteracy.com
+device-safety.com
 devss.com
 dgmobix.com
 digitalmerkat.com
@@ -992,6 +1005,7 @@ exoclick.com
 exosrv.com
 exposebox.com
 exprtmb.com
+extrk.xyz
 eyeota.net
 ezym.net
 ezymedia.mobi
@@ -1136,6 +1150,7 @@ gizmobi.mobi
 gktmobi.com
 glimline.com
 glmtr4ck.net
+global-info.space
 globocom.co.in
 gloft.co
 glzelnk.com
@@ -1329,6 +1344,7 @@ laanbok.pw
 lalamobi.com
 landorum.pw
 larnload.com
+lateyouup.fun
 lawaapp.com
 lawaweb.com
 lbc8.tk
@@ -1587,6 +1603,7 @@ noclef.com
 nordvpn.com
 notesdav.pw
 notifguide.online
+notifybook.com
 nowportal.net
 nr-data.net
 nrs-group.com
@@ -1838,6 +1855,7 @@ scr888thslot.com
 scratch-surveys.co
 seacom.co.th
 seaman2u.com
+sectrack.space
 secudatago.com
 secure-guard.online
 secure-net.link
@@ -1867,6 +1885,7 @@ shinee.com
 shinobi.jp
 shoopadoo.com
 shopandersons.com
+short.gy
 shoutingnetwork.com
 shrum-studio.com
 shuyumsy.com
@@ -1935,6 +1954,7 @@ stream-flixth.com
 streamflix.mobi
 streamsharp.com
 studiox-babes.com
+stvkr.com
 success-is-in-reach.com
 sudjad.com
 suffonect.pw
@@ -2201,6 +2221,7 @@ xn--42cn1aug7dc0hrhc1gd.net
 xn--r3cpjgt3b.com
 xspicyvideos.com
 xycit33.top
+yadro.ru
 yasune360.com
 yibsee.com
 yieldmo.com
