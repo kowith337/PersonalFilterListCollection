@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202008290828
+# Version: 202104031337
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -8,7 +8,7 @@
 # Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/hosts/test/hosts_leftover_aggressive.txt
 # Description: Since the issue of #50, #51 and #52, I've decide to keep blocking those domains because those connections or
 #              features that depend to connect to specific domains of them are really not neccessary for me, nor impact to real
-#              usage and/or functionality of it, include compromise features, such as view phone SMS/MMS accross devices,
+#              usage and/or functionality of it, include concern features, such as view phone SMS/MMS accross devices,
 #              in-browser credentials (password manager), telephone spam check (while you're make an outgoing calls),
 #              SafeBrowsing, news feed snippets in web browser, etc.
 # WARNING: USING THIS BLOCKLIST IS MEAN YOU ARE AGREE TO NOT REQUEST FOR WHITELISTS ANY HOSTS BELOW, IF NOT, JUST DON'T USE THIS!
@@ -193,13 +193,13 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Firefox Betrayals]
 # - {Anti-Pocket}
-#   > Misleading to add "Chrome Android-alike" NTP (breaking) news feed feature, this thing make it's browser "compromised"
+#   > Misleading to add "Chrome Android-alike" NTP (breaking) news feed feature, this thing make it's browser "very untrusted"
 #     about "privacy" !
 #   > This make "Firefox" worse than "Chrome" because they implement this feature in both Desktop and Mobile!!
-#   > Moved to generic leftover because "WEB BROWSER" IS "AIN'T NEWS READER" / "MAGAZINE" / "TABLOID" / ...!!!
+#   > Moved to generic leftover because "WEB BROWSER" IS AIN'T "NEWS READER" / "MAGAZINE" / "TABLOID" / ...!!!
 #     * Unless you directly and/or manually read them on those websites or subscribe through RSS Feed and read them as your want!
 #     * Any preloaded/recommended/zuckested especially if it based on country, region and even user's activities ARE NOT WELCOME!
-#   > IF SOMEBODY USE ITS FEATURE, JUST STOP USING MY LEFTOVER LIST IS THE BEST AND LAST CHOICE THAT I CAN PREFER!!!!
+#   > ** IF SOMEBODY USE ITS FEATURE, JUST STOP USING MY LEFTOVER LIST IS THE BEST AND LAST CHOICE THAT I CAN PREFER!!!! **
 #
 # - {Browser Activation}
 #
@@ -237,9 +237,10 @@
 #   https://pantip.com/topic/39909501
 #   https://pantip.com/topic/39955561
 #   https://pantip.com/topic/39959278
-#   - Blocking these domains cause internet unusable, these domains are mainly use for blocking connections and show billing due
-#     in the past, but now they use for abusing end-users by showing ads and self promo for subscribe promotions, I will keep
-#     blocking these until they're stopping do those kinds of shame advertising and marketing.
+#   - Blocking these domains will cause internet unusable, these domains are mainly use for blocking connections after overdue
+#     billing in the past, but now they also use for abusing end-users by showing their self-promo for suggest and/or subscribe
+#     additional promotions, download their companion apps, etc. I will keep blocking these until they've stopped do those kinds
+#     of shame forcful advertisement and marketing!
 0.0.0.0 home.trueid.net
 0.0.0.0 service.truecorp.co.th
 0.0.0.0 service.trueinternet.co.th
