@@ -1,6 +1,6 @@
 [uBlock Origin 1.34.1.2]
 ! Title: kowith337's Test List
-! Version: 202103182007
+! Version: 202104091516
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -198,19 +198,22 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||google.*/ads/*$important
-||google.*/ads/ga-audiences?$important
 
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
 ! HTML document filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Note: Require post-quantum of Firefox or any forks to read these rules.
-!#if cap_html_filtering
+! Note: Require post-quantum of Firefox or any forks to read these rules, except for response header that it seems aim to support
+!       all platforms.
+facebook.com,instagram.com,messenger.com##^responseheader(set-cookie, /^datr/)
 pantip.com##^responseheader(etag)
-!endif
 
 ! Strong third parties denied (with some exceptions)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - This make use of `3p` to block everything that not come from its domain itself, however, `denyallow` rules may included if
-!   some other domains are necessary to loading with... (especially CDNs and some required resources)
+!   some other domains are necessary to loading with...
+!   * Will be priority to CDNs and some required resources, but maybe not fonts and social plugins, especially if that platform
+!     can track users and link back all off-site activities to its platform for determine users activities and show more related
+!     contents (and also zuckestions), such as all of Facebook plugins, Google Fonts, etc.
+$3p,important,domain=chocolatey.org,denyallow=disqus.com|disquscdn.com
 $3p,important,domain=greasyfork.org
 $3p,important,domain=pantip.com,denyallow=ptcdn.info
 $3p,important,domain=thairath.co.th,denyallow=byteark.com

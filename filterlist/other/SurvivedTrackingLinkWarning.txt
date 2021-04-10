@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 202103161310
+! Version: 202104091454
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -69,8 +69,8 @@
 ||facebook.com/*&dti=$document,important,domain=~FacebookInternalTracking_DTI
 ||facebook.com/*&eid=$document,important,domain=~FacebookInternalTracking_EID
 ||facebook.com/*&entry*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
-||facebook.com/*&fb_dtsg=$document,important,domain=~FacebookInternalTracking_DTSG
-||facebook.com/*&fb_dtsg_*=$document,important,domain=~FacebookInternalTracking_DTSG-Wild
+||facebook.com/*&fb_dtsg=$document,important,domain=~,domain=~m.facebook.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com|~FacebookInternalTracking_DTSG
+||facebook.com/*&fb_dtsg_*=$document,important,domain=~,domain=~m.facebook.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com|~FacebookInternalTracking_DTSG-Wild
 ||facebook.com/*&fref=$document,important,domain=~FacebookInternalTracking_FRef
 ||facebook.com/*&hc_*=$document,important,domain=~FacebookInternalTracking_HC-Wild
 ||facebook.com/*&lst=$document,important,domain=~FacebookInternalTracking_LST
@@ -91,8 +91,8 @@
 ||facebook.com/*?dti=$document,important,domain=~FacebookInternalTracking_DTI
 ||facebook.com/*?eid=$document,important,domain=~FacebookInternalTracking_EID
 ||facebook.com/*?entry*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
-||facebook.com/*?fb_dtsg=$document,important,domain=~FacebookInternalTracking_DTSG
-||facebook.com/*?fb_dtsg_*=$document,important,domain=~FacebookInternalTracking_DTSG-Wild
+||facebook.com/*?fb_dtsg=$document,important,domain=~,domain=~m.facebook.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com|~FacebookInternalTracking_DTSG
+||facebook.com/*?fb_dtsg_*=$document,important,domain=~,domain=~m.facebook.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com|~FacebookInternalTracking_DTSG-Wild
 ||facebook.com/*?fref=$document,important,domain=~FacebookInternalTracking_FRef
 ||facebook.com/*?hc_*=$document,important,domain=~FacebookInternalTracking_HC-Wild
 ||facebook.com/*?lst=$document,important,domain=~FacebookInternalTracking_LST
@@ -131,8 +131,8 @@
 ||messenger.com/*&dti=$document,important,domain=~FacebookInternalTracking_DTI
 ||messenger.com/*&eid=$document,important,domain=~FacebookInternalTracking_EID
 ||messenger.com/*&entry*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
-||messenger.com/*&fb_dtsg=$document,important,domain=~FacebookInternalTracking_DTSG
-||messenger.com/*&fb_dtsg_*=$document,important,domain=~FacebookInternalTracking_DTSG-Wild
+||messenger.com/*&fb_dtsg=$document,important,domain=~,domain=~m.facebook.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com|~FacebookInternalTracking_DTSG
+||messenger.com/*&fb_dtsg_*=$document,important,domain=~,domain=~m.facebook.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com|~FacebookInternalTracking_DTSG-Wild
 ||messenger.com/*&fref=$document,important,domain=~FacebookInternalTracking_FRef
 ||messenger.com/*&hc_*=$document,important,domain=~FacebookInternalTracking_HC_Wild
 ||messenger.com/*&lst=$document,important,domain=~FacebookInternalTracking_LST
@@ -152,8 +152,8 @@
 ||messenger.com/*?eid=$document,important,domain=~FacebookInternalTracking_EID
 ||messenger.com/*?entry_*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
 ||messenger.com/*?entrypoint=$document,important,domain=~FacebookInternalTracking_EntryPoint
-||messenger.com/*?fb_dtsg=$document,important,domain=~FacebookInternalTracking_DTSG
-||messenger.com/*?fb_dtsg_*=$document,important,domain=~FacebookInternalTracking_DTSG-Wild
+||messenger.com/*?fb_dtsg=$document,important,domain=~,domain=~m.facebook.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com|~FacebookInternalTracking_DTSG
+||messenger.com/*?fb_dtsg_*=$document,important,domain=~,domain=~m.facebook.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com|~FacebookInternalTracking_DTSG-Wild
 ||messenger.com/*?fref=$document,important,domain=~FacebookInternalTracking_FRef
 ||messenger.com/*?hc_*=$document,important,domain=~FacebookInternalTracking_HC_Wild
 ||messenger.com/*?lst=$document,important,domain=~FacebookInternalTracking_LST
