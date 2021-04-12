@@ -1,6 +1,6 @@
 [uBlock Origin 1.34.1.2]
 ! Title: kowith337's Test List
-! Version: 202104091516
+! Version: 202104121349
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -175,14 +175,6 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 ||facebook.com/*?__xts__*=$1p,queryprune=|__xts__
 ||facebook.com/*?entry*=$1p,xhr,important,queryprune=|entry
 ||facebook.com/*?privacy_*=$1p,xhr,queryprune=|privacy_
-||facebook.com/a/*&fb_dtsg=$1p,queryprune=fb_dtsg,domain=~mtouch.facebook.com|touch.facebook.com
-||facebook.com/a/*&fb_dtsg_*=$1p,queryprune=|fb_dtsg_
-||facebook.com/a/*?fb_dtsg=$1p,queryprune=fb_dtsg,domain=~mtouch.facebook.com|touch.facebook.com
-||facebook.com/a/*?fb_dtsg_*=$1p,queryprune=|fb_dtsg_
-||facebook.com/ajax/*&fb_dtsg=$1p,queryprune=fb_dtsg,domain=~mtouch.facebook.com|touch.facebook.com
-||facebook.com/ajax/*&fb_dtsg_*=$1p,queryprune=|fb_dtsg_
-||facebook.com/ajax/*?fb_dtsg=$1p,queryprune=fb_dtsg,domain=~mtouch.facebook.com|touch.facebook.com
-||facebook.com/ajax/*?fb_dtsg_*=$1p,queryprune=|fb_dtsg_
 ||fbcdn.net/*&_nc_*=$css,script,domain=facebook.com|messenger.com,queryprune=|_nc_
 ||fbcdn.net/*?_nc_*=$css,script,domain=facebook.com|messenger.com,queryprune=|_nc_
 ||steampowered.com/*&curator_clanid=$queryprune=curator_clanid
@@ -237,7 +229,7 @@ checkkorn.com##+js(alert-buster)
 
 ! [External scriptlets from former NanoAdblocker]
 !   Due to owner has archived his/her works and lately known that it had been sold to third party for sure, the scriptlets may
-!   not work due to priviledge functions that set by its script.
+!   not work due to priviledge functions that set by its script to excecute specific snippets exclusively for Nano itself.
 !   Please note that I'm mainly use and sideload the GitHub version from owner's repo directly, unlike Firefox that are ported by
 !   other person, the sold of Chrome extension won't affected to Firefox version, however, archived repo may means it no longer
 !   get any future updates, except Chrome extension that possibility of source code will changed by other ppls who bought that!
