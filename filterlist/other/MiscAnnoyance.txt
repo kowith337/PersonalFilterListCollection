@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202103062316
+! Version: 202104162230
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -37,7 +37,7 @@ google.*###extrares #botstuff div[data-ved] div[jscontroller][data-hveid][data-v
 google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][data-ved] div[data-has-close][class*="result-pivots"][data-ved]
 google.*###main div[data-ved] div[data-async-context] .kno-result[data-hveid][data-ved]
 google.*###search #rso .rc[data-hveid][data-ved] div[id^="eob_"][jscontroller]
-google.*##.g div[class][data-hveid] div[jscontroller][id^="eob_"]
+google.*##.g div[id^="eob_"]
 google.*##.islrc div[data-id][data-rfg]
 google.*##[jscontroller] #rg[data-ved] div[class*="irc-"]
 google.*##div[jsname][role="list"] div[jsname][data-id^="Refinements"]
@@ -258,11 +258,12 @@ google.*###search #rso .rc[data-hveid][data-ved] div[id^="eob_"][jscontroller]:r
 google.*##.islrc div[data-id][data-rfg]:remove()
 !
 ! - The new way to inject "People also search for" annoyance
-google.*##.g div[class][data-hveid] div[jscontroller][id^="eob_"]:remove()
+google.*##.g div[id^="eob_"]:remove()
 google.*##.g:has(.exp-outline) div[jscontroller] h4:upward(4)
 google.*##.g:has(.exp-outline) div[jscontroller] h4:upward(4):remove()
 !
 ! - Remove UK consent prompt overlay that also load iframe
+!   * Please note that I cannot handle scroll-down prevention...
 google.*###cnt.big div[class] span[jsslot] #cnsw:upward(4):remove()
 
 ! [Pantip]

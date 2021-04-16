@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.4]
 ! Title: Facebook Zuckestion Killer - Base
-! Version: 202101221329
+! Version: 202104142242
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -718,7 +718,6 @@ facebook.com###root form[action*="/phoneacqwrite"]
 ! even basic site.
 facebook.com##div[role="article"] div:has(div > span a[href*="/zero/optin/legal/"])
 facebook.com##div[role="article"] div:has(table a[href*="chaining"])
-facebook.com##div[role="article"] div:has(table a[href*="chaining"])
 facebook.com##div[role="article"] table td a[href*="/messenger-destination/cta/?"]
 facebook.com##div[role="article"] table[role="presentation"]:has(td a[href*="/profilepicframes"])
 facebook.com##div[role="article"]:has(.fbEventsSuggestionItem)
@@ -748,7 +747,7 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com###pages_msite_body_content
 
 ! Backup area for backward compatibility (Only XUL Firefox + uBO Legacy), newer version (aka. Quantum) will be read as invalid!
 ! Also, any rules that have `$all` tag may won't read (treated as invalid) for legacy version, too!
-!#if env_firefox
+!#if env_legacy
 ||facebook.com/*/promotion_trigger_info/$important,~document
 ||facebook.com/ads/$~document
 ||facebook.com/ascend_mr_no$important,~document
@@ -757,6 +756,3 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com###pages_msite_body_content
 ||facebook.com/goodwill/$important,~document
 ||facebook.com/sketch_results$important,~document
 !#endif
-
-! This help for opt out zuckestions, you can convert scriptlets below as bookmarklet.
-! var divs = document.querySelectorAll('a[data-sigil*="xout"] i.touched_hide'); for (i = 0; i < divs.length; ++i) {divs[i].click();};
