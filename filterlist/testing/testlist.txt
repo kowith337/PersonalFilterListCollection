@@ -1,6 +1,6 @@
 [uBlock Origin 1.34.1.2]
 ! Title: kowith337's Test List
-! Version: 202104121349
+! Version: 202104201338
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -57,6 +57,7 @@ birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,ni
 
 ! [BRUH for Thai mobs]
 ! - Nitter
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ปล่อยเพื่อนเรา"])
 birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ1"])
 birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ2"])
 birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ3"])
@@ -75,8 +76,11 @@ birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,ni
 birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม๊อบ7"])
 birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม๊อบ8"])
 birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ม๊อบ9"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ยกเลิก112"])
+birdsite.xanny.family,n.itoma.tech,nitter.1d4.us,nitter.13ad.de,nitter.42l.fr,nitter.cattube.org,nitter.eu,nitter.fdn.fr,nitter.himiko.cloud,nitter.mailstation.de,nitter.mastodont.cat,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weaponizedhumiliation.com,tweet.lambda.dance##.timeline-item:has(.tweet-body a[href*="search?q=%23ยกเลิกม112"])
 !
 ! - Tweetdeck
+tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ปล่อยเพื่อนเรา"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม็อบ1"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม็อบ2"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม็อบ3"])
@@ -95,8 +99,11 @@ tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม๊�
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม๊อบ7"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม๊อบ8"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม๊อบ9"])
+tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ยกเลิก112"])
+tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ยกเลิกม112"])
 !
 ! - Twitter (Desktop only)
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ปล่อยเพื่อนเรา"])
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ1"])
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ2"])
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ3"])
@@ -115,6 +122,8 @@ twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม๊อบ7"])
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม๊อบ8"])
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม๊อบ9"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ยกเลิก112"])
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ยกเลิกม112"])
 
 ! [Pantip] Explicit and spam topic name (Use Thai unicode characters because most language of this site are mainly in Thai)
 pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(ตระกองขวัญ))
