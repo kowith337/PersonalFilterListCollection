@@ -1,7 +1,7 @@
 ! uMatrix: Ruleset recipes 1.4.1
-! Title: Rulesets for Thai sites (alpha test)
-! Version: 202009012231
-! VersionNumber: 0.22.0
+! Title: Rulesets for Thai sites
+! Version: 202104242143
+! VersionNumber: 0.22.1
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/ruleset/readme.md
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
@@ -43,6 +43,7 @@ LINE Today
 LINE TV
 	tv.line.me *
 		_ line-apps.com script
+		_ livecloud.akamaized.net fetch
 		_ pstatic.net script
 		_ tv-line.pstatic.net fetch
 		_ tv-line.pstatic.net media

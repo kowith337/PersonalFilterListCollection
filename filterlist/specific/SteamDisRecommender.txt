@@ -1,6 +1,6 @@
-[uBlock Origin 1.28.0]
+[uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters
-! Version: 2020122053
+! Version: 202104282055
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -156,7 +156,7 @@ steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .plat
 
 ! Allow tag change and continuous scrolling while search and view game lists.
 ! - Please note, the AJAX requests still bundle with `snr` parameter, this might be trade-off your privacy for that function.
-! - Don't worry, maybe `queryprune` below can help you...
+! - Don't worry, maybe `removeparam` below can help you...
 @@||steampowered.com/search/results$xmlhttprequest,domain=store.steampowered.com
 
 ! Requests query strip (require uBO 1.31.0 or above!) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -164,10 +164,12 @@ steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .plat
 !   requests that trying to shift with `snr` parameter, especially when you perfom product search with continuous scrolling,
 !   you can see that I've allowed search results `xhr` but these rules below will still keep catching and blocking requests that
 !   still contain `snr`, then strip its parameter and re-requests again without it!
-||steampowered.com/*&curator_clanid=$queryprune=curator_clanid
-||steampowered.com/*&snr=$queryprune=snr,important
-||steampowered.com/*?curator_clanid=$queryprune=curator_clanid
-||steampowered.com/*?snr=$queryprune=snr,important
+||steampowered.com/*&curator_clanid=$removeparam=curator_clanid
+||steampowered.com/*&ser=$removeparam=ser,important
+||steampowered.com/*&snr=$removeparam=snr,important
+||steampowered.com/*?curator_clanid=$removeparam=curator_clanid
+||steampowered.com/*?ser=$removeparam=ser,important
+||steampowered.com/*?snr=$removeparam=snr,important
 
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! These are not necessary, except it use for tracking purpose!
