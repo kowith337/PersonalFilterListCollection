@@ -1,6 +1,6 @@
 [uBlock Origin 1.34.1.2]
 ! Title: kowith337's Test List
-! Version: 202104201338
+! Version: 202105031834
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -206,6 +206,8 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 ! Note: Require post-quantum of Firefox or any forks to read these rules, except for response header that it seems aim to support
 !       all platforms.
 facebook.com,instagram.com,messenger.com##^responseheader(set-cookie, /^datr/)
+facebook.com,instagram.com,messenger.com##^responseheader(x-zero-eh)
+facebook.com,instagram.com,messenger.com##^responseheader(x-zero-rml)
 pantip.com##^responseheader(etag)
 
 ! Strong third parties denied (with some exceptions)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
