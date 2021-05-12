@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.4]
 ! Title: Facebook Zuckestion Killer - Base
-! Version: 202104142242
+! Version: 202105121929
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -10,11 +10,10 @@
 !              Instagram, MESSenger, even Facebook Lite.
 !              For anyone who noticed if this list now appear with `Base` text behind original name that never have it before,
 !              please see additional reason and/or descriptions in the other inclusive filters.
-!
 ! Note 1: Some rules below are too long due to use an xpath, or multiple procedural chaining to make sure it won't accidentally
 !         remove something that really need.
 ! Note 2: Inspired from report on https://github.com/collinbarrett/FilterLists/issues/282
-
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Proactive outbound tracking prevention, to prevent Facebook tracking you outside while click and open shared URL (see #19)
 ! Remark: If you're seeing yellow warning page, try click the magnifier icon to expand all parameters for getting real URL!
 ||*&fbclid=$document,xhr,important,domain=~TRACKING-FBCLID_PARAMS
@@ -27,7 +26,7 @@
 ||lm.facebook.com$document,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_DOMAIN
 ||lm.messenger.com$document,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_DOMAIN
 ||messenger.com/l.php$document,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_PHP
-
+!
 ! Page blocking
 ||facebook.com/gaming/browse/games/?s=SUGGESTED$important
 ||facebook.com/gaming/browse/games/?*&s=SUGGESTED$important
@@ -152,7 +151,7 @@
 ||fbcdn.net/*?*facebook.com%2Fds%2F$important
 ||fbcdn.net/hads-ak-*$important
 ||fbcdn.net/rsrc.php/*/-PAXP-*.gif$important
-
+!
 ! Unbreak some functional, e.g. If you want to manage advert prefs, you need to allow some requests to let Facebook retrieve
 ! information about advert prefs, and let you properly manage them without getting error or auto refresh due to cannot sent xhr
 ! to perform delete preference out of your account.
@@ -210,7 +209,7 @@
 @@||facebook.com/pubcontent/suggestions/interaction_logging/?dpr=1$1p,xhr
 @@||facebook.com/settings/advertising_email/$1p,xhr
 @@||facebook.com/share/dialog/submit/$1p,xhr
-
+!
 ! [Counter] Prevent accidentally (re-)add advert prefs while you're deleting them.
 ! Check your advert prefs here [FB Login needed] > https://www.facebook.com/ads/preferences/edit
 ||facebook.com/ads/preferences/advertiser_hideall/?*undo=true$important
@@ -219,7 +218,7 @@
 ||facebook.com/ds/preferences/advertiser_hideall/?*undo=true$important
 ||facebook.com/ds/preferences/edit_interests/?action=add$important
 ||facebook.com/ds/preferences/edit_sensitive_topics*duration_in_days=0$important
-
+!
 ! Facebook Messaging Privacy Aware (is typing, seen message)
 ||facebook.com/*/change_read_status.php$important
 ||facebook.com/*/delivery_receipts.php$important
@@ -229,7 +228,7 @@
 ||messenger.com/*/delivery_receipts.php$important
 ||messenger.com/*/mark_seen.php$important
 ||messenger.com/*/typ.php$important
-
+!
 ! [Super lightweight Facebook enhancement]
 ! It's no need to load anything that not matter to use, because `mbasic.facebook.com` can work fine without external JavaScript,
 ! iframe and third party resources.
@@ -237,13 +236,13 @@
 ||$script,domain=mbasic.facebook.com
 ||$frame,domain=mbasic.facebook.com
 ||$websocket,domain=mbasic.facebook.com
-
+!
 ! SOUND annoyances
 ! This may break sounds in messages, but I have no choice about this, because Facebook Touch site is now play some sounds when
 ! pick reactions (Like, Love, Haha, etc.), and found AdGuard base are whitelist `rsrc.php` from `fbcdn.net`, so I've use some
 ! wildcard to make sure it will not block something that not related to "M4A audio"
 ||fbcdn.net/rsrc.php/*.m4a$media,important,domain=m.facebook.com|mtouch.facebook.com|touch.facebook.com
-
+!
 ! [Resources Replace] Instead of just blocking, then redirect to neutered resources
 ! Experimental for Facebook security pixels, this may break their functionality and security check.
 ||facebook.com/*/delivery_receipts.php$xhr,important,redirect=nooptext
@@ -275,90 +274,8 @@
 ||fbsbx.com/security/hsts-pixel.gif$image,important,redirect=1x1.gif
 ||messenger.com/*/delivery_receipts.php$xhr,important,redirect=nooptext
 ||messenger.com/security/hsts-pixel.gif$image,important,redirect=1x1.gif
-
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-
 ! DOM Hiding - Level 1: Known DOM id and class, some wildcard of element name
-facebook.com###GroupDiscoverCard_Local
-facebook.com###GroupsRHCSuggestionSection
-facebook.com###ads_preferences_desktop_root #interacted div[class] > div[class] > div[class] img[alt][width="148"][height="148"]
-facebook.com###ads_preferences_desktop_root #interests div[class] > div[class] > div[class] img[alt][width="148"][height="148"]
-facebook.com###fbpage_invite_audience_action
-facebook.com###fbpage_invite_audience_action_finch
-facebook.com###feed_optimistic_video
-facebook.com###friend_invites_section
-facebook.com###home_sponsor_nile
-facebook.com###left_nav_section_nodes ul li[id="navItem_124024574287414"]
-facebook.com###left_nav_section_nodes ul li[id="navItem_275254692598279"]
-facebook.com###left_nav_section_nodes ul li[id="navItem_343553122467255"]
-facebook.com###left_nav_section_nodes ul li[id="navItem_399711043500146"]
-facebook.com###left_nav_section_nodes ul li[id="navItem_456900714360021"]
-facebook.com###left_nav_section_nodes ul li[id="navItem_526732794016279"]
-facebook.com###left_nav_section_nodes ul li[id="navItem_645191315628772"]
-facebook.com###left_nav_section_nodes ul li[id="navItem_762992637108088"]
-facebook.com###left_nav_section_nodes ul li[id="navItem_1728807357362356"]
-facebook.com###left_nav_section_nodes ul li[id="navItem_2805739562851096"]
-facebook.com###marketplace_bsg_explore_div #sale_groups_landing_page_recommended_groups div[id*="group_browse"] div[id*="GroupSuggestionCard"]
-facebook.com###mobile_login_bar
-facebook.com###mobile_related_video_feed_pagelet
-facebook.com###pageInviteNoticeCard
-facebook.com###page_recommendations #recommendations_create_entrypoint_container
-facebook.com###page_suggestions_on_liking
-facebook.com###pagelet_ads_when_no_friend_list_suggestion
-facebook.com###pagelet_advertiser_panel
-facebook.com###pagelet_ego_pane
-facebook.com###pagelet_explore_feed div[role="article"] .fbUserStory span.uiLikePageButton
-facebook.com###pagelet_games_rhc
-facebook.com###pagelet_group_mall div[id*="group_mall"] div[id*="mall_post"][id*="SUGGESTED_IN_MALL"]
-facebook.com###pagelet_loggedout_sign_up
-facebook.com###pagelet_main_column_personal #fbSuggestionsPlaceHolder
-facebook.com###pagelet_page_above_header div[id*="megaphone_story"]
-facebook.com###pagesTimelineChainingUnit
-facebook.com###pages_may_like_section
-facebook.com###pages_side_column div > div[id*="PageRelatedPagesSecondaryPagelet"]
-facebook.com###pages_side_column div a[href*="/friend_inviter_v2/"]
-facebook.com###permalink_related_videos_logged_out
-facebook.com###video_permalink_related_pagelet
-facebook.com##.fbAdUnit
-facebook.com##.fbEmu
-facebook.com##.fbEmuBlock
-facebook.com##.fbEmuComboList
-facebook.com##.fbEmuEgo
-facebook.com##.fbEmuEgoUnit
-facebook.com##.fbEmuLink
-facebook.com##.fbEmuTracking
-facebook.com##.fbPhotoAdsCol
-facebook.com##.fbTimelineSideAds
-facebook.com##.fb_content div[class] div[data-referrer] .stat_elem a[href*="/pages/?similar"]
-facebook.com##.fb_content[role=main] div > div[seealluri*="/gaming/?section_id"][seealluri*="view=streamer"]
-facebook.com##.home_right_column .pagelet[id*="pagelet_marketplace"]
-facebook.com##div[id*="GroupDiscoverCard"] li[id*="GroupDiscoverCard_"] div > a[id*="joinButton"]
-facebook.com##div[id*="GroupDiscoverCard_Local"]
-facebook.com##div[id*="GroupDiscoverCard_Recent"]
-facebook.com##div[id*="GroupDiscoverCard_Suggested"]
-facebook.com##div[id*="pagelet_group"] form[action*="nux_type=create_page"]
-facebook.com##div[id*="pagelet_group"] form[action*="nux_type=member_suggesting_tags"]
-facebook.com##div[id*="pagelet_recommendation"]
-facebook.com##div[id*="sponsoredTickerStory"]
-facebook.com##div[role="feed"] .fbUserContent .FriendButton
-facebook.com##div[role="feed"] .fbUserContent .mtm .FriendButton
-facebook.com##div[role="feed"] .fbUserContent .mtm span a[ajaxify*="/ajax/follow/"]
-facebook.com##div[role="feed"] .fbUserContent .mtm span[class*="uiLikePageButton"]
-facebook.com##div[role="feed"] .fbUserContent .mtm span[class*="uiPageLikeButton"]
-facebook.com##div[role="feed"] .fbUserContent a[ajaxify*="/ajax/follow/"]
-facebook.com##div[role="feed"] .fbUserContent span a[ajaxify*="/ajax/follow/"]
-facebook.com##div[role="feed"] .fbUserContent span[class*="uiLikePageButton"]
-facebook.com##div[role="feed"] .fbUserContent span[class*="uiPageLikeButton"]
-facebook.com##div[role="feed"] div[id*="hyperfeed_story_id"] .mtm .FriendButton
-facebook.com##div[role="feed"] div[id*="hyperfeed_story_id"] .mtm span a[ajaxify*="/ajax/follow/"]
-facebook.com##div[role="feed"] div[id*="hyperfeed_story_id"] .mtm span[class*="uiLikePageButton"]
-facebook.com##div[role="feed"] div[id*="hyperfeed_story_id"] .mtm span[class*="uiPageLikeButton"]
-facebook.com##div[role="navigation"] > div a[href*="/groups/?"][href*="discover_category_id=103418383389257"]
-facebook.com##div[role="navigation"] > div a[href*="/groups/?"][href*="discover_category_id=212609529249058"]
-facebook.com##div[role="navigation"] > div a[href*="/groups/?"][href*="discover_category_id=234383826903707"]
-facebook.com##div[role="navigation"] > div a[href*="/groups/?"][href*="discover_category_id=470739743275782"]
-facebook.com##div[role="navigation"] > div a[href*="/groups/?"][href*="discover_category_id=1801122086782345"]
-facebook.com##iframe[id*="fbsbx-sig-iframe-"]
 m.facebook.com,mbasic.facebook.com###bookmarkmenu table td a[href*="freebasics.com"]
 m.facebook.com,mbasic.facebook.com###m_loginbar_login_button
 m.facebook.com,mbasic.facebook.com###m_loginbar_reg_button
@@ -423,83 +340,9 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[data-store*="mobile_p
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[id*="composer"] div[data-sigil="m-conversation-guide"]
 www.facebook.com##div[data-pagelet="CometMarketplaceHomeContentContainer"] [data-pagelet="StreamingBrowseFeed"] [data-pagelet="BrowseFeedUpsell_0"]
 www.facebook.com##div[data-pagelet="page"] [role="navigation"] div[data-visualcompletion] a[href*="/pages/?category=top"]
-
+!
 ! DOM Hiding - Level 2: contains has(-text)/upward/xpath parameter
 ! This need at least uBO 1.8.0+, but 1.10.0+ for multiple chaining...
-facebook.com###ads_preferences_desktop_root div[tabindex][role="button"] button[data-hover][data-tooltip-content="Add"]:has(span:has-text(Add))
-facebook.com###contentArea div[class] div[id][class]:has(a[href*="/login/?"])
-facebook.com###content[role="main"] .clearfix div[data-referrer] > div .stat_elem:has(button.PageLikeButton i[class*="sx_"])
-facebook.com###content[role="main"] div .clearfix div[class] > div[class] > :has(a[href*="/groups_browse/see_all/?"][href*="103418383389257"])
-facebook.com###content[role="main"] div .clearfix div[class] > div[class] > :has(a[href*="/groups_browse/see_all/?"][href*="212609529249058"])
-facebook.com###content[role="main"] div .clearfix div[class] > div[class] > :has(a[href*="/groups_browse/see_all/?"][href*="234383826903707"])
-facebook.com###content[role="main"] div .clearfix div[class] > div[class] > :has(a[href*="/groups_browse/see_all/?"][href*="470739743275782"])
-facebook.com###content[role="main"] div .clearfix div[class] > div[class] > :has(a[href*="/groups_browse/see_all/?"][href*="1801122086782345"])
-facebook.com###content[role="main"] div .clearfix div[class] > div[class] > :has(div[role="heading"] span:has-text(/More Suggestions/))
-facebook.com###content[role=main] > div .clearfix .stat_elem:has(div a[class*="_fbPageBrowserSubscriptionCardItem"])
-facebook.com###content_container div > div[id*="u_fetchstream"] div :has(div[id*="u_fetchstream"] .uiTypeahead div input[aria-controls*="typeahead_list_u_fetchstream"][aria-label*="Invite"])
-facebook.com###event_tabs #event_guest_list div[class] div[class] ul[class]:has(div span:has-text(Suggested Friends))
-facebook.com###event_tabs #event_guest_list div[class] div[class] ul[class]:has(li div > button div[data-hover="tooltip"][data-tooltip-display="overflow"])
-facebook.com###events_dashboard_activity_feed div[role="article"]:has(.fbEventsSuggestionItem)
-facebook.com###fbSearchResultsBox:has(form.friendBrowserForm div:has(li a[href*="?fref=pymk"]))
-facebook.com###games_hub_root_content div > span div:has(a[href*="/gyml-similar/?"])
-facebook.com###globalContainer .uiLayer[data-testid="undefined"] .uiContextualLayer div ul[role="menu"] li:has(a span div:has-text(/^Undo hiding ads/))
-facebook.com###groupsNewMembersLink div:has(li[id*="suggested_member_"])
-facebook.com###headerArea div:if-not(.clearfix):has(a[href*="/login/?"])
-facebook.com###page_browser_invite_friends .clearfix .stat_elem:has(div > a[ajaxify*="/friend_inviter_v2/"])
-facebook.com###page_browser_subscriptions .clearfix div:has(span button.PageLikeButton)
-facebook.com###pagelet_group_rhc .groupSkyAux div:has(div a[ajaxify*="/ajax/groups/create_get/?"])
-facebook.com###pagelet_group_rhc .groupSkyAux div[class] > div[id][class]:has(.uiList:has(li[id*="suggested_member"]))
-facebook.com###pagelet_group_rhc .groupSkyAux div[class] > div[id][class]:has(div[class]:has(a[id*="group_rhc_see_more"]))
-facebook.com###pagelet_growth_expanding_cta:has(a[id*="expanding_cta_"])
-facebook.com###profile_page_insights_hubble div > table td div:has-text(Suggested Pages to Watch)
-facebook.com###stream_pagelet div.mvm:has(div:has(a[href*="?sk=h_nor"]))
-facebook.com##._4-u8:has(a[data-testid="back_to_top_link"])
-facebook.com##.jewelWithEgoUnits .uiScrollableAreaContent div:has(form.friendBrowserForm:has(input[value="people_you_may_know"]))
-facebook.com##.loggedout_menubar div[data-testid="royal_login_form"] div:has(form[id="login_form"])
-facebook.com##.mtm div[id*="u_0_"] div[id*="u_0_"]:has(span button.PageLikeButton)
-facebook.com##.pagelet.groupSkyAux div:has(a[ajaxify*="/ajax/groups/create_get.php?"])
-facebook.com##.uiLayer:has(div[role="dialog"]:has(div[data-testid="instant-games-list"]))
-facebook.com##:xpath(//div//form[@rel="async"]//div[.//div/text()="Up next"])
-facebook.com##:xpath(//div[@id="pagelet_timeline_main_column"]//div[starts-with(@data-referrer,"id")]//div[starts-with(@id,"u_")]//div//div[.//span/text()="Featured for you"])
-facebook.com##:xpath(//div[@id="stream_pagelet"]//div[starts-with(@data-ownerid,"u_jsonp_")][//div//span/text()="Featured for you"])
-facebook.com##:xpath(//div[@id="stream_pagelet"]//div[starts-with(@data-ownerid,"u_jsonp_")][//div/text()="Related"])
-facebook.com##:xpath(//div[@id="timeline-medley"]//div//span[.//button/text()="Tag Suggestions"])
-facebook.com##[id^=hyperfeed_story_id_]:has(a[href*="client_token"])
-facebook.com##div ul[role="menu"] li:has(a[href*="campaign/landing.php?"])
-facebook.com##div[data-referrer="pagelet_side_ads"]
-facebook.com##div[data-referrer="timeline_collections_section_title"] > div:has(div[id*="pagelet_recommendation"])
-facebook.com##div[data-testid="marketplace_category_feed"] div > div[class][style]:has(a[href*="/ads/about/?"])
-facebook.com##div[data-testid="marketplace_category_feed"] div > div[class][style]:has(a[href*="facebook.com/l.php?"])
-facebook.com##div[id*="dialog_"]:has(.dialog_buttons input[name="login"])
-facebook.com##div[id*="hyperfeed_story_id"] .mtm div[id*="u_jsonp"] div[id*="u_jsonp"]:has(a[href*="type=article_author_in_shared_link"])
-facebook.com##div[id*="hyperfeed_story_id"] div[data-gt*="click2canvas"] div[data-ft] .mts .mtm:has(.uiList:has(li a[rel][target="_blank"]))
-facebook.com##div[id*="hyperfeed_story_id"] div[id*="u_fetchstream"]:has(div[role="article"] div[data-ft*="ego_id"]:has(a[href*="?ref=psym_feed"]))
-facebook.com##div[id*="hyperfeed_story_id"]:has(.fbInternPreview)
-facebook.com##div[id*="hyperfeed_story_id"]:has(a[href*="/friends/requests/"])
-facebook.com##div[id*="hyperfeed_story_id"]:has(a[href*="[is_sponsored]=1"])
-facebook.com##div[id*="hyperfeed_story_id"]:has(a[href*="facebook.com/zuck"])
-facebook.com##div[id*="hyperfeed_story_id"]:has(a[href*="is_sponsored=1"])
-facebook.com##div[id*="hyperfeed_story_id"]:has(div > a[href*="ref=fbtips"])
-facebook.com##div[id*="hyperfeed_story_id"]:has(div[class][id] div[aria-label="Message from Facebook"])
-facebook.com##div[id*="hyperfeed_story_id"]:has(div[data-ft*="ego_id"]:has(a[href*="ref=group_top_stories_feed"]))
-facebook.com##div[id*="hyperfeed_story_id"]:has(div[data-ft*="ego_id"]:has(a[href*="ref=psym_feed"]))
-facebook.com##div[id*="hyperfeed_story_id"]:has(span a:has-text(/Sponsored/))
-facebook.com##div[id*="hyperfeed_story_id"]:has(span a[href*="[is_sponsored]=1"])
-facebook.com##div[id*="hyperfeed_story_id"]:has(span a[href*="is_sponsored=1"])
-facebook.com##div[id*="hyperfeed_story_id"][role="article"]:has(.userContentWrapper div[class] a[target][data-hovercard*="directed_target_id"])
-facebook.com##div[id*="hyperfeed_story_id"][role="article"]:has(div[class] > div[style] a[href*="facebook.com/help/"])
-facebook.com##div[itemscope] #content_container div.clearfix div[class][id][style] div[class]:has(div.uiTypeahead div input[placeholder][aria-controls][aria-label*="Invite"])
-facebook.com##div[itemscope] div > #content_container div > div[style]:has(#pagelet_growth_expanding_cta)
-facebook.com##div[role="article"] div:has(span a[href*="/groups/?"][href*="discover_category_id=103418383389257"])
-facebook.com##div[role="article"] div:has(span a[href*="/groups/?"][href*="discover_category_id=212609529249058"])
-facebook.com##div[role="article"] div:has(span a[href*="/groups/?"][href*="discover_category_id=234383826903707"])
-facebook.com##div[role="article"] div:has(span a[href*="/groups/?"][href*="discover_category_id=470739743275782"])
-facebook.com##div[role="article"] div:has(span a[href*="/groups/?"][href*="discover_category_id=1801122086782345"])
-facebook.com##div[role="feed"] div[id*="hyperfeed_story_id"] .mtm:has(div .uiList:has(li a[href*="/commerce/products/"]))
-facebook.com##div[role="feed"] div[id*="hyperfeed_story_id"] .userContentWrapper .mtm .mtm:has(ul.uiList:has(a[href*="/services"]))
-facebook.com##div[role="feed"] div[id*="hyperfeed_story_id"]:has(div ul.uiList:has(li[data-ft*="ego_id"]))
-facebook.com##div[role="feed"] div[id*="mall_post"][id*="SUGGESTED_IN_MALL"]
-facebook.com##div[role="feed"]> div[data-pagelet^="FeedUnit"] div > span > span > a > span:upward(div[data-pagelet^="FeedUnit"])
 m.facebook.com,mbasic.facebook.com###friends_center_main div:has(table tr:has(td a[href*="pymk_funnel_data"]))
 m.facebook.com,mbasic.facebook.com###m_group_stories_container article:has(footer a[href*="/groups/?ref=category_discover_landing"])
 m.facebook.com,mbasic.facebook.com###m_group_stories_container div:has(div a[href*="/findgroups/"])
@@ -618,7 +461,6 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com##.mSideMenu li:has(.toucha
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="free.facebook.com/home.php?ref"]))
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="instagram.com"]))
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##.storyStream section article:has(footer:has(a[data-ajaxify-href*="/qp/action/redirect/?"]))
-m.facebook.com,mtouch.facebook.com,touch.facebook.com##:xpath(//section//article[.//header//div//span/text()="Sponsored"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/"][href*="103418383389257"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/"][href*="212609529249058"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/"][href*="234383826903707"])
@@ -661,7 +503,7 @@ www.facebook.com##div[data-pagelet="page"] div[role="main"] div[class] > [style]
 www.facebook.com##div[data-pagelet="page"] div[role="main"] div[class] > a[href*="/events/"][role]:has(div[class] > div[aria-label="Interested"]):upward(2)
 www.facebook.com##div[data-pagelet="page"] div[role="main"] div[class] > div[data-visualcompletion] div[aria-label="Invite"]:upward(10)
 www.facebook.com##div[role="complementary"] div[data-pagelet="TahoeRightRail"] div[class] span[dir]:has-text(Up next):upward(2)
-
+!
 ! DOM Hiding - Level 3: Same as level 2, but include :not
 ! Note: some rules still results false positive, e.g. remove panel that zuckest to download 'Facebook Lite', but it also
 !       accidentally hide everything when viewing photo at first time of session.
@@ -669,7 +511,7 @@ m.facebook.com,mbasic.facebook.com###viewport #root div:not([id*="MPhoto"]) > ta
 m.facebook.com,mbasic.facebook.com###viewport div:not(#objects_container) > div:has(table[role] a[href*="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
 m.facebook.com,mbasic.facebook.com###viewport div:not(#objects_container) > table[class] td a[href*="facebook.com/l.php?"]:has(span)
 m.facebook.com,mbasic.facebook.com###viewport div:not([id]) > table:has(td a[href*="/a/language.php?"][href*="ref_component=mbasic_footer"])
-
+!
 ! DOM Hiding - Level 4: Remove it instead!
 ! Note: These rules designed for modern uBO, start from 1.28.0 and onward, sorry for XUL legacy users.
 m.facebook.com,mbasic.facebook.com###friends_center_main div:has(table tr:has(td a[href*="pymk_funnel_data"])):remove()
@@ -693,7 +535,7 @@ www.facebook.com##div[data-pagelet="ChatTab"] [data-testid="Keycommand_wrapper_M
 www.facebook.com##div[data-pagelet="CometMarketplaceHomeContentContainer"] [data-pagelet="StreamingBrowseFeed"] [data-pagelet="BrowseFeedUpsell_0"]:remove()
 www.facebook.com##div[data-pagelet="RightRail"] div[class] h3[dir]:has(span[dir]:has-text(/Sponsored/)):upward(7):remove()
 www.facebook.com##div[data-pagelet="page"] [role="navigation"] div[data-visualcompletion] a[href*="/pages/?category=top"]:remove()
-
+!
 ! CSS Modification
 ! This may modify some element instead of hiding
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###MNewsFeed section article .story_body_container header a[href*="/mobile/android/upsell_link/"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
@@ -704,16 +546,14 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com##article div > div[data-au
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##article div > div[data-autoid] a[href*="/ads/interest/?"]:style(color: red !important; text-decoration: none !important; pointer-events: none !important)
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##div[data-sigil="m-feed-voice-subtitle"] a[href*="/mobile/"][href*="/upsell_link/?"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##section article .story_body_container header div > div a[href*="facebook.com/lite/?"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
-
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-
 ! Experimental
 ! This work only for specific platform, or for testing out!
-
+!
 ! [Apply as root, no matter what!]
 ! Hide form dialog to add phone numbers (confirmed affect to any mobile site layout, no idea for desktop site breakage?)
 facebook.com###root form[action*="/phoneacqwrite"]
-
+!
 ! Try apply DOM rules that share the `article` role, Facebook start to add the role name for every post items in every versions,
 ! even basic site.
 facebook.com##div[role="article"] div:has(div > span a[href*="/zero/optin/legal/"])
@@ -727,11 +567,11 @@ facebook.com##div[role="article"]:has(div[class] > div[style] a[href*="facebook.
 facebook.com##div[role="article"]:has(div[data-ft*="ego_id"]:has(a[href*="?ref=psym_feed"]))
 facebook.com##div[role="article"]:has(iframe[src*="/xti.php?"])
 facebook.com##div[role="article"]:has(span:has-text(/Sponsored/))
-
+!
 ! Hide zuckestions items pane to enforce Facebook fill up their zuckestions, but in fact you see none of any zuckestions at all!
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###friends_center_main div[data-pymk-id]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com##.async_fan:has(div div a.darkTouch[href*="pages_nav_discover"])
-
+!
 ! Once you've redirect to "Free Basics" prompt page (for example https://m.facebook.com/zero/policy/optin) these rules below
 ! will remove the details of "Free Basics" service (description, legal link) and "Accept" button, only leave "Cancel" button to
 ! make sure you didn't accidentally accept the terms and apply their "Free Basics" service at all!
@@ -739,12 +579,12 @@ m.facebook.com,mbasic.facebook.com##div[role="article"] div:has(div > span a[hre
 m.facebook.com,mbasic.facebook.com##form[action*="/zero/optin/write/"] input[type="submit"]
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###root div article div:has(span a[href*="/zero/optin/legal/"])
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###root div article form[action*="/zero/optin/write/"] button[type="submit"]
-
+!
 !#if env_mobile
 ! Hide some page admin pane to invite, get tips, etc.
 m.facebook.com,mtouch.facebook.com,touch.facebook.com###pages_msite_body_contents div > div[data-store*="logging_data"][data-sigil="reaction-unit-logging"]:has(div[data-nt][data-ntid] img[data-nt="NT:IMAGE"])
 !#endif
-
+!
 ! Backup area for backward compatibility (Only XUL Firefox + uBO Legacy), newer version (aka. Quantum) will be read as invalid!
 ! Also, any rules that have `$all` tag may won't read (treated as invalid) for legacy version, too!
 !#if env_legacy

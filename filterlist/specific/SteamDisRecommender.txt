@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters
-! Version: 202104282055
+! Version: 202105122011
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -112,7 +112,8 @@ steampowered.com##.review_box .vote_button_ctn a span i.funny:upward(2)
 ! - Sometime you're embarassing to see how many times spent on the related games that you're currently looking and/or trying to
 !   buy, I've hide the playtime and show only related game banner that you've played, this make you not feeling shamed at it,
 !   at least.
-steampowered.com##.game .game_meta_data .recommendation_reasons .similar_recent_apps_container .app_impression_tracked:style(color: transparent !important; font-size: 0px !important)
+steampowered.com##.recommendation_reasons .similar_recent_apps_container a:style(color: transparent !important; font-size: 0px !important)
+steampowered.com##.recommendation_reasons .similar_recent_apps_container .app_impression_tracked:style(color: transparent !important; font-size: 0px !important)
 
 ! - Restore padding size of top scroll banner that caused by "Takeover" pane
 steampowered.com##.home_cluster_ctn.home_ctn .home_page_content:style(padding-left: 0px !important)
@@ -173,9 +174,12 @@ steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .plat
 
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! These are not necessary, except it use for tracking purpose!
+steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, _gid)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, app_impressions)
+steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, browserid)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, deep_dive_carousel_focused_app)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, deep_dive_carousel_method)
+steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, ga)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, home_scroll)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, recentapps)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, recentlyVisitedAppHubs)
@@ -183,7 +187,7 @@ steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, 
 
 ! - Prohibit Steam website to detect touch screen from first touch, however, **this cause major site features malfunction!**
 !   * Note that it may require to delete `strResponsiveViewPrefs` cookie first to make this script injection work properly, if
-!     you've forgot to do that before, maybe the `cookie-remover` scriptlet rules will handle it!
+!     you've forgot to do that before, maybe the `cookie-remover` scriptlet rules above will handle it!
 !   * This will helpful in case if you don't want to let `Steam` showing responsive header and menu bar, but you still want to
 !     browse that website as proper desktop site, while use touch screen function as for mouse click and page scrolling.
 steamcommunity.com,steampowered.com##+js(addEventListener-defuser, touchstart)
