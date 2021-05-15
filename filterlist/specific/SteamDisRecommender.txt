@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters
-! Version: 202105151327
+! Version: 202105151809
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -33,10 +33,6 @@ steampowered.com##.game .block .queue_ctn .queue_actions_ctn a.right[href*="/exp
 ! - Remove "More like this" zuckestions in full game details page.
 steampowered.com##.game_description_column #recommended_block
 
-! - Now you've already logged in, what then?
-steampowered.com##.home_content_ctn #content_more
-steampowered.com##.home_content_ctn #content_out.dark
-
 ! - Remove "Discover queue" pane in home page
 steampowered.com##.home_ctn.discovery_queue_ctn
 
@@ -46,15 +42,25 @@ steampowered.com##.home_ctn.live_streams_ctn
 ! - Remove "Recommended by Steam Labs" pane
 steampowered.com##.home_ctn.recommended_by_steam_labs_ctn
 
+! - Now you've already logged in, what then?
+steampowered.com##.home_content_ctn #content_more
+steampowered.com##.home_content_ctn #content_out.dark
+
+! - Remove a pane that zuckested by "Because you've played <GameName>"
+steampowered.com###sale_category_blocks:has(a.see_more_link[href*="/recommender"])
+steampowered.com##.home_page_content.deep_dive_block
+
+! - Do not show any zuckestions pane to interact if the contents are empty or no more to be show...
+!   * Optionally, I won't feel sad for that, it's up to other players and/or devs to put more contents and informations, not me
+!     and anyone who subscribed this filter list!
+steamcommunity.com##.apphub_NoMoreContent
+steampowered.com##.review_box #noReviewsWriteOne
+
 ! - Remove "Takeover" pane that promote big publisher, franchise sales, etc.
 steampowered.com##.home_page_body_ctn .fullscreen-bg
 steampowered.com##.home_page_body_ctn .static_takeover_ctn div[class^="page_background_holder"]
 steampowered.com##.home_page_body_ctn .store_bg_overlay
 steampowered.com##.home_page_body_ctn div[class^="home_page_takeover"]
-
-! - Remove a pane that zuckested by "Because you've played <GameName>"
-steampowered.com###sale_category_blocks:has(a.see_more_link[href*="/recommender"])
-steampowered.com##.home_page_content.deep_dive_block
 
 ! - Sometime you're embarassing to see how many games and times spent on the related games that you're currently looking and/or
 !   trying to buy, I've hide those game banners and also playtime, leave only a checkmark that you can noticed you have related
@@ -70,15 +76,23 @@ steampowered.com##.recommendation_reasons .similar_recent_apps_container a
 ! - Remove playtimes
 steamcommunity.com##.games_list .hours_played
 
+! - Hide players level indicator!
+steamcommunity.com##.friendPlayerLevel
+
 ! - Hide yourself (and also all of peoples) about games that recently played.
 steamcommunity.com##.profile_recentgame_header
 steamcommunity.com##.recent_games
+
+! - Hide all of other player frames that their not used a standard one for decorations...
+!   * This probably difficult to see an online indicator in user picture frame, however, you will still notice by a flat bar
+!     below profile image that still lid with colors, such as blue for online, green for playing game and vice versa.
+steamcommunity.com##.playersection_avatar_frame
+steamcommunity.com##.profile_avatar_frame
 
 ! - Hide (your shameful) playtimes spent, green button to download or play game, even FAQ about "How to get card drops" links!
 steamcommunity.com##.badge_title_stats .badge_title_playgame
 steamcommunity.com##.badge_title_stats .badge_title_stats_playtime
 steamcommunity.com##.badge_title_stats .how_to_get_card_drops_ctn
-
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - Remove "Scroll more for related contents" pane
 steampowered.com###content_callout.dark:has(.more_content_title)
@@ -88,13 +102,13 @@ steampowered.com###content_callout.dark:has(.more_content_title)
 steampowered.com###steam_curators_not_empty:has(.curator_recommendation_capsule)
 
 ! [Faded community]
+! - If the games you've played are no longer drops card anymore, hide its text instead! (Work only "English" UI)
+steamcommunity.com##.badge_title_stats .progress_info_bold:has-text(/^No /)
+
 ! - Remove non-games badge progress info box! (e.g. Community actions, Seasonal sales, etc.)
 !   * Also include 2010 potato shacks?
 steamcommunity.com##.badges_sheet .badge_row:has(a.badge_row_overlay:not([href*="gamecards"]))
 steamcommunity.com##.badges_sheet .badge_row:has(a.badge_row_overlay[href*="gamecards/335590"])
-
-! - If the games you've played are no longer drops card anymore, hide its text instead! (Work only "English" UI)
-steamcommunity.com##.badge_title_stats .progress_info_bold:has-text(/^No /)
 
 ! Non-basic filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - Make use of `:remove()` for delete unwanted DOM pane without leaving any nodes (require uB0 version 1.26.0 or above)
@@ -159,15 +173,15 @@ steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .plat
 ! - Don't worry, maybe `removeparam` below can help you...
 @@||steampowered.com/search/results$xmlhttprequest,domain=store.steampowered.com
 
-! Requests query strip (require uBO 1.31.0 or above!) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! - This is still under ongoing test, followed until new functions are implemented at final releases, mainly aim to handle any
-!   requests that trying to shift with `snr` parameter, especially when you perfom product search with continuous scrolling,
-!   you can see that I've allowed search results `xhr` but these rules below will still keep catching and blocking requests that
-!   still contain `snr`, then strip its parameter and re-requests again without it!
-||steampowered.com/*&curator_clanid=$removeparam=curator_clanid
+! Requests query remove/strip (require uBO 1.31.0 or above!)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! - This mainly aim to handle any requests that trying to shift with unwanted parameter, for example, when you perfom product
+!   search with continuous scrolling, you can see that I've allowed search results `xhr` that potentially have `snr` tracking
+!   parameter but these rules below will still keep catching and blocking requests that still contain `snr`, then strip its
+!   parameter and re-requests again without it!
+||steampowered.com/*&curator_clanid=$removeparam=curator_clanid,important
 ||steampowered.com/*&ser=$removeparam=ser,important
 ||steampowered.com/*&snr=$removeparam=snr,important
-||steampowered.com/*?curator_clanid=$removeparam=curator_clanid
+||steampowered.com/*?curator_clanid=$removeparam=curator_clanid,important
 ||steampowered.com/*?ser=$removeparam=ser,important
 ||steampowered.com/*?snr=$removeparam=snr,important
 
@@ -185,9 +199,11 @@ steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, 
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, strResponsiveViewPrefs)
 
 ! Set and lockdown specific values
-! Example below is force impressions related values to false, for ensure that all of impression IDs will not written in cookies!
+! Example below is force impressions related values to false, for ensure that all of impression IDs will not to be read/write and
+! stored their values in cookies!
 steamcommunity.com,steampowered.com##+js(set, s_ImpressionTracker, false)
 steamcommunity.com,steampowered.com##+js(set, s_bAllowAppImpressions, false)
+steamcommunity.com,steampowered.com##+js(set, trackedForImpressions, false)
 
 ! - Prohibit Steam website to detect touch screen from first touch, however, **this cause major site features malfunction!**
 !   * Note that it may require to delete `strResponsiveViewPrefs` cookie first to make this script injection work properly, if
