@@ -1,13 +1,12 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters
-! Version: 202105122011
+! Version: 202105151327
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/specific/SteamDisRecommender.txt
-
+! Descriptions: All rules are possibly focused to mostly desktop page with no ongoing sales campaign...
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! All rules are focused to mostly desktop page with no ongoing sales campaign...
 ! [Store Zone]
 ! - Remove a pane that need you to login to see zuckested contents!
 steampowered.com###content_login.page_content_ctn
@@ -57,6 +56,11 @@ steampowered.com##.home_page_body_ctn div[class^="home_page_takeover"]
 steampowered.com###sale_category_blocks:has(a.see_more_link[href*="/recommender"])
 steampowered.com##.home_page_content.deep_dive_block
 
+! - Sometime you're embarassing to see how many games and times spent on the related games that you're currently looking and/or
+!   trying to buy, I've hide those game banners and also playtime, leave only a checkmark that you can noticed you have related
+!   games of current game that you're looking for, this make you not feeling shamed at it, at least.
+steampowered.com##.recommendation_reasons .similar_recent_apps_container a
+
 ! [Faded community zone]
 ! WHAT COULD GO WRONG!?
 !   Because I have no interests to decorate my profiles, rarely to collect cards or do some interactions just for get emoticons,
@@ -100,6 +104,7 @@ steamcommunity.com##.badge_title_stats .how_to_get_card_drops_ctn:remove()
 steampowered.com###promo_header_banner[class*="promotionDetailsBar"]:remove()
 steampowered.com##.home_ctn.labs_cluster:remove()
 steampowered.com##.home_ctn.marketingmessage_area:remove()
+steampowered.com##.recommendation_reasons .similar_recent_apps_container a:remove()
 
 ! - Include `:upward()` rules for horizontal paging items that also remove leftover header.
 steampowered.com##.home_page_content .carousel_container.maincap:upward(2)
@@ -109,12 +114,6 @@ steampowered.com##.home_page_content .carousel_container.maincap:upward(2)
 steampowered.com##.review_box .vote_button_ctn a span i.funny:upward(2)
 
 ! CSS Modification  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! - Sometime you're embarassing to see how many times spent on the related games that you're currently looking and/or trying to
-!   buy, I've hide the playtime and show only related game banner that you've played, this make you not feeling shamed at it,
-!   at least.
-steampowered.com##.recommendation_reasons .similar_recent_apps_container a:style(color: transparent !important; font-size: 0px !important)
-steampowered.com##.recommendation_reasons .similar_recent_apps_container .app_impression_tracked:style(color: transparent !important; font-size: 0px !important)
-
 ! - Restore padding size of top scroll banner that caused by "Takeover" pane
 steampowered.com##.home_cluster_ctn.home_ctn .home_page_content:style(padding-left: 0px !important)
 
@@ -184,6 +183,11 @@ steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, 
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, recentapps)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, recentlyVisitedAppHubs)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, strResponsiveViewPrefs)
+
+! Set and lockdown specific values
+! Example below is force impressions related values to false, for ensure that all of impression IDs will not written in cookies!
+steamcommunity.com,steampowered.com##+js(set, s_ImpressionTracker, false)
+steamcommunity.com,steampowered.com##+js(set, s_bAllowAppImpressions, false)
 
 ! - Prohibit Steam website to detect touch screen from first touch, however, **this cause major site features malfunction!**
 !   * Note that it may require to delete `strResponsiveViewPrefs` cookie first to make this script injection work properly, if
