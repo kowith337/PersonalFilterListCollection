@@ -1,6 +1,6 @@
 [uBlock Origin 1.34.1.2]
 ! Title: kowith337's Test List
-! Version: 202105192045
+! Version: 202105280001
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -58,6 +58,7 @@ birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.cattub
 
 ! [BRUH for Thai mobs]
 ! - Nitter
+birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.cattube.org,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.skrep.in,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz##.timeline-item:has(.tweet-body a[href*="search?q=%23ThereIsHelp"])
 birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.cattube.org,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.skrep.in,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz##.timeline-item:has(.tweet-body a[href*="search?q=%23ปล่อยเพื่อนเรา"])
 birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.cattube.org,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.skrep.in,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ1"])
 birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.cattube.org,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.skrep.in,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz##.timeline-item:has(.tweet-body a[href*="search?q=%23ม็อบ2"])
@@ -84,6 +85,7 @@ birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.cattub
 birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.cattube.org,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.skrep.in,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz##.timeline-item:has(.tweet-body a[href*="search?q=%23หยุดจ๊วบ"])
 !
 ! - Tweetdeck
+tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ThereIsHelp"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ปล่อยเพื่อนเรา"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม็อบ1"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ม็อบ2"])
@@ -110,6 +112,7 @@ tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23หย�
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23หยุดจ๊วบ"])
 !
 ! - Twitter (Desktop only)
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang="th"] span a[href*="/hashtag/ThereIsHelp"])
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ปล่อยเพื่อนเรา"])
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ1"])
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ2"])
