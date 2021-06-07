@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202104162230
+! Version: 202106072355
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -180,8 +180,10 @@ youtube.com###primary #contents ytd-button-renderer .style-suggestive
 github.com##.js-notice:has(.js-dismiss)
 
 ! [Google]
-! - Remove UK consent overlay
+! - Remove consent overlay
 google.*##g-bottom-sheet[jscontroller] div[role="dialog"]:has(div[jscontroller][data-ved] img[src*="consent.google."][src*="/status?"])
+!   > 2021 ver.
+google.*##div[class][aria-modal]:has(div[class] > a[class][href*="policies.google."])
 !
 ! - Remove text dialog to tell back to Google for suggest something to show more results.
 google.*###extrares #botstuff div[data-ved] > :has(div textarea[data-ved])
@@ -257,6 +259,10 @@ chocolatey.org##body.modal-open:style(overflow: initial !important)
 google.*###search #rso .rc[data-hveid][data-ved] div[id^="eob_"][jscontroller]:remove()
 google.*##.islrc div[data-id][data-rfg]:remove()
 !
+! - Enforce removing consent modal and restore scrolling ability that was affected by it!
+google.*##body#gsr:style(overflow: initial !important)
+google.*##div[class][aria-modal]:has(div[class] > a[class][href*="policies.google."]):remove()
+!
 ! - The new way to inject "People also search for" annoyance
 google.*##.g div[id^="eob_"]:remove()
 google.*##.g:has(.exp-outline) div[jscontroller] h4:upward(4)
@@ -283,6 +289,7 @@ m.webtoons.com##div[id^="layerNoticePopup"]:remove()
 ! Please note that force remove overlay below may cause prevent scroll down!
 ! - Force remove new consent dialog + dim that force users to press "Accept" before playing/watching anything!
 m.youtube.com##.consent-bump-lightbox:remove()
+!
 ! - Also force remove new overlay dialog + dim that forcing visitor to sign-in with account before watching!!
 !   Although, you can press "No thanks", but paint-over with forced dialog is overdone dark patterns!!!
 m.youtube.com##.upsell-dialog-lightbox:has(.upsell-dialog-body-text a[href*="sign_in"]):remove()
