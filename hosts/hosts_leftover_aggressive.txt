@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202104031337
+# Version: 202106132243
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -68,7 +68,7 @@
 #   > Some apps are rely to that, especially for deploy GDPR, personal data concerns agreement, etc.
 #   > However, "Firebase" are widely know as bug tracker and data analytic capturer!
 #   > So, not just only app devs know those data, but "Google" also knows, too!!
-#   > Even though all informations are anonymous, it doesn't mean they have rights to collect and use them!!!
+#   > Even though all informations are anonymous, but it doesn't mean they have rights to collect and use them!!!
 0.0.0.0 firebaseinstallations.googleapis.com
 0.0.0.0 firebaseremoteconfig.googleapis.com
 #
@@ -77,9 +77,6 @@
 #
 # - {Anti-GMB}
 0.0.0.0 gmbmobile-pa.googleapis.com
-#
-# - {Anti-app preview MESSages}
-0.0.0.0 myphonenumbers-pa.googleapis.com
 #
 # - {Anti-cloud MESSaging / calendar reminder}
 0.0.0.0 notifications-pa.googleapis.com
@@ -93,6 +90,14 @@
 # - {Anti-Lens}
 0.0.0.0 lens-pa.googleapis.com
 0.0.0.0 lensphotos-pa.googleapis.com
+#
+# - {Anti-mobile data observation}
+#   This block an ability to let `Google` know and report your mobile data about how many data you can use, also preventing it to
+#   offer any packages if your mobile data were ran out...
+0.0.0.0 mobiledataplan-pa.googleapis.com
+#
+# - {Anti-device phone numbers}
+0.0.0.0 myphonenumbers-pa.googleapis.com
 #
 # - {Anti-network quality measure}
 #
@@ -198,8 +203,8 @@
 #   > This make "Firefox" worse than "Chrome" because they implement this feature in both Desktop and Mobile!!
 #   > Moved to generic leftover because "WEB BROWSER" IS AIN'T "NEWS READER" / "MAGAZINE" / "TABLOID" / ...!!!
 #     * Unless you directly and/or manually read them on those websites or subscribe through RSS Feed and read them as your want!
-#     * Any preloaded/recommended/zuckested especially if it based on country, region and even user's activities ARE NOT WELCOME!
-#   > ** IF SOMEBODY USE ITS FEATURE, JUST STOP USING MY LEFTOVER LIST IS THE BEST AND LAST CHOICE THAT I CAN PREFER!!!! **
+#     ** Any preloaded/recommended/zuckested contents esp. if it based on country, region and user's activities ARE NOT WELCOME!!
+#   > *** IF SOMEBODY USE ITS FEATURE, JUST STOP USING MY LEFTOVER LIST IS THE BEST AND LAST CHOICE THAT I CAN PREFER!!! ***
 #
 # - {Browser Activation}
 #
@@ -238,7 +243,7 @@
 #   https://pantip.com/topic/39955561
 #   https://pantip.com/topic/39959278
 #   - Blocking these domains will cause internet unusable, these domains are mainly use for blocking connections after overdue
-#     billing in the past, but now they also use for abusing end-users by showing their self-promo for suggest and/or subscribe
+#     billing in the past, but now they also use for abusing end-users by showing their self-promo for zuckest and/or subscribe
 #     additional promotions, download their companion apps, etc. I will keep blocking these until they've stopped do those kinds
 #     of shame forcful advertisement and marketing!
 0.0.0.0 home.trueid.net
