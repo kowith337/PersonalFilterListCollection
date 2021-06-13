@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202106072355
+! Version: 202106131810
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -9,6 +9,11 @@
 !              the specific site or category are have enough rules.
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [ChocolateMinecraft] Remove ads-wrapped links
+chocolateminecraft.com###content table[style] td a[href*="adf.ly"]
+chocolateminecraft.com###content table[style] td a[href*="adfoc.us"]
+chocolateminecraft.com###content table[style] td a[href*="netb.ee"]
+
 ! [Chocolatey]
 ! - Too many annoyance things, e.g. floating news with right pane toggling + unread red dot count, package disclaimer modal, etc.
 chocolatey.org###cookieNoticeAlert
@@ -58,17 +63,16 @@ m.intl.taobao.com,m.taobao.com##.zebra-oversea-smartbanner
 minecraftforge.net##.ad-container
 minecraftforge.net##.ad-container-framed
 minecraftforge.net##.promo-container
-minecraftforge.net##div img[src*="imrworldwide.com/cgi-bin/m?"]
-! minecraftforge.net##.promos-wrapper
+minecraftforge.net##aside.sidebar-right
+minecraftforge.net##div img[src*="imrworldwide.com"]
+
+! [Optifine] Remove ads-wrapped links
+optifine.net##table.downloadTable tr.downloadLine td.colDownload a[href*="?f="][href*="&x="]
+optifine.net##table.downloadTable tr.downloadLine td.colDownload a[href*="adf.ly"]
+optifine.net##table.downloadTable tr.downloadLine td.colDownload a[href*="adfoc.us"]
 
 ! [Pixivision] (Formerly Pixiv Spotlights)
 pixivision.net##._floated-bottom-bar
-
-! [Reddit Old]
-old.reddit.com##.ProfileVoiceAd
-old.reddit.com##.TrendingProfilesSidebar
-old.reddit.com##.commentsignupbar
-old.reddit.com##.listingsignupbar
 
 ! [Pantip Mobile] Remove placeholder ad space (Mobile layout only)
 m.pantip.com##.comment-mpost center[id^="c_ads"]
@@ -259,8 +263,7 @@ chocolatey.org##body.modal-open:style(overflow: initial !important)
 google.*###search #rso .rc[data-hveid][data-ved] div[id^="eob_"][jscontroller]:remove()
 google.*##.islrc div[data-id][data-rfg]:remove()
 !
-! - Enforce removing consent modal and restore scrolling ability that was affected by it!
-google.*##body#gsr:style(overflow: initial !important)
+! - Enforce removing consent modal
 google.*##div[class][aria-modal]:has(div[class] > a[class][href*="policies.google."]):remove()
 !
 ! - The new way to inject "People also search for" annoyance
@@ -329,35 +332,28 @@ randomnessthing.com##script:contains(Criteo)
 
 ! CSS Modify  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Google]
+! - Restore scrolling ability that was affected by forceful modal that need to accept their cookies!
+google.*##body#gsr:style(overflow: initial !important)
+!
+! - Override style and transition of new "People also search for" pane injections!
+google.*##.g:has(.exp-outline) div[class][data-hveid][data-ved][style]:style(height: initial !important; transition: none !important)
+!
 ! - Restore context of search result that was hidden by a things named as "People also search for", the hidden action will be
 !   triggered when you've open some result into new tab or window, then return back to Google search result tab after.
 google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname] hr[style^="visibility: hidden"]:style(visibility: visible !important)
 google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][style^="display: none"]:style(display: block !important)
-!
-! - Override style and transition of new "People also search for" pane injections!
-google.*##.g:has(.exp-outline) div[class][data-hveid][data-ved][style]:style(height: initial !important; transition: none !important)
 
 ! [GreasyFork] in case if they rewrite CSS style, this will minimize the element at first place.
 greasyfork.org###install-area .post-install:style(width: 0px !important; height: 0px !important; pointer-events: none !important; display: none !important)
 
 ! [Minecraft] to prevent clicking the paid links hyperlink, e.g. AdFly, AdFocus, NetBee (by accident or intent)
-! - ChocolateMinecraft: http://chocolateminecraft.com (Use both AdFly and NetBee {Older version of mods})
-!   - Only "Mirror" links can be clickable, the very old versions may unable to click because it have no mirror links.
-chocolateminecraft.com###content table[style*="width:100%"] td a[href*="adf.ly/"]:style(pointer-events: none !important; text-decoration: none !important)
-chocolateminecraft.com###content table[style*="width:100%"] td a[href*="netb.ee/"]:style(pointer-events: none !important; text-decoration: none !important)
-!
-! - Forge: http://files.minecraftforge.net - It use AdFocus for all installer links (except changelog)
-!   - Prevent clicking on all big icon links that appear as latest and/or recommended (because it contains AdFocus hyperlink) and
-!     leave only changelog can be clickable.
-!   - All download URLs will not have underline an also unable to click, the only way to download is just click the (i) icon beside
-!     "Download" text, that's the only way you can get the direct download for it.
-minecraftforge.net##.download-list-wrapper .download-files .download-links li a[href*="adfoc.us/"]:style(pointer-events: none !important; text-decoration: none !important)
-minecraftforge.net##.downloads .download .links .link-left:has(a[href*="adfoc.us/"]):style(pointer-events: none !important)
-minecraftforge.net##.downloads .download .links .links-right .link:has(a[href*="adfoc.us/"]):style(pointer-events: none !important)
-!
-! - Optifine: http://optifine.net/downloads - (Use AdFly + CPMStar) Only "Mirror" links can be clickable.
-optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadLine"] a[href*="?f="][href*="&x="]:style(pointer-events: none !important; text-decoration: none !important)
-optifine.net##table.downloadTable tr[class^="downloadLine"] td[class^="downloadLine"] a[href^="http://adf.ly"]:style(pointer-events: none !important; text-decoration: none !important)
+! - Forge: https://files.minecraftforge.net - It use AdFocus for all installer links (except changelog)
+!   - They now bind the (i) icon into the "Download" link text to make sure that all users will actually click ads link, sorry
+!     about that because I can't keep the rules to work for that site anymore, otherwise you cannot actually get any hover popup
+!     for downloading mod file with hidden direct links.
+!   - Alternatively, I recommend to install user script to uncloak ads links to an actual links.
+!     - [noisys] Affiliate Killer: https://greasyfork.org/en/scripts/456
+!     - [wOxxOm] Decloak links and open directly: https://greasyfork.org/en/scripts/7596
 
 ! [Taobao Mobile] Hide promotional frame appear at bottom (directly point to DOM doesn't help because it's use "display: block")
 m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none !important)
