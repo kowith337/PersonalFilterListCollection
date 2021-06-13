@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters
-! Version: 202105262042
+! Version: 202106131831
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -219,20 +219,6 @@ steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, 
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, recentapps)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, recentlyVisitedAppHubs)
 steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, strResponsiveViewPrefs)
-!
-!#if false
-! Changed method to handling and preventing `app_impressions` tracking (with cookie write)
-! * WARNING: This function will completely break (Probably) entire sites due to `DynamicStore` is the core function of Steam
-!            store page, especially for store frontpage that show various deals, recommendations, zuckestions, etc. However,
-!            this is the only way to dealing against shady `app_impressions` cookies, so I have no other solutions than this yet!
-!            Ensure that you only navigate to the proper games that you want to buy or save each game page that you've planned
-!            to checkout and then put into the cart one by one until you've got all of games that you really want to.
-!            This scriptlet will be inactive by wrapping into this condition, to enable this manually, just copy rules below
-!            and then paste into "My rules" manually!!
-steampowered.com##+js(remove-class, app_impression_tracked)
-steampowered.com##+js(set, CAppearMonitor, noopFunc)
-steampowered.com##+js(set, elTarget, null)
-!#endif
 !
 ! - Prohibit Steam website to detect touch screen from first touch, however, **this cause major site features malfunction!**
 !   * Note that it may require to delete `strResponsiveViewPrefs` cookie first to make this script injection work properly, if
