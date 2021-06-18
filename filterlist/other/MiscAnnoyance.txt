@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202106131810
+! Version: 202106131927
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -255,9 +255,6 @@ wallgif.com##content div[id^=block_modal]
 
 ! Special procedurual - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: require uB0 version 1.26.0 or above
-! [Chocolatey] Fix scroll prevention after hide disclaimer dialog.
-chocolatey.org##body.modal-open:style(overflow: initial !important)
-
 ! [Google]
 ! - Cannot remember about this, but related to "Related search" mini zuckestion box
 google.*###search #rso .rc[data-hveid][data-ved] div[id^="eob_"][jscontroller]:remove()
@@ -331,10 +328,10 @@ randomnessthing.com##script:contains(Criteo)
 !#endif
 
 ! CSS Modify  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Chocolatey] Fix scroll prevention after hide disclaimer dialog.
+chocolatey.org##body.modal-open:style(overflow: initial !important)
+
 ! [Google]
-! - Restore scrolling ability that was affected by forceful modal that need to accept their cookies!
-google.*##body#gsr:style(overflow: initial !important)
-!
 ! - Override style and transition of new "People also search for" pane injections!
 google.*##.g:has(.exp-outline) div[class][data-hveid][data-ved][style]:style(height: initial !important; transition: none !important)
 !
@@ -342,6 +339,12 @@ google.*##.g:has(.exp-outline) div[class][data-hveid][data-ved][style]:style(hei
 !   triggered when you've open some result into new tab or window, then return back to Google search result tab after.
 google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname] hr[style^="visibility: hidden"]:style(visibility: visible !important)
 google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][style^="display: none"]:style(display: block !important)
+!
+! - Restore scrolling ability that was affected by forceful modal that need to accept their cookies!
+google.*##body#gsr:style(overflow: initial !important)
+google.*##body[jsaction]:style(overflow: initial !important)
+google.*##body[jscontroller]:style(overflow: initial !important)
+google.*##body[jsmodel]:style(overflow: initial !important)
 
 ! [GreasyFork] in case if they rewrite CSS style, this will minimize the element at first place.
 greasyfork.org###install-area .post-install:style(width: 0px !important; height: 0px !important; pointer-events: none !important; display: none !important)
@@ -354,6 +357,8 @@ greasyfork.org###install-area .post-install:style(width: 0px !important; height:
 !   - Alternatively, I recommend to install user script to uncloak ads links to an actual links.
 !     - [noisys] Affiliate Killer: https://greasyfork.org/en/scripts/456
 !     - [wOxxOm] Decloak links and open directly: https://greasyfork.org/en/scripts/7596
+!   - Some uBlock rules are block those ads-wrapped domains and able to reveal via strict blocking, you probably check if that
+!     domain already get blocked, then you can reveal real download links that expand wrapped parameter via magnifier +/- icon.
 
 ! [Taobao Mobile] Hide promotional frame appear at bottom (directly point to DOM doesn't help because it's use "display: block")
 m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none !important)
