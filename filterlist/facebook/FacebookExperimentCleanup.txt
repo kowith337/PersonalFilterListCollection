@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.4]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202105122043
+! Version: 202106181809
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -233,4 +233,8 @@ d.facebook.com,m.facebook.com,mbasic.facebook.com###root table[role] div[class] 
 ||facebook.com/ajax/phone/confirmation$important
 ||facebook.com/ajax/phone/confirmation$xmlhttprequest,important,redirect=nooptext
 
+! [Desktop site only (probably)] Block `/nw/` requests
+! This request will be repeatly fetch in order to locally check your online status, so I don't know blocking this requests will
+! be affect to chat availability or not, but for me, I don't care for that since I've always turn off online status!
+||facebook.com/nw/$important
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !

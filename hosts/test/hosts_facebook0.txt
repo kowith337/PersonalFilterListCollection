@@ -1,6 +1,6 @@
 # [uMatrix 1.3.15.100]
 # Title: Facebook Zero Hosts Block (Test unit)
-# Version: 202103161324
+# Version: 202106181810
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/hosts
@@ -22,23 +22,24 @@
 #              nagging pop-ups to buy mobile internet package or even prevent any videos to play on mobile data, although many
 #              users in my country are OK to use the unlimited data plan but limited the connectivity speed.
 #              In my opinion, I will keep block those connections, no matter about breaking the functionality and usability for
-#              using Facebook on mobile data plan until they abandone that services and return all connections to the original
-#              favor, no redirects, no non-HTTPS, no nagging pop-ups to buy internet packages or forcing to use that service,
-#              just let it should be normal like I and/or we accessing Facebook at home or via Proxy/VPN!
+#              using Facebook over mobile data until they abandone that services and return all connections to the original
+#              favor, no redirects (include non-HTTPS), no nagging pop-ups to buy internet packages or forcing to use that
+#              service, just let it should be normal like I and/or we accessing Facebook at home or via Proxy/VPN!
 # Note: All rules below will be use as test unit for @funilrys's "Dead Hosts" tools (aka. PyFunceble), however, some hosts entry
 #       are duplicated based from hosts name that found by myself and more entry from [Credits] source, Currently I'm still don't
 #       know how many "Free Basics" hosts name and servers are really existed?
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # (*): Facebook should be thanks to old technologies (but we still using them nowadays) called "(x-)WAP", "MSISDN", etc. that
-#      possible to extract or resolve user's mobile number who use cellular data without hinting the users to manually fill their
-#      own numbers and submit to Facebook by themseleves, now some shady companies in my country use the same tactics above to
-#      randomly add bulk mobile phone numbers to subscribe nasty, wasteful and also unwanted content supscriptions without any
+#      possible to extract and/or resolve user's mobile number who use cellular data without hinting the users to manually fill
+#      their own numbers and submit to Facebook by themseleves, now some shady companies in my country use the same tactics above
+#      to randomly add bulk mobile phone numbers to subscribe nasty, wasteful and also unwanted content supscriptions without any
 #      confirmations from user's side!
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Top Level - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 discoverapp.com
 0.0.0.0 expresswifi.com
 0.0.0.0 freebasics.com
+0.0.0.0 i.org
 0.0.0.0 internet.org
 # Resolved DNS Name - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 headers-regional-shv-13-atn1.facebook.com
@@ -152,6 +153,10 @@
 0.0.0.0 www.expresswifi.com
 0.0.0.0 xwfct.in.expresswifi.com
 0.0.0.0 z-graph.expresswifi.com
+# Facebook Lite - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# > This potentially break and prevent accessing Facebook through official lite app, but I've just added due to have `z` in the
+#   domain name that should be flagged as part of `zero servers` in my opinion.
+0.0.0.0 snaptu-z.facebook.com
 # Facebook 0 Subdomains - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 0.facebook.com.cgi-bin.nph-roxy.cgi.0.http.0.facebook.com
 0.0.0.0 0.indosat.com.0.facebook.com
@@ -1416,8 +1421,9 @@
 0.0.0.0 z-p4-video-frx5-1.xx.fbcdn.net
 0.0.0.0 z-p4-video.xx.fbcdn.net
 # Instagram - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# This entry may not have lots of it, due to I've deleted my account after algorithm'd sorting landed, plus completely self-block
-# Instagram site and services after... Probably WhatsApps also have sub-servers for mobile data? (Because Facebook bought both)
+# > This entry may not have lots of it, due to I've deleted my account after algorithm'd sorting landed, plus completely
+#   self-block Instagram site and services after, probably `WhatsApps` may also have sub-servers for mobile data user because
+#   `Facebook` already bought both services.
 0.0.0.0 z-p1.graph.instagram.com
 0.0.0.0 z-p1.i.instagram.com
 0.0.0.0 z-p1.maps.instagram.com
@@ -1461,6 +1467,5 @@
 # Unknown (may be re-categorise later if have enough entry) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 0.0.0.0 edge-z-ecmp-02-ord1.facebook.com
 0.0.0.0 mqtt-z-shv-16-frc1.facebook.com
-0.0.0.0 snaptu-z.facebook.com
 0.0.0.0 zero-api-slb-10-08-prn1.facebook.com
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
