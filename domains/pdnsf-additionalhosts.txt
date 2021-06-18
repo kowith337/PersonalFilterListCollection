@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202106181809
+# Version: 202106181945
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -505,6 +505,7 @@ expresswifi.com
 free.facebook.com
 freebasics.com
 h.facebook.com
+i.org
 internet.org
 mobile.facebook.com
 o.facebook.com
