@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202106131927
+! Version: 202106191417
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -444,7 +444,7 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||redditstatic.com/gtm^$subdocument,important,redirect=noopframe
 !
 ! - Also PNG PIXEL TRACKING!?
-||reddit.com/static/pixel.png$image,important,redirect=1x1-transparent.png
+||reddit.com/static/pixel.png$image,important,redirect=1x1.png
 
 ! [OOKLA SpeedTest]
 ||cloudfront.net/x.js$domain=speedtest.net,script,important,redirect=noopjs
