@@ -1,15 +1,13 @@
 [uBlock Origin 1.32.0]
-! Title: Steam Dis-Recommender Filters - Anti Imressions DLC
-! Version: 202106131837
+! Title: Steam Dis-Recommender Filters - Anti Impressions DLC
+! Version: 202106231208
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
-! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/Combi-SteamDisRecommender-AntiImpressions.txt
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/specific/SteamDisRecommender-ImpDLC.txt
+! Descriptions: This is a DLC list of "Steam Dis-recommender Filters" that will not bundle into the base list, unless you want an
+!               extreme privacy to prevent junkful impression tracking cookie and not mind about steam store homepage breaking!
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-!#if ext_ublock
-!#include specific/SteamDisRecommender.txt
-!#endif
-!
 ! Changed method to handling and preventing `app_impressions` tracking (with "cookie" write)
 ! * WARNING: This function will completely break and maybe make the site "DEAD" entirely due to `DynamicStore` is the core
 !            function of Steam store page, especially for storefront that show various deals, recommendations, zuckestions, etc.

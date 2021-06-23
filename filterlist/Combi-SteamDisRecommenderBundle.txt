@@ -1,0 +1,12 @@
+[uBlock Origin 1.32.0]
+! Title: Steam Dis-Recommender Filters Bundle
+! Expires: 2 days
+! Author: kowith337
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/Combi-SteamDisRecommenderBundle.txt
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+!#if ext_ublock
+!#include steam/SteamDisRecommender.txt
+!#include steam/SteamDisRecommender-ImpDLC.txt
+!#endif
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
