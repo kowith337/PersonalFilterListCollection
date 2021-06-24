@@ -1,6 +1,6 @@
 [uBlock Origin 1.34.1.2]
 ! Title: kowith337's Test List
-! Version: 202105280001
+! Version: 202106242203
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -112,6 +112,7 @@ tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23หย�
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23หยุดจ๊วบ"])
 !
 ! - Twitter (Desktop only)
+twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang="th"])
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang="th"] span a[href*="/hashtag/ThereIsHelp"])
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ปล่อยเพื่อนเรา"])
 twitter.com##article[role] div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ1"])
