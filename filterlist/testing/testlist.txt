@@ -1,6 +1,6 @@
 [uBlock Origin 1.34.1.2]
 ! Title: kowith337's Test List
-! Version: 202106242203
+! Version: 202106242213
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -148,6 +148,19 @@ pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(หล่อขวัญ))
 ! [Taobao Mobile] Aim to remove "you may also like" items, but using the chinese word (MiscAnnoyance use `nth-of-type` method)
 m.intl.taobao.com##.App .recommend .recommend-list-wrapper:has(.recommend-title:has-text(邻家好货))
 
+! [Twitter]
+! - Aim to remove follow topics / related users / who to follow (aka. all of inline ZUCKESTIONS panes)
+!   * Please note: these rules are produce huge problematic, it's also hide all user lists that have "Follow" button, no matter
+!     about any state of user following! you can keep using this if you're not intent to follow other peoples too much!~
+twitter.com##div[data-testid="sidebarColumn"] section[aria-labelledby^="accessible-list"]
+twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(a[role="link"][data-focusable][href^="/i/"])
+twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(div[role="button"][data-focusable][data-testid="UserCell"] a[aria-hidden][tabindex][href]):has(a[role="link"][data-focusable] div[dir="auto"] span[dir="auto"])
+twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(a[href^="/i/related_users"])
+twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/))
+twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell"] [data-testid*="follow"])
+twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label*="Carousel"]:has(div[role="tablist"]):upward(2)
+twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class] a[href^="/i/"]:upward(1)
+
 ! DOM Permanent Remover - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Blognone] In case if modern browsers support to remove node entirely
 blognone.com##.content-container:has(.meta span.terms .field-item a[href*="/thailand"]) #comment-area:remove()
@@ -159,6 +172,14 @@ facebook.com##.post-ads:remove()
 
 ! [Nitter]
 birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.cattube.org,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.skrep.in,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz##.inner-nav a[href*="liberapay"]:remove()
+
+! [Twitter]
+! - Some inline and/or side pane that tagged with `[aria-labelledby]` are useless, they often use for showing a pane to easily
+!   follow topics that they've zuckested by your activities that you might interest to..., so all of SNS nowadays are drived
+!   (and monetised) by user data and zuckestions!?
+twitter.com##div[data-testid="sidebarColumn"] section[aria-labelledby^="accessible-list"]:remove()
+twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label*="Carousel"]:has(div[role="tablist"]):upward(2):remove()
+twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class] a[href^="/i/"]:upward(1):remove()
 
 ! CSS Modification  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Facebook]
@@ -172,16 +193,6 @@ m.intl.taobao.com##.App .toolbar.transformed:style(background-color: transparent
 ! - Make placeholder button (back / add to cart) have circle background alpha under button and use custom color permanently
 m.intl.taobao.com##.App .toolbar .toolbar__btn i.iconfont:style(color: white !important)
 m.intl.taobao.com##.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,0,0.4) !important)
-
-! [Twitter]
-! - Aim to remove who to follow / related users (aka. ZUCKESTIONS)
-!   * Please note: these rules are produce huge problematic, it's also hide all user lists that have "Follow" button, no matter
-!     about any state of user following! you can keep using this if you're not intent to follow other peoples too much!~
-twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(a[role="link"][data-focusable][href^="/i/"])
-twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(div[role="button"][data-focusable][data-testid="UserCell"] a[aria-hidden][tabindex][href]):has(a[role="link"][data-focusable] div[dir="auto"] span[dir="auto"])
-twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(a[href^="/i/related_users"])
-twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/))
-twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell"] [data-testid*="follow"])
 
 ! Specific requests filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! "Query Prune" experiment
