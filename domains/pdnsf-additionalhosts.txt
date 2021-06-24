@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202106201554
+# Version: 202106240053
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -369,7 +369,7 @@ sticker-pa.googleapis.com
 # that method!
 # Futhurmore, because "Android 6+" can force use Google Chrome as System WebView, it's likely impossible for disabling that!
 # Unless you're...
-# - Uninstall "Chrome" as first user level via ADB (`adb shell pm uninstall --user 0 com.android.phone`)
+# - Uninstall "Chrome" as first user level via ADB (`adb shell pm uninstall --user 0 com.android.chrome`)
 #   * Note that I cannot guarantee that `Play Store` will reinstall Chrome without user intent or not, like it's still happen
 #     with Google Play AR Core (`com.google.ar.core`)
 # - Install any apps that able to duplicate your apps with work profile (e.g. Insular, Island, Shelter) then "Freeze" Chrome in
