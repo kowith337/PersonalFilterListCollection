@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202102022002
+# Version: 202106301153
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -16,31 +16,36 @@
 0.0.0.0 adservice.google.com
 0.0.0.0 google-analytics.com
 0.0.0.0 googleadservices.com
+0.0.0.0 googleanalytics.com
 0.0.0.0 googlesyndication.com
 0.0.0.0 googletagmanager.com
 0.0.0.0 googletagservices.com
 0.0.0.0 id.google.com
 0.0.0.0 mail-ads.google.com
 0.0.0.0 ssl.google-analytics.com
+0.0.0.0 ssl.googleanalytics.com
 0.0.0.0 www.google-analytics.com
 0.0.0.0 www.googleadservices.com
+0.0.0.0 www.googleanalytics.com
 0.0.0.0 www.googletagmanager.com
 0.0.0.0 www.googletagservices.com
 #
 # - {DoubleClick} Also include syndication
+0.0.0.0 admobclick.com
 0.0.0.0 googleads.g.doubleclick.net
-0.0.0.0 pagead.googleadservices.com
-0.0.0.0 pagead.googlesyndication.com
 0.0.0.0 pagead2.googleadservices.com
 0.0.0.0 pagead2.googlesyndication.com
 0.0.0.0 pagead3.googleadservices.com
 0.0.0.0 pagead3.googlesyndication.com
 0.0.0.0 pagead46.googleadservices.com
 0.0.0.0 pagead46.googlesyndication.com
+0.0.0.0 pagead.googleadservices.com
+0.0.0.0 pagead.googlesyndication.com
 0.0.0.0 pubads.g.doubleclick.net
 0.0.0.0 securepubads.g.doubleclick.net
 0.0.0.0 static.doubleclick.net
 0.0.0.0 tpc.googlesyndication.com
+0.0.0.0 www.admobclick.com
 #
 # - {Google PA-ranoid APIs}
 0.0.0.0 1.chromefeedcontentsuggestions-pa.googleapis.com
@@ -102,6 +107,8 @@
 0.0.0.0 redirector.gvt1.com
 0.0.0.0 redirector.gvt2.com
 0.0.0.0 redirector.gvt3.com
+0.0.0.0 redirector.gvt4.com
+0.0.0.0 redirector.gvt5.com
 0.0.0.0 redirector.googlevideo.com
 #
 # - {Google L} Can I block DNS name?

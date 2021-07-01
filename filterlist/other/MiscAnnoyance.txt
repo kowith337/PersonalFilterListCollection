@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202106231145
+! Version: 202106301245
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -164,6 +164,8 @@ youtube.com##.yt-dialog[id*="privacy"]
 ! - I should file this rules to any repo that include kind of "UK Consent" annoyance rules, such as IDCAC, Fanboy Cookie, etc?
 ! - However, any data that separately stored for UK users may soon move back to their origin servers after Brexit happened...
 youtube.com##ytd-consent-bump-renderer
+! * Sometime you will got force redirect to `consent.youtube.com` subdomain for certain countries, this will no can do because
+!   redirecting is mean it doesn't actually load general contents from YouTube.
 !
 ! - Forgot what does it do, but probably zuckest to download or open in app?
 youtube.com##ytd-popup-container.ytd-app
@@ -282,11 +284,14 @@ pantip.com##.m-post-comment:has(.cs-elm-profile .display-post-avatar-inner a.ico
 pantip.com##.section-comment:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post:remove()
 pantip.com##div[id^="bestanswer"]:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post:remove()
 
+! [Twitter] Remove popup link to newsletters
+twitter.com##div[role="menu"] div[class] a[href*="/i/newsletters"]
+
 ! [Line WebToons] Remove promoted comic overlay (include dimmed)
 m.webtoons.com##div[id^="layerNoticePopup"]:remove()
 
 ! [YouTube Mobile]
-! Please note that force remove overlay below may cause prevent scroll down!
+! Please note that force remove overlay below may cause prevent scroll down and I cannot have any solutions to fix that.
 ! - Force remove new consent dialog + dim that force users to press "Accept" before playing/watching anything!
 m.youtube.com##.consent-bump-lightbox:remove()
 !
@@ -412,6 +417,7 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ||twitter.com/*/jot/*$important
 ||twitter.com/*/onboarding/referrer.json$important
 ||twitter.com/*/promoted_content/$important
+||twitter.com/i/*/guide.json$important
 ||twitter.com/live_pipeline/events?topic=*tweet_engagement*$important
 
 ! [WallGif]
@@ -436,6 +442,7 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 ! [GreasyFork] added ping request while installing script (inside the "Install Script" green button) via 'data-ping-url' that
 ! cause promoted script to be shown and the site also get user data about it, eliminate this requests and fake sent data with
 ! 'nooptext' can solve this thing also.
+! * Or you might right-click install button and copy url
 ||greasyfork.org/scripts/*/install-ping?$xmlhttprequest,important,redirect=nooptext
 
 ! [Reddit]

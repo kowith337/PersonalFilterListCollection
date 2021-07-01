@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202106240053
+# Version: 202107011302
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -8,14 +8,14 @@
 # Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/domains/pdnsf-additionalhosts.txt
 # Description: This file will intent to only work with "personalDNSFilter" app for read additional hosts that aim for blocking
 #              matched wildcard and entire domains regardless of any subdomains, unless you've manually unblocked or based on my
-#              decision as enough reason for subjected to whitelist.
+#              decision that have enough proper reason for subjected to allow.
 #              This filter is unlike generic hosts file and/or domain lists that you can update and/or recombine with, because
 #              the targeted app are also support wildcard blocking, but this should be loaded as user custom hosts, however.
 #              You may need to regularly copy and update this file with your own way, futhurmore, you need to backup previous
 #              custom hosts list if you have anything existed before use this file as a replacement.
 #              Since this filter cannot load as remote rules, if you think I've overdone blocking something, try add "!" or "#"
-#              (w/o quote) to unblock or whitelist it manually, example below.
-#              !google.co.th (This is a whitelist rule, that's mean anything from 'google.co.th' can be bypassed, include subs.)
+#              (w/o quote) in front of blocking rule to unblock or allow it manually, example below.
+#              !google.co.th (This is an allowed rule, that's mean anything from 'google.co.th' can be bypassed, include subs.)
 #              #facebook.com (This will turn blocked rules as comment instead, other remote rules may still blocking if it have.)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Unneccessary protocol] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
@@ -198,9 +198,16 @@ trx.gitlab.*
 
 # Less privacy instance block, they've use the "Crapflare" for issuer and hosting, so it's not recommended to use on that hosts!
 # Esp, in case if you use over Tor, all of crapflare-backed servers will not allow any Tor traffic to view their sites!
-#   - "GGC Project" maybe somewhat acceptable because of not use the "Crapflare" certificates and use "Let's encrypt" instead.
+#   * "GGC Project" maybe somewhat acceptable because of not use the "Crapflare" certificates and use "Let's encrypt" instead.
+actionsack.com
+dark.fail
+database.red
+domain.glass
 #ggc-project.de
 kavin.rocks
+moomoo.me
+nitter.hu
+twitr.gq
 
 # [Wound ashes fox] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Sorry for anyone who use "CrapFlare" DNS resolvers, but it's just my opinion to block due to Firefox's wrong turn!
@@ -255,7 +262,7 @@ snippets.mozilla.*
 telemetry.*.mozilla.*
 telemetry.mozilla.*
 tiles.*.mozilla*
-# I won't unblock `GetPocket` until they've stop news feed snippets features globally, no matter about OS and platforms!
+# I won't unblock `GetPocket` until they've stop shipping news feed snippets features globally, no matter about OS and platforms!
 
 # [Hola Block]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # See also: https://github.com/lightswitch05/hosts/issues/129

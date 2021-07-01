@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202106132243
+# Version: 202106301153
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -10,7 +10,8 @@
 #              features that depend to connect to specific domains of them are really not neccessary for me, nor impact to real
 #              usage and/or functionality of it, include concern features, such as view phone SMS/MMS accross devices,
 #              in-browser credentials (password manager), telephone spam check (while you're make an outgoing calls),
-#              SafeBrowsing, news feed snippets in web browser, etc.
+#              SafeBrowsing, news feed snippets, etc., of course, I hate preconnections to those domains and/or services when I
+#              don't have any interests to use them!
 # WARNING: USING THIS BLOCKLIST IS MEAN YOU ARE AGREE TO NOT REQUEST FOR WHITELISTS ANY HOSTS BELOW, IF NOT, JUST DON'T USE THIS!
 #          IF YOU CAN APPLY ALLOWED DOMAINS IN YOUR APPLICATIONS OR PROGRAMS, JUST DO IT BY YOURSELF, NOT ME!!
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
@@ -83,8 +84,8 @@
 0.0.0.0 reminders-pa.googleapis.com
 #
 # - {Anti-App Preview MESSages}
-#   Make sure you've disable "App Preview Messages" first before load this hosts file, otherwise, you cannot change state of that
-#   feature.
+#   > Make sure you've disable "App Preview Messages" first before load this hosts file, otherwise, you cannot change state of
+#     that feature.
 0.0.0.0 instantmessaging-pa.googleapis.com
 #
 # - {Anti-Lens}
@@ -92,8 +93,8 @@
 0.0.0.0 lensphotos-pa.googleapis.com
 #
 # - {Anti-mobile data observation}
-#   This block an ability to let `Google` know and report your mobile data about how many data you can use, also preventing it to
-#   offer any packages if your mobile data were ran out...
+#   > This block an ability to let `Google` know and report your mobile data about how many data you can use, also preventing it
+#     to show any offers if your mobile data were ran out or you have none of any data package plan...
 0.0.0.0 mobiledataplan-pa.googleapis.com
 #
 # - {Anti-device phone numbers}
@@ -198,13 +199,13 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Firefox Betrayals]
 # - {Anti-Pocket}
-#   > Misleading to add "Chrome Android-alike" NTP (breaking) news feed feature, this thing make it's browser "very untrusted"
-#     about "privacy" !
+#   > Misleading to add "Chrome Android-alike" NTP (breaking) news feed feature, this thing make it's browser "lost their trust"
+#     about "privacy"!
 #   > This make "Firefox" worse than "Chrome" because they implement this feature in both Desktop and Mobile!!
 #   > Moved to generic leftover because "WEB BROWSER" IS AIN'T "NEWS READER" / "MAGAZINE" / "TABLOID" / ...!!!
 #     * Unless you directly and/or manually read them on those websites or subscribe through RSS Feed and read them as your want!
 #     ** Any preloaded/recommended/zuckested contents esp. if it based on country, region and user's activities ARE NOT WELCOME!!
-#   > *** IF SOMEBODY USE ITS FEATURE, JUST STOP USING MY LEFTOVER LIST IS THE BEST AND LAST CHOICE THAT I CAN PREFER!!! ***
+#     *** IF SOMEBODY USE ITS FEATURE, JUST STOP USING MY LEFTOVER LIST IS THE BEST AND LAST CHOICE THAT I CAN PREFER!!! ***
 #
 # - {Browser Activation}
 #
@@ -242,13 +243,17 @@
 #   https://pantip.com/topic/39909501
 #   https://pantip.com/topic/39955561
 #   https://pantip.com/topic/39959278
+#   https://pantip.com/topic/40789570
+#   https://pantip.com/topic/40791462
 #   - Blocking these domains will cause internet unusable, these domains are mainly use for blocking connections after overdue
 #     billing in the past, but now they also use for abusing end-users by showing their self-promo for zuckest and/or subscribe
-#     additional promotions, download their companion apps, etc. I will keep blocking these until they've stopped do those kinds
-#     of shame forcful advertisement and marketing!
+#     additional promotions, download their companion apps, force accept consent, etc. I will keep blocking these until they've
+#     stopped do those kinds of shame forcful advertisement, marketing and forcefully accepting their consent for reselling your
+#     consumers data!
 0.0.0.0 home.trueid.net
 0.0.0.0 service.truecorp.co.th
 0.0.0.0 service.trueinternet.co.th
 0.0.0.0 services.truecorp.co.th
 0.0.0.0 services.trueinternet.co.th
+0.0.0.0 www3.truecorp.co.th
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #

@@ -1,6 +1,6 @@
 [uBlock Origin 1.34.1.2]
 ! Title: kowith337's Test List
-! Version: 202106262119
+! Version: 202107011557
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -58,6 +58,8 @@ birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.ethibo
 
 ! [BRUH for Thai mobs]
 ! > Nitter
+birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.skrep.in,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz##.timeline-item:has(.tweet-body a[href*="search?q=%23"][href*="มึงดิ"])
+birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.skrep.in,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz##.timeline-item:has(.tweet-body a[href*="search?q=%23"][href*="มึงสิ"])
 birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.skrep.in,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz##.timeline-item:has(.tweet-body a[href*="search?q=%23ThereIsHelp"])
 birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.skrep.in,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz##.timeline-item:has(.tweet-body a[href*="search?q=%23กูสั่งให้มึง"])
 birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.skrep.in,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz##.timeline-item:has(.tweet-body a[href*="search?q=%23ปล่อยเพื่อนเรา"])
@@ -114,6 +116,8 @@ tweetdeck.twitter.com##article[data-tweet-id]:has(a.account-link span b.fullname
 tweetdeck.twitter.com##article[data-tweet-id]:has(a.account-link span b.fullname:has-text(lll))
 tweetdeck.twitter.com##article[data-tweet-id]:has(a.account-link span b.fullname:has-text(นิรนาม))
 tweetdeck.twitter.com##article[data-tweet-id]:has(a.account-link span b.fullname:has-text(หน้าฉากดีจัง))
+tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23"][href*="มึงดิ"])
+tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23"][href*="มึงสิ"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ThereIsHelp"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23กูสั่งให้มึง"])
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23ปล่อยเพื่อนเรา"])
@@ -142,7 +146,12 @@ tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23หย�
 tweetdeck.twitter.com##article[data-tweet-id]:has(p a[href*="search?q=%23หยุดจ๊วบ"])
 !
 ! > Twitter (Desktop only)
+twitter.com##article div[class][data-testid="tweet"]:has(div[lang="th"] span a[href*="/hashtag/SAVE"])
+twitter.com##article div[class][data-testid="tweet"]:has(div[lang="th"] span a[href*="/hashtag/Save"])
 twitter.com##article div[class][data-testid="tweet"]:has(div[lang="th"] span a[href*="/hashtag/ThereIsHelp"])
+twitter.com##article div[class][data-testid="tweet"]:has(div[lang="th"] span a[href*="/hashtag/save"])
+twitter.com##article div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/"][href*="มึงดิ"])
+twitter.com##article div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/"][href*="มึงสิ"])
 twitter.com##article div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/กูสั่งให้มึง"])
 twitter.com##article div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ปล่อยเพื่อนเรา"])
 twitter.com##article div[class][data-testid="tweet"]:has(div[lang] span a[href*="/hashtag/ม็อบ1"])
@@ -207,8 +216,8 @@ twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeli
 
 ! DOM Permanent Remover - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Blognone] In case if modern browsers support to remove node entirely
-blognone.com##.content-container:has(.meta span.terms .field-item a[href*="/thailand"]) #comment-area:remove()
-blognone.com###block-system-main .content .node:has(.meta span.terms .field-item a[href*="/thailand"]) .comment-comments:remove()
+blognone.com##.content-container:has(.meta span.terms .field-item a[href*="thailand"]) #comment-area:remove()
+blognone.com###block-system-main .content .node:has(.meta span.terms .field-item a[href*="thailand"]) .comment-comments:remove()
 
 ! [Facebook] Blame to AdGuard
 facebook.com##.AdBox:remove()
