@@ -1,10 +1,10 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202106231204
+! Version: 202107081240
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
-! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/specific/SteamDisRecommender.txt
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/steam/SteamDisRecommender.txt
 ! Descriptions: All rules are possibly focused to mostly desktop page with no ongoing sales campaign...
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Shared Both]
@@ -193,38 +193,47 @@ steampowered.com##.search_result_row.ds_flagged.ds_excluded_by_preferences .plat
 ! Allow tag change and continuous scrolling while search and view game lists.
 ! - Please note, the AJAX requests still bundle with `snr` parameter, this might be trade-off your privacy for that function.
 ! - Don't worry, maybe `removeparam` below can help you...
-@@||steampowered.com/search/results$xmlhttprequest,domain=store.steampowered.com
+!@@||steampowered.com/search/results$xmlhttprequest,domain=store.steampowered.com
 
 ! Requests query remove/strip (require uBO 1.31.0 or above!)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - This mainly aim to handle any requests that trying to shift with unwanted parameter, for example, when you perfom product
 !   search with continuous scrolling, you can see that I've allowed search results `xhr` that potentially have `snr` tracking
-!   parameter but these rules below will catching and blocking requests that still contain `snr`, then strip its parameter and
+!   parameter, these rules below will catching and blocking requests that still contain `snr`, then strip its parameter and
 !   re-requests again without it!
-||steampowered.com/*&curator_clanid=$removeparam=curator_clanid,important
-||steampowered.com/*&ser=$removeparam=ser,important
-||steampowered.com/*&snr=$removeparam=snr,important
-||steampowered.com/*?curator_clanid=$removeparam=curator_clanid,important
-||steampowered.com/*?ser=$removeparam=ser,important
-||steampowered.com/*?snr=$removeparam=snr,important
+||$important,removeparam=curator_clanid,domain=steamcommunity.com|steampowered.com
+||$important,removeparam=ser,domain=steamcommunity.com|steampowered.com
+||$important,removeparam=snr,domain=steamcommunity.com|steampowered.com
+||$important,removeparam=/^s(e|n)r$/,domain=steamcommunity.com|steampowered.com
 
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! These are not necessary, except it use for tracking purpose!
-steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, _gid)
-steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, app_impressions)
-! steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, browserid)
-steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, deep_dive_carousel_focused_app)
-steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, deep_dive_carousel_method)
-steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, ga)
-steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, home_scroll)
-steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, recentapps)
-steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, recentlyVisitedAppHubs)
-steamcommunity.com,steampowered.com,store.steampowered.com##+js(cookie-remover, strResponsiveViewPrefs)
-!
+steamcommunity.com,steampowered.com##+js(cookie-remover, _gid)
+steamcommunity.com,steampowered.com##+js(cookie-remover, app_impressions)
+! steamcommunity.com,steampowered.com##+js(cookie-remover, browserid)
+steamcommunity.com,steampowered.com##+js(cookie-remover, deep_dive_carousel_focused_app)
+steamcommunity.com,steampowered.com##+js(cookie-remover, deep_dive_carousel_method)
+steamcommunity.com,steampowered.com##+js(cookie-remover, ga)
+steamcommunity.com,steampowered.com##+js(cookie-remover, home_scroll)
+steamcommunity.com,steampowered.com##+js(cookie-remover, recentapps)
+steamcommunity.com,steampowered.com##+js(cookie-remover, recentlyVisitedAppHubs)
+steamcommunity.com,steampowered.com##+js(cookie-remover, strResponsiveViewPrefs)
+
+! I don't even know that they also track impressions in community hub too! However, community hub site may not aggressively set
+! `app_impressions` cookie like store domain once `g_bAllowAppImpressions` value set to false, but I'm not sure that if they
+! have any leftover script functions to keep tracking and storing shady cookie or not?
+! At least for currently, these scriptlet injections to override its value will not break community hub entirely, that's mean its
+! safe to put in base list.
+steamcommunity.com##+js(set, g_bAllowAppImpressions, false)
+steamcommunity.com##+js(set, g_SNR, null)
+
+! This probably related to `home_scroll` cookie, remove this script to prevent creating/modifying scroll tracking cookie!
+steampowered.com##+js(addEventListener-defuser, $J, GetNavCookie)
+
 ! - Prohibit Steam website to detect touch screen from first touch, however, **this cause major site features malfunction!**
-!   * Note that it may require to delete `strResponsiveViewPrefs` cookie first to make this script injection work properly, if
-!     you've forgot to do that before, maybe the `cookie-remover` scriptlet rules above will handle it!
+!   * Note that it may require to delete `strResponsiveViewPrefs` cookie first to make this script injection work properly,
+!     if you've forgot to do that before, maybe the `cookie-remover` scriptlet rules above will handle it!
 !   * This will helpful in case if you don't want to let `Steam` showing responsive header and menu bar, but you still want to
-!     browse that website as proper desktop site, while use touch screen function as for mouse click and page scrolling.
+!     browse that website as proper desktop site, while use touch screen as for mouse click (tap) and page scrolling (flick).
 steamcommunity.com,steampowered.com##+js(addEventListener-defuser, touchstart)
 
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
