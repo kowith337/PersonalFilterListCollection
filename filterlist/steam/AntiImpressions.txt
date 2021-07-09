@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Anti Impressions DLC
-! Version: 202107072156
+! Version: 202107091210
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -9,15 +9,19 @@
 !               extreme privacy to prevent junkful impression tracking cookie and not mind about breaking steam websites, neither
 !               store or community!
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! WARNING: These function below will completely break and maybe make the site "DEAD" entirely because certain script functions
-!          are mostly relying to `appid`, but its value are came from impression tracking function plus `snr` tracking values!
-!          However, this is the only way to dealing against shady `app_impressions` cookies, so I have no other solutions than
-!          this yet!
-!          Even some users can turn off its cookie via cookie settings page, but using the function to creating and modifying
-!          cookies whenever any games appear in browser screen is disgusting and it's a proof of bad privacy since they can use
-!          that function to observe and record user activities!!
+! WARNING:
+!   These function below will completely break and maybe make the site "DEAD" entirely because certain script functions are
+!   mostly relying to `appid`, but its value are came from impression tracking function plus `snr` tracking values!
+!   However, this is the only way to dealing against shady `app_impressions` cookies, so I have no other solutions than this yet!
+!   Even some users can turn off its cookie via cookie settings page, but using the function to creating and modifying cookies
+!   whenever any games appear in browser screen is disgusting and it's a proof of bad privacy of steam itself since they can use
+!   that function to observe and record user activities by default!!
 !
-! Known breaking after prevent impressions tracking:
+! Limitations:
+! - I cannot prevent that cookie being created/modified if you've browse game lists from "Steam curators", so avoid browsing
+!   any games through that features until you've rejected all cookies first (See 'Best advice' instruction below)
+!
+! Known breaking after prevent impressions tracking for some possibile way:
 ! [Store]
 ! - Front page that show various deals, recommendations, zuckestions in horizontal paging/scrolling, include seasonal sales.*
 ! - All of handbill-size of game images in front page won't load. (especially in slideshow pane)
@@ -28,22 +32,20 @@
 ! Best advice:
 ! - If you subscribe both of my Steam lists separately, please temporary unsubscribe this (anti-impression) filterlist first
 !   before log in.
-! - Or else, please login with redirect to Cookie settings (or early reject cookie), once you've rejected all cookie, all of
-!   nasty cookies are probably never build up. (I cannot confirm if some functional cookies may keep tracking you or not)
-!   * Cookie settings page: https://store.steampowered.com/account/cookiepreferences
-!   * Login link with redirect to cookie settings: https://store.steampowered.com/login?redir=account%2Fcookiepreferences%2F&redir_ssl=1
-! > Note that it will only affect to `SteamPowered` domain only, it may not respect settings when you're at `SteamCommunity`
-! > The UTM cookie will not set to reject even you've press the "Reject all" button, please scroll to the bottom page to set it!
+! - Or else if you don't want to break website by my list, please login with redirect to Cookie settings (or early reject cookie),
+!   once you've rejected all cookie, all of nasty cookies are probably never build up.
+!   * I cannot confirm if some functional cookies may keep tracking you or not
+!   - Cookie settings page: https://store.steampowered.com/account/cookiepreferences
+!   - Login link with redirect to cookie settings: https://store.steampowered.com/login?redir=account%2Fcookiepreferences%2F&redir_ssl=1
+! - Note that it will only affect to `SteamPowered` domain only, it may not respect settings when you're at `SteamCommunity`
+! - The UTM cookie will not set to reject even you've press the "Reject all" button, please scroll to the bottom page to set it!
+! - Ensure that you only navigate to the game browsing lists or proper specific games that you want to buy or save each game page
+! that you've planned to checkout and then put into the cart one by one until you've got all of games that you really want to...
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Remove unwanted attributes
 steampowered.com##+js(remove-attr, app_impression_tracked)
 steampowered.com##+js(remove-attr, data-ds-appid)
 steampowered.com##+js(remove-class, app_impression_tracked)
 steampowered.com##+js(remove-class, data-ds-appid)
-
-! Ensure that you only navigate to the game browsing lists or proper specific games that you want to buy or save each game page
-! that you've planned to checkout and then put into the cart one by one until you've got all of games that you really want to...
-steampowered.com##+js(remove-class, app_impression_tracked)
 steampowered.com##+js(set, CAppearMonitor, noopFunc)
 steampowered.com##+js(set, elTarget, null)
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
