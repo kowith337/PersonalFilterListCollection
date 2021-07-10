@@ -89,7 +89,6 @@ adasiatagmanager.*
 adjust.*
 alert-*.*
 amp.*
-ampproject.*
 beacon*.*
 beacon.*
 byteark-analytics.*
@@ -282,7 +281,10 @@ lumtest.com
 *-google-analytics.*
 *-googlead*.*
 *-googletag*.*
+2mdn-*.*
+2mdn.*
 adservice.google.*
+ampproject.*
 appinvite-*.googleapis.com
 beacon*.gvt*.com
 beacon.gvt*.com
@@ -297,8 +299,10 @@ googletag*.*
 http*-pa.googleapis.com
 id.google.*
 pagead-*.l.google.com
+play-*.googleapis.com
 recommender.*.google.com
 redirector.gvt*.com
+safeframe.*
 #suggestqueries.google.*
 www.*-pa.googleapis.com
 
@@ -321,16 +325,39 @@ adsensecustomsearchads.com
 advanced-web-analytics.com
 adwords.com
 crashlytics.com
+dartsearch.net
 fabric.io
 google-analytics.com
-googleadservices.com
 googleanalytics.com
+googleoptimize.com
 googlesyndication.com
 googletagmanager.com
 googletagservices.com
 googletraveladservices.com
+googlevads.com
 redirector.googlevideo.com
 urchin.com
+
+# Coverage for chinese...? (Related to https://github.com/lightswitch05/hosts/issues/290)
+2mdn-cn.net
+admob-cn.com
+app-measurement-cn.com
+dartsearch-cn.net
+doubleclick-cn.net
+google-analytics-cn.com
+googleadapis-cn.com
+googleadservices-cn.com
+googleadservices-cn.com
+googleoptimize-cn.com
+googlesyndication-cn.com
+googletagmanager-cn.com
+googletraveladservices-cn.com
+googlevads-cn.com
+#gvt1-cn.com
+gvt2-cn.com
+gvt3-cn.com
+gvt4-cn.com
+gvt5-cn.com
 
 # CNAME Penetration (Mostly "Google L" subdomains, non-wildcard section)
 gstaticadssl.l.google.com

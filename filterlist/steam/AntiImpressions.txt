@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Anti Impressions DLC
-! Version: 202107091210
+! Version: 202107102025
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -18,22 +18,25 @@
 !   that function to observe and record user activities by default!!
 !
 ! Limitations:
-! - I cannot prevent that cookie being created/modified if you've browse game lists from "Steam curators", so avoid browsing
-!   any games through that features until you've rejected all cookies first (See 'Best advice' instruction below)
+! - I cannot prevent that cookie being created/modified if you've browse game lists from "Steam curators" with their comments
+!   and recommendations, so avoid browsing any games through that features until you've rejected all cookies first!
+!   * See "Best advice" instruction
 !
 ! Known breaking after prevent impressions tracking for some possibile way:
 ! [Store]
 ! - Front page that show various deals, recommendations, zuckestions in horizontal paging/scrolling, include seasonal sales.*
 ! - All of handbill-size of game images in front page won't load. (especially in slideshow pane)
-! - You cannot narrow or filtering reviews.
+! - Sometime it's probably break preview videos.
+! - You may not narrow or filtering reviews.
 ! * Noted that I've tried with IceCat and Iceweasel and found site breaking are less than Chromium-based for a few, only tested
 !   on 2021 mystery summer sales during.
 !
 ! Best advice:
 ! - If you subscribe both of my Steam lists separately, please temporary unsubscribe this (anti-impression) filterlist first
 !   before log in.
-! - Or else if you don't want to break website by my list, please login with redirect to Cookie settings (or early reject cookie),
-!   once you've rejected all cookie, all of nasty cookies are probably never build up.
+! - Or else if you don't want to break website by my list, please login with redirect to Cookie settings or go to cookie settings
+!   page early, then press the "reject all" button, once you've rejected all cookie, all of nasty cookies are probably never
+!   build up.
 !   * I cannot confirm if some functional cookies may keep tracking you or not
 !   - Cookie settings page: https://store.steampowered.com/account/cookiepreferences
 !   - Login link with redirect to cookie settings: https://store.steampowered.com/login?redir=account%2Fcookiepreferences%2F&redir_ssl=1

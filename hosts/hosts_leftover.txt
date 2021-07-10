@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202106301153
+# Version: 202107102016
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -54,6 +54,7 @@
 0.0.0.0 appinvite-ipv6-pa.googleapis.com
 0.0.0.0 appinvite-pa.googleapis.com
 0.0.0.0 appsitemsuggest-pa.googleapis.com
+0.0.0.0 auditrecording-pa.googleapis.com
 0.0.0.0 chromecontentsuggestions-pa.googleapis.com
 0.0.0.0 chromefeedcontentsuggestions-pa.googleapis.com
 0.0.0.0 chromereader-pa.googleapis.com
@@ -84,6 +85,7 @@
 0.0.0.0 recommendationengine.googleapis.com
 0.0.0.0 staging-chromecontentsuggestions-pa.googleapis.com
 0.0.0.0 test-chromecontentsuggestions-pa.googleapis.com
+0.0.0.0 userlocation.googleapis.com
 0.0.0.0 www.chromecontentsuggestions-pa.googleapis.com
 #
 # - {GVT Beacons}
@@ -172,7 +174,7 @@
 0.0.0.0 pixel.fbpigeon.com
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Firefox Betrayed Backend Domains]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# Telemetry, Health Report, Personalise content zuckestions , based on 3 sources below...
+# Telemetry, Health Report, Personalise content zuckestions and Pocket, based on 3 sources below...
 # - http://utaukitune.ldblog.jp/archives/65725024.html
 # - https://github.com/jmdugan/blocklists/tree/master/corporations/mozilla/all.txt
 # - https://www.ghacks.net/2018/10/10/firefox-update-security-audit-results-published (Yuliya's comment)
