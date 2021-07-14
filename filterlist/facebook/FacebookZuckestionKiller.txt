@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.4]
 ! Title: Facebook Zuckestion Killer - Base
-! Version: 202106181809
+! Version: 202107141553
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -14,12 +14,12 @@
 !         remove something that really need.
 ! Note 2: Inspired from report on https://github.com/collinbarrett/FilterLists/issues/282
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Proactive outbound tracking prevention, to prevent Facebook tracking you outside while click and open shared URL (see #19)
+! Proactive outbound tracking prevention, to prevent Facebook tracking you outside with unwanted parameters (see #19)
 ! Remark: If you're seeing yellow warning page, try click the magnifier icon to expand all parameters for getting real URL!
-||*&fbclid=$document,xhr,important,domain=~TRACKING-FBCLID_PARAMS
-||*?fbclid=$document,xhr,important,domain=~TRACKING-FBCLID_PARAMS
-||facebook.com/flx/*&h=$document,xhr,important,domain=~TRACKING-OUTGOING_WARN_UNWANTED_H_PARAM
-||facebook.com/flx/*?h=$document,xhr,important,domain=~TRACKING-OUTGOING_WARN_UNWANTED_H_PARAM
+||*&fbclid=$important,removeparam=fbclid
+||*?fbclid=$important,removeparam=fbclid
+||facebook.com/flx/*&h=$important,removeparam=h
+||facebook.com/flx/*?h=$important,removeparam=h
 ||facebook.com/l.php$document,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_PHP
 ||l.facebook.com$document,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_DOMAIN
 ||l.messenger.com$document,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_DOMAIN
