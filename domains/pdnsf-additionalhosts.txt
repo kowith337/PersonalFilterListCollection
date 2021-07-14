@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202107011302
+# Version: 202107112028
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -283,6 +283,7 @@ lumtest.com
 *-googletag*.*
 2mdn-*.*
 2mdn.*
+adgoogle.*
 adservice.google.*
 ampproject.*
 appinvite-*.googleapis.com
@@ -295,6 +296,7 @@ doubleclick.*
 firebase*.*
 google-analytics.*
 googlead*.*
+googleads.*
 googletag*.*
 http*-pa.googleapis.com
 id.google.*
@@ -373,6 +375,7 @@ clientmetrics-pa.googleapis.com
 clouderrorreporting.googleapis.com
 datamixer-pa.googleapis.com
 datasaver.googleapis.com
+deviceintegritytokens-pa.googleapis.com
 digitalassetlinks.googleapis.com
 discover-pa.googleapis.com
 exploresites-pa.googleapis.com

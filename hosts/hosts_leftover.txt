@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202107102016
+# Version: 202107141617
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -31,7 +31,10 @@
 0.0.0.0 www.googletagservices.com
 #
 # - {DoubleClick} Also include syndication
+0.0.0.0 adgoogle.net
 0.0.0.0 admobclick.com
+0.0.0.0 clickserver.googleads.com
+0.0.0.0 googleads.com
 0.0.0.0 googleads.g.doubleclick.net
 0.0.0.0 pagead2.googleadservices.com
 0.0.0.0 pagead2.googlesyndication.com
@@ -45,7 +48,10 @@
 0.0.0.0 securepubads.g.doubleclick.net
 0.0.0.0 static.doubleclick.net
 0.0.0.0 tpc.googlesyndication.com
+0.0.0.0 www.adgoogle.net
 0.0.0.0 www.admobclick.com
+0.0.0.0 www.admobclick.com
+0.0.0.0 www.googleads.com
 #
 # - {Google PA-ranoid APIs}
 0.0.0.0 1.chromefeedcontentsuggestions-pa.googleapis.com
