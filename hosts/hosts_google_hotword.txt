@@ -1,19 +1,31 @@
 # [uMatrix 1.3.11.100]
 # Title: Google Suggest Queries Hosts
-# Version: 202009282314
+# Version: 202107201430
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
 # Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/hosts/test/hosts_google_suggestqueries.txt
-# Description: This file duplicated from "AdServices and ID" block, aim to preventing use of "Google HotWords"
-#              Any attempts that sent your keystroke and return suggestions will be blocked and break any sites who use that,
-#              include YouTube!
+# Description: This file duplicated from "AdServices and ID" block, plus with their CNAME and YouTube extra endpoints that aim to
+#              preventing use of "Google HotWords" functions that send your letters that you've typed and show suggestions for
+#              next and related words, any attempts that sent your keystroke and return suggestions will be blocked and break
+#              any sites who use that! (except Google search itself that retrieve from `/complete/search/` path of their domains)
 # WARNING: YOU WILL NO LONGER RECIEVE ANY SUGGESTION WORDS FROM GOOGLE IF YOU APPLY THIS! USE AT YOUR OWN RISK!!
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+0.0.0.0 suggestqueries-clients1.youtube.com
+0.0.0.0 suggestqueries-clients2.youtube.com
+0.0.0.0 suggestqueries-clients3.youtube.com
+0.0.0.0 suggestqueries-clients4.youtube.com
+0.0.0.0 suggestqueries-clients5.youtube.com
+0.0.0.0 suggestqueries-clients6.youtube.com
+0.0.0.0 suggestqueries-clients7.youtube.com
+0.0.0.0 suggestqueries-clients8.youtube.com
+0.0.0.0 suggestqueries-clients9.youtube.com
 0.0.0.0 suggestqueries.google.ac
 0.0.0.0 suggestqueries.google.ad
 0.0.0.0 suggestqueries.google.ae
+0.0.0.0 suggestqueries.google.af
+0.0.0.0 suggestqueries.google.ag
 0.0.0.0 suggestqueries.google.al
 0.0.0.0 suggestqueries.google.am
 0.0.0.0 suggestqueries.google.as
@@ -43,9 +55,12 @@
 0.0.0.0 suggestqueries.google.co.bw
 0.0.0.0 suggestqueries.google.co.ck
 0.0.0.0 suggestqueries.google.co.cr
+0.0.0.0 suggestqueries.google.co.hu
 0.0.0.0 suggestqueries.google.co.id
 0.0.0.0 suggestqueries.google.co.il
+0.0.0.0 suggestqueries.google.co.im
 0.0.0.0 suggestqueries.google.co.in
+0.0.0.0 suggestqueries.google.co.je
 0.0.0.0 suggestqueries.google.co.jp
 0.0.0.0 suggestqueries.google.co.ke
 0.0.0.0 suggestqueries.google.co.kr
@@ -74,6 +89,7 @@
 0.0.0.0 suggestqueries.google.com.bn
 0.0.0.0 suggestqueries.google.com.bo
 0.0.0.0 suggestqueries.google.com.br
+0.0.0.0 suggestqueries.google.com.by
 0.0.0.0 suggestqueries.google.com.bz
 0.0.0.0 suggestqueries.google.com.co
 0.0.0.0 suggestqueries.google.com.cu
@@ -83,11 +99,15 @@
 0.0.0.0 suggestqueries.google.com.eg
 0.0.0.0 suggestqueries.google.com.et
 0.0.0.0 suggestqueries.google.com.fj
+0.0.0.0 suggestqueries.google.com.ge
 0.0.0.0 suggestqueries.google.com.gh
 0.0.0.0 suggestqueries.google.com.gi
+0.0.0.0 suggestqueries.google.com.gr
 0.0.0.0 suggestqueries.google.com.gt
 0.0.0.0 suggestqueries.google.com.hk
+0.0.0.0 suggestqueries.google.com.iq
 0.0.0.0 suggestqueries.google.com.jm
+0.0.0.0 suggestqueries.google.com.jo
 0.0.0.0 suggestqueries.google.com.kh
 0.0.0.0 suggestqueries.google.com.kw
 0.0.0.0 suggestqueries.google.com.lb
@@ -102,26 +122,31 @@
 0.0.0.0 suggestqueries.google.com.ng
 0.0.0.0 suggestqueries.google.com.ni
 0.0.0.0 suggestqueries.google.com.np
+0.0.0.0 suggestqueries.google.com.nr
 0.0.0.0 suggestqueries.google.com.om
 0.0.0.0 suggestqueries.google.com.pa
 0.0.0.0 suggestqueries.google.com.pe
 0.0.0.0 suggestqueries.google.com.pg
 0.0.0.0 suggestqueries.google.com.ph
 0.0.0.0 suggestqueries.google.com.pk
+0.0.0.0 suggestqueries.google.com.pl
 0.0.0.0 suggestqueries.google.com.pr
 0.0.0.0 suggestqueries.google.com.py
 0.0.0.0 suggestqueries.google.com.qa
+0.0.0.0 suggestqueries.google.com.ru
 0.0.0.0 suggestqueries.google.com.sa
 0.0.0.0 suggestqueries.google.com.sb
 0.0.0.0 suggestqueries.google.com.sg
 0.0.0.0 suggestqueries.google.com.sl
 0.0.0.0 suggestqueries.google.com.sv
 0.0.0.0 suggestqueries.google.com.tj
+0.0.0.0 suggestqueries.google.com.tn
 0.0.0.0 suggestqueries.google.com.tr
 0.0.0.0 suggestqueries.google.com.tw
 0.0.0.0 suggestqueries.google.com.ua
 0.0.0.0 suggestqueries.google.com.uy
 0.0.0.0 suggestqueries.google.com.vc
+0.0.0.0 suggestqueries.google.com.ve
 0.0.0.0 suggestqueries.google.com.vn
 0.0.0.0 suggestqueries.google.cv
 0.0.0.0 suggestqueries.google.cz
@@ -151,12 +176,15 @@
 0.0.0.0 suggestqueries.google.hu
 0.0.0.0 suggestqueries.google.ie
 0.0.0.0 suggestqueries.google.im
+0.0.0.0 suggestqueries.google.in
 0.0.0.0 suggestqueries.google.io
 0.0.0.0 suggestqueries.google.iq
 0.0.0.0 suggestqueries.google.is
 0.0.0.0 suggestqueries.google.it
+0.0.0.0 suggestqueries.google.it.ao
 0.0.0.0 suggestqueries.google.je
 0.0.0.0 suggestqueries.google.jo
+0.0.0.0 suggestqueries.google.jp
 0.0.0.0 suggestqueries.google.kg
 0.0.0.0 suggestqueries.google.ki
 0.0.0.0 suggestqueries.google.kz
@@ -177,10 +205,14 @@
 0.0.0.0 suggestqueries.google.mv
 0.0.0.0 suggestqueries.google.mw
 0.0.0.0 suggestqueries.google.ne
+0.0.0.0 suggestqueries.google.ne.jp
+0.0.0.0 suggestqueries.google.ng
 0.0.0.0 suggestqueries.google.nl
 0.0.0.0 suggestqueries.google.no
 0.0.0.0 suggestqueries.google.nr
 0.0.0.0 suggestqueries.google.nu
+0.0.0.0 suggestqueries.google.off.ai
+0.0.0.0 suggestqueries.google.pk
 0.0.0.0 suggestqueries.google.pl
 0.0.0.0 suggestqueries.google.pn
 0.0.0.0 suggestqueries.google.ps
@@ -200,6 +232,7 @@
 0.0.0.0 suggestqueries.google.sr
 0.0.0.0 suggestqueries.google.st
 0.0.0.0 suggestqueries.google.td
+0.0.0.0 suggestqueries.google.tel
 0.0.0.0 suggestqueries.google.tg
 0.0.0.0 suggestqueries.google.tk
 0.0.0.0 suggestqueries.google.tl
@@ -208,8 +241,12 @@
 0.0.0.0 suggestqueries.google.to
 0.0.0.0 suggestqueries.google.tt
 0.0.0.0 suggestqueries.google.tw
+0.0.0.0 suggestqueries.google.ua
+0.0.0.0 suggestqueries.google.us
+0.0.0.0 suggestqueries.google.uz
 0.0.0.0 suggestqueries.google.vg
 0.0.0.0 suggestqueries.google.vu
 0.0.0.0 suggestqueries.google.ws
 0.0.0.0 suggestqueries.googleapis.com
+0.0.0.0 suggestqueries.l.google.com
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #

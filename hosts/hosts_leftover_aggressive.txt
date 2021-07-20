@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202107141621
+# Version: 202107161501
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -258,6 +258,7 @@
 #     stopped do those kinds of shame forcful advertisement, marketing and forcefully accepting their consent for reselling your
 #     consumers data!
 0.0.0.0 home.trueid.net
+0.0.0.0 personal-data-consent.truecorp.co.th
 0.0.0.0 service.truecorp.co.th
 0.0.0.0 service.trueinternet.co.th
 0.0.0.0 services.truecorp.co.th

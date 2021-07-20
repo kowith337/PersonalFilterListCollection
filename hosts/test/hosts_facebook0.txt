@@ -1,6 +1,6 @@
 # [uMatrix 1.3.15.100]
 # Title: Facebook Zero Hosts Block (Test unit)
-# Version: 202107091223
+# Version: 202107201505
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/hosts
@@ -10,28 +10,28 @@
 #          https://github.com/anudeepND/blacklist/raw/master/facebook.txt
 #          https://github.com/random-robbie/bugbounty-scans/raw/master/facebook.com/urls.txt
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# Description: This aim to block non-formal hosts that serve all "Facebook" contents and resources from alternative "Zero"
-#              servers that it happen when you're using on mobile data over the carrier that collaborate with "Facebook" to have
-#              that service, include all of free services that promoted by "Facebook" and your local mobile operators who
-#              participated, e.g. "Free Basics", "Discover", etc.
-#              Currently, all of big 3 mobile carriers in my country are give up to "Facebook" by allow that services to be
-#              happen, and let it's service invade and interrupt the privacy, functionality and usability of "Facebook" itself.
-#              I'm against to that shady services because when I connect to "Facebook" over mobile data, it's start to show
-#              various of annoyance that likely "Facebook" trying to force me and all of other users to use that, include nasty
+# Description: This aim to block non-formal hosts that serve all `Facebook` contents and resources from alternative "Zero"
+#              servers that it happen when you're using on mobile data over the carrier that collaborate with `Facebook` to have
+#              that service, include all of free services that promoted by `Facebook` and your local mobile operators who
+#              participated, e.g. `Free Basics`, `Discover`, etc.
+#              Currently, all of big 3 mobile carriers in my country are give up to `Facebook` by allow that services to be
+#              happen and let it's service invade and interrupt the privacy, functionality and usability of `Facebook` itself.
+#              I'm against to that shady services because when I connect to `Facebook` over mobile data, it's start to show
+#              various of annoyance that likely `Facebook` trying to force me and all of other users to use that, include nasty
 #              and insecure traffic redirect, showing balloon party cover, inject purple bar above of page or in-app screen, show
 #              nagging pop-ups to buy mobile internet package or even prevent any videos to play on mobile data, although many
 #              users in my country are OK to use the unlimited data plan but limited the connectivity speed.
 #              In my opinion, I will keep block those connections, no matter about breaking the functionality and usability for
-#              using "Facebook" over mobile data until they abandone that services and return all connections to the original
-#              favor, no redirects (include non-HTTPS), no nagging pop-ups to buy internet packages or forcing to use that
-#              service, just let it should be normal like I and/or we accessing "Facebook" at home or via Proxy/VPN!
+#              using `Facebook` on mobile data plan until they abandone that services and return all connections to the original
+#              favor, no redirects, no non-HTTPS, no nagging pop-ups to buy internet packages or forcing to use that service,
+#              just let it should be normal like I and/or we accessing `Facebook` at home or via Proxy/VPN!
 # Note: All rules below will be use as test unit for @funilrys's "Dead Hosts" tools (aka. PyFunceble), however, some hosts entry
 #       are duplicated based from hosts name that found by myself and more entry from [Credits] source, Currently I'm still don't
-#       know how many "Free Basics" hosts name and servers are really existed?
+#       know how many `Free Basics` hosts name and servers are really existed?
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# (*): "Facebook" should be thanks to old technologies (but we still using them nowadays) called "(x-)WAP", "MSISDN", etc. that
+# (*): `Facebook` should be thanks to old technologies (but we still using them nowadays) called "(x-)WAP", "MSISDN", etc. that
 #      possible to extract and/or resolve user's mobile number who use cellular data without hinting the users to manually fill
-#      their own numbers and submit to "Facebook" by themseleves, now some shady companies in my country use the same tactics above
+#      their own numbers and submit to `Facebook` by themseleves, now some shady companies in my country use the same tactics above
 #      to randomly add bulk mobile phone numbers to subscribe nasty, wasteful and also unwanted content supscriptions without any
 #      confirmations from user's side!
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
