@@ -1,12 +1,18 @@
 [uBlock Origin 1.31.2]
-! Title: Discord Cut-Out! (DOM only)
-! Version: 202101042004
+! Title: [Archived] Discord Cut-Out! (DOM only)
+! Version: 202107231413
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
-! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/specific/DiscordCutOut.txt
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/archive/DiscordCutOut.txt
 ! Description: Only support DOM for english users, probably aim for GB interface, no requests blocking rules yet...
-
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Note: The first time I built this list is the second time of creating my account with aliase mail rather than actual mail,
+!       however, now I've got banned out by forcing to verify with phone numbers for a while ago and I refuse to do it!
+!       Technically, they may detected that I've shared account token with custom built of Android apps since I hate trackings,
+!       so it's time to say that I will no longer maintaing this list anymore..., feel free to adapt my lists to another lists or
+!       tools as long as you're not randomly get banned by them!
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Hide "Servers discovery" and "Download app" button
 discord.com##ul[data-list-id="guildsnav"] div[class^="listItem"]:has(div[class^="listItemWrapper"] div[data-list-item-id*="app-download-button"])
 discord.com##ul[data-list-id="guildsnav"] div[class^="listItem"]:has(div[class^="listItemWrapper"] div[data-list-item-id*="guild-discover-button"])
@@ -75,3 +81,4 @@ discord.com##main[class^="chatContent"] form div div[class^="buttons"] button[ar
 discord.com##ul[data-list-id="guildsnav"] div[class^="listItem"]:has(div[class^="listItemWrapper"] div[data-list-item-id*="app-download-button"]):remove()
 discord.com##ul[data-list-id="guildsnav"] div[class^="listItem"]:has(div[class^="listItemWrapper"] div[data-list-item-id*="guild-discover-button"]):remove()
 !#endif
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
