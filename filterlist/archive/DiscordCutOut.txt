@@ -1,6 +1,6 @@
 [uBlock Origin 1.31.2]
 ! Title: [Archived] Discord Cut-Out! (DOM only)
-! Version: 202107231413
+! Version: 202107231417
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -9,9 +9,9 @@
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: The first time I built this list is the second time of creating my account with aliase mail rather than actual mail,
 !       however, now I've got banned out by forcing to verify with phone numbers for a while ago and I refuse to do it!
-!       Technically, they may detected that I've shared account token with custom built of Android apps since I hate trackings,
-!       so it's time to say that I will no longer maintaing this list anymore..., feel free to adapt my lists to another lists or
-!       tools as long as you're not randomly get banned by them!
+!       Technically, they may detected that I've shared account token with custom built of Android apps since I hate trackings
+!       and zuckestions, so it's time to say that I will no longer maintaing this list anymore..., feel free to adapt my lists
+!       with another lists or tools (such as BetterDiscord) as long as you're not randomly get banned by them!
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Hide "Servers discovery" and "Download app" button
 discord.com##ul[data-list-id="guildsnav"] div[class^="listItem"]:has(div[class^="listItemWrapper"] div[data-list-item-id*="app-download-button"])
