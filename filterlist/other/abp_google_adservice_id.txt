@@ -1,16 +1,18 @@
 ![Adblock Plus 2.0]
 ! Title: Google AdService and ID.Google tracking hosts (for Adblock Plus or AdGuard)
-! Version: 202008270008
+! Version: 202107282233
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/issues
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/other/abp_google_adservice_id.txt
-! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !^
 ! AdService - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||adservice.google.ac^
 ||adservice.google.ad^
 ||adservice.google.ae^
+||adservice.google.af^
+||adservice.google.ag^
 ||adservice.google.al^
 ||adservice.google.am^
 ||adservice.google.as^
@@ -35,14 +37,16 @@
 ||adservice.google.ci^
 ||adservice.google.cl^
 ||adservice.google.cm^
-||adservice.google.cn^
 ||adservice.google.co.ao^
 ||adservice.google.co.bw^
 ||adservice.google.co.ck^
 ||adservice.google.co.cr^
+||adservice.google.co.hu^
 ||adservice.google.co.id^
 ||adservice.google.co.il^
+||adservice.google.co.im^
 ||adservice.google.co.in^
+||adservice.google.co.je^
 ||adservice.google.co.jp^
 ||adservice.google.co.ke^
 ||adservice.google.co.kr^
@@ -71,6 +75,7 @@
 ||adservice.google.com.bn^
 ||adservice.google.com.bo^
 ||adservice.google.com.br^
+||adservice.google.com.by^
 ||adservice.google.com.bz^
 ||adservice.google.com.co^
 ||adservice.google.com.cu^
@@ -80,15 +85,18 @@
 ||adservice.google.com.eg^
 ||adservice.google.com.et^
 ||adservice.google.com.fj^
+||adservice.google.com.ge^
 ||adservice.google.com.gh^
 ||adservice.google.com.gi^
+||adservice.google.com.gr^
 ||adservice.google.com.gt^
 ||adservice.google.com.hk^
+||adservice.google.com.iq^
 ||adservice.google.com.jm^
+||adservice.google.com.jo^
 ||adservice.google.com.kh^
 ||adservice.google.com.kw^
 ||adservice.google.com.lb^
-||adservice.google.com.lc^
 ||adservice.google.com.ly^
 ||adservice.google.com.mm^
 ||adservice.google.com.mt^
@@ -99,26 +107,31 @@
 ||adservice.google.com.ng^
 ||adservice.google.com.ni^
 ||adservice.google.com.np^
+||adservice.google.com.nr^
 ||adservice.google.com.om^
 ||adservice.google.com.pa^
 ||adservice.google.com.pe^
 ||adservice.google.com.pg^
 ||adservice.google.com.ph^
 ||adservice.google.com.pk^
+||adservice.google.com.pl^
 ||adservice.google.com.pr^
 ||adservice.google.com.py^
 ||adservice.google.com.qa^
+||adservice.google.com.ru^
 ||adservice.google.com.sa^
 ||adservice.google.com.sb^
 ||adservice.google.com.sg^
 ||adservice.google.com.sl^
 ||adservice.google.com.sv^
 ||adservice.google.com.tj^
+||adservice.google.com.tn^
 ||adservice.google.com.tr^
 ||adservice.google.com.tw^
 ||adservice.google.com.ua^
 ||adservice.google.com.uy^
 ||adservice.google.com.vc^
+||adservice.google.com.ve^
 ||adservice.google.com.vn^
 ||adservice.google.cv^
 ||adservice.google.cz^
@@ -148,12 +161,15 @@
 ||adservice.google.hu^
 ||adservice.google.ie^
 ||adservice.google.im^
+||adservice.google.in^
 ||adservice.google.io^
 ||adservice.google.iq^
 ||adservice.google.is^
 ||adservice.google.it^
+||adservice.google.it.ao^
 ||adservice.google.je^
 ||adservice.google.jo^
+||adservice.google.jp^
 ||adservice.google.kg^
 ||adservice.google.ki^
 ||adservice.google.kz^
@@ -174,10 +190,14 @@
 ||adservice.google.mv^
 ||adservice.google.mw^
 ||adservice.google.ne^
+||adservice.google.ne.jp^
+||adservice.google.ng^
 ||adservice.google.nl^
 ||adservice.google.no^
 ||adservice.google.nr^
 ||adservice.google.nu^
+||adservice.google.off.ai^
+||adservice.google.pk^
 ||adservice.google.pl^
 ||adservice.google.pn^
 ||adservice.google.ps^
@@ -197,6 +217,7 @@
 ||adservice.google.sr^
 ||adservice.google.st^
 ||adservice.google.td^
+||adservice.google.tel^
 ||adservice.google.tg^
 ||adservice.google.tk^
 ||adservice.google.tl^
@@ -205,13 +226,18 @@
 ||adservice.google.to^
 ||adservice.google.tt^
 ||adservice.google.tw^
+||adservice.google.ua^
+||adservice.google.us^
+||adservice.google.uz^
 ||adservice.google.vg^
 ||adservice.google.vu^
-||adservice.google.ws
+||adservice.google.ws^
 ! ID Track - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||id.google.ac^
 ||id.google.ad^
 ||id.google.ae^
+||id.google.af^
+||id.google.ag^
 ||id.google.al^
 ||id.google.am^
 ||id.google.as^
@@ -241,9 +267,12 @@
 ||id.google.co.bw^
 ||id.google.co.ck^
 ||id.google.co.cr^
+||id.google.co.hu^
 ||id.google.co.id^
 ||id.google.co.il^
+||id.google.co.im^
 ||id.google.co.in^
+||id.google.co.je^
 ||id.google.co.jp^
 ||id.google.co.ke^
 ||id.google.co.kr^
@@ -272,7 +301,9 @@
 ||id.google.com.bn^
 ||id.google.com.bo^
 ||id.google.com.br^
+||id.google.com.by^
 ||id.google.com.bz^
+||id.google.com.cn^
 ||id.google.com.co^
 ||id.google.com.cu^
 ||id.google.com.cy^
@@ -281,15 +312,18 @@
 ||id.google.com.eg^
 ||id.google.com.et^
 ||id.google.com.fj^
+||id.google.com.ge^
 ||id.google.com.gh^
 ||id.google.com.gi^
+||id.google.com.gr^
 ||id.google.com.gt^
 ||id.google.com.hk^
+||id.google.com.iq^
 ||id.google.com.jm^
+||id.google.com.jo^
 ||id.google.com.kh^
 ||id.google.com.kw^
 ||id.google.com.lb^
-||id.google.com.lc^
 ||id.google.com.ly^
 ||id.google.com.mm^
 ||id.google.com.mt^
@@ -300,26 +334,31 @@
 ||id.google.com.ng^
 ||id.google.com.ni^
 ||id.google.com.np^
+||id.google.com.nr^
 ||id.google.com.om^
 ||id.google.com.pa^
 ||id.google.com.pe^
 ||id.google.com.pg^
 ||id.google.com.ph^
 ||id.google.com.pk^
+||id.google.com.pl^
 ||id.google.com.pr^
 ||id.google.com.py^
 ||id.google.com.qa^
+||id.google.com.ru^
 ||id.google.com.sa^
 ||id.google.com.sb^
 ||id.google.com.sg^
 ||id.google.com.sl^
 ||id.google.com.sv^
 ||id.google.com.tj^
+||id.google.com.tn^
 ||id.google.com.tr^
 ||id.google.com.tw^
 ||id.google.com.ua^
 ||id.google.com.uy^
 ||id.google.com.vc^
+||id.google.com.ve^
 ||id.google.com.vn^
 ||id.google.cv^
 ||id.google.cz^
@@ -349,12 +388,15 @@
 ||id.google.hu^
 ||id.google.ie^
 ||id.google.im^
+||id.google.in^
 ||id.google.io^
 ||id.google.iq^
 ||id.google.is^
 ||id.google.it^
+||id.google.it.ao^
 ||id.google.je^
 ||id.google.jo^
+||id.google.jp^
 ||id.google.kg^
 ||id.google.ki^
 ||id.google.kz^
@@ -375,10 +417,14 @@
 ||id.google.mv^
 ||id.google.mw^
 ||id.google.ne^
+||id.google.ne.jp^
+||id.google.ng^
 ||id.google.nl^
 ||id.google.no^
 ||id.google.nr^
 ||id.google.nu^
+||id.google.off.ai^
+||id.google.pk^
 ||id.google.pl^
 ||id.google.pn^
 ||id.google.ps^
@@ -398,6 +444,7 @@
 ||id.google.sr^
 ||id.google.st^
 ||id.google.td^
+||id.google.tel^
 ||id.google.tg^
 ||id.google.tk^
 ||id.google.tl^
@@ -406,6 +453,9 @@
 ||id.google.to^
 ||id.google.tt^
 ||id.google.tw^
+||id.google.ua^
+||id.google.us^
+||id.google.uz^
 ||id.google.vg^
 ||id.google.vu^
 ||id.google.ws

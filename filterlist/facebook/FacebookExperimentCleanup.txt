@@ -1,6 +1,6 @@
-[uBlock Origin 1.32.4]
+[uBlock Origin 1.37.0]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202106282149
+! Version: 202107282228
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -227,7 +227,7 @@ d.facebook.com,m.facebook.com,mbasic.facebook.com###root table[role] div[class] 
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###root div[class] > a[href*="/zuck"]:has(i[aria-label="Mark"]):upward(1):remove()
 
 ! Make the related video function corrupted when you're viewing standalone video post on Facebook with `watch` link.
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##+js(acis, requireLazy, mobile_related_video_feed_pagelet)
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com##+js(acs, requireLazy, mobile_related_video_feed_pagelet)
 
 ! [Network blocking section]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Prevent modules connections that autoplay GIF comments (May doesn't work at all!)

@@ -1,6 +1,6 @@
-[uBlock Origin 1.28.0]
+[uBlock Origin 1.37.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202106301245
+! Version: 202107282233
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -500,11 +500,11 @@ m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none 
 
 ! Scriplets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 m.intl.taobao.com,m.taobao.com##+js(aeld, load, getFB_GOOLE_trackJs)
-minecraftforge.net##+js(acis, _comscore)
-minecraftforge.net##+js(acis, window.factorem)
+minecraftforge.net##+js(acs, _comscore)
+minecraftforge.net##+js(acs, window.factorem)
 randomnessthing.com##+js(aopr, Criteo)
 randomnessthing.com##+js(aopw, DisplayAcceptableAdIfAdblocked)
-savefrom.net##+js(acis, tplYouTubePopupHelper)
+savefrom.net##+js(acs, tplYouTubePopupHelper)
 
 ! Specific Use! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [GitHub] I don't mind if I'm still use XUL Legacy version of Firefox and get noticed that the site won't support older Firefox

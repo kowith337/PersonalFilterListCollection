@@ -1,6 +1,6 @@
-[uBlock Origin 1.28.0]
+[uBlock Origin 1.37.0]
 ! Title: GelboLube (Universal) [stack menubar modified]
-! Version: 202011041343
+! Version: 202107282228
 ! Expires: 2 days
 ! Author: kowith337 and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -271,12 +271,12 @@ gelbooru.com##+js(aopw, GoogleAnalyticsObject)
 gelbooru.com##+js(aopw, adsbyjuicy)
 
 ! 3. Experimental, to foil ILS function for Chromium / Firefox WebExt
-gelbooru.com##+js(acis, AddZone, idzone)
-gelbooru.com##+js(acis, ImplicityBreakingSite)
-gelbooru.com##+js(acis, adtoniq)
-gelbooru.com##+js(acis, domain_base, exosrv.com)
-gelbooru.com##+js(acis, serve, script_url)
-gelbooru.com##+js(acis, window.dataLayer, gtag)
+gelbooru.com##+js(acs, AddZone, idzone)
+gelbooru.com##+js(acs, ImplicityBreakingSite)
+gelbooru.com##+js(acs, adtoniq)
+gelbooru.com##+js(acs, domain_base, exosrv.com)
+gelbooru.com##+js(acs, serve, script_url)
+gelbooru.com##+js(acs, window.dataLayer, gtag)
 
 ! 4. Inject constant value (Only a value that not match to specific string will be applied)
 gelbooru.com##+js(set, BPJS, noopFunc)
