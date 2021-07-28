@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.4]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202106181809
+! Version: 202106282149
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -37,6 +37,24 @@ web.facebook.com,www.facebook.com##div[data-pagelet="LeftRail"] div[class] ul li
 
 ! Remove header menu that show 5 buttons above, remove hated attractive that count how many contents that you didn't see!
 web.facebook.com,www.facebook.com##div[role="banner"] div[role="navigation"] ul li
+
+! Remove unnecessary things for consumers in compose pane button (Create ads / jobs)
+web.facebook.com,www.facebook.com##div[aria-label="Create"][role="dialog"] div[data-visualcompletion] a[href*="/ads"]
+web.facebook.com,www.facebook.com##div[aria-label="Create"][role="dialog"] div[data-visualcompletion] a[href*="/jobs_composer"]
+
+! Remove unnecessary items in grid menu
+! - Include ads centre, ad campaigns, `Facebook` pay, fundarise, jobs, offers (maybe formerly rewards), watch and news feed...
+! - remove the "Watch" menu is same though about what happen in touch version that you will be track by `Facebook` by obtaining
+!   your "advertisement ID" for fetch zuckested/promoted videos that based on your behaviour!
+! - remove the "News feed" will hide ability to go back to algorithm'd news feed, click to logo for going back still possible!
+web.facebook.com,www.facebook.com##div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/ads"]
+web.facebook.com,www.facebook.com##div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/ad_campaign"]
+web.facebook.com,www.facebook.com##div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/facebook_pay"]
+web.facebook.com,www.facebook.com##div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/fundraisers"]
+web.facebook.com,www.facebook.com##div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/jobs"]
+web.facebook.com,www.facebook.com##div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/offers"]\
+web.facebook.com,www.facebook.com##div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/watch"]
+web.facebook.com,www.facebook.com##div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="sk=nf"]
 
 ! [(Old) Facebook Desktop]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove "Top Picks" product from marketplace lists, only work for english UI users only (UK, US)
