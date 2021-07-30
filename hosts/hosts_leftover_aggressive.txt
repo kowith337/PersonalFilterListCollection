@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202107161501
+# Version: 202107301958
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -117,6 +117,11 @@
 #
 # - {Really safety?}
 0.0.0.0 personalsafety-pa.googleapis.com
+#
+# - {Anti new Google Play frontend}
+# * Sometime you can still use "Play store" app even this hosts was blocked, however, some time maybe not if you've reset GApps
+#   core apps data often. (Play services [gms], Play store [vending], Service framework [gsf])
+0.0.0.0 play-fe.googleapis.com
 #
 # - {Anti-recommender}
 0.0.0.0 recommender.clients4.google.com

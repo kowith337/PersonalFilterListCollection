@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
 ! Title: Google AdService and ID.Google tracking hosts (for Adblock Plus or AdGuard)
-! Version: 202107282233
+! Version: 202107301959
 ! Author: kowith337
 ! Expires: 2 days
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -458,9 +458,9 @@
 ||id.google.uz^
 ||id.google.vg^
 ||id.google.vu^
-||id.google.ws
+||id.google.ws^
 ! ID.L (DNS Name, More info at https://github.com/StevenBlack/hosts/issues/890#issuecomment-455806408)  - - - - - - - - - - - - !
-||id.l.google.com
+||id.l.google.com^
 ! Extra by request of #63 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||doubleclick.net^
 ||google-analytics.com^

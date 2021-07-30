@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202107201924
+# Version: 202107301958
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -300,7 +300,6 @@ googletag*.*
 http*-pa.googleapis.com
 id.google.*
 pagead-*.l.google.com
-play-*.googleapis.com
 recommender.*.google.com
 redirector.gvt*.com
 safeframe.*
@@ -481,6 +480,11 @@ voledevice-pa.googleapis.com
 # * I will uncomment for my own usage because It doesn't mean to trade-off by using their space to upload and give their
 #   permissions to use them, such as AI study samples!
 #photosdata-pa.googleapis.com
+
+# New Google Play frontend domain
+# * Sometime you can still use "Play store" app even this hosts was blocked, however, some time maybe not if you've reset GApps
+#   core apps data often (Play services [gms], Play store [vending], Service framework [gsf]), just commented for avoid problems.
+#play-fe.googleapis.com
 
 # Google calendar reminder (Because I use another calendar client and combo, e.g. Etar + ICSx5)
 # * Commented in case is somebody still stuck to that!
