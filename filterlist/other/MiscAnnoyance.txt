@@ -1,6 +1,6 @@
 [uBlock Origin 1.37.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202107282233
+! Version: 202107311855
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -20,6 +20,7 @@ chocolatey.org###cookieNoticeAlert
 chocolatey.org###package-disclaimer.modal
 chocolatey.org##.btn-announcement-notifications
 chocolatey.org##.collapsing-sidebar
+chocolatey.org##.container-fluid .row .d-none.border-start
 chocolatey.org##.modal-backdrop
 
 ! [GamingDose]
@@ -35,6 +36,7 @@ github.com##div[class^="signup-prompt"]
 ! - No reason to manually update location with precious method! (resolve location from network connection isn't enough, huh?)
 google.*###fbar #swml a#swml-upd
 google.*###fbar #swml a[data-ved]
+google.*##.fbar update-location
 !
 ! - Remove "Related question" / "Related search" / "People also search for"
 google.*###extrares #botstuff div[data-ved] div[data-hveid]
@@ -257,6 +259,14 @@ wallgif.com##content div[id^=block_modal]
 
 ! Special procedurual - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: require uB0 version 1.26.0 or above
+! [Chocolatey]
+! - Force expand package width to screen size, no more VOD, streaming, seminar promos!
+chocolatey.org##.container-fluid .row div[class^="user-"]:upward(1):style(width: 100% !important)
+!
+! - Permanent remove sidebar and bottom bar float cookie notice!
+chocolatey.org##.container-fluid .row .d-none.border-start:remove()
+chocolatey.org###cookieNoticeAlert:remove()
+
 ! [Google]
 ! - Cannot remember about this, but related to "Related search" mini zuckestion box
 google.*###search #rso .rc[data-hveid][data-ved] div[id^="eob_"][jscontroller]:remove()
@@ -264,6 +274,9 @@ google.*##.islrc div[data-id][data-rfg]:remove()
 !
 ! - Enforce removing consent modal
 google.*##div[class][aria-modal]:has(div[class] > a[class][href*="policies.google."]):remove()
+!
+! - Permanent remove new "Update location" link!
+google.*##.fbar update-location:remove()
 !
 ! - The new way to inject "People also search for" annoyance
 google.*##.g div[id^="eob_"]:remove()
