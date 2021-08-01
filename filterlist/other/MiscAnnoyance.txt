@@ -1,6 +1,6 @@
 [uBlock Origin 1.37.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202107311855
+! Version: 202108011842
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -98,17 +98,15 @@ twitter.com##main[role] div[class] > div[class][data-testid="sidebarColumn"] div
 ! - Analytics Popup
 twitter.com##.ep-Campaign .ep-Signup
 !
-! - Right side pane (Who to follow)
+! - Right side pane (Who to follow / Sign up)
 twitter.com##aside[aria-label="Who to follow"]
-!
-! - Right side pane (Sign up prompt)
 twitter.com##section[aria-label="Sign up"]
 !
 ! - Remove non-consumer things that not neccessary, such as create ads, tweet performance (analytics), etc.
 twitter.com##div[role="menu"] div[class] > a[href*="ads.twitter.com"]
 twitter.com##div[role="menu"] div[class] > a[href*="analytics.twitter.com"]
 
-! [Twitter Old] (Deprecated, only appera when you're not logged in.)
+! [Twitter Old] (Deprecated, only appear when you're not logged in.)
 twitter.com###signin-dropdown
 twitter.com##.stream li.WtfLargeCarouselStreamItem
 twitter.com##.Grid .AdaptiveRelatedSearches
