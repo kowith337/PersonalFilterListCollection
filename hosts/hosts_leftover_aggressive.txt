@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202107301958
+# Version: 202108021303
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -79,6 +79,9 @@
 0.0.0.0 firebaseinstallations.googleapis.com
 0.0.0.0 firebaseremoteconfig.googleapis.com
 #
+# - {Anti-Geller}
+0.0.0.0 geller-pa.googleapis.com
+#
 # - {Anti-network-based location lookup?}
 0.0.0.0 geomobileservices-pa.googleapis.com
 #
@@ -93,6 +96,9 @@
 #   > Make sure you've disable "App Preview Messages" first before load this hosts file, otherwise, you cannot change state of
 #     that feature.
 0.0.0.0 instantmessaging-pa.googleapis.com
+#
+# - {Anti-LAMS, but no more info yet}
+0.0.0.0 lamssettings-pa.googleapis.com
 #
 # - {Anti-Lens}
 0.0.0.0 lens-pa.googleapis.com
@@ -128,16 +134,27 @@
 0.0.0.0 recommender.clients6.google.com
 0.0.0.0 recommender.googleapis.com
 #
-# - {Anti-Redirector}
+# - {Anti-Redirector} 
 #   > GPlay store and YouTube trying to connect this while ads are loading into your face!
 #   > However, it's also break some(one) users who buy or rent, then download and watch movies from Google Play.
 #   > Revert back to generic leftover because of failing to provide proper reason of "neccessary" and "matter" to allow them!
 #
+# - {Anti-Region info retrieving}
+0.0.0.0 regioinfo-pa.googleapis.com
+#
 # - {Anti-Google WebRTC STUN}
 0.0.0.0 stun.l.google.com
+0.0.0.0 stun1.l.google.com
+0.0.0.0 stun2.l.google.com
+0.0.0.0 stun3.l.google.com
+0.0.0.0 stun4.l.google.com
+0.0.0.0 stun5.l.google.com
 #
 # - {Anti-hotword suggestions that use GoogleAPIs endpoint}
 0.0.0.0 suggestqueries.googleapis.com
+#
+# - {Don't know this, but blocked by pDNSF}
+0.0.0.0 ulp1p-pa.googleapis.com
 #
 # - {YouTube video ads stats?}
 #   > Use NewPipe, SkyTube and/or Invidious instead, damnit!
@@ -197,12 +214,14 @@
 0.0.0.0 lm.messenger.com
 #
 # - {API/Graph domains, include alternate}
-#   > Useful if you intent to not use any official "Facebook" apps and keep using on web browsers, include WebView wrapper apps.
-#   > Note that "Facebook" is now loves to ban wrapper apps and limit possibility chance of login, even some apps doesn't
-#     distributed on "Play store", using those kind of apps nowadays may leads to risk of accounts ban because they falsely claim
-#     that your account are in risk of phishing, in fact, they want anybody who use its service to see ads and keep track all of
-#     your activities by them while using their official apps and any apps that have its SDK, any websites that inserted their
-#     plugins (e.g. comments, like/follow, messenger chat, videos, tracking pixel, etc.) also make it count!
+#   > Useful if you intent to not use any official `Facebook` apps and keep using on web browsers, include WebView wrapper apps.
+#   > Note that `Facebook` is now loves to ban non-official apps and limit possibility chance of login, even alternate instagram 
+#     client named "Barinsta" that currently got bullied by lawsuit teams from `Facebook`, back to `Facebook` wrapper apps topic,
+#     some wrapper apps doesn't distributed on `Play store` but on other places such as `F-Droid`, using those kind of apps
+#     nowadays may leads to risk of accounts ban because they falsely claim that your account are in risk of phishing, in fact,
+#     they want anybody who use its service to see ads and keep track all of your activities by them while using their official
+#     apps and any apps that have its SDK, any websites that inserted their plugins, e.g. comments, like/follow, messenger chat,
+#     videos, tracking pixel, etc. also make it count!
 0.0.0.0 a-api.facebook.com
 0.0.0.0 a-graph.facebook.com
 0.0.0.0 b-api.facebook.com
@@ -210,21 +229,23 @@
 0.0.0.0 graph.facebook.com
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Firefox Betrayals]
-# - {Anti-Pocket}
+# - {Anti-Pocket} Counter #60
 #   > Misleading to add "Chrome Android-alike" NTP (breaking) news feed feature, this thing make it's browser "lost their trust"
 #     about "privacy"!
 #   > This make "Firefox" worse than "Chrome" because they implement this feature in both Desktop and Mobile!!
 #   > Moved to generic leftover because "WEB BROWSER" IS AIN'T "NEWS READER" / "MAGAZINE" / "TABLOID" / ...!!!
 #     * Unless you directly and/or manually read them on those websites or subscribe through RSS Feed and read them as your want!
 #     ** Any preloaded/recommended/zuckested contents esp. if it based on country, region and user's activities ARE NOT WELCOME!!
-#     *** IF SOMEBODY USE ITS FEATURE, JUST STOP USING MY LEFTOVER LIST IS THE BEST AND LAST CHOICE THAT I CAN PREFER!!! ***
+#     *** IF SOMEBODY USE ITS FEATURES, JUST STOP USING MY LEFTOVER LIST IS THE BEST AND LAST CHOICE THAT I CAN PREFER, PERIOD!!!
 #
 # - {Browser Activation}
 #
 # - {Captive Portal}
 0.0.0.0 detectportal.firefox.com
-0.0.0.0 detectportal.prod.mozaws.net
 0.0.0.0 detectportal.firefox.com-v2.edgesuite.net
+0.0.0.0 detectportal.palemoon.org
+0.0.0.0 detectportal.prod.mozaws.net
+0.0.0.0 detectportal.waterfox.net
 #
 # - {Experiment}
 #

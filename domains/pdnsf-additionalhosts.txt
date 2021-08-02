@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202107301958
+# Version: 202108021257
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -48,7 +48,28 @@ top
 vip
 win
 
-# [Wildcard]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# [Wildcard with a little plain mixed]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Gambling, scamming, shady mobile ads promo and supscription services that have some repetitve patterns!
+*88*.tk
+*horo.space
+38th*.*
+account-th.*
+datapremium.*
+downloadwap.*
+notice-*.*
+notification-*.*
+protection-*.*
+scr888*.*
+secure-guard.*
+secure-mobile.*
+ss*.mobilelife.co.th
+th-help.*
+th-info.*
+tons*.com
+vpn*plus*.*
+vpn*plus.*
+ww*.mobilelife.co.th
+
 # "Retard Logic" use the random subdomains of any website who use that things to make sure all ads are survived blocking!
 # Did any site owners who use that service noticed it's had impact to their client-side and/or web server performance?
 # Or it really doesn't cost much any harm at all!?
@@ -62,92 +83,6 @@ g06.*
 g07.*
 g08.*
 g09.*
-
-# Use CSP as abusive way, anyone who use that in their server are said and pretend that use for capture problems, however, using
-# this ability may also send some sensitive information that enough for fingerprinting, such as User Agent, OS, CPU, Memory, etc.
-# even "CrapFlare" also use this!
-csp.withgoogle.com
-report-to.*
-report-uri.*
-
-# Gambling, scamming and shady mobile supscription services that have some repetitve patterns
-account-th.*
-th-help.*
-th-info.*
-*88*.tk
-*horo.space
-38th*.*
-datapremium.*
-downloadwap.*
-scr888*.*
-ss*.mobilelife.co.th
-tons*.com
-ww*.mobilelife.co.th
-
-# Other unwanted
-adasiatagmanager.*
-adjust.*
-alert-*.*
-amp.*
-beacon*.*
-beacon.*
-byteark-analytics.*
-criteo.*
-gak.*
-geniee*.*
-innity.*
-mtburn.*
-notice-*.*
-notification-*.*
-nr-data.*
-nuffnang.*
-openx.*
-parkingcrew.*
-popclck.*
-protection-*.*
-secure-guard.*
-secure-mobile.*
-sentry-*.*
-sentry.*
-sentryio.*
-truehits.*
-vpn*plus*.*
-vpn*plus.*
-yengo.*
-
-# [Generic Reason]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# Abusive DNS Cloaking (Don't forget to set 'checkCNAME = true' in 'DNSFilter.conf')
-# Credits: https://github.com/nextdns/cname-cloaking-blocklist/raw/master/domains
-2o7.net
-a8.net
-actonservice.com
-actonsoftware.com
-affex.org
-at-o.net
-ati-host.net
-bp01.net
-#cloudapp.net #{M$ use subserver from this domain to serving EdgeChromium setup and update files, finding other solutions.}
-data.adobedc.net
-dnsdelegation.io
-ebis.ne.jp
-eloqua.com
-eulerian.net
-ghochv3eng.trafficmanager.net
-inscname.net
-intent.com
-intentmedia.net
-keyade.com
-oghub.io
-omtrdc.net
-pardot.com
-sc.adobedc.net
-shrfbdg004.com
-storetail.io
-tagcommander.com
-#trafficmanager.net #{Conflict with some known companies CDN and brake M$ authen app that you cannot recieve login notifications}
-webtrekk.net
-wizaly.com
-wt-eu02.net
 
 # LeadForenSucks! (I found from "Chocolatey" website that use `make6pain` domain and lead me to reddit thread @/r/pihole)
 # * I won't give reddit short links due to new reddit and/or browsing with mobile browser is sucks because they want to force you
@@ -170,20 +105,12 @@ secure.*9*.com
 snta0034.com
 tm1-001.com
 
-# For honor of Huawei phone users! (Include Honor {Huawei sub-brand} and some Xiaomi, RealMe, too!)
-# Problematic due to shady advertisement in their OS ROM that load low quality wallpapers and apply without user intent!
-# Thai article (translated from original article below): https://www.blognone.com/node/110342
-# AndroidPolice: https://www.androidpolice.com/2019/06/13/huawei-apparently-decides-it-needs-more-bad-press-puts-ads-on-phone-lock-screens
-booking.com
-bstatic.com
-
-# Block "ScreenCam" app owner's domain due to his own analytics inside that app until he really fix it's own problem!
-# See also: https://gitlab.com/fdroid/fdroiddata/issues/1745#note_206628341
-# App owner's rant message: https://gitlab.com/vijai/screenrecorder/issues/72#note_180783854
-orpheusdroid.com
-
-# Prohibit zuckestions to use 3p domains for downloading official (with lots of ads and tracking codes and/or SDKs) apps!
-app.link
+# Use CSP as abusive way, anyone who use that in their server are said and pretend that use for capture problems, however, using
+# this ability may also send some sensitive information that enough for fingerprinting, such as User Agent, OS, CPU, Memory, etc.
+# even `CrapFlare` also use this!
+csp.withgoogle.com
+report-to.*
+report-uri.*
 
 # Bad promoters!
 # - If they want more customers, they shouldn't promote them through suspicious way!
@@ -195,9 +122,71 @@ nordvpn.*
 snowpole.*.gitlab.*
 trx.gitlab.*
 
-# Less privacy instance block, they've use the "Crapflare" for issuer and hosting, so it's not recommended to use on that hosts!
+# Other unwanted
+adasiatagmanager.*
+adjust.*
+adsby*.*
+alert-*.*
+amp.*
+beacon*.*
+beacon.*
+byteark-analytics.*
+criteo.*
+gak.*
+geniee*.*
+innity.*
+mtburn.*
+nr-data.*
+nuffnang.*
+openx.*
+parkingcrew.*
+popclck.*
+sentry-*.*
+sentry.*
+sentryio.*
+truehits.*
+yengo.*
+
+# [Generic reason for domain-wide]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Abusive DNS Cloaking (Don't forget to set 'checkCNAME = true' in 'DNSFilter.conf')
+# Credits: https://github.com/nextdns/cname-cloaking-blocklist/raw/master/domains
+2o7.net
+a8.net
+actonservice.com
+actonsoftware.com
+affex.org
+at-o.net
+ati-host.net
+bp01.net
+#cloudapp.net #{M$ use subserver from this domain to serving EdgeChromium setup and update files, finding other solutions.}
+data.adobedc.net
+data.adobedc.net
+dnsdelegation.io
+ebis.ne.jp
+eloqua.com
+eulerian.net
+ghochv3eng.trafficmanager.net
+inscname.net
+intent.com
+intentmedia.net
+keyade.com
+oghub.io
+omtrdc.net
+pardot.com
+sc.adobedc.net
+sc.adobedc.net
+shrfbdg004.com
+storetail.io
+tagcommander.com
+#trafficmanager.net #{Conflict with some known companies CDN and brake M$ authen app that you cannot recieve login notifications}
+webtrekk.net
+wizaly.com
+wt-eu02.net
+
+# Less privacy instance block!
+# they've use the `CrapFlare` for issuer and hosting, so it's not recommended to use on that hosts!
 # Esp, in case if you use over Tor, all of crapflare-backed servers will not allow any Tor traffic to view their sites!
-#   * "GGC Project" maybe somewhat acceptable because of not use the "Crapflare" certificates and use "Let's encrypt" instead.
+#   * "GGC Project" maybe somewhat acceptable because of not use the `CrapFlare` certificates and use "Let's encrypt" instead.
 actionsack.com
 dark.fail
 database.red
@@ -208,10 +197,38 @@ moomoo.me
 nitter.hu
 twitr.gq
 
+# Prohibit to use 3p domains for promoting to download official (with lots of ads and tracking codes and/or SDKs) apps!
+app.link
+
+# For honor of `Huawei` phone users! (Include `Honor` {Huawei sub-brand} and some `Xiaomi`, `RealMe`, too!)
+# Problematic due to shady advertisement in their OS ROM that load low quality wallpapers and apply without user intent!
+# Thai article (translated from original article below): https://www.blognone.com/node/110342
+# AndroidPolice: https://www.androidpolice.com/2019/06/13/huawei-apparently-decides-it-needs-more-bad-press-puts-ads-on-phone-lock-screens
+booking.com
+bstatic.com
+
+# Hola Block
+# See also: https://github.com/lightswitch05/hosts/issues/129
+hola.org
+l-agent.me
+lum-sdk.io
+luminati-china.io
+luminati.io
+luminatinet.com
+lumtest.com
+
+# Block `ScreenCam` app owner's domain due to his own analytics inside that app until he really fix it's own problem!
+# See also: https://gitlab.com/fdroid/fdroiddata/issues/1745#note_206628341
+# App owner's rant message: https://gitlab.com/vijai/screenrecorder/issues/72#note_180783854
+orpheusdroid.com
+
+# Other unwanted
+footprint.net
+
 # [Wound ashes fox] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# Sorry for anyone who use "CrapFlare" DNS resolvers, but it's just my opinion to block due to Firefox's wrong turn!
-# Note that out-of-box config of Firefox use "TRR" resolvers (aka. DoH) from "CrapFlare" by default!
-# Currently applying now with include "NextDNS" as a fellow alternative choice, but they still prfer "CrapFlare" by default!
+# Sorry for anyone who use `CrapFlare` DNS resolvers, but it's just my opinion to block due to Firefox's wrong turn!
+# Note that out-of-box config of Firefox use "TRR" resolvers (aka. DoH) from `CrapFlare` by default!
+# Currently applying now with include "NextDNS" as a fellow alternative choice, but they still prfer `CrapFlare` by default!
 # - I've also see Chromium-based use its DoH servers, such as `chrome.`, `opera.` and vise versa, so this will be block all of
 #   any subdomains under that, even `family`, `malware` and `security` servers!
 cloudflare-dns.com
@@ -261,16 +278,6 @@ telemetry.*.mozilla.*
 telemetry.mozilla.*
 tiles.*.mozilla*
 # I won't unblock `GetPocket` until they've stop shipping news feed snippets features globally, no matter about OS and platforms!
-
-# [Hola Block]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# See also: https://github.com/lightswitch05/hosts/issues/129
-hola.org
-l-agent.me
-lum-sdk.io
-luminati-china.io
-luminati.io
-luminatinet.com
-lumtest.com
 
 # [Big Brother - Non-Google fanboy] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Wildcard section!
@@ -364,6 +371,9 @@ gstaticadssl.l.google.com
 id.l.google.com
 mail-ads.google.com
 stun.l.google.com
+stun1.l.google.com
+stun2.l.google.com
+stun3.l.google.com
 video-stats.l.google.com
 
 # PA-ranoid API connections
@@ -378,6 +388,7 @@ digitalassetlinks.googleapis.com
 discover-pa.googleapis.com
 exploresites-pa.googleapis.com
 footprints-pa.googleapis.com
+geller-pa.googleapis.com
 geomobileservices-pa.googleapis.com
 gmbmobile-pa.googleapis.com
 growth-pa.googleapis.com
@@ -392,7 +403,9 @@ offlinepages-pa.googleapis.com
 playatoms-pa.googleapis.com
 plusmixer-pa.googleapis.com
 recommender.googleapis.com
+regioinfo-pa.googleapis.com
 sticker-pa.googleapis.com
+ulp1p-pa.googleapis.com
 
 # Blocking connection check mean "Google Play" cannot trigger app updates and/or downloads unless you've once allow it!
 # However, it's may prevent some unexpected behaviour, such as update disabled system apps without intent, e.g.
@@ -442,6 +455,7 @@ dialercallinfolookup-pa.googleapis.com
 dns.google
 dns.google.com
 metric.gstatic.com
+metrics.google.com
 
 # Google Play subscriptions
 # - Needed to manage Google Play subscriptions that related to payments (game pass, app features unlock, remove ads in app, ...)
