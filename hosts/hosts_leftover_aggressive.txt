@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202108021303
+# Version: 202108051113
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -140,7 +140,7 @@
 #   > Revert back to generic leftover because of failing to provide proper reason of "neccessary" and "matter" to allow them!
 #
 # - {Anti-Region info retrieving}
-0.0.0.0 regioinfo-pa.googleapis.com
+0.0.0.0 regioninfo-pa.googleapis.com
 #
 # - {Anti-Google WebRTC STUN}
 0.0.0.0 stun.l.google.com
