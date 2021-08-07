@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202104282108
+! Version: 202108071635
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -284,36 +284,34 @@
 ||play.google.com/*?referrer=$document,important,domain=~GPlayTracking_Referrer
 ||play.google.com/*?referrer=$subdocument,xmlhttprequest
 ||steamcommunity.com/*&ser=$document,important,domain=~SteamTracking_EMailReferrer
-||steamcommunity.com/*&ser=$subdocument,xmlhttprequest
 ||steamcommunity.com/*&snr=$document,important,domain=~SteamTracking_NavigationReferrer
-||steamcommunity.com/*&snr=$subdocument,xmlhttprequest
 ||steamcommunity.com/*?ser=$document,important,domain=~SteamTracking_EMailReferrer
-||steamcommunity.com/*?ser=$subdocument,xmlhttprequest
 ||steamcommunity.com/*?snr=$document,important,domain=~SteamTracking_NavigationReferrer
-||steamcommunity.com/*?snr=$subdocument,xmlhttprequest
 ||steampowered.com/*&ser=$document,important,domain=~SteamTracking_EMailReferrer
-||steampowered.com/*&ser=$subdocument,xmlhttprequest
 ||steampowered.com/*&snr=$document,important,domain=~SteamTracking_NavigationReferrer
-||steampowered.com/*&snr=$subdocument,xmlhttprequest
 ||steampowered.com/*?ser=$document,important,domain=~SteamTracking_EMailReferrer
-||steampowered.com/*?ser=$subdocument,xmlhttprequest
 ||steampowered.com/*?snr=$document,important,domain=~SteamTracking_NavigationReferrer
-||steampowered.com/*?snr=$subdocument,xmlhttprequest
 
 ! Soft problematic!
 !   You cannot perform certain actions while using its website, so I've decided to add query prune rules for addition, but please
 !   note that `queryprune` will clean only first detected parameter (race condition), it cannot clear multiple parameters in each
 !   requests, probably some information still slipped through other parameters that cannot removed at that time.
-||*&fb_dtsg=$first-party,subdocument,xmlhttprequest,queryprune=fb_dtsg,domain=facebook.com|messenger.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com
+||*$document,subdocument,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^__(c(cr|ft)?|rv|so|tn|xts?)__$/
+||*$document,subdocument,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^c\[\d+?\]$/
+||*$document,subdocument,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^__m_(async_page|log_async)__$/
+||*&fb_dtsg=$first-party,subdocument,xmlhttprequest,removeparam=fb_dtsg,domain=facebook.com|messenger.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com
 ||*&fb_dtsg_*=$first-party,subdocument,xmlhttprequest,removeparam=/^fb_dtsg_/,domain=facebook.com|messenger.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com
 ||*&privacy_*=$subdocument,xmlhttprequest,removeparam=/^privacy_/,domain=facebook.com|messenger.com
-||*?fb_dtsg=$first-party,subdocument,xmlhttprequest,queryprune=fb_dtsg,domain=facebook.com|messenger.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com
+||*&ser=$subdocument,xmlhttprequest,domain=steamcommunity.com|steampowered.com,removeparam=ser
+||*&snr=$subdocument,xmlhttprequest,domain=steamcommunity.com|steampowered.com,removeparam=snr
+||*?fb_dtsg=$first-party,subdocument,xmlhttprequest,removeparam=fb_dtsg,domain=facebook.com|messenger.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com
 ||*?fb_dtsg_*=$first-party,subdocument,xmlhttprequest,removeparam=/^fb_dtsg_/,domain=facebook.com|messenger.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com
 ||*?privacy_*=$subdocument,xmlhttprequest,removeparam=/^privacy_/,domain=facebook.com|messenger.com
-||*$document,subdocument,xmlhttprequest,domain=facebook.com|messenger.com,removeparam=/^__(c|ccr|cft|rv|so|tn|xt|xts)__$/
-||*$document,subdocument,xmlhttprequest,domain=facebook.com|messenger.com,removeparam=/^__m_(async_page|log_async)__$/
+||*?ser=$subdocument,xmlhttprequest,domain=steamcommunity.com|steampowered.com,removeparam=ser
+||*?snr=$subdocument,xmlhttprequest,domain=steamcommunity.com|steampowered.com,removeparam=snr
 ||github.com/*&notification*=$first-party,removeparam=/^notification/
 ||github.com/*?notification*=$first-party,removeparam=/^notification/
+
 
 ! Known breaking, at your own risk!
 ! [CloudFlare DDoS JS Challenge]
