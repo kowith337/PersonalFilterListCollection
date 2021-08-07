@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Anti Impressions DLC
-! Version: 202107102025
+! Version: 202108061454
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -43,8 +43,9 @@
 ! - Note that it will only affect to `SteamPowered` domain only, it may not respect settings when you're at `SteamCommunity`
 ! - The UTM cookie will not set to reject even you've press the "Reject all" button, please scroll to the bottom page to set it!
 ! - Ensure that you only navigate to the game browsing lists or proper specific games that you want to buy or save each game page
-! that you've planned to checkout and then put into the cart one by one until you've got all of games that you really want to...
+!   that you've planned to checkout and then put into the cart one by one until you've got all of games that you really want to.
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+steampowered.com##+js(no-setTimeout-if, CheckVisibilityInternal)
 steampowered.com##+js(remove-attr, app_impression_tracked)
 steampowered.com##+js(remove-attr, data-ds-appid)
 steampowered.com##+js(remove-class, app_impression_tracked)

@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202108021257
+# Version: 202108051113
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -403,7 +403,7 @@ offlinepages-pa.googleapis.com
 playatoms-pa.googleapis.com
 plusmixer-pa.googleapis.com
 recommender.googleapis.com
-regioinfo-pa.googleapis.com
+regioninfo-pa.googleapis.com
 sticker-pa.googleapis.com
 ulp1p-pa.googleapis.com
 
