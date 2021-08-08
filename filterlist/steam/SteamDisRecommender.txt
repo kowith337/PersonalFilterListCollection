@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202108061508
+! Version: 202108081455
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -42,6 +42,7 @@ steampowered.com#?#.home_ctn.discovery_queue_ctn
 !
 ! - Remove "Live Stream" pane in home page
 steampowered.com#?#.home_ctn.live_streams_ctn
+steampowered.com#?##live_streams_carousel
 !
 ! - Remove "Recommended by Steam Labs" pane
 steampowered.com#?#.home_ctn.recommended_by_steam_labs_ctn
@@ -54,8 +55,10 @@ steampowered.com#?#.search_labs_banner
 steampowered.com#?#.cart_rightcol
 !
 ! - Now you've already logged in, what then?
+steampowered.com#?#.home_content_ctn #content_loading
 steampowered.com#?#.home_content_ctn #content_more
-steampowered.com#?#.home_content_ctn #content_out.dark
+steampowered.com#?#.home_content_ctn #content_none
+steampowered.com#?#.home_content_ctn #content_out
 !
 ! - Remove a pane that zuckested by "Because you've played <GameName>"
 steampowered.com#?##sale_category_blocks:has(a.see_more_link[href*="/recommender"])
@@ -76,6 +79,12 @@ steampowered.com#?#.home_page_body_ctn .fullscreen-bg
 steampowered.com#?#.home_page_body_ctn .static_takeover_ctn div[class^="page_background_holder"]
 steampowered.com#?#.home_page_body_ctn .store_bg_overlay
 steampowered.com#?#.home_page_body_ctn div[class^="home_page_takeover"]
+!
+! - Remove deals promo that appear while browsing games through category hub
+steampowered.com#?#.contenthub_dailydeal_container
+steampowered.com#?#.contenthub_featured_item_spotlight
+steampowered.com#?#.contenthub_specials_ctn .contenthub_specials_grid
+steampowered.com#?#.contenthub_spotlight_container
 !
 ! - Sometime you're embarassing to see how many games and times spent on the related games that you're currently looking and/or
 !   trying to buy, I've hide those game banners and also playtime, leave only a checkmark that you will noticed you have related
@@ -140,8 +149,16 @@ steampowered.com#?#.review_box .vote_button_ctn a span:has(i.funny)
 steamcommunity.com#?#.badge_title_stats .badge_title_playgame:remove()
 steamcommunity.com#?#.badge_title_stats .badge_title_stats_playtime:remove()
 steamcommunity.com#?#.badge_title_stats .how_to_get_card_drops_ctn:remove()
+steampowered.com#?##live_streams_carousel:remove()
 steampowered.com#?##promo_header_banner[class*="promotionDetailsBar"]:remove()
 steampowered.com#?#.cart_rightcol:remove()
+steampowered.com#?#.contenthub_dailydeal_container:remove()
+steampowered.com#?#.contenthub_featured_item_spotlight:remove()
+steampowered.com#?#.contenthub_specials_ctn .contenthub_specials_grid:remove()
+steampowered.com#?#.contenthub_spotlight_container:remove()
+steampowered.com#?#.home_content_ctn #content_more:remove()
+steampowered.com#?#.home_content_ctn #content_none:remove()
+steampowered.com#?#.home_content_ctn #content_out:remove()
 steampowered.com#?#.home_ctn.labs_cluster:remove()
 steampowered.com#?#.home_ctn.marketingmessage_area:remove()
 steampowered.com#?#.newmodal_background:remove()
@@ -168,14 +185,17 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .col
 steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .platform_img:style(opacity: 0.5 !important)
 
 ! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! - Prevent using of "Broadcast" functions in store site!
-!   * Note: The main use of blocking broadcast is prevent partners/developers/creators annoyance from that function that distract
-!           your away before buying, include keep showing mini-popup video streams while scrolling down, however, viewing live
-!           broadcasts at `SteamCommunity` still possible!
+! - Prevent using of "Broadcast" and "Event" functions in store site!
+!   * Note: The main use of blocking broadcast and events is prevent partners/developers/creators annoyance from that function
+!           that distract your away before buying or viewing game details, include keep showing mini-popup video streams while
+!           scrolling down, hints that this game have deals and/or sales ongoing, etc. however, viewing live broadcasts on the
+!           community hub and/or embedded externally still possible!
 ||steampowered.com/broadcast/$1p,important
-||steamstatic.com/public/javascript/applications/store/broadcast$important,domain=~steamcommunity.com
+||steamstatic.com/public/*/applications/store/*~eventcomponents$domain=steampowered.com,important
+||steamstatic.com/public/*/applications/store/broadcast$domain=steampowered.com,important
+||steamstatic.com/public/*/applications/store/eventcomponents$domain=steampowered.com,important
 !
-! - Prevent steam reporting browser error if this filterlist was breaking something...
+! - Prevent steam reporting client-side error if this filterlist was breaking something...
 ||steampowered.com/IClientMetricsService/ReportClientError$important,~xmlhttprequest
 ||steampowered.com/IClientMetricsService/ReportClientError$important,xmlhttprequest,redirect=nooptext
 !
@@ -225,6 +245,7 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 !   by reading and/or storing more values of `app_impressions` cookie between navigations!
 ! - Even you've set to reject their cookies, however, it's seems like `Steam` doesn't respect user settings that we don't want
 !   its cookies, if you possible to subscribe "Anti-impression DLC" list, consider to use it after reject their cookies!
+!   * Proof: https://birdsite.xanny.family/pic/media/E8QDgaYVkAYcPxq.jpg?name=orig
 steamcommunity.com,steampowered.com##+js(cookie-remover, _gid)
 steamcommunity.com,steampowered.com##+js(cookie-remover, app_impressions)
 steamcommunity.com,steampowered.com##+js(cookie-remover, browserid)

@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Anti Impressions DLC
-! Version: 202108061454
+! Version: 202108081454
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -33,11 +33,7 @@
 !
 ! Best advice:
 ! - If you subscribe both of my Steam lists separately, please temporary unsubscribe this (anti-impression) filterlist first
-!   before log in.
-! - Or else if you don't want to break website by my list, please login with redirect to Cookie settings or go to cookie settings
-!   page early, then press the "reject all" button, once you've rejected all cookie, all of nasty cookies are probably never
-!   build up.
-!   * I cannot confirm if some functional cookies may keep tracking you or not
+!   before log in, once you've done, you can re-enable this list again.
 !   - Cookie settings page: https://store.steampowered.com/account/cookiepreferences
 !   - Login link with redirect to cookie settings: https://store.steampowered.com/login?redir=account%2Fcookiepreferences%2F&redir_ssl=1
 ! - Note that it will only affect to `SteamPowered` domain only, it may not respect settings when you're at `SteamCommunity`
@@ -45,6 +41,7 @@
 ! - Ensure that you only navigate to the game browsing lists or proper specific games that you want to buy or save each game page
 !   that you've planned to checkout and then put into the cart one by one until you've got all of games that you really want to.
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Scriplet injector rules]
 steampowered.com##+js(no-setTimeout-if, CheckVisibilityInternal)
 steampowered.com##+js(remove-attr, app_impression_tracked)
 steampowered.com##+js(remove-attr, data-ds-appid)
@@ -52,4 +49,23 @@ steampowered.com##+js(remove-class, app_impression_tracked)
 steampowered.com##+js(remove-class, data-ds-appid)
 steampowered.com##+js(set, CAppearMonitor, noopFunc)
 steampowered.com##+js(set, elTarget, null)
+
+! [Fix and hide broken carousel pane]
+! Those elements already broken by scriptlet rules above since their carousel items require to load JavaScript functions that
+! bind with functions to track users (by `snr` and observe visibility of game titles then written in `app_impressions` cookie),
+! but instead of completely hide them, I will remove all of carousel panes and leave only some header text and buttons and
+! allow you to manually navigate to specific category directly.
+!
+! - Homepage
+steampowered.com#?#.home_ctn .carousel_container .arrow
+steampowered.com#?#.home_ctn .carousel_container .carousel_items
+steampowered.com#?#.home_ctn .carousel_container .carousel_thumbs
+steampowered.com#?#.tab_container .home_rightcol
+!
+! - Category Hub
+steampowered.com#?#.page_contenthub_content #genre_large_cluster
+
+! [CSS Override]
+! - Right pane preview are broken by same reasons above, expand the game list to cover against removed pane instead.
+steampowered.com#?#.tab_container .home_leftcol:style(width: 100% !important)
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
