@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202108051113
+# Version: 202108131730
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -135,6 +135,7 @@ criteo.*
 gak.*
 geniee*.*
 innity.*
+matomo.*
 mtburn.*
 nr-data.*
 nuffnang.*

@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.0]
 # Title: Custom leftover hosts
-# Version: 202108011839
+# Version: 202108131730
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -362,13 +362,6 @@
 0.0.0.0 adasiatagmanager.appspot.com
 0.0.0.0 adnetwork.adasiaholdings.com
 0.0.0.0 adopdmp.adop.cc
-0.0.0.0 ads-api.twitter.com
-0.0.0.0 ads.bumq.com
-0.0.0.0 ads.imprezzer.com
-0.0.0.0 ads.pantip.com
-0.0.0.0 ads.thaiware.com
-0.0.0.0 ads.vidoomy.com
-0.0.0.0 ads.yieldmo.com
 0.0.0.0 ads1-adnow.com
 0.0.0.0 ads1.bangkokpost.co.th
 0.0.0.0 ads1.matichon.co.th
@@ -396,6 +389,13 @@
 0.0.0.0 ads9-adnow.com
 0.0.0.0 ads9.bangkokpost.co.th
 0.0.0.0 ads9.matichon.co.th
+0.0.0.0 ads-api.twitter.com
+0.0.0.0 ads.bumq.com
+0.0.0.0 ads.imprezzer.com
+0.0.0.0 ads.pantip.com
+0.0.0.0 ads.thaiware.com
+0.0.0.0 ads.vidoomy.com
+0.0.0.0 ads.yieldmo.com
 0.0.0.0 adsbybumq.bumq.com
 0.0.0.0 adsense.codev.wixapps.net
 0.0.0.0 aff.bstatic.com
@@ -428,13 +428,13 @@
 0.0.0.0 bsw.digitru.st
 0.0.0.0 bugly.qq.com
 0.0.0.0 byteark-analytics.thairath.co.th
+0.0.0.0 c1.adform.net
+0.0.0.0 c2.adform.net
+0.0.0.0 c3.adform.net
 0.0.0.0 c.aaxads.com
 0.0.0.0 c.appier.net
 0.0.0.0 c.c.appier.net
 0.0.0.0 c.evidon.com
-0.0.0.0 c1.adform.net
-0.0.0.0 c2.adform.net
-0.0.0.0 c3.adform.net
 0.0.0.0 cdn-gl.imrworldwide.com
 0.0.0.0 cdn-ssl.vidible.tv
 0.0.0.0 cdn.adnuntius.com
@@ -459,10 +459,10 @@
 0.0.0.0 convammp.taboola.com
 0.0.0.0 cs.adingo.jp
 0.0.0.0 cs.gssprt.jp
-0.0.0.0 d.audiencerun.com
 0.0.0.0 d1.yengo.com
 0.0.0.0 d2.yengo.com
 0.0.0.0 d3.yengo.com
+0.0.0.0 d.audiencerun.com
 0.0.0.0 dap.fw-ad.jp
 0.0.0.0 data.adop.cc
 0.0.0.0 dev.visualwebsiteoptimizer.com
@@ -477,10 +477,10 @@
 0.0.0.0 geolocation.daznservices.com
 0.0.0.0 get.optad360.io
 0.0.0.0 glomobile-analytic.glo.or.th
-0.0.0.0 go.nordvpn.com
 0.0.0.0 go1.aniview.com
 0.0.0.0 go2.aniview.com
 0.0.0.0 go3.aniview.com
+0.0.0.0 go.nordvpn.com
 0.0.0.0 gocm.c.appier.net
 0.0.0.0 google.dap.fw-ad.jp
 0.0.0.0 googleads.github.io
@@ -518,10 +518,11 @@
 0.0.0.0 loadbalancer.visitor-analytics.io
 0.0.0.0 log-api.aillis.net
 0.0.0.0 log.popin.cc
-0.0.0.0 lvs.truehits.in.th
 0.0.0.0 lvs2.truehits.in.th
 0.0.0.0 lvs3.truehits.in.th
+0.0.0.0 lvs.truehits.in.th
 0.0.0.0 mathid.mathtag.com
+0.0.0.0 matomo.waterfox.net
 0.0.0.0 media.innity.com
 0.0.0.0 media.innity.net
 0.0.0.0 mgr.consensu.org
@@ -566,11 +567,11 @@
 0.0.0.0 rtb1-useast.e-volution.ai
 0.0.0.0 rtb2-useast.e-volution.ai
 0.0.0.0 rtb3-useast.e-volution.ai
-0.0.0.0 s.c.appier.net
-0.0.0.0 s.svtrd.com
 0.0.0.0 s1.thstats.com
 0.0.0.0 s2.thstats.com
 0.0.0.0 s3.thstats.com
+0.0.0.0 s.c.appier.net
+0.0.0.0 s.svtrd.com
 0.0.0.0 scdn.cxense.com
 0.0.0.0 sch.line.me
 0.0.0.0 search.spotxchange.com
@@ -614,9 +615,9 @@
 0.0.0.0 st.n.ads8-adnow.com
 0.0.0.0 st.n.ads9-adnow.com
 0.0.0.0 st.yengo.com
+0.0.0.0 stat1.bluepay.asia
 0.0.0.0 stat.bugaboo.tv
 0.0.0.0 stat.matichon.co.th
-0.0.0.0 stat1.bluepay.asia
 0.0.0.0 statcounter.va-endpoint.com
 0.0.0.0 static-th.plista.com
 0.0.0.0 static.addtoany.com
@@ -645,10 +646,10 @@
 0.0.0.0 thairath.api.useinsider.com
 0.0.0.0 thn.gratonrewardcenter.icu
 0.0.0.0 tm.zedo.com
-0.0.0.0 track.opticks.io
 0.0.0.0 track1.aniview.com
 0.0.0.0 track2.aniview.com
 0.0.0.0 track3.aniview.com
+0.0.0.0 track.opticks.io
 0.0.0.0 tracker.bumq.com
 0.0.0.0 tracker.dome.cloud
 0.0.0.0 tracker.stats.in.th
@@ -668,6 +669,7 @@
 0.0.0.0 wikia-d.openx.net
 0.0.0.0 wmdstat.dev-sanook.com
 0.0.0.0 ws-adv.ais.co.th
+0.0.0.0 www2.silkspan.com
 0.0.0.0 www.accesstrade.in.th
 0.0.0.0 www.adsoptimal.com
 0.0.0.0 www.cpsee.com
@@ -680,7 +682,6 @@
 0.0.0.0 www.ublock.org
 0.0.0.0 www.webana.io
 0.0.0.0 www.yengo.com
-0.0.0.0 www2.silkspan.com
 0.0.0.0 x01.aidata.io
 0.0.0.0 y.one.impact-ad.jp
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #

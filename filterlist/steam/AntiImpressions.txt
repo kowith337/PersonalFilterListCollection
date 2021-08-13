@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Anti Impressions DLC
-! Version: 202108081454
+! Version: 202108131740
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -8,14 +8,15 @@
 ! Descriptions: This is a DLC list of "Steam Dis-recommender Filters" that will not bundle into the base list, unless you want an
 !               extreme privacy to prevent junkful impression tracking cookie and not mind about breaking steam websites, neither
 !               store or community!
+!#require SteamDisRecommender.txt
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! WARNING:
 !   These function below will completely break and maybe make the site "DEAD" entirely because certain script functions are
 !   mostly relying to `appid`, but its value are came from impression tracking function plus `snr` tracking values!
-!   However, this is the only way to dealing against shady `app_impressions` cookies, so I have no other solutions than this yet!
-!   Even some users can turn off its cookie via cookie settings page, but using the function to creating and modifying cookies
-!   whenever any games appear in browser screen is disgusting and it's a proof of bad privacy of steam itself since they can use
-!   that function to observe and record user activities by default!!
+!   However, this is the only way to dealing against shady `app_impressions` cookies, even you've tell to `Steam` that you don't
+!   want all tracked cookies, it doesn't help you get rid against it, `Steam` still using the function to creating and modifying
+!   cookies whenever any games appear in browser screen, I think it's too disgusting and it's a proof of bad privacy of `Steam`
+!   itself since they can use that function to observe and record user activities by default!
 !
 ! Limitations:
 ! - I cannot prevent that cookie being created/modified if you've browse game lists from "Steam curators" with their comments
@@ -53,9 +54,8 @@ steampowered.com##+js(set, elTarget, null)
 ! [Fix and hide broken carousel pane]
 ! Those elements already broken by scriptlet rules above since their carousel items require to load JavaScript functions that
 ! bind with functions to track users (by `snr` and observe visibility of game titles then written in `app_impressions` cookie),
-! but instead of completely hide them, I will remove all of carousel panes and leave only some header text and buttons and
-! allow you to manually navigate to specific category directly.
-!
+! but instead of completely hide them, I will remove all of carousel panes and leave only some header text and buttons for
+! allowing you to manually navigate to specific category directly.
 ! - Homepage
 steampowered.com#?#.home_ctn .carousel_container .arrow
 steampowered.com#?#.home_ctn .carousel_container .carousel_items
