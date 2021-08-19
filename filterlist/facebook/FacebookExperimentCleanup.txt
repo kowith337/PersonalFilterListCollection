@@ -1,6 +1,6 @@
 [uBlock Origin 1.37.0]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202107282228
+! Version: 202108191329
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -32,7 +32,7 @@ web.facebook.com,www.facebook.com##div[data-pagelet="root"] div[data-pagelet="pa
 !   and tell (**force**) users to pressing "Allow all" button to continue browsing when you're not logged in!
 web.facebook.com,www.facebook.com##div[data-pagelet="root"] div[class] div[data-cookiebanner]
 
-! De-metric in left pane (remove blue dot and text span that count how many new contents you've not seen)
+! De-metric in left pane (remove blue dot and text span that count how many new contents you've missed or not seen)
 web.facebook.com,www.facebook.com##div[data-pagelet="LeftRail"] div[class] ul li div[data-visualcompletion] a div[class] span[dir] > :has(span[data-visualcompletion]):upward(2)
 
 ! Remove header menu that show 5 buttons above, remove hated attractive that count how many contents that you didn't see!
@@ -52,7 +52,7 @@ web.facebook.com,www.facebook.com##div[aria-label="Menu"][role="dialog"] div[dat
 web.facebook.com,www.facebook.com##div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/facebook_pay"]
 web.facebook.com,www.facebook.com##div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/fundraisers"]
 web.facebook.com,www.facebook.com##div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/jobs"]
-web.facebook.com,www.facebook.com##div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/offers"]\
+web.facebook.com,www.facebook.com##div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/offers"]
 web.facebook.com,www.facebook.com##div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/watch"]
 web.facebook.com,www.facebook.com##div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="sk=nf"]
 
