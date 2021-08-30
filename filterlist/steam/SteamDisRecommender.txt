@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202108081455
+! Version: 202108302228
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -50,7 +50,7 @@ steampowered.com#?#.home_ctn.recommended_by_steam_labs_ctn
 ! - Also remove "Labs" experiment search banner promo
 steampowered.com#?#.search_labs_banner
 !
-! - While in your cart page, do not show any deals, zuckestions and other things that distracted you away from games that you've
+! - While in your cart page, do not show any deals, zuckestions and other things that distracting you away from games that you've
 !   already put in your cart and ready to checkout at a later time!
 steampowered.com#?#.cart_rightcol
 !
@@ -88,7 +88,7 @@ steampowered.com#?#.contenthub_spotlight_container
 !
 ! - Sometime you're embarassing to see how many games and times spent on the related games that you're currently looking and/or
 !   trying to buy, I've hide those game banners and also playtime, leave only a checkmark that you will noticed you have related
-!   games of from your libraly that you're looking for, this make you not feeling shamed at it, at least.
+!   games from your libraly that you're looking for, this make you not feeling shamed at it, at least.
 steampowered.com#?#.recommendation_reasons .similar_recent_apps_container a
 
 ! [Faded community zone]
@@ -97,17 +97,22 @@ steampowered.com#?#.recommendation_reasons .similar_recent_apps_container a
 !   upgrade favourite's games and community badge (obviously, need to expose interactions on the platform!?), trading items,
 !   whatever that not touch the games we've already bought and just play them, leveling up profile for me is meaningless, even
 !   it's seems to be cool to have something special on appearance, but is it really improve somethign in real life at the end?
-! - Remove playtimes
-steamcommunity.com#?#.games_list .hours_played
 !
 ! - Hide players level indicator!
 steamcommunity.com#?#.friendPlayerLevel
+!
+! - Remove playtimes
+steamcommunity.com#?#.games_list .hours_played
+!
+! - Remove mini-indicator to reveal past in-game nickname
+steamcommunity.com#?#.persona_name #NamePopup
+steamcommunity.com#?#.persona_name .namehistory_link
 !
 ! - Hide yourself (and also all of peoples) about games that recently played.
 steamcommunity.com#?#.profile_recentgame_header
 steamcommunity.com#?#.recent_games
 !
-! - Hide all of other player frames that their not used a standard one for decorations...
+! - Hide all of other players frames that their not used a standard one for decorations...
 !   * This probably difficult to see an online indicator in user picture frame, however, you will still notice by a flat bar
 !     below profile image that still lid with colors, such as blue for online, green for playing game and vice versa.
 steamcommunity.com#?#.playersection_avatar_frame
@@ -149,6 +154,8 @@ steampowered.com#?#.review_box .vote_button_ctn a span:has(i.funny)
 steamcommunity.com#?#.badge_title_stats .badge_title_playgame:remove()
 steamcommunity.com#?#.badge_title_stats .badge_title_stats_playtime:remove()
 steamcommunity.com#?#.badge_title_stats .how_to_get_card_drops_ctn:remove()
+steamcommunity.com#?#.persona_name #NamePopup:remove()
+steamcommunity.com#?#.persona_name .namehistory_link:remove()
 steampowered.com#?##live_streams_carousel:remove()
 steampowered.com#?##promo_header_banner[class*="promotionDetailsBar"]:remove()
 steampowered.com#?#.cart_rightcol:remove()
@@ -275,7 +282,11 @@ steampowered.com##+js(addEventListener-defuser, $J, GetNavCookie)
 !     browsing as proper desktop site, while use your touchscreen control only for mouse click (tap) and page scrolling (flick).
 !   - In some case if you want to use touch mode, just resize browser window width lower than 2:5 ratio is enough!
 steamcommunity.com,steampowered.com##+js(addEventListener-defuser, touchstart)
-
+!
+!#if cap_html_filtering
+! Taking an advantage of Firefox (and any forks of) to remove inline scripts
+steamcommunity.com##^script:has-text(RecordAppImpression, snr)
+!#endif
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Ranting Zone!] ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
 ! Thanks for the SimpleWall and neither ContextMenu Firewall apps that appear in Tweaking Software or EasyContextMenu, I've also
