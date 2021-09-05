@@ -8,6 +8,5 @@
 !#if ext_ublock
 !#include steam/SteamDisRecommender.txt
 !#include steam/AntiImpressions.txt
-!#include steam/FirefoxInline.txt
 !#endif
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
