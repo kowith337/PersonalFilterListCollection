@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202108131730
+# Version: 202109081425
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -29,6 +29,7 @@ wpad
 # billing, e.g. app subscriptions, WAP charge {AOC/CPA}, etc.) and privacy first!
 best
 club
+click
 cyou
 digital
 enterprises
