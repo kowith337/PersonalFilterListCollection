@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202109221840
+# Version: 202109221842
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -259,7 +259,6 @@ setup.services.mozilla.com
 *-reports.mozilla.*
 *-settings.moz*.*
 *-settings.thunderbird.*
-*tiles.*.moz*.*
 activations.cdn.mozilla.*
 crash-stats.mozilla.*
 data.mozilla.*
@@ -278,8 +277,8 @@ reporter.mozilla.*
 self-repair.mozilla.*
 snippets.*.mozilla.*
 snippets.mozilla.*
-telemetry.*.mozilla.*
-telemetry.mozilla.*
+telemetry.*.moz*.*
+telemetry.moz*.*
 tiles.*.mozilla*
 # I won't unblock `GetPocket` until they've stop shipping news feed snippets features globally, no matter about OS and platforms!
 
