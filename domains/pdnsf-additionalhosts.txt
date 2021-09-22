@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202109081425
+# Version: 202109221840
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -257,8 +257,9 @@ setup.services.mozilla.com
 *-experiment.mozilla.*
 *-report.mozilla.*
 *-reports.mozilla.*
-*tiles.*.mozaws.*
-*tiles.*.mozilla*
+*-settings.moz*.*
+*-settings.thunderbird.*
+*tiles.*.moz*.*
 activations.cdn.mozilla.*
 crash-stats.mozilla.*
 data.mozilla.*
@@ -267,6 +268,7 @@ experiment.mozilla.*
 experiments.mozilla.*
 fhr.*.mozilla.*
 getpocket.*
+incoming.telemetry.*
 input.mozilla.*
 normandy-*.mozilla.*
 normandy.*.mozilla.*
