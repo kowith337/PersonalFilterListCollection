@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.1]
 # Title: Thai BadBait Lists (Top level only)
-# Version: 202109260925
+# Version: 202109281852
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -164,21 +164,33 @@
 0.0.0.0 xycit33.top
 0.0.0.0 zzdev.top
 # Fake "Pantip" content copying for "Goolag" SEO hijack - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-# Updated date: 2021/09/26
+# Updated date: 2021/09/28
+0.0.0.0 albioncollege.info
+0.0.0.0 altexplorer.info
 0.0.0.0 amarantinefarms.com
 0.0.0.0 dana-b7r.com
 0.0.0.0 ejppayment.com
+0.0.0.0 empirecity.today
 0.0.0.0 foxandmusic.com
 0.0.0.0 medbharat.com
 0.0.0.0 moonstalks.com
+0.0.0.0 realityprotocol.com
 0.0.0.0 redrose-samp.info
+0.0.0.0 vapa.info
+0.0.0.0 westnileyouthcenter.info
 0.0.0.0 wisefacts.info
+0.0.0.0 www.albioncollege.info
+0.0.0.0 www.altexplorer.info
 0.0.0.0 www.amarantinefarms.com
 0.0.0.0 www.dana-b7r.com
 0.0.0.0 www.ejppayment.com
+0.0.0.0 www.empirecity.today
 0.0.0.0 www.foxandmusic.com
 0.0.0.0 www.medbharat.com
 0.0.0.0 www.moonstalks.com
+0.0.0.0 www.realityprotocol.com
 0.0.0.0 www.redrose-samp.info
+0.0.0.0 www.vapa.info
+0.0.0.0 www.westnileyouthcenter.info
 0.0.0.0 www.wisefacts.info
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
