@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202109050109
+# Version: 202110061214
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -236,6 +236,11 @@
 #     ** Any preloaded/recommended/zuckested contents esp. if it based on country, region and user's activities ARE NOT WELCOME!!
 #     *** IF SOMEBODY USE ITS FEATURES, JUST STOP USING MY LEFTOVER LIST IS THE BEST AND LAST CHOICE THAT I CAN PREFER, PERIOD!!!
 #
+# - {Web Notifications Endpoint?}
+#   I'm also see these connections whenever start using Firefox (even with fresh profiles)
+0.0.0.0 autopush.prod.mozaws.net
+0.0.0.0 push.services.mozilla.com
+#
 # - {Browser Activation}
 #
 # - {Captive Portal}
@@ -257,10 +262,8 @@
 # - {GeoLocation}
 0.0.0.0 location.services.mozilla.com
 #
-# - {Web Notifications Endpoint?}
-#   I'm also see these connections whenever start using Firefox (even with fresh profiles)
-0.0.0.0 autopush.prod.mozaws.net
-0.0.0.0 push.services.mozilla.com
+# - {Merino} aka. QuickZuckest features
+0.0.0.0 merino.services.mozilla.com
 #
 # - {Geo Default Search?}
 0.0.0.0 search.services.mozilla.com
