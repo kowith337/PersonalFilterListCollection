@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202109221842
+# Version: 202110072337
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -600,6 +600,7 @@ pixel.freebasics.com
 pixel.messenger.com
 
 # Tell me if it's break something, however, if you didn't use their official apps!!
+gateway.facebook.com
 lookaside.facebook.com
 update.fbsbx.com
 
