@@ -1,6 +1,6 @@
 [uBlock Origin 1.37.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202108011842
+! Version: 202110072110
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -10,305 +10,305 @@
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [ChocolateMinecraft] Remove ads-wrapped links
-chocolateminecraft.com###content table[style] td a[href*="adf.ly"]
-chocolateminecraft.com###content table[style] td a[href*="adfoc.us"]
-chocolateminecraft.com###content table[style] td a[href*="netb.ee"]
+chocolateminecraft.com#?##content table[style] td a[href*="adf.ly"]
+chocolateminecraft.com#?##content table[style] td a[href*="adfoc.us"]
+chocolateminecraft.com#?##content table[style] td a[href*="netb.ee"]
 
 ! [Chocolatey]
 ! - Too many annoyance things, e.g. floating news with right pane toggling + unread red dot count, package disclaimer modal, etc.
-chocolatey.org###cookieNoticeAlert
-chocolatey.org###package-disclaimer.modal
-chocolatey.org##.btn-announcement-notifications
-chocolatey.org##.collapsing-sidebar
-chocolatey.org##.container-fluid .row .d-none.border-start
-chocolatey.org##.modal-backdrop
+chocolatey.org#?##cookieNoticeAlert
+chocolatey.org#?##package-disclaimer.modal
+chocolatey.org#?#.btn-announcement-notifications
+chocolatey.org#?#.collapsing-sidebar
+chocolatey.org#?#.container-fluid .row .d-none.border-start
+chocolatey.org#?#.modal-backdrop
 
 ! [GamingDose]
-gamingdose.com##a[href*="/linkout/"]
-gamingdose.com##a[href*="cdkeys.com"]
-gamingdose.com##a[onclick^="gtag"][onclick*="send_to"]
+gamingdose.com#?#a[href*="/linkout/"]
+gamingdose.com#?#a[href*="cdkeys.com"]
+gamingdose.com#?#a[onclick^="gtag"][onclick*="send_to"]
 
 ! [GitHub]
-github.com##.repository-content .protip
-github.com##div[class^="signup-prompt"]
+github.com#?#.repository-content .protip
+github.com#?#div[class^="signup-prompt"]
 
 ! [Google]
 ! - No reason to manually update location with precious method! (resolve location from network connection isn't enough, huh?)
-google.*###fbar #swml a#swml-upd
-google.*###fbar #swml a[data-ved]
-google.*##.fbar update-location
+google.*#?##fbar #swml a#swml-upd
+google.*#?##fbar #swml a[data-ved]
+google.*#?#.fbar update-location
 !
 ! - Remove "Related question" / "Related search" / "People also search for"
-google.*###extrares #botstuff div[data-ved] div[data-hveid]
-google.*###extrares #botstuff div[data-ved] div[jscontroller][data-hveid][data-ved]
-google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][data-ved] div[data-has-close][class*="result-pivots"][data-ved]
-google.*###main div[data-ved] div[data-async-context] .kno-result[data-hveid][data-ved]
-google.*###search #rso .rc[data-hveid][data-ved] div[id^="eob_"][jscontroller]
-google.*##.g div[id^="eob_"]
-google.*##.islrc div[data-id][data-rfg]
-google.*##[jscontroller] #rg[data-ved] div[class*="irc-"]
-google.*##div[jsname][role="list"] div[jsname][data-id^="Refinements"]
+google.*#?##extrares #botstuff div[data-ved] div[data-hveid]
+google.*#?##extrares #botstuff div[data-ved] div[jscontroller][data-hveid][data-ved]
+google.*#?##main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][data-ved] div[data-has-close][class*="result-pivots"][data-ved]
+google.*#?##main div[data-ved] div[data-async-context] .kno-result[data-hveid][data-ved]
+google.*#?##search #rso .rc[data-hveid][data-ved] div[id^="eob_"][jscontroller]
+google.*#?#.g div[id^="eob_"]
+google.*#?#.islrc div[data-id][data-rfg]
+google.*#?#[jscontroller] #rg[data-ved] div[class*="irc-"]
+google.*#?#div[jsname][role="list"] div[jsname][data-id^="Refinements"]
 
 ! [Linkis] (scam content framing)
-linkis.com##.deeper-overlay
-linkis.com##.js-forceAuth-popup-light
-linkis.com##.other-pages-holder .left-column
-linkis.com##.other-pages-holder .right-column
-linkis.com##.popup_force-auth
-linkis.com##.theme15-authorize
+linkis.com#?#.deeper-overlay
+linkis.com#?#.js-forceAuth-popup-light
+linkis.com#?#.other-pages-holder .left-column
+linkis.com#?#.other-pages-holder .right-column
+linkis.com#?#.popup_force-auth
+linkis.com#?#.theme15-authorize
 
 ! [Taobao Mobile]
-m.intl.taobao.com,m.taobao.com##.App div[class^="smartbanner"]
-m.intl.taobao.com,m.taobao.com##.zebra-oversea-smartbanner
+m.intl.taobao.com,m.taobao.com#?#.App div[class^="smartbanner"]
+m.intl.taobao.com,m.taobao.com#?#.zebra-oversea-smartbanner
 
 ! [Minecraft] Forge Ads Pane
-minecraftforge.net##.ad-container
-minecraftforge.net##.ad-container-framed
-minecraftforge.net##.promo-container
-minecraftforge.net##aside.sidebar-right
-minecraftforge.net##div img[src*="imrworldwide.com"]
+minecraftforge.net#?#.ad-container
+minecraftforge.net#?#.ad-container-framed
+minecraftforge.net#?#.promo-container
+minecraftforge.net#?#aside.sidebar-right
+minecraftforge.net#?#div img[src*="imrworldwide.com"]
 
 ! [Optifine] Remove ads-wrapped links
-optifine.net##table.downloadTable tr.downloadLine td.colDownload a[href*="?f="][href*="&x="]
-optifine.net##table.downloadTable tr.downloadLine td.colDownload a[href*="adf.ly"]
-optifine.net##table.downloadTable tr.downloadLine td.colDownload a[href*="adfoc.us"]
+optifine.net#?#table.downloadTable tr.downloadLine td.colDownload a[href*="?f="][href*="&x="]
+optifine.net#?#table.downloadTable tr.downloadLine td.colDownload a[href*="adf.ly"]
+optifine.net#?#table.downloadTable tr.downloadLine td.colDownload a[href*="adfoc.us"]
 
 ! [Pixivision] (Formerly Pixiv Spotlights)
-pixivision.net##._floated-bottom-bar
+pixivision.net#?#._floated-bottom-bar
 
 ! [Pantip Mobile] Remove placeholder ad space (Mobile layout only)
-m.pantip.com##.comment-mpost center[id^="c_ads"]
+m.pantip.com#?#.comment-mpost center[id^="c_ads"]
 
 ! [SaveFrom] aka. SSYouTube
 ! - I prefer Invidious or NewPipe / SkyTube (if you use Android), otherwise, you may face some scam sites below...
 !   > https://github.com/kowith337/ThaiConsentHosts/commit/1cb2b174ba5a094c969b131804a4a10089aee97c
 !   > https://github.com/kowith337/ThaiConsentHosts/commit/03109c2fc60f13c514ee18310d00a8500fd04763
-savefrom.net###js-install-now
-savefrom.net###sf_result .extra[data-ga-event*="helper-promo"]
+savefrom.net#?##js-install-now
+savefrom.net#?##sf_result .extra[data-ga-event*="helper-promo"]
 
 ! [Naver Line Store] Experimental
 ! - Dealing against attempts to add official account
-store.line.me##.FnAddStoreOaAsFriendPopup
-store.line.me##.LyMain .MdOverlay01
+store.line.me#?#.FnAddStoreOaAsFriendPopup
+store.line.me#?#.LyMain .MdOverlay01
 
 ! [Twitter New]
 ! - Generic
-twitter.com##main[role] div[class] > div[class][data-testid="sidebarColumn"] div[class][style] > div[class] aside[role="complementary"][aria-label^="Relevant"]
+twitter.com#?#main[role] div[class] > div[class][data-testid="sidebarColumn"] div[class][style] > div[class] aside[role="complementary"][aria-label^="Relevant"]
 !
 ! - Analytics Popup
-twitter.com##.ep-Campaign .ep-Signup
+twitter.com#?#.ep-Campaign .ep-Signup
 !
 ! - Right side pane (Who to follow / Sign up)
-twitter.com##aside[aria-label="Who to follow"]
-twitter.com##section[aria-label="Sign up"]
+twitter.com#?#aside[aria-label="Who to follow"]
+twitter.com#?#section[aria-label="Sign up"]
 !
 ! - Remove non-consumer things that not neccessary, such as create ads, tweet performance (analytics), etc.
-twitter.com##div[role="menu"] div[class] > a[href*="ads.twitter.com"]
-twitter.com##div[role="menu"] div[class] > a[href*="analytics.twitter.com"]
+twitter.com#?#div[role="menu"] div[class] > a[href*="ads.twitter.com"]
+twitter.com#?#div[role="menu"] div[class] > a[href*="analytics.twitter.com"]
 
 ! [Twitter Old] (Deprecated, only appear when you're not logged in.)
-twitter.com###signin-dropdown
-twitter.com##.stream li.WtfLargeCarouselStreamItem
-twitter.com##.Grid .AdaptiveRelatedSearches
-twitter.com##.SidebarCommonModules .RelatedUsers
-twitter.com##div[class^="MomentsPermalinkPage"] .MomentsPermalinkPage-related
+twitter.com#?##signin-dropdown
+twitter.com#?#.stream li.WtfLargeCarouselStreamItem
+twitter.com#?#.Grid .AdaptiveRelatedSearches
+twitter.com#?#.SidebarCommonModules .RelatedUsers
+twitter.com#?#div[class^="MomentsPermalinkPage"] .MomentsPermalinkPage-related
 
 ! [WallGif]
-wallgif.com##content .big-modal
-wallgif.com##content .big_modal_bg
+wallgif.com#?#content .big-modal
+wallgif.com#?#content .big_modal_bg
 
 ! [Line WebToons]
 ! - Taunting against users who didn't download their official apps are bad practice of promoting their own apps!
-m.webtoons.com###_appDownloadPopup
-m.webtoons.com##.viewer_cont_wrap div[class^="downapp"]
-m.webtoons.com##footer p[class^="downapp"]
-webtoons.com###footer .foot_app
+m.webtoons.com#?##_appDownloadPopup
+m.webtoons.com#?#.viewer_cont_wrap div[class^="downapp"]
+m.webtoons.com#?#footer p[class^="downapp"]
+webtoons.com#?##footer .foot_app
 !
 ! - "Share" panel shouldn't have any extra words that doesn't helpful and/or seems to force to do so...
-m.webtoons.com##.ly_share .inner .dsc_encourage
+m.webtoons.com#?#.ly_share .inner .dsc_encourage
 !
 ! - Unbreak "Thai Adblock filters" due to it's hide episode lists on desktop site version.
 webtoons.com#@#.banner
 
 ! [Cure / WCP] Backup from ThaiParanoidBlock
-worldcosplay.net###registerPopup
-worldcosplay.net##.registration-modal-bg
+worldcosplay.net#?##registerPopup
+worldcosplay.net#?#.registration-modal-bg
 
 ! [Wikipedia] "Wiki loves" overpromoted annoyances
-wikimedia.org,wikipedia.org###centralNotice:has(a[href*="Commons:Wiki_Loves"])
+wikimedia.org,wikipedia.org#?##centralNotice:has(a[href*="Commons:Wiki_Loves"])
 
 ! [Wordpress Dashboard]
-wordpress.com##.reader-blank-suggestions
-wordpress.com##.reader-recommended-sites
-wordpress.com##.sidebar-streams__discover
+wordpress.com#?#.reader-blank-suggestions
+wordpress.com#?#.reader-recommended-sites
+wordpress.com#?#.sidebar-streams__discover
 
 ! [YouTube Non-Polymer] This will soon deprecated due to they want to force users to use with Chrome with thier "Polymer" things!
 !     I heard some rumor that even post-quantum Firefox (aka. Servo) cannot handle that, for site performance, but not privacy!!
 ! - Remove BS survey (give stars about how satisfying, etc.)
-youtube.com###hats-container[data-survey-id]
+youtube.com#?##hats-container[data-survey-id]
 !
 ! - Remove yellow alert, even it's not yet enforce apply new UI right now...
-youtube.com###old-browser-alert
+youtube.com#?##old-browser-alert
 !
 ! - Remove related search results
-youtube.com###results .section-list .item-section li .branded-page-box
-youtube.com###results .section-list .item-section li .search-refinements
+youtube.com#?##results .section-list .item-section li .branded-page-box
+youtube.com#?##results .section-list .item-section li .search-refinements
 !
 ! -Aim to remove UK consent dialog overlay and overhaul
-youtube.com###ticker-content .yt-consent
-youtube.com###yt-consent-dialog
-youtube.com###yt-dialog-bg
-youtube.com##.yt-dialog[id*="privacy"]
+youtube.com#?##ticker-content .yt-consent
+youtube.com#?##yt-consent-dialog
+youtube.com#?##yt-dialog-bg
+youtube.com#?#.yt-dialog[id*="privacy"]
 
 ! [YouTube Polymer]
 ! - I should file this rules to any repo that include kind of "UK Consent" annoyance rules, such as IDCAC, Fanboy Cookie, etc?
 ! - However, any data that separately stored for UK users may soon move back to their origin servers after Brexit happened...
-youtube.com##ytd-consent-bump-renderer
+youtube.com#?#ytd-consent-bump-renderer
 ! * Sometime you will got force redirect to `consent.youtube.com` subdomain for certain countries, this will no can do because
 !   redirecting is mean it doesn't actually load general contents from YouTube.
 !
 ! - Forgot what does it do, but probably zuckest to download or open in app?
-youtube.com##ytd-popup-container.ytd-app
+youtube.com#?#ytd-popup-container.ytd-app
 !
 ! - Another BS surveys floating notif also appear in this version, too!
-youtube.com##ytd-single-option-survey-renderer
+youtube.com#?#ytd-single-option-survey-renderer
 !
 ! - Hide "Scroll for details" prompt while watching video in fullscreen.
-youtube.com##.ytp-chrome-bottom [class^="ytp-fullerscreen-edu"]
+youtube.com#?#.ytp-chrome-bottom [class^="ytp-fullerscreen-edu"]
 !
 ! - Remove any kinds of "Sign in" prompts
-youtube.com##.ytd-guide-renderer ytd-guide-signin-promo-renderer
-youtube.com###primary #contents #button[class*="ytd-background-promo"]
-youtube.com###primary #contents ytd-button-renderer .style-suggestive
+youtube.com#?#.ytd-guide-renderer ytd-guide-signin-promo-renderer
+youtube.com#?##primary #contents #button[class*="ytd-background-promo"]
+youtube.com#?##primary #contents ytd-button-renderer .style-suggestive
 
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [GitHub]
-github.com##.js-notice:has(.js-dismiss)
+github.com#?#.js-notice:has(.js-dismiss)
 
 ! [Google]
 ! - Remove consent overlay
-google.*##g-bottom-sheet[jscontroller] div[role="dialog"]:has(div[jscontroller][data-ved] img[src*="consent.google."][src*="/status?"])
+google.*#?#g-bottom-sheet[jscontroller] div[role="dialog"]:has(div[jscontroller][data-ved] img[src*="consent.google."][src*="/status?"])
 !   > 2021 ver.
-google.*##div[class][aria-modal]:has(div[class] > a[class][href*="policies.google."])
+google.*#?#div[class][aria-modal]:has(div[class] > a[class][href*="policies.google."])
 !
 ! - Remove text dialog to tell back to Google for suggest something to show more results.
-google.*###extrares #botstuff div[data-ved] > :has(div textarea[data-ved])
+google.*#?##extrares #botstuff div[data-ved] > :has(div textarea[data-ved])
 !
 ! - Related to "Related question" / "Related search" / "People also search for"
-google.*##div[data-async-context] div[jsname][data-ved] div[class]:has(h2):has(a[href*="/search?"][href*="&ved="])
-google.*###search div[data-ved] #rso div[class]:has(.xpdopen)
+google.*#?#div[data-async-context] div[jsname][data-ved] div[class]:has(h2):has(a[href*="/search?"][href*="&ved="])
+google.*#?##search div[data-ved] #rso div[class]:has(.xpdopen)
 
 ! [Minecraft Forge]
-minecraftforge.net##.sidebar-right:has(div[class^="ad-container"])
+minecraftforge.net#?#.sidebar-right:has(div[class^="ad-container"])
 
 ! [Pantip]
 ! - Remove all kind of "PROMOTED Reviews", either Sponsored [SR] and Business [BR]
-pantip.com##.m-thumb:has(a .subject:has-text([BR] ))
-pantip.com##.m-thumb:has(a .subject:has-text([SR] ))
-pantip.com##.pt-list-item:has(.pt-list-item__title h2 a:has-text([BR] ))
-pantip.com##.pt-list-item:has(.pt-list-item__title h2 a:has-text([SR] ))
+pantip.com#?#.m-thumb:has(a .subject:has-text([BR] ))
+pantip.com#?#.m-thumb:has(a .subject:has-text([SR] ))
+pantip.com#?#.pt-list-item:has(.pt-list-item__title h2 a:has-text([BR] ))
+pantip.com#?#.pt-list-item:has(.pt-list-item__title h2 a:has-text([SR] ))
 !
 ! - Re-remove panel that failed to load (I've blocking all assets from `frukt.pantip.com` because the main scripts is have low or
 !   less code about site features, but mostly of code intent to load ads and tracking.
-pantip.com##.container .row .pt-block-purple-2:has(.pt-block-header h6:has-text(Pantip Trend))
-pantip.com###sidebar-container #sidebar-fixed .pt-tabs-a:has(section[class^="pt-tab_"])
-pantip.com###sidebar-container #sidebar-fixed .pt-block:has(.pt-block-header a[href*="pantip.com/club"])
-pantip.com###sidebar-container #sidebar-fixed .pt-block:has(.pt-block-header-img a.gtm-bloggang-all)
-pantip.com###sidebar-container #sidebar-fixed .pt-block:has(.pt-block-header-img a.gtm-pantipmarket-all)
+pantip.com#?#.container .row .pt-block-purple-2:has(.pt-block-header h6:has-text(Pantip Trend))
+pantip.com#?##sidebar-container #sidebar-fixed .pt-tabs-a:has(section[class^="pt-tab_"])
+pantip.com#?##sidebar-container #sidebar-fixed .pt-block:has(.pt-block-header a[href*="pantip.com/club"])
+pantip.com#?##sidebar-container #sidebar-fixed .pt-block:has(.pt-block-header-img a.gtm-bloggang-all)
+pantip.com#?##sidebar-container #sidebar-fixed .pt-block:has(.pt-block-header-img a.gtm-pantipmarket-all)
 !
 ! - Remove all images inserted from anybody who have "Organization" roles
 !   Often see at MBK forum, mostly come from mobile operator accounts (esp. AIS), it's bullshit idea and produced wasteful space!
-pantip.com##.m-comment-wrapper:has(a.icon-memberbadge-organization) .m-display-post-story .img-in-post
-pantip.com##.m-post-comment:has(.cs-elm-profile .display-post-avatar-inner a.icon-memberbadge-organization) .m-display-post-story img.img-in-post
-pantip.com##.section-comment:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post
-pantip.com##div[id^="bestanswer"]:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post
+pantip.com#?#.m-comment-wrapper:has(a.icon-memberbadge-organization) .m-display-post-story .img-in-post
+pantip.com#?#.m-post-comment:has(.cs-elm-profile .display-post-avatar-inner a.icon-memberbadge-organization) .m-display-post-story img.img-in-post
+pantip.com#?#.section-comment:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post
+pantip.com#?#div[id^="bestanswer"]:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post
 !
 ! - Someone poisoned the 'CoViD-19' tag by posting bias political news inside this tag, remove for de-intrusive only, not my POV!
-pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(JJNY : ))
+pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(JJNY : ))
 
 ! [Randomness Thing]
-randomnessthing.com##.textwidget:has(img[src*="no-adblock-wordpress-plugin"])
+randomnessthing.com#?#.textwidget:has(img[src*="no-adblock-wordpress-plugin"])
 
 ! [Stack Network]
-stackoverflow.com##.hero-container:has(.s-signup)
-stackoverflow.com##.js-topbar-dialog-corral:has(.dialog-content:has(a[href^="/jobs/salary/?"]))
-stackexchange.com,superuser.com##.hero-container:has(#hero-content:has(div a[href^="/users/signup?"]))
+stackoverflow.com#?#.hero-container:has(.s-signup)
+stackoverflow.com#?#.js-topbar-dialog-corral:has(.dialog-content:has(a[href^="/jobs/salary/?"]))
+stackexchange.com,superuser.com#?#.hero-container:has(#hero-content:has(div a[href^="/users/signup?"]))
 
 ! [Taobao Mobile] Remove non-same shop related items
-m.intl.taobao.com##.App .recommend .recommend-list-wrapper:nth-of-type(2)
+m.intl.taobao.com#?#.App .recommend .recommend-list-wrapper:nth-of-type(2)
 
 ! [YouTube Mobile]
 ! - Remove privacy reminder overlay
-m.youtube.com##ytm-mealbar:has-text(privacy)
+m.youtube.com#?#ytm-mealbar:has-text(privacy)
 !
 ! - Try remove "Recommended for you" from watch next lists (Only work for English interface for now)
-m.youtube.com##ytm-compact-video-renderer .compact-media-item:has(.compact-media-item-metadata .subhead:has-text(Recommended))
+m.youtube.com#?#ytm-compact-video-renderer .compact-media-item:has(.compact-media-item-metadata .subhead:has-text(Recommended))
 
 ! [Twitter New]
 ! - Try remove any highlights that inject directly to notification lists (aka. In case that you've missed)
-twitter.com##div[aria-label^="Timeline:"] div > article[role="article"]:has(div[class] > svg g path[fill="#794BC4"])
+twitter.com#?#div[aria-label^="Timeline:"] div > article[role="article"]:has(div[class] > svg g path[fill="#794BC4"])
 !
 ! - Remove new layout overlay notify popup
-twitter.com##div[data-reactroot] div[class] > div[data-focusable][tabindex][class] div[class]:has(div[class] > div[class][style] img[alt][src*="/twitter_shared_public/responsive-web"])
+twitter.com#?#div[data-reactroot] div[class] > div[data-focusable][tabindex][class] div[class]:has(div[class] > div[class][style] img[alt][src*="/twitter_shared_public/responsive-web"])
 
 ! [WallGif] Disable AdBlock...? HOW ABOUT NO!!
-wallgif.com###overlay:has(img[alt="Loader"])
-wallgif.com##content div[id^=block_modal]
+wallgif.com#?##overlay:has(img[alt="Loader"])
+wallgif.com#?#content div[id^=block_modal]
 
 ! Special procedurual - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: require uB0 version 1.26.0 or above
 ! [Chocolatey]
 ! - Force expand package width to screen size, no more VOD, streaming, seminar promos!
-chocolatey.org##.container-fluid .row div[class^="user-"]:upward(1):style(width: 100% !important)
+chocolatey.org#?#.container-fluid .row div[class^="user-"]:upward(1):style(width: 100% !important)
 !
 ! - Permanent remove sidebar and bottom bar float cookie notice!
-chocolatey.org##.container-fluid .row .d-none.border-start:remove()
-chocolatey.org###cookieNoticeAlert:remove()
+chocolatey.org#?#.container-fluid .row .d-none.border-start:remove()
+chocolatey.org#?##cookieNoticeAlert:remove()
 
 ! [Google]
 ! - Cannot remember about this, but related to "Related search" mini zuckestion box
-google.*###search #rso .rc[data-hveid][data-ved] div[id^="eob_"][jscontroller]:remove()
-google.*##.islrc div[data-id][data-rfg]:remove()
+google.*#?##search #rso .rc[data-hveid][data-ved] div[id^="eob_"][jscontroller]:remove()
+google.*#?#.islrc div[data-id][data-rfg]:remove()
 !
 ! - Enforce removing consent modal
-google.*##div[class][aria-modal]:has(div[class] > a[class][href*="policies.google."]):remove()
+google.*#?#div[class][aria-modal]:has(div[class] > a[class][href*="policies.google."]):remove()
 !
 ! - Permanent remove new "Update location" link!
-google.*##.fbar update-location:remove()
+google.*#?#.fbar update-location:remove()
 !
 ! - The new way to inject "People also search for" annoyance
-google.*##.g div[id^="eob_"]:remove()
-google.*##.g:has(.exp-outline) div[jscontroller] h4:upward(4)
-google.*##.g:has(.exp-outline) div[jscontroller] h4:upward(4):remove()
+google.*#?#.g div[id^="eob_"]:remove()
+google.*#?#.g:has(.exp-outline) div[jscontroller] h4:upward(4)
+google.*#?#.g:has(.exp-outline) div[jscontroller] h4:upward(4):remove()
 !
 ! - Remove UK consent prompt overlay that also load iframe
 !   * Please note that I cannot handle scroll-down prevention...
-google.*###cnt.big div[class] span[jsslot] #cnsw:upward(4):remove()
+google.*#?##cnt.big div[class] span[jsslot] #cnsw:upward(4):remove()
 
 ! [Pantip]
 ! - Remove app promo pane inside drop-down menu
-pantip.com###pantipOthers #inOtherMenu .flexbox img[alt="Pantip Application"]:upward(2)
+pantip.com#?##pantipOthers #inOtherMenu .flexbox img[alt="Pantip Application"]:upward(2)
 !
 ! - Completely remove images posted from organization IDs
-pantip.com##.m-comment-wrapper:has(a.icon-memberbadge-organization) .m-display-post-story .img-in-post:remove()
-pantip.com##.m-post-comment:has(.cs-elm-profile .display-post-avatar-inner a.icon-memberbadge-organization) .m-display-post-story img.img-in-post:remove()
-pantip.com##.section-comment:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post:remove()
-pantip.com##div[id^="bestanswer"]:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post:remove()
+pantip.com#?#.m-comment-wrapper:has(a.icon-memberbadge-organization) .m-display-post-story .img-in-post:remove()
+pantip.com#?#.m-post-comment:has(.cs-elm-profile .display-post-avatar-inner a.icon-memberbadge-organization) .m-display-post-story img.img-in-post:remove()
+pantip.com#?#.section-comment:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post:remove()
+pantip.com#?#div[id^="bestanswer"]:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post:remove()
 
 ! [Twitter] Remove popup link to newsletters
-twitter.com##div[role="menu"] div[class] a[href*="/i/newsletters"]
+twitter.com#?#div[role="menu"] div[class] a[href*="/i/newsletters"]
 
 ! [Line WebToons] Remove promoted comic overlay (include dimmed)
-m.webtoons.com##div[id^="layerNoticePopup"]:remove()
+m.webtoons.com#?#div[id^="layerNoticePopup"]:remove()
 
 ! [YouTube Mobile]
 ! Please note that force remove overlay below may cause prevent scroll down and I cannot have any solutions to fix that.
 ! - Force remove new consent dialog + dim that force users to press "Accept" before playing/watching anything!
-m.youtube.com##.consent-bump-lightbox:remove()
+m.youtube.com#?#.consent-bump-lightbox:remove()
 !
 ! - Also force remove new overlay dialog + dim that forcing visitor to sign-in with account before watching!!
 !   Although, you can press "No thanks", but paint-over with forced dialog is overdone dark patterns!!!
-m.youtube.com##.upsell-dialog-lightbox:has(.upsell-dialog-body-text a[href*="sign_in"]):remove()
+m.youtube.com#?#.upsell-dialog-lightbox:has(.upsell-dialog-body-text a[href*="sign_in"]):remove()
 
 ! HTML Filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: This may work only FF quantum + uB0 WebExt
@@ -338,32 +338,32 @@ minecraftforge.net##^div img[src^="data:image/gif;base64,"]
 ! Inline Script Filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: HTML Filtering for Firefox pre-quantum (aka. XUL Legacy), mainly to support removing matched inline script block
 !#if env_legacy
-m.intl.taobao.com,m.taobao.com##script:contains(getFB_GOOLE_trackJs)
-minecraftforge.net##script:contains(window.factorem)
-randomnessthing.com##script:contains(Criteo)
+m.intl.taobao.com,m.taobao.com#?#script:contains(getFB_GOOLE_trackJs)
+minecraftforge.net#?#script:contains(window.factorem)
+randomnessthing.com#?#script:contains(Criteo)
 !#endif
 
 ! CSS Modify  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Chocolatey] Fix scroll prevention after hide disclaimer dialog.
-chocolatey.org##body.modal-open:style(overflow: initial !important)
+chocolatey.org#?#body.modal-open:style(overflow: initial !important)
 
 ! [Google]
 ! - Override style and transition of new "People also search for" pane injections!
-google.*##.g:has(.exp-outline) div[class][data-hveid][data-ved][style]:style(height: initial !important; transition: none !important)
+google.*#?#.g:has(.exp-outline) div[class][data-hveid][data-ved][style]:style(height: initial !important; transition: none !important)
 !
 ! - Restore context of search result that was hidden by a things named as "People also search for", the hidden action will be
 !   triggered when you've open some result into new tab or window, then return back to Google search result tab after.
-google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname] hr[style^="visibility: hidden"]:style(visibility: visible !important)
-google.*###main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][style^="display: none"]:style(display: block !important)
+google.*#?##main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname] hr[style^="visibility: hidden"]:style(visibility: visible !important)
+google.*#?##main div[data-ved] > div[data-hveid] div[jscontroller] > div[jsname][style^="display: none"]:style(display: block !important)
 !
 ! - Restore scrolling ability that was affected by forceful modal that need to accept their cookies!
-google.*##body#gsr:style(overflow: initial !important)
-google.*##body[jsaction]:style(overflow: initial !important)
-google.*##body[jscontroller]:style(overflow: initial !important)
-google.*##body[jsmodel]:style(overflow: initial !important)
+google.*#?#body#gsr:style(overflow: initial !important)
+google.*#?#body[jsaction]:style(overflow: initial !important)
+google.*#?#body[jscontroller]:style(overflow: initial !important)
+google.*#?#body[jsmodel]:style(overflow: initial !important)
 
 ! [GreasyFork] in case if they rewrite CSS style, this will minimize the element at first place.
-greasyfork.org###install-area .post-install:style(width: 0px !important; height: 0px !important; pointer-events: none !important; display: none !important)
+greasyfork.org#?##install-area .post-install:style(width: 0px !important; height: 0px !important; pointer-events: none !important; display: none !important)
 
 ! [Minecraft] to prevent clicking the paid links hyperlink, e.g. AdFly, AdFocus, NetBee (by accident or intent)
 ! - Forge: https://files.minecraftforge.net - It use AdFocus for all installer links (except changelog)
@@ -377,7 +377,7 @@ greasyfork.org###install-area .post-install:style(width: 0px !important; height:
 !     domain already get blocked, then you can reveal real download links that expand wrapped parameter via magnifier +/- icon.
 
 ! [Taobao Mobile] Hide promotional frame appear at bottom (directly point to DOM doesn't help because it's use "display: block")
-m.intl.taobao.com,m.taobao.com##div[smb-link-key][smb-href]:style(display: none !important)
+m.intl.taobao.com,m.taobao.com#?#div[smb-link-key][smb-href]:style(display: none !important)
 
 ! Network Requests - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [CloudFlare Beacon]
@@ -523,13 +523,13 @@ savefrom.net##+js(acs, tplYouTubePopupHelper)
 !          For any Chrome forks, I've made custom shortcut and/or launcher to spoof user agent to any Chrome version that I like.
 !          You can look for henrypp's "ChrLauncher" if you want to do so... (Windows users only!)
 !#if env_firefox
-github.com##.unsupported-browser
+github.com#?#.unsupported-browser
 !#endif
 
 ! [IMGUr Mobile View] Hide zuckestions to download and/or open in app
 !#if env_mobile
-imgur.com##.FloatingOIA-container
-imgur.com##.get-app-block
+imgur.com#?#.FloatingOIA-container
+imgur.com#?#.get-app-block
 !#endif
 
 ! [Backward compatibility]

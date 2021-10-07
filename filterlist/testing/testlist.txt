@@ -1,6 +1,6 @@
 [uBlock Origin 1.34.1.2]
 ! Title: kowith337's Test List
-! Version: 202107282130
+! Version: 202110072108
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -9,135 +9,135 @@
 
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Taobao Mobile] Remove header anchor navigator
-m.intl.taobao.com##.App .toolbar .toolbar__anchor-wrapper
+m.intl.taobao.com#?#.App .toolbar .toolbar__anchor-wrapper
 
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Blognone]
 ! - Disable comment news that have topics about "Thailand", any news that have this tags may fully biased comments!
-blognone.com##.content-container:has(span.terms .field-item a[href*="/thailand"]) #comment-area
+blognone.com#?#.content-container:has(span.terms .field-item a[href*="/thailand"]) #comment-area
 !
 ! - Also include comment counters, too!!
-blognone.com###block-system-main .content .node:has(span.terms .field-item a[href*="/thailand"]) .comment-comments
+blognone.com#?##block-system-main .content .node:has(span.terms .field-item a[href*="/thailand"]) .comment-comments
 
 ! [Taobao Mobile] Remove bottom anchor (quickly add to cart / buy menu pane)
-m.intl.taobao.com##.App .bar:has(a.bar-item[href^="//shop.m.taobao.com/shop/shop_index.htm?"])
+m.intl.taobao.com#?#.App .bar:has(a.bar-item[href^="//shop.m.taobao.com/shop/shop_index.htm?"])
 
 ! [ImgUr] Try to remove non-main images that linked from/to (mobile site only)
 !         * this may cause to hide all non-first images if it load next items in album!
 !         ** Beware about extra data and system resources use because the site will fetch next images endlessly!!
 !#if env_mobile
-imgur.com##.GalleryHandler-postContainer:not(:nth-of-type(2))
-imgur.com##.GalleryHandler-postContainer .Gallery-moreOnImgur
+imgur.com#?#.GalleryHandler-postContainer:not(:nth-of-type(2))
+imgur.com#?#.GalleryHandler-postContainer .Gallery-moreOnImgur
 !#endif
 
 ! [YouTube Non-Polymer]
 ! - Remove any "recommended" channel and topic lists at home feed (Only English language)
-youtube.com###feed-main-what_to_watch ol li:has(.feed-item-dismissable:has(.shelf-title-row h2 span:has-text(Recommended )))
-youtube.com##.individual-feed li .branded-page-box:has(.feed-item-dismissable:has(span.shelf-subscription-button button[data-style-type="branded"]))
+youtube.com#?##feed-main-what_to_watch ol li:has(.feed-item-dismissable:has(.shelf-title-row h2 span:has-text(Recommended )))
+youtube.com#?#.individual-feed li .branded-page-box:has(.feed-item-dismissable:has(span.shelf-subscription-button button[data-style-type="branded"]))
 !
 ! - Remove overpromoted "Premium" appear in sidebar
-youtube.com##.guide-section .guide-item-container ul li:has(a[href*="/premium"])
+youtube.com#?#.guide-section .guide-item-container ul li:has(a[href*="/premium"])
 
 ! [YouTube Polymer]
 ! - Hide "New ToS" announcement
-youtube.com###alert-banner [alert-style]:has(a[href*="youtube.com/t/terms"])
+youtube.com#?##alert-banner [alert-style]:has(a[href*="youtube.com/t/terms"])
 !
 ! - Remove "Sign in" prompt at top bar
-youtube.com###masthead #end #buttons ytd-button-renderer:has(a[href*="/ServiceLogin?"])
+youtube.com#?##masthead #end #buttons ytd-button-renderer:has(a[href*="/ServiceLogin?"])
 !
 ! - Try remove "Premium" link at sidebar (Disabled due to unknown usage problem that cause unable to click anything)
-!youtube.com##.ytd-guide-renderer:has(#items ytd-guide-entry-renderer:has(a[href*="/premium"]))
+!youtube.com#?#.ytd-guide-renderer:has(#items ytd-guide-entry-renderer:has(a[href*="/premium"]))
 
 ! Non-basic filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Nitter]
 ! - For unclear reason, because I have use touchscreen notebook and found that I've redirected to donation page unintentionally,
 !   even I just tap onto the blank space, probably navigation header placement issue that will be a short time while page loading
 !   will be see some icon enlarged, absolutely it's `Liberapay` logo are cover the page entirely at that moment!
-birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.skrep.in,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz##.inner-nav a[href*="liberapay"]
-birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.skrep.in,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz##.inner-nav a[href*="liberapay"]:remove()
+bird.nogafam.es,bird.trom.tf,birdsite.xanny.family,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.bcow.xyz,nitter.cattube.org,nitter.didw.to,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.grimneko.de,nitter.ir,nitter.koyu.space,nitter.mailstation.de,nitter.mha.fi,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.unixfox.eu,twitter.censors.us#?#.inner-nav a[href*="liberapay"]
+bird.nogafam.es,bird.trom.tf,birdsite.xanny.family,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.bcow.xyz,nitter.cattube.org,nitter.didw.to,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.grimneko.de,nitter.ir,nitter.koyu.space,nitter.mailstation.de,nitter.mha.fi,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.unixfox.eu,twitter.censors.us#?#.inner-nav a[href*="liberapay"]:remove()
 
 ! [Pantip] Explicit and spam topic name (Use Thai unicode characters because most language of this site are mainly in Thai)
-pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(ตระกองขวัญ))
-pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(มาลาริน/))
-pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(วรพจน์))
-pantip.com##.pt-list .pt-list-item:has(h2 a:has-text(หล่อขวัญ))
+pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(ตระกองขวัญ))
+pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(มาลาริน/))
+pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(วรพจน์))
+pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(หล่อขวัญ))
 
 ! [Taobao Mobile] Aim to remove "you may also like" items, but using the chinese word (MiscAnnoyance use `nth-of-type` method)
-m.intl.taobao.com##.App .recommend .recommend-list-wrapper:has(.recommend-title:has-text(邻家好货))
+m.intl.taobao.com#?#.App .recommend .recommend-list-wrapper:has(.recommend-title:has-text(邻家好货))
 
 ! [Twitter]
 ! - Aim to remove follow topics / related users / who to follow (aka. all of inline ZUCKESTIONS panes)
 !   * Please note: these rules are produce huge problematic, it's also hide all user lists that have "Follow" button, no matter
 !     about any state of user following! you can keep using this if you're not intent to follow other peoples too much!~
-twitter.com##div[data-testid="sidebarColumn"] section[aria-labelledby^="accessible-list"]
-twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(a[role="link"][data-focusable][href^="/i/"])
-twitter.com##div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(div[role="button"][data-focusable][data-testid="UserCell"] a[aria-hidden][tabindex][href]):has(a[role="link"][data-focusable] div[dir="auto"] span[dir="auto"])
-twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(a[href^="/i/related_users"])
-twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/))
-twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell"] [data-testid*="follow"])
-twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label*="Carousel"]:has(div[role="tablist"]):upward(2)
-twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class] a[href^="/i/"]:upward(1)
+twitter.com#?#div[data-testid="sidebarColumn"] section[aria-labelledby^="accessible-list"]
+twitter.com#?#div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(a[role="link"][data-focusable][href^="//"])
+twitter.com#?#div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(div[role="button"][data-focusable][data-testid="UserCell"] a[aria-hidden][tabindex][href]):has(a[role="link"][data-focusable] div[dir="auto"] span[dir="auto"])
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(a[href^="//related_users"])
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/))
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell"] [data-testid*="follow"])
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label*="Carousel"]:has(div[role="tablist"]):upward(2)
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class] a[href^="//"]:upward(1)
 
 ! DOM Permanent Remover - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Blognone] In case if modern browsers support to remove node entirely
-blognone.com##.content-container:has(.meta span.terms .field-item a[href*="thailand"]) #comment-area:remove()
-blognone.com###block-system-main .content .node:has(.meta span.terms .field-item a[href*="thailand"]) .comment-comments:remove()
+blognone.com#?#.content-container:has(.meta span.terms .field-item a[href*="thailand"]) #comment-area:remove()
+blognone.com#?##block-system-main .content .node:has(.meta span.terms .field-item a[href*="thailand"]) .comment-comments:remove()
 
 ! [Facebook] Blame to AdGuard
-facebook.com##.AdBox:remove()
-facebook.com##.post-ads:remove()
+facebook.com#?#.AdBox:remove()
+facebook.com#?#.post-ads:remove()
 
 ! [Nitter]
-birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.skrep.in,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz##.inner-nav a[href*="liberapay"]:remove()
+birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.skrep.in,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz#?#.inner-nav a[href*="liberapay"]:remove()
 
 ! [Twitter]
 ! - Some inline and/or side pane that tagged with `[aria-labelledby]` are useless, they often use for showing a pane to easily
 !   follow topics that they've zuckested by your activities that you might interest to..., so all of SNS nowadays are drived
 !   (and monetised) by user data and zuckestions!?
-twitter.com##div[data-testid="sidebarColumn"] section[aria-labelledby^="accessible-list"]:remove()
-twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label*="Carousel"]:has(div[role="tablist"]):upward(2):remove()
-twitter.com##section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class] a[href^="/i/"]:upward(1):remove()
+twitter.com#?#div[data-testid="sidebarColumn"] section[aria-labelledby^="accessible-list"]:remove()
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label*="Carousel"]:has(div[role="tablist"]):upward(2):remove()
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class] a[href^="//"]:upward(1):remove()
 
 ! CSS Modification  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Facebook]
 ! Uncorrupted Facebook Stories design because your profile picture in story card will not fulfilled if you didn't have any posts.
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com###MStoriesTray div[class] > #m-stories-add-item.profilePic i.profpic[role=img]:style(width: 100% !important; height: 100% !important)
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com#?##MStoriesTray div[class] > #m-stories-add-item.profilePic i.profpic[role=img]:style(width: 100% !important; height: 100% !important)
 
 ! [Taobao Mobile]
 ! - Make top bar placeholder transparent
-m.intl.taobao.com##.App .toolbar.transformed:style(background-color: transparent !important)
+m.intl.taobao.com#?#.App .toolbar.transformed:style(background-color: transparent !important)
 !
 ! - Make placeholder button (back / add to cart) have circle background alpha under button and use custom color permanently
-m.intl.taobao.com##.App .toolbar .toolbar__btn i.iconfont:style(color: white !important)
-m.intl.taobao.com##.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,0,0.4) !important)
+m.intl.taobao.com#?#.App .toolbar .toolbar__btn i.iconfont:style(color: white !important)
+m.intl.taobao.com#?#.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,0,0.4) !important)
 
 ! Specific requests filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! "Query Prune" experiment
 ! Note: Only handling some query that not necessary to binding in for specific requests rather than `document`, this may conflict
 !       with "Anti survived tracking link warning" filterlist that strictly blocked page when shady parameters are binding with
 !       any URLs for keep tracking users, even you're visiting some sites off-of social platform.
-||facebook.com/*&__cft__*=$1p,queryprune=|__cft__
-||facebook.com/*&__tn__=$1p,xhr,important,queryprune=__tn__
-||facebook.com/*&__xts__*=$1p,queryprune=|__xts__
-||facebook.com/*&entry*=$1p,xhr,important,queryprune=|entry
-||facebook.com/*&privacy_*=$1p,xhr,queryprune=|privacy_
-||facebook.com/*?__cft__*=$1p,queryprune=|__cft__
-||facebook.com/*?__tn__=$1p,xhr,important,queryprune=__tn__
-||facebook.com/*?__xts__*=$1p,queryprune=|__xts__
-||facebook.com/*?entry*=$1p,xhr,important,queryprune=|entry
-||facebook.com/*?privacy_*=$1p,xhr,queryprune=|privacy_
-||fbcdn.net/*&_nc_*=$css,script,domain=facebook.com|messenger.com,queryprune=|_nc_
-||fbcdn.net/*?_nc_*=$css,script,domain=facebook.com|messenger.com,queryprune=|_nc_
-||steampowered.com/*&curator_clanid=$queryprune=curator_clanid
-||steampowered.com/*&ser=$queryprune=ser,important
-||steampowered.com/*&snr=$queryprune=snr,important
-||steampowered.com/*?curator_clanid=$queryprune=curator_clanid
-||steampowered.com/*?ser=$queryprune=ser,important
-||steampowered.com/*?snr=$queryprune=snr,important
-||youtube-nocookie.com/get_video_info?*&ei=$xhr,queryprune=ei
-||youtube-nocookie.com/get_video_info?ei=$xhr,queryprune=ei
-||youtube.com/get_video_info?*&ei=$xhr,queryprune=ei
-||youtube.com/get_video_info?ei=$xhr,queryprune=ei
+||facebook.com/*&__cft__*=$1p,removeparam=/^__cft__/
+||facebook.com/*&__tn__=$1p,xhr,important,removeparam=__tn__
+||facebook.com/*&__xts__*=$1p,removeparam=/^__xts__/
+||facebook.com/*&entry*=$1p,xhr,important,removeparam=/^entry/
+||facebook.com/*&privacy_*=$1p,xhr,removeparam=/^privacy_/
+||facebook.com/*?__cft__*=$1p,removeparam=/^__cft__/
+||facebook.com/*?__tn__=$1p,xhr,important,removeparam=__tn__
+||facebook.com/*?__xts__*=$1p,removeparam=/^__xts__/
+||facebook.com/*?entry*=$1p,xhr,important,removeparam=/^entry/
+||facebook.com/*?privacy_*=$1p,xhr,removeparam=/^privacy_/
+||fbcdn.net/*&_nc_*=$css,script,domain=facebook.com|messenger.com,removeparam=/^_nc_/
+||fbcdn.net/*?_nc_*=$css,script,domain=facebook.com|messenger.com,removeparam=/^_nc_/
+||steampowered.com/*&curator_clanid=$removeparam=curator_clanid
+||steampowered.com/*&ser=$removeparam=ser,important
+||steampowered.com/*&snr=$removeparam=snr,important
+||steampowered.com/*?curator_clanid=$removeparam=curator_clanid
+||steampowered.com/*?ser=$removeparam=ser,important
+||steampowered.com/*?snr=$removeparam=snr,important
+||youtube-nocookie.com/get_video_info?*&ei=$xhr,removeparam=ei
+||youtube-nocookie.com/get_video_info?ei=$xhr,removeparam=ei
+||youtube.com/get_video_info?*&ei=$xhr,removeparam=ei
+||youtube.com/get_video_info?ei=$xhr,removeparam=ei
 
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||google.*/ads/*$important
