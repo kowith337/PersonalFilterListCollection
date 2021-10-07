@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.4]
 ! Title: Facebook Zuckestion Killer - Zero denied inclusive
-! Version: 202106181809
+! Version: 202110072249
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -39,6 +39,7 @@
 ||free.facebook.com$important,domain=~FREEBASICS-ZERO_DOMAIN
 ||freebasics.com$important,domain=~FREEBASICS-INTERNET_ORG
 ||h.facebook.com$important,domain=~FREEBASICS-INSECURE_DOMAIN_AND_EXPOSE_WAP_HEADER
+||i.org$important,domain=~FREEBASICS-INTERNET_ORG
 ||internet.org$important,domain=~FREEBASICS-INTERNET_ORG
 ||mobile.facebook.com$important,domain=~FREEBASICS-ZERO_DOMAIN
 ||o.facebook.com$important,domain=~FREEBASICS-ZERO_DOMAIN

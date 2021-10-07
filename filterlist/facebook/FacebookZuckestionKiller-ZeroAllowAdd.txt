@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.4]
 ! Title: Facebook Zuckestion Killer - Zero allow inclusive
-! Version: 202101112300
+! Version: 202110072249
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -13,281 +13,282 @@
 ||$websocket,domain=d.facebook.com
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [DOM Level 1]
-0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###bookmarkmenu table td a[href*="freebasics.com"]
-0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_loginbar_login_button
-0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_loginbar_reg_button
-0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_newsfeed_stream div > div[data-ft*="saved_for_later"]
-0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div[data-ft][data-xt*="sponsored"]
-0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root section article[data-ft*="quick_promotion_id"]
-0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root table > div table > a[href*="freebasics.com"]
-0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[id*="u_0_"][data-ft*="ego_id"]
-0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[id*="unit_id"] div[class] > a[href*="/send_page_invite/"]
-0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[role="article"] table td a[href*="/messenger-destination/cta/?"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###MNewsFeed section article[data-store*="originated_from_recommendation"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###MNewsFeed section div[data-store*="originated_from_recommendation"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###header #MBackNavBar
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###header div[data-sigil="upsell_curtain"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###mobile_video_feed_pagelet
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###page_suggestions_on_liking
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root #MRoot span[data-top-of-feed-unit-type*="megaphone"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root .scrollArea[data-sigil*="friends-center-nav"] a[data-ajaxify-href*="/friends/center/suggestions/"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div > a[href*="/friends/center/suggestions"][href*="empty_feed"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div > div[data-store*="actor_id"] div[data-sigil*="m-promo"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div a.sub[href*="?sk=h_nor"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root[data-sigil*="context-layer-root"] article div a[href*="/ads/preferences/interest_suggestions/"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport #header #mJewelNav #feed_jewel.hasCount a div span[data-sigil="count"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-ads #root article div[class] > [id][data-autoid] img[data-sigil="redirect_to_interest"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-ads .accelerate div[class] > div[class][style] div[class] > a[data-sigil="add"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-ads .accelerate div[class] > div[class][style] div[class] > a[href*="/ads/interest/?"][data-sigil="redirect_to_interest"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-ads .accelerate div[class] > div[class][style] div[class] > div[class][data-sigil="add_removed"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-ads .accelerate div[class] div[class][style] div[class] > a[data-sigil="redirect_to_advertiser"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-ads .accelerate div[class] div[class][style] div[class] > div a[href][data-sigil="add"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="0.facebook.com"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="/appcenter/165907476854626"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="/groups/"][href*="?ref=category_discover_landing"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="/lite/?"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="/people/home/"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="fb://offer"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="fb://search_voyager"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="free.facebook.com"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="freebasics.com"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="instagram.com"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="o.facebook.com"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="zero.facebook.com"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href*="/groups/"][href*="?ref=category_discover_landing"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href*="fb://offer"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href*="fb://search"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href="/appcenter/165907476854626"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href="/pages/"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.appCenterSimilarApps
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.story_body_container header > div a[href*="package=com.facebook.lite"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article._mFeedEgoSuggestionsBoatload__list
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article[data-ft*="mhpp_ego_service_type"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article[data-ft][data-xt*="sponsored"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article[data-store*="is_sponsored.1"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article[data-store*="quick_promotion_id"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article[data-xt*="is_sponsored.1"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[class*="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=103418383389257"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[class*="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=212609529249058"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[class*="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=234383826903707"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[class*="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=470739743275782"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[class*="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=1801122086782345"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-sigil="comment"] div[class] > div[data-sigil*="m-inline-reply-compose"] div[data-sigil="m-conversation-guide"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-store*="mobile_page_contextual_recommendations"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[id*="composer"] div[data-sigil="m-conversation-guide"]
-web.facebook.com##div[data-pagelet="CometMarketplaceHomeContentContainer"] [data-pagelet="StreamingBrowseFeed"] [data-pagelet="BrowseFeedUpsell_0"]
-web.facebook.com##div[data-pagelet="page"] [role="navigation"] div[data-visualcompletion] a[href*="/pages/?category=top"]
+0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##bookmarkmenu table td a[href*="freebasics.com"]
+0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_loginbar_login_button
+0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_loginbar_reg_button
+0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_newsfeed_stream div > div[data-ft*="saved_for_later"]
+0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div[data-ft][data-xt*="sponsored"]
+0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root section article[data-ft*="quick_promotion_id"]
+0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root table > div table > a[href*="freebasics.com"]
+0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[id*="u_0_"][data-ft*="ego_id"]
+0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[id*="unit_id"] div[class] > a[href*="/send_page_invite/"]
+0.facebook.com,d.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[role="article"] table td a[href*="/messenger-destination/cta/?"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##MNewsFeed section article[data-store*="originated_from_recommendation"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##MNewsFeed section div[data-store*="originated_from_recommendation"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##header #MBackNavBar
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##header div[data-sigil="upsell_curtain"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##mobile_video_feed_pagelet
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##page_suggestions_on_liking
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root #MRoot span[data-top-of-feed-unit-type*="megaphone"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root .scrollArea[data-sigil*="friends-center-nav"] a[data-ajaxify-href*="/friends/center/suggestions/"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div > a[href*="/friends/center/suggestions"][href*="empty_feed"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div > div[data-store*="actor_id"] div[data-sigil*="m-promo"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div a.sub[href*="?sk=h_nor"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root[data-sigil*="context-layer-root"] article div a[href*="/ads/preferences/interest_suggestions/"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport #header #mJewelNav #feed_jewel.hasCount a div span[data-sigil="count"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-ads #root article div[class] > [id][data-autoid] img[data-sigil="redirect_to_interest"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-ads .accelerate div[class] > div[class][style] div[class] > a[data-sigil="add"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-ads .accelerate div[class] > div[class][style] div[class] > a[href*="/ads/interest/?"][data-sigil="redirect_to_interest"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-ads .accelerate div[class] > div[class][style] div[class] > div[class][data-sigil="add_removed"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-ads .accelerate div[class] div[class][style] div[class] > a[data-sigil="redirect_to_advertiser"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-ads .accelerate div[class] div[class][style] div[class] > div a[href][data-sigil="add"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #root[role="main"] div > a[href*="0.facebook.com"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #root[role="main"] div > a[href*="/appcenter/165907476854626"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #root[role="main"] div > a[href*="/groups/"][href*="?ref=category_discover_landing"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #root[role="main"] div > a[href*="/lite/?"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #root[role="main"] div > a[href*="/people/home/"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #root[role="main"] div > a[href*="fb://offer"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #root[role="main"] div > a[href*="fb://search_voyager"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #root[role="main"] div > a[href*="free.facebook.com"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #root[role="main"] div > a[href*="freebasics.com"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #root[role="main"] div > a[href*="instagram.com"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #root[role="main"] div > a[href*="o.facebook.com"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #root[role="main"] div > a[href*="zero.facebook.com"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href*="/groups/"][href*="?ref=category_discover_landing"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href*="fb://offer"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href*="fb://search"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href="/appcenter/165907476854626"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #rootcontainer #root[role="main"] div[class] ul > li a[href="/pages/"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.appCenterSimilarApps
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.story_body_container header > div a[href*="package=com.facebook.lite"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article._mFeedEgoSuggestionsBoatload__list
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article[data-ft*="mhpp_ego_service_type"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article[data-ft][data-xt*="sponsored"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article[data-store*="is_sponsored.1"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article[data-store*="quick_promotion_id"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article[data-xt*="is_sponsored.1"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[class*="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=103418383389257"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[class*="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=212609529249058"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[class*="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=234383826903707"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[class*="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=470739743275782"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[class*="-hardstate-groups"] #root[role="main"] div > div a[href*="discover_category_id=1801122086782345"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[data-sigil="comment"] div[class] > div[data-sigil*="m-inline-reply-compose"] div[data-sigil="m-conversation-guide"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[data-store*="mobile_page_contextual_recommendations"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[id*="composer"] div[data-sigil="m-conversation-guide"]
+web.facebook.com#?#div[data-pagelet="CometMarketplaceHomeContentContainer"] [data-pagelet="StreamingBrowseFeed"] [data-pagelet="BrowseFeedUpsell_0"]
+web.facebook.com#?#div[data-pagelet="page"] [role="navigation"] div[data-visualcompletion] a[href*="/pages/?category=top"]
 
 ! [DOM Level 2]
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###friends_center_main div:has(table tr:has(td a[href*="pymk_funnel_data"]))
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_group_stories_container article:has(footer a[href*="/groups/?ref=category_discover_landing"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_group_stories_container div:has(div a[href*="/findgroups/"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_newsfeed_stream div div[data-ft]:has(div:has(a[href*="/qp/action/redirect/"]))
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_newsfeed_stream div[data-ft] > div a[href*="/mobile/friends/add_friend.php?"]
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###mobile_video_feed_pagelet div div[class]:has-text(/Top videos/):upward(1)
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###objects_container #root table td div > div:has(a[href*="/zero/toggle/enable/"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###objects_container #root table td div > div:has(a[href*="free.facebook.com/"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###objects_container #root table td div > div:has(a[href*="freebasics.com"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root #bookmarkmenu table:has(a[href*="/findfriends/browser/"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div div:has(div[id*="more_item_"]:has(a[href*="/findfriends/browser/?"]))
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div:has(table td a[href*="/collapse/"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div[data-ft]:has(a[href*="netego_suggestion"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root section article[data-ft*="quick_promotion_id"]
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root table div:has(div[id*="page_suggestion"]:has(div a[href*="&origin=mobile_page_browser&"]))
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root table td > div:has-text(/^Suggested/):has(ul li:has(table))
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###sub_profile_pic_content div > div:has(table a[href*="/search/"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###sub_profile_pic_content div > div:has(table[role]:has(td div:has-text(/^People also like/)))
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###sub_profile_pic_content div div[class] > :has(div[id][class] table[role="presentation"] div:has-text(/^Related/))
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###sub_profile_pic_content div[class]:has-text(/Related /)
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport #root div:has(h3):has(span a[href*="/dd/greeting/mbasic/more/tapped"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport #root div[data-ft]:has(h3:has-text(Facebook)):has(a[href*="/netego/redirect/"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport #root table td div div:has(a[href*="/lite/?"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div > :has(table[role="presentation"]:has(td a[href*="/qp/action/redirect/?"]))
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div > div:has(a[href*="/download.php"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div[class] > table[role]:has(td a[href*="/a/language.php?"][href*="ref_component=mbasic_footer"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-ft] > div > div:has(span a[href*="/boosted_post/"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-ft] div:has(table a[href*="mbasic_feed_post_like_chaining"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-ft] div:has(table a[href*="mbasic_feed_share_like_chaining"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-ft]:has(a[href*="[is_sponsored]=1"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-ft]:has(a[href*="is_sponsored=1"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-ft]:has(div a[href*="/friends/center/"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-ft]:has(div a[href*="/groups/?ref=category_discover_landing"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-ft]:has(span:has-text(/Sponsored/))
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-ft]:has(table td div:has(a[href*="origin=feed_pyml"]))
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[id*="u_0_"] table:has(td a[href*="/profilepicframes/"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[role="article"] div:has(table a[href*="mbasic_feed_post_like_chaining"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[role="article"] div:has(table a[href*="mbasic_feed_share_like_chaining"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[role="article"] table[role="presentation"]:has(td a[href*="/profilepicframes"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[role="article"]:has(div a[href*="/friends/center/"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[role="article"]:has(iframe[src*="/xti.php?"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[role="article"]:has(span:has-text(/Sponsored/))
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##table td#mEventsDashboard #events_dashboard_activity_feed:has(a[href*="suggestion_feed_unit"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div div[data-store*="share_id"] .story_body_container div[data-ft] div:has(.scrollArea:has(a[href*="/services?"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div:has(.scrollArea:has(a[href*="/commerce/products/"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###MNewsFeed section article .story_body_container div[data-ft] div[data-store*="share_id"] .story_body_container div div:has(.scrollArea:has(a[href*="/commerce/products/"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###MNewsFeed section article:has(.scrollArea:has(a#pyml_infinite_scroll_loading))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###events_dashboard_activity_feed section article:has(.scrollArea:has(.fbEventsEgoScroller))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###group-discover-lading-column div:has(div[id*="group-discover-card-"] a[href*="/groups/?"][href*="discover_category_id=103418383389257"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###group-discover-lading-column div:has(div[id*="group-discover-card-"] a[href*="/groups/?"][href*="discover_category_id=212609529249058"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###group-discover-lading-column div:has(div[id*="group-discover-card-"] a[href*="/groups/?"][href*="discover_category_id=234383826903707"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###group-discover-lading-column div:has(div[id*="group-discover-card-"] a[href*="/groups/?"][href*="discover_category_id=470739743275782"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###group-discover-lading-column div:has(div[id*="group-discover-card-"] a[href*="/groups/?"][href*="discover_category_id=1801122086782345"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###mEventsDashboard div > div[data-store-id] > div[data-store-id]:has(div[data-nt*="NT:BOX"]):has(.scrollArea)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###mJewelRequestsFlyoutBody div div:has(div[class] div[class]:has(div[data-pymk-id]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_group_stories_container section article:has(.scrollArea .scrollAreaColumn[data-sigil="m-groups-pymi-item"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_group_stories_container section article:has(div[id*="scrollarea"] div[id*="GroupMallGYSJSuggestionCard"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_group_stories_container section article:has(div[id*="scrollarea"] div[id*="GroupMallPYMISuggestionCard"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_group_stories_container section article:has(div[id*="scrollarea"] div[id*="Suggestion"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###m_newsfeed_stream section article:has(a[href*="source=promotion_feed_story"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###messages_jewel #messages_flyout div ol[data-sigil="contents"] li:has(div.ext a[href*="no_fw=1"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###msite-pages-header-contents div[style*="transparent none repeat scroll"]:has(#popup_xout)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###page #root div > div[data-store-id] > div[id*="unit_id"]:has-text(/^Related/):has(.scrollArea)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###page #root div > div[style*="bottom:"]:has(div[data-sigil="footer-launchpad-more-button"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###page #root header > div > div > div:has(a[href*="/pages/launchpoint/discover/"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###page article[data-sigil="pma-upsell"]:has(a[href*="com.facebook.pages.app"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###page div[id*="unit_id_"]:has(.scrollArea:has(.scrollAreaColumn div[data-autoid]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###page.-hardstate-local_surface #root[role="main"] > div[data-store-id] div > div[style*="flex-grow"][data-nt]:has(div[style*="flex-grow"][data-nt] > div[data-nt]:has-text(/^Popular /))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###page.-hardstate-local_surface #root[role="main"] > div[data-store-id] div > div[style*="flex-grow"][data-nt]:has(div[style*="flex-grow"][data-nt] > div[data-nt]:has-text(/^Suggested /))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###page[class*="-hardstate"] #pages_msite_body_contents > div[data-store-id] > div[data-store-id]:has(#page_suggestions_on_liking)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###pages_msite_body_contents div > div[style*="flex"][data-nt]:has(div[style*="flex"][data-nt*="CHILD"]):has(button[data-nt][data-sigil="touchable"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###pages_msite_body_contents div[data-store-id] > div[data-store-id] :has(div[data-store-id] > div[style*="flex-grow"] .scrollArea)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###pages_msite_body_contents div[data-store-id] > div[data-store-id] > div[data-nt] > div[data-nt]:has(.scrollArea):has(.scrollAreaBody[data-ad-preview])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###pages_msite_body_contents div[data-store-id] div[class][data-nt] > [data-nt*="FB:TEXT"]:has-text(/Friends who like/):upward(4)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###pages_msite_body_contents div[data-store-id] div[data-nt] > div[aria-label="Create Page"]:upward(7)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###pages_msite_body_contents:has(#page_suggestions_on_liking) div[class][data-nt] > div[data-nt*="NT:BUTTON"][aria-label="Invite Friends"]:upward(2)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div > div[class] a[href*="category_id=103418383389257"]:upward(5)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div > div[class] a[href*="category_id=212609529249058"]:upward(5)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div > div[class] a[href*="category_id=234383826903707"]:upward(5)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div > div[class] a[href*="category_id=470739743275782"]:upward(5)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div > div[class] a[href*="category_id=1801122086782345"]:upward(5)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div > div[class] a[href*="groups_browse/interests"]:upward(5)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div > div[data-sigil*="m_login_upsell"]:has(.grouped a[href*="facebook.com/click.php?redir_url"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root[role="main"] div[class] div[style="text-align: center"]:has(a[data-sigil*="AppGrowthCtaButton"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root[role="main"] div[style][data-store-id] > div[style*="flex"][data-nt] div[style*="flex"][data-nt] > :has(div[aria-label="Suggested Streamers"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###timelineProfileTiles div > div[data-autoid]:has(a[href*="?v=fun_facts&"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] > div[class][id*="u_0_"] div[class]:has(div[class][data-sigil*="ad-prefs-survey"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] > div[class][id*="u_0_"] div[class]:has(div[class][data-sigil*="adprefssurvey"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article div[id][class] div[class]:has(div[class][data-sigil*="ad-prefs-survey"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-ads #root div[class] article div[id][class] div[class]:has(div[class][data-sigil*="adprefssurvey"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-bookmarks #root[role="main"] div > a[href*="/pages/"]:has(div:has-text(/^Suggested/))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-gaming #root div[class][data-store-id] > div[class] > :has(a[href*="fb://gaming/"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-gaming #root div[class][data-store-id] > section:has(div[data-store-id] div[class][style*="flex-grow"] .scrollArea)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-groups #root div[class] > div div[class] > a[class][href="/groups_browse/"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-onthisday #root div[class][data-store-id] > div[class] > div a[href*="/onthisday/subscribe/?"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-pages #root .async_fan:has(.like_thumb_container)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.-hardstate-watch #root div[class] > div[id][class]:has(.story_body_container header div[class] a[href*="tracking_source.video_home"][href*="originated_from_recommendation"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a span:has-text(Instagram)))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="0.freebasics.com/?ref"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/ads/create/"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/appcenter/165907476854626?"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/friends/center/suggestions/"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/lite/?"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="/marketplace/?ref=bookmarks"] div span[data-sigil="marketplace_bookmark"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=124024574287414"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=275254692598279"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=343553122467255"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=399711043500146"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=456900714360021"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=526732794016279"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=645191315628772"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=762992637108088"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=1728807357362356"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="app_id=2805739562851096"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="fb://search_voyager"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="free.facebook.com/home.php?ref"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.mSideMenu li:has(.touchable:has(a[href*="instagram.com"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.storyStream section article:has(footer:has(a[data-ajaxify-href*="/qp/action/redirect/?"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##:xpath(//section//article[.//header//div//span/text()="Sponsored"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/"][href*="103418383389257"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/"][href*="212609529249058"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/"][href*="234383826903707"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/"][href*="470739743275782"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/"][href*="1801122086782345"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/interests/"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##[class*="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="103418383389257"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##[class*="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="212609529249058"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##[class*="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="234383826903707"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##[class*="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="470739743275782"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##[class*="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="1801122086782345"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article div > div[data-autoid] a[href*="/ads/interest/?"]:has(img[data-sigil="redirect_to_interest"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article:has(.scrollArea .async_fan)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article:has(.scrollArea div[data-sigil="ego-auto-pager"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article:has(.scrollArea):has(.scrollAreaBody div[data-ft*="ego_id"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article:has(a[data-uri*="[is_sponsored]=1"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article:has(a[data-uri*="is_sponsored=1"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article:has(a[href*="[is_sponsored]=1"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article:has(a[href*="is_sponsored=1"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article:has(div[data-sigil="egoScroller"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article:has(footer a[href*="/friends/center/"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article:has(footer a[href*="/saved/"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article:has(footer a[href*="www.instagram.com"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article:has(span[data-sigil="pixelContainer"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[class*="-hardstate-"] #root section article:has(.story_body_container div h3 a[href*="originated_from_recommendation"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-sigil*="story-div"] > div[class] > div[class]:has(#popup_xout)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-sigil="comment"] section.touchable:has(div header h3)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##section article .story_body_container .story_body_container > div > div:has(.scrollArea .scrollAreaColumn)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##section article:has(.scrollArea):has(a[href*="instagram.com"])
-web.facebook.com###watch_feed div[data-pagelet="MainFeed"] div[class] h2:has(span:has-text(/Top videos/)):upward(4)
-web.facebook.com##div[aria-label="Gaming"][role="main"] div[class] > h2[dir]:has(span[dir]>:has-text(/New for you/)):upward(8)
-web.facebook.com##div[aria-label="Gaming"][role="main"] div[class] > h2[dir]:has(span[dir]>:has-text(/Suggested/)):upward(8)
-web.facebook.com##div[aria-label="Gaming"][role="navigation"] div[class]> h2[dir]:has(span div[class]> a[href*="SUGGESTED"]):upward(8)
-web.facebook.com##div[data-pagelet="ChatTab"] [data-testid="Keycommand_wrapper_ModalLayer"] [role="tablist"] [aria-selected][role="tab"] span[dir]:has-text(/Suggested/):upward(1)
-web.facebook.com##div[data-pagelet="GroupFeed"] div[class] > div[aria-label="Create Room"]:has(span[dir]):upward(6)
-web.facebook.com##div[data-pagelet="RightRail"] div[class] h3[dir]:has(span[dir]:has-text(/Sponsored/)):upward(7)
-web.facebook.com##div[data-pagelet="TahoeVideo"] div[data-instancekey] div[role="presentation"] div[class] > span[dir]:has-text(Top videos):upward(3)
-web.facebook.com##div[data-pagelet="page"] div[role="main"] div[class] > [style] span[dir]:has-text(/Friends and /):upward(3)
-web.facebook.com##div[data-pagelet="page"] div[role="main"] div[class] > [style] span[dir]:has-text(Top fans):upward(3)
-web.facebook.com##div[data-pagelet="page"] div[role="main"] div[class] > a[href*="/events/"][role]:has(div[class] > div[aria-label="Interested"]):upward(2)
-web.facebook.com##div[data-pagelet="page"] div[role="main"] div[class] > div[data-visualcompletion] div[aria-label="Invite"]:upward(10)
-web.facebook.com##div[role="complementary"] div[data-pagelet="TahoeRightRail"] div[class] span[dir]:has-text(Up next):upward(2)
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##friends_center_main div:has(table tr:has(td a[href*="pymk_funnel_data"]))
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_group_stories_container article:has(footer a[href*="/groups/?ref=category_discover_landing"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_group_stories_container div:has(div a[href*="/findgroups/"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_newsfeed_stream div div[data-ft]:has(div:has(a[href*="/qp/action/redirect/"]))
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_newsfeed_stream div[data-ft] > div a[href*="/mobile/friends/add_friend.php?"]
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##mobile_video_feed_pagelet div div[class]:has-text(/Top videos/):upward(1)
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##objects_container #root table td div > div:has(a[href*="/zero/toggle/enable/"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##objects_container #root table td div > div:has(a[href*="free.facebook.com/"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##objects_container #root table td div > div:has(a[href*="freebasics.com"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root #bookmarkmenu table:has(a[href*="/findfriends/browser/"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div div:has(div[id*="more_item_"]:has(a[href*="/findfriends/browser/?"]))
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div:has(table td a[href*="/collapse/"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div[data-ft]:has(a[href*="netego_suggestion"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root section article[data-ft*="quick_promotion_id"]
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root table div:has(div[id*="page_suggestion"]:has(div a[href*="&origin=mobile_page_browser&"]))
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root table td > div:has-text(/^Suggested/):has(ul li:has(table))
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##sub_profile_pic_content div > div:has(table a[href*="/search/"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##sub_profile_pic_content div > div:has(table[role]:has(td div:has-text(/^People also like/)))
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##sub_profile_pic_content div div[class] > :has(div[id][class] table[role="presentation"] div:has-text(/^Related/))
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##sub_profile_pic_content div[class]:has-text(/Related /)
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport #root div:has(h3):has(span a[href*="/dd/greeting/mbasic/more/tapped"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport #root div[data-ft]:has(h3:has-text(Facebook)):has(a[href*="/netego/redirect/"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport #root table td div div:has(a[href*="/lite/?"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport div > :has(table[role="presentation"]:has(td a[href*="/qp/action/redirect/?"]))
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport div > div:has(a[href*="/download.php"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport div[class] > table[role]:has(td a[href*="/a/language.php?"][href*="ref_component=mbasic_footer"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[data-ft] > div > div:has(span a[href*="/boosted_post/"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[data-ft] div:has(table a[href*="mbasic_feed_post_like_chaining"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[data-ft] div:has(table a[href*="mbasic_feed_share_like_chaining"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[data-ft]:has(a[href*="[is_sponsored]=1"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[data-ft]:has(a[href*="is_sponsored=1"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[data-ft]:has(div a[href*="/friends/center/"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[data-ft]:has(div a[href*="/groups/?ref=category_discover_landing"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[data-ft]:has(span:has-text(/Sponsored/))
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[data-ft]:has(table td div:has(a[href*="origin=feed_pyml"]))
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[id*="u_0_"] table:has(td a[href*="/profilepicframes/"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[role="article"] div:has(table a[href*="mbasic_feed_post_like_chaining"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[role="article"] div:has(table a[href*="mbasic_feed_share_like_chaining"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[role="article"] table[role="presentation"]:has(td a[href*="/profilepicframes"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[role="article"]:has(div a[href*="/friends/center/"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[role="article"]:has(iframe[src*="/xti.php?"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[role="article"]:has(span:has-text(/Sponsored/))
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#table td#mEventsDashboard #events_dashboard_activity_feed:has(a[href*="suggestion_feed_unit"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##MNewsFeed section article .story_body_container div[data-ft] div div[data-store*="share_id"] .story_body_container div[data-ft] div:has(.scrollArea:has(a[href*="/services?"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##MNewsFeed section article .story_body_container div[data-ft] div:has(.scrollArea:has(a[href*="/commerce/products/"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##MNewsFeed section article .story_body_container div[data-ft] div[data-store*="share_id"] .story_body_container div div:has(.scrollArea:has(a[href*="/commerce/products/"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##MNewsFeed section article:has(.scrollArea:has(a#pyml_infinite_scroll_loading))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##events_dashboard_activity_feed section article:has(.scrollArea:has(.fbEventsEgoScroller))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##group-discover-lading-column div:has(div[id*="group-discover-card-"] a[href*="/groups/?"][href*="discover_category_id=103418383389257"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##group-discover-lading-column div:has(div[id*="group-discover-card-"] a[href*="/groups/?"][href*="discover_category_id=212609529249058"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##group-discover-lading-column div:has(div[id*="group-discover-card-"] a[href*="/groups/?"][href*="discover_category_id=234383826903707"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##group-discover-lading-column div:has(div[id*="group-discover-card-"] a[href*="/groups/?"][href*="discover_category_id=470739743275782"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##group-discover-lading-column div:has(div[id*="group-discover-card-"] a[href*="/groups/?"][href*="discover_category_id=1801122086782345"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##mEventsDashboard div > div[data-store-id] > div[data-store-id]:has(div[data-nt*="NT:BOX"]):has(.scrollArea)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##mJewelRequestsFlyoutBody div div:has(div[class] div[class]:has(div[data-pymk-id]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_group_stories_container section article:has(.scrollArea .scrollAreaColumn[data-sigil="m-groups-pymi-item"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_group_stories_container section article:has(div[id*="scrollarea"] div[id*="GroupMallGYSJSuggestionCard"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_group_stories_container section article:has(div[id*="scrollarea"] div[id*="GroupMallPYMISuggestionCard"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_group_stories_container section article:has(div[id*="scrollarea"] div[id*="Suggestion"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_newsfeed_stream section article:has(a[href*="source=promotion_feed_story"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##messages_jewel #messages_flyout div ol[data-sigil="contents"] li:has(div.ext a[href*="no_fw=1"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##msite-pages-header-contents div[style*="transparent none repeat scroll"]:has(#popup_xout)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##page #root div > div[data-store-id] > div[id*="unit_id"]:has-text(/^Related/):has(.scrollArea)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##page #root div > div[style*="bottom:"]:has(div[data-sigil="footer-launchpad-more-button"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##page #root header > div > div > div:has(a[href*="/pages/launchpoint/discover/"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##page article[data-sigil="pma-upsell"]:has(a[href*="com.facebook.pages.app"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##page div[id*="unit_id_"]:has(.scrollArea:has(.scrollAreaColumn div[data-autoid]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##page.-hardstate-local_surface #root[role="main"] > div[data-store-id] div > div[style*="flex-grow"][data-nt]:has(div[style*="flex-grow"][data-nt] > div[data-nt]:has-text(/^Popular /))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##page.-hardstate-local_surface #root[role="main"] > div[data-store-id] div > div[style*="flex-grow"][data-nt]:has(div[style*="flex-grow"][data-nt] > div[data-nt]:has-text(/^Suggested /))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##page[class*="-hardstate"] #pages_msite_body_contents > div[data-store-id] > div[data-store-id]:has(#page_suggestions_on_liking)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##pages_msite_body_contents div > div[style*="flex"][data-nt]:has(div[style*="flex"][data-nt*="CHILD"]):has(button[data-nt][data-sigil="touchable"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##pages_msite_body_contents div[data-store-id] > div[data-store-id] :has(div[data-store-id] > div[style*="flex-grow"] .scrollArea)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##pages_msite_body_contents div[data-store-id] > div[data-store-id] > div[data-nt] > div[data-nt]:has(.scrollArea):has(.scrollAreaBody[data-ad-preview])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##pages_msite_body_contents div[data-store-id] div[class][data-nt] > [data-nt*="FB:TEXT"]:has-text(/Friends who like/):upward(4)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##pages_msite_body_contents div[data-store-id] div[data-nt] > div[aria-label="Create Page"]:upward(7)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##pages_msite_body_contents:has(#page_suggestions_on_liking) div[class][data-nt] > div[data-nt*="NT:BUTTON"][aria-label="Invite Friends"]:upward(2)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div > div[class] a[href*="category_id=103418383389257"]:upward(5)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div > div[class] a[href*="category_id=212609529249058"]:upward(5)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div > div[class] a[href*="category_id=234383826903707"]:upward(5)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div > div[class] a[href*="category_id=470739743275782"]:upward(5)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div > div[class] a[href*="category_id=1801122086782345"]:upward(5)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div > div[class] a[href*="groups_browse/interests"]:upward(5)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div > div[data-sigil*="m_login_upsell"]:has(.grouped a[href*="facebook.com/click.php?redir_url"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root[role="main"] div[class] div[style="text-align: center"]:has(a[data-sigil*="AppGrowthCtaButton"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root[role="main"] div[style][data-store-id] > div[style*="flex"][data-nt] div[style*="flex"][data-nt] > :has(div[aria-label="Suggested Streamers"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##timelineProfileTiles div > div[data-autoid]:has(a[href*="?v=fun_facts&"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-ads #root div[class] > div[class][id*="u_0_"] div[class]:has(div[class][data-sigil*="ad-prefs-survey"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-ads #root div[class] > div[class][id*="u_0_"] div[class]:has(div[class][data-sigil*="adprefssurvey"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-ads #root div[class] article div[id][class] div[class]:has(div[class][data-sigil*="ad-prefs-survey"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-ads #root div[class] article div[id][class] div[class]:has(div[class][data-sigil*="adprefssurvey"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-bookmarks #root[role="main"] div > a[href*="/pages/"]:has(div:has-text(/^Suggested/))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-gaming #root div[class][data-store-id] > div[class] > :has(a[href*="fb://gaming/"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-gaming #root div[class][data-store-id] > section:has(div[data-store-id] div[class][style*="flex-grow"] .scrollArea)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-groups #root div[class] > div div[class] > a[class][href="/groups_browse/"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-onthisday #root div[class][data-store-id] > div[class] > div a[href*="/onthisday/subscribe/?"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-pages #root .async_fan:has(.like_thumb_container)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.-hardstate-watch #root div[class] > div[id][class]:has(.story_body_container header div[class] a[href*="tracking_source.video_home"][href*="originated_from_recommendation"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a span:has-text(Instagram)))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="0.freebasics.com/?ref"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="/ads/create/"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="/appcenter/165907476854626?"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="/friends/center/suggestions/"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="/lite/?"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="/marketplace/?ref=bookmarks"] div span[data-sigil="marketplace_bookmark"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="app_id=124024574287414"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="app_id=146931289068721"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="app_id=275254692598279"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="app_id=343553122467255"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="app_id=399711043500146"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="app_id=456900714360021"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="app_id=526732794016279"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="app_id=645191315628772"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="app_id=762992637108088"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="app_id=1728807357362356"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="app_id=2805739562851096"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="fb://search_voyager"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="free.facebook.com/home.php?ref"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="instagram.com"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.storyStream section article:has(footer:has(a[data-ajaxify-href*="/qp/action/redirect/?"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#:xpath(//section//article[.//header//div//span/text()="Sponsored"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/"][href*="103418383389257"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/"][href*="212609529249058"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/"][href*="234383826903707"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/"][href*="470739743275782"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/"][href*="1801122086782345"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/interests/"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#[class*="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="103418383389257"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#[class*="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="212609529249058"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#[class*="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="234383826903707"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#[class*="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="470739743275782"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#[class*="-hardstate-groups"] #root div[class] > div div[class] > div[class]:has(div[class] a[href*="1801122086782345"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article div > div[data-autoid] a[href*="/ads/interest/?"]:has(img[data-sigil="redirect_to_interest"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article:has(.scrollArea .async_fan)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article:has(.scrollArea div[data-sigil="ego-auto-pager"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article:has(.scrollArea):has(.scrollAreaBody div[data-ft*="ego_id"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article:has(a[data-uri*="[is_sponsored]=1"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article:has(a[data-uri*="is_sponsored=1"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article:has(a[href*="[is_sponsored]=1"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article:has(a[href*="is_sponsored=1"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article:has(div[data-sigil="egoScroller"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article:has(footer a[href*="/friends/center/"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article:has(footer a[href*="/saved/"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article:has(footer a[href*="www.instagram.com"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article:has(span[data-sigil="pixelContainer"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[class*="-hardstate-"] #root section article:has(.story_body_container div h3 a[href*="originated_from_recommendation"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[data-sigil*="story-div"] > div[class] > div[class]:has(#popup_xout)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[data-sigil="comment"] section.touchable:has(div header h3)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#section article .story_body_container .story_body_container > div > div:has(.scrollArea .scrollAreaColumn)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#section article:has(.scrollArea):has(a[href*="instagram.com"])
+web.facebook.com#?##watch_feed div[data-pagelet="MainFeed"] div[class] h2:has(span:has-text(/Top videos/)):upward(4)
+web.facebook.com#?#div[aria-label="Gaming"][role="main"] div[class] > h2[dir]:has(span[dir]>:has-text(/New for you/)):upward(8)
+web.facebook.com#?#div[aria-label="Gaming"][role="main"] div[class] > h2[dir]:has(span[dir]>:has-text(/Suggested/)):upward(8)
+web.facebook.com#?#div[aria-label="Gaming"][role="navigation"] div[class]> h2[dir]:has(span div[class]> a[href*="SUGGESTED"]):upward(8)
+web.facebook.com#?#div[data-pagelet="ChatTab"] [data-testid="Keycommand_wrapper_ModalLayer"] [role="tablist"] [aria-selected][role="tab"] span[dir]:has-text(/Suggested/):upward(1)
+web.facebook.com#?#div[data-pagelet="GroupFeed"] div[class] > div[aria-label="Create Room"]:has(span[dir]):upward(6)
+web.facebook.com#?#div[data-pagelet="RightRail"] div[class] h3[dir]:has(span[dir]:has-text(/Sponsored/)):upward(7)
+web.facebook.com#?#div[data-pagelet="TahoeVideo"] div[data-instancekey] div[role="presentation"] div[class] > span[dir]:has-text(Top videos):upward(3)
+web.facebook.com#?#div[data-pagelet="page"] div[role="main"] div[class] > [style] span[dir]:has-text(/Friends and /):upward(3)
+web.facebook.com#?#div[data-pagelet="page"] div[role="main"] div[class] > [style] span[dir]:has-text(Top fans):upward(3)
+web.facebook.com#?#div[data-pagelet="page"] div[role="main"] div[class] > a[href*="/events/"][role]:has(div[class] > div[aria-label="Interested"]):upward(2)
+web.facebook.com#?#div[data-pagelet="page"] div[role="main"] div[class] > div[data-visualcompletion] div[aria-label="Invite"]:upward(10)
+web.facebook.com#?#div[role="complementary"] div[data-pagelet="TahoeRightRail"] div[class] span[dir]:has-text(Up next):upward(2)
 
 ! [DOM Level 3]
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport #root div:not([id*="MPhoto"]) > table[role] tbody:has(a[href*="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div:not(#objects_container) > div:has(table[role] a[href*="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div:not(#objects_container) > table[class] td a[href*="facebook.com/l.php?"]:has(span)
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###viewport div:not([id]) > table:has(td a[href*="/a/language.php?"][href*="ref_component=mbasic_footer"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport #root div:not([id*="MPhoto"]) > table[role] tbody:has(a[href*="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport div:not(#objects_container) > div:has(table[role] a[href*="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport div:not(#objects_container) > table[class] td a[href*="facebook.com/l.php?"]:has(span)
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport div:not([id]) > table:has(td a[href*="/a/language.php?"][href*="ref_component=mbasic_footer"])
 
 ! [DOM Level 4]
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###friends_center_main div:has(table tr:has(td a[href*="pymk_funnel_data"])):remove()
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root section article[data-ft*="quick_promotion_id"]:remove()
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root table div:has(div[id*="page_suggestion"]:has(div a[href*="&origin=mobile_page_browser&"])):remove()
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root table td > div:has-text(/^Suggested/):has(ul li:has(table)):remove()
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###sub_profile_pic_content div[class]:has-text(/Related /):remove()
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###header #MBackNavBar:remove()
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###header div[data-sigil="upsell_curtain"]:remove()
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###mobile_video_feed_pagelet:remove()
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###page_suggestions_on_liking:remove()
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###pages_msite_body_contents div[data-store-id] div[class][data-nt] > [data-nt*="FB:TEXT"]:has-text(/Friends who like/):upward(4):remove()
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###pages_msite_body_contents div[data-store-id] div[data-nt] > div[aria-label="Create Page"]:upward(7):remove()
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###pages_msite_body_contents:has(#page_suggestions_on_liking) div[class][data-nt] > div[data-nt*="NT:BUTTON"][aria-label="Invite Friends"]:upward(2):remove()
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div[class][data-sigil="loggedout_mobile_cta_footer"]:upward(1):remove()
-web.facebook.com###watch_feed div[data-pagelet="MainFeed"] div[class] h2:has(span:has-text(/Top videos/)):upward(4):remove()
-web.facebook.com##div[aria-label="Gaming"][role="main"] div[class] > h2[dir]:has(span[dir]>:has-text(/New for you/)):upward(8):remove()
-web.facebook.com##div[aria-label="Gaming"][role="main"] div[class] > h2[dir]:has(span[dir]>:has-text(/Suggested/)):upward(8):remove()
-web.facebook.com##div[aria-label="Gaming"][role="navigation"] div[class]> h2[dir]:has(span div[class]> a[href*="SUGGESTED"]):upward(8):remove()
-web.facebook.com##div[data-pagelet="ChatTab"] [data-testid="Keycommand_wrapper_ModalLayer"] [role="tablist"] [aria-selected][role="tab"] span[dir]:has-text(/Suggested/):upward(1):remove()
-web.facebook.com##div[data-pagelet="CometMarketplaceHomeContentContainer"] [data-pagelet="StreamingBrowseFeed"] [data-pagelet="BrowseFeedUpsell_0"]:remove()
-web.facebook.com##div[data-pagelet="RightRail"] div[class] h3[dir]:has(span[dir]:has-text(/Sponsored/)):upward(7):remove()
-web.facebook.com##div[data-pagelet="page"] [role="navigation"] div[data-visualcompletion] a[href*="/pages/?category=top"]:remove()
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##friends_center_main div:has(table tr:has(td a[href*="pymk_funnel_data"])):remove()
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root section article[data-ft*="quick_promotion_id"]:remove()
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root table div:has(div[id*="page_suggestion"]:has(div a[href*="&origin=mobile_page_browser&"])):remove()
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root table td > div:has-text(/^Suggested/):has(ul li:has(table)):remove()
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##sub_profile_pic_content div[class]:has-text(/Related /):remove()
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##header #MBackNavBar:remove()
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##header div[data-sigil="upsell_curtain"]:remove()
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##mobile_video_feed_pagelet:remove()
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##page_suggestions_on_liking:remove()
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##pages_msite_body_contents div[data-store-id] div[class][data-nt] > [data-nt*="FB:TEXT"]:has-text(/Friends who like/):upward(4):remove()
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##pages_msite_body_contents div[data-store-id] div[data-nt] > div[aria-label="Create Page"]:upward(7):remove()
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##pages_msite_body_contents:has(#page_suggestions_on_liking) div[class][data-nt] > div[data-nt*="NT:BUTTON"][aria-label="Invite Friends"]:upward(2):remove()
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div[class][data-sigil="loggedout_mobile_cta_footer"]:upward(1):remove()
+web.facebook.com#?##watch_feed div[data-pagelet="MainFeed"] div[class] h2:has(span:has-text(/Top videos/)):upward(4):remove()
+web.facebook.com#?#div[aria-label="Gaming"][role="main"] div[class] > h2[dir]:has(span[dir]>:has-text(/New for you/)):upward(8):remove()
+web.facebook.com#?#div[aria-label="Gaming"][role="main"] div[class] > h2[dir]:has(span[dir]>:has-text(/Suggested/)):upward(8):remove()
+web.facebook.com#?#div[aria-label="Gaming"][role="navigation"] div[class]> h2[dir]:has(span div[class]> a[href*="SUGGESTED"]):upward(8):remove()
+web.facebook.com#?#div[data-pagelet="ChatTab"] [data-testid="Keycommand_wrapper_ModalLayer"] [role="tablist"] [aria-selected][role="tab"] span[dir]:has-text(/Suggested/):upward(1):remove()
+web.facebook.com#?#div[data-pagelet="CometMarketplaceHomeContentContainer"] [data-pagelet="StreamingBrowseFeed"] [data-pagelet="BrowseFeedUpsell_0"]:remove()
+web.facebook.com#?#div[data-pagelet="RightRail"] div[class] h3[dir]:has(span[dir]:has-text(/Sponsored/)):upward(7):remove()
+web.facebook.com#?#div[data-pagelet="page"] [role="navigation"] div[data-visualcompletion] a[href*="/pages/?category=top"]:remove()
 
 ! [DOM CSS Modify]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###MNewsFeed section article .story_body_container header a[href*="/mobile/android/upsell_link/"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root[role="main"] div[class] a[data-sigil="AppGrowthCtaButton"]:style(pointer-events: none !important)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article #advertiserhidden div[data-sigil="ad-prefs-advertiser-section"] .scrollArea .scrollAreaBody a[data-sigil="ad-prefs-advertiser-preview-link"]:style(pointer-events: none !important)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article .story_body_container div > div a[href*="/mobile/"][href*="/upsell_link/?"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article div > div[data-autoid] a[data-sigil="redirect_to_advertiser"]:style(color: red !important; text-decoration: none !important; pointer-events: none !important)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##article div > div[data-autoid] a[href*="/ads/interest/?"]:style(color: red !important; text-decoration: none !important; pointer-events: none !important)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[data-sigil="m-feed-voice-subtitle"] a[href*="/mobile/"][href*="/upsell_link/?"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##section article .story_body_container header div > div a[href*="facebook.com/lite/?"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##MNewsFeed section article .story_body_container header a[href*="/mobile/android/upsell_link/"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root[role="main"] div[class] a[data-sigil="AppGrowthCtaButton"]:style(pointer-events: none !important)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article #advertiserhidden div[data-sigil="ad-prefs-advertiser-section"] .scrollArea .scrollAreaBody a[data-sigil="ad-prefs-advertiser-preview-link"]:style(pointer-events: none !important)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article .story_body_container div > div a[href*="/mobile/"][href*="/upsell_link/?"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article div > div[data-autoid] a[data-sigil="redirect_to_advertiser"]:style(color: red !important; text-decoration: none !important; pointer-events: none !important)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#article div > div[data-autoid] a[href*="/ads/interest/?"]:style(color: red !important; text-decoration: none !important; pointer-events: none !important)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[data-sigil="m-feed-voice-subtitle"] a[href*="/mobile/"][href*="/upsell_link/?"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#section article .story_body_container header div > div a[href*="facebook.com/lite/?"]:style(background: none whitesmoke !important; color: darkblue !important; pointer-events: none !important)
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Experiment Zone]
 !#if env_mobile
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##div[role="article"] div:has(div > span a[href*="/zero/optin/legal/"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##form[action*="/zero/optin/write/"] input[type="submit"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###friends_center_main div[data-pymk-id]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###pages_msite_body_contents div > div[data-store*="logging_data"][data-sigil="reaction-unit-logging"]:has(div[data-nt][data-ntid] img[data-nt="NT:IMAGE"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div article div:has(span a[href*="/zero/optin/legal/"])
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com###root div article form[action*="/zero/optin/write/"] button[type="submit"]
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com##.async_fan:has(div div a.darkTouch[href*="pages_nav_discover"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[role="article"] div:has(div > span a[href*="/zero/optin/legal/"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#form[action*="/zero/optin/write/"] input[type="submit"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##friends_center_main div[data-pymk-id]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##pages_msite_body_contents div > div[data-store*="logging_data"][data-sigil="reaction-unit-logging"]:has(div[data-nt][data-ntid] img[data-nt="NT:IMAGE"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div article div:has(span a[href*="/zero/optin/legal/"])
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div article form[action*="/zero/optin/write/"] button[type="submit"]
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.async_fan:has(div div a.darkTouch[href*="pages_nav_discover"])
 !#endif
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
