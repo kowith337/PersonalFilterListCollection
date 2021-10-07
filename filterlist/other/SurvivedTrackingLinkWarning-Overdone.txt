@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202108081445
+! Version: 202110072330
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -296,21 +296,15 @@
 !   You cannot perform certain actions while using its website, so I've decided to add query prune rules for addition, but please
 !   note that `queryprune` will clean only first detected parameter (race condition), it cannot clear multiple parameters in each
 !   requests, probably some information still slipped through other parameters that cannot removed at that time.
-||*$document,subdocument,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^__(c(cr|ft)?|rv|so|tn|xts?)__$/
-||*$document,subdocument,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^c\[\d+?\]$/
-||*$document,subdocument,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^__m_(async_page|log_async)__$/
-||*&fb_dtsg=$first-party,subdocument,xmlhttprequest,removeparam=fb_dtsg,domain=facebook.com|messenger.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com
-||*&fb_dtsg_*=$first-party,subdocument,xmlhttprequest,removeparam=/^fb_dtsg_/,domain=facebook.com|messenger.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com
-||*&privacy_*=$subdocument,xmlhttprequest,removeparam=/^privacy_/,domain=facebook.com|messenger.com
-||*&ser=$subdocument,xmlhttprequest,domain=steamcommunity.com|steampowered.com,removeparam=ser
-||*&snr=$subdocument,xmlhttprequest,domain=steamcommunity.com|steampowered.com,removeparam=snr
-||*?fb_dtsg=$first-party,subdocument,xmlhttprequest,removeparam=fb_dtsg,domain=facebook.com|messenger.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com
-||*?fb_dtsg_*=$first-party,subdocument,xmlhttprequest,removeparam=/^fb_dtsg_/,domain=facebook.com|messenger.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com
-||*?privacy_*=$subdocument,xmlhttprequest,removeparam=/^privacy_/,domain=facebook.com|messenger.com
-||*?ser=$subdocument,xmlhttprequest,domain=steamcommunity.com|steampowered.com,removeparam=ser
-||*?snr=$subdocument,xmlhttprequest,domain=steamcommunity.com|steampowered.com,removeparam=snr
-||github.com/*&notification*=$first-party,removeparam=/^notification/
-||github.com/*?notification*=$first-party,removeparam=/^notification/
+$document,subdocument,xmlhttprequest,domain=facebook.com|messenger.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com,removeparam=/^fb_dtsg_?/i
+$document,subdocument,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^(__)?m_$/
+$document,subdocument,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^__(c(cr|ft)?|rv|so|tn|xts?)__$/
+$document,subdocument,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^c\[\d+?\]$/
+$document,subdocument,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^privacy_/i
+$document,subdocument,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=rc
+$first-party,domain=github.com,removeparam=/^notifications?/i
+$subdocument,xmlhttprequest,domain=steamcommunity.com|steampowered.com,removeparam=/^curator_/i
+$subdocument,xmlhttprequest,domain=steamcommunity.com|steampowered.com,removeparam=/^s(e|n)r/i
 
 
 ! Known breaking, at your own risk!
