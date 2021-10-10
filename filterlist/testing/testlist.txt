@@ -1,6 +1,6 @@
 [uBlock Origin 1.34.1.2]
 ! Title: kowith337's Test List
-! Version: 202110072108
+! Version: 202110102122
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -53,8 +53,8 @@ youtube.com#?##masthead #end #buttons ytd-button-renderer:has(a[href*="/ServiceL
 ! - For unclear reason, because I have use touchscreen notebook and found that I've redirected to donation page unintentionally,
 !   even I just tap onto the blank space, probably navigation header placement issue that will be a short time while page loading
 !   will be see some icon enlarged, absolutely it's `Liberapay` logo are cover the page entirely at that moment!
-bird.nogafam.es,bird.trom.tf,birdsite.xanny.family,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.bcow.xyz,nitter.cattube.org,nitter.didw.to,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.grimneko.de,nitter.ir,nitter.koyu.space,nitter.mailstation.de,nitter.mha.fi,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.unixfox.eu,twitter.censors.us#?#.inner-nav a[href*="liberapay"]
-bird.nogafam.es,bird.trom.tf,birdsite.xanny.family,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.bcow.xyz,nitter.cattube.org,nitter.didw.to,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.grimneko.de,nitter.ir,nitter.koyu.space,nitter.mailstation.de,nitter.mha.fi,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.snopyta.org,nitter.unixfox.eu,twitter.censors.us#?#.inner-nav a[href*="liberapay"]:remove()
+bird.nogafam.es,bird.trom.tf,birdsite.xanny.family,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.ca,nitter.cattube.org,nitter.didw.to,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.grimneko.de,nitter.ir,nitter.it,nitter.net,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]
+bird.nogafam.es,bird.trom.tf,birdsite.xanny.family,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.ca,nitter.cattube.org,nitter.didw.to,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.grimneko.de,nitter.ir,nitter.it,nitter.net,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]:remove()
 
 ! [Pantip] Explicit and spam topic name (Use Thai unicode characters because most language of this site are mainly in Thai)
 pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(ตระกองขวัญ))

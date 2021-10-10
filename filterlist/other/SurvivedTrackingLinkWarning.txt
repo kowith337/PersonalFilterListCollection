@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 202104121346
+! Version: 202110080006
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -19,14 +19,14 @@
 ! Common Extrenal
 ||*&amp_*=*&usqp=*$document,important,domain=~Caution_Google-AMP-Page-MultiParams
 ||*&fbclid$document,important,domain=~ClickTrack_FacebookClickID
-||*&gclid$document,important,domain=~ClickTrack_Google-aka-FacebookCopyCat
+||*&gclid$document,important,domain=~ClickTrack_Google-ClickID-CopyCat
 ||*&utm_*=$document,important,domain=~ClickTrack_Google-UrChin-Metadata
-||*&yclid$document,important,domain=~ClickTrack_Yandex-aka-FacebookCopyCat
+||*&yclid$document,important,domain=~ClickTrack_Yahoo-Yandex-ClickID-CopyCat
 ||*?amp_*=*&usqp=*$document,important,domain=~Caution_Google-AMP-Page-MultiParams
 ||*?fbclid$document,important,domain=~ClickTrack_FacebookClickID
-||*?gclid$document,important,domain=~ClickTrack_Google-aka-FacebookCopyCat
+||*?gclid$document,important,domain=~ClickTrack_Google-ClickID-CopyCat
 ||*?utm_*=$document,important,domain=~ClickTrack_Google-UrChin-Metadata
-||*?yclid$document,important,domain=~ClickTrack_Yandex-aka-FacebookCopyCat
+||*?yclid$document,important,domain=~ClickTrack_Yahoo-Yandex-ClickID-CopyCat
 
 ! Shady outgoing prompt from first party service
 ||facebook.com/flx/*&h=$document,important,domain=~FacebookExternalLinkWarning-H-Tracking-Param
