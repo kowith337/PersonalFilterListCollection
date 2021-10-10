@@ -1,6 +1,6 @@
 ! uMatrix: Ruleset recipes 1.4.1
 ! Title: Self Custom Ruleset
-! Version: 202105171420
+! Version: 202110102308
 ! VersionNumber: 0.45.0
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -14,15 +14,15 @@ Bing Translator (Edge Internal)
 		! However, you may need to refresh once after apply ruleset
 		! and try click that menu again in order to allow Edge
 		! translate current page properly.
-			_ edge.microsoft.com fetch
-			_ api.cognitive.microsofttranslator.com fetch
+			_ edge.microsoft.com xhr
+			_ api.cognitive.microsofttranslator.com xhr
 
 Discord (Mid-2020)
 	discord.com *
 		! You should block "Sentry" globally, no matter what!
 		! * sentry.io * block
-			_ discord.gg fetch
-			_ discord.media fetch
+			_ discord.gg xhr
+			_ discord.media xhr
 
 Etterna Online
 	etternaonline.com *
@@ -77,7 +77,25 @@ Google Translate (Chrome Internal)
 		! However, you may need to refresh once after apply ruleset
 		! and try click that menu again in order to allow Chrome
 		! translate current page properly.
-			_ translate.googleapis.com fetch
+			_ translate.googleapis.com xhr
+
+Google Translate (NewTab method)
+	translate.goog *
+		! This ruleset is an experimental support for any branded
+		! Chromium forks that support page translation with new tab
+		! method (e.g. Kinza), since `Goolag` limit their `Chrome`
+		! API and related services to only use by Chrome itself,
+		! esp. sync (bookmark/extensions/tabs/etc.), translate.
+		! And I'm not care about syncing with Chrome anymore!
+		!
+		! [Advised user-side rules]:
+		! _ play.google.com * block
+		_ translate.google.com frame
+		_ translate.google.com script
+		_ translate.googleapis.com script
+		_ translate.googleapis.com xhr
+		_ www.gstatic.com script
+
 
 Invidious [Global]
 	* googlevideo.com
@@ -93,13 +111,13 @@ Invidious [Global]
 
 Netflix Fast Internet Test
 	fast.com *
-		_ netflix.com fetch
-		_ nflxvideo.net fetch
+		_ netflix.com xhr
+		_ nflxvideo.net xhr
 		
 Ookla SpeedTest
 	speedtest.net *
 		_ cdnst.net script
-		_ ooklaserver.net fetch
+		_ ooklaserver.net xhr
 
 Pixiv (Only allow referrer and 'pximg' script)
 	pixiv.net *
@@ -119,7 +137,7 @@ Pixivision (Formerly Pixiv Spotlight)
 Radio-Browser
 	radio-browser.info *
 		_ * media
-		_ * fetch
+		_ * xhr
 		_ cdn.jsdelivr.net script
 
 Vivaldi Translator
@@ -130,17 +148,19 @@ Vivaldi Translator
 		! experimental first, you may need to refresh once after
 		! apply ruleset and try click that menu again in order to
 		! allow Vivaldi translate current page properly.
-		_ mimir.vivaldi.com fetch
+		_ mimir.vivaldi.com xhr
 
 YouTube Privacy Embed
 	* youtube-nocookie.com
 		_ youtube-nocookie.com *
 		_ youtube-nocookie.com frame
 		_ youtube-nocookie.com script
-		_ googlevideo.com fetch
+		_ googlevideo.com xhr
 		_ ytimg.com script
 
 YouTube Privacy Embed (Direct Page)
 	youtube-nocookie.com *
-		_ googlevideo.com fetch
+		! [Advised user-side rules]:
+		! * youtube-nocookie.com cookie block
+		_ googlevideo.com xhr
 		_ ytimg.com script

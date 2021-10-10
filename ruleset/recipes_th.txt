@@ -1,6 +1,6 @@
 ! uMatrix: Ruleset recipes 1.4.1
 ! Title: Rulesets for Thai sites
-! Version: 202104242143
+! Version: 202110102304
 ! VersionNumber: 0.22.1
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/ruleset/readme.md
@@ -13,7 +13,7 @@ AdIntrend Live TV
 		! "VideoJS Contrib Ads" script was blocked,
 		! Consider to view in private window instead.
 		referrer-spoof: _ false
-		_ cdn.vet fetch
+		_ cdn.vet xhr
 		_ cdn.vet script
 		_ cdnjs.cloudflare.com script
 
@@ -22,12 +22,12 @@ Amarin TV
 		! Unbreak video player by disable referrer spoofing,
 		! JWPlayer cannot play anything if you spoof referrer.
 		referrer-spoof: _ false
-		_ 203.151.179.100 fetch
-		_ 203.151.179.101 fetch
-		_ 203.151.179.102 fetch
-		_ 203.151.179.103 fetch
-		_ 210.4.150.104 fetch
-		_ amarin2.live14.com fetch
+		_ 203.151.179.100 xhr
+		_ 203.151.179.101 xhr
+		_ 203.151.179.102 xhr
+		_ 203.151.179.103 xhr
+		_ 210.4.150.104 xhr
+		_ amarin2.live14.com xhr
 		_ ssl.p.jwpcdn.com script
 
 Bugaboo TV (BBTV CH7)
@@ -43,17 +43,17 @@ LINE Today
 LINE TV
 	tv.line.me *
 		_ line-apps.com script
-		_ livecloud.akamaized.net fetch
+		_ livecloud.akamaized.net xhr
 		_ pstatic.net script
-		_ tv-line.pstatic.net fetch
+		_ tv-line.pstatic.net xhr
 		_ tv-line.pstatic.net media
 
 MCOT Radio - Active Radio
 	fm99activeradio.com *
 		referrer-spoof: _ false
 		_ cdn.mcot.net script
-		_ cdn.mcot.net fetch
-		_ mcotn-api.mcot.net fetch
+		_ cdn.mcot.net xhr
+		_ mcotn-api.mcot.net xhr
 		_ ssl.p.jwpcdn.com script
 
 MCOT Radio - Mellow
@@ -67,9 +67,9 @@ MCOT Radio - MET
 	met107.fm *
 		referrer-spoof: _ false
 		_ cdn.mcot.net script
-		_ cdn.mcot.net fetch
+		_ cdn.mcot.net xhr
 		_ maxcdn.bootstrapcdn.com script
-		_ mcotn-api.mcot.net fetch
+		_ mcotn-api.mcot.net xhr
 		_ ssl.p.jwpcdn.com script
 
 MCOT Radio - Wide scope
