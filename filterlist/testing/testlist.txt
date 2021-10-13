@@ -1,6 +1,6 @@
-[uBlock Origin 1.34.1.2]
+[uBlock Origin 1.38.5.0]
 ! Title: kowith337's Test List
-! Version: 202110102122
+! Version: 202110112035
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -55,10 +55,17 @@ youtube.com#?##masthead #end #buttons ytd-button-renderer:has(a[href*="/ServiceL
 !   will be see some icon enlarged, absolutely it's `Liberapay` logo are cover the page entirely at that moment!
 bird.nogafam.es,bird.trom.tf,birdsite.xanny.family,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.ca,nitter.cattube.org,nitter.didw.to,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.grimneko.de,nitter.ir,nitter.it,nitter.net,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]
 bird.nogafam.es,bird.trom.tf,birdsite.xanny.family,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.ca,nitter.cattube.org,nitter.didw.to,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.grimneko.de,nitter.ir,nitter.it,nitter.net,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]:remove()
+!
+! - Remove unsupported card contents placeholder
+!   > Spaces: Remove empty box since it just a placeholder box that cannot show anything.
+!   > Broadcasts: Remove bottom card title, left only image preview.
+bird.nogafam.es,bird.trom.tf,birdsite.xanny.family,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.ca,nitter.cattube.org,nitter.didw.to,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.grimneko.de,nitter.ir,nitter.it,nitter.net,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-container[href*="/i/spaces/"]
+bird.nogafam.es,bird.trom.tf,birdsite.xanny.family,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.ca,nitter.cattube.org,nitter.didw.to,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.grimneko.de,nitter.ir,nitter.it,nitter.net,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-content-container[href*="/i/broadcasts/"] .card-content
+
 
 ! [Pantip] Explicit and spam topic name (Use Thai unicode characters because most language of this site are mainly in Thai)
 pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(ตระกองขวัญ))
-pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(มาลาริน/))
+pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(มาลาริน))
 pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(วรพจน์))
 pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(หล่อขวัญ))
 
@@ -168,6 +175,8 @@ $3p,important,domain=thairath.co.th,denyallow=byteark.com
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Legacy internal scriptlets]
 ! Use only internal scriptlets provided by uBO for this section.
+! - Global Apply: Prevent use of auto-refresh, big companies mostly use for redirect to login page before viewing contents!
+*##+js(refresh-defuser)
 !
 ! - Remove unnecessary cookies (Currently it's caveat due to scriptlets cannot modify or delete domain-level + HTTP only cookies)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, _js_datr)
