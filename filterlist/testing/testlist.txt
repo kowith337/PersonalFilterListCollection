@@ -1,6 +1,6 @@
 [uBlock Origin 1.38.5.0]
 ! Title: kowith337's Test List
-! Version: 202110112035
+! Version: 202110182057
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -177,6 +177,9 @@ $3p,important,domain=thairath.co.th,denyallow=byteark.com
 ! Use only internal scriptlets provided by uBO for this section.
 ! - Global Apply: Prevent use of auto-refresh, big companies mostly use for redirect to login page before viewing contents!
 *##+js(refresh-defuser)
+!
+! - Prevent Telegram auto open its protocol to redirect into apps while viewing profile and/or group with browser.
+t.me##+js(no-setTimeout-if, protoUrl)
 !
 ! - Remove unnecessary cookies (Currently it's caveat due to scriptlets cannot modify or delete domain-level + HTTP only cookies)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, _js_datr)
