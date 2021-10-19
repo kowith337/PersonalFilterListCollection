@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202110072337
+# Version: 202110200003
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -41,6 +41,7 @@ link
 live
 mobi
 online
+rest
 shop
 site
 space
@@ -168,6 +169,7 @@ ebis.ne.jp
 eloqua.com
 eulerian.net
 ghochv3eng.trafficmanager.net
+httpjames.space
 inscname.net
 intent.com
 intentmedia.net
@@ -190,13 +192,18 @@ wt-eu02.net
 # Esp, in case if you use over Tor, all of crapflare-backed servers will not allow any Tor traffic to view their sites!
 #   * "GGC Project" maybe somewhat acceptable because of not use the `CrapFlare` certificates and use "Let's encrypt" instead.
 actionsack.com
+alefvanoon.xyz
 dark.fail
 database.red
 domain.glass
-#ggc-project.de
+drivet.xyz
+flux.industries
+ggc-project.de
 kavin.rocks
 moomoo.me
 nitter.hu
+r.nf
+trevorthalacker.com
 twitr.gq
 
 # Prohibit to use 3p domains for promoting to download official (with lots of ads and tracking codes and/or SDKs) apps!
