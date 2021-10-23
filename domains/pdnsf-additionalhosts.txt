@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202110200003
+# Version: 202110232248
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/domains
@@ -129,7 +129,6 @@ adasiatagmanager.*
 adjust.*
 adsby*.*
 alert-*.*
-amp.*
 beacon*.*
 beacon.*
 byteark-analytics.*
@@ -291,31 +290,35 @@ tiles.*.mozilla*
 
 # [Big Brother - Non-Google fanboy] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Wildcard section!
-*-2mdn-*.google.*
-*-chrome*-pa.googleapis.com
+*-2mdn-*
+*-chrome*-pa.*
 #*-google*.l.google.com
 *-google-analytics.*
-*-googlead*.*
-*-googletag*.*
+*-googlead*
+*-googletag*
 2mdn-*.*
 2mdn.*
 adgoogle.*
 adservice.google.*
+amp.*
 ampproject.*
-appinvite-*.googleapis.com
+appinvite*.google*
 beacon*.gvt*.com
 beacon.gvt*.com
 chrome*-pa.googleapis.com
+crashlytic*
 #content-*.googleapis.com
 digitalassetlinks.*.googleapis.com
 doubleclick.*
 firebase*.*
+fundingchoice*.google*
 google-analytics.*
-googlead*.*
-googleads.*
-googletag*.*
+googlead*
+googletag*
 http*-pa.googleapis.com
 id.google.*
+metric*google*
+metric*gstatic.com
 pagead-*.l.google.com
 recommender.*.google.com
 redirector.gvt*.com
@@ -388,10 +391,13 @@ video-stats.l.google.com
 
 # PA-ranoid API connections
 acceleratedmobilepageurl.googleapis.com
+androidauto-pa.googleapis.com
 androidsuggesthub-pa.googleapis.com
+autofill.googleapis.com
 clientmetrics-pa.googleapis.com
 clouderrorreporting.googleapis.com
 datamixer-pa.googleapis.com
+dataprep.googleapis.com
 datasaver.googleapis.com
 deviceintegritytokens-pa.googleapis.com
 digitalassetlinks.googleapis.com
@@ -441,11 +447,11 @@ ulp1p-pa.googleapis.com
 # randomized subdomains for phoning home (contains "beacon" in hostname) during, you may need to whitelist it manually, however,
 # I prefer you to looking for "Aurora" or "Yalp" and whitelist those apps instead if you don't want to use their official store
 # app for update anything about applications in your phone!
-# Futhurmore, Youtube also commonly use 'redirector.gvt1.com' to redirect ad videos as well.
+# Futhurmore, `Youtube` also commonly use 'redirector' subdomain to redirect ad videos as well.
 # - Note that some apps are check "Installation source" that it's actually come from "Play Store" or not, you may lost some
 #   feature or you can't even use app if it's detected that you're not installed from desired source that they want!
 #   * Reminder: I've commented it instead of whitelisting, in other words, rest of other `gvt` servers that not `gvt1` should be
-#               blocked entirely due to it's mostly use for attempt to "beacon" back to home servers...
+#               blocked entirely due to it's mostly use for attempt to `beacon` back to home servers...
 #gvt1.com
 gvt2.com
 gvt3.com
