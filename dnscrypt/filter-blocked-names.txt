@@ -1,0 +1,20 @@
+# [dnscrypt-proxy 2.1.1]
+
+adservice.google.*
+beacon*.*
+beacon.*
+cloudflare-dns.com                 # Why not?
+detectportal.*                     # BurntFox DetectPortal
+google                             # "*.google" TLD should be blocked for goods!
+doubleclick.*
+freebasics.com                     # FreeBasucks
+gvt[2-9]*.com                      # Requests to Goolag that not GVT1 should be blocked all, they've mostly used for beacons!
+i.org                              # FreeBasucks
+id.google.*
+#in-addr.arpa                      # SimpleWall resolvers v4
+internet.org
+#ip6.arpa                          # SimpleWall resolvers v6
+redirector.*
+#t[0-9]*.org                       # pDNSF check
+#wow.t[0-9]*.org                   # pDNSF check
+#www.t[0-9]*.org                   # pDNSF check
