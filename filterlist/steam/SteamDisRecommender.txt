@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202108302228
+! Version: 202110301928
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -192,15 +192,13 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .col
 steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .platform_img:style(opacity: 0.5 !important)
 
 ! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! - Prevent using of "Broadcast" and "Event" functions in store site!
-!   * Note: The main use of blocking broadcast and events is prevent partners/developers/creators annoyance from that function
-!           that distract your away before buying or viewing game details, include keep showing mini-popup video streams while
-!           scrolling down, hints that this game have deals and/or sales ongoing, etc. however, viewing live broadcasts on the
-!           community hub and/or embedded externally still possible!
+! - Prevent using of "Broadcast" functions in store site!
+!   * Note: The main use of blocking broadcast is prevent partners/developers/creators annoyance from that function that distract
+!           your away before buying or viewing game details, include keep showing mini-popup video streams while scrolling down,
+!           hints that this game have deals and/or sales ongoing, etc. however, viewing live broadcasts on the community hub and/
+!           or embedded externally still possible!
 ||steampowered.com/broadcast/$1p,important
-||steamstatic.com/public/*/applications/store/*~eventcomponents$domain=steampowered.com,important
 ||steamstatic.com/public/*/applications/store/broadcast$domain=steampowered.com,important
-||steamstatic.com/public/*/applications/store/eventcomponents$domain=steampowered.com,important
 !
 ! - Prevent steam reporting client-side error if this filterlist was breaking something...
 ||steampowered.com/IClientMetricsService/ReportClientError$important,~xmlhttprequest
