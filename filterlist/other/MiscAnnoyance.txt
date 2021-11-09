@@ -1,6 +1,6 @@
 [uBlock Origin 1.37.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202110072110
+! Version: 202110302016
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -391,7 +391,7 @@ m.intl.taobao.com,m.taobao.com#?#div[smb-link-key][smb-href]:style(display: none
 ||google.*$beacon,important
 ||google.*/*?*&ei=$image,xmlhttprequest,important
 ||google.*/*?ei=$image,xmlhttprequest,important
-||google.*/VisualFrontendUi/$important
+||google.*/VisualFrontendUi/$important,~xmlhttprequest
 ||google.*/async/bgasy?*&ei=*$important
 ||google.*/async/bgasy?ei=*$important
 ||google.*/async/irc?$important
@@ -401,6 +401,9 @@ m.intl.taobao.com,m.taobao.com#?#div[smb-link-key][smb-href]:style(display: none
 ||google.*/imgevent?*&ei=$important
 ||google.*/imgevent?ei=$important
 ||google.*/log?$important
+!
+! * Unbreak endless fetch images results
+@@||google.*/VisualFrontendUi/data/batchexecute?$xmlhttprequest
 
 ! [Linkis]
 ! ||linkis.com/ajax^$xmlhttprequest

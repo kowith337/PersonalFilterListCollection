@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202110301928
+! Version: 202111092143
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -197,7 +197,8 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 !           your away before buying or viewing game details, include keep showing mini-popup video streams while scrolling down,
 !           hints that this game have deals and/or sales ongoing, etc. however, viewing live broadcasts on the community hub and/
 !           or embedded externally still possible!
-||steampowered.com/broadcast/$1p,important
+||steampowered.com/broadcast/$1p,important,~xhr
+||steampowered.com/broadcast/$1p,xhr
 ||steamstatic.com/public/*/applications/store/broadcast$domain=steampowered.com,important
 !
 ! - Prevent steam reporting client-side error if this filterlist was breaking something...
@@ -216,17 +217,15 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 ||steampowered.com/explore/logfeedview$xmlhttprequest,important,redirect=nooptext
 ||steampowered.com/explore/recommended$xmlhttprequest,important,redirect=nooptext
 
-! Trusted or Allowed only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Trusted or Allowed for unbreaking only! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Allow "DynamicStore" information to sent **only when you're logged out!**
 @@||steampowered.com/dynamicstore/userdata/?id=0&$xmlhttprequest
 @@||steampowered.com/dynamicstore/userdata/?id=0|$xmlhttprequest
 @@||steampowered.com/dynamicstore/userdata?id=0&$xmlhttprequest
 @@||steampowered.com/dynamicstore/userdata?id=0|$xmlhttprequest
-!
-! Allow tag change and continuous scrolling while search and view game lists.
-! - Please note, the AJAX requests still bundle with `snr` parameter, this might be trade-off your privacy for that function.
-! - Don't worry, maybe `removeparam` below can help you...
-!@@||steampowered.com/search/results$xmlhttprequest,domain=steampowered.com
+
+! Unbreak sales page for allowing reveal more games when you press "Show more" button.
+@@||steampowered.com/broadcast/ajaxgetbatchappcapsuleinfo?$1p,xmlhttprequest
 
 ! Requests query remove/strip (require uBO 1.31.0 or above!)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - This mainly aim to handle any requests that trying to shift with unwanted parameter, for example, when you perfom products
@@ -235,7 +234,7 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 ||$important,removeparam=curator_clanid,domain=steamcommunity.com|steampowered.com
 ||$important,removeparam=ser,domain=steamcommunity.com|steampowered.com
 ||$important,removeparam=snr,domain=steamcommunity.com|steampowered.com
-||$important,removeparam=/^s(e|n)r$/,domain=steamcommunity.com|steampowered.com
+||$important,removeparam=/^s(e|n)r/,domain=steamcommunity.com|steampowered.com
 
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! These cookies are not necessary, except it use for tracking purpose!

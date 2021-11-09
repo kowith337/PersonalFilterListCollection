@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
-! Title: Steam Dis-Recommender Filters - Anti Impressions and Events DLC
-! Version: 202110301928
+! Title: Steam Dis-Recommender Filters - Anti Impressions DLC
+! Version: 202111092143
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -74,7 +74,7 @@ steampowered.com#?#.tab_container .home_leftcol:style(width: 100% !important)
 ! I'll move the "EventComponents" functions to here instead of staying in the base list, because it's potentially break seasonal
 ! sales events page (NewYear {also Chinese}, Summer, Spring, Winter, Halloween, etc.), however, the function for browsing games
 ! and also zuckest for you to buy based on tracking via games you've already own, games that appeared in browser screen still
-! break by this filterlist function that prevent tracking cookie, so complete blocking is probably good afterall.
-||steamstatic.com/public/*/applications/store/*~eventcomponents$domain=steampowered.com,important
-||steamstatic.com/public/*/applications/store/eventcomponents$domain=steampowered.com,important
+! break by this filterlist function that prevent tracking cookie, so complete block event functions is probably good after all.
+!||steamstatic.com/public/*/applications/store/*~eventcomponents$domain=steampowered.com,important
+!||steamstatic.com/public/*/applications/store/eventcomponents$domain=steampowered.com,important
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
