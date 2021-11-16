@@ -1,6 +1,6 @@
 [uBlock Origin 1.37.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202110302016
+! Version: 202111162122
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -87,7 +87,7 @@ savefrom.net#?##js-install-now
 savefrom.net#?##sf_result .extra[data-ga-event*="helper-promo"]
 
 ! [Naver Line Store] Experimental
-! - Dealing against attempts to add official account
+! - Dealing against attempts to add official accounts
 store.line.me#?#.FnAddStoreOaAsFriendPopup
 store.line.me#?#.LyMain .MdOverlay01
 

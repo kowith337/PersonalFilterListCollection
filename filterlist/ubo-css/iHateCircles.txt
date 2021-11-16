@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: iHateCircles
-! Version: 202110182058
+! Version: 202111162120
 ! Expires: 2 days
 ! Author: kowith337, DandelionSprout and contributors
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css
@@ -46,13 +46,13 @@ bibliogram.1d4.us,bibliogram.art,bibliogram.hamster.dance,bibliogram.pussthecat.
 bibliogram.1d4.us,bibliogram.art,bibliogram.hamster.dance,bibliogram.pussthecat.org,bibliogram.snopyta.org,insta.trom.tf##img.pfp:style(border-radius: 0px !important)
 !
 ! [Invidious]: https://api.invidious.io | https://redirect.invidious.io | https://docs.invidious.io/Invidious-Instances.md
-inv.riverside.rocks,invidio.xamh.de,invidious.hub.ne.kr,invidious.namazso.eu,invidious.snopyta.org,vid.mint.lgbt,vid.puffyan.us,yewtu.be,youtube.076.ne.jp,yt.artemislena.eu##*:style(border-radius: 0px !important)
+inv.riverside.rocks,invidio.xamh.de,invidious.namazso.eu,invidious.osi.kr,invidious.snopyta.org,vid.mint.lgbt,vid.puffyan.us,yewtu.be,youtube.076.ne.jp,yt.artemislena.eu,yt.didw.to##*:style(border-radius: 0px !important)
 !
 ! [LibReddit]: https://github.com/spikecodes/libreddit#instances
 libredd.it,libreddit.40two.app,libreddit.autarkic.org,libreddit.awesomehub.io,libreddit.dothq.co,libreddit.exonip.de,libreddit.igna.rocks,libreddit.some-things.org,libreddit.spike.codes,libreddit.sugoma.tk,lr.mint.lgbt,lr.oversold.host,lr.riverside.rocks,reddit.artemislena.eu,reddit.invak.id,reddit.phii.me,reddit.stuehieyr.com##*:style(border-radius: 0px !important)
 !
 ! [Nitter]: https://github.com/zedeus/nitter/wiki/Instances
-bird.nogafam.es,bird.trom.tf,birdsite.xanny.family,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.ca,nitter.cattube.org,nitter.didw.to,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.grimneko.de,nitter.ir,nitter.it,nitter.net,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.censors.us##*:style(border-radius: 0px !important)
+bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,nitter.vxempire.xyz,twitter.076.ne.jp,twitter.censors.us##*:style(border-radius: 0px !important)
 !
 ! [Teddit]: https://codeberg.org/teddit/teddit#instances
 teddit.net,incogsnoo.com,snoo.ioens.is,teddit.namazso.eu,teddit.nautolan.racing,teddit.pussthecat.org,teddit.zaggy.nl##*:style(border-radius: 0px !important)

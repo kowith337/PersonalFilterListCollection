@@ -1,6 +1,6 @@
 [uBlock Origin 1.38.5.0]
 ! Title: kowith337's Test List
-! Version: 202110182057
+! Version: 202111162214
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -30,13 +30,13 @@ imgur.com#?#.GalleryHandler-postContainer:not(:nth-of-type(2))
 imgur.com#?#.GalleryHandler-postContainer .Gallery-moreOnImgur
 !#endif
 
-! [YouTube Non-Polymer]
+! [YouTube Non-Polymer] {Deprecated}
 ! - Remove any "recommended" channel and topic lists at home feed (Only English language)
-youtube.com#?##feed-main-what_to_watch ol li:has(.feed-item-dismissable:has(.shelf-title-row h2 span:has-text(Recommended )))
-youtube.com#?#.individual-feed li .branded-page-box:has(.feed-item-dismissable:has(span.shelf-subscription-button button[data-style-type="branded"]))
+!youtube.com#?##feed-main-what_to_watch ol li:has(.feed-item-dismissable:has(.shelf-title-row h2 span:has-text(Recommended )))
+!youtube.com#?#.individual-feed li .branded-page-box:has(.feed-item-dismissable:has(span.shelf-subscription-button button[data-style-type="branded"]))
 !
 ! - Remove overpromoted "Premium" appear in sidebar
-youtube.com#?#.guide-section .guide-item-container ul li:has(a[href*="/premium"])
+!youtube.com#?#.guide-section .guide-item-container ul li:has(a[href*="/premium"])
 
 ! [YouTube Polymer]
 ! - Hide "New ToS" announcement
@@ -53,15 +53,13 @@ youtube.com#?##masthead #end #buttons ytd-button-renderer:has(a[href*="/ServiceL
 ! - For unclear reason, because I have use touchscreen notebook and found that I've redirected to donation page unintentionally,
 !   even I just tap onto the blank space, probably navigation header placement issue that will be a short time while page loading
 !   will be see some icon enlarged, absolutely it's `Liberapay` logo are cover the page entirely at that moment!
-bird.nogafam.es,bird.trom.tf,birdsite.xanny.family,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.ca,nitter.cattube.org,nitter.didw.to,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.grimneko.de,nitter.ir,nitter.it,nitter.net,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]
-bird.nogafam.es,bird.trom.tf,birdsite.xanny.family,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.ca,nitter.cattube.org,nitter.didw.to,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.grimneko.de,nitter.ir,nitter.it,nitter.net,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]:remove()
+bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,nitter.vxempire.xyz,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]
 !
 ! - Remove unsupported card contents placeholder
 !   > Spaces: Remove empty box since it just a placeholder box that cannot show anything.
 !   > Broadcasts: Remove bottom card title, left only image preview.
-bird.nogafam.es,bird.trom.tf,birdsite.xanny.family,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.ca,nitter.cattube.org,nitter.didw.to,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.grimneko.de,nitter.ir,nitter.it,nitter.net,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-container[href*="/i/spaces/"]
-bird.nogafam.es,bird.trom.tf,birdsite.xanny.family,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.ca,nitter.cattube.org,nitter.didw.to,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.grimneko.de,nitter.ir,nitter.it,nitter.net,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-content-container[href*="/i/broadcasts/"] .card-content
-
+bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,nitter.vxempire.xyz,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-container[href*="/i/spaces/"]
+bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,nitter.vxempire.xyz,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-content-container[href*="/i/broadcasts/"] .card-content
 
 ! [Pantip] Explicit and spam topic name (Use Thai unicode characters because most language of this site are mainly in Thai)
 pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(ตระกองขวัญ))
@@ -95,7 +93,7 @@ facebook.com#?#.AdBox:remove()
 facebook.com#?#.post-ads:remove()
 
 ! [Nitter]
-birdsite.xanny.family,nitter.1d4.us,nitter.40two.app,nitter.42l.fr,nitter.ethibox.fr,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.koyu.space,nitter.mailstation.de,nitter.namazso.eu,nitter.nixnet.services,nitter.pussthecat.org,nitter.skrep.in,nitter.snopyta.org,nitter.tedomum.net,nitter.unixfox.eu,nitter.vxempire.xyz#?#.inner-nav a[href*="liberapay"]:remove()
+bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,nitter.vxempire.xyz,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]:remove()
 
 ! [Twitter]
 ! - Some inline and/or side pane that tagged with `[aria-labelledby]` are useless, they often use for showing a pane to easily
@@ -135,10 +133,10 @@ m.intl.taobao.com#?#.App .toolbar .toolbar__btn:style(background-color: rgba(0,0
 ||facebook.com/*?privacy_*=$1p,xhr,removeparam=/^privacy_/
 ||fbcdn.net/*&_nc_*=$css,script,domain=facebook.com|messenger.com,removeparam=/^_nc_/
 ||fbcdn.net/*?_nc_*=$css,script,domain=facebook.com|messenger.com,removeparam=/^_nc_/
-||steampowered.com/*&curator_clanid=$removeparam=curator_clanid
+||steampowered.com/*&curator_*=$removeparam=/^curator_/
 ||steampowered.com/*&ser=$removeparam=ser,important
 ||steampowered.com/*&snr=$removeparam=snr,important
-||steampowered.com/*?curator_clanid=$removeparam=curator_clanid
+||steampowered.com/*?curator_*=$removeparam=/^curator_/
 ||steampowered.com/*?ser=$removeparam=ser,important
 ||steampowered.com/*?snr=$removeparam=snr,important
 ||youtube-nocookie.com/get_video_info?*&ei=$xhr,removeparam=ei
@@ -148,6 +146,7 @@ m.intl.taobao.com#?#.App .toolbar .toolbar__btn:style(background-color: rgba(0,0
 
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||google.*/ads/*$important
+||liberapay.com/zedeus$document,important,domain=~accident_nitter_nav_prevention
 
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
@@ -199,20 +198,29 @@ checkkorn.com##+js(alert-buster)
 !   other person, the sold of Chrome extension won't affected to Firefox version, however, archived repo may means it no longer
 !   get any future updates, except Chrome extension that possibility of source code will changed by other ppls who bought that!
 ! Raw: https://github.com/NanoAdblocker/NanoCore2/raw/master/src/snippets.js
-!
-! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
-facebook.com,instagram.com,messenger.com##+js(nanop-set-cookie, noscript=0)
-!
+
 ! - This is for test by fake grant notifications, these sites below are mostly related to "Khaosod" and "Matichon", their also
 !   insert many ads and trackings (55+ and more domains connected while visiting, holy sh**!), those sites itself doesn't provide
 !   any proper use of web notifications for legitimate way (newer news and updates), but it's used by iZooto to inject ads through
 !   that browser feature and/or function!
 bangkokbiznews.com,khaosod.co.th,khaosodenglish.com,komchadluek.net,matichon.co.th,matichonacademy.com,matichonbook.com,matichonelibrary.com,matichonweekly.com,nationtv.tv,nationweekend.com,prachachat.net,sentangsedtee.com,silpa-mag.com,springnews.co.th,technologychaoban.com,thansettakij.com,tnews.co.th##+js(nano-grant-fake-notification)
 
+! [External scriptlets - iam-py-test]
+!   only `cookie-set` scriptlet functions from uAssets that was deprecated are resurrected, also additional proper auto-click
+!   elements also maintained by...
+! Raw: https://github.com/iam-py-test/my_filters_001/raw/main/scriptlets.js
+! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
+facebook.com,instagram.com,messenger.com##+js(cookie-set, noscript, 0)
+!
+! Auto dismiss adult content warning in steam community
+! * I won't set to auto click checkbox, I just hate to manually click "continue" often when I open in new tab (e.g. workshop)
+steamcommunity.com##+js(click-element, .adult_content_age_gate_buttons #age_gate_btn_continue)
+steamcommunity.com##+js(click-element, div[class^="partnereventshared_FlexRowContainer"][class*="communityagegate_ButtonRow"] div[class^="partnereventshared_Button_"])
+
 ! [External scriptlets - uBlock-user]
-! Older rules are deprecated by upstream scriptlets because they've already removed some functions.
-! Requirement for this section: @uBlock-user's scriptlets: https://github.com/uBlock-user/uBO-Scriptlets
-! Raw: https://raw.githubusercontent.com/uBlock-user/uBO-Scriptlets/master/scriptlets.js
+!   Older rules are deprecated by upstream scriptlets because they've already removed some functions.
+!   Requirement for this section: @uBlock-user's scriptlets: https://github.com/uBlock-user/uBO-Scriptlets
+! Raw: https://github.com/uBlock-user/uBO-Scriptlets/raw/master/scriptlets.js
 
 ! Platform specific - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 

@@ -231,10 +231,10 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 ! - This mainly aim to handle any requests that trying to shift with unwanted parameter, for example, when you perfom products
 !   search with continuous scrolling, you can see in uBO logger that its binding with `snr` tracking parameter, these rules below
 !   will catching and blocking requests that still contain `snr`, then strip its parameter and re-requests again without it!
-||$important,removeparam=curator_clanid,domain=steamcommunity.com|steampowered.com
-||$important,removeparam=ser,domain=steamcommunity.com|steampowered.com
-||$important,removeparam=snr,domain=steamcommunity.com|steampowered.com
+! - As well as curator tracking, you will see neither `curator_clanid` and/or `curater_listid`
+||$important,removeparam=/^curator_/,domain=steamcommunity.com|steampowered.com
 ||$important,removeparam=/^s(e|n)r/,domain=steamcommunity.com|steampowered.com
+||steamcommunity.com/sharedfiles$important,removeparam=searchtext
 
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! These cookies are not necessary, except it use for tracking purpose!
@@ -248,8 +248,9 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 !   scriptlet functions to remove that cookie everytime to make sure that `Steam` will not gain benefits for keep tracking users
 !   by reading and/or storing more values of `app_impressions` cookie between navigations!
 ! - Even you've set to reject their cookies, however, it's seems like `Steam` doesn't respect user settings that we don't want
-!   its cookies, if you possible to subscribe "Anti-impression DLC" list, consider to use it after reject their cookies!
-!   * Proof: https://birdsite.xanny.family/pic/media/E8QDgaYVkAYcPxq.jpg?name=orig
+!   its `app_impressions` cookies layed in browser, if you possible to subscribe "Anti-impression DLC" list, consider to use it
+!   after reject their cookies!
+!   * Proof: https://twitter.censors.us/pic/media/E8QDgaYVkAYcPxq.jpg?name=orig
 steamcommunity.com,steampowered.com##+js(cookie-remover, _gid)
 steamcommunity.com,steampowered.com##+js(cookie-remover, app_impressions)
 steamcommunity.com,steampowered.com##+js(cookie-remover, browserid)
@@ -272,7 +273,7 @@ steamcommunity.com##+js(set, g_SNR, null)
 ! This probably related to `home_scroll` cookie, remove this script to prevent creating/modifying scroll tracking cookie!
 steampowered.com##+js(addEventListener-defuser, $J, GetNavCookie)
 
-! - Prohibit Steam website to detect touch screen from first touch, however, **this cause major site features malfunction!**
+! - Prohibit Steam website to detect touch screen from first tap, however, **this cause major site features malfunction!**
 !   - Note that it may require to delete `strResponsiveViewPrefs` cookie first to make this script injection work properly,
 !     if you've forgot to do that before, maybe the `cookie-remover` scriptlet rules above will handle it!
 !   - This will helpful in case if you don't want to let `Steam` showing responsive header and menu bar, but you still want to
