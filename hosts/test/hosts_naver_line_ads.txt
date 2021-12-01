@@ -1,0 +1,37 @@
+# [uMatrix 1.4.4]
+# Title: Hosts for block Never LINE ads and tracking.
+# Version: 202112012041
+# Author: kowith337
+# Expires: 2 days
+# Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
+# Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
+# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/hosts/test/hosts_line_ads.txt
+# Description: This hosts file will be trial-and-error for attempting to block in-app ads of Naver Line (main app), also include
+#              non-main function of chat, such as news reader (aka. Line Today), if you miss that feature, consider to open its
+#              website in browser that support proxy and/or secure DNS (aka. DoH) instead.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# Reported from: https://github.com/StevenBlack/hosts/issues/1815
+0.0.0.0 a.line.me
+0.0.0.0 ad-center.line.me
+0.0.0.0 lap-click.tr.line.me
+0.0.0.0 lt-click.tr.line.me
+0.0.0.0 obs.line-scdn.net
+#0.0.0.0 optout-api.tr.line.me                  # This will cause problem if you need to opt-out from determining your interests.
+0.0.0.0 sch.line.me
+0.0.0.0 tr.line.me
+#
+# Captured from personalDNSFilter log
+0.0.0.0 lan-o.line.me
+0.0.0.0 lan.line.me
+0.0.0.0 vos.line-scdn.net
+0.0.0.0 yuki-cdn.line-apps.com
+#
+# LINE TODAY BLOCK (NON-CHAT FUNCTIONAL THAT SHOULDN'T EXIST!)
+# I need to do that, otherwise, you'll get popup ads spam that force you to download or open its app if you've already installed!
+# Repoted often on Pantip!! : https://pantip.com/topic/40597068
+#                           : https://pantip.com/topic/40602110
+#                           : https://pantip.com/topic/40668361
+#                           : https://pantip.com/topic/41023618
+0.0.0.0 static-today.line-scdn.net
+0.0.0.0 today.line.me
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
