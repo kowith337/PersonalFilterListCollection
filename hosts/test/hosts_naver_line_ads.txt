@@ -1,11 +1,11 @@
 # [uMatrix 1.4.4]
 # Title: Hosts for block Never LINE ads and tracking.
-# Version: 202112012041
+# Version: 202112012043
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Hosts%20File
-# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/hosts/test/hosts_line_ads.txt
+# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/hosts/test/hosts_naver_line_ads.txt
 # Description: This hosts file will be trial-and-error for attempting to block in-app ads of Naver Line (main app), also include
 #              non-main function of chat, such as news reader (aka. Line Today), if you miss that feature, consider to open its
 #              website in browser that support proxy and/or secure DNS (aka. DoH) instead.
