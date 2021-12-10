@@ -1,0 +1,22 @@
+# [dnscrypt-proxy 2.1.1]
+
+# Necessary for update Opera browser
+# * even I use portable updater by UnderTakerBen, I rarely use it for sandboxing and proxying...
+autoupdate.geo.opera.com
+download.geo.opera.com
+download.opera.com
+extension-updates.geo.opera.com
+extension-updates.opera.com
+
+# Possibly retrieving Google Chrome update
+# * same reason as above, I use portable browser updater rather than install them directly!
+chrome.google.com
+storage.googleapis.com
+tools.google.com
+tools.l.google.com
+#update.googleapis.com
+www3.l.google.com
+
+# Betrayed by Mozilla, except...
+shavar.services.mozilla.com                      # Retrieve tracking protection lists
+#token.services.mozilla.com                      # Uncomment if you're using their sync services

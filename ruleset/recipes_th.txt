@@ -1,97 +1,97 @@
 ! uMatrix: Ruleset recipes 1.4.1
 ! Title: Rulesets for Thai sites
-! Version: 202110102304
-! VersionNumber: 0.22.1
+! Version: 202112102252
+! VersionNumber: 0.22.2
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/ruleset/readme.md
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/ruleset/recipes_th.txt
 
 AdIntrend Live TV
-	adintrend.tv *
-		! Have problems with AdBlock/uBlock/Nano because
-		! "VideoJS Contrib Ads" script was blocked,
-		! Consider to view in private window instead.
-		referrer-spoof: _ false
-		_ cdn.vet xhr
-		_ cdn.vet script
-		_ cdnjs.cloudflare.com script
+  adintrend.tv *
+  ! Have problems with AdBlock/uBlock/Nano because
+  ! "VideoJS Contrib Ads" script was blocked,
+  ! Consider to view in private window instead.
+  referrer-spoof: _ false
+  _ cdn.vet xhr
+  _ cdn.vet script
+  _ cdnjs.cloudflare.com script
 
 Amarin TV
-	amarintv.com *
-		! Unbreak video player by disable referrer spoofing,
-		! JWPlayer cannot play anything if you spoof referrer.
-		referrer-spoof: _ false
-		_ 203.151.179.100 xhr
-		_ 203.151.179.101 xhr
-		_ 203.151.179.102 xhr
-		_ 203.151.179.103 xhr
-		_ 210.4.150.104 xhr
-		_ amarin2.live14.com xhr
-		_ ssl.p.jwpcdn.com script
+  amarintv.com *
+  ! Unbreak video player by disable referrer spoofing,
+  ! JWPlayer cannot play anything if you spoof referrer.
+  referrer-spoof: _ false
+    _ 203.151.179.100 xhr
+    _ 203.151.179.101 xhr
+    _ 203.151.179.102 xhr
+    _ 203.151.179.103 xhr
+    _ 210.4.150.104 xhr
+    _ amarin2.live14.com xhr
+    _ ssl.p.jwpcdn.com script
 
 Bugaboo TV (BBTV CH7)
-	bugaboo.tv *
-		_ players.brightcove.net script
-		_ static.ch7.com script
+  bugaboo.tv *
+    _ players.brightcove.net script
+    _ static.ch7.com script
 
 LINE Today
-	today.line.me *
-		_ scdn.line-apps.com script
-		_ line-scdn.net script
+  today.line.me *
+    _ scdn.line-apps.com script
+    _ line-scdn.net script
 
 LINE TV
-	tv.line.me *
-		_ line-apps.com script
-		_ livecloud.akamaized.net xhr
-		_ pstatic.net script
-		_ tv-line.pstatic.net xhr
-		_ tv-line.pstatic.net media
+  tv.line.me *
+    _ line-apps.com script
+    _ livecloud.akamaized.net xhr
+    _ pstatic.net script
+    _ tv-line.pstatic.net xhr
+    _ tv-line.pstatic.net media
 
 MCOT Radio - Active Radio
-	fm99activeradio.com *
-		referrer-spoof: _ false
-		_ cdn.mcot.net script
-		_ cdn.mcot.net xhr
-		_ mcotn-api.mcot.net xhr
-		_ ssl.p.jwpcdn.com script
+  fm99activeradio.com *
+    referrer-spoof: _ false
+    _ cdn.mcot.net script
+    _ cdn.mcot.net xhr
+    _ mcotn-api.mcot.net xhr
+    _ ssl.p.jwpcdn.com script
 
 MCOT Radio - Mellow
-	mellow975.mcot.net *
-		! Mellow use FancyBox from jQuery, so I will not add for exception,
-		! judging it may show overlay ads and/or annoyance, I don't know.
-		referrer-spoof: _ false
-		_ ssl.p.jwpcdn.com script
+  mellow975.mcot.net *
+    ! Mellow use FancyBox from jQuery, so I will not add for exception,
+    ! judging it may show overlay ads and/or annoyance, I don't know.
+    referrer-spoof: _ false
+    _ ssl.p.jwpcdn.com script
 
 MCOT Radio - MET
-	met107.fm *
-		referrer-spoof: _ false
-		_ cdn.mcot.net script
-		_ cdn.mcot.net xhr
-		_ maxcdn.bootstrapcdn.com script
-		_ mcotn-api.mcot.net xhr
-		_ ssl.p.jwpcdn.com script
+  met107.fm *
+    referrer-spoof: _ false
+    _ cdn.mcot.net script
+    _ cdn.mcot.net xhr
+    _ maxcdn.bootstrapcdn.com script
+    _ mcotn-api.mcot.net xhr
+    _ ssl.p.jwpcdn.com script
 
 MCOT Radio - Wide scope
-	mcot.net *
-		referrer-spoof: _ false
-		_ ssl.p.jwpcdn.com script
+  mcot.net *
+    referrer-spoof: _ false
+    _ ssl.p.jwpcdn.com script
 
 Sanook! (Tencent)
-	sanook.com *
-		_ isanook.com *
-		_ nlpcaptcha.in script
+  sanook.com *
+    _ isanook.com *
+    _ nlpcaptcha.in script
 
 Sanook! Music (aka. Joox)
-	music.sanook.com *
-		_ isanook.com *
-		_ joox.com media
-		_ s1sf.com script
+  music.sanook.com *
+    _ isanook.com *
+    _ joox.com media
+    _ s1sf.com script
 
 Thairath
-	thairath.co.th *
-		_ cdn.byteark.com script
+  thairath.co.th *
+    _ cdn.byteark.com script
 
 This Is Game (TH)
-	thisisgamethailand.com *
-		_ cdn.tigthai.com script
+  thisisgamethailand.com *
+    _ cdn.tigthai.com script

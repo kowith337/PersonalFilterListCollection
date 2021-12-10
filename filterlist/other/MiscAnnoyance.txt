@@ -1,6 +1,6 @@
 [uBlock Origin 1.37.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202111162122
+! Version: 202112102251
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -22,6 +22,13 @@ chocolatey.org#?#.btn-announcement-notifications
 chocolatey.org#?#.collapsing-sidebar
 chocolatey.org#?#.container-fluid .row .d-none.border-start
 chocolatey.org#?#.modal-backdrop
+
+! [DuckDuckGo]
+! - Remove self-promo contents, e.g. download apps, extensions.
+duckduckgo.com##.badge-link
+duckduckgo.com##.footer_cards
+duckduckgo.com##.onboarding-ed
+duckduckgo.com##.ddg-extension-hide
 
 ! [GamingDose]
 gamingdose.com#?#a[href*="/linkout/"]
@@ -439,7 +446,12 @@ m.intl.taobao.com,m.taobao.com#?#div[smb-link-key][smb-href]:style(display: none
 ||cpm10.com$domain=wallgif.com,important
 ||newrelic.com$domain=wallgif.com,important
 
-! Redirect - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Unneccessary Parameters - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [DuckDuckGo]
+! - Remove tracking parameter that their use along with `improving` things!
+$removeparam=atb,domain=duckduckgo.com,important
+
+! Redirects - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Google]
 ! - I don't know about this connection but I've found 'ei' parameter inside that already blocked by my another list called
 !   "Anti survived tracking warning (overdone ver.)" , expected that the request use for ping back to phone home and/or keep
@@ -451,7 +463,7 @@ m.intl.taobao.com,m.taobao.com#?#div[smb-link-key][smb-href]:style(display: none
 ||google.*/async/irc?$xmlhttprequest,important,redirect=nooptext
 !
 ! - Possibly pixel image tracking
-||google.*/images/phd/px.gif$image,important,domain=google.com|google.*,redirect=1x1.gif
+||google.*/images/phd/px.gif$image,important,domain=google.*,redirect=1x1.gif
 
 ! [GreasyFork] added ping request while installing script (inside the "Install Script" green button) via 'data-ping-url' that
 ! cause promoted script to be shown and the site also get user data about it, eliminate this requests and fake sent data with

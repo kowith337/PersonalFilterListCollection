@@ -1,166 +1,166 @@
 ! uMatrix: Ruleset recipes 1.4.1
 ! Title: Self Custom Ruleset
-! Version: 202110102308
-! VersionNumber: 0.45.0
+! Version: 202112102253
+! VersionNumber: 0.45.2
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/ruleset/recipes_custom.txt
 
 Bing Translator (Edge Internal)
-	* edge.microsoft.com
-		! The ruleset will not appear unless you've trigger the
-		! 'Translate to <language>' from right-click menu in Edge.
-		! However, you may need to refresh once after apply ruleset
-		! and try click that menu again in order to allow Edge
-		! translate current page properly.
-			_ edge.microsoft.com xhr
-			_ api.cognitive.microsofttranslator.com xhr
+  * edge.microsoft.com
+    ! The ruleset will not appear unless you've trigger the
+    ! 'Translate to <language>' from right-click menu in Edge.
+    ! However, you may need to refresh once after apply ruleset
+    ! and try click that menu again in order to allow Edge
+    ! translate current page properly.
+      _ edge.microsoft.com xhr
+      _ api.cognitive.microsofttranslator.com xhr
 
 Discord (Mid-2020)
-	discord.com *
-		! You should block "Sentry" globally, no matter what!
-		! * sentry.io * block
-			_ discord.gg xhr
-			_ discord.media xhr
+  discord.com *
+    ! You should block "Sentry" globally, no matter what!
+    ! * sentry.io * block
+      _ discord.gg xhr
+      _ discord.media xhr
 
 Etterna Online
-	etternaonline.com *
-		_ cdn.datatables.net script
-		_ cdn.jsdelivr.net script
-		_ code.highcharts.com script
+  etternaonline.com *
+    _ cdn.datatables.net script
+    _ cdn.jsdelivr.net script
+    _ code.highcharts.com script
 
 Gelbooru
-	gelbooru.com *
-		! Note: You must use with uBlock Origin, this only allow
-		!       something that really need and prevent any
-		!       unwanted connections, not for unbreak antiuser
-		!       tactics that their made because some ads and
-		!       tracking assets also loaded from that site itself.
-		! Note2: I won't turn on Google reCaptcha by default, you
-		!        can turn it on with default recipe that already
-		!        provided by uMatrix or use my recipe that allow
-		!        workers (This may dangerous!)
-			_ 1st-party script
-			_ ajax.googleapis.com script
-			_ maxcdn.bootstrapcdn.com script
+  gelbooru.com *
+    ! Note: You must use with uBlock Origin, this only allow
+    !     something that really need and prevent any
+    !     unwanted connections, not for unbreak antiuser
+    !     tactics that their made because some ads and
+    !     tracking assets also loaded from that site itself.
+    ! Note2: I won't turn on Google reCaptcha by default, you
+    !    can turn it on with default recipe that already
+    !    provided by uMatrix or use my recipe that allow
+    !    workers (This may dangerous!)
+      _ 1st-party script
+      _ ajax.googleapis.com script
+      _ maxcdn.bootstrapcdn.com script
 
 GitHub (Basic Viewing only)
-		github.com *
-		_ githubassets.com script
+    github.com *
+    _ githubassets.com script
 
 Google Custom Search
-	* cse.google.com
-		_ cse.google.com script
-		_ www.google.com script
+  * cse.google.com
+    _ cse.google.com script
+    _ www.google.com script
 
 Google reCaptcha (Allow SW)
-	* www.google.com
-		! Directly copied from official English Recipe, but I've
-		! added 'allow workers' rules because you cannot get the
-		! enhanced version of reCaptcha (picture challenges) or
-		! even cannot click checkbox to get any challenges unless
-		! you've enable web workers, however, it may allow other
-		! workers to be running (like cryptominer, etc.)
-			no-workers: _ false
-			_ www.google.com *
-			_ www.google.com script
-			_ www.google.com frame
-			_ www.gstatic.com *
-			_ www.gstatic.com script
+  * www.google.com
+    ! Directly copied from official English Recipe, but I've
+    ! added 'allow workers' rules because you cannot get the
+    ! enhanced version of reCaptcha (picture challenges) or
+    ! even cannot click checkbox to get any challenges unless
+    ! you've enable web workers, however, it may allow other
+    ! workers to be running (like cryptominer, etc.)
+      no-workers: _ false
+      _ www.google.com *
+      _ www.google.com script
+      _ www.google.com frame
+      _ www.gstatic.com *
+      _ www.gstatic.com script
 
 Google Translate (Chrome Internal)
-	* translate.googleapis.com
-		! The ruleset will not appear unless you've trigger the
-		! 'Translate to <language>' from right-click menu in Chrome
-		! or any Chromium-based browsers (e.g. Cent, Slimjet, etc.)
-		! However, you may need to refresh once after apply ruleset
-		! and try click that menu again in order to allow Chrome
-		! translate current page properly.
-			_ translate.googleapis.com xhr
+  * translate.googleapis.com
+    ! The ruleset will not appear unless you've trigger the
+    ! 'Translate to <language>' from right-click menu in Chrome
+    ! or any Chromium-based browsers (e.g. Cent, Slimjet, etc.)
+    ! However, you may need to refresh once after apply ruleset
+    ! and try click that menu again in order to allow Chrome
+    ! translate current page properly.
+      _ translate.googleapis.com xhr
 
 Google Translate (NewTab method)
-	translate.goog *
-		! This ruleset is an experimental support for any branded
-		! Chromium forks that support page translation with new tab
-		! method (e.g. Kinza), since `Goolag` limit their `Chrome`
-		! API and related services to only use by Chrome itself,
-		! esp. sync (bookmark/extensions/tabs/etc.), translate.
-		! And I'm not care about syncing with Chrome anymore!
-		!
-		! [Advised user-side rules]:
-		! _ play.google.com * block
-		_ translate.google.com frame
-		_ translate.google.com script
-		_ translate.googleapis.com script
-		_ translate.googleapis.com xhr
-		_ www.gstatic.com script
+  translate.goog *
+    ! This ruleset is an experimental support for any branded
+    ! Chromium forks that support page translation with new tab
+    ! method (e.g. Kinza), since `Goolag` limit their `Chrome`
+    ! API and related services to only use by Chrome itself,
+    ! esp. sync (bookmark/extensions/tabs/etc.), translate.
+    ! And I'm not care about syncing with Chrome anymore!
+    !
+    ! [Advised user-side rules]:
+    ! _ play.google.com * block
+    _ translate.google.com frame
+    _ translate.google.com script
+    _ translate.googleapis.com script
+    _ translate.googleapis.com xhr
+    _ www.gstatic.com script
 
 
 Invidious [Global]
-	* googlevideo.com
-		! You can append `(?|&)local=1` parameter in your browser
-		! address bar to force proxy video or you can use another
-		! instance that set to proxy streams by default
-		!
-		! However, not all instances are support and resprct proxy
-		! state parameter, some place doesn't allowed you to do
-		! due to server performance, storage limitations and
-		! specific reasons from owner of its instance...
-			_ googlevideo.com media
+  * googlevideo.com
+    ! You can append `(?|&)local=1` parameter in your browser
+    ! address bar to force proxy video or you can use another
+    ! instance that set to proxy streams by default
+    !
+    ! However, not all instances are support and resprct proxy
+    ! state parameter, some place doesn't allowed you to do
+    ! due to server performance, storage limitations and
+    ! specific reasons from owner of its instance...
+      _ googlevideo.com media
 
 Netflix Fast Internet Test
-	fast.com *
-		_ netflix.com xhr
-		_ nflxvideo.net xhr
-		
+  fast.com *
+    _ netflix.com xhr
+    _ nflxvideo.net xhr
+
 Ookla SpeedTest
-	speedtest.net *
-		_ cdnst.net script
-		_ ooklaserver.net xhr
+  speedtest.net *
+    _ cdnst.net script
+    _ ooklaserver.net xhr
 
 Pixiv (Only allow referrer and 'pximg' script)
-	pixiv.net *
-		! Somehow Pixiv images doesn't show if you spoof referrer or
-		! due to browser settings, esp. in Firefox Private Window.
-			referrer-spoof: _ false
-			_ pximg.net script
+  pixiv.net *
+    ! Somehow Pixiv images doesn't show if you spoof referrer or
+    ! due to browser settings, esp. in Firefox Private Window.
+      referrer-spoof: _ false
+      _ pximg.net script
 
 Pixivision (Formerly Pixiv Spotlight)
-	pixivision.net *
-		! Somehow Pixiv images doesn't show if you spoof referrer or
-		! due to browser settings, esp. in Firefox Private Window.
-		! Note: This allow script to load embed artworks in article.
-			referrer-spoof: _ false
-			_ pximg.net script
+  pixivision.net *
+    ! Somehow Pixiv images doesn't show if you spoof referrer or
+    ! due to browser settings, esp. in Firefox Private Window.
+    ! Note: This allow script to load embed artworks in article.
+      referrer-spoof: _ false
+      _ pximg.net script
 
 Radio-Browser
-	radio-browser.info *
-		_ * media
-		_ * xhr
-		_ cdn.jsdelivr.net script
+  radio-browser.info *
+    _ * media
+    _ * xhr
+    _ cdn.jsdelivr.net script
 
 Vivaldi Translator
-	* mimir.vivaldi.com
-		! The ruleset will not appear unless you've clicked the
-		! 'Translate' button that you can access from address bar
-		! in Vivaldi, However, this may require to enable translate
-		! experimental first, you may need to refresh once after
-		! apply ruleset and try click that menu again in order to
-		! allow Vivaldi translate current page properly.
-		_ mimir.vivaldi.com xhr
+  * mimir.vivaldi.com
+    ! The ruleset will not appear unless you've clicked the
+    ! 'Translate' button that you can access from address bar
+    ! in Vivaldi, However, this may require to enable translate
+    ! experimental first, you may need to refresh once after
+    ! apply ruleset and try click that menu again in order to
+    ! allow Vivaldi translate current page properly.
+    _ mimir.vivaldi.com xhr
 
 YouTube Privacy Embed
-	* youtube-nocookie.com
-		_ youtube-nocookie.com *
-		_ youtube-nocookie.com frame
-		_ youtube-nocookie.com script
-		_ googlevideo.com xhr
-		_ ytimg.com script
+  * youtube-nocookie.com
+    _ youtube-nocookie.com *
+    _ youtube-nocookie.com frame
+    _ youtube-nocookie.com script
+    _ googlevideo.com xhr
+    _ ytimg.com script
 
 YouTube Privacy Embed (Direct Page)
-	youtube-nocookie.com *
-		! [Advised user-side rules]:
-		! * youtube-nocookie.com cookie block
-		_ googlevideo.com xhr
-		_ ytimg.com script
+  youtube-nocookie.com *
+    ! [Advised user-side rules]:
+    ! * youtube-nocookie.com cookie block
+    _ googlevideo.com xhr
+    _ ytimg.com script

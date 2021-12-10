@@ -1,20 +1,31 @@
 # [dnscrypt-proxy 2.1.1]
 
-adservice.google.*
+#*-pa.googleapis.com                   # This break most android features (uncomment this if paranoid)
+*-settings.services.*                  # Mozilla settings upload/download?
+admob.*
+adservice.google.*                     # Goolag AdService Tracking
 beacon*.*
 beacon.*
-cloudflare-dns.com                 # Why not?
-detectportal.*                     # BurntFox DetectPortal
-google                             # "*.google" TLD should be blocked for goods!
+cloudflare-dns.com                     # Why not?
+detectportal.*                         # BurntFox DetectPortal
 doubleclick.*
-freebasics.com                     # FreeBasucks
-gvt[2-9]*.com                      # Requests to Goolag that not GVT1 should be blocked all, they've mostly used for beacons!
-i.org                              # FreeBasucks
-id.google.*
-#in-addr.arpa                      # SimpleWall resolvers v4
-internet.org
-#ip6.arpa                          # SimpleWall resolvers v6
-redirector.*
-#t[0-9]*.org                       # pDNSF check
-#wow.t[0-9]*.org                   # pDNSF check
-#www.t[0-9]*.org                   # pDNSF check
+firebase*.*
+freebasics.com                         # FreeBasucks
+geo.opera.com                          # Not intent to block entire subs, see `filter-allowed-names.txt`
+google                                 # "*.google" TLD should be blocked for goods! (Block DNS, Wellbeing, etc.)
+gvt[2-9]*.com                          # Requests to Goolag that not GVT1 should be blocked, they've mostly used for beacons!
+i.org                                  # FreeBasucks
+id.google.*                            # Goolag ID Tracking
+#in-addr.arpa                          # SimpleWall resolvers v4
+incoming.telemetry.*                   # Mozilla BurntFox Telemetry
+internet.org                           # FreeBasucks
+#ip6.arpa                              # SimpleWall resolvers v6 (Uncomment if set to refuse all IPv6 requests)
+lazada.co.th                           # IDIOTICS ADVERTISING AND MARKETING THAT LIKELY SPAM!
+redirector.*                           # (gvt1.com|googlevideo.com)
+safeframe.*                            # Goolag Ads iframe
+settings.services.*                    # Another Mozilla settings upload/download?
+snippets.*                             # Browser snippets, e.g. preload regional top sites!
+ss[0-9]*.mobilelife.co.th              # AIS AOC Scam
+t[0-9]*.org                            # pDNSF use for test DNS latency, but I've blocked it anyway.
+telemetry-*.services.*                 # Another Mozilla BurntFox Telemetry
+ww[0-9]*.mobilelife.co.th              # Another AIS AOC Scam
