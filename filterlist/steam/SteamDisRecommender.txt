@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202111092143
+! Version: 202112111544
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -90,6 +90,11 @@ steampowered.com#?#.contenthub_spotlight_container
 !   trying to buy, I've hide those game banners and also playtime, leave only a checkmark that you will noticed you have related
 !   games from your libraly that you're looking for, this make you not feeling shamed at it, at least.
 steampowered.com#?#.recommendation_reasons .similar_recent_apps_container a
+!
+! - Non-store but it's "News Hub", remove everything except search bar to search only news of games that you want to read!
+!   * I cannot prevent personalised news and/or events (pre)loaded, but only remove its button to focus only news from games
+!     that you've searched for...
+steampowered.com#?#div[class^="eventcalendar_EventCalendarContainer"] div[class^="eventcalendar_NewsChannelGroup"]
 
 ! [Faded community zone]
 ! WHAT COULD GO WRONG!?
@@ -216,6 +221,8 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||steampowered.com/explore/logfeedview$xmlhttprequest,important,redirect=nooptext
 ||steampowered.com/explore/recommended$xmlhttprequest,important,redirect=nooptext
+||steamstatic.com/public/javascript/applications/store/broadcast.css$stylesheet,important,redirect=empty
+||steamstatic.com/public/javascript/applications/store/broadcast.js$$script,important,redirect=empty
 
 ! Trusted or Allowed for unbreaking only! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Allow "DynamicStore" information to sent **only when you're logged out!**
