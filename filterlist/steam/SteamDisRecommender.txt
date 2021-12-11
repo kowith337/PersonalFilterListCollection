@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202112111544
+! Version: 202112111828
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -202,9 +202,8 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 !           your away before buying or viewing game details, include keep showing mini-popup video streams while scrolling down,
 !           hints that this game have deals and/or sales ongoing, etc. however, viewing live broadcasts on the community hub and/
 !           or embedded externally still possible!
-||steampowered.com/broadcast/$1p,important,~xhr
+||steampowered.com/broadcast/$1p,important,~doc,~xhr
 ||steampowered.com/broadcast/$1p,xhr
-||steamstatic.com/public/*/applications/store/broadcast$domain=steampowered.com,important
 !
 ! - Prevent steam reporting client-side error if this filterlist was breaking something...
 ||steampowered.com/IClientMetricsService/ReportClientError$important,~xmlhttprequest
@@ -221,8 +220,6 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||steampowered.com/explore/logfeedview$xmlhttprequest,important,redirect=nooptext
 ||steampowered.com/explore/recommended$xmlhttprequest,important,redirect=nooptext
-||steamstatic.com/public/javascript/applications/store/broadcast.css$stylesheet,important,redirect=empty
-||steamstatic.com/public/javascript/applications/store/broadcast.js$$script,important,redirect=empty
 
 ! Trusted or Allowed for unbreaking only! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Allow "DynamicStore" information to sent **only when you're logged out!**

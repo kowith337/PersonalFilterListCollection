@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Anti Impressions DLC
-! Version: 202111092143
+! Version: 202112111828
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -52,9 +52,9 @@ steampowered.com##+js(remove-class, data-ds-appid)
 steampowered.com##+js(set, CAppearMonitor, noopFunc)
 steampowered.com##+js(set, elTarget, null)
 
-! [Fix and hide broken carousel pane]
+! [Fix and hide broken carousel and preview pane]
 ! Those elements already broken by scriptlet rules above since their carousel items require to load JavaScript functions that
-! bind with functions to track users (by `snr` and observe visibility of game titles then written in `app_impressions` cookie),
+! bind with functions to track users (by `snr` and observe visibility of other games, then written in `app_impressions` cookie),
 ! but instead of completely hide them, I will remove all of carousel panes and leave only some header text and buttons for
 ! allowing you to manually navigate to specific category directly.
 ! - Homepage
@@ -63,18 +63,27 @@ steampowered.com#?#.home_ctn .carousel_container .carousel_items
 steampowered.com#?#.home_ctn .carousel_container .carousel_thumbs
 steampowered.com#?#.tab_container .home_rightcol
 !
+! - Explore View
+steampowered.com#?#.home_ctn .home_rightcol:matches-path(/explore)
+!
 ! - Category Hub
 steampowered.com#?#.page_contenthub_content #genre_large_cluster
 
 ! [CSS Override]
 ! - Right pane preview are broken by same reasons above, expand the game list to cover against removed pane instead.
 steampowered.com#?#.tab_container .home_leftcol:style(width: 100% !important)
+steampowered.com#?#.home_ctn .home_leftcol:matches-path(/explore):style(width: 100% !important)
 
 ! [Requests Blocking]
 ! I'll move the "EventComponents" functions to here instead of staying in the base list, because it's potentially break seasonal
 ! sales events page (NewYear {also Chinese}, Summer, Spring, Winter, Halloween, etc.), however, the function for browsing games
 ! and also zuckest for you to buy based on tracking via games you've already own, games that appeared in browser screen still
 ! break by this filterlist function that prevent tracking cookie, so complete block event functions is probably good after all.
-!||steamstatic.com/public/*/applications/store/*~eventcomponents$domain=steampowered.com,important
-!||steamstatic.com/public/*/applications/store/eventcomponents$domain=steampowered.com,important
+!||steamstatic.com/public/*/applications/store/*~eventcomponents$domain=steampowered.com
+!||steamstatic.com/public/*/applications/store/eventcomponents$domain=steampowered.com
+
+! - Aggressively prevent using of "Broadcast" functions in store site!
+!   * This potentially break possibility of viewing update news and events from various games!
+||steamstatic.com/public/css/applications/store/broadcast.css$important,domain=steampowered.com,redirect=empty
+||steamstatic.com/public/javascript/applications/store/broadcast.js$important,domain=steampowered.com,redirect=empty
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
