@@ -1,6 +1,6 @@
 # [uMatrix 1.4.4]
 # Title: Hosts for block Naver LINE ads and tracking.
-# Version: 202112102248
+# Version: 202112121353
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -15,7 +15,6 @@
 0.0.0.0 ad-center.line.me
 0.0.0.0 lap-click.tr.line.me
 0.0.0.0 lt-click.tr.line.me
-#0.0.0.0 obs.line-scdn.net                      # Because I'm having an issue with Line@/OA interactive menu & images won't show.
 #0.0.0.0 optout-api.tr.line.me                  # This will cause problem if you need to opt-out from determining your interests.
 0.0.0.0 sch.line.me
 0.0.0.0 tr.line.me
@@ -35,4 +34,8 @@
 #                           : https://pantip.com/topic/41023618
 0.0.0.0 static-today.line-scdn.net
 0.0.0.0 today.line.me
+#
+# Blocking this hosts will surely lost ability to interact with custom menu of Line@/OA , however, this domain also use to serve
+# banner ads above chat lists!
+0.0.0.0 obs.line-scdn.net
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
