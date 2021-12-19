@@ -1,6 +1,6 @@
 [uBlock Origin 1.37.0]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202110072251
+! Version: 202112191330
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -138,6 +138,8 @@ d.facebook.com,m.facebook.com,mbasic.facebook.com#?##root table[role] div[class]
 ! Remove "Big Like" button in message chat, the button will auto change to "Send" once you've start focusing to text box, but it
 ! will change to "Like" button once the text box lost focus, I remove it to prevent sending "Big Like" by mistake!
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com#?#.-hardstate-messages #root #message-reply-composer form div[data-sigil="marea"] div[class] > button.iconOnly[name="like"]
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com#?#form[action*="/messages/"] div[data-sigil="marea"] div[class] button[name="like"]:remove()
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com#?#form[action*="/messages/"] div[data-sigil="marea"] div[class] button[name="send"]:style(display: block !important)
 
 ! Try to remove weird square box that divide almost every comments
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com#?#div[data-sigil="comment"] section.touchable[data-ad-preview="carousel-card"]

@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202110080006
+! Version: 202112191329
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -89,7 +89,6 @@
 ||facebook.com/*&pn_*=$xmlhttprequest
 ||facebook.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
 ||facebook.com/*&ref*=$document,important,domain=~FacebookInternalTracking_Ref-Wild
-||facebook.com/*&ref*=$xmlhttprequest
 ||facebook.com/*&ref=$document,important,domain=~FacebookInternalTracking_Ref
 ||facebook.com/*&ref=$xmlhttprequest
 ||facebook.com/*&settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
@@ -136,7 +135,6 @@
 ||facebook.com/*?pn_*=$xmlhttprequest
 ||facebook.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
 ||facebook.com/*?ref*=$document,important,domain=~FacebookInternalTracking_Ref-Wild
-||facebook.com/*?ref*=$xmlhttprequest
 ||facebook.com/*?ref=$document,important,domain=~FacebookInternalTracking_Ref
 ||facebook.com/*?ref=$xmlhttprequest
 ||facebook.com/*?settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
@@ -219,7 +217,6 @@
 ||messenger.com/*&pn_*=$xmlhttprequest
 ||messenger.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
 ||messenger.com/*&ref*=$document,important,domain=~FacebookInternalTracking_Ref-Wild
-||messenger.com/*&ref*=$xmlhttprequest
 ||messenger.com/*&ref=$document,important,domain=~FacebookInternalTracking_Ref
 ||messenger.com/*&ref=$xmlhttprequest
 ||messenger.com/*&settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
@@ -264,7 +261,6 @@
 ||messenger.com/*?pn_*=$xmlhttprequest
 ||messenger.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
 ||messenger.com/*?ref*=$document,important,domain=~FacebookInternalTracking_Ref-Wild
-||messenger.com/*?ref*=$xmlhttprequest
 ||messenger.com/*?ref=$document,important,domain=~FacebookInternalTracking_Ref
 ||messenger.com/*?ref=$xmlhttprequest
 ||messenger.com/*?settings_tracking=$document,important,domain=~FacebookInternalTracking_SettingsTracking
@@ -295,17 +291,17 @@
 !   note that `removeparam` will clean only first detected parameter (race condition), it cannot clear multiple parameters in
 !   each requests, probably some information still slipped through other parameters that cannot removed at that time.
 $document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^(__)?m_$/
+$document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^[a-zA-Z]+?\[\d+?\]$/
 $document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^__(c(cr|ft)?|rv|so|tn|xts?)__$/
-$document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^c\[\d+?\]$/
 $document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^logging_/i
 $document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^privacy_/i
+$document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^ref_?/i
 $document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=acontext
 $document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=rc
 $document,xmlhttprequest,important,domain=steamcommunity.com|steampowered.com,removeparam=/^curator_/i
-$document,xmlhttprequest,important,domain=steamcommunity.com|steampowered.com,removeparam=/^s(e|n)r/i
+$document,xmlhttprequest,important,domain=steamcommunity.com|steampowered.com,removeparam=/s(e|n)r/i
 $first-party,document,xmlhttprequest,domain=facebook.com|messenger.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com,removeparam=/^fb_dtsg_?/i
 $first-party,important,domain=github.com,removeparam=/^notifications?/i
-
 
 ! Known breaking, at your own risk!
 ! [CloudFlare DDoS JS Challenge]
