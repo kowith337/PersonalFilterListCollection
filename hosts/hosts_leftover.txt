@@ -50,7 +50,6 @@
 0.0.0.0 tpc.googlesyndication.com
 0.0.0.0 www.adgoogle.net
 0.0.0.0 www.admobclick.com
-0.0.0.0 www.admobclick.com
 0.0.0.0 www.googleads.com
 #
 # - {Google PA-ranoid APIs}
@@ -610,7 +609,6 @@
 0.0.0.0 player.aniview.com
 0.0.0.0 popup.taboola.com
 0.0.0.0 prod.vidible.tv
-0.0.0.0 pubads.g.doubleclick.net
 0.0.0.0 pubmatic.mainroll.com
 0.0.0.0 px.powerlinks.com
 0.0.0.0 pxl.connexity.net
@@ -637,7 +635,6 @@
 0.0.0.0 sch.line.me
 0.0.0.0 search.spotxchange.com
 0.0.0.0 secure.footprint.net
-0.0.0.0 securepubads.g.doubleclick.net
 0.0.0.0 sentinel.api.useinsider.com
 0.0.0.0 sentry-tw.line-apps.com
 0.0.0.0 sentry-uit.line-apps.com

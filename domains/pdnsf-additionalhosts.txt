@@ -151,7 +151,6 @@ ati-host.net
 bp01.net
 #cloudapp.net #{M$ use subserver from this domain to serving EdgeChromium setup and update files, finding other solutions.}
 data.adobedc.net
-data.adobedc.net
 dnsdelegation.io
 ebis.ne.jp
 eloqua.com
@@ -165,7 +164,6 @@ keyade.com
 oghub.io
 omtrdc.net
 pardot.com
-sc.adobedc.net
 sc.adobedc.net
 shrfbdg004.com
 storetail.io
@@ -356,7 +354,6 @@ dartsearch-cn.net
 doubleclick-cn.net
 google-analytics-cn.com
 googleadapis-cn.com
-googleadservices-cn.com
 googleadservices-cn.com
 googleoptimize-cn.com
 googlesyndication-cn.com
