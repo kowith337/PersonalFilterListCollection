@@ -358,7 +358,6 @@ m.facebook.com,mbasic.facebook.com#?##root #bookmarkmenu table:has(a[href*="/fin
 m.facebook.com,mbasic.facebook.com#?##root div div:has(div[id*="more_item_"]:has(a[href*="/findfriends/browser/?"]))
 m.facebook.com,mbasic.facebook.com#?##root div:has(table td a[href*="/collapse/"])
 m.facebook.com,mbasic.facebook.com#?##root div[data-ft]:has(a[href*="netego_suggestion"])
-m.facebook.com,mbasic.facebook.com#?##root section article[data-ft*="quick_promotion_id"]
 m.facebook.com,mbasic.facebook.com#?##root table div:has(div[id*="page_suggestion"]:has(div a[href*="&origin=mobile_page_browser&"]))
 m.facebook.com,mbasic.facebook.com#?##root table td > div:has-text(/^Suggested/):has(ul li:has(table))
 m.facebook.com,mbasic.facebook.com#?##sub_profile_pic_content div > div:has(table a[href*="/search/"])
