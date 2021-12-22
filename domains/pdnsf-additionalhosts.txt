@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202110301324
+# Version: 202112230202
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/wiki/pDSNF-additionalHosts
@@ -176,7 +176,6 @@ wt-eu02.net
 # Less privacy instance block!
 # they've use the `CrapFlare` for issuer and hosting, so it's not recommended to use on that hosts!
 # Esp, in case if you use over Tor, all of crapflare-backed servers will not allow any Tor traffic to view their sites!
-#   * "GGC Project" maybe somewhat acceptable because of not use the `CrapFlare` certificates and use "Let's encrypt" instead.
 actionsack.com
 alefvanoon.xyz
 dark.fail
@@ -188,7 +187,10 @@ ggc-project.de
 kavin.rocks
 moomoo.me
 nitter.hu
+notabird.site
 r.nf
+resolv.ee
+silkky.cloud
 trevorthalacker.com
 twitr.gq
 

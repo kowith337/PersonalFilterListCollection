@@ -1,6 +1,6 @@
 [uBlock Origin 1.38.5.0]
 ! Title: kowith337's Test List
-! Version: 202111162214
+! Version: 202112230210
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -32,8 +32,8 @@ imgur.com#?#.GalleryHandler-postContainer .Gallery-moreOnImgur
 
 ! [YouTube Non-Polymer] {Deprecated}
 ! - Remove any "recommended" channel and topic lists at home feed (Only English language)
-!youtube.com#?##feed-main-what_to_watch ol li:has(.feed-item-dismissable:has(.shelf-title-row h2 span:has-text(Recommended )))
-!youtube.com#?#.individual-feed li .branded-page-box:has(.feed-item-dismissable:has(span.shelf-subscription-button button[data-style-type="branded"]))
+!youtube.com#?##feed-main-what_to_watch ol li:has(.feed-item-dismissable:has(.shelf-title-row h2 span:has-text(/^recommended\s/i)))
+!youtube.com#?#.individual-feed li .branded-page-box:has(.feed-item-dismissable:has(span.shelf-subscription-button button[data-style-type*="branded"]))
 !
 ! - Remove overpromoted "Premium" appear in sidebar
 !youtube.com#?#.guide-section .guide-item-container ul li:has(a[href*="/premium"])
@@ -53,13 +53,17 @@ youtube.com#?##masthead #end #buttons ytd-button-renderer:has(a[href*="/ServiceL
 ! - For unclear reason, because I have use touchscreen notebook and found that I've redirected to donation page unintentionally,
 !   even I just tap onto the blank space, probably navigation header placement issue that will be a short time while page loading
 !   will be see some icon enlarged, absolutely it's `Liberapay` logo are cover the page entirely at that moment!
-bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,nitter.vxempire.xyz,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]
+bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.it,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weiler.rocks,nttr.stream,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]
 !
 ! - Remove unsupported card contents placeholder
 !   > Spaces: Remove empty box since it just a placeholder box that cannot show anything.
 !   > Broadcasts: Remove bottom card title, left only image preview.
-bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,nitter.vxempire.xyz,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-container[href*="/i/spaces/"]
-bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,nitter.vxempire.xyz,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-content-container[href*="/i/broadcasts/"] .card-content
+bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.it,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weiler.rocks,nttr.stream,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-container[href*="/i/spaces/"]
+bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.it,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weiler.rocks,nttr.stream,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-content-container[href*="/i/broadcasts/"] .card-content
+!
+! - Some instance give me some abuse that add very long site name, so removed it!
+twitter.censors.us#?#.inner-nav a.site-name:upward(.nav-item)
+twitter.censors.us#?#.inner-nav a:has(img.site-logo)
 
 ! [Pantip] Explicit and spam topic name (Use Thai unicode characters because most language of this site are mainly in Thai)
 pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(ตระกองขวัญ))
@@ -93,7 +97,9 @@ facebook.com#?#.AdBox:remove()
 facebook.com#?#.post-ads:remove()
 
 ! [Nitter]
-bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.unixfox.eu,nitter.vxempire.xyz,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]:remove()
+bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.it,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weiler.rocks,nttr.stream,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]:remove()
+twitter.censors.us#?#.inner-nav a.site-name:upward(.nav-item):remove()
+twitter.censors.us#?#.inner-nav a:has(img.site-logo):remove()
 
 ! [Twitter]
 ! - Some inline and/or side pane that tagged with `[aria-labelledby]` are useless, they often use for showing a pane to easily
