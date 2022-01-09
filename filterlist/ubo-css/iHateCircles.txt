@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: iHateCircles
-! Version: 202112221956
+! Version: 202201092346
 ! Expires: 2 days
 ! Author: kowith337, DandelionSprout and contributors
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css
@@ -8,30 +8,30 @@
 ! Description: Circles? Material Design? All of that is too mainstream! Just bring back all the squares!!
 
 ! Multi-domain
-aminoapps.com,answers.yahoo.com,discord.com,douyin.com,github.com,ifunny.co,instagram.com,minds.com,ok.ru,pixiv.net,quora.com,reddit.com,tiktok.com,tumblr.com,twitter.com,vk.com,google.*##*:style(border-radius: 0px !important)
-discord.com,facebook.com,google.com,pixiv.net##*:before:style(border-radius: 0px !important)
+aminoapps.com,answers.yahoo.com,discord.com,douyin.com,github.com,ifunny.co,instagram.com,minds.com,ok.ru,pixiv.net,quora.com,reddit.com,tiktok.com,tumblr.com,twitter.com,vk.com,google.*#?#*:style(border-radius: 0px !important)
+discord.com,facebook.com,google.com,pixiv.net#?#*:before:style(border-radius: 0px !important)
 
 ! Single-domain
-discord.com,discordapp.com##div[class*="avatar"][role="button"]:style(border-radius: 0px !important)
-discord.com,discordapp.com##div[class^="inner-"][style*="/assets/"]:style(border-radius: 0px !important)
-discord.com,discordapp.com##div[class^="wrapper-"] > svg > mask
-discord.com,discordapp.com##div[class^="wrapper-"]:style(border-radius: 0px !important)
-discord.com,discordapp.com##div[style*="avatars"]:style(border-radius: 0px !important; -webkit-mask: none !important)
-discord.com,discordapp.com##svg foreignObject:style(mask: none !important)
-facebook.com##*:after:style(border-radius: 0px !important)
-facebook.com##*:style(border-radius: 0px !important; border-bottom-left-radius: 0px !important; border-bottom-right-radius: 0px !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important)
-facebook.com##div[id^="mount"] div[class] > svg[data-visualcompletion] g[mask] circle
-facebook.com##div[id^="mount"] div[class] > svg[data-visualcompletion] g[mask] rect
-facebook.com##div[id^="mount"] div[class] > svg[data-visualcompletion] mask circle:upward(1)
-facebook.com##div[id^="mount"] div[class] > svg[data-visualcompletion] mask rect:upward(1)
-instagram.com##canvas
-mewe.com##*:not([class*="dot"]):style(border-radius: 0px !important)
-pantip.com###openUserMenu img[alt="profile-avatar"]:style(border-radius: 0px !important)
-pantip.com##.display-post-avatar img:style(border-radius: 0px !important)
-pantip.com##.pt-m-display-post .display-post-avatar img:style(border-radius: 0px !important)
-twitch.tv##.tw-avatar > .tw-border-radius-rounded.tw-overflow-hidden:style(border-radius: 0px !important)
-weibo.com##.subinfo_face > img:style(border-radius: 0px !important)
-youtube.com##yt-img-shadow:style(border-radius: 0px !important)
+discord.com,discordapp.com#?#div[class*="avatar"][role="button"]:style(border-radius: 0px !important)
+discord.com,discordapp.com#?#div[class^="inner-"][style*="/assets/"]:style(border-radius: 0px !important)
+discord.com,discordapp.com#?#div[class^="wrapper-"] > svg > mask
+discord.com,discordapp.com#?#div[class^="wrapper-"]:style(border-radius: 0px !important)
+discord.com,discordapp.com#?#div[style*="avatars"]:style(border-radius: 0px !important; -webkit-mask: none !important)
+discord.com,discordapp.com#?#svg foreignObject:style(mask: none !important)
+facebook.com#?#*:after:style(border-radius: 0px !important)
+facebook.com#?#*:style(border-radius: 0px !important; border-bottom-left-radius: 0px !important; border-bottom-right-radius: 0px !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important)
+facebook.com#?#div[id^="mount"] div[class] > svg[data-visualcompletion] g[mask] circle
+facebook.com#?#div[id^="mount"] div[class] > svg[data-visualcompletion] g[mask] rect
+facebook.com#?#div[id^="mount"] div[class] > svg[data-visualcompletion] mask circle:upward(1)
+facebook.com#?#div[id^="mount"] div[class] > svg[data-visualcompletion] mask rect:upward(1)
+instagram.com#?#canvas
+mewe.com#?#*:not([class*="dot"]):style(border-radius: 0px !important)
+pantip.com#?##openUserMenu img[alt="profile-avatar"]:style(border-radius: 0px !important)
+pantip.com#?#.display-post-avatar img:style(border-radius: 0px !important)
+pantip.com#?#.pt-m-display-post .display-post-avatar img:style(border-radius: 0px !important)
+twitch.tv#?#.tw-avatar > .tw-border-radius-rounded.tw-overflow-hidden:style(border-radius: 0px !important)
+weibo.com#?#.subinfo_face > img:style(border-radius: 0px !important)
+youtube.com#?#yt-img-shadow:style(border-radius: 0px !important)
 
 ! Bonus: Privacy instances
 ! Note: 1. Instances where it use "CrapFlare" for issuer are ignored!
@@ -46,17 +46,17 @@ youtube.com##yt-img-shadow:style(border-radius: 0px !important)
 !          shorts, so I will respect to their decisions that don't want to make their sites appear publically, include this too!
 !
 ! [Bibliogram]: https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md
-bibliogram.1d4.us,bibliogram.art,bibliogram.hamster.dance,bibliogram.pussthecat.org,bibliogram.snopyta.org,insta.trom.tf##*:style(border-radius: 0px !important)
-bibliogram.1d4.us,bibliogram.art,bibliogram.hamster.dance,bibliogram.pussthecat.org,bibliogram.snopyta.org,insta.trom.tf##img.pfp:style(border-radius: 0px !important)
+bibliogram.1d4.us,bibliogram.art,bibliogram.hamster.dance,bibliogram.pussthecat.org,bibliogram.snopyta.org,insta.trom.tf#?#*:style(border-radius: 0px !important)
+bibliogram.1d4.us,bibliogram.art,bibliogram.hamster.dance,bibliogram.pussthecat.org,bibliogram.snopyta.org,insta.trom.tf#?#img.pfp:style(border-radius: 0px !important)
 !
 ! [Invidious]: https://api.invidious.io | https://redirect.invidious.io | https://docs.invidious.io/Invidious-Instances.md
-inv.riverside.rocks,invidio.xamh.de,invidious.namazso.eu,invidious.osi.kr,invidious.snopyta.org,vid.mint.lgbt,vid.puffyan.us,yewtu.be,youtube.076.ne.jp,yt.artemislena.eu,yt.didw.to##*:style(border-radius: 0px !important)
+inv.riverside.rocks,invidio.xamh.de,invidious.namazso.eu,invidious.osi.kr,invidious.snopyta.org,vid.mint.lgbt,vid.puffyan.us,yewtu.be,youtube.076.ne.jp,yt.artemislena.eu,yt.didw.to#?#*:style(border-radius: 0px !important)
 !
 ! [LibReddit]: https://github.com/spikecodes/libreddit#instances
-leddit.xyz,libredd.it,libreddit.40two.app,libreddit.autarkic.org,libreddit.awesomehub.io,libreddit.de,libreddit.exonip.de,libreddit.igna.rocks,libreddit.mutahar.rocks,libreddit.northboot.xyz,libreddit.pussthecat.org,libreddit.some-things.org,libreddit.spike.codes,libreddit.sugoma.tk,libreddit.totaldarkness.net,lr.cowfee.moe,lr.mint.lgbt,lr.oversold.host,lr.riverside.rocks,reddit.artemislena.eu,reddit.invak.id,reddit.phii.me,reddit.stuehieyr.com,##*:style(border-radius: 0px !important)
+leddit.xyz,libredd.it,libreddit.40two.app,libreddit.autarkic.org,libreddit.awesomehub.io,libreddit.de,libreddit.exonip.de,libreddit.igna.rocks,libreddit.mutahar.rocks,libreddit.northboot.xyz,libreddit.pussthecat.org,libreddit.some-things.org,libreddit.spike.codes,libreddit.sugoma.tk,libreddit.totaldarkness.net,lr.cowfee.moe,lr.mint.lgbt,lr.oversold.host,lr.riverside.rocks,reddit.artemislena.eu,reddit.invak.id,reddit.phii.me,reddit.stuehieyr.com,#?#*:style(border-radius: 0px !important)
 !
 ! [Nitter]: https://github.com/zedeus/nitter/wiki/Instances
-bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.it,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weiler.rocks,nttr.stream,twitter.076.ne.jp,twitter.censors.us##*:style(border-radius: 0px !important)
+bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.cutelab.space,nitter.eu,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.it,nitter.koyu.space,nitter.mailstation.de,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.nl,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.tokhmi.xyz,nitter.unixfox.eu,nitter.weiler.rocks,nttr.stream,twitter.076.ne.jp,twitter.censors.us#?#*:style(border-radius: 0px !important)
 !
 ! [Teddit]: https://codeberg.org/teddit/teddit#instances
-incogsnoo.com,reddit.lol,snoo.ioens.is,teddit.adminforge.de,teddit.ggc-project.de,teddit.httpjames.space,teddit.namazso.eu,teddit.nautolan.racing,teddit.net,teddit.pussthecat.org,teddit.sethforprivacy.com,teddit.tinfoil-hat.net,teddit.totaldarkness.net,teddit.zaggy.nl##*:style(border-radius: 0px !important)
+incogsnoo.com,reddit.lol,snoo.ioens.is,teddit.adminforge.de,teddit.ggc-project.de,teddit.httpjames.space,teddit.namazso.eu,teddit.nautolan.racing,teddit.net,teddit.pussthecat.org,teddit.sethforprivacy.com,teddit.tinfoil-hat.net,teddit.totaldarkness.net,teddit.zaggy.nl#?#*:style(border-radius: 0px !important)

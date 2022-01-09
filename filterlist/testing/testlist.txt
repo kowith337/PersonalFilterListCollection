@@ -1,6 +1,6 @@
 [uBlock Origin 1.38.5.0]
 ! Title: kowith337's Test List
-! Version: 202112230210
+! Version: 202201092343
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -53,13 +53,13 @@ youtube.com#?##masthead #end #buttons ytd-button-renderer:has(a[href*="/ServiceL
 ! - For unclear reason, because I have use touchscreen notebook and found that I've redirected to donation page unintentionally,
 !   even I just tap onto the blank space, probably navigation header placement issue that will be a short time while page loading
 !   will be see some icon enlarged, absolutely it's `Liberapay` logo are cover the page entirely at that moment!
-bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.it,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weiler.rocks,nttr.stream,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]
+bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.cutelab.space,nitter.eu,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.it,nitter.koyu.space,nitter.mailstation.de,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.nl,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.tokhmi.xyz,nitter.unixfox.eu,nitter.weiler.rocks,nttr.stream,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]
 !
 ! - Remove unsupported card contents placeholder
 !   > Spaces: Remove empty box since it just a placeholder box that cannot show anything.
 !   > Broadcasts: Remove bottom card title, left only image preview.
-bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.it,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weiler.rocks,nttr.stream,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-container[href*="/i/spaces/"]
-bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.it,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weiler.rocks,nttr.stream,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-content-container[href*="/i/broadcasts/"] .card-content
+bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.cutelab.space,nitter.eu,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.it,nitter.koyu.space,nitter.mailstation.de,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.nl,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.tokhmi.xyz,nitter.unixfox.eu,nitter.weiler.rocks,nttr.stream,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-container[href*="/i/spaces/"]
+bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.cutelab.space,nitter.eu,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.it,nitter.koyu.space,nitter.mailstation.de,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.nl,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.tokhmi.xyz,nitter.unixfox.eu,nitter.weiler.rocks,nttr.stream,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-content-container[href*="/i/broadcasts/"] .card-content
 !
 ! - Some instance give me some abuse that add very long site name, so removed it!
 twitter.censors.us#?#.inner-nav a.site-name:upward(.nav-item)
@@ -170,9 +170,9 @@ pantip.com##^responseheader(etag)
 !   * Will be priority to CDNs and some required resources, but maybe not fonts and social plugins, especially if that platform
 !     can track users and link back all off-site activities to its platform for determine users activities and show more related
 !     contents (and also zuckestions), such as all of Facebook plugins, Google Fonts, etc.
+$3p,domain=pantip.com,denyallow=ptcdn.info
 $3p,important,domain=chocolatey.org,denyallow=disqus.com|disquscdn.com
 $3p,important,domain=greasyfork.org
-$3p,important,domain=pantip.com,denyallow=ptcdn.info
 $3p,important,domain=thairath.co.th,denyallow=byteark.com
 
 ! Unbreak or Allowed only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
