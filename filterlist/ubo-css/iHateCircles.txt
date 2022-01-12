@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: iHateCircles
-! Version: 202201092346
+! Version: 202201121340
 ! Expires: 2 days
 ! Author: kowith337, DandelionSprout and contributors
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css
@@ -50,13 +50,13 @@ bibliogram.1d4.us,bibliogram.art,bibliogram.hamster.dance,bibliogram.pussthecat.
 bibliogram.1d4.us,bibliogram.art,bibliogram.hamster.dance,bibliogram.pussthecat.org,bibliogram.snopyta.org,insta.trom.tf#?#img.pfp:style(border-radius: 0px !important)
 !
 ! [Invidious]: https://api.invidious.io | https://redirect.invidious.io | https://docs.invidious.io/Invidious-Instances.md
-inv.riverside.rocks,invidio.xamh.de,invidious.namazso.eu,invidious.osi.kr,invidious.snopyta.org,vid.mint.lgbt,vid.puffyan.us,yewtu.be,youtube.076.ne.jp,yt.artemislena.eu,yt.didw.to#?#*:style(border-radius: 0px !important)
+inv.cthd.icu,inv.riverside.rocks,invidio.xamh.de,invidious.mutahar.rocks,invidious.namazso.eu,invidious.osi.kr,invidious.snopyta.org,vid.puffyan.us,yewtu.be,youtube.076.ne.jp,yt.artemislena.eu#?#*:style(border-radius: 0px !important)
 !
 ! [LibReddit]: https://github.com/spikecodes/libreddit#instances
-leddit.xyz,libredd.it,libreddit.40two.app,libreddit.autarkic.org,libreddit.awesomehub.io,libreddit.de,libreddit.exonip.de,libreddit.igna.rocks,libreddit.mutahar.rocks,libreddit.northboot.xyz,libreddit.pussthecat.org,libreddit.some-things.org,libreddit.spike.codes,libreddit.sugoma.tk,libreddit.totaldarkness.net,lr.cowfee.moe,lr.mint.lgbt,lr.oversold.host,lr.riverside.rocks,reddit.artemislena.eu,reddit.invak.id,reddit.phii.me,reddit.stuehieyr.com,#?#*:style(border-radius: 0px !important)
+leddit.xyz,libredd.it,libreddit.40two.app,libreddit.autarkic.org,libreddit.awesomehub.io,libreddit.de,libreddit.esmailelbob.xyz,libreddit.exonip.de,libreddit.igna.rocks,libreddit.kavin.rocks,libreddit.mutahar.rocks,libreddit.nl,libreddit.northboot.xyz,libreddit.pussthecat.org,libreddit.some-things.org,libreddit.spike.codes,libreddit.sugoma.tk,libreddit.totaldarkness.net,lr.cowfee.moe,lr.mint.lgbt,lr.oversold.host,lr.riverside.rocks,reddit.artemislena.eu,reddit.invak.id,reddit.phii.me,reddit.stuehieyr.com#?#*:style(border-radius: 0px !important)
 !
 ! [Nitter]: https://github.com/zedeus/nitter/wiki/Instances
 bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.ca,nitter.cutelab.space,nitter.eu,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.it,nitter.koyu.space,nitter.mailstation.de,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.nl,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.tokhmi.xyz,nitter.unixfox.eu,nitter.weiler.rocks,nttr.stream,twitter.076.ne.jp,twitter.censors.us#?#*:style(border-radius: 0px !important)
 !
 ! [Teddit]: https://codeberg.org/teddit/teddit#instances
-incogsnoo.com,reddit.lol,snoo.ioens.is,teddit.adminforge.de,teddit.ggc-project.de,teddit.httpjames.space,teddit.namazso.eu,teddit.nautolan.racing,teddit.net,teddit.pussthecat.org,teddit.sethforprivacy.com,teddit.tinfoil-hat.net,teddit.totaldarkness.net,teddit.zaggy.nl#?#*:style(border-radius: 0px !important)
+incogsnoo.com,reddit.lol,teddit.adminforge.de,teddit.namazso.eu,teddit.net,teddit.pussthecat.org,teddit.sethforprivacy.com,teddit.totaldarkness.net,teddit.zaggy.nl#?#*:style(border-radius: 0px !important)
