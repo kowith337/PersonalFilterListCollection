@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202201121351
+# Version: 202201212251
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/wiki/pDSNF-additionalHosts
@@ -180,7 +180,7 @@ app.link
 booking.com
 bstatic.com
 csp.withgoogle.com
-footprint.net
+#footprint.net # Conflict against Windows update (mostly UWP apps, just in case)
 hotspotshield.com
 mon-com-01.com
 nyctrl32.com
