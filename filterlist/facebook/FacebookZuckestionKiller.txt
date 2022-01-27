@@ -1,6 +1,6 @@
-[uBlock Origin 1.32.4]
+[uBlock Origin 1.38.0]
 ! Title: Facebook Zuckestion Killer - Base
-! Version: 202201271712
+! Version: 202201271739
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -357,6 +357,7 @@ m.facebook.com,mbasic.facebook.com#?##objects_container #root table td div > div
 m.facebook.com,mbasic.facebook.com#?##root #bookmarkmenu table:has(a[href*="/findfriends/browser/"])
 m.facebook.com,mbasic.facebook.com#?##root div div:has(div[id*="more_item_"]:has(a[href*="/findfriends/browser/?"]))
 m.facebook.com,mbasic.facebook.com#?##root div table td a[href*="/collapse/"]:upward(table)
+m.facebook.com,mbasic.facebook.com#?##root div table[role]:has(td a[href*="%2Ffriends%2Fcenter%2Frequests%2F"]):matches-path(home.php):upward(4)
 m.facebook.com,mbasic.facebook.com#?##root div[data-ft]:has(a[href*="netego_suggestion"])
 m.facebook.com,mbasic.facebook.com#?##root table div:has(div[id*="page_suggestion"]:has(div a[href*="&origin=mobile_page_browser&"]))
 m.facebook.com,mbasic.facebook.com#?##root table td > div:has-text(/^Suggested/):has(ul li:has(table))
