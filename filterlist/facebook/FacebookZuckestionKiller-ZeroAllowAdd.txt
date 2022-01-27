@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.4]
 ! Title: Facebook Zuckestion Killer - Zero allow inclusive
-! Version: 202110072249
+! Version: 202201271708
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -82,7 +82,7 @@ web.facebook.com#?#div[data-pagelet="page"] [role="navigation"] div[data-visualc
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##friends_center_main div:has(table tr:has(td a[href*="pymk_funnel_data"]))
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_group_stories_container article:has(footer a[href*="/groups/?ref=category_discover_landing"])
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_group_stories_container div:has(div a[href*="/findgroups/"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_newsfeed_stream div div[data-ft]:has(div:has(a[href*="/qp/action/redirect/"]))
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_newsfeed_stream div div[data-ft]:has(div:has(a[href*="/qp/action/"]))
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_newsfeed_stream div[data-ft] > div a[href*="/mobile/friends/add_friend.php?"]
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##mobile_video_feed_pagelet div div[class]:has-text(/Top videos/):upward(1)
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##objects_container #root table td div > div:has(a[href*="/zero/toggle/enable/"])
@@ -90,7 +90,7 @@ web.facebook.com#?#div[data-pagelet="page"] [role="navigation"] div[data-visualc
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##objects_container #root table td div > div:has(a[href*="freebasics.com"])
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root #bookmarkmenu table:has(a[href*="/findfriends/browser/"])
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div div:has(div[id*="more_item_"]:has(a[href*="/findfriends/browser/?"]))
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div:has(table td a[href*="/collapse/"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div table td a[href*="/collapse/"]:upward(div:has(header h3))
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div[data-ft]:has(a[href*="netego_suggestion"])
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root section article[data-ft*="quick_promotion_id"]
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root table div:has(div[id*="page_suggestion"]:has(div a[href*="&origin=mobile_page_browser&"]))
@@ -102,8 +102,8 @@ web.facebook.com#?#div[data-pagelet="page"] [role="navigation"] div[data-visualc
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport #root div:has(h3):has(span a[href*="/dd/greeting/mbasic/more/tapped"])
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport #root div[data-ft]:has(h3:has-text(Facebook)):has(a[href*="/netego/redirect/"])
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport #root table td div div:has(a[href*="/lite/?"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport div > :has(table[role="presentation"]:has(td a[href*="/qp/action/redirect/?"]))
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport div > div:has(a[href*="/download.php"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport div table[role="presentation"]:has(td a[href*="/qp/action/"]):upward(table)
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport div[class] > table[role]:has(td a[href*="/a/language.php?"][href*="ref_component=mbasic_footer"])
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[data-ft] > div > div:has(span a[href*="/boosted_post/"])
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#div[data-ft] div:has(table a[href*="mbasic_feed_post_like_chaining"])
@@ -197,7 +197,7 @@ web.facebook.com#?#div[data-pagelet="page"] [role="navigation"] div[data-visualc
 0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="fb://search_voyager"]))
 0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="free.facebook.com/home.php?ref"]))
 0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.mSideMenu li:has(.touchable:has(a[href*="instagram.com"]))
-0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.storyStream section article:has(footer:has(a[data-ajaxify-href*="/qp/action/redirect/?"]))
+0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#.storyStream section article:has(footer:has(a[data-ajaxify-href*="/qp/action/"]))
 0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#:xpath(//section//article[.//header//div//span/text()="Sponsored"])
 0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/"][href*="103418383389257"])
 0.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?#[class*="-hardstate-groups"] #root div[class] > div div[class] > :has(a[href*="/groups_browse/"][href*="212609529249058"])
@@ -243,8 +243,8 @@ web.facebook.com#?#div[data-pagelet="page"] div[role="main"] div[class] > div[da
 web.facebook.com#?#div[role="complementary"] div[data-pagelet="TahoeRightRail"] div[class] span[dir]:has-text(Up next):upward(2)
 
 ! [DOM Level 3]
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport #root div:not([id*="MPhoto"]) > table[role] tbody:has(a[href*="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport div:not(#objects_container) > div:has(table[role] a[href*="/qp/action/redirect/?"][href*="facebook.com%2Flite%2F"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport #root div:not([id*="MPhoto"]) > table[role] tbody:has(a[href*="/qp/action/"][href*="facebook.com%2Flite%2F"])
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport div:not(#objects_container) > div:has(table[role] a[href*="/qp/action/"][href*="facebook.com%2Flite%2F"])
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport div:not(#objects_container) > table[class] td a[href*="facebook.com/l.php?"]:has(span)
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##viewport div:not([id]) > table:has(td a[href*="/a/language.php?"][href*="ref_component=mbasic_footer"])
 
