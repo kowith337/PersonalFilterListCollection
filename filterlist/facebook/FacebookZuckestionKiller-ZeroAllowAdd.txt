@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.4]
 ! Title: Facebook Zuckestion Killer - Zero allow inclusive
-! Version: 202201271708
+! Version: 202201271712
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -90,7 +90,7 @@ web.facebook.com#?#div[data-pagelet="page"] [role="navigation"] div[data-visualc
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##objects_container #root table td div > div:has(a[href*="freebasics.com"])
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root #bookmarkmenu table:has(a[href*="/findfriends/browser/"])
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div div:has(div[id*="more_item_"]:has(a[href*="/findfriends/browser/?"]))
-0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div table td a[href*="/collapse/"]:upward(div:has(header h3))
+0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div table td a[href*="/collapse/"]:upward(table)
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root div[data-ft]:has(a[href*="netego_suggestion"])
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root section article[data-ft*="quick_promotion_id"]
 0.facebook.com,d.facebook.com,m.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##root table div:has(div[id*="page_suggestion"]:has(div a[href*="&origin=mobile_page_browser&"]))
