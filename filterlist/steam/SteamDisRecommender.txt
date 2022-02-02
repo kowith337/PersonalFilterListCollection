@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202202012256
+! Version: 202202021157
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -176,7 +176,6 @@ steamcommunity.com#?#.persona_name #NamePopup:remove()
 steamcommunity.com#?#.persona_name .namehistory_link:remove()
 steamcommunity.com#?#.playerAvatarAutoSizeInner,.playersection_avatar:has(img[src*=".gif"]):remove()
 steamcommunity.com#?#.profile_animated_background:remove()
-steamcommunity.com#?#div[class^="miniprofile"] video:remove()
 steampowered.com#?##live_streams_carousel:remove()
 steampowered.com#?##promo_header_banner[class*="promotionDetailsBar"]:remove()
 steampowered.com#?#.cart_rightcol:remove()
@@ -245,6 +244,7 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 ||steampowered.com/explore/logfeedview$xmlhttprequest,important,redirect=nooptext
 ||steampowered.com/explore/recommended$xmlhttprequest,important,redirect=nooptext
 !||steamstatic.com/steamcommunity/public/images/items/*.webm$media,important,redirect=noopmp4-1s,domain=steamcommunity.com
+
 ! Trusted or Allowed for unbreaking only! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Allow "DynamicStore" information to sent **only when you're logged out!**
 @@||steampowered.com/dynamicstore/userdata/?id=0&$xmlhttprequest
