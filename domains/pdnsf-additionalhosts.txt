@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202201212251
+# Version: 202202142359
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/wiki/pDSNF-additionalHosts
@@ -141,30 +141,6 @@ webtrekk.net
 wizaly.com
 wt-eu02.net
 
-# Less privacy instance block! (Invidious, Nitter, Bibliogram, Teddit, LibReddit, etc. where they use "CrapFlare")
-actionsack.com
-alefvanoon.xyz
-dark.fail
-database.red
-domain.glass
-dothq.co
-drivet.xyz
-flux.industries
-ggc-project.de
-jamiethalacker.dev
-kavin.rocks
-libreddit.hu
-moomoo.me
-nautolan.racing
-nitter.hu
-notabird.site
-r.nf
-resolv.ee
-silkky.cloud
-stilic.ml
-trevorthalacker.com
-twitr.gq
-
 # Hola Block (See also: https://github.com/lightswitch05/hosts/issues/129)
 hola.org
 l-agent.me
@@ -239,12 +215,12 @@ setup.services.mozilla.com
 #connectivitycheck.gstatic.com
 
 # GVT (Play Store CDN usage {and also beacons})
-#gvt*.com
 #gvt1.com
 gvt2.com
 gvt3.com
 gvt4.com
 gvt5.com
+#gvt*.com
 
 # Wildcard section!
 *-2mdn-*
@@ -280,7 +256,7 @@ metric*google*
 metric*gstatic.com
 pagead-*.l.google.com
 recommender.*.google.com
-redirector.gvt*.com
+redirector.gvt*
 #safebrowsing.google*
 safeframe.*
 securetoken*
@@ -322,6 +298,7 @@ googlesyndication-cn.com
 googletagmanager-cn.com
 googletraveladservices-cn.com
 googlevads-cn.com
+#gvt*-cn.com
 #gvt1-cn.com
 gvt2-cn.com
 gvt3-cn.com
@@ -400,7 +377,7 @@ metrics.google.com
 
 # [Big Brother - This is so zucky!] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Facebook Connect are needed for login through third party apps, however, use at your own risk because Facebook will match apps
-# data and capture analytics and/or usage data to generating ads and related contents more related to yourself!
+# data and capture analytics and/or usage data to generating ads and related contents that more related to yourself!
 connect.facebook.net
 
 # Wildcard section

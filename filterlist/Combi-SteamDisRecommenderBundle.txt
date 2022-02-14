@@ -4,9 +4,7 @@
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/Combi-SteamDisRecommenderBundle.txt
-! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-!#if ext_ublock
+
 !#include steam/SteamDisRecommender.txt
 !#include steam/AntiImpressions.txt
-!#endif
-! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+!#include steam/ClassicProfile.txt

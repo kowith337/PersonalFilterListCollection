@@ -1,13 +1,13 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202202021157
+! Version: 202202142355
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/steam/SteamDisRecommender.txt
-! Descriptions: This will block, hide and remove bloated features of "Steam", e.g. zuckestions, name history, your playtimes,
-!               animated things! include avatars, backgrounds and such!!
+! Descriptions: This will block, hide and remove bloated features of "Steam", include their various zuckestions about games!
 ! Reminder: All rules are possibly focused to mostly desktop page with no ongoing sales campaign...
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Shared Both]
 ! - Remove a button to install its client (near to text link that clickable for login and/or change language)
@@ -100,16 +100,13 @@ steampowered.com#?#div[class^="eventcalendar_EventCalendarContainer"] div[class^
 
 ! [Faded community zone]
 ! WHAT COULD GO WRONG!?
-!   Because I have no interests to decorate my profiles, rarely to collect cards or do some interactions just for get emoticons,
-!   upgrade favourite's games and community badge (obviously, need to expose interactions on the platform!?), trading items,
+! Because I have no interests to decorate my profiles, rarely to collect cards or do some interactions just for get emoticons,
+!   upgrade favourite's games and community badge (obviously, need to expose user activities on its platform!?), trading items,
 !   whatever that not touch the games we've already bought and just play them, leveling up profile for me is meaningless, even
 !   it's seems to be cool to have something special on appearance, but is it really improve somethign in real life at the end?
 !
 ! - Hide "Also known as" while performing people search in community (aka. remove past IGN)
 steamcommunity.com#?#.community_search_results_container #search_results .search_row .search_match_info
-!
-! - Hide players level indicator!
-steamcommunity.com#?#.friendPlayerLevel
 !
 ! - Hide playtimes
 steamcommunity.com#?#.games_list .hours_played
@@ -121,16 +118,6 @@ steamcommunity.com#?#.persona_name .namehistory_link
 ! - Hide yourself (and also all of peoples) about games that recently played.
 steamcommunity.com#?#.profile_recentgame_header
 steamcommunity.com#?#.recent_games
-!
-! - Hide all of other players frames that their not used a standard one for decorations...
-!   * This probably difficult to see an online indicator in user picture frame, however, you will still notice by colored IGN
-!     and/or a flat bar below profile image that still lid with colors, such as blue for online, green for playing game, etc.
-steamcommunity.com#?#.playersection_avatar_frame
-steamcommunity.com#?#.profile_avatar_frame
-!
-! - Hide any animated videos in profile page and mini card
-steamcommunity.com#?#.profile_animated_background
-steamcommunity.com#?#div[class^="miniprofile"] video
 !
 ! - Hide (your shameful) playtimes spent, green button to download or play game, even FAQ about "How to get card drops" links!
 steamcommunity.com#?#.badge_title_stats .badge_title_playgame
@@ -150,9 +137,6 @@ steampowered.com#?##steam_curators_not_empty:has(.curator_recommendation_capsule
 ! - If the games you've played are no longer drops card anymore, hide its text instead! (Work only "English" UI)
 steamcommunity.com#?#.badge_title_stats .progress_info_bold:has-text(/^No /)
 !
-! - Who use (animated) GIF file as avatar in minicard will be hide it and never be show anymore!
-steamcommunity.com#?#.playersection_avatar,.playerAvatarAutoSizeInner:has(img[src*=".gif"])
-!
 ! - Remove non-games badge progress info box! (e.g. Community actions, Seasonal sales, etc.)
 !   * Also include 2010 potato shacks?
 steamcommunity.com#?#.badges_sheet .badge_row:has(a.badge_row_overlay:not([href*="gamecards"]))
@@ -163,7 +147,7 @@ steamcommunity.com#?#.badges_sheet .badge_row:has(a.badge_row_overlay[href*="gam
 steampowered.com#?#.home_page_content .carousel_container.maincap:upward(2)
 !
 ! - Remove the "Funny" button in user review dialog.
-!   * Please note that I cannot hide text phrase that report how many `x person(s) found this review [helpful/funny].`
+!   * Please note that I cannot hide text phrase that report how many `x person(s) found this review...`
 steamcommunity.com#?#.review_area .review_rate_bar span:has(i.funny)
 steampowered.com#?#.review_box .vote_button_ctn a span:has(i.funny)
 !
@@ -174,8 +158,6 @@ steamcommunity.com#?#.badge_title_stats .how_to_get_card_drops_ctn:remove()
 steamcommunity.com#?#.community_search_results_container #search_results .search_row .search_match_info:remove()
 steamcommunity.com#?#.persona_name #NamePopup:remove()
 steamcommunity.com#?#.persona_name .namehistory_link:remove()
-steamcommunity.com#?#.playerAvatarAutoSizeInner,.playersection_avatar:has(img[src*=".gif"]):remove()
-steamcommunity.com#?#.profile_animated_background:remove()
 steampowered.com#?##live_streams_carousel:remove()
 steampowered.com#?##promo_header_banner[class*="promotionDetailsBar"]:remove()
 steampowered.com#?#.cart_rightcol:remove()
@@ -192,7 +174,7 @@ steampowered.com#?#.newmodal_background:remove()
 steampowered.com#?#.newux_optin_banner:remove()
 steampowered.com#?#.recommendation_reasons .similar_recent_apps_container a:remove()
 
-! CSS Modification  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! CSS Modifications - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - Re-paint "Give award" icon to be grayscale instead of `yellow` !
 steamcommunity.com,steampowered.com##img.reward_btn_icon:style(filter: grayscale(100%) !important)
 !
@@ -205,10 +187,6 @@ steampowered.com#?#.home_ctn.labs_cluster:style(display: none !important; width:
 !
 ! - Remove special offers pane that seems probably "marketed", share same tactics as above.
 steampowered.com#?#.home_ctn.marketingmessage_area:style(display: none !important; width: 0px !important; height: 0px !important)
-!
-! - Return 2px thick border of online indicator in minicard instead of show only bottom line below player's avatar
-!   * It's a fix after remove custom (and animated) avatar frame.
-steamcommunity.com#?#.miniprofile_playersection .playersection_avatar:style(border: 2px solid)
 !
 ! - When your perform "Search again without filtered" and you're barely see banner of filtered games because very low opacity,
 !   now I've increased it to 50% (old value is set to show only 5% of it's original opacy, that's too dark!!)
@@ -235,10 +213,6 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 ||steampowered.com/explore/logfeedview$xmlhttprequest
 ||steampowered.com/explore/recommended$important,~xmlhttprequest
 ||steampowered.com/explore/recommended$xmlhttprequest
-!
-! - This will blocking any WebM videos requests on SteamCommunity because using animated backgrouds are dragging performance of
-!   web browsers!
-||steamstatic.com/steamcommunity/public/images/items/*.webm$media,domain=steamcommunity.com
 
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||steampowered.com/explore/logfeedview$xmlhttprequest,important,redirect=nooptext
@@ -317,11 +291,15 @@ steamcommunity.com##^script:has-text(RecordAppImpression, snr)
 ! [Ranting Zone!] ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
 ! Thanks for the SimpleWall and neither ContextMenu Firewall apps that appear in Tweaking Software or EasyContextMenu, I've also
 ! block some shady steam EXEs that not necessary for my life anymore, include SteamServices, SteamWebHelper, SteamErrorReporter,
-! etc. plus those EXEs are ruined my precious notebook performance too much like a potato chips! even I just run only the main
-! steam client!! I give no thanks for new UI and FUCK THOSE EXPERIMENTAL LABS THAT MOSTLY DO TRACKING US FOR JUST OFFER PRECIOUS
-! TARGETED AND IMPACT ZUCKESTIONS, AND WE CANNOT OPT OUT FROM THEM FOR SURE!!!
-! Now I've giving up and launch steam client without activating any browsers modules from it, anything that I need to do while
-! playing games will ended to browsers (and sometime mobile app) only, include subscribe and managing workshop contents.
+! etc. plus those EXEs are ruined my precious notebook performance too much like a potato chips, even I just run only the main
+! steam client!
+! I give no thanks for new UI that eat performance just for showing friends who customised their profile with
+! (MP4/WebM) backgrounds in mini card, animated avatar and frames and such, also FUCK THOSE EXPERIMENTAL LABS THAT MOSTLY DO
+! TRACKING US FOR JUST OFFER PRECIOUS TARGETED AND IMPACT ZUCKESTIONS, AND WE CANNOT OPT OUT FROM THEM FOR SURE!!
+! Now I've giving up to use their new UI and always launch steam client without activating any browsers modules from it!!!
+! Anything that I need to do while playing games will ended to browsers (and sometime mobile app) only, include subscribe and
+! managing workshop contents, of course, I will not run both for anytime, it's depend on what things to focus.
 ! Even I've also use android app that linked to personal account, I will use only for workshop related functions, not for looking
-! to (buy)? other games and/or software through its apps anymore, unless I've open in the browsers that can install uBlock0!!!!!!
+! to view (and buy)? other games and/or software through its apps anymore, unless I've open in the browsers that can install uB0!
+! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !

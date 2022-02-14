@@ -5,11 +5,10 @@
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/facebook
 ! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/Combi-FacebookTotalAwareness.txt
 ! Description: This list will have no versions (date and time) added, it's depend on the sub lists that added via !#include and
-!              your extension settings (uBlock0/Nano) that how frequently update will be triggered.
-!#if ext_ublock
+!              your extension settings that how frequently update will be triggered.
+
 !#include facebook/FacebookZuckestionKiller.txt
 !#include facebook/FacebookZuckestionKiller-ZeroDenyAdd.txt
 !#include facebook/FacebookCommands.txt
 !#include facebook/FacebookChatAwareness.txt
 !#include facebook/FacebookExperimentCleanup.txt
-!#endif

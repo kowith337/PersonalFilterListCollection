@@ -1,6 +1,6 @@
 [uBlock Origin 1.37.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202112102251
+! Version: 202202021234
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -316,6 +316,10 @@ m.youtube.com#?#.consent-bump-lightbox:remove()
 ! - Also force remove new overlay dialog + dim that forcing visitor to sign-in with account before watching!!
 !   Although, you can press "No thanks", but paint-over with forced dialog is overdone dark patterns!!!
 m.youtube.com#?#.upsell-dialog-lightbox:has(.upsell-dialog-body-text a[href*="sign_in"]):remove()
+
+! YouTube Embed
+! - Remove gradiant shadow when hover mouse
+youtube.com,youtube-nocookie.com#?#.ytp-gradient-bottom,.ytp-gradient-top:remove()
 
 ! HTML Filtering  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: This may work only FF quantum + uB0 WebExt
