@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Classic Profile Appearance
-! Version: 202202142353
+! Version: 202202151202
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -12,7 +12,7 @@
 steamcommunity.com#?#.friendPlayerLevel
 !
 ! - Hide "Steam Level" (and maybe featured badge) section in mini card
-steamcommunity.com#?#.miniprofile_container .miniprofile_featuredcontainer
+steamcommunity.com,steampowered.com#?#.miniprofile_container .miniprofile_featuredcontainer
 !
 ! - Hide all of other players frames that their not used a standard one for decorations...
 !   * This probably difficult to see an online indicator in user picture frame, however, you will still notice by colored IGN
@@ -21,13 +21,13 @@ steamcommunity.com#?#.playersection_avatar_frame
 steamcommunity.com#?#.profile_avatar_frame
 !
 ! - Who use (animated) GIF file as avatar in profile page and minicard will be hide it!
-steamcommunity.com#?#.playersection_avatar img[src*=".gif"]
-steamcommunity.com#?#.playerAvatarAutoSizeInner img[src*=".gif"]
+steamcommunity.com,steampowered.com#?#.playersection_avatar img[src*=".gif"]
+steamcommunity.com,steampowered.com#?#.playerAvatarAutoSizeInner img[src*=".gif"]
 !
 ! - Hide any animated videos in profile page and mini card
-steamcommunity.com#?#.miniprofile_nameplatecontainer video.miniprofile_nameplate
+steamcommunity.com,steampowered.com#?#.miniprofile_nameplatecontainer video.miniprofile_nameplate
+steamcommunity.com,steampowered.com#?#div[class^="miniprofile"] video
 steamcommunity.com#?#.profile_animated_background
-steamcommunity.com#?#div[class^="miniprofile"] video
 
 ! To confirm that any `video` elements will not placed in for profile page!
 steamcommunity.com#?#video:matches-path(/id/)
@@ -41,14 +41,16 @@ steamcommunity.com#?#.playerAvatarAutoSizeInner,.playersection_avatar:has(img[sr
 steamcommunity.com#?#.profile_animated_background:remove()
 
 ! CSS Modifications - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! - Paint any mini player profile who use videos to black, otherwise will be depend on his/her avatar color accent.
-steamcommunity.com#?#.miniprofile_nameplatecontainer:style(background: black)
-!
 ! - Return 2px thick border of online indicator in mini profile card instead of show only bottom line below player's avatar
 !   * It's a fix after remove custom (and also animated) avatar frame.
 steamcommunity.com#?#.miniprofile_playersection .playersection_avatar:style(border: 2px solid)
+!
+! - Paint any mini player profile who use videos to black, otherwise will be depend on his/her blurred avatar as background.
+steamcommunity.com,steampowered.com#?#.miniprofile_nameplatecontainer:style(background: black)
+steamcommunity.com,steampowered.com#?#video.miniprofile_nameplate:style(background: black !important)
 
 ! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! - This will blocking WebM videos requests that related to profile customisation on SteamCommunity because using animated
-!   backgrouds will dragging performance of web browsers!
-||steamstatic.com/steamcommunity/public/images/items/*.webm$media,domain=steamcommunity.com
+! - This will blocking videos requests that related to profile customisation because using animated backgrouds will dragging down
+!   performance of web browsers!
+||steamstatic.com/steamcommunity/public/images/items/$media,domain=steamcommunity.com|steampowered.com
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
