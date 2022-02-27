@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Classic Profile Appearance
-! Version: 202202151202
+! Version: 202202231753
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -17,8 +17,8 @@ steamcommunity.com,steampowered.com#?#.miniprofile_container .miniprofile_featur
 ! - Hide all of other players frames that their not used a standard one for decorations...
 !   * This probably difficult to see an online indicator in user picture frame, however, you will still notice by colored IGN
 !     and/or a flat bar below profile image that still lid with colors, such as blue for online, green for playing game, etc.
-steamcommunity.com#?#.playersection_avatar_frame
-steamcommunity.com#?#.profile_avatar_frame
+steamcommunity.com,steampowered.com#?#.playersection_avatar_frame
+steamcommunity.com,steampowered.com#?#.profile_avatar_frame
 !
 ! - Who use (animated) GIF file as avatar in profile page and minicard will be hide it!
 steamcommunity.com,steampowered.com#?#.playersection_avatar img[src*=".gif"]
@@ -29,21 +29,26 @@ steamcommunity.com,steampowered.com#?#.miniprofile_nameplatecontainer video.mini
 steamcommunity.com,steampowered.com#?#div[class^="miniprofile"] video
 steamcommunity.com#?#.profile_animated_background
 
+! Non-basic filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [`:matches-path()` rules]
 ! To confirm that any `video` elements will not placed in for profile page!
 steamcommunity.com#?#video:matches-path(/id/)
 steamcommunity.com#?#video:matches-path(/profiles/)
+!
+! In store site, exclude app-specific pages and points shop, for other elements than game trailers at specific app, it will hide!
+steampowered.com#?#video:not(:matches-path(/^\/(app|points)\//))
+steampowered.com#?#video:matches-path(/^\/app\//):not(.highlight_player_area, .highlight_player_item .highlight_movie)
 
-! Non-basic filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! `:remove()` rules
-steamcommunity.com#?#.miniprofile_nameplatecontainer video.miniprofile_nameplate:remove()
-steamcommunity.com#?#.playerAvatarAutoSizeInner,.playersection_avatar:has(img[src*=".gif"]):remove()
-!steamcommunity.com#?#.playersection_avatar_frame img:remove()
+! [`:remove()` rules]
+steamcommunity.com,steampowered.com#?#.miniprofile_nameplatecontainer video.miniprofile_nameplate:remove()
+steamcommunity.com,steampowered.com#?#.playerAvatarAutoSizeInner,.playersection_avatar:has(img[src*=".gif"]):remove()
+!steamcommunity.com,steampowered.com#?#.playersection_avatar_frame img:remove()
 steamcommunity.com#?#.profile_animated_background:remove()
 
 ! CSS Modifications - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - Return 2px thick border of online indicator in mini profile card instead of show only bottom line below player's avatar
 !   * It's a fix after remove custom (and also animated) avatar frame.
-steamcommunity.com#?#.miniprofile_playersection .playersection_avatar:style(border: 2px solid)
+steamcommunity.com,steampowered.com#?#.miniprofile_playersection .playersection_avatar:style(border: 2px solid)
 !
 ! - Paint any mini player profile who use videos to black, otherwise will be depend on his/her blurred avatar as background.
 steamcommunity.com,steampowered.com#?#.miniprofile_nameplatecontainer:style(background: black)

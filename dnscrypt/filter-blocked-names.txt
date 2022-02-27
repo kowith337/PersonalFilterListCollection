@@ -1,31 +1,78 @@
 # [dnscrypt-proxy 2.1.1]
+# Title: Blocked rules for DNSCrypt Proxy client
+# Version: 202202272335
+# Author: kowith337
+# Expires: 2 days
+# Homepage: https://github.com/kowith337/PersonalFilterListCollection
+# Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Domain%20Lists%20and%20Wildcard
+# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/dnscrypt/filter-blocked-names.txt
 
+# Generic Blocklists
 #*-pa.googleapis.com                   # This break most android features (uncomment this if paranoid)
-*-settings.services.*                  # Mozilla settings upload/download?
-admob.*
-adservice.google.*                     # Goolag AdService Tracking
-beacon*.*
-beacon.*
+#dorando.at                            # Don't know much
+#gvt[0-9]*.com                         # Uncomment to block all Goolag 'GVT' subdomains, this also possibly to block Edge Chromium component updates!
+#in-addr.arpa                          # SimpleWall resolvers v4
+#ip6.arpa                              # SimpleWall resolvers v6 (Uncomment if you want to refuse all IPv6 resolves)
+#l.google.com                          # Same reason of Goolag `*-pa`, uncomment if needed!
+#t[0-9]*.org                           # pDNSF use for test DNS latency, but I've blocked it anyway.
+*-settings.services.*                  # SpyZilla settings upload/download?
+*telemetry*                            # Telemetry prevention
+activations.mozilla.*                  # SpyZilla activations
+admob.*                                # Goolag common ads
+adservice.google.*                     # Goolag AdService tracking
+autoconfig*                            # Possibility of SpyZilla AutoConfig (OOB config for BurntFox and SparkedBird)
+beacon*.*                              # Becaon prevention (GPlay)
+beacon.*                               # More becaon prevention (GPlay)
+bigfun*                                # True BigFun AOC SCAM
+cliqz.com                              # Formerly Waterfox Android
 cloudflare-dns.com                     # Why not?
-detectportal.*                         # BurntFox DetectPortal
-doubleclick.*
-firebase*.*
+detectportal.*                         # DetectPortal (SpyZilla, PaleMoon, Waterfox)
+doubleclick.*                          # Top notch of Goolag common ads
+firebase*.*                            # Commonly use for track and make anon reports of apps problems, but Goolag also known its data, too!
 freebasics.com                         # FreeBasucks
 geo.opera.com                          # Not intent to block entire subs, see `filter-allowed-names.txt`
+getpocket*                             # SpyZilla BurntFox Pocket partnership
 google                                 # "*.google" TLD should be blocked for goods! (Block DNS, Wellbeing, etc.)
 gvt[2-9]*.com                          # Requests to Goolag that not GVT1 should be blocked, they've mostly used for beacons!
-i.org                                  # FreeBasucks
+gvtl.com                               # Is that GVT1 typo?
+i.org                                  # FreeBasucks shortened (Onavo related)
 id.google.*                            # Goolag ID Tracking
-#in-addr.arpa                          # SimpleWall resolvers v4
-incoming.telemetry.*                   # Mozilla BurntFox Telemetry
+incoming.telemetry.*                   # SpyZilla BurntFox telemetry
 internet.org                           # FreeBasucks
-#ip6.arpa                              # SimpleWall resolvers v6 (Uncomment if set to refuse all IPv6 requests)
-lazada.co.th                           # IDIOTICS ADVERTISING AND MARKETING THAT LIKELY SPAM!
+kaidee.com                             # Promoted on Chrome
+lazada.co.th                           # IDIOTICS ADVERTISING AND MARKETING! (FORCE OPEN APP OR DOWNLOAD FROM STORE IF YOU DON'T HAVE IT!!)
+mozillademos.org                       # SpyZilla demo endpoint
+mozillamessaging.com                   # SpyZilla MESSaging (probably notifications endpoint, similar to GCM [Goolag Firebase])
+normandy*moz*                          # SpyZilla normandy
 redirector.*                           # (gvt1.com|googlevideo.com)
-safeframe.*                            # Goolag Ads iframe
-settings.services.*                    # Another Mozilla settings upload/download?
-snippets.*                             # Browser snippets, e.g. preload regional top sites!
-ss[0-9]*.mobilelife.co.th              # AIS AOC Scam
-t[0-9]*.org                            # pDNSF use for test DNS latency, but I've blocked it anyway.
-telemetry-*.services.*                 # Another Mozilla BurntFox Telemetry
-ww[0-9]*.mobilelife.co.th              # Another AIS AOC Scam
+safeframe.*                            # Goolag ads iframe
+services*moz*                          # Another SpyZilla settings upload/download?
+snippets.*                             # BurntFox browser snippets, e.g. preload regional top sites!
+ss[0-9]*.mobilelife.co.th              # AIS AOC Scam (Mobile operator specific)
+telemetry*                             # Another telemetry prevention
+telemetry-*.services.*                 # Another SpyZilla BurntFox telemetry
+ww[0-9]*.mobilelife.co.th              # Another AIS AOC Scam (Mobile operator specific)
+
+# Less privacy instance block!
+actionsack.com
+alefvanoon.xyz
+dark.fail
+database.red
+domain.glass
+dothq.co
+drivet.xyz
+flux.industries
+ggc-project.de
+jamiethalacker.dev
+kavin.rocks
+libreddit.hu
+moomoo.me
+nautolan.racing
+nitter.hu
+notabird.site
+r.nf
+resolv.ee
+silkky.cloud
+stilic.ml
+trevorthalacker.com
+twitr.gq

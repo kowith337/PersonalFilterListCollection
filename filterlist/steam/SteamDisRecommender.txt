@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202202142355
+! Version: 202202272338
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -236,7 +236,8 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 ! - As well as curator tracking, you will see neither `curator_clanid` and/or `curater_listid`
 ||$important,removeparam=/^curator_/,domain=steamcommunity.com|steampowered.com
 ||$important,removeparam=/^s(e|n)r/,domain=steamcommunity.com|steampowered.com
-||steamcommunity.com/sharedfiles$important,removeparam=searchtext
+||steamcommunity.com/sharedfiles$removeparam=searchtext
+||steampowered.com/dynamicstore/userdata$removeparam=~id
 
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! These cookies are not necessary, except it use for tracking purpose!
