@@ -1,6 +1,6 @@
 [uBlock Origin 1.38.5.0]
 ! Title: kowith337's Test List
-! Version: 202201311918
+! Version: 202203022114
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -45,13 +45,13 @@ youtube.com#?##masthead #end #buttons ytd-button-renderer:has(a[href*="/ServiceL
 ! - For unclear reason, because I have use touchscreen notebook and found that I've redirected to donation page unintentionally,
 !   even I just tap onto the blank space, probably navigation header placement issue that will be a short time while page loading
 !   will be see some icon enlarged, absolutely it's `Liberapay` logo are cover the page entirely at that moment!
-nitter.net,bird.trom.tf,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.bus-hit.me,nitter.ca,nitter.cutelab.space,nitter.datatunnel.xyz,nitter.esmailelbob.xyz,nitter.eu,nitter.fdn.fr,nitter.grimneko.de,nitter.it,nitter.koyu.space,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.nixnet.services,nitter.nl,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.tokhmi.xyz,nitter.unixfox.eu,nitter.weiler.rocks,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]
+nitter.net,nttr.stream,bird.trom.tf,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.bus-hit.me,nitter.ca,nitter.datatunnel.xyz,nitter.esmailelbob.xyz,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.it,nitter.mastodon.pro,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.nl,nitter.notraxx.ch,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.spaceint.fr,nitter.tiekoetter.com,nitter.unixfox.eu,nitter.weiler.rocks,tw.artemislena.eu,twitter.076.ne.jp,twitter.censors.us,nitter.cutelab.space#?#.inner-nav a[href*="liberapay"]
 !
 ! - Remove unsupported card contents placeholder
 !   > Spaces: Remove empty box since it just a placeholder box that cannot show anything.
 !   > Broadcasts: Remove bottom card title, left only image preview.
-nitter.net,bird.trom.tf,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.bus-hit.me,nitter.ca,nitter.cutelab.space,nitter.datatunnel.xyz,nitter.esmailelbob.xyz,nitter.eu,nitter.fdn.fr,nitter.grimneko.de,nitter.it,nitter.koyu.space,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.nixnet.services,nitter.nl,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.tokhmi.xyz,nitter.unixfox.eu,nitter.weiler.rocks,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-container[href*="/i/spaces/"]
-nitter.net,bird.trom.tf,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.autarkic.org,nitter.bus-hit.me,nitter.ca,nitter.cutelab.space,nitter.datatunnel.xyz,nitter.esmailelbob.xyz,nitter.eu,nitter.fdn.fr,nitter.grimneko.de,nitter.it,nitter.koyu.space,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.nixnet.services,nitter.nl,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.tokhmi.xyz,nitter.unixfox.eu,nitter.weiler.rocks,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-content-container[href*="/i/broadcasts/"] .card-content
+nitter.net,nttr.stream,bird.trom.tf,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.bus-hit.me,nitter.ca,nitter.datatunnel.xyz,nitter.esmailelbob.xyz,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.it,nitter.mastodon.pro,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.nl,nitter.notraxx.ch,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.spaceint.fr,nitter.tiekoetter.com,nitter.unixfox.eu,nitter.weiler.rocks,tw.artemislena.eu,twitter.076.ne.jp,twitter.censors.us,nitter.cutelab.space#?#.timeline-item .card-container[href*="/i/spaces/"]
+nitter.net,nttr.stream,bird.trom.tf,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.bus-hit.me,nitter.ca,nitter.datatunnel.xyz,nitter.esmailelbob.xyz,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.it,nitter.mastodon.pro,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.nl,nitter.notraxx.ch,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.spaceint.fr,nitter.tiekoetter.com,nitter.unixfox.eu,nitter.weiler.rocks,tw.artemislena.eu,twitter.076.ne.jp,twitter.censors.us,nitter.cutelab.space#?#.timeline-item .card-content-container[href*="/i/broadcasts/"] .card-content
 !
 ! - Some instance give me some abuse that add very long site name, so removed it!
 twitter.censors.us#?#.inner-nav a.site-name:upward(.nav-item)
@@ -70,14 +70,18 @@ m.intl.taobao.com#?#.App .recommend .recommend-list-wrapper:has(.recommend-title
 ! - Aim to remove follow topics / related users / who to follow (aka. all of inline ZUCKESTIONS panes)
 !   * Please note: these rules are produce huge problematic, it's also hide all user lists that have "Follow" button, no matter
 !     about any state of user following! you can keep using this if you're not intent to follow other peoples too much!~
-twitter.com#?#div[data-testid="sidebarColumn"] section[aria-labelledby^="accessible-list"]
 twitter.com#?#div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(a[role="link"][data-focusable][href^="//"])
 twitter.com#?#div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(div[role="button"][data-focusable][data-testid="UserCell"] a[aria-hidden][tabindex][href]):has(a[role="link"][data-focusable] div[dir="auto"] span[dir="auto"])
+twitter.com#?#div[data-testid="UserCell"]:matches-path(/home)
+twitter.com#?#div[data-testid="UserCell"]:not(:matches-path(/home))
+twitter.com#?#div[data-testid="sidebarColumn"] section[aria-labelledby^="accessible-list"]
+twitter.com#?#div[role="tablist"] [role="presentation"] div[class] [aria-label^="Follow"] div[dir]:not(:matches-path(/followed))
+twitter.com#?#div[role="tablist"] [role="presentation"] div[class] [aria-label^="Follow"] svg:not(:matches-path(/followed))
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label*="Carousel"]:has(div[role="tablist"]):upward(2)
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class] a[href^="//"]:upward(1)
 twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(a[href^="//related_users"])
 twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/))
 twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell"] [data-testid*="follow"])
-twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label*="Carousel"]:has(div[role="tablist"]):upward(2)
-twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class] a[href^="//"]:upward(1)
 
 ! DOM Permanent Remover - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Blognone] In case if modern browsers support to remove node entirely
@@ -141,10 +145,12 @@ m.intl.taobao.com#?#.App .toolbar .toolbar__btn:style(background-color: rgba(0,0
 ||youtube-nocookie.com/get_video_info?ei=$xhr,removeparam=ei
 ||youtube.com/get_video_info?*&ei=$xhr,removeparam=ei
 ||youtube.com/get_video_info?ei=$xhr,removeparam=ei
+||$domain=facebook.com|messenger.com,important,removeparam=/logging\_?data\[\d+?\]/
 
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||google.*/ads/*$important
 ||liberapay.com/zedeus$document,important,domain=~accident_nitter_nav_prevention
+||twitter.com/i/api/*/timeline/home.json$important,domain=~tweetdeck.twitter.com|~to_make_sure_you_are_always_get_latest_tweets
 
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 

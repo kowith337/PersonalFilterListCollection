@@ -1,6 +1,6 @@
 [uBlock Origin 1.37.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202202021234
+! Version: 202203082205
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -302,8 +302,12 @@ pantip.com#?#.m-post-comment:has(.cs-elm-profile .display-post-avatar-inner a.ic
 pantip.com#?#.section-comment:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post:remove()
 pantip.com#?#div[id^="bestanswer"]:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post:remove()
 
-! [Twitter] Remove popup link to newsletters
+! [Twitter]
+! - Remove popup link to newsletters
 twitter.com#?#div[role="menu"] div[class] a[href*="/i/newsletters"]
+!
+! - remove onboarding cause
+twitter.com#?#div[aria-label] img[src*="/onboarding/"]:upward(div[style*="transform"])
 
 ! [Line WebToons] Remove promoted comic overlay (include dimmed)
 m.webtoons.com#?#div[id^="layerNoticePopup"]:remove()
