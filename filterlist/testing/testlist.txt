@@ -1,6 +1,6 @@
 [uBlock Origin 1.38.5.0]
 ! Title: kowith337's Test List
-! Version: 202203022114
+! Version: 202203221919
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -8,8 +8,8 @@
 ! Description: This list is for experimental and testing only, all rules in here maybe changed, moved and/or remove at anytime!
 
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! [Taobao Mobile] Remove header anchor navigator
-m.intl.taobao.com#?#.App .toolbar .toolbar__anchor-wrapper
+! [Teddit] Remove subreddit links at top bar (wasteful space taking)
+teddit.*,~alefvanoon.xyz,~domain.glass,~ggc-project.de,~httpjames.space,~nautolan.racing,incogsnoo.com,reddit.lol,snoo.ioens.is#?##topbar .top-links a[href^="/r/"], #topbar .top-links span.separator
 
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Blognone]
@@ -18,9 +18,6 @@ blognone.com#?#.content-container:has(span.terms .field-item a[href*="/thailand"
 !
 ! - Also include comment counters, too!!
 blognone.com#?##block-system-main .content .node:has(span.terms .field-item a[href*="/thailand"]) .comment-comments
-
-! [Taobao Mobile] Remove bottom anchor (quickly add to cart / buy menu pane)
-m.intl.taobao.com#?#.App .bar:has(a.bar-item[href^="//shop.m.taobao.com/shop/shop_index.htm?"])
 
 ! [ImgUr] Try to remove non-main images that linked from/to (mobile site only)
 !         * this may cause to hide all non-first images if it load next items in album!
@@ -45,13 +42,13 @@ youtube.com#?##masthead #end #buttons ytd-button-renderer:has(a[href*="/ServiceL
 ! - For unclear reason, because I have use touchscreen notebook and found that I've redirected to donation page unintentionally,
 !   even I just tap onto the blank space, probably navigation header placement issue that will be a short time while page loading
 !   will be see some icon enlarged, absolutely it's `Liberapay` logo are cover the page entirely at that moment!
-nitter.net,nttr.stream,bird.trom.tf,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.bus-hit.me,nitter.ca,nitter.datatunnel.xyz,nitter.esmailelbob.xyz,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.it,nitter.mastodon.pro,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.nl,nitter.notraxx.ch,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.spaceint.fr,nitter.tiekoetter.com,nitter.unixfox.eu,nitter.weiler.rocks,tw.artemislena.eu,twitter.076.ne.jp,twitter.censors.us,nitter.cutelab.space#?#.inner-nav a[href*="liberapay"]
+nitter.*,~alefvanoon.xyz,~bch.bar,~domain.glass,~fuckthesacklers.network,~govt.land,~kavin.rocks,~moomoo.me,~nitter.hu,~notabird.site,~silkky.cloud,~twitr.gq,~winscloud.net,~xanny.family,bird.trom.tf,n.hyperborea.cloud,nitter.cutelab.space,nttr.stream,tw.artemislena.eu,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]
 !
 ! - Remove unsupported card contents placeholder
 !   > Spaces: Remove empty box since it just a placeholder box that cannot show anything.
 !   > Broadcasts: Remove bottom card title, left only image preview.
-nitter.net,nttr.stream,bird.trom.tf,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.bus-hit.me,nitter.ca,nitter.datatunnel.xyz,nitter.esmailelbob.xyz,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.it,nitter.mastodon.pro,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.nl,nitter.notraxx.ch,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.spaceint.fr,nitter.tiekoetter.com,nitter.unixfox.eu,nitter.weiler.rocks,tw.artemislena.eu,twitter.076.ne.jp,twitter.censors.us,nitter.cutelab.space#?#.timeline-item .card-container[href*="/i/spaces/"]
-nitter.net,nttr.stream,bird.trom.tf,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.bus-hit.me,nitter.ca,nitter.datatunnel.xyz,nitter.esmailelbob.xyz,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.it,nitter.mastodon.pro,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.nl,nitter.notraxx.ch,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.spaceint.fr,nitter.tiekoetter.com,nitter.unixfox.eu,nitter.weiler.rocks,tw.artemislena.eu,twitter.076.ne.jp,twitter.censors.us,nitter.cutelab.space#?#.timeline-item .card-content-container[href*="/i/broadcasts/"] .card-content
+nitter.*,~alefvanoon.xyz,~bch.bar,~domain.glass,~fuckthesacklers.network,~govt.land,~kavin.rocks,~moomoo.me,~nitter.hu,~notabird.site,~silkky.cloud,~twitr.gq,~winscloud.net,~xanny.family,bird.trom.tf,n.hyperborea.cloud,nitter.cutelab.space,nttr.stream,tw.artemislena.eu,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-container[href*="/i/spaces/"]
+nitter.*,~alefvanoon.xyz,~bch.bar,~domain.glass,~fuckthesacklers.network,~govt.land,~kavin.rocks,~moomoo.me,~nitter.hu,~notabird.site,~silkky.cloud,~twitr.gq,~winscloud.net,~xanny.family,bird.trom.tf,n.hyperborea.cloud,nitter.cutelab.space,nttr.stream,tw.artemislena.eu,twitter.076.ne.jp,twitter.censors.us#?#.timeline-item .card-content-container[href*="/i/broadcasts/"] .card-content
 !
 ! - Some instance give me some abuse that add very long site name, so removed it!
 twitter.censors.us#?#.inner-nav a.site-name:upward(.nav-item)
@@ -62,9 +59,6 @@ pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(ตระกองขว�
 pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(มาลาริน))
 pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(วรพจน์))
 pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(หล่อขวัญ))
-
-! [Taobao Mobile] Aim to remove "you may also like" items, but using the chinese word (MiscAnnoyance use `nth-of-type` method)
-m.intl.taobao.com#?#.App .recommend .recommend-list-wrapper:has(.recommend-title:has-text(邻家好货))
 
 ! [Twitter]
 ! - Aim to remove follow topics / related users / who to follow (aka. all of inline ZUCKESTIONS panes)
@@ -106,17 +100,6 @@ twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label*="Carou
 twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class] a[href^="//"]:upward(1):remove()
 
 ! CSS Modification  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! [Facebook]
-! Uncorrupted Facebook Stories design because your profile picture in story card will not fulfilled if you didn't have any posts.
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com#?##MStoriesTray div[class] > #m-stories-add-item.profilePic i.profpic[role=img]:style(width: 100% !important; height: 100% !important)
-
-! [Taobao Mobile]
-! - Make top bar placeholder transparent
-m.intl.taobao.com#?#.App .toolbar.transformed:style(background-color: transparent !important)
-!
-! - Make placeholder button (back / add to cart) have circle background alpha under button and use custom color permanently
-m.intl.taobao.com#?#.App .toolbar .toolbar__btn i.iconfont:style(color: white !important)
-m.intl.taobao.com#?#.App .toolbar .toolbar__btn:style(background-color: rgba(0,0,0,0.4) !important)
 
 ! Specific requests filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! "Query Prune" experiment

@@ -1,4 +1,11 @@
 # [dnscrypt-proxy 2.1.1]
+# Title: Allowed rules for DNSCrypt Proxy client
+# Version: 202203221915
+# Author: kowith337
+# Expires: 2 days
+# Homepage: https://github.com/kowith337/PersonalFilterListCollection
+# Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Domain%20Lists%20and%20Wildcard
+# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/dnscrypt/filter-allowed-names.txt
 
 # Necessary for update Opera browser
 # * even I use portable updater by UnderTakerBen, I rarely use it for sandboxing and proxying...
@@ -14,9 +21,9 @@ chrome.google.com
 storage.googleapis.com
 tools.google.com
 tools.l.google.com
-#update.googleapis.com
+#update.googleapis.com                           # Uncomment if something stuck, however, their use this domain to retrieve zuckested contents, e.g. country-based site lists!
 www3.l.google.com
 
 # Betrayed by Mozilla, except...
 shavar.services.mozilla.com                      # Retrieve tracking protection lists
-#token.services.mozilla.com                      # Uncomment if you're using their sync services
+token.services.mozilla.com                       # if you're not intent to use their sync services, you should add # for comment this line

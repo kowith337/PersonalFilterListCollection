@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: iHateCircles
-! Version: 202203022125
+! Version: 202203221910
 ! Expires: 2 days
 ! Author: kowith337, DandelionSprout and contributors
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css
@@ -47,17 +47,17 @@ youtube.com#?#yt-img-shadow:style(border-radius: 0px !important)
 !          shorts, so I will respect to their decisions that don't want to make their sites appear publically, include this too!
 !
 ! [Bibliogram]: https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md
-bibliogram.art,bib.riverside.rocks,bibliogram.1d4.us,bibliogram.esmailelbob.xyz,bibliogram.pussthecat.org,bibliogram.snopyta.org,insta.trom.tf#?#*:style(border-radius: 0px !important)
-bibliogram.art,bib.riverside.rocks,bibliogram.1d4.us,bibliogram.esmailelbob.xyz,bibliogram.pussthecat.org,bibliogram.snopyta.org,insta.trom.tf#?#img.pfp:style(border-radius: 0px !important)
+bibliogram.*,~actionsack.com,~alefvanoon.xyz,bib.riverside.rocks,insta.trom.tf,insta.tromdienste.de#?#*:style(border-radius: 0px !important)
+bibliogram.*,~actionsack.com,~alefvanoon.xyz,bib.riverside.rocks,insta.trom.tf,insta.tromdienste.de#?#img.pfp:style(border-radius: 0px !important)
 !
-! [Invidious]: https://api.invidious.io | https://redirect.invidious.io | https://docs.invidious.io/Invidious-Instances.md
-inv.cthd.icu,inv.riverside.rocks,invidio.xamh.de,invidious.namazso.eu,invidious.osi.kr,invidious.snopyta.org,vid.puffyan.us,yewtu.be,youtube.076.ne.jp,yt.artemislena.eu#?#*:style(border-radius: 0px !important)
+! [Invidious]: https://api.invidious.io | https://redirect.invidious.io | https://docs.invidious.io/Invidious-Instances
+invidious.*,~kavin.rocks,inv.bp.mutahar.rocks,inv.riverside.rocks,invidio.xamh.de,tube.cthd.icu,vid.puffyan.us,yewtu.be,youtube.076.ne.jp,yt.artemislena.eu#?#*:style(border-radius: 0px !important)
 !
 ! [LibReddit]: https://github.com/spikecodes/libreddit#instances
-libredd.it,libreddit.spike.codes,libreddit.40two.app,reddit.invak.id,reddit.phii.me,lr.riverside.rocks,libreddit.exonip.de,libreddit.sugoma.tk,reddit.artemislena.eu,libreddit.awesomehub.io,libreddit.some-things.org,reddit.stuehieyr.com,lr.mint.lgbt,libreddit.igna.rocks,libreddit.autarkic.org,libreddit.de,libreddit.pussthecat.org,libreddit.mutahar.rocks,libreddit.northboot.xyz,leddit.xyz,lr.cowfee.moe,libreddit.totaldarkness.net,libreddit.esmailelbob.xyz,libreddit.nl,libreddit.bus-hit.me,lr.rfl890.cf,libreddit.datatunnel.xyz#?#*:style(border-radius: 0px !important)
+libreddit.*,~alefvanoon.xyz,~crewz.me,~database.red,~domain.glass,~dothq.co,~flux.industries,~libreddit.hu,~jamiethalacker.dev,~silkky.cloud,~winscloud.net,~yonalee.eu,~r.nf,~reddi.tk,~stilic.ml,~walkx.org,leddit.xyz,libredd.it,lr.cowfee.moe,lr.mint.lgbt,lr.oversold.host,lr.riverside.rocks,reddit.artemislena.eu,reddit.invak.id,reddit.phii.me,reddit.rtrace.io,reddit.stuehieyr.com#?#*:style(border-radius: 0px !important)
 !
 ! [Nitter]: https://github.com/zedeus/nitter/wiki/Instances
-nitter.net,nttr.stream,bird.trom.tf,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.bus-hit.me,nitter.ca,nitter.datatunnel.xyz,nitter.esmailelbob.xyz,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.it,nitter.mastodon.pro,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.nl,nitter.notraxx.ch,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.spaceint.fr,nitter.tiekoetter.com,nitter.unixfox.eu,nitter.weiler.rocks,tw.artemislena.eu,twitter.076.ne.jp,twitter.censors.us,nitter.cutelab.space#?#*:style(border-radius: 0px !important)
+nitter.*,~alefvanoon.xyz,~bch.bar,~domain.glass,~fuckthesacklers.network,~govt.land,~kavin.rocks,~moomoo.me,~nitter.hu,~notabird.site,~silkky.cloud,~twitr.gq,~winscloud.net,~xanny.family,bird.trom.tf,n.hyperborea.cloud,nitter.cutelab.space,nttr.stream,tw.artemislena.eu,twitter.076.ne.jp,twitter.censors.us#?#*:style(border-radius: 0px !important)
 !
 ! [Teddit]: https://codeberg.org/teddit/teddit#instances
-teddit.net,incogsnoo.com,reddit.lol,snoo.ioens.is,teddit.adminforge.de,teddit.bus-hit.me,teddit.httpjames.space,teddit.kavin.rocks,teddit.namazso.eu,teddit.pussthecat.org,teddit.sethforprivacy.com,teddit.tinfoil-hat.net,teddit.totaldarkness.net,teddit.zaggy.nl#?#*:style(border-radius: 0px !important)
+teddit.*,~alefvanoon.xyz,~domain.glass,~ggc-project.de,~httpjames.space,~nautolan.racing,incogsnoo.com,reddit.lol,snoo.ioens.is#?#*:style(border-radius: 0px !important)

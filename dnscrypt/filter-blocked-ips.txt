@@ -1,4 +1,11 @@
 # [dnscrypt-proxy 2.1.1]
+# Title: Blocked IP rules for DNSCrypt Proxy client
+# Version: 202203221912
+# Author: kowith337
+# Expires: 2 days
+# Homepage: https://github.com/kowith337/PersonalFilterListCollection
+# Issues: https://github.com/kowith337/PersonalFilterListCollection/issues
+# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/dnscrypt/filter-blocked-ips.txt
 
 # Chrome DoT DNS enhancement + keweoff!
 # Quad9 probably ignored because it's a stable default for dnscrypt-proxy, except EDNS servers, using default Quad9 seems enough
