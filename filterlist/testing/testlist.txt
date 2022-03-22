@@ -1,6 +1,6 @@
 [uBlock Origin 1.38.5.0]
 ! Title: kowith337's Test List
-! Version: 202203222024
+! Version: 202203222156
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -75,7 +75,7 @@ twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label*="Carou
 twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class] a[href^="//"]:upward(1)
 twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(a[href^="//related_users"])
 twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/))
-twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell"] [data-testid*="follow"])
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell"] [data-testid*="follow"]):not(:matches-path(/\/follow(ing|ed|ers)/))
 
 ! DOM Permanent Remover - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Blognone] In case if modern browsers support to remove node entirely
