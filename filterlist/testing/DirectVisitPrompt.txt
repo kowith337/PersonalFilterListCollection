@@ -1,0 +1,68 @@
+[uBlock Origin 1.42.4]
+! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
+! Version: 202210042113
+! Expires: 1 month
+! Author: kowith337
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection
+! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/testing/DirectVisitPrompt.txt
+! Description: This list is good to use if you're using alternative instance viewer frequently instead of directly visiting to
+!              mainstream services and/or use browser extensions for redirect to privacy-friendly instances, maybe you're too
+!              paranoid and not trusting to view on main websites because of ads, tracking, profiling, fingerprinting, etc...
+!              Like ASTLW, the `document` rule blocking will be halt the connections until you press temporary/permanent allow,
+!              I create this because `LibRedirect` isn't officially upload their extension on `Chrome Store` yet, but I've found
+!              that even I've sideload extensions and later it was unloaded itself after another session, then cause the
+!              redirection failed unfortunately!
+!              All document blocking rules will based on...
+!              - Privacy Redirect (Multi-browsers Extension, currently deprecated): https://github.com/SimonBrazell/privacy-redirect
+!              - LibRedirect (Firefox Extension): https://github.com/libredirect/libredirect
+!              - YT2Invidio UserScript: https://codeberg.org/izzy/userscripts/src/branch/master/yt2invidio.user.js
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Implemented - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Imgur > Rimgo]
+||imgur.com$document,important,domain=~are_you_sure_to_view_it_directly
+
+! [Medium > Scribe]
+||medium.com$document,important,domain=~are_you_sure_to_view_it_directly
+
+! [Reddit > Teddit]
+! Note: My opinion prefer instead of `LibReddit` because of lightweight and less eye-candy, e.g. colorise, material design, etc.
+||reddit.com$document,important,domain=~are_you_sure_to_view_it_directly
+
+! [Twitter > Nitter]
+||twitter.com$document,important,domain=~are_you_sure_to_view_it_directly|~tweetdeck.twitter.com
+
+! [Wikipedia > Wikiless]
+! Please note that somehow redirecting to `Wikiless` will not fully compatible, sometime you will get redirected to home page instead of actual Wiki contents...
+||wikipedia.com$document,important,domain=~are_you_sure_to_view_it_directly|~tweetdeck.twitter.com
+
+! [YouTube > Invidious] / [YouTube Music > BeatBump]
+! Note: `Piped` is absolutely NOT RECOMMENDED! Most of Piped hosts are on `CloudFlare` and rely to multiple CDN servers to caching contents on multi-CF servers!
+||youtube.com$document,important,domain=~are_you_sure_to_view_it_directly|~studio.youtube.com
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Not yet implemented currently - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! However, I will enable if they have at least one instance that truly privacy-friendly!
+
+! [Pixiv]
+! Currently have only `pixiv.moe`, however, it's likely use to redirect back to `Pixiv`, I don't know why...?
+!||pixiv.com$document,important,domain=~are_you_sure_to_view_it_directly
+
+! [Spotify > Soju]
+! Limitations by copyrights, it doesn't provide relaying full tracks, only preview samples of song/podcast, playlist viewer, etc.
+! Info: https://github.com/coffeebank/soju#notices
+!||spotify.com$document,important,domain=~are_you_sure_to_view_it_directly
+
+! [TikTok > ProxiTok]
+! Currently have only `ProxiTok` that hosted on `Heroku`, awaiting any instances that self-hosted for enable this...
+!||tiktok.com$document,important,domain=~are_you_sure_to_view_it_directly
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Not implemented, and maybe no plan... - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Google Maps: 
+! Google Search: We knew that they've added shady parameters, such as `ei`, `ved`, `usg`, etc. to keep track all sessions,
+!                but completely blocking isn't good at all for many users, however, you might try tweak browser settings to
+!                search on  another sites instead, my priority of search engine is...
+!                - `SearX`: I go to Neocities first for randomise, even though some instance are often show no results
+!                           becaus of blocked by relay, e.g. `Google` mostly block by recaptcha antibot.
+!                - `DuckDuckGo`: Because of `improving` tracking, so I should step down to later choice...
+!                - `Google` should be the last as possible!
+! Google Translate: Even we have SimplyTranslate, but it didn't have function to translate website!
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
