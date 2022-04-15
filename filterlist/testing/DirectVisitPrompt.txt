@@ -1,6 +1,6 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202210042113
+! Version: 202201151150
 ! Expires: 1 month
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -32,11 +32,13 @@
 ||twitter.com$document,important,domain=~are_you_sure_to_view_it_directly|~tweetdeck.twitter.com
 
 ! [Wikipedia > Wikiless]
-! Please note that somehow redirecting to `Wikiless` will not fully compatible, sometime you will get redirected to home page instead of actual Wiki contents...
-||wikipedia.com$document,important,domain=~are_you_sure_to_view_it_directly|~tweetdeck.twitter.com
+! Please note that somehow redirecting to `Wikiless` will not fully compatible, sometime you will get redirected to home page
+! instead of actual Wiki contents...
+||wikipedia.com$document,important,domain=~are_you_sure_to_view_it_directly
 
 ! [YouTube > Invidious] / [YouTube Music > BeatBump]
-! Note: `Piped` is absolutely NOT RECOMMENDED! Most of Piped hosts are on `CloudFlare` and rely to multiple CDN servers to caching contents on multi-CF servers!
+! Note: `Piped` is absolutely NOT RECOMMENDED! Most of Piped hosts are on `CrapFlare` and rely to multiple CDN servers to
+!       caching contents on multi-CF servers!
 ||youtube.com$document,important,domain=~are_you_sure_to_view_it_directly|~studio.youtube.com
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Not yet implemented currently - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -55,11 +57,53 @@
 ! Currently have only `ProxiTok` that hosted on `Heroku`, awaiting any instances that self-hosted for enable this...
 !||tiktok.com$document,important,domain=~are_you_sure_to_view_it_directly
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Unfriendly Instances Block  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Gathering from multiple sources that also give notice which servers are use `CrapFlare`, keep block them, even it was used in
+! the past...
+! - Bibliogram instances (Sad cat emoji = Crapflare): https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md
+! - Invidious instances document: https://docs.invidious.io/instances
+! - LibReddit instances: https://github.com/spikecodes/libreddit#instances
+! - Nitter instances: https://github.com/zedeus/nitter/wiki/Instances
+! - Teddit instances (Doesn't report who is using it!): https://codeberg.org/teddit/teddit#instances
+! - UntrackMe App - Latency lists: https://www.f-droid.org/en/packages/app.fedilab.nitterizeme
+||actionsack.com$document,important,domain=~are_you_sure_to_view_on_this_instance
+||alefvanoon.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
+||bch.bar$document,important,domain=~are_you_sure_to_view_on_this_instance
+||crewz.me$document,important,domain=~are_you_sure_to_view_on_this_instance
+||dark.fail$document,important,domain=~are_you_sure_to_view_on_this_instance
+||database.red$document,important,domain=~are_you_sure_to_view_on_this_instance
+||domain.glass$document,important,domain=~are_you_sure_to_view_on_this_instance
+||dothq.co$document,important,domain=~are_you_sure_to_view_on_this_instance
+||drivet.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
+||flux.industries$document,important,domain=~are_you_sure_to_view_on_this_instance
+||fuckthesacklers.network$document,important,domain=~are_you_sure_to_view_on_this_instance
+||ggc-project.de$document,important,domain=~are_you_sure_to_view_on_this_instance
+||govt.land$document,important,domain=~are_you_sure_to_view_on_this_instance
+||jamiethalacker.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
+||kavin.rocks$document,important,domain=~are_you_sure_to_view_on_this_instance
+||libreddit.hu$document,important,domain=~are_you_sure_to_view_on_this_instance
+||lunar.icu$document,important,domain=~are_you_sure_to_view_on_this_instance
+||moomoo.me$document,important,domain=~are_you_sure_to_view_on_this_instance
+||nautolan.racing$document,important,domain=~are_you_sure_to_view_on_this_instance
+||nitter.hu$document,important,domain=~are_you_sure_to_view_on_this_instance
+||notabird.site$document,important,domain=~are_you_sure_to_view_on_this_instance
+||r.nf$document,important,domain=~are_you_sure_to_view_on_this_instance
+||reddi.tk$document,important,domain=~are_you_sure_to_view_on_this_instance
+||resolv.ee$document,important,domain=~are_you_sure_to_view_on_this_instance
+||silkky.cloud$document,important,domain=~are_you_sure_to_view_on_this_instance
+||stilic.ml$document,important,domain=~are_you_sure_to_view_on_this_instance
+||trevorthalacker.com$document,important,domain=~are_you_sure_to_view_on_this_instance
+||twitr.gq$document,important,domain=~are_you_sure_to_view_on_this_instance
+||walkx.org$document,important,domain=~are_you_sure_to_view_on_this_instance
+||winscloud.net$document,important,domain=~are_you_sure_to_view_on_this_instance
+||xanny.family$document,important,domain=~are_you_sure_to_view_on_this_instance
+||yonalee.eu$document,important,domain=~are_you_sure_to_view_on_this_instance
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Not implemented, and maybe no plan... - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Google Maps: 
 ! Google Search: We knew that they've added shady parameters, such as `ei`, `ved`, `usg`, etc. to keep track all sessions,
 !                but completely blocking isn't good at all for many users, however, you might try tweak browser settings to
-!                search on  another sites instead, my priority of search engine is...
+!                search on another sites instead, my priority of search engine is...
 !                - `SearX`: I go to Neocities first for randomise, even though some instance are often show no results
 !                           becaus of blocked by relay, e.g. `Google` mostly block by recaptcha antibot.
 !                - `DuckDuckGo`: Because of `improving` tracking, so I should step down to later choice...
