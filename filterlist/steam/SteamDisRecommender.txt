@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202202272338
+! Version: 202205071321
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -207,6 +207,11 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 ||steampowered.com/IClientMetricsService/ReportClientError$important,xmlhttprequest,redirect=nooptext
 !
 ! - Prevent them read and return your interactions data for nearly-perfect disable recommendations!
+!   * Later as of 2022/05/07, I've found that if I've allow `dynamicstore/userdata` XHR even just when not logged in, Steam will
+!     set default value that  allowing `app_impressions` cookies to be set for certain pages via resonse data, e.g. viewing news,
+!     events and announcements, regardless of injecting and/or override script values, so completely blocking those requests will
+!     fully get rid of that cookies, just for now until they've changed some script codes again, plus they even not know your
+!     data enough via that request to throw any zuckestions, but they will already know from another ways, however...
 ||steampowered.com/dynamicstore/userdata$important,~xmlhttprequest
 ||steampowered.com/dynamicstore/userdata$xmlhttprequest
 ||steampowered.com/explore/logfeedview$important,~xmlhttprequest
@@ -220,12 +225,6 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 !||steamstatic.com/steamcommunity/public/images/items/*.webm$media,important,redirect=noopmp4-1s,domain=steamcommunity.com
 
 ! Trusted or Allowed for unbreaking only! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Allow "DynamicStore" information to sent **only when you're logged out!**
-@@||steampowered.com/dynamicstore/userdata/?id=0&$xmlhttprequest
-@@||steampowered.com/dynamicstore/userdata/?id=0|$xmlhttprequest
-@@||steampowered.com/dynamicstore/userdata?id=0&$xmlhttprequest
-@@||steampowered.com/dynamicstore/userdata?id=0|$xmlhttprequest
-
 ! Unbreak sales page for allowing reveal more games when you press "Show more" button.
 @@||steampowered.com/broadcast/ajaxgetbatchappcapsuleinfo?$1p,xmlhttprequest
 
