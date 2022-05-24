@@ -208,7 +208,7 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 !
 ! - Prevent them read and return your interactions data for nearly-perfect disable recommendations!
 !   * Later as of 2022/05/07, I've found that if I've allow `dynamicstore/userdata` XHR even just when not logged in, Steam will
-!     set default value that  allowing `app_impressions` cookies to be set for certain pages via resonse data, e.g. viewing news,
+!     set default value that  allowing `app_impressions` cookies to be set for certain pages via response data, e.g. viewing news
 !     events and announcements, regardless of injecting and/or override script values, so completely blocking those requests will
 !     fully get rid of that cookies, just for now until they've changed some script codes again, plus they even not know your
 !     data enough via that request to throw any zuckestions, but they will already know from another ways, however...
