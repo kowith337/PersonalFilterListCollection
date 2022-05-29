@@ -1,6 +1,6 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202201151150
+! Version: 202205291359
 ! Expires: 1 month
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -18,7 +18,7 @@
 !              - YT2Invidio UserScript: https://codeberg.org/izzy/userscripts/src/branch/master/yt2invidio.user.js
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Implemented - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! [Imgur > Rimgo]
+! [Imgur > Rimgo] https://github.com/xnaas/rimgo-instances
 ||imgur.com$document,important,domain=~are_you_sure_to_view_it_directly
 
 ! [Medium > Scribe]
@@ -28,8 +28,11 @@
 ! Note: My opinion prefer instead of `LibReddit` because of lightweight and less eye-candy, e.g. colorise, material design, etc.
 ||reddit.com$document,important,domain=~are_you_sure_to_view_it_directly
 
+! [TikTok > ProxiTok] https://github.com/pablouser1/ProxiTok/wiki/Public-instances
+||tiktok.com$document,important,domain=~are_you_sure_to_view_it_directly
+
 ! [Twitter > Nitter]
-||twitter.com$document,important,domain=~are_you_sure_to_view_it_directly|~tweetdeck.twitter.com
+||twitter.com$document,important,domain=~tweetdeck.twitter.com|~are_you_sure_to_view_it_directly
 
 ! [Wikipedia > Wikiless]
 ! Please note that somehow redirecting to `Wikiless` will not fully compatible, sometime you will get redirected to home page
@@ -39,7 +42,7 @@
 ! [YouTube > Invidious] / [YouTube Music > BeatBump]
 ! Note: `Piped` is absolutely NOT RECOMMENDED! Most of Piped hosts are on `CrapFlare` and rely to multiple CDN servers to
 !       caching contents on multi-CF servers!
-||youtube.com$document,important,domain=~are_you_sure_to_view_it_directly|~studio.youtube.com
+||youtube.com$document,important,domain=~studio.youtube.com|~are_you_sure_to_view_it_directly
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Not yet implemented currently - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! However, I will enable if they have at least one instance that truly privacy-friendly!
@@ -52,10 +55,6 @@
 ! Limitations by copyrights, it doesn't provide relaying full tracks, only preview samples of song/podcast, playlist viewer, etc.
 ! Info: https://github.com/coffeebank/soju#notices
 !||spotify.com$document,important,domain=~are_you_sure_to_view_it_directly
-
-! [TikTok > ProxiTok]
-! Currently have only `ProxiTok` that hosted on `Heroku`, awaiting any instances that self-hosted for enable this...
-!||tiktok.com$document,important,domain=~are_you_sure_to_view_it_directly
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Unfriendly Instances Block  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Gathering from multiple sources that also give notice which servers are use `CrapFlare`, keep block them, even it was used in
