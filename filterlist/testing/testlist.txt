@@ -1,6 +1,6 @@
 [uBlock Origin 1.38.5.0]
 ! Title: kowith337's Test List
-! Version: 202205250007
+! Version: 202206031410
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -102,20 +102,23 @@ twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timel
 ! CSS Modification  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
 ! Specific requests filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! "Query Prune" experiment
+
+! Handling parameters - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Legitimate removers
 ! Note: Only handling some query that not necessary to binding in for specific requests rather than `document`, this may conflict
 !       with "Anti survived tracking link warning" filterlist that strictly blocked page when shady parameters are binding with
 !       any URLs for keep tracking users, even you're visiting some sites off-of social platform.
+$domain=facebook.com|messenger.com,important,removeparam=/logging\_?data\[\d+?\]/
+||facebook.com/*&entry*=$1p,xhr,important,removeparam=/^entry/
+||facebook.com/*&privacy_*=$1p,xhr,removeparam=/^privacy_/
 ||facebook.com/*&__cft__*=$1p,removeparam=/^__cft__/
 ||facebook.com/*&__tn__=$1p,xhr,important,removeparam=__tn__
 ||facebook.com/*&__xts__*=$1p,removeparam=/^__xts__/
-||facebook.com/*&entry*=$1p,xhr,important,removeparam=/^entry/
-||facebook.com/*&privacy_*=$1p,xhr,removeparam=/^privacy_/
+||facebook.com/*?entry*=$1p,xhr,important,removeparam=/^entry/
+||facebook.com/*?privacy_*=$1p,xhr,removeparam=/^privacy_/
 ||facebook.com/*?__cft__*=$1p,removeparam=/^__cft__/
 ||facebook.com/*?__tn__=$1p,xhr,important,removeparam=__tn__
 ||facebook.com/*?__xts__*=$1p,removeparam=/^__xts__/
-||facebook.com/*?entry*=$1p,xhr,important,removeparam=/^entry/
-||facebook.com/*?privacy_*=$1p,xhr,removeparam=/^privacy_/
 ||fbcdn.net/*&_nc_*=$css,script,domain=facebook.com|messenger.com,removeparam=/^_nc_/
 ||fbcdn.net/*?_nc_*=$css,script,domain=facebook.com|messenger.com,removeparam=/^_nc_/
 ||steampowered.com/*&curator_*=$removeparam=/^curator_/
@@ -128,7 +131,11 @@ twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timel
 ||youtube-nocookie.com/get_video_info?ei=$xhr,removeparam=ei
 ||youtube.com/get_video_info?*&ei=$xhr,removeparam=ei
 ||youtube.com/get_video_info?ei=$xhr,removeparam=ei
-||$domain=facebook.com|messenger.com,important,removeparam=/logging\_?data\[\d+?\]/
+
+! Reverse removers
+! This will work like `removeparam` but what happened if the rules are reversed to exclude matched parameters only...?
+||adintrend.tv/hd/live/i.php$frame,removeparam=~/^(c(h|xid)|sid)/
+$doc,removeparam=~/^(ia[a-z]?|k([a-z0-9]+)?|q)/,domain=duckduckgo.com
 
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||google.*/ads/*$important
@@ -164,9 +171,6 @@ $3p,important,domain=thairath.co.th,denyallow=byteark.com
 ! - Global Apply: Prevent use of auto-refresh, big companies mostly use for redirect to login page before viewing contents!
 *##+js(refresh-defuser)
 !
-! - Prevent Telegram auto open its protocol to redirect into apps while viewing profile and/or group with browser.
-t.me##+js(no-setTimeout-if, protoUrl)
-!
 ! - Remove unnecessary cookies (Currently it's caveat due to scriptlets cannot modify or delete domain-level + HTTP only cookies)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, _js_datr)
 facebook.com,instagram.com,messenger.com##+js(cookie-remover, act)
@@ -177,6 +181,14 @@ facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-src)
 !
 ! - Often show alert dialog when users click to links, also when users trying to right-click.
 checkkorn.com##+js(alert-buster)
+!
+! - Goolag search currently abusing and keep track users by inseting tag sign with random ID strings of `bsht` in case if some
+!   users remove their tracked parameters, such as `ei`, `rlz`, `ved`, `vet`, etc., I'll disable script name functions who called
+!   that, however, some regional domains (e.g. UK) doesn't have this thing appeared behind...
+google.*#?#+js(set-constant, s_LFn, noopFunc)
+!
+! - Prevent Telegram auto open its protocol to redirect into apps while viewing profile and/or group with browser.
+t.me##+js(no-setTimeout-if, protoUrl)
 
 ! [External scriptlets from former NanoAdblocker]
 !   Due to owner has archived his/her works and lately known that it had been sold to third party for sure, the scriptlets may
