@@ -1,6 +1,6 @@
 [uBlock Origin 1.38.5.0]
 ! Title: kowith337's Test List
-! Version: 202206031410
+! Version: 202206041306
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -135,7 +135,7 @@ $domain=facebook.com|messenger.com,important,removeparam=/logging\_?data\[\d+?\]
 ! Reverse removers
 ! This will work like `removeparam` but what happened if the rules are reversed to exclude matched parameters only...?
 ||adintrend.tv/hd/live/i.php$frame,removeparam=~/^(c(h|xid)|sid)/
-$doc,removeparam=~/^(ia[a-z]?|k([a-z0-9]+)?|q)/,domain=duckduckgo.com
+$doc,removeparam=~/^(ia[a-z]?|k([a-z0-9]+)?|q|uddg)/,domain=duckduckgo.com
 
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||google.*/ads/*$important
