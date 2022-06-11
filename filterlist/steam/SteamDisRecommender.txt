@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202205071321
+! Version: 202206112144
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -14,8 +14,8 @@
 steamcommunity.com,steampowered.com#?#.header_installsteam_btn
 
 ! [Store Zone]
-! - Remove a pane that need you to login to see zuckested contents!
-steampowered.com#?##content_login.page_content_ctn
+! - Remove bottom leftover space where it's dynamically throwing many zuckestions while scrolling down!
+steampowered.com#?#.home_content_ctn.content_more
 !
 ! - Remove horizontal paging items because it's also include "Because you've played <GameName>"
 steampowered.com#?#.home_page_content .carousel_container.maincap
@@ -24,11 +24,14 @@ steampowered.com#?#.home_page_content .carousel_container.maincap
 steampowered.com#?##foryou_tab span.pulldown a.pulldown_desktop
 steampowered.com#?##foryou_tab span.pulldown a.pulldown_mobile
 !
-! - Remove "Explore", "Recommended for you", "Related game tags" and its hint!
+! - Remove a pane that need you to login to see zuckested contents!
+steampowered.com#?##content_login.page_content_ctn
+steampowered.com#?#.home_page_sign_in_ctn
+!
+! - Remove "Explore", "Related game tags" and its hint!
 steampowered.com#?##foryou_flyout .popup_menu #foryou_yourtags
 steampowered.com#?##foryou_flyout .popup_menu .popup_menu_item[href*="/explore"]
 steampowered.com#?##foryou_flyout .popup_menu .popup_menu_item[href*="/recommender"]
-steampowered.com#?##foryou_flyout .popup_menu .popup_menu_subheader:has(.popup_menu_hint)
 !
 ! - Remove "Recommended" tab while browsing games by tags.
 steampowered.com#?#.page_content .tabarea .tag_browse_option[data-browseoption="recommended"]
@@ -129,6 +132,9 @@ steamcommunity.com#?#.badge_title_stats .how_to_get_card_drops_ctn
 ! - Remove "Scroll more for related contents" pane
 steampowered.com#?##content_callout.dark:has(.more_content_title)
 !
+! - Remove "Recommended for you" flyout menu where it's hovered under tiny avatar
+steampowered.com#?##foryou_flyout .popup_menu .popup_menu_subheader:has(.popup_menu_hint)
+!
 ! - Remove curators/publishers pane that show zuckested to follow instead of curators/publishers that you've already following*
 !   * Or you've bought games from related curators/publishers...
 steampowered.com#?##steam_curators_not_empty:has(.curator_recommendation_capsule)
@@ -212,6 +218,9 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 !     events and announcements, regardless of injecting and/or override script values, so completely blocking those requests will
 !     fully get rid of that cookies, just for now until they've changed some script codes again, plus they even not know your
 !     data enough via that request to throw any zuckestions, but they will already know from another ways, however...
+!   ** I give no response if you're using certain extensions that retrieve some data from Steam website and found this filter
+!      were blocked certain requests that necessary for those extensions, especially `dynamicstore` requests that it will expose
+!      "your numeric ID" to those extensions!
 ||steampowered.com/dynamicstore/userdata$important,~xmlhttprequest
 ||steampowered.com/dynamicstore/userdata$xmlhttprequest
 ||steampowered.com/explore/logfeedview$important,~xmlhttprequest
