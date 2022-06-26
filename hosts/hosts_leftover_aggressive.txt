@@ -68,11 +68,11 @@
 0.0.0.0 dialercallinfolookup-pa.googleapis.com
 0.0.0.0 telephonyspamprotect-pa.googleapis.com
 #
-# - {Anti-discover}
+# - {Anti-Discover}
 0.0.0.0 discover-pa.googleapis.com
 #
 # - {Anti-Firebase}
-#   > Some apps are rely to that, especially for deploy GDPR, personal data concerns agreement, etc.
+#   > Some apps are rely to that, especially for send notifications, deploy GDPR, personal data concerns agreement, etc.
 #   > However, "Firebase" are widely know as bug tracker and data analytic capturer!
 #   > So, not just only app devs know those data, but "Google" also knows, too!!
 #   > Even though all informations are anonymous, but it doesn't mean they have rights to collect and use them!!!
@@ -135,7 +135,7 @@
 # - {Anti-Redirector}
 #   > GPlay store and YouTube trying to connect this while ads are loading into your face!
 #   > However, it's also break some(one) users who buy or rent, then download and watch movies from Google Play.
-#   > Revert back to generic leftover because of failing to provide proper reason of "neccessary" and "matter" to allow them!
+#   > Revert back to generic leftover because of failing to provide proper reason of "NECCESSARY" and "MATTER" to allow them!
 #
 # - {Anti-Region info retrieving}
 0.0.0.0 regioninfo-pa.googleapis.com
@@ -217,9 +217,9 @@
 #     client named "Barinsta" that currently got bullied by lawsuit teams from `Facebook`, back to `Facebook` wrapper apps topic,
 #     some wrapper apps doesn't distributed on `Play store` but on other places such as `F-Droid`, using those kind of apps
 #     nowadays may leads to risk of accounts ban because they falsely claim that your account are in risk of phishing, in fact,
-#     they want anybody who use its service to see ads and keep track all of your activities by them while using their official
-#     apps and any apps that have its SDK, any websites that inserted their plugins, e.g. comments, like/follow, messenger chat,
-#     videos, tracking pixel, etc. also make it count!
+#     they want anybody who use its service to see ads and keep track all of your activities by them through using their official
+#     and any apps that have its SDK, include any websites that inserted their plugins, e.g. comments, like/follow, chat widget,
+#     videos, embed posts, tracking pixel, etc. also make it count!
 0.0.0.0 a-api.facebook.com
 0.0.0.0 a-graph.facebook.com
 0.0.0.0 b-api.facebook.com
