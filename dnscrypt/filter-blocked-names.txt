@@ -1,6 +1,6 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client
-# Version: 202205250002
+# Version: 202206262053
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -9,7 +9,6 @@
 
 # Generic Blocklists
 #*-pa.googleapis.com                   # This break most android features (uncomment this if paranoid)
-#dorando.at                            # Don't know much
 #gvt[0-9]*.com                         # Uncomment to block all Goolag 'GVT' subdomains, this also possibly to block Edge Chromium component updates!
 #in-addr.arpa                          # SimpleWall resolvers v4
 #ip6.arpa                              # SimpleWall resolvers v6 (Uncomment if you want to refuse all IPv6 resolves)
@@ -20,7 +19,7 @@
 activations.mozilla.*                  # SpyZilla activations
 admob.*                                # Goolag common ads
 adservice.google.*                     # Goolag AdService tracking
-autoconfig*                            # Possibility of SpyZilla AutoConfig (OOB config for BurntFox and SparkedBird)
+autoconfig*                            # Possibility of SpyZilla AutoConfig (Retrieve OOB config)
 beacon*.*                              # Becaon prevention (GPlay)
 beacon.*                               # More becaon prevention (GPlay)
 bigfun*                                # True BigFun AOC SCAM
@@ -35,12 +34,12 @@ getpocket*                             # SpyZilla BurntFox Pocket partnership
 google                                 # "*.google" TLD should be blocked for goods! (Block DNS, Wellbeing, etc.)
 gvt[2-9]*.com                          # Requests to Goolag that not GVT1 should be blocked, they've mostly used for beacons!
 gvtl.com                               # Is that GVT1 typo?
-i.org                                  # FreeBasucks shortened (Onavo related)
+i.org                                  # FreeBasucks shortened (Onavo)
 id.google.*                            # Goolag ID Tracking
 incoming.telemetry.*                   # SpyZilla BurntFox telemetry
 internet.org                           # FreeBasucks
 kaidee.com                             # Promoted on Chrome
-lazada.co.th                           # IDIOTICS ADVERTISING AND MARKETING! (FORCE OPEN APP OR DOWNLOAD FROM STORE IF YOU DON'T HAVE IT!!)
+lazada.*                               # IDIOTICS ADVERTISING AND MARKETING! (FORCE OPEN APP OR DOWNLOAD FROM STORE IF YOU DON'T HAVE IT!!)
 mozillademos.org                       # SpyZilla demo endpoint
 mozillamessaging.com                   # SpyZilla MESSaging (probably notifications endpoint, similar to GCM [Goolag Firebase])
 normandy*moz*                          # SpyZilla normandy

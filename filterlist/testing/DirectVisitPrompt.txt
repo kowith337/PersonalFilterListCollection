@@ -1,6 +1,6 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202205291359
+! Version: 202206262059
 ! Expires: 1 month
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -13,8 +13,8 @@
 !              that even I've sideload extensions and later it was unloaded itself after another session, then cause the
 !              redirection failed unfortunately!
 !              All document blocking rules will based on...
-!              - Privacy Redirect (Multi-browsers Extension, currently deprecated): https://github.com/SimonBrazell/privacy-redirect
-!              - LibRedirect (Firefox Extension): https://github.com/libredirect/libredirect
+!              - Privacy Redirect (Multi-browsers extension, deprecated): https://github.com/SimonBrazell/privacy-redirect
+!              - LibRedirect (Firefox Extension, continuation of above): https://github.com/libredirect/libredirect
 !              - YT2Invidio UserScript: https://codeberg.org/izzy/userscripts/src/branch/master/yt2invidio.user.js
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Implemented - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -47,14 +47,6 @@
 ! Not yet implemented currently - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! However, I will enable if they have at least one instance that truly privacy-friendly!
 
-! [Pixiv]
-! Currently have only `pixiv.moe`, however, it's likely use to redirect back to `Pixiv`, I don't know why...?
-!||pixiv.com$document,important,domain=~are_you_sure_to_view_it_directly
-
-! [Spotify > Soju]
-! Limitations by copyrights, it doesn't provide relaying full tracks, only preview samples of song/podcast, playlist viewer, etc.
-! Info: https://github.com/coffeebank/soju#notices
-!||spotify.com$document,important,domain=~are_you_sure_to_view_it_directly
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Unfriendly Instances Block  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Gathering from multiple sources that also give notice which servers are use `CrapFlare`, keep block them, even it was used in
@@ -73,6 +65,7 @@
 ||database.red$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||domain.glass$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||dothq.co$document,important,domain=~are_you_sure_to_view_on_this_instance
+||dr460nf1r3.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||drivet.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||flux.industries$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||fuckthesacklers.network$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -100,6 +93,7 @@
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Not implemented, and maybe no plan... - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Google Maps: 
+! Google Translate: Even we have SimplyTranslate, but it didn't have function to translate website!
 ! Google Search: We knew that they've added shady parameters, such as `ei`, `ved`, `usg`, etc. to keep track all sessions,
 !                but completely blocking isn't good at all for many users, however, you might try tweak browser settings to
 !                search on another sites instead, my priority of search engine is...
@@ -107,5 +101,5 @@
 !                           becaus of blocked by relay, e.g. `Google` mostly block by recaptcha antibot.
 !                - `DuckDuckGo`: Because of `improving` tracking, so I should step down to later choice...
 !                - `Google` should be the last as possible!
-! Google Translate: Even we have SimplyTranslate, but it didn't have function to translate website!
+! Note: Currently, I don't trust and use `Brave` until they've allow users who turn off `ServiceWorker` use its site properly!!
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
