@@ -1,6 +1,6 @@
 # [uMatrix 1.4.4]
-# Title: Hosts for block Naver LINE ads and tracking.
-# Version: 202112230225
+# Title: Hosts for block Naver LINE ads and tracking (Thailand)
+# Version: 202207032034
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts

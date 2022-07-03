@@ -1,6 +1,6 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client
-# Version: 202206262053
+# Version: 202207032033
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -49,7 +49,6 @@ services*moz*                          # Another SpyZilla settings upload/downlo
 snippets.*                             # BurntFox browser snippets, e.g. preload regional top sites!
 ss[0-9]*.mobilelife.co.th              # AIS AOC Scam (Mobile operator specific)
 telemetry*                             # Another telemetry prevention
-telemetry-*.services.*                 # Another SpyZilla BurntFox telemetry
 ww[0-9]*.mobilelife.co.th              # Another AIS AOC Scam (Mobile operator specific)
 
 # Less privacy instance block!

@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: iHateCircles
-! Version: 202206262048
+! Version: 202207032033
 ! Expires: 2 days
 ! Author: kowith337, DandelionSprout and contributors
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css
@@ -51,7 +51,7 @@ bibliogram.art,bibliogram.1d4.us,bibliogram.froth.zone,bibliogram.privacydev.net
 bibliogram.art,bibliogram.1d4.us,bibliogram.froth.zone,bibliogram.privacydev.net,bibliogram.pussthecat.org,bibliogram.snopyta.org,ig.beparanoid.de,insta.trom.tf,insta.tromdienste.de#?#img.pfp:style(border-radius: 0px !important)
 !
 ! [Invidious]: https://api.invidious.io | https://redirect.invidious.io | https://docs.invidious.io/Invidious-Instances
-inv.bp.projectsegfau.lt,inv.riverside.rocks,invidious.esmailelbob.xyz,invidious.flokinet.to,invidious.namazso.eu 🇩🇪,invidious.osi.kr,invidious.projectsegfau.lt,invidious.sethforprivacy.com,invidious.snopyta.org,invidious.tiekoetter.com,invidious.weblibre.org,tube.cthd.icu,vid.puffyan.us,y.com.sb,yewtu.be,youtube.076.ne.jp,yt.artemislena.eu#?#*:style(border-radius: 0px !important)
+inv.bp.projectsegfau.lt,inv.riverside.rocks,invidious.esmailelbob.xyz,invidious.flokinet.to,invidious.namazso.eu,invidious.osi.kr,invidious.projectsegfau.lt,invidious.sethforprivacy.com,invidious.snopyta.org,invidious.tiekoetter.com,invidious.weblibre.org,tube.cthd.icu,vid.puffyan.us,y.com.sb,yewtu.be,youtube.076.ne.jp,yt.artemislena.eu#?#*:style(border-radius: 0px !important)
 !
 ! [LibReddit]: https://github.com/spikecodes/libreddit#instances
 libredd.it,libreddit.spike.codes,incogsnoo.com,leddit.xyz,libreddit.40two.app,libreddit.autarkic.org,libreddit.awesomehub.io,libreddit.bus-hit.me,libreddit.datatunnel.xyz,libreddit.de,libreddit.drivet.xyz,libreddit.esmailelbob.xyz,libreddit.exonip.de,libreddit.igna.rocks,libreddit.kavin.rocks,libreddit.kylrth.com,libreddit.mutahar.rocks,libreddit.nl,libreddit.northboot.xyz,libreddit.pussthecat.org,libreddit.some-things.org,libreddit.sugoma.tk,libreddit.tiekoetter.com,libreddit.totaldarkness.net,lr.cowfee.moe,lr.mint.lgbt,lr.oversold.host,lr.riverside.rocks,reddit.artemislena.eu,reddit.invak.id,reddit.phii.me,reddit.rtrace.io,reddit.stuehieyr.com#?#*:style(border-radius: 0px !important)

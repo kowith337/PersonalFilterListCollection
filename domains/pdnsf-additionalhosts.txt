@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202202142359
+# Version: 202207032050
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/wiki/pDSNF-additionalHosts
@@ -47,6 +47,7 @@ adsby*.*
 alert-*.*
 beacon*.*
 beacon.*
+bigfun*
 byteark-analytics.*
 criteo.*
 datapremium.*
@@ -90,9 +91,7 @@ secure.*6*.com
 secure.*7*.com
 secure.*8*.com
 secure.*9*.com
-sentry-*.*
-sentry.*
-sentryio.*
+sentry*.*
 snowpole.*.gitlab.*
 ss*.mobilelife.co.th
 th-help.*
@@ -136,7 +135,6 @@ sc.omtrdc.net
 shrfbdg004.com
 storetail.io
 tagcommander.com
-#trafficmanager.net
 webtrekk.net
 wizaly.com
 wt-eu02.net
@@ -155,6 +153,7 @@ lumtest.com
 app.link
 booking.com
 bstatic.com
+cliqz.com
 csp.withgoogle.com
 #footprint.net # Conflict against Windows update (mostly UWP apps, just in case)
 hotspotshield.com
@@ -183,16 +182,14 @@ fhr.*.mozilla.*
 getpocket.*
 incoming.telemetry.*
 input.mozilla.*
-normandy-*.mozilla.*
-normandy.*.mozilla.*
+normandy*moz*
 ostats.mozilla.*
 qsurvey.mozilla.*
 reporter.mozilla.*
 self-repair.mozilla.*
-snippets.*.mozilla.*
-snippets.mozilla.*
-telemetry.*.moz*.*
-telemetry.moz*.*
+services*moz*
+snippets.*
+telemetry*
 tiles.*.mozilla*
 
 # Plain domain lists
@@ -208,6 +205,7 @@ setup.services.mozilla.com
 # [Big Brother - Non-Google fanboy] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # MASTER SWITCH
 #*-pa.googleapis.com
+#google
 #l.google.com
 
 # Connectivity check block
