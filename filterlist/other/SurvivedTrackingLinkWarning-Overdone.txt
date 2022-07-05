@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202112191329
+! Version: 202207051956
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -281,25 +281,23 @@
 ||steamcommunity.com/*&snr=$document,important,domain=~SteamTracking_NavigationReferrer
 ||steamcommunity.com/*?ser=$document,important,domain=~SteamTracking_EMailReferrer
 ||steamcommunity.com/*?snr=$document,important,domain=~SteamTracking_NavigationReferrer
+||steamgames.com/*&ser=$document,important,domain=~SteamTracking_EMailReferrer
+||steamgames.com/*&snr=$document,important,domain=~SteamTracking_NavigationReferrer
+||steamgames.com/*?ser=$document,important,domain=~SteamTracking_EMailReferrer
+||steamgames.com/*?snr=$document,important,domain=~SteamTracking_NavigationReferrer
 ||steampowered.com/*&ser=$document,important,domain=~SteamTracking_EMailReferrer
 ||steampowered.com/*&snr=$document,important,domain=~SteamTracking_NavigationReferrer
 ||steampowered.com/*?ser=$document,important,domain=~SteamTracking_EMailReferrer
 ||steampowered.com/*?snr=$document,important,domain=~SteamTracking_NavigationReferrer
 
 ! Soft problematic!
-!   You cannot perform certain actions while using its website, so I've decided to add query prune rules for addition, but please
+! - You cannot perform certain actions while using its website, so I've decided to add query prune rules for addition, but please
 !   note that `removeparam` will clean only first detected parameter (race condition), it cannot clear multiple parameters in
 !   each requests, probably some information still slipped through other parameters that cannot removed at that time.
-$document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^(__)?m_$/
-$document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^[a-zA-Z]+?\[\d+?\]$/
-$document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^__(c(cr|ft)?|rv|so|tn|xts?)__$/
-$document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^logging_/i
-$document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^privacy_/i
-$document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^ref_?/i
+$document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=/^((__)?m_|[a-zA-Z]+?\[\d+?\]|__(c(cr|ft)?|rv|so|tn|xts?)__|logging_|privacy_|ref_?)$/i
 $document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=acontext
 $document,xmlhttprequest,important,domain=facebook.com|messenger.com,removeparam=rc
-$document,xmlhttprequest,important,domain=steamcommunity.com|steampowered.com,removeparam=/^curator_/i
-$document,xmlhttprequest,important,domain=steamcommunity.com|steampowered.com,removeparam=/s(e|n)r/i
+$document,xmlhttprequest,important,domain=steamcommunity.com|steamgames.com|steampowered.com,removeparam=/^(curator_|s(e|n)r)$/i
 $first-party,document,xmlhttprequest,domain=facebook.com|messenger.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com,removeparam=/^fb_dtsg_?/i
 $first-party,important,domain=github.com,removeparam=/^notifications?/i
 
