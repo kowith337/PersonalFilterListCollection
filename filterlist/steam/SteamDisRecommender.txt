@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202206112144
+! Version: 202207052047
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -271,6 +271,8 @@ steamcommunity.com,steampowered.com##+js(cookie-remover, ga)
 steamcommunity.com,steampowered.com##+js(cookie-remover, home_scroll)
 steamcommunity.com,steampowered.com##+js(cookie-remover, recentapps)
 steamcommunity.com,steampowered.com##+js(cookie-remover, recentlyVisitedAppHubs)
+steamcommunity.com,steampowered.com##+js(cookie-remover, ser)
+steamcommunity.com,steampowered.com##+js(cookie-remover, snr)
 steamcommunity.com,steampowered.com##+js(cookie-remover, strResponsiveViewPrefs)
 
 ! I don't even know that they also track impressions in community hub too! However, community hub site may not aggressively set
