@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202207052047
+! Version: 202207071236
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -144,9 +144,12 @@ steampowered.com#?##steam_curators_not_empty:has(.curator_recommendation_capsule
 steamcommunity.com#?#.badge_title_stats .progress_info_bold:has-text(/^No /)
 !
 ! - Remove non-games badge progress info box! (e.g. Community actions, Seasonal sales, etc.)
-!   * Also include 2010 potato shacks?
+!   * Also include these numeric game card ID...
+!     - 2010 potato shacks? (Summer 2010)
+!     - Steam 3000 Clorthax (Summer 2022)
 steamcommunity.com#?#.badges_sheet .badge_row:has(a.badge_row_overlay:not([href*="gamecards"]))
 steamcommunity.com#?#.badges_sheet .badge_row:has(a.badge_row_overlay[href*="gamecards/335590"])
+steamcommunity.com#?#.badges_sheet .badge_row:has(a.badge_row_overlay[href*="gamecards/2021850"])
 
 ! Non-basic filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - Include `:upward()` rules for horizontal paging items that also remove leftover header.
@@ -242,8 +245,8 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 !   search with continuous scrolling, you can see in uBO logger that its binding with `snr` tracking parameter, these rules below
 !   will catching and blocking requests that still contain `snr`, then strip its parameter and re-requests again without it!
 ! - As well as curator tracking, you will see neither `curator_clanid` and/or `curater_listid`
-||$important,removeparam=/^curator_/,domain=steamcommunity.com|steampowered.com
-||$important,removeparam=/^s(e|n)r/,domain=steamcommunity.com|steampowered.com
+||$important,removeparam=/^curator_/,domain=steamcommunity.com|steamgames.com|steampowered.com
+||$important,removeparam=/^s(e|n)r/,domain=steamcommunity.com|steamgames.com|steampowered.com
 ||steamcommunity.com/sharedfiles$removeparam=searchtext
 ||steampowered.com/dynamicstore/userdata$removeparam=~id
 
@@ -259,8 +262,9 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 !   scriptlet functions to remove that cookie everytime to make sure that `Steam` will not gain benefits for keep tracking users
 !   by reading and/or storing more values of `app_impressions` cookie between navigations!
 ! - Even you've set to reject their cookies, however, it's seems like `Steam` doesn't respect user settings that we don't want
-!   its `app_impressions` cookies layed in browser, if you possible to subscribe "Anti-impression DLC" list, consider to use it
-!   after reject their cookies!
+!   its `app_impressions` cookies layed in browser, somehow they will create an actual `snr` cookies to survive against removal,
+!   in case if the old impressions cookie were removed and also repeatedly prevented to create another one!
+! - If you possible to subscribe "Anti-impression DLC" list, I'll consider recommend to use it after reject their cookies!
 !   * Proof: https://twitter.censors.us/pic/media/E8QDgaYVkAYcPxq.jpg?name=orig
 steamcommunity.com,steampowered.com##+js(cookie-remover, _gid)
 steamcommunity.com,steampowered.com##+js(cookie-remover, app_impressions)

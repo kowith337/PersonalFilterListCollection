@@ -1,6 +1,6 @@
 ! uMatrix: Ruleset recipes 1.4.1
 ! Title: Self Custom Ruleset
-! Version: 202112102253
+! Version: 202207062203
 ! VersionNumber: 0.45.2
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -139,6 +139,18 @@ Radio-Browser
     _ * media
     _ * xhr
     _ cdn.jsdelivr.net script
+
+Steam Chat @ SteamCommunity
+  steamcommunity.com *
+    ! In case if you have an issue to use chat for non-text usage,
+	! e.g. microphone talk (aka. calling) because it use WebRTC,
+	! you need to whitelist local IP and allow workers manually.
+	! no-workers: _ false
+	! _ 127.0.0.1 xhr
+    _ api.steampowered.com xhr
+	_ cm.steampowered.com xhr
+	_ community.akamai.steamstatic.com xhr
+	_ community.akamai.steamstatic.com script
 
 Vivaldi Translator
   * mimir.vivaldi.com
