@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Classic Profile Appearance
-! Version: 202202231753
+! Version: 202208131954
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -31,11 +31,14 @@ steamcommunity.com#?#.profile_animated_background
 
 ! Non-basic filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [`:matches-path()` rules]
-! To confirm that any `video` elements will not placed in for profile page!
+! - To confirm that any `video` elements will not placed in for profile page!
 steamcommunity.com#?#video:matches-path(/id/)
 steamcommunity.com#?#video:matches-path(/profiles/)
 !
-! In store site, exclude app-specific pages and points shop, for other elements than game trailers at specific app, it will hide!
+! - Experimental for web chat, remove decorated frame for all!
+steamcommunity.com#?#img[class^="steamavatar_avatarFrameImg"]:matches-path(/^\/chat/)
+!
+! - In store site, exclude app-specific pages and points shop, for other elements than game trailers at specific app, it will hide!
 steampowered.com#?#video:not(:matches-path(/^\/(app|points)\//))
 steampowered.com#?#video:matches-path(/^\/app\//):not(.highlight_player_area, .highlight_player_item .highlight_movie)
 
