@@ -1,6 +1,6 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client
-# Version: 202207032033
+# Version: 202208211251
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -53,8 +53,11 @@ ww[0-9]*.mobilelife.co.th              # Another AIS AOC Scam (Mobile operator s
 
 # Less privacy instance block!
 actionsack.com
+ahwx.org
 alefvanoon.xyz
 bch.bar
+beatbump.ml
+catalyst.sx
 crewz.me
 dark.fail
 database.red
@@ -62,26 +65,38 @@ domain.glass
 dothq.co
 dr460nf1r3.org
 drivet.xyz
+encrypted-data.xyz
 flux.industries
+fprivacy.com
 fuckthesacklers.network
+garudalinux.org
 ggc-project.de
 govt.land
 jamiethalacker.dev
 kavin.rocks
+libreddit.eu.org
 libreddit.hu
 lunar.icu
+mha.fi
 moomoo.me
 nautolan.racing
 nitter.hu
 notabird.site
+oversold.host
+palash.dev
 r.nf
 reddi.tk
 resolv.ee
+shimul.me
 silkky.cloud
 stilic.ml
+tedd.it
 trevorthalacker.com
 twitr.gq
+waffle.wiki
 walkx.org
+wef.lol
+whatever.social
 winscloud.net
 xanny.family
 yonalee.eu

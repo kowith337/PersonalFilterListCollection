@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202207071236
+! Version: 202208132014
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -234,7 +234,6 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||steampowered.com/explore/logfeedview$xmlhttprequest,important,redirect=nooptext
 ||steampowered.com/explore/recommended$xmlhttprequest,important,redirect=nooptext
-!||steamstatic.com/steamcommunity/public/images/items/*.webm$media,important,redirect=noopmp4-1s,domain=steamcommunity.com
 
 ! Trusted or Allowed for unbreaking only! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Unbreak sales page for allowing reveal more games when you press "Show more" button.
@@ -249,6 +248,7 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 ||$important,removeparam=/^s(e|n)r/,domain=steamcommunity.com|steamgames.com|steampowered.com
 ||steamcommunity.com/sharedfiles$removeparam=searchtext
 ||steampowered.com/dynamicstore/userdata$removeparam=~id
+||steampowered.com/search/$removeparam=os
 
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! These cookies are not necessary, except it use for tracking purpose!

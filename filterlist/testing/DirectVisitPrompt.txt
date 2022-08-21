@@ -1,6 +1,6 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202206262059
+! Version: 202208211257
 ! Expires: 1 month
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -58,8 +58,11 @@
 ! - Teddit instances (Doesn't report who is using it!): https://codeberg.org/teddit/teddit#instances
 ! - UntrackMe App - Latency lists: https://www.f-droid.org/en/packages/app.fedilab.nitterizeme
 ||actionsack.com$document,important,domain=~are_you_sure_to_view_on_this_instance
+||ahwx.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||alefvanoon.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||bch.bar$document,important,domain=~are_you_sure_to_view_on_this_instance
+||beatbump.ml$document,important,domain=~are_you_sure_to_view_on_this_instance
+||catalyst.sx$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||crewz.me$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||dark.fail$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||database.red$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -67,26 +70,38 @@
 ||dothq.co$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||dr460nf1r3.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||drivet.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
+||encrypted-data.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||flux.industries$document,important,domain=~are_you_sure_to_view_on_this_instance
+||fprivacy.com$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||fuckthesacklers.network$document,important,domain=~are_you_sure_to_view_on_this_instance
+||garudalinux.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||ggc-project.de$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||govt.land$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||jamiethalacker.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||kavin.rocks$document,important,domain=~are_you_sure_to_view_on_this_instance
+||libreddit.eu.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||libreddit.hu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||lunar.icu$document,important,domain=~are_you_sure_to_view_on_this_instance
+||mha.fi$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||moomoo.me$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||nautolan.racing$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||nitter.hu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||notabird.site$document,important,domain=~are_you_sure_to_view_on_this_instance
+||oversold.host$document,important,domain=~are_you_sure_to_view_on_this_instance
+||palash.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||r.nf$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||reddi.tk$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||resolv.ee$document,important,domain=~are_you_sure_to_view_on_this_instance
+||shimul.me$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||silkky.cloud$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||stilic.ml$document,important,domain=~are_you_sure_to_view_on_this_instance
+||tedd.it$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||trevorthalacker.com$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||twitr.gq$document,important,domain=~are_you_sure_to_view_on_this_instance
+||waffle.wiki$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||walkx.org$document,important,domain=~are_you_sure_to_view_on_this_instance
+||wef.lol$document,important,domain=~are_you_sure_to_view_on_this_instance
+||whatever.social$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||winscloud.net$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||xanny.family$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||yonalee.eu$document,important,domain=~are_you_sure_to_view_on_this_instance
