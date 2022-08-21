@@ -51,6 +51,7 @@
 ! Unfriendly Instances Block  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Gathering from multiple sources that also give notice which servers are use `CrapFlare`, keep block them, even it was used in
 ! the past...
+! - LibRedirect: It can update instances itself and have a text with red color to warn if its instance use `CrapFlare`
 ! - Bibliogram instances (Sad cat emoji = Crapflare): https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md
 ! - Invidious instances document: https://docs.invidious.io/instances
 ! - LibReddit instances: https://github.com/spikecodes/libreddit#instances
@@ -112,8 +113,8 @@
 ! Google Search: We knew that they've added shady parameters, such as `ei`, `ved`, `usg`, etc. to keep track all sessions,
 !                but completely blocking isn't good at all for many users, however, you might try tweak browser settings to
 !                search on another sites instead, my priority of search engine is...
-!                - `SearX`: I go to Neocities first for randomise, even though some instance are often show no results
-!                           becaus of blocked by relay, e.g. `Google` mostly block by recaptcha antibot.
+!                - `LibreX` and `SearX`: I go to SearX Neocities first for randomise, even though some instance are often show
+!                                        no results becaus of blocked by relay, e.g. `Google` mostly block by reCaptcha antibot!
 !                - `DuckDuckGo`: Because of `improving` tracking, so I should step down to later choice...
 !                - `Google` should be the last as possible!
 ! Note: Currently, I don't trust and use `Brave` until they've allow users who turn off `ServiceWorker` use its site properly!!

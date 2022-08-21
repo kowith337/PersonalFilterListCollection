@@ -1,0 +1,104 @@
+# [dnscrypt-proxy 2.1.1]
+# Title: Blocked rules for DNSCrypt Proxy client (Uncommented for pDNSF compatibility)
+# Version: 202208211255
+# Author: kowith337
+# Expires: 2 days
+# Homepage: https://github.com/kowith337/PersonalFilterListCollection
+# Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Domain%20Lists%20and%20Wildcard
+# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/dnscrypt/filter-blocked-names-uncomment.txt
+
+# Generic Blocklists
+#*-pa.googleapis.com
+#gvt[0-9]*.com
+#in-addr.arpa
+#ip6.arpa
+#l.google.com
+#t[0-9]*.org
+*-settings.services.*
+*telemetry*
+activations.mozilla.*
+admob.*
+adservice.google.*
+autoconfig*
+beacon*.*
+beacon.*
+bigfun*
+cliqz.com
+cloudflare-dns.com
+detectportal.*
+doubleclick.*
+firebase*.*
+freebasics.com
+geo.opera.com
+getpocket*
+google
+gvt[2-9]*.com
+gvtl.com
+i.org
+id.google.*
+incoming.telemetry.*
+internet.org
+kaidee.com
+lazada.*
+mozillademos.org
+mozillamessaging.com
+normandy*moz*
+redirector.*
+safeframe.*
+services*moz*
+snippets.*
+ss[0-9]*.mobilelife.co.th
+telemetry*
+ww[0-9]*.mobilelife.co.th
+
+# Less privacy instance block!
+actionsack.com
+ahwx.org
+alefvanoon.xyz
+bch.bar
+beatbump.ml
+catalyst.sx
+crewz.me
+dark.fail
+database.red
+domain.glass
+dothq.co
+dr460nf1r3.org
+drivet.xyz
+encrypted-data.xyz
+flux.industries
+fprivacy.com
+fuckthesacklers.network
+garudalinux.org
+ggc-project.de
+govt.land
+jamiethalacker.dev
+kavin.rocks
+libreddit.eu.org
+libreddit.hu
+lunar.icu
+mha.fi
+moomoo.me
+nautolan.racing
+nitter.hu
+notabird.site
+oversold.host
+palash.dev
+r.nf
+reddi.tk
+resolv.ee
+shimul.me
+silkky.cloud
+stilic.ml
+tedd.it
+trevorthalacker.com
+twitr.gq
+waffle.wiki
+walkx.org
+wef.lol
+whatever.social
+winscloud.net
+xanny.family
+yonalee.eu
+
+# [Cutoff for staging with your previous custom config] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
