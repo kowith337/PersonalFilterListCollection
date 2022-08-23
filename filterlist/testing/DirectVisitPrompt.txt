@@ -1,6 +1,6 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202208211257
+! Version: 202208231217
 ! Expires: 1 month
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -39,7 +39,7 @@
 ! instead of actual Wiki contents...
 ||wikipedia.com$document,important,domain=~are_you_sure_to_view_it_directly
 
-! [YouTube > Invidious] / [YouTube Music > BeatBump]
+! [YouTube > Invidious] / [YouTube Music > HyperPipe]
 ! Note: `Piped` is absolutely NOT RECOMMENDED! Most of Piped hosts are on `CrapFlare` and rely to multiple CDN servers to
 !       caching contents on multi-CF servers!
 ||youtube.com$document,important,domain=~studio.youtube.com|~are_you_sure_to_view_it_directly
@@ -58,6 +58,7 @@
 ! - Nitter instances: https://github.com/zedeus/nitter/wiki/Instances
 ! - Teddit instances (Doesn't report who is using it!): https://codeberg.org/teddit/teddit#instances
 ! - UntrackMe App - Latency lists: https://www.f-droid.org/en/packages/app.fedilab.nitterizeme
+||604kph.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||actionsack.com$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||ahwx.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||alefvanoon.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -93,6 +94,8 @@
 ||r.nf$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||reddi.tk$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||resolv.ee$document,important,domain=~are_you_sure_to_view_on_this_instance
+||searx.org$document,important,domain=~are_you_sure_to_view_on_this_instance
+||searx.run$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||shimul.me$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||silkky.cloud$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||stilic.ml$document,important,domain=~are_you_sure_to_view_on_this_instance

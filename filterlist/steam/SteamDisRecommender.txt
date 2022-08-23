@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202208132014
+! Version: 202208231236
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -118,6 +118,12 @@ steamcommunity.com#?#.games_list .hours_played
 steamcommunity.com#?#.persona_name #NamePopup
 steamcommunity.com#?#.persona_name .namehistory_link
 !
+! - Remove four latest badges that show on profile.
+steamcommunity.com#?#.profile_badges
+!
+! - Hide all metricator counting about how many games own, artworks, clips, screenshots and workshop items that posted.
+steamcommunity.com#?#.profile_count_link a span.profile_count_link_total
+!
 ! - Hide yourself (and also all of peoples) about games that recently played.
 steamcommunity.com#?#.profile_recentgame_header
 steamcommunity.com#?#.recent_games
@@ -126,6 +132,9 @@ steamcommunity.com#?#.recent_games
 steamcommunity.com#?#.badge_title_stats .badge_title_playgame
 steamcommunity.com#?#.badge_title_stats .badge_title_stats_playtime
 steamcommunity.com#?#.badge_title_stats .how_to_get_card_drops_ctn
+!
+! - On workshop details, remove rewarded lists under image preview.
+steamcommunity.com#?##ItemControls .workshopItemRatings
 
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Store]
@@ -184,7 +193,10 @@ steampowered.com#?#.newux_optin_banner:remove()
 steampowered.com#?#.recommendation_reasons .similar_recent_apps_container a:remove()
 
 ! CSS Modifications - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! - Re-paint "Give award" icon to be grayscale instead of `yellow` !
+! - Enforce remove all elements transition (e.g. slide panel animations)
+steamcommunity.com,steampowered.com#?#*:style(transition: none !important)
+!
+! - Re-paint "Give award" icon to be grayscale instead of `yellow`
 steamcommunity.com,steampowered.com##img.reward_btn_icon:style(filter: grayscale(100%) !important)
 !
 ! - Restore padding size of top scroll banner that caused by "Takeover" pane
@@ -248,7 +260,7 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 ||$important,removeparam=/^s(e|n)r/,domain=steamcommunity.com|steamgames.com|steampowered.com
 ||steamcommunity.com/sharedfiles$removeparam=searchtext
 ||steampowered.com/dynamicstore/userdata$removeparam=~id
-||steampowered.com/search/$removeparam=os
+||steampowered.com/search$removeparam=os,document,important
 
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! These cookies are not necessary, except it use for tracking purpose!
@@ -262,10 +274,11 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 !   scriptlet functions to remove that cookie everytime to make sure that `Steam` will not gain benefits for keep tracking users
 !   by reading and/or storing more values of `app_impressions` cookie between navigations!
 ! - Even you've set to reject their cookies, however, it's seems like `Steam` doesn't respect user settings that we don't want
-!   its `app_impressions` cookies layed in browser, somehow they will create an actual `snr` cookies to survive against removal,
-!   in case if the old impressions cookie were removed and also repeatedly prevented to create another one!
-! - If you possible to subscribe "Anti-impression DLC" list, I'll consider recommend to use it after reject their cookies!
-!   * Proof: https://twitter.censors.us/pic/media/E8QDgaYVkAYcPxq.jpg?name=orig
+!   its `app_impressions` cookies layed in browser, somehow they will create an actual `snr` cookies to survive against removal
+!   for certain actions (e.g. when you've added to whsilist or start following its game) in case if the old impressions cookie
+!   were removed and also repeatedly prevented to create another one!
+! - If you possible to subscribe "Anti-impression DLC" list, I'll consider recommend to use it!
+!   * Proof: https://nitter.net/i/status/1424267260403740675
 steamcommunity.com,steampowered.com##+js(cookie-remover, _gid)
 steamcommunity.com,steampowered.com##+js(cookie-remover, app_impressions)
 steamcommunity.com,steampowered.com##+js(cookie-remover, browserid)
@@ -308,13 +321,13 @@ steamcommunity.com##^script:has-text(RecordAppImpression, snr)
 ! block some shady steam EXEs that not necessary for my life anymore, include SteamServices, SteamWebHelper, SteamErrorReporter,
 ! etc. plus those EXEs are ruined my precious notebook performance too much like a potato chips, even I just run only the main
 ! steam client!
-! I give no thanks for new UI that eat performance just for showing friends who customised their profile with
-! (MP4/WebM) backgrounds in mini card, animated avatar and frames and such, also FUCK THOSE EXPERIMENTAL LABS THAT MOSTLY DO
-! TRACKING US FOR JUST OFFER PRECIOUS TARGETED AND IMPACT ZUCKESTIONS, AND WE CANNOT OPT OUT FROM THEM FOR SURE!!
+! I give no thanks for new UI that eat performance just for showing friends who customised their profile with (MP4/WebM)
+! backgrounds in mini card, animated avatar and frames and such, also FUCK THOSE EXPERIMENTAL LABS THAT MOSTLY DO TRACKING US FOR
+! JUST OFFER PRECIOUS TARGETED AND IMPACT ZUCKESTIONS, AND WE CANNOT OPT OUT FROM THEM FOR SURE!!
 ! Now I've giving up to use their new UI and always launch steam client without activating any browsers modules from it!!!
-! Anything that I need to do while playing games will ended to browsers (and sometime mobile app) only, include subscribe and
-! managing workshop contents, of course, I will not run both for anytime, it's depend on what things to focus.
-! Even I've also use android app that linked to personal account, I will use only for workshop related functions, not for looking
+! Anything that I need to do while playing games will ended to browsers (and sometime to rarely mobile app) only, include
+! subscribe and managing workshop contents, of course, I will not run both for anytime, it's depend on what things to focus.
+! Even I've also use Android app that linked to personal account, I will use only for workshop related functions, not for looking
 ! to view (and buy)? other games and/or software through its apps anymore, unless I've open in the browsers that can install uB0!
 ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
