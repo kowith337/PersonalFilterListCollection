@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202208231236
+! Version: 202208231254
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -100,6 +100,13 @@ steampowered.com#?#.recommendation_reasons .similar_recent_apps_container a
 !   * I cannot prevent personalised news and/or events (pre)loaded, but only remove its button to focus only news from games
 !     that you've searched for...
 steampowered.com#?#div[class^="eventcalendar_EventCalendarContainer"] div[class^="eventcalendar_NewsChannelGroup"]
+!
+! - Make (pre|post)-purchase page clean as possible (recipes printing frienldy) by...
+!   - Remove pane that show points earning after purchase
+!   - Remove (remotely) install purchased game(s) or install Steam client if you're not have.
+store.steampowered.com#?#.checkout_steam_rewards_banner
+store.steampowered.com#?#.checkout_gotsteam_area
+store.steampowered.com#?##purchase_summary_area .remote_download_body
 
 ! [Faded community zone]
 ! WHAT COULD GO WRONG!?
@@ -133,7 +140,8 @@ steamcommunity.com#?#.badge_title_stats .badge_title_playgame
 steamcommunity.com#?#.badge_title_stats .badge_title_stats_playtime
 steamcommunity.com#?#.badge_title_stats .how_to_get_card_drops_ctn
 !
-! - On workshop details, remove rewarded lists under image preview.
+! - On workshop details, remove rewarded lists under image preview
+!   * Don't worry, you can still give rewards, it's just hide all of rewards list that its workshop contents already got...
 steamcommunity.com#?##ItemControls .workshopItemRatings
 
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
