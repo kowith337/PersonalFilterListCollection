@@ -1,2 +1,5 @@
 # TortoiseGit Config
 .tgitconfig
+
+# Not ready, yet.
+.docs

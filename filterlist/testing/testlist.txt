@@ -1,6 +1,6 @@
 [uBlock Origin 1.38.5.0]
 ! Title: kowith337's Test List
-! Version: 202208231210
+! Version: 202209021246
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -9,7 +9,7 @@
 
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Teddit] Remove subreddit links at top bar (wasteful space taking)
-teddit.net,incogsnoo.com,reddit.lol,snoo.ioens.is,teddit.adminforge.de,teddit.bus-hit.me,teddit.kavin.rocks,teddit.namazso.eu,teddit.pussthecat.org,teddit.sethforprivacy.com,teddit.totaldarkness.net,teddit.zaggy.nl#?##topbar .top-links a[href^="/r/"], #topbar .top-links span.separator
+teddit.net,i.opnxng.com,incogsnoo.com,rdt.trom.tf,reddit.lol,snoo.ioens.is,td.vern.cc,teddit.adminforge.de,teddit.bus-hit.me,teddit.froth.zone,teddit.namazso.eu,teddit.pussthecat.org,teddit.rawbit.ninja ,teddit.sethforprivacy.com,teddit.tinfoil-hat.net,teddit.tokhmi.xyz,teddit.totaldarkness.net,teddit.zaggy.nl#?##topbar .top-links a[href^="/r/"], #topbar .top-links span.separator
 
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Blognone]
@@ -42,17 +42,13 @@ youtube.com#?##masthead #end #buttons ytd-button-renderer:has(a[href*="/ServiceL
 ! - For unclear reason, because I have use touchscreen notebook and found that I've redirected to donation page unintentionally,
 !   even I just tap onto the blank space, probably navigation header placement issue that will be a short time while page loading
 !   will be see some icon enlarged, absolutely it's `Liberapay` logo are cover the page entirely at that moment!
-nitter.net,bird.trom.tf,n.l5.ca,n.ramle.be,nitter.1d4.us,nitter.42l.fr,nitter.bird.froth.zone,nitter.bus-hit.me,nitter.ca,nitter.cutelab.space,nitter.cz,nitter.dcs0.hu,nitter.ebnar.xyz,nitter.esmailelbob.xyz,nitter.fdn.fr,nitter.fly.dev,nitter.foss.wtf,nitter.grimneko.de,nitter.it,nitter.kylrth.com,nitter.mint.lgbt,nitter.namazso.eu,nitter.net,nitter.nl,nitter.notraxx.ch,nitter.poast.org,nitter.priv.pw,nitter.privacy.com.de,nitter.privacydev.net,nitter.projectsegfau.lt,nitter.pussthecat.org,nitter.qwik.space,nitter.rawbit.ninja,nitter.sethforprivacy.com,nitter.slipfox.xyz,nitter.soopy.moe,nitter.spaceint.fr,nitter.tiekoetter.com,nitter.tokhmi.xyz,nitter.unixfox.eu,nitter.weiler.rocks,nt.vern.cc,nttr.stream,tw.artemislena.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.beparanoid.de,twitter.censors.us,twt.funami.tech,unofficialbird.com#?#.inner-nav a[href*="liberapay"]
+nitter.net,bird.trom.tf,de.nttr.stream,n.hyperborea.cloud,n.ramle.be,nitter.1d4.us,nitter.42l.fr,nitter.bird.froth.zone,nitter.bus-hit.me,nitter.ca,nitter.cutelab.space,nitter.cz,nitter.dcs0.hu,nitter.ebnar.xyz,nitter.esmailelbob.xyz,nitter.fdn.fr,nitter.fly.dev,nitter.foss.wtf,nitter.grimneko.de,nitter.it,nitter.kylrth.com,nitter.mastodon.pro,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.nl,nitter.notraxx.ch,nitter.oishi-ra.men,nitter.poast.org,nitter.priv.pw,nitter.privacy.com.de,nitter.privacydev.net,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.spaceint.fr,nitter.tiekoetter.com,nitter.unixfox.eu,nitter.weiler.rocks,nttr.stream,t.com.sb,tw.artemislena.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.beparanoid.de,twitter.censors.us#?#.inner-nav a[href*="liberapay"]
 !
 ! - Remove unsupported card contents placeholder
 !   > Spaces: Remove empty box since it just a placeholder box that cannot show anything.
 !   > Broadcasts: Remove bottom card title, left only image preview.
-nitter.net,bird.trom.tf,n.l5.ca,n.ramle.be,nitter.1d4.us,nitter.42l.fr,nitter.bird.froth.zone,nitter.bus-hit.me,nitter.ca,nitter.cutelab.space,nitter.cz,nitter.dcs0.hu,nitter.ebnar.xyz,nitter.esmailelbob.xyz,nitter.fdn.fr,nitter.fly.dev,nitter.foss.wtf,nitter.grimneko.de,nitter.it,nitter.kylrth.com,nitter.mint.lgbt,nitter.namazso.eu,nitter.net,nitter.nl,nitter.notraxx.ch,nitter.poast.org,nitter.priv.pw,nitter.privacy.com.de,nitter.privacydev.net,nitter.projectsegfau.lt,nitter.pussthecat.org,nitter.qwik.space,nitter.rawbit.ninja,nitter.sethforprivacy.com,nitter.slipfox.xyz,nitter.soopy.moe,nitter.spaceint.fr,nitter.tiekoetter.com,nitter.tokhmi.xyz,nitter.unixfox.eu,nitter.weiler.rocks,nt.vern.cc,nttr.stream,tw.artemislena.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.beparanoid.de,twitter.censors.us,twt.funami.tech,unofficialbird.com#?#.timeline-item .card-container[href*="/i/spaces/"]
-nitter.net,bird.trom.tf,n.l5.ca,n.ramle.be,nitter.1d4.us,nitter.42l.fr,nitter.bird.froth.zone,nitter.bus-hit.me,nitter.ca,nitter.cutelab.space,nitter.cz,nitter.dcs0.hu,nitter.ebnar.xyz,nitter.esmailelbob.xyz,nitter.fdn.fr,nitter.fly.dev,nitter.foss.wtf,nitter.grimneko.de,nitter.it,nitter.kylrth.com,nitter.mint.lgbt,nitter.namazso.eu,nitter.net,nitter.nl,nitter.notraxx.ch,nitter.poast.org,nitter.priv.pw,nitter.privacy.com.de,nitter.privacydev.net,nitter.projectsegfau.lt,nitter.pussthecat.org,nitter.qwik.space,nitter.rawbit.ninja,nitter.sethforprivacy.com,nitter.slipfox.xyz,nitter.soopy.moe,nitter.spaceint.fr,nitter.tiekoetter.com,nitter.tokhmi.xyz,nitter.unixfox.eu,nitter.weiler.rocks,nt.vern.cc,nttr.stream,tw.artemislena.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.beparanoid.de,twitter.censors.us,twt.funami.tech,unofficialbird.com#?#.timeline-item .card-content-container[href*="/i/broadcasts/"] .card-content
-!
-! - Some instance give me some abuse that add very long site name, so removed it!
-twitter.censors.us#?#.inner-nav a.site-name:upward(.nav-item)
-twitter.censors.us#?#.inner-nav a:has(img.site-logo)
+nitter.net,bird.trom.tf,de.nttr.stream,n.hyperborea.cloud,n.ramle.be,nitter.1d4.us,nitter.42l.fr,nitter.bird.froth.zone,nitter.bus-hit.me,nitter.ca,nitter.cutelab.space,nitter.cz,nitter.dcs0.hu,nitter.ebnar.xyz,nitter.esmailelbob.xyz,nitter.fdn.fr,nitter.fly.dev,nitter.foss.wtf,nitter.grimneko.de,nitter.it,nitter.kylrth.com,nitter.mastodon.pro,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.nl,nitter.notraxx.ch,nitter.oishi-ra.men,nitter.poast.org,nitter.priv.pw,nitter.privacy.com.de,nitter.privacydev.net,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.spaceint.fr,nitter.tiekoetter.com,nitter.unixfox.eu,nitter.weiler.rocks,nttr.stream,t.com.sb,tw.artemislena.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.beparanoid.de,twitter.censors.us#?#.timeline-item .card-container[href*="/i/spaces/"]
+nitter.net,bird.trom.tf,de.nttr.stream,n.hyperborea.cloud,n.ramle.be,nitter.1d4.us,nitter.42l.fr,nitter.bird.froth.zone,nitter.bus-hit.me,nitter.ca,nitter.cutelab.space,nitter.cz,nitter.dcs0.hu,nitter.ebnar.xyz,nitter.esmailelbob.xyz,nitter.fdn.fr,nitter.fly.dev,nitter.foss.wtf,nitter.grimneko.de,nitter.it,nitter.kylrth.com,nitter.mastodon.pro,nitter.mint.lgbt,nitter.mstdn.social,nitter.namazso.eu,nitter.nl,nitter.notraxx.ch,nitter.oishi-ra.men,nitter.poast.org,nitter.priv.pw,nitter.privacy.com.de,nitter.privacydev.net,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.spaceint.fr,nitter.tiekoetter.com,nitter.unixfox.eu,nitter.weiler.rocks,nttr.stream,t.com.sb,tw.artemislena.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.beparanoid.de,twitter.censors.us#?#.timeline-item .card-content-container[href*="/i/broadcasts/"] .card-content
 
 ! [Pantip] Explicit and spam topic name (Use Thai unicode characters because most language of this site are mainly in Thai)
 pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(ตระกองขวัญ))
@@ -74,7 +70,7 @@ twitter.com#?#div[role="tablist"] [role="presentation"] div[class] [aria-label^=
 twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label*="Carousel"]:has(div[role="tablist"]):upward(2)
 twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class] a[href^="//"]:upward(1)
 twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(a[href^="//related_users"])
-twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/))
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/ i))
 twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell"] [data-testid*="follow"]):not(:matches-path(/\/follow(ing|ed|ers)/))
 
 ! DOM Permanent Remover - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -88,8 +84,6 @@ facebook.com#?#.post-ads:remove()
 
 ! [Nitter]
 bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.it,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weiler.rocks,nttr.stream,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]:remove()
-twitter.censors.us#?#.inner-nav a.site-name:upward(.nav-item):remove()
-twitter.censors.us#?#.inner-nav a:has(img.site-logo):remove()
 
 ! [Twitter]
 ! - Some inline and/or side pane that tagged with `[aria-labelledby]` are useless, they often use for showing a pane to easily
@@ -127,14 +121,12 @@ $domain=facebook.com|messenger.com,important,removeparam=/logging\_?data\[\d+?\]
 ||steampowered.com/*?curator_*=$removeparam=/^curator_/
 ||steampowered.com/*?ser=$removeparam=ser,important
 ||steampowered.com/*?snr=$removeparam=snr,important
-||youtube-nocookie.com/get_video_info?*&ei=$xhr,removeparam=ei
-||youtube-nocookie.com/get_video_info?ei=$xhr,removeparam=ei
-||youtube.com/get_video_info?*&ei=$xhr,removeparam=ei
-||youtube.com/get_video_info?ei=$xhr,removeparam=ei
+||youtube-nocookie.com/get_video_info?$xhr,removeparam=ei
+||youtube.com/get_video_info?$xhr,removeparam=ei
 
 ! Reverse removers
 ! This will work like `removeparam` but what happened if the rules are reversed to exclude matched parameters only...?
-||adintrend.tv/hd/live/i.php$frame,removeparam=~/^(c(h|xid)|sid)/
+||adintrend.tv/hd/live/i.php$frame,removeparam=~/^((c(h|x)|s)id)/
 $doc,removeparam=~/^(ia[a-z]?|k([a-z0-9]+)?|q|uddg)/,domain=duckduckgo.com
 
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -155,13 +147,13 @@ pantip.com##^responseheader(etag)
 ! Strong third parties denied (with some exceptions)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - This make use of `3p` to block everything that not come from its domain itself, however, `denyallow` rules may included if
 !   some other domains are necessary to loading with...
-!   * Will be priority to CDNs and some required resources, but maybe not fonts and social plugins, especially if that platform
-!     can track users and link back all off-site activities to its platform for determine users activities and show more related
-!     contents (and also zuckestions), such as all of Facebook plugins, Google Fonts, etc.
-$3p,domain=pantip.com,denyallow=ptcdn.info
-$3p,important,domain=chocolatey.org,denyallow=disqus.com|disquscdn.com
+!   * Will be priority to CDNs, Captcha and some required resources, but maybe not fonts and social plugins, especially if that
+!     platform can track users and link back all off-site activities to its platform for determine users activities and show more
+!     related contents (and also zuckestions), such as all of Facebook plugins, Google Fonts, etc.
+$3p,denyallow=google.com|gstatic.com|ptcdn.info,domain=pantip.com
+$3p,important,denyallow=byteark.com,domain=thairath.co.th
+$3p,important,denyallow=disqus.com|disquscdn.com,domain=chocolatey.org
 $3p,important,domain=greasyfork.org
-$3p,important,domain=thairath.co.th,denyallow=byteark.com
 
 ! Unbreak or Allowed only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
