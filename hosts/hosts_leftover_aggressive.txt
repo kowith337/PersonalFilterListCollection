@@ -1,6 +1,6 @@
 # [uMatrix 1.3.11.100]
 # Title: Aggressive custom leftover hosts
-# Version: 202110061214
+# Version: 202209021319
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -219,7 +219,7 @@
 #     nowadays may leads to risk of accounts ban because they falsely claim that your account are in risk of phishing, in fact,
 #     they want anybody who use its service to see ads and keep track all of your activities by them through using their official
 #     and any apps that have its SDK, include any websites that inserted their plugins, e.g. comments, like/follow, chat widget,
-#     videos, embed posts, tracking pixel, etc. also make it count!
+#     videos, embed posts, login with, tracking pixel, etc. also make it count!
 0.0.0.0 a-api.facebook.com
 0.0.0.0 a-graph.facebook.com
 0.0.0.0 b-api.facebook.com
@@ -290,5 +290,6 @@
 0.0.0.0 service.trueinternet.co.th
 0.0.0.0 services.truecorp.co.th
 0.0.0.0 services.trueinternet.co.th
+0.0.0.0 topping.truemoveh.com
 0.0.0.0 www3.truecorp.co.th
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
