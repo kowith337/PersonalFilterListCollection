@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
-! Title: iHateCircles
-! Version: 202209292114
+! Title: iHateCircles (Cease support if 1.44.6 actually released!)
+! Version: 202209292125
 ! Expires: 2 days
 ! Author: kowith337, DandelionSprout and contributors
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css
