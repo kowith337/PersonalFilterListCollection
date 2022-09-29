@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.7.2]
 ! Title: iHateCircles
-! Version: 202209021236
+! Version: 202209292114
 ! Expires: 2 days
 ! Author: kowith337, DandelionSprout and contributors
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/ubo-css
@@ -8,8 +8,9 @@
 ! Description: Circles? Material Design? All of that is too mainstream! Just bring back all the squares!!
 
 ! Multi-domain
-aminoapps.com,answers.yahoo.com,discord.com,douyin.com,github.com,ifunny.co,instagram.com,minds.com,ok.ru,pixiv.net,quora.com,reddit.com,tiktok.com,tumblr.com,twitter.com,vk.com,google.*#?#*:style(border-radius: 0px !important)
-discord.com,facebook.com,google.com,pixiv.net#?#*:before:style(border-radius: 0px !important)
+aminoapps.com,answers.yahoo.com,discord.com,douyin.com,github.com,ifunny.co,instagram.com,minds.com,ok.ru,pixiv.net,quora.com,reddit.com,tiktok.com,tumblr.com,twitter.com,vk.com#?#*:style(border-radius: 0px !important)
+discord.com,facebook.com,pixiv.net#?#*:before:style(border-radius: 0px !important)
+google.ac,google.ad,google.ae,google.af,google.ag,google.al,google.am,google.as,google.at,google.az,google.ba,google.be,google.bf,google.bg,google.bi,google.bj,google.bs,google.bt,google.by,google.ca,google.cat,google.cc,google.cd,google.cf,google.cg,google.ch,google.ci,google.cl,google.cm,google.co.ao,google.co.bw,google.co.ck,google.co.cr,google.co.hu,google.co.id,google.co.il,google.co.im,google.co.in,google.co.je,google.co.jp,google.co.ke,google.co.kr,google.co.ls,google.co.ma,google.co.mz,google.co.nz,google.co.th,google.co.tz,google.co.ug,google.co.uk,google.co.uz,google.co.ve,google.co.vi,google.co.za,google.co.zm,google.co.zw,google.com,google.com.af,google.com.ag,google.com.ai,google.com.ar,google.com.au,google.com.bd,google.com.bh,google.com.bn,google.com.bo,google.com.br,google.com.by,google.com.bz,google.com.co,google.com.cu,google.com.cy,google.com.do,google.com.ec,google.com.eg,google.com.et,google.com.fj,google.com.ge,google.com.gh,google.com.gi,google.com.gr,google.com.gt,google.com.hk,google.com.iq,google.com.jm,google.com.jo,google.com.kh,google.com.kw,google.com.lb,google.com.ly,google.com.mm,google.com.mt,google.com.mx,google.com.my,google.com.na,google.com.nf,google.com.ng,google.com.ni,google.com.np,google.com.nr,google.com.om,google.com.pa,google.com.pe,google.com.pg,google.com.ph,google.com.pk,google.com.pl,google.com.pr,google.com.py,google.com.qa,google.com.ru,google.com.sa,google.com.sb,google.com.sg,google.com.sl,google.com.sv,google.com.tj,google.com.tn,google.com.tr,google.com.tw,google.com.ua,google.com.uy,google.com.vc,google.com.ve,google.com.vn,google.cv,google.cz,google.de,google.dj,google.dk,google.dm,google.dz,google.ee,google.es,google.fi,google.fm,google.fr,google.ga,google.ge,google.gf,google.gg,google.gl,google.gm,google.gp,google.gr,google.gy,google.hk,google.hn,google.hr,google.ht,google.hu,google.ie,google.im,google.in,google.io,google.iq,google.is,google.it,google.it.ao,google.je,google.jo,google.jp,google.kg,google.ki,google.kz,google.la,google.li,google.lk,google.lt,google.lu,google.lv,google.md,google.me,google.mg,google.mk,google.ml,google.mn,google.ms,google.mu,google.mv,google.mw,google.ne,google.ne.jp,google.ng,google.nl,google.no,google.nr,google.nu,google.off.ai,google.pk,google.pl,google.pn,google.ps,google.pt,google.ro,google.rs,google.ru,google.rw,google.sc,google.se,google.sh,google.si,google.sk,google.sm,google.sn,google.so,google.sr,google.st,google.td,google.tel,google.tg,google.tk,google.tl,google.tm,google.tn,google.to,google.tt,google.tw,google.ua,google.us,google.uz,google.vg,google.vu,google.ws#?#*,*:before:style(border-radius: 0px !important)
 
 ! Single-domain
 discord.com,discordapp.com#?#div[class*="avatar"][role="button"]:style(border-radius: 0px !important)
@@ -47,8 +48,7 @@ youtube.com#?#yt-img-shadow:style(border-radius: 0px !important)
 !          shorts, so I will respect to their decisions that don't want to make their sites appear publically, include this too!
 !
 ! [Bibliogram]: https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md
-bibliogram.art,bibliogram.1d4.us,bibliogram.froth.zone,bibliogram.priv.pw,bibliogram.pussthecat.org,bibliogram.snopyta.org,ig.beparanoid.de,ig.funami.tech,ig.tokhmi.xyz,insta.trom.tf,insta.tromdienste.de#?#*:style(border-radius: 0px !important)
-bibliogram.art,bibliogram.1d4.us,bibliogram.froth.zone,bibliogram.priv.pw,bibliogram.pussthecat.org,bibliogram.snopyta.org,ig.beparanoid.de,ig.funami.tech,ig.tokhmi.xyz,insta.trom.tf,insta.tromdienste.de#?#img.pfp:style(border-radius: 0px !important)
+bibliogram.art,bibliogram.1d4.us,bibliogram.froth.zone,bibliogram.priv.pw,bibliogram.pussthecat.org,bibliogram.snopyta.org,ig.beparanoid.de,ig.funami.tech,ig.tokhmi.xyz,insta.trom.tf,insta.tromdienste.de#?#*,img.pfp:style(border-radius: 0px !important)
 !
 ! [Invidious]: https://api.invidious.io | https://redirect.invidious.io | https://docs.invidious.io/Invidious-Instances
 inv.bp.projectsegfau.lt,inv.privacy.com.de,inv.riverside.rocks,inv.vern.cc,invidio.xamh.de,invidious.esmailelbob.xyz,invidious.flokinet.to,invidious.namazso.eu,invidious.nerdvpn.de,invidious.projectsegfau.lt,invidious.rhyshl.live,invidious.sethforprivacy.com,invidious.slipfox.xyz,invidious.snopyta.org,invidious.tiekoetter.com,invidious.weblibre.org,vid.puffyan.us,y.com.sb,yewtu.be,youtube.076.ne.jp,yt.artemislena.eu#?#*:style(border-radius: 0px !important)
