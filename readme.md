@@ -12,6 +12,7 @@ Currently known have filterlist for
   - APKMirror
   - Facebook (Mostly mobile layout)
   - Gelbooru [(Moved from this repo)](https://github.com/kowith337/gelbolube)
+  - Steam
   - Uncategorised sites
 - Hosts File
   - block leftover and/or (not|un-) blocked hosts
