@@ -1,6 +1,6 @@
-[uBlock Origin 1.37.0]
+[uBlock Origin 1.45.0]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202112191330
+! Version: 202211101651
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -39,26 +39,26 @@ web.facebook.com,www.facebook.com#?#div[data-pagelet="LeftRail"] div[class] ul l
 web.facebook.com,www.facebook.com#?#div[role="banner"] div[role="navigation"] ul li
 
 ! Remove unnecessary things for consumers in compose pane button (Create ads / jobs)
-web.facebook.com,www.facebook.com#?#div[aria-label="Create"][role="dialog"] div[data-visualcompletion] a[href*="/ads"]
-web.facebook.com,www.facebook.com#?#div[aria-label="Create"][role="dialog"] div[data-visualcompletion] a[href*="/jobs_composer"]
+web.facebook.com,www.facebook.com#?#div[aria-label="Create" i][role="dialog"] div[data-visualcompletion] a[href*="/ads"]
+web.facebook.com,www.facebook.com#?#div[aria-label="Create" i][role="dialog"] div[data-visualcompletion] a[href*="/jobs_composer"]
 
 ! Remove unnecessary items in grid menu
 ! - Include ads centre, ad campaigns, `Facebook` pay, fundarise, jobs, offers (maybe formerly rewards), watch and news feed...
 ! - remove the "Watch" menu is same though about what happen in touch version that you will be track by `Facebook` by obtaining
 !   your "advertisement ID" for fetch zuckested/promoted videos that based on your behaviour!
 ! - remove the "News feed" will hide ability to go back to algorithm'd news feed, click to logo for going back still possible!
-web.facebook.com,www.facebook.com#?#div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/ads"]
-web.facebook.com,www.facebook.com#?#div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/ad_campaign"]
-web.facebook.com,www.facebook.com#?#div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/facebook_pay"]
-web.facebook.com,www.facebook.com#?#div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/fundraisers"]
-web.facebook.com,www.facebook.com#?#div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/jobs"]
-web.facebook.com,www.facebook.com#?#div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/offers"]
-web.facebook.com,www.facebook.com#?#div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="/watch"]
-web.facebook.com,www.facebook.com#?#div[aria-label="Menu"][role="dialog"] div[data-visualcompletion] a[href*="sk=nf"]
+web.facebook.com,www.facebook.com#?#div[aria-label="Menu" i][role="dialog"] div[data-visualcompletion] a[href*="/ads"]
+web.facebook.com,www.facebook.com#?#div[aria-label="Menu" i][role="dialog"] div[data-visualcompletion] a[href*="/ad_campaign"]
+web.facebook.com,www.facebook.com#?#div[aria-label="Menu" i][role="dialog"] div[data-visualcompletion] a[href*="/facebook_pay"]
+web.facebook.com,www.facebook.com#?#div[aria-label="Menu" i][role="dialog"] div[data-visualcompletion] a[href*="/fundraisers"]
+web.facebook.com,www.facebook.com#?#div[aria-label="Menu" i][role="dialog"] div[data-visualcompletion] a[href*="/jobs"]
+web.facebook.com,www.facebook.com#?#div[aria-label="Menu" i][role="dialog"] div[data-visualcompletion] a[href*="/offers"]
+web.facebook.com,www.facebook.com#?#div[aria-label="Menu" i][role="dialog"] div[data-visualcompletion] a[href*="/watch"]
+web.facebook.com,www.facebook.com#?#div[aria-label="Menu" i][role="dialog"] div[data-visualcompletion] a[href*="sk=nf"]
 
 ! [(Old) Facebook Desktop]  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Remove "Top Picks" product from marketplace lists, only work for english UI users only (UK, US)
-facebook.com#?#div[data-testid="marketplace_home_feed"] div[class] > div[class]:has(span[itemcomponent]:has-text(/^Top picks/))
+facebook.com#?#div[data-testid="marketplace_home_feed"] div[class] > div[class]:has(span[itemcomponent]:has-text(/^top picks/i))
 
 ! Top videos for you...? No! Not Me and You! but for someone else!!
 ! - Test case to hide every zuckestions of videos and leave only channel list from pages you're following... (pages tiles)
@@ -69,7 +69,7 @@ facebook.com#?#.fb_content div[class] > div[class] > #watch_feed div[class] div[
 ! Remove "More items" (near you?)
 ! - This will let your only focus to the products that you want to see more details, no zuckested and related trains.
 facebook.com#?##content.fb_content div[id] div[class] > div[role="main"] div > div:has(span[role=heading]):has(div a[data-testid="marketplace_feed_item"] section #marketplace-modal-dialog-title)
-! facebook.com#?##content.fb_content div[id] div[class] > div[role="main"] div > div:has(span[role=heading]:has-text(/^More items/))
+! facebook.com#?##content.fb_content div[id] div[class] > div[role="main"] div > div:has(span[role=heading]:has-text(/^more items/i))
 
 ! Remove button and panel that appear under friend tiles (when directly view profile)
 ! - However, this will hide entire friend tiles for your profile, but not for others...
@@ -117,7 +117,7 @@ web.facebook.com,www.facebook.com#?##content[role="main"] div[class] > a[href*="
 0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##m_story_permalink_view div[id^="ufi_"] div[class] > div[class][id] div div[id^="u_0"]:has(h3):has(div[class] div[class])
 
 ! Remove event discover (also affect threaded discover)
-0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##events_card_list div[class] > :has(a span:has-text(/^Discover/))
+0.facebook.com,d.facebook.com,free.facebook.com,m.facebook.com,mbasic.facebook.com,mobile.facebook.com,o.facebook.com,zero.facebook.com#?##events_card_list div[class] > :has(a span:has-text(/^discover/i))
 
 ! Remove related videos while you're viewing the video as direct permalink post
 ! * WARNING: This rule doesn't work for Firefox Legacy due to multiple outbound chains
@@ -202,7 +202,7 @@ d.facebook.com,m.facebook.com,mbasic.facebook.com#?##root table[role] div[class]
 ! Trying to hide "Allow" button in the business section of advert preferences, it's mean if you disallow advertisers to use your
 ! information to advertise or not advertise, your choice must be permanent choice and no need to undo!
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com#?#.-hardstate-ads #root div[class] article a[href*="/help/568137493302217"]
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com#?#.-hardstate-ads #root div[class] article div[class]:has-text(Your Facebook ad preferences)
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com#?#.-hardstate-ads #root div[class] article div[class]:has-text(/your facebook ad preferences/i)
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com#?#.-hardstate-ads #root div[class] article div[id][class] #ex_allow
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com#?#.-hardstate-ads #root div[class] article div[id][class] #in_allow
 
@@ -226,7 +226,7 @@ d.facebook.com,m.facebook.com,mbasic.facebook.com#?##root table[role] div[class]
 !#endif
 
 ! - Remove CEO's signature in lookback page, plus with "Facebook team" phrase!
-0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com#?##root div[class] > a[href*="/zuck"]:has(i[aria-label="Mark"]):upward(1):remove()
+0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com#?##root div[class] > a[href*="/zuck" i]:has(i[aria-label="Mark" i]):upward(1):remove()
 
 ! Make the related video function corrupted when you're viewing standalone video post on Facebook with `watch` link.
 0.facebook.com,free.facebook.com,m.facebook.com,mobile.facebook.com,mtouch.facebook.com,o.facebook.com,touch.facebook.com,zero.facebook.com#?#+js(acs, requireLazy, mobile_related_video_feed_pagelet)

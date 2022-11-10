@@ -1,6 +1,6 @@
-[uBlock Origin 1.38.5.0]
+[uBlock Origin 1.45.0]
 ! Title: kowith337's Test List
-! Version: 202209021246
+! Version: 202211101701
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -68,15 +68,15 @@ twitter.com#?#div[data-testid="sidebarColumn"] section[aria-labelledby^="accessi
 twitter.com#?#div[role="tablist"] [role="presentation"] div[class] [aria-label^="Follow"] div[dir]:not(:matches-path(/followed))
 twitter.com#?#div[role="tablist"] [role="presentation"] div[class] [aria-label^="Follow"] svg:not(:matches-path(/followed))
 twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label*="Carousel"]:has(div[role="tablist"]):upward(2)
-twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class] a[href^="//"]:upward(1)
-twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(a[href^="//related_users"])
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class] a[href*="//"]:upward(1)
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(a[href*="//related_users"])
 twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/ i))
-twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell"] [data-testid*="follow"]):not(:matches-path(/\/follow(ing|ed|ers)/))
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell" i] [data-testid*="follow"]):not(:matches-path(/\/follow(ing|ed|ers)/))
 
 ! DOM Permanent Remover - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Blognone] In case if modern browsers support to remove node entirely
-blognone.com#?#.content-container:has(.meta span.terms .field-item a[href*="thailand"]) #comment-area:remove()
-blognone.com#?##block-system-main .content .node:has(.meta span.terms .field-item a[href*="thailand"]) .comment-comments:remove()
+blognone.com#?#.content-container:has(.meta span.terms .field-item a[href*="thailand" i]) #comment-area:remove()
+blognone.com#?##block-system-main .content .node:has(.meta span.terms .field-item a[href*="thailand" i]) .comment-comments:remove()
 
 ! [Facebook] Blame to AdGuard
 facebook.com#?#.AdBox:remove()

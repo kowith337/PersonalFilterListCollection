@@ -1,6 +1,6 @@
-[uBlock Origin 1.32.4]
+[uBlock Origin 1.45.0]
 ! Title: Facebook Zuckestion Killer - Legacy rules backup
-! Version: 202110072252
+! Version: 202211101651
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -101,15 +101,15 @@ facebook.com#?##content[role="main"] div .clearfix div[class] > div[class] > :ha
 facebook.com#?##content[role="main"] div .clearfix div[class] > div[class] > :has(a[href*="/groups_browse/see_all/?"][href*="234383826903707"])
 facebook.com#?##content[role="main"] div .clearfix div[class] > div[class] > :has(a[href*="/groups_browse/see_all/?"][href*="470739743275782"])
 facebook.com#?##content[role="main"] div .clearfix div[class] > div[class] > :has(a[href*="/groups_browse/see_all/?"][href*="1801122086782345"])
-facebook.com#?##content[role="main"] div .clearfix div[class] > div[class] > :has(div[role="heading"] span:has-text(/More Suggestions/))
+facebook.com#?##content[role="main"] div .clearfix div[class] > div[class] > :has(div[role="heading"] span:has-text(/More Suggestions/i))
 facebook.com#?##content[role=main] > div .clearfix .stat_elem:has(div a[class*="_fbPageBrowserSubscriptionCardItem"])
 facebook.com#?##content_container div > div[id*="u_fetchstream"] div :has(div[id*="u_fetchstream"] .uiTypeahead div input[aria-controls*="typeahead_list_u_fetchstream"][aria-label*="Invite"])
-facebook.com#?##event_tabs #event_guest_list div[class] div[class] ul[class]:has(div span:has-text(Suggested Friends))
+facebook.com#?##event_tabs #event_guest_list div[class] div[class] ul[class]:has(div span:has-text(/Suggested Friends/i))
 facebook.com#?##event_tabs #event_guest_list div[class] div[class] ul[class]:has(li div > button div[data-hover="tooltip"][data-tooltip-display="overflow"])
 facebook.com#?##events_dashboard_activity_feed div[role="article"]:has(.fbEventsSuggestionItem)
 facebook.com#?##fbSearchResultsBox:has(form.friendBrowserForm div:has(li a[href*="?fref=pymk"]))
 facebook.com#?##games_hub_root_content div > span div:has(a[href*="/gyml-similar/?"])
-facebook.com#?##globalContainer .uiLayer[data-testid="undefined"] .uiContextualLayer div ul[role="menu"] li:has(a span div:has-text(/^Undo hiding ads/))
+facebook.com#?##globalContainer .uiLayer[data-testid="undefined"] .uiContextualLayer div ul[role="menu"] li:has(a span div:has-text(/^Undo hiding ads/i))
 facebook.com#?##groupsNewMembersLink div:has(li[id*="suggested_member_"])
 facebook.com#?##headerArea div:if-not(.clearfix):has(a[href*="/login/?"])
 facebook.com#?##page_browser_invite_friends .clearfix .stat_elem:has(div > a[ajaxify*="/friend_inviter_v2/"])
@@ -118,7 +118,7 @@ facebook.com#?##pagelet_group_rhc .groupSkyAux div:has(div a[ajaxify*="/ajax/gro
 facebook.com#?##pagelet_group_rhc .groupSkyAux div[class] > div[id][class]:has(.uiList:has(li[id*="suggested_member"]))
 facebook.com#?##pagelet_group_rhc .groupSkyAux div[class] > div[id][class]:has(div[class]:has(a[id*="group_rhc_see_more"]))
 facebook.com#?##pagelet_growth_expanding_cta:has(a[id*="expanding_cta_"])
-facebook.com#?##profile_page_insights_hubble div > table td div:has-text(Suggested Pages to Watch)
+facebook.com#?##profile_page_insights_hubble div > table td div:has-text(/Suggested Pages to/i)
 facebook.com#?##stream_pagelet div.mvm:has(div:has(a[href*="?sk=h_nor"]))
 facebook.com#?#._4-u8:has(a[data-testid="back_to_top_link"])
 facebook.com#?#.jewelWithEgoUnits .uiScrollableAreaContent div:has(form.friendBrowserForm:has(input[value="people_you_may_know"]))
@@ -147,10 +147,10 @@ facebook.com#?#div[id*="hyperfeed_story_id"]:has(a[href*="[is_sponsored]=1"])
 facebook.com#?#div[id*="hyperfeed_story_id"]:has(a[href*="facebook.com/zuck"])
 facebook.com#?#div[id*="hyperfeed_story_id"]:has(a[href*="is_sponsored=1"])
 facebook.com#?#div[id*="hyperfeed_story_id"]:has(div > a[href*="ref=fbtips"])
-facebook.com#?#div[id*="hyperfeed_story_id"]:has(div[class][id] div[aria-label="Message from Facebook"])
+facebook.com#?#div[id*="hyperfeed_story_id"]:has(div[class][id] div[aria-label="Message from Facebook" i])
 facebook.com#?#div[id*="hyperfeed_story_id"]:has(div[data-ft*="ego_id"]:has(a[href*="ref=group_top_stories_feed"]))
 facebook.com#?#div[id*="hyperfeed_story_id"]:has(div[data-ft*="ego_id"]:has(a[href*="ref=psym_feed"]))
-facebook.com#?#div[id*="hyperfeed_story_id"]:has(span a:has-text(/Sponsored/))
+facebook.com#?#div[id*="hyperfeed_story_id"]:has(span a:has-text(/Sponsored/i))
 facebook.com#?#div[id*="hyperfeed_story_id"]:has(span a[href*="[is_sponsored]=1"])
 facebook.com#?#div[id*="hyperfeed_story_id"]:has(span a[href*="is_sponsored=1"])
 facebook.com#?#div[id*="hyperfeed_story_id"][role="article"]:has(.userContentWrapper div[class] a[target][data-hovercard*="directed_target_id"])

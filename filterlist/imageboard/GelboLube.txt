@@ -1,6 +1,6 @@
-[uBlock Origin 1.37.0]
+[uBlock Origin 1.45.0]
 ! Title: GelboLube (Universal) [stack menubar modified]
-! Version: 202107282228
+! Version: 202211101656
 ! Expires: 2 days
 ! Author: kowith337 and contributors
 ! From: https://github.com/kowith337/GelboLube/raw/primary/gelbolube.txt
@@ -24,17 +24,17 @@
 ! gelbooru.com##.sidebar #tup
 ! gelbooru.com##a#ext
 ! gelbooru.com##a.ext
-gelbooru.com##a[href*="adtng.com"]
-gelbooru.com##a[href*="click.php"]
-gelbooru.com##a[href*="media.r18"]
-gelbooru.com##a[href*="mnfclub.com"]
-gelbooru.com##a[href^="http://"][href*="/track/"]
-gelbooru.com##a[href^="https://"][href*="/track/"]
-gelbooru.com##a[rel="nofollow"] video
-gelbooru.com##.contain-push a[href*="tdForward.php"]
+gelbooru.com##a[href*="adtng.com" i]
+gelbooru.com##a[href*="click.php" i]
+gelbooru.com##a[href*="media.r18" i]
+gelbooru.com##a[href*="mnfclub.com" i]
+gelbooru.com##a[href^="http://" i][href*="/track/" i]
+gelbooru.com##a[href^="https://" i][href*="/track/" i]
+gelbooru.com##a[rel="nofollow" i] video
+gelbooru.com##.contain-push a[href*="tdForward.php" i]
 
 ! 2. Block ExoClick iFrame (Not sure is it still exist?)
-gelbooru.com##iframe[src*="exoclick"]
+gelbooru.com##iframe[src*="exoclick" i]
 
 ! Leftover ad space above of image list / image view and below page number
 ! Those was hidden already by 3p requests block, such as R18.com banner, ad frame from ContentABC.com
@@ -49,7 +49,7 @@ gelbooru.com##noscript
 gelbooru.com##ins.adsbytrafficjunky
 
 ! 5. Hide all AdToniq AAB overlay (DOM Wildcard)
-gelbooru.com##div[id^="adtoniq-"]
+gelbooru.com##div[id^="adtoniq-" i]
 
 ! Filtered procedural hiding  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. Element hiding in tags list pane that also insert tall banner ads
@@ -60,11 +60,11 @@ gelbooru.com##div[id^="paginat"] a:has(img)
 gelbooru.com##div[class^="sidebar"] a[target]:has(img)
 
 ! 3. Hide hyperlink that link to '/extra/', e.g. shirt promo, TheDoujin, internal redirect before sent to external ads sites.
-gelbooru.com##.contain-push a:has(img[src^="/extras/"])
-gelbooru.com##.contain-push a:has(img[src*="thedoujin"])
+gelbooru.com##.contain-push a:has(img[src^="/extras/" i])
+gelbooru.com##.contain-push a:has(img[src*="thedoujin" i])
 
 ! 4. Remove leftover frame that serve ads from 'ContentABC'
-gelbooru.com##.contain-push center .hidden-xs:has(iframe[name^="spot_id"])
+gelbooru.com##.contain-push center .hidden-xs:has(iframe[name^="spot_id" i])
 
 ! 5. Use 'matches-css' to remove placeholder after allowed 'ExoLoader.addZone' to generate advert space
 gelbooru.com###searchTags div:matches-css(height: 600px)
@@ -77,20 +77,20 @@ gelbooru.com##.contain-push center div:matches-css(max-width: 750px)
 gelbooru.com##body div[style*="z-index"]:matches-css(width: 100%)
 
 ! 7. Hide red bar notices for specific reason (e.g. pasta notice, promote merch, patron)
-gelbooru.com##.alert-warning:has(a[href*="javascript"])
-gelbooru.com##.alert-warning:has(a[href*="moneygrubbingwhore.com"])
-gelbooru.com##.alert-warning:has(a[href*="patreon.com/gelbooru"])
+gelbooru.com##.alert-warning:has(a[href*="javascript" i])
+gelbooru.com##.alert-warning:has(a[href*="moneygrubbingwhore.com" i])
+gelbooru.com##.alert-warning:has(a[href*="patreon.com/gelbooru" i])
 
 ! 8. Remove berserk rant!
 gelbooru.com##.contain-push center div[style]:not(#paginator)
 
 ! 9. Remove non-same-site out of menu (e.g. buy shirts, TheDoujin, GYDADC; save custom style menu space)
-gelbooru.com###navbar ul.nav li:has(a[href*="moneygrubbingwhore.com"])
-gelbooru.com###navbar ul.nav li:has(a[href*="gydadc.com"])
-gelbooru.com###navbar ul.nav li:has(a[href*="thedoujin.com"])
+gelbooru.com###navbar ul.nav li:has(a[href*="moneygrubbingwhore.com" i])
+gelbooru.com###navbar ul.nav li:has(a[href*="gydadc.com" i])
+gelbooru.com###navbar ul.nav li:has(a[href*="thedoujin.com" i])
 
 ! 10. Remove Twitter shilling
-gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru"])
+gelbooru.com##.alert-info:has(a[href*="twitter.com/gelbooru" i])
 
 ! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! 1. [Prequel] Block Every videos, subdocs and scripts (See below for what things could be exclude)

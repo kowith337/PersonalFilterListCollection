@@ -1,6 +1,6 @@
-[uBlock Origin 1.37.0]
+[uBlock Origin 1.45.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202203221921
+! Version: 202211101656
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -206,14 +206,12 @@ minecraftforge.net#?#.sidebar-right:has(div[class^="ad-container"])
 
 ! [Pantip]
 ! - Remove all kind of "PROMOTED Reviews", either Sponsored [SR] and Business [BR]
-pantip.com#?#.m-thumb:has(a .subject:has-text([BR] ))
-pantip.com#?#.m-thumb:has(a .subject:has-text([SR] ))
-pantip.com#?#.pt-list-item:has(.pt-list-item__title h2 a:has-text([BR] ))
-pantip.com#?#.pt-list-item:has(.pt-list-item__title h2 a:has-text([SR] ))
+pantip.com#?#.m-thumb:has(a .subject:has-text(/\[(B|S)R\] /i))
+pantip.com#?#.pt-list-item:has(.pt-list-item__title h2 a:has-text((/\[(B|S)R\] /i)))
 !
 ! - Re-remove panel that failed to load (I've blocking all assets from `frukt.pantip.com` because the main scripts is have low or
 !   less code about site features, but mostly of code intent to load ads and tracking.
-pantip.com#?#.container .row .pt-block-purple-2:has(.pt-block-header h6:has-text(Pantip Trend))
+pantip.com#?#.container .row .pt-block-purple-2:has(.pt-block-header h6:has-text(/Pantip Trend/i))
 pantip.com#?##sidebar-container #sidebar-fixed .pt-tabs-a:has(section[class^="pt-tab_"])
 pantip.com#?##sidebar-container #sidebar-fixed .pt-block:has(.pt-block-header a[href*="pantip.com/club"])
 pantip.com#?##sidebar-container #sidebar-fixed .pt-block:has(.pt-block-header-img a.gtm-bloggang-all)
@@ -227,7 +225,7 @@ pantip.com#?#.section-comment:has(.display-post-avatar-inner a.icon-memberbadge-
 pantip.com#?#div[id^="bestanswer"]:has(.display-post-avatar-inner a.icon-memberbadge-organization) .display-post-story .img-in-post
 !
 ! - Someone poisoned the 'CoViD-19' tag by posting bias political news inside this tag, remove for de-intrusive only, not my POV!
-pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(JJNY : ))
+pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(/JJNY \: /i))
 
 ! [Randomness Thing]
 randomnessthing.com#?#.textwidget:has(img[src*="no-adblock-wordpress-plugin"])
@@ -242,7 +240,7 @@ stackexchange.com,superuser.com#?#.hero-container:has(#hero-content:has(div a[hr
 m.youtube.com#?#ytm-mealbar:has-text(privacy)
 !
 ! - Try remove "Recommended for you" from watch next lists (Only work for English interface for now)
-m.youtube.com#?#ytm-compact-video-renderer .compact-media-item:has(.compact-media-item-metadata .subhead:has-text(Recommended))
+m.youtube.com#?#ytm-compact-video-renderer .compact-media-item:has(.compact-media-item-metadata .subhead:has-text(/Recommended/i))
 
 ! [Twitter New]
 ! - Try remove any highlights that inject directly to notification lists (aka. In case that you've missed)

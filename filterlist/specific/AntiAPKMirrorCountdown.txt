@@ -1,6 +1,6 @@
-[uBlock Origin 1.28.0]
+[uBlock Origin 1.45.0]
 ! Title: Anti APKMirror Ads and Countdown
-! Version: 202202202202
+! Version: 202211101659
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -19,7 +19,7 @@ apkmirror.com#?#.gooWidget
 apkmirror.com#?#.google-ad-leaderboard
 apkmirror.com#?#.google-ad-square-sidebar
 apkmirror.com#?#.promotedApp
-apkmirror.com#?##sidebar .listWidget:has-text(/Follow APK Mirror/)
+apkmirror.com#?##sidebar .listWidget:has-text(/Follow APK Mirror/i)
 
 ! 3P domains block
 ||amazon-adsystem.com$domain=apkmirror.com,important
