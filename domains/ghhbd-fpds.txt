@@ -1,6 +1,6 @@
 # [Google Hit Hider by Domain 2.2.3]
 # Title: Fake Pantip Domains for GHHBD
-# Version: 202211141852
+# Version: 202211141916
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -15,8 +15,13 @@ ahvaz-anesthesia.com
 albioncollege.info
 altexplorer.info
 amarantinefarms.com
+aspectjcookbook.com
+asupro.com
 babyandbeyondkh.com
+beefashionstores.com
+best-of-berlin.info
 bestpaintballgun.info
+bezt-newz-today.com
 bluuepin.com
 brainmindsociety.com
 captingirl.com
@@ -27,21 +32,38 @@ ejppayment.com
 embroideryshop.com
 empirecity.today
 financialsolving.com
+firstmobileeducation.com
 foxandmusic.com
+getprintapp.com
 groundloop.info
 hillaforklifts.com
+hyperionity.com
+in-to-win-co.com
 ingridsherman.com
 jaredkschreiber.com
 kabor.info
 kirawhite.com
 lakeoffer.com
+littlehappybliss.com
 lxtsir.com
+magecmoon.com
+mdobbins.com
+meanderingmonarch.com
 medbharat.com
+memorialschools.com
 moonstalks.com
+motorotam.com
 murciajenjorienta.com
+nantecranes.com
+overstayjaffa.com
+peshanga.com
 piptrip.com
 pixnot.com
+podqueen.com
+prayerbeadstore.com
+promocodepa.com
 qirinedu.com
+qlifemedicals.com
 quizas-slachtoffers.fun
 reachood.com
 realityprotocol.com
@@ -49,11 +71,18 @@ redrose-samp.info
 reinhard-winter.info
 rentaphantom.info
 reponses.com
+rimpub.com
 rishigoutam.com
+riyanfashion.com
+runaroundthailand.com
 saleega.com
 samsautomation.com
+scottgmorton.com
+seriosec.com
+techcaffi.com
 vapa.info
 verbal.com
+vittorehome.com
 webcreative.cc
 westnileyouthcenter.info
 wetterkroatien.info
