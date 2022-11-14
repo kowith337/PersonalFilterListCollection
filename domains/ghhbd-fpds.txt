@@ -5,7 +5,7 @@
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Domain%20Lists%20and%20Wildcard
-# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/dnscrypt/ghhbd-fpds.txt
+# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/domains/ghhbd-fpds.txt
 # Description: This is a blocklist made for import into GHHBD userscript to keep check any newly fake Pantip domains.
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 accountantamsterdam.net
