@@ -1,0 +1,55 @@
+# [Google Hit Hider by Domain 2.2.3]
+# Title: Fake Pantip Domains for GHHBD
+# Version: 202211141848
+# Author: kowith337
+# Expires: 2 days
+# Homepage: https://github.com/kowith337/PersonalFilterListCollection
+# Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Domain%20Lists%20and%20Wildcard
+# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/dnscrypt/ghhbd-fpds.txt
+# Description: This is a blocklist made for import into GHHBD userscript to keep check any newly fake Pantip domains.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+accountantamsterdam.net
+achivadolimni.com
+agentogel.info
+ahvaz-anesthesia.com
+albioncollege.info
+altexplorer.info
+amarantinefarms.com
+bestpaintballgun.info
+brainmindsociety.com
+chilltalks.org
+corecovers.info
+dana-b7r.com
+ejppayment.com
+embroideryshop.com
+empirecity.today
+foxandmusic.com
+groundloop.info
+hillaforklifts.com
+ingridsherman.com
+jaredkschreiber.com
+kabor.info
+kirawhite.com
+lakeoffer.com
+lxtsir.com
+medbharat.com
+moonstalks.com
+piptrip.com
+qirinedu.com
+quizas-slachtoffers.fun
+realityprotocol.com
+redrose-samp.info
+reinhard-winter.info
+rentaphantom.info
+reponses.com
+rishigoutam.com
+saleega.com
+samsautomation.com
+vapa.info
+verbal.com
+webcreative.cc
+westnileyouthcenter.info
+wetterkroatien.info
+wisefacts.info
+womankind.info
+# End of GHHBD Entries  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
