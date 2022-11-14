@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.1]
 # Title: Thai BadBait Lists (Top level only)
-# Version: 202202150005
+# Version: 202211141851
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -164,7 +164,7 @@
 0.0.0.0 xycit33.top
 0.0.0.0 zzdev.top
 # Fake "Pantip" content copying for "Goolag" SEO hijack and search result phishing! - - - - - - - - - - - - - - - - - - - - - - #
-# Updated date: 2022/02/13
+# Updated date: 2022/11/14
 0.0.0.0 accountantamsterdam.net
 0.0.0.0 achivadolimni.com
 0.0.0.0 agentogel.info
@@ -172,8 +172,11 @@
 0.0.0.0 albioncollege.info
 0.0.0.0 altexplorer.info
 0.0.0.0 amarantinefarms.com
+0.0.0.0 babyandbeyondkh.com
 0.0.0.0 bestpaintballgun.info
+0.0.0.0 bluuepin.com
 0.0.0.0 brainmindsociety.com
+0.0.0.0 captingirl.com
 0.0.0.0 chilltalks.org
 0.0.0.0 corecovers.info
 0.0.0.0 dana-b7r.com
@@ -184,13 +187,17 @@
 0.0.0.0 dev.albioncollege.info
 0.0.0.0 dev.altexplorer.info
 0.0.0.0 dev.amarantinefarms.com
+0.0.0.0 dev.babyandbeyondkh.com
+0.0.0.0 dev.bluuepin.com
 0.0.0.0 dev.brainmindsociety.com
+0.0.0.0 dev.captingirl.com
 0.0.0.0 dev.chilltalks.org
 0.0.0.0 dev.corecovers.info
 0.0.0.0 dev.dana-b7r.com
 0.0.0.0 dev.ejppayment.com
 0.0.0.0 dev.embroideryshop.com
 0.0.0.0 dev.empirecity.today
+0.0.0.0 dev.financialsolving.com
 0.0.0.0 dev.foxandmusic.com
 0.0.0.0 dev.groundloop.info
 0.0.0.0 dev.hillaforklifts.com
@@ -202,8 +209,11 @@
 0.0.0.0 dev.lxtsir.com
 0.0.0.0 dev.medbharat.com
 0.0.0.0 dev.moonstalks.com
+0.0.0.0 dev.murciajenjorienta.com
 0.0.0.0 dev.piptrip.com
+0.0.0.0 dev.pixnot.com
 0.0.0.0 dev.quizas-slachtoffers.fun
+0.0.0.0 dev.reachood.com
 0.0.0.0 dev.realityprotocol.com
 0.0.0.0 dev.redrose-samp.info
 0.0.0.0 dev.reinhard-winter.info
@@ -222,6 +232,7 @@
 0.0.0.0 ejppayment.com
 0.0.0.0 embroideryshop.com
 0.0.0.0 empirecity.today
+0.0.0.0 financialsolving.com
 0.0.0.0 foxandmusic.com
 0.0.0.0 groundloop.info
 0.0.0.0 hillaforklifts.com
@@ -233,9 +244,12 @@
 0.0.0.0 lxtsir.com
 0.0.0.0 medbharat.com
 0.0.0.0 moonstalks.com
+0.0.0.0 murciajenjorienta.com
 0.0.0.0 piptrip.com
+0.0.0.0 pixnot.com
 0.0.0.0 qirinedu.com
 0.0.0.0 quizas-slachtoffers.fun
+0.0.0.0 reachood.com
 0.0.0.0 realityprotocol.com
 0.0.0.0 redrose-samp.info
 0.0.0.0 reinhard-winter.info
@@ -258,14 +272,18 @@
 0.0.0.0 www.albioncollege.info
 0.0.0.0 www.altexplorer.info
 0.0.0.0 www.amarantinefarms.com
+0.0.0.0 www.babyandbeyondkh.com
 0.0.0.0 www.bestpaintballgun.info
+0.0.0.0 www.bluuepin.com
 0.0.0.0 www.brainmindsociety.com
+0.0.0.0 www.captingirl.com
 0.0.0.0 www.chilltalks.org
 0.0.0.0 www.corecovers.info
 0.0.0.0 www.dana-b7r.com
 0.0.0.0 www.ejppayment.com
 0.0.0.0 www.embroideryshop.com
 0.0.0.0 www.empirecity.today
+0.0.0.0 www.financialsolving.com
 0.0.0.0 www.foxandmusic.com
 0.0.0.0 www.groundloop.info
 0.0.0.0 www.hillaforklifts.com
@@ -277,9 +295,12 @@
 0.0.0.0 www.lxtsir.com
 0.0.0.0 www.medbharat.com
 0.0.0.0 www.moonstalks.com
+0.0.0.0 www.murciajenjorienta.com
 0.0.0.0 www.piptrip.com
+0.0.0.0 www.pixnot.com
 0.0.0.0 www.qirinedu.com
 0.0.0.0 www.quizas-slachtoffers.fun
+0.0.0.0 www.reachood.com
 0.0.0.0 www.realityprotocol.com
 0.0.0.0 www.redrose-samp.info
 0.0.0.0 www.reinhard-winter.info

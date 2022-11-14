@@ -1,6 +1,6 @@
 # [Google Hit Hider by Domain 2.2.3]
 # Title: Fake Pantip Domains for GHHBD
-# Version: 202211141848
+# Version: 202211141852
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -15,14 +15,18 @@ ahvaz-anesthesia.com
 albioncollege.info
 altexplorer.info
 amarantinefarms.com
+babyandbeyondkh.com
 bestpaintballgun.info
+bluuepin.com
 brainmindsociety.com
+captingirl.com
 chilltalks.org
 corecovers.info
 dana-b7r.com
 ejppayment.com
 embroideryshop.com
 empirecity.today
+financialsolving.com
 foxandmusic.com
 groundloop.info
 hillaforklifts.com
@@ -34,9 +38,12 @@ lakeoffer.com
 lxtsir.com
 medbharat.com
 moonstalks.com
+murciajenjorienta.com
 piptrip.com
+pixnot.com
 qirinedu.com
 quizas-slachtoffers.fun
+reachood.com
 realityprotocol.com
 redrose-samp.info
 reinhard-winter.info
