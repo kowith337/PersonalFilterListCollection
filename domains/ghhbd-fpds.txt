@@ -1,6 +1,6 @@
 # [Google Hit Hider by Domain 2.2.3]
 # Title: Fake Pantip Domains for GHHBD
-# Version: 202211161904
+# Version: 202211170037
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -8,6 +8,7 @@
 # Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/domains/ghhbd-fpds.txt
 # Description: This is a blocklist made for import into GHHBD userscript to keep check any newly fake Pantip domains.
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+7primos.com
 accountantamsterdam.net
 achivadolimni.com
 agentogel.info
@@ -39,6 +40,7 @@ financialsolving.com
 firstmobileeducation.com
 foxandmusic.com
 fresegrainke.com
+fxbroker-consulting.com
 getprintapp.com
 groundloop.info
 hambletondefense.com
@@ -49,7 +51,9 @@ in-to-win-co.com
 ingridsherman.com
 jaredkschreiber.com
 kabor.info
+karshin.com
 kirawhite.com
+klmemorialschools.com
 lakeoffer.com
 lazzytech.com
 littlehappybliss.com
@@ -93,6 +97,7 @@ seekingthephilippines.com
 seriosec.com
 syllabirepository.com
 techcaffi.com
+testtraf.com
 themyngl.com
 theviralpunjab.com
 vapa.info
@@ -104,6 +109,7 @@ westnileyouthcenter.info
 wetterkroatien.info
 wisefacts.info
 womankind.info
+yoginikaliji.com
 youinu.com
 yugenzone.com
 # End of GHHBD Entries  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
