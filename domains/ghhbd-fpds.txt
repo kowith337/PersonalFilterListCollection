@@ -1,6 +1,6 @@
 # [Google Hit Hider by Domain 2.2.3]
 # Title: Fake Pantip Domains for GHHBD
-# Version: 202211141916
+# Version: 202211161904
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -18,6 +18,8 @@ amarantinefarms.com
 aspectjcookbook.com
 asupro.com
 babyandbeyondkh.com
+baepullu.com
+bbficocarseats.com
 beefashionstores.com
 best-of-berlin.info
 bestpaintballgun.info
@@ -27,15 +29,20 @@ brainmindsociety.com
 captingirl.com
 chilltalks.org
 corecovers.info
+cursoseofertas.com
 dana-b7r.com
 ejppayment.com
+elelongservice.com
 embroideryshop.com
 empirecity.today
 financialsolving.com
 firstmobileeducation.com
 foxandmusic.com
+fresegrainke.com
 getprintapp.com
 groundloop.info
+hambletondefense.com
+happylifelab.com
 hillaforklifts.com
 hyperionity.com
 in-to-win-co.com
@@ -44,6 +51,7 @@ jaredkschreiber.com
 kabor.info
 kirawhite.com
 lakeoffer.com
+lazzytech.com
 littlehappybliss.com
 lxtsir.com
 magecmoon.com
@@ -51,6 +59,7 @@ mdobbins.com
 meanderingmonarch.com
 medbharat.com
 memorialschools.com
+michaelkusuma.com
 moonstalks.com
 motorotam.com
 murciajenjorienta.com
@@ -67,10 +76,12 @@ qlifemedicals.com
 quizas-slachtoffers.fun
 reachood.com
 realityprotocol.com
+redmatch-dev.com
 redrose-samp.info
 reinhard-winter.info
 rentaphantom.info
 reponses.com
+restrainingorderlawyers.com
 rimpub.com
 rishigoutam.com
 riyanfashion.com
@@ -78,14 +89,21 @@ runaroundthailand.com
 saleega.com
 samsautomation.com
 scottgmorton.com
+seekingthephilippines.com
 seriosec.com
+syllabirepository.com
 techcaffi.com
+themyngl.com
+theviralpunjab.com
 vapa.info
 verbal.com
+vintagewealthadvisor.com
 vittorehome.com
 webcreative.cc
 westnileyouthcenter.info
 wetterkroatien.info
 wisefacts.info
 womankind.info
+youinu.com
+yugenzone.com
 # End of GHHBD Entries  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #

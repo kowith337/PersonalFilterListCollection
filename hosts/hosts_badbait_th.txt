@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.1]
 # Title: Thai BadBait Lists (Top level only)
-# Version: 202211141916
+# Version: 202211161915
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -175,6 +175,8 @@
 0.0.0.0 aspectjcookbook.com
 0.0.0.0 asupro.com
 0.0.0.0 babyandbeyondkh.com
+0.0.0.0 baepullu.com
+0.0.0.0 bbficocarseats.com
 0.0.0.0 beefashionstores.com
 0.0.0.0 best-of-berlin.info
 0.0.0.0 bestpaintballgun.info
@@ -184,6 +186,7 @@
 0.0.0.0 captingirl.com
 0.0.0.0 chilltalks.org
 0.0.0.0 corecovers.info
+0.0.0.0 cursoseofertas.com
 0.0.0.0 dana-b7r.com
 0.0.0.0 dev.accountantamsterdam.net
 0.0.0.0 dev.achivadolimni.com
@@ -195,23 +198,31 @@
 0.0.0.0 dev.aspectjcookbook.com
 0.0.0.0 dev.asupro.com
 0.0.0.0 dev.babyandbeyondkh.com
+0.0.0.0 dev.baepullu.com
+0.0.0.0 dev.bbficocarseats.com
 0.0.0.0 dev.beefashionstores.com
 0.0.0.0 dev.best-of-berlin.info
+0.0.0.0 dev.bestpaintballgun.info
 0.0.0.0 dev.bezt-newz-today.com
 0.0.0.0 dev.bluuepin.com
 0.0.0.0 dev.brainmindsociety.com
 0.0.0.0 dev.captingirl.com
 0.0.0.0 dev.chilltalks.org
 0.0.0.0 dev.corecovers.info
+0.0.0.0 dev.cursoseofertas.com
 0.0.0.0 dev.dana-b7r.com
 0.0.0.0 dev.ejppayment.com
+0.0.0.0 dev.elelongservice.com
 0.0.0.0 dev.embroideryshop.com
 0.0.0.0 dev.empirecity.today
 0.0.0.0 dev.financialsolving.com
 0.0.0.0 dev.firstmobileeducation.com
 0.0.0.0 dev.foxandmusic.com
+0.0.0.0 dev.fresegrainke.com
 0.0.0.0 dev.getprintapp.com
 0.0.0.0 dev.groundloop.info
+0.0.0.0 dev.hambletondefense.com
+0.0.0.0 dev.happylifelab.com
 0.0.0.0 dev.hillaforklifts.com
 0.0.0.0 dev.hyperionity.com
 0.0.0.0 dev.in-to-win-co.com
@@ -220,6 +231,7 @@
 0.0.0.0 dev.kabor.info
 0.0.0.0 dev.kirawhite.com
 0.0.0.0 dev.lakeoffer.com
+0.0.0.0 dev.lazzytech.com
 0.0.0.0 dev.littlehappybliss.com
 0.0.0.0 dev.lxtsir.com
 0.0.0.0 dev.magecmoon.com
@@ -227,6 +239,7 @@
 0.0.0.0 dev.meanderingmonarch.com
 0.0.0.0 dev.medbharat.com
 0.0.0.0 dev.memorialschools.com
+0.0.0.0 dev.michaelkusuma.com
 0.0.0.0 dev.moonstalks.com
 0.0.0.0 dev.motorotam.com
 0.0.0.0 dev.murciajenjorienta.com
@@ -238,14 +251,17 @@
 0.0.0.0 dev.podqueen.com
 0.0.0.0 dev.prayerbeadstore.com
 0.0.0.0 dev.promocodepa.com
+0.0.0.0 dev.qirinedu.com
 0.0.0.0 dev.qlifemedicals.com
 0.0.0.0 dev.quizas-slachtoffers.fun
 0.0.0.0 dev.reachood.com
 0.0.0.0 dev.realityprotocol.com
+0.0.0.0 dev.redmatch-dev.com
 0.0.0.0 dev.redrose-samp.info
 0.0.0.0 dev.reinhard-winter.info
 0.0.0.0 dev.rentaphantom.info
 0.0.0.0 dev.reponses.com
+0.0.0.0 dev.restrainingorderlawyers.com
 0.0.0.0 dev.rimpub.com
 0.0.0.0 dev.rishigoutam.com
 0.0.0.0 dev.riyanfashion.com
@@ -253,24 +269,35 @@
 0.0.0.0 dev.saleega.com
 0.0.0.0 dev.samsautomation.com
 0.0.0.0 dev.scottgmorton.com
+0.0.0.0 dev.seekingthephilippines.com
 0.0.0.0 dev.seriosec.com
+0.0.0.0 dev.syllabirepository.com
 0.0.0.0 dev.techcaffi.com
+0.0.0.0 dev.themyngl.com
+0.0.0.0 dev.theviralpunjab.com
 0.0.0.0 dev.vapa.info
 0.0.0.0 dev.verbal.com
+0.0.0.0 dev.vintagewealthadvisor.com
 0.0.0.0 dev.vittorehome.com
 0.0.0.0 dev.webcreative.cc
 0.0.0.0 dev.westnileyouthcenter.info
 0.0.0.0 dev.wetterkroatien.info
 0.0.0.0 dev.wisefacts.info
 0.0.0.0 dev.womankind.info
+0.0.0.0 dev.youinu.com
+0.0.0.0 dev.yugenzone.com
 0.0.0.0 ejppayment.com
+0.0.0.0 elelongservice.com
 0.0.0.0 embroideryshop.com
 0.0.0.0 empirecity.today
 0.0.0.0 financialsolving.com
 0.0.0.0 firstmobileeducation.com
 0.0.0.0 foxandmusic.com
+0.0.0.0 fresegrainke.com
 0.0.0.0 getprintapp.com
 0.0.0.0 groundloop.info
+0.0.0.0 hambletondefense.com
+0.0.0.0 happylifelab.com
 0.0.0.0 hillaforklifts.com
 0.0.0.0 hyperionity.com
 0.0.0.0 in-to-win-co.com
@@ -279,6 +306,7 @@
 0.0.0.0 kabor.info
 0.0.0.0 kirawhite.com
 0.0.0.0 lakeoffer.com
+0.0.0.0 lazzytech.com
 0.0.0.0 littlehappybliss.com
 0.0.0.0 lxtsir.com
 0.0.0.0 magecmoon.com
@@ -286,6 +314,7 @@
 0.0.0.0 meanderingmonarch.com
 0.0.0.0 medbharat.com
 0.0.0.0 memorialschools.com
+0.0.0.0 michaelkusuma.com
 0.0.0.0 moonstalks.com
 0.0.0.0 motorotam.com
 0.0.0.0 murciajenjorienta.com
@@ -302,10 +331,12 @@
 0.0.0.0 quizas-slachtoffers.fun
 0.0.0.0 reachood.com
 0.0.0.0 realityprotocol.com
+0.0.0.0 redmatch-dev.com
 0.0.0.0 redrose-samp.info
 0.0.0.0 reinhard-winter.info
 0.0.0.0 rentaphantom.info
 0.0.0.0 reponses.com
+0.0.0.0 restrainingorderlawyers.com
 0.0.0.0 rimpub.com
 0.0.0.0 rishigoutam.com
 0.0.0.0 riyanfashion.com
@@ -313,10 +344,15 @@
 0.0.0.0 saleega.com
 0.0.0.0 samsautomation.com
 0.0.0.0 scottgmorton.com
+0.0.0.0 seekingthephilippines.com
 0.0.0.0 seriosec.com
+0.0.0.0 syllabirepository.com
 0.0.0.0 techcaffi.com
+0.0.0.0 themyngl.com
+0.0.0.0 theviralpunjab.com
 0.0.0.0 vapa.info
 0.0.0.0 verbal.com
+0.0.0.0 vintagewealthadvisor.com
 0.0.0.0 vittorehome.com
 0.0.0.0 webcreative.cc
 0.0.0.0 westnileyouthcenter.info
@@ -333,6 +369,8 @@
 0.0.0.0 www.aspectjcookbook.com
 0.0.0.0 www.asupro.com
 0.0.0.0 www.babyandbeyondkh.com
+0.0.0.0 www.baepullu.com
+0.0.0.0 www.bbficocarseats.com
 0.0.0.0 www.beefashionstores.com
 0.0.0.0 www.best-of-berlin.info
 0.0.0.0 www.bestpaintballgun.info
@@ -342,15 +380,20 @@
 0.0.0.0 www.captingirl.com
 0.0.0.0 www.chilltalks.org
 0.0.0.0 www.corecovers.info
+0.0.0.0 www.cursoseofertas.com
 0.0.0.0 www.dana-b7r.com
 0.0.0.0 www.ejppayment.com
+0.0.0.0 www.elelongservice.com
 0.0.0.0 www.embroideryshop.com
 0.0.0.0 www.empirecity.today
 0.0.0.0 www.financialsolving.com
 0.0.0.0 www.firstmobileeducation.com
 0.0.0.0 www.foxandmusic.com
+0.0.0.0 www.fresegrainke.com
 0.0.0.0 www.getprintapp.com
 0.0.0.0 www.groundloop.info
+0.0.0.0 www.hambletondefense.com
+0.0.0.0 www.happylifelab.com
 0.0.0.0 www.hillaforklifts.com
 0.0.0.0 www.hyperionity.com
 0.0.0.0 www.in-to-win-co.com
@@ -359,6 +402,7 @@
 0.0.0.0 www.kabor.info
 0.0.0.0 www.kirawhite.com
 0.0.0.0 www.lakeoffer.com
+0.0.0.0 www.lazzytech.com
 0.0.0.0 www.littlehappybliss.com
 0.0.0.0 www.lxtsir.com
 0.0.0.0 www.magecmoon.com
@@ -366,6 +410,7 @@
 0.0.0.0 www.meanderingmonarch.com
 0.0.0.0 www.medbharat.com
 0.0.0.0 www.memorialschools.com
+0.0.0.0 www.michaelkusuma.com
 0.0.0.0 www.moonstalks.com
 0.0.0.0 www.motorotam.com
 0.0.0.0 www.murciajenjorienta.com
@@ -382,10 +427,12 @@
 0.0.0.0 www.quizas-slachtoffers.fun
 0.0.0.0 www.reachood.com
 0.0.0.0 www.realityprotocol.com
+0.0.0.0 www.redmatch-dev.com
 0.0.0.0 www.redrose-samp.info
 0.0.0.0 www.reinhard-winter.info
 0.0.0.0 www.rentaphantom.info
 0.0.0.0 www.reponses.com
+0.0.0.0 www.restrainingorderlawyers.com
 0.0.0.0 www.rimpub.com
 0.0.0.0 www.rishigoutam.com
 0.0.0.0 www.riyanfashion.com
@@ -393,14 +440,23 @@
 0.0.0.0 www.saleega.com
 0.0.0.0 www.samsautomation.com
 0.0.0.0 www.scottgmorton.com
+0.0.0.0 www.seekingthephilippines.com
 0.0.0.0 www.seriosec.com
+0.0.0.0 www.syllabirepository.com
 0.0.0.0 www.techcaffi.com
+0.0.0.0 www.themyngl.com
+0.0.0.0 www.theviralpunjab.com
 0.0.0.0 www.vapa.info
 0.0.0.0 www.verbal.com
+0.0.0.0 www.vintagewealthadvisor.com
 0.0.0.0 www.vittorehome.com
 0.0.0.0 www.webcreative.cc
 0.0.0.0 www.westnileyouthcenter.info
 0.0.0.0 www.wetterkroatien.info
 0.0.0.0 www.wisefacts.info
 0.0.0.0 www.womankind.info
+0.0.0.0 www.youinu.com
+0.0.0.0 www.yugenzone.com
+0.0.0.0 youinu.com
+0.0.0.0 yugenzone.com
 # End of my hosts entry - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
