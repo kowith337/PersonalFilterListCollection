@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.1]
 # Title: Thai BadBait Lists (Top level only)
-# Version: 202211170037
+# Version: 202211231210
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -164,7 +164,7 @@
 0.0.0.0 xycit33.top
 0.0.0.0 zzdev.top
 # Fake "Pantip" content copying for "Goolag" SEO hijack and search result phishing! - - - - - - - - - - - - - - - - - - - - - - #
-# Updated date: 2022/11/17
+# Updated date: 2022/11/23
 0.0.0.0 7primos.com
 0.0.0.0 accountantamsterdam.net
 0.0.0.0 achivadolimni.com
@@ -184,6 +184,7 @@
 0.0.0.0 bezt-newz-today.com
 0.0.0.0 bluuepin.com
 0.0.0.0 brainmindsociety.com
+0.0.0.0 byantonellascake.com
 0.0.0.0 captingirl.com
 0.0.0.0 chilltalks.org
 0.0.0.0 corecovers.info
@@ -208,15 +209,18 @@
 0.0.0.0 dev.bezt-newz-today.com
 0.0.0.0 dev.bluuepin.com
 0.0.0.0 dev.brainmindsociety.com
+0.0.0.0 dev.byantonellascake.com
 0.0.0.0 dev.captingirl.com
 0.0.0.0 dev.chilltalks.org
 0.0.0.0 dev.corecovers.info
 0.0.0.0 dev.cursoseofertas.com
 0.0.0.0 dev.dana-b7r.com
+0.0.0.0 dev.dguedry.com
 0.0.0.0 dev.ejppayment.com
 0.0.0.0 dev.elelongservice.com
 0.0.0.0 dev.embroideryshop.com
 0.0.0.0 dev.empirecity.today
+0.0.0.0 dev.eurokidsgurugram.com
 0.0.0.0 dev.financialsolving.com
 0.0.0.0 dev.firstmobileeducation.com
 0.0.0.0 dev.foxandmusic.com
@@ -230,6 +234,7 @@
 0.0.0.0 dev.hyperionity.com
 0.0.0.0 dev.in-to-win-co.com
 0.0.0.0 dev.ingridsherman.com
+0.0.0.0 dev.jakobasson.com
 0.0.0.0 dev.jaredkschreiber.com
 0.0.0.0 dev.kabor.info
 0.0.0.0 dev.karshin.com
@@ -248,7 +253,10 @@
 0.0.0.0 dev.moonstalks.com
 0.0.0.0 dev.motorotam.com
 0.0.0.0 dev.murciajenjorienta.com
+0.0.0.0 dev.mybigbullfrog.com
 0.0.0.0 dev.nantecranes.com
+0.0.0.0 dev.nijibooks.com
+0.0.0.0 dev.ouitogroup.com
 0.0.0.0 dev.overstayjaffa.com
 0.0.0.0 dev.peshanga.com
 0.0.0.0 dev.piptrip.com
@@ -258,6 +266,7 @@
 0.0.0.0 dev.promocodepa.com
 0.0.0.0 dev.qirinedu.com
 0.0.0.0 dev.qlifemedicals.com
+0.0.0.0 dev.queuelyte.com
 0.0.0.0 dev.quizas-slachtoffers.fun
 0.0.0.0 dev.reachood.com
 0.0.0.0 dev.realityprotocol.com
@@ -281,6 +290,7 @@
 0.0.0.0 dev.testtraf.com
 0.0.0.0 dev.themyngl.com
 0.0.0.0 dev.theviralpunjab.com
+0.0.0.0 dev.timiteadama.com
 0.0.0.0 dev.vapa.info
 0.0.0.0 dev.verbal.com
 0.0.0.0 dev.vintagewealthadvisor.com
@@ -293,10 +303,12 @@
 0.0.0.0 dev.yoginikaliji.com
 0.0.0.0 dev.youinu.com
 0.0.0.0 dev.yugenzone.com
+0.0.0.0 dguedry.com
 0.0.0.0 ejppayment.com
 0.0.0.0 elelongservice.com
 0.0.0.0 embroideryshop.com
 0.0.0.0 empirecity.today
+0.0.0.0 eurokidsgurugram.com
 0.0.0.0 financialsolving.com
 0.0.0.0 firstmobileeducation.com
 0.0.0.0 foxandmusic.com
@@ -310,6 +322,7 @@
 0.0.0.0 hyperionity.com
 0.0.0.0 in-to-win-co.com
 0.0.0.0 ingridsherman.com
+0.0.0.0 jakobasson.com
 0.0.0.0 jaredkschreiber.com
 0.0.0.0 kabor.info
 0.0.0.0 karshin.com
@@ -328,7 +341,10 @@
 0.0.0.0 moonstalks.com
 0.0.0.0 motorotam.com
 0.0.0.0 murciajenjorienta.com
+0.0.0.0 mybigbullfrog.com
 0.0.0.0 nantecranes.com
+0.0.0.0 nijibooks.com
+0.0.0.0 ouitogroup.com
 0.0.0.0 overstayjaffa.com
 0.0.0.0 peshanga.com
 0.0.0.0 piptrip.com
@@ -338,6 +354,7 @@
 0.0.0.0 promocodepa.com
 0.0.0.0 qirinedu.com
 0.0.0.0 qlifemedicals.com
+0.0.0.0 queuelyte.com
 0.0.0.0 quizas-slachtoffers.fun
 0.0.0.0 reachood.com
 0.0.0.0 realityprotocol.com
@@ -361,6 +378,7 @@
 0.0.0.0 testtraf.com
 0.0.0.0 themyngl.com
 0.0.0.0 theviralpunjab.com
+0.0.0.0 timiteadama.com
 0.0.0.0 vapa.info
 0.0.0.0 verbal.com
 0.0.0.0 vintagewealthadvisor.com
@@ -389,15 +407,18 @@
 0.0.0.0 www.bezt-newz-today.com
 0.0.0.0 www.bluuepin.com
 0.0.0.0 www.brainmindsociety.com
+0.0.0.0 www.byantonellascake.com
 0.0.0.0 www.captingirl.com
 0.0.0.0 www.chilltalks.org
 0.0.0.0 www.corecovers.info
 0.0.0.0 www.cursoseofertas.com
 0.0.0.0 www.dana-b7r.com
+0.0.0.0 www.dguedry.com
 0.0.0.0 www.ejppayment.com
 0.0.0.0 www.elelongservice.com
 0.0.0.0 www.embroideryshop.com
 0.0.0.0 www.empirecity.today
+0.0.0.0 www.eurokidsgurugram.com
 0.0.0.0 www.financialsolving.com
 0.0.0.0 www.firstmobileeducation.com
 0.0.0.0 www.foxandmusic.com
@@ -411,6 +432,7 @@
 0.0.0.0 www.hyperionity.com
 0.0.0.0 www.in-to-win-co.com
 0.0.0.0 www.ingridsherman.com
+0.0.0.0 www.jakobasson.com
 0.0.0.0 www.jaredkschreiber.com
 0.0.0.0 www.kabor.info
 0.0.0.0 www.karshin.com
@@ -429,7 +451,10 @@
 0.0.0.0 www.moonstalks.com
 0.0.0.0 www.motorotam.com
 0.0.0.0 www.murciajenjorienta.com
+0.0.0.0 www.mybigbullfrog.com
 0.0.0.0 www.nantecranes.com
+0.0.0.0 www.nijibooks.com
+0.0.0.0 www.ouitogroup.com
 0.0.0.0 www.overstayjaffa.com
 0.0.0.0 www.peshanga.com
 0.0.0.0 www.piptrip.com
@@ -439,6 +464,7 @@
 0.0.0.0 www.promocodepa.com
 0.0.0.0 www.qirinedu.com
 0.0.0.0 www.qlifemedicals.com
+0.0.0.0 www.queuelyte.com
 0.0.0.0 www.quizas-slachtoffers.fun
 0.0.0.0 www.reachood.com
 0.0.0.0 www.realityprotocol.com
@@ -462,6 +488,7 @@
 0.0.0.0 www.testtraf.com
 0.0.0.0 www.themyngl.com
 0.0.0.0 www.theviralpunjab.com
+0.0.0.0 www.timiteadama.com
 0.0.0.0 www.vapa.info
 0.0.0.0 www.verbal.com
 0.0.0.0 www.vintagewealthadvisor.com
