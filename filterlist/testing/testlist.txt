@@ -1,6 +1,6 @@
 [uBlock Origin 1.45.0]
 ! Title: kowith337's Test List
-! Version: 202211202041
+! Version: 202211282219
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -125,9 +125,14 @@ $domain=facebook.com|messenger.com,important,removeparam=/logging\_?data\[\d+?\]
 ||youtube.com/get_video_info?$xhr,removeparam=ei
 
 ! Reverse removers
-! This will work like `removeparam` but what happened if the rules are reversed to exclude matched parameters only...?
-||adintrend.tv/hd/live/i.php$frame,removeparam=~/^((c(h|x)|s)id)/
+! - This will work like `removeparam` but what happened if the rules are reversed to exclude matched parameters only...?
 $doc,removeparam=~/^(ia[a-z]?|k([a-z0-9]+)?|q|uddg)/,domain=duckduckgo.com
+||adintrend.tv/hd/live/i.php$frame,removeparam=~/^((c(h|x)|s)id)/
+||steampowered.com/login$removeparam=~redir_ssl,doc,important
+
+! Aggressive removers
+! - This will remove all of queries, if it have any and without exceptions!
+||steamcommunity.com/login/home$removeparam,doc
 
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||google.*/ads/*$important
@@ -203,10 +208,18 @@ bangkokbiznews.com,khaosod.co.th,khaosodenglish.com,komchadluek.net,matichon.co.
 ! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
 facebook.com,instagram.com,messenger.com##+js(cookie-set, noscript, 0)
 !
+! Auto uncheck "Save credit card" in steam website while purchase or add funds in wallet.
+! - It's recommended to not tied your cards with online accounts, better to manually fill by your own each time for safety and
+!   security of your money (either in the your actual bank accounts or you might pay later after spent some from credit card)
+! - If you still want to do that, you can navigate to your account information and click "Add payment information" by yourself!
+steampowered.com#?#+js(click-element, input#save_my_address[checked])
+!
 ! Auto dismiss adult content warning in steam community
-! * I won't set to auto click checkbox, I just hate to manually click "continue" often when I open in new tab (e.g. workshop)
-steamcommunity.com##+js(click-element, .adult_content_age_gate_buttons #age_gate_btn_continue)
-steamcommunity.com##+js(click-element, div[class^="partnereventshared_FlexRowContainer"][class*="communityagegate_ButtonRow"] div[class^="partnereventshared_Button_"])
+! - I won't set to auto click checkbox, I just hate to manually click "continue" often when I open in new tab (e.g. workshop), if
+!   I've set to auto-click checkbox is mean "Steam" will save preferences about that you want to ignore mature content warning
+!   for its games, so it's no go to do it!
+steamcommunity.com#?#+js(click-element, .adult_content_age_gate_buttons #age_gate_btn_continue)
+steamcommunity.com#?#+js(click-element, div[class^="partnereventshared_FlexRowContainer"][class*="communityagegate_ButtonRow"] div[class^="partnereventshared_Button_"])
 
 ! [External scriptlets - uBlock-user]
 !   Older rules are deprecated by upstream scriptlets because they've already removed some functions.

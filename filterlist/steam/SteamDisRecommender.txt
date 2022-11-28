@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202208231254
+! Version: 202211282227
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -14,6 +14,9 @@
 steamcommunity.com,steampowered.com#?#.header_installsteam_btn
 
 ! [Store Zone]
+! - Remove annual "Awards" nominatim inside game details.
+steampowered.com#?#.game_media_and_summary_ctn .steamaward_nominate_gamepage_ctn
+!
 ! - Remove bottom leftover space where it's dynamically throwing many zuckestions while scrolling down!
 steampowered.com#?#.home_content_ctn.content_more
 !
@@ -104,9 +107,16 @@ steampowered.com#?#div[class^="eventcalendar_EventCalendarContainer"] div[class^
 ! - Make (pre|post)-purchase page clean as possible (recipes printing frienldy) by...
 !   - Remove pane that show points earning after purchase
 !   - Remove (remotely) install purchased game(s) or install Steam client if you're not have.
-store.steampowered.com#?#.checkout_steam_rewards_banner
-store.steampowered.com#?#.checkout_gotsteam_area
-store.steampowered.com#?##purchase_summary_area .remote_download_body
+steampowered.com#?#.checkout_steam_rewards_banner
+steampowered.com#?#.checkout_gotsteam_area
+steampowered.com#?##purchase_summary_area .remote_download_body
+!
+! - Remove more queue informations that tell you about reasons of why the games are in your queue, e.g. it might popular or based
+!   on genre of you games that frequently or recently played, etc.
+! - Also simplified the queue section to show only buttons, not bloated texts!
+steampowered.com#?#.queue_actions_ctn #nextInDiscoveryQueue
+steampowered.com#?#.queue_actions_ctn .queue_controls_description
+steampowered.com#?#.queue_ctn .queue_controls_description
 
 ! [Faded community zone]
 ! WHAT COULD GO WRONG!?
@@ -143,6 +153,9 @@ steamcommunity.com#?#.badge_title_stats .how_to_get_card_drops_ctn
 ! - On workshop details, remove rewarded lists under image preview
 !   * Don't worry, you can still give rewards, it's just hide all of rewards list that its workshop contents already got...
 steamcommunity.com#?##ItemControls .workshopItemRatings
+!
+! - Hide "Steam Awards" voting (mostly appear in news articles) that inserted big banner distractions!
+steamcommunity.com#?#div[class^="nominationandvote"]
 
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Store]
@@ -159,6 +172,9 @@ steampowered.com#?##steam_curators_not_empty:has(.curator_recommendation_capsule
 ! [Community]
 ! - If the games you've played are no longer drops card anymore, hide its text instead! (Work only "English" UI)
 steamcommunity.com#?#.badge_title_stats .progress_info_bold:has-text(/^No /)
+!
+! - Hide "Your most played games" in the "How to create guide" section
+steamcommunity.com#?#.played_apps:matches-path(/guides)
 !
 ! - Remove non-games badge progress info box! (e.g. Community actions, Seasonal sales, etc.)
 !   * Also include these numeric game card ID...
@@ -207,6 +223,12 @@ steamcommunity.com,steampowered.com#?#*:style(transition: none !important)
 ! - Re-paint "Give award" icon to be grayscale instead of `yellow`
 steamcommunity.com,steampowered.com##img.reward_btn_icon:style(filter: grayscale(100%) !important)
 !
+! - In the community home, hide all shortcuts that show game lists that based on your playtime.
+steamcommunity.com#?#.community_home_app_shortcuts:style(visibility:hidden !important)
+!
+! - Expand the "Getting started" in "How to create a guide" section after removed "Your most played games" pane.
+steamcommunity.com#?#.instructions:matches-path(/guides):style(width: 100% !important)
+!
 ! - Restore padding size of top scroll banner that caused by "Takeover" pane
 steampowered.com#?#.home_cluster_ctn.home_ctn .home_page_content:style(padding-left: 0px !important)
 !
@@ -216,6 +238,9 @@ steampowered.com#?#.home_ctn.labs_cluster:style(display: none !important; width:
 !
 ! - Remove special offers pane that seems probably "marketed", share same tactics as above.
 steampowered.com#?#.home_ctn.marketingmessage_area:style(display: none !important; width: 0px !important; height: 0px !important)
+!
+! - Highlight the text with red color near checkbox about "Save payment information" to easily warned peoples before doing it!
+steampowered.com#?#.form_row #save_my_address_input label:style(color: red !important; font-size: 18px !important)
 !
 ! - When your perform "Search again without filtered" and you're barely see banner of filtered games because very low opacity,
 !   now I've increased it to 50% (old value is set to show only 5% of it's original opacy, that's too dark!!)
