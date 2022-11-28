@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202211282227
+! Version: 202211282239
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -107,6 +107,7 @@ steampowered.com#?#div[class^="eventcalendar_EventCalendarContainer"] div[class^
 ! - Make (pre|post)-purchase page clean as possible (recipes printing frienldy) by...
 !   - Remove pane that show points earning after purchase
 !   - Remove (remotely) install purchased game(s) or install Steam client if you're not have.
+steampowered.com#?#.checkout_receipt_steam_rewards
 steampowered.com#?#.checkout_steam_rewards_banner
 steampowered.com#?#.checkout_gotsteam_area
 steampowered.com#?##purchase_summary_area .remote_download_body

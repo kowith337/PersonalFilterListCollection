@@ -1,6 +1,6 @@
 [uBlock Origin 1.45.0]
 ! Title: kowith337's Test List
-! Version: 202211282219
+! Version: 202211282238
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -128,7 +128,6 @@ $domain=facebook.com|messenger.com,important,removeparam=/logging\_?data\[\d+?\]
 ! - This will work like `removeparam` but what happened if the rules are reversed to exclude matched parameters only...?
 $doc,removeparam=~/^(ia[a-z]?|k([a-z0-9]+)?|q|uddg)/,domain=duckduckgo.com
 ||adintrend.tv/hd/live/i.php$frame,removeparam=~/^((c(h|x)|s)id)/
-||steampowered.com/login$removeparam=~redir_ssl,doc,important
 
 ! Aggressive removers
 ! - This will remove all of queries, if it have any and without exceptions!
