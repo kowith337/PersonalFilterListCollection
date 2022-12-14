@@ -1,6 +1,6 @@
 # [uMatrix 1.3.3.1]
 # Title: Thai BadBait Lists (Top level only)
-# Version: 202211231210
+# Version: 202212141051
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/hosts
@@ -164,13 +164,16 @@
 0.0.0.0 xycit33.top
 0.0.0.0 zzdev.top
 # Fake "Pantip" content copying for "Goolag" SEO hijack and search result phishing! - - - - - - - - - - - - - - - - - - - - - - #
-# Updated date: 2022/11/23
+# Updated date: 2022/12/14
 0.0.0.0 7primos.com
+0.0.0.0 10xtechie.com
 0.0.0.0 accountantamsterdam.net
 0.0.0.0 achivadolimni.com
+0.0.0.0 agdrumschool.com
 0.0.0.0 agentogel.info
 0.0.0.0 ahvaz-anesthesia.com
 0.0.0.0 albioncollege.info
+0.0.0.0 all-in-barbers.com
 0.0.0.0 altexplorer.info
 0.0.0.0 amarantinefarms.com
 0.0.0.0 aspectjcookbook.com
@@ -191,11 +194,14 @@
 0.0.0.0 cursoseofertas.com
 0.0.0.0 dana-b7r.com
 0.0.0.0 dev.7primos.com
+0.0.0.0 dev.10xtechie.com
 0.0.0.0 dev.accountantamsterdam.net
 0.0.0.0 dev.achivadolimni.com
+0.0.0.0 dev.agdrumschool.com
 0.0.0.0 dev.agentogel.info
 0.0.0.0 dev.ahvaz-anesthesia.com
 0.0.0.0 dev.albioncollege.info
+0.0.0.0 dev.all-in-barbers.com
 0.0.0.0 dev.altexplorer.info
 0.0.0.0 dev.amarantinefarms.com
 0.0.0.0 dev.aspectjcookbook.com
@@ -285,8 +291,10 @@
 0.0.0.0 dev.scottgmorton.com
 0.0.0.0 dev.seekingthephilippines.com
 0.0.0.0 dev.seriosec.com
+0.0.0.0 dev.serpfect.com
 0.0.0.0 dev.syllabirepository.com
 0.0.0.0 dev.techcaffi.com
+0.0.0.0 dev.techtokbuy.com
 0.0.0.0 dev.testtraf.com
 0.0.0.0 dev.themyngl.com
 0.0.0.0 dev.theviralpunjab.com
@@ -299,6 +307,7 @@
 0.0.0.0 dev.westnileyouthcenter.info
 0.0.0.0 dev.wetterkroatien.info
 0.0.0.0 dev.wisefacts.info
+0.0.0.0 dev.wokebit.com
 0.0.0.0 dev.womankind.info
 0.0.0.0 dev.yoginikaliji.com
 0.0.0.0 dev.youinu.com
@@ -373,8 +382,10 @@
 0.0.0.0 scottgmorton.com
 0.0.0.0 seekingthephilippines.com
 0.0.0.0 seriosec.com
+0.0.0.0 serpfect.com
 0.0.0.0 syllabirepository.com
 0.0.0.0 techcaffi.com
+0.0.0.0 techtokbuy.com
 0.0.0.0 testtraf.com
 0.0.0.0 themyngl.com
 0.0.0.0 theviralpunjab.com
@@ -387,13 +398,17 @@
 0.0.0.0 westnileyouthcenter.info
 0.0.0.0 wetterkroatien.info
 0.0.0.0 wisefacts.info
+0.0.0.0 wokebit.com
 0.0.0.0 womankind.info
 0.0.0.0 www.7primos.com
+0.0.0.0 www.10xtechie.com
 0.0.0.0 www.accountantamsterdam.net
 0.0.0.0 www.achivadolimni.com
+0.0.0.0 www.agdrumschool.com
 0.0.0.0 www.agentogel.info
 0.0.0.0 www.ahvaz-anesthesia.com
 0.0.0.0 www.albioncollege.info
+0.0.0.0 www.all-in-barbers.com
 0.0.0.0 www.altexplorer.info
 0.0.0.0 www.amarantinefarms.com
 0.0.0.0 www.aspectjcookbook.com
@@ -483,8 +498,10 @@
 0.0.0.0 www.scottgmorton.com
 0.0.0.0 www.seekingthephilippines.com
 0.0.0.0 www.seriosec.com
+0.0.0.0 www.serpfect.com
 0.0.0.0 www.syllabirepository.com
 0.0.0.0 www.techcaffi.com
+0.0.0.0 www.techtokbuy.com
 0.0.0.0 www.testtraf.com
 0.0.0.0 www.themyngl.com
 0.0.0.0 www.theviralpunjab.com
@@ -497,6 +514,7 @@
 0.0.0.0 www.westnileyouthcenter.info
 0.0.0.0 www.wetterkroatien.info
 0.0.0.0 www.wisefacts.info
+0.0.0.0 www.wokebit.com
 0.0.0.0 www.womankind.info
 0.0.0.0 www.yoginikaliji.com
 0.0.0.0 www.youinu.com

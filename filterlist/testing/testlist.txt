@@ -9,7 +9,7 @@
 
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Teddit] Remove subreddit links at top bar (wasteful space taking)
-teddit.net,i.opnxng.com,incogsnoo.com,rdt.trom.tf,reddit.lol,snoo.ioens.is,td.vern.cc,teddit.adminforge.de,teddit.bus-hit.me,teddit.froth.zone,teddit.namazso.eu,teddit.pussthecat.org,teddit.rawbit.ninja ,teddit.sethforprivacy.com,teddit.tinfoil-hat.net,teddit.tokhmi.xyz,teddit.totaldarkness.net,teddit.zaggy.nl#?##topbar .top-links a[href^="/r/"], #topbar .top-links span.separator
+teddit.net,i.opnxng.com,incogsnoo.com,rdt.trom.tf,reddit.lol,snoo.ioens.is,td.vern.cc,teddit.adminforge.de,teddit.bus-hit.me,teddit.froth.zone,teddit.namazso.eu,teddit.pussthecat.org,teddit.rawbit.ninja,teddit.sethforprivacy.com,teddit.tinfoil-hat.net,teddit.tokhmi.xyz,teddit.totaldarkness.net,teddit.zaggy.nl#?##topbar .top-links a[href^="/r/"], #topbar .top-links span.separator
 
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Blognone]
