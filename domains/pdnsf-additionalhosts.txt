@@ -1,6 +1,6 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202207032050
+# Version: 202212172051
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/wiki/pDSNF-additionalHosts
@@ -11,6 +11,10 @@
 EMPTY
 WPAD
 wpad
+http://*
+https://*
+# Note: Just found certain months ago that some `Google` domains throw log that they actual use `https://` and seems safe to keep
+#       block them, most of all times, every domains that pDNSF handle doesn't have any `http://` or `https://` prefix!
 
 # [Abusive and untrusted TLD] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 best
