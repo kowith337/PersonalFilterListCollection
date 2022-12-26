@@ -1,6 +1,6 @@
 [uBlock Origin 1.45.0]
 ! Title: kowith337's Test List
-! Version: 202212172048
+! Version: 202212262220
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -210,11 +210,19 @@ facebook.com,instagram.com,messenger.com##+js(cookie-set, noscript, 0)
 ! Auto uncheck "Save credit card" in steam website while purchase or add funds in wallet.
 ! - It's recommended to not tied your cards with online accounts, better to manually fill by your own each time for safety and
 !   security of your money (either in the your actual bank accounts or you might pay later after spent some from credit card)
-! - If you still want to do that, you can navigate to your account information and click "Add payment information" by yourself!
+! - If you still want to do that, you can navigate to your account information and click "Add payment information" by yourself
+!   because manually add payment method through that way will not have checkbox to tick!
 steampowered.com#?#+js(click-element, input#save_my_address[checked])
 !
+! Auto click "Reject All" cookies on Steam website both store and community...
+! * However, certain cookies won't rejected, especially ~Goolag Urshit~ "Google Urchin" (aka. UTM) will still set to accept even
+!   "Reject all" were pressed, you should navigate to cookie settings page to manually turn UTM back to off!
+!   - Cookie settings page: https://store.steampowered.com/account/cookiepreferences
+!   - Login link with redirect to cookie settings: https://store.steampowered.com/login?redir=account%2Fcookiepreferences%2F&redir_ssl=1
+steamcommunity.com,steampowered.com#?#+js(click-element, .cookiepreferences_popup_content #rejectAllButton)
+!
 ! Auto dismiss adult content warning in steam community
-! - I won't set to auto click checkbox, I just hate to manually click "continue" often when I open in new tab (e.g. workshop), if
+! * I won't set to auto click checkbox, I just hate to manually click "continue" often when I open in new tab (e.g. workshop), if
 !   I've set to auto-click checkbox is mean "Steam" will save preferences about that you want to ignore mature content warning
 !   for its games, so it's no go to do it!
 steamcommunity.com#?#+js(click-element, .adult_content_age_gate_buttons #age_gate_btn_continue)

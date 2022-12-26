@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202211282239
+! Version: 202212262220
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -179,7 +179,7 @@ steamcommunity.com#?#.played_apps:matches-path(/guides)
 !
 ! - Remove non-games badge progress info box! (e.g. Community actions, Seasonal sales, etc.)
 !   * Also include these numeric game card ID...
-!     - 2010 potato shacks? (Summer 2010)
+!     - 2010 potato sack (Summer 2010)
 !     - Steam 3000 Clorthax (Summer 2022)
 steamcommunity.com#?#.badges_sheet .badge_row:has(a.badge_row_overlay:not([href*="gamecards"]))
 steamcommunity.com#?#.badges_sheet .badge_row:has(a.badge_row_overlay[href*="gamecards/335590"])
@@ -190,8 +190,9 @@ steamcommunity.com#?#.badges_sheet .badge_row:has(a.badge_row_overlay[href*="gam
 steampowered.com#?#.home_page_content .carousel_container.maincap:upward(2)
 !
 ! - Remove the "Funny" button in user review dialog.
-!   * Please note that I cannot hide text phrase that report how many `x person(s) found this review...`
+!   * Please note that I cannot hide text phrase that report how many `x person(s) found this review (helpful|funny)`
 steamcommunity.com#?#.review_area .review_rate_bar span:has(i.funny)
+steamcommunity.com#?#.review_box_content .control_block a:has(span i.funny)
 steampowered.com#?#.review_box .vote_button_ctn a span:has(i.funny)
 !
 ! - Make use of `:remove()` for delete unwanted DOM pane without leaving any nodes (require uB0 version 1.26.0 or above)
