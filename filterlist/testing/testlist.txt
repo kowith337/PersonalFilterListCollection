@@ -1,6 +1,6 @@
 [uBlock Origin 1.45.0]
 ! Title: kowith337's Test List
-! Version: 202212262220
+! Version: 202301060329
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -8,16 +8,20 @@
 ! Description: This list is for experimental and testing only, all rules in here maybe changed, moved and/or remove at anytime!
 
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Steam]
+steamcommunity.com#?#.workshop_header .browseAppDetails
+
 ! [Teddit] Remove subreddit links at top bar (wasteful space taking)
 teddit.net,i.opnxng.com,incogsnoo.com,rdt.trom.tf,reddit.lol,snoo.ioens.is,td.vern.cc,teddit.adminforge.de,teddit.bus-hit.me,teddit.froth.zone,teddit.namazso.eu,teddit.pussthecat.org,teddit.rawbit.ninja,teddit.sethforprivacy.com,teddit.tinfoil-hat.net,teddit.tokhmi.xyz,teddit.totaldarkness.net,teddit.zaggy.nl#?##topbar .top-links a[href^="/r/"], #topbar .top-links span.separator
 
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Blognone]
 ! - Disable comment news that have topics about "Thailand", any news that have this tags may fully biased comments!
-blognone.com#?#.content-container:has(span.terms .field-item a[href*="/thailand"]) #comment-area
+! - And certain writers in there also bias, too!
+blognone.com#?#.content-container:has(span.terms .field-item a[href*="/thailand" i]) #comment-area
 !
 ! - Also include comment counters, too!!
-blognone.com#?##block-system-main .content .node:has(span.terms .field-item a[href*="/thailand"]) .comment-comments
+blognone.com#?##block-system-main .content .node:has(span.terms .field-item a[href*="/thailand" i]) .comment-comments
 
 ! [ImgUr] Try to remove non-main images that linked from/to (mobile site only)
 !         * this may cause to hide all non-first images if it load next items in album!
@@ -32,10 +36,10 @@ imgur.com#?#.GalleryHandler-postContainer .Gallery-moreOnImgur
 youtube.com#?##alert-banner [alert-style]:has(a[href*="youtube.com/t/terms"])
 !
 ! - Remove "Sign in" prompt at top bar
-youtube.com#?##masthead #end #buttons ytd-button-renderer:has(a[href*="/ServiceLogin?"])
+youtube.com#?##masthead #end #buttons ytd-button-renderer:has(a[href*="/ServiceLogin?" i])
 !
 ! - Try remove "Premium" link at sidebar (Disabled due to unknown usage problem that cause unable to click anything)
-!youtube.com#?#.ytd-guide-renderer:has(#items ytd-guide-entry-renderer:has(a[href*="/premium"]))
+!youtube.com#?#.ytd-guide-renderer:has(#items ytd-guide-entry-renderer:has(a[href*="/premium" i]))
 
 ! Non-basic filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Nitter]
@@ -56,22 +60,25 @@ pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(มาลาริน))
 pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(วรพจน์))
 pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(หล่อขวัญ))
 
+! Steam
+steamcommunity.com#?#:matches-path(/(\/app\/\d+?)?\/workshop/).announcements_row
+
 ! [Twitter]
 ! - Aim to remove follow topics / related users / who to follow (aka. all of inline ZUCKESTIONS panes)
 !   * Please note: these rules are produce huge problematic, it's also hide all user lists that have "Follow" button, no matter
 !     about any state of user following! you can keep using this if you're not intent to follow other peoples too much!~
-twitter.com#?#div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(a[role="link"][data-focusable][href^="//"])
-twitter.com#?#div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline"] div[class][style] div div[class]:has(div[role="button"][data-focusable][data-testid="UserCell"] a[aria-hidden][tabindex][href]):has(a[role="link"][data-focusable] div[dir="auto"] span[dir="auto"])
-twitter.com#?#div[data-testid="UserCell"]:matches-path(/home)
-twitter.com#?#div[data-testid="UserCell"]:not(:matches-path(/home))
-twitter.com#?#div[data-testid="sidebarColumn"] section[aria-labelledby^="accessible-list"]
-twitter.com#?#div[role="tablist"] [role="presentation"] div[class] [aria-label^="Follow"] div[dir]:not(:matches-path(/followed))
-twitter.com#?#div[role="tablist"] [role="presentation"] div[class] [aria-label^="Follow"] svg:not(:matches-path(/followed))
-twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label*="Carousel"]:has(div[role="tablist"]):upward(2)
-twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class] a[href*="//"]:upward(1)
-twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(a[href*="//related_users"])
-twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/ i))
-twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class]:has(div[role="button"][data-testid="UserCell" i] [data-testid*="follow"]):not(:matches-path(/\/follow(ing|ed|ers)/))
+twitter.com#?#div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline" i] div[class][style] div div[class]:has(a[role="link"][data-focusable][href^="//"])
+twitter.com#?#div[class][data-reactroot] div[class] > main div[class] > section div[aria-label^="Timeline" i] div[class][style] div div[class]:has(div[role="button"][data-focusable][data-testid="UserCell" i] a[aria-hidden][tabindex][href]):has(a[role="link"][data-focusable] div[dir="auto"] span[dir="auto"])
+twitter.com#?#div[data-testid="UserCell" i]:matches-path(/home)
+twitter.com#?#div[data-testid="UserCell" i]:not(:matches-path(/home))
+twitter.com#?#div[data-testid="sidebarColumn" i] section[aria-labelledby^="accessible-list"]
+twitter.com#?#div[role="tablist"] [role="presentation"] div[class] [aria-label^="Follow" i] div[dir]:not(:matches-path(/followed))
+twitter.com#?#div[role="tablist"] [role="presentation"] div[class] [aria-label^="Follow" i] svg:not(:matches-path(/followed))
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label*="Carousel" i]:has(div[role="tablist"]):upward(2)
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:" i] div[style] div[class] a[href*="//"]:upward(1)
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:" i] div[style] div[class]:has(a[href*="//related_users" i])
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:" i] div[style] div[class]:has(div[dir] span:has-text(/Who to follow/ i))
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:" i] div[style] div[class]:has(div[role="button"][data-testid="UserCell" i] [data-testid*="follow"]):not(:matches-path(/\/follow(ing|ed|ers)/))
 
 ! DOM Permanent Remover - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Blognone] In case if modern browsers support to remove node entirely
@@ -85,15 +92,22 @@ facebook.com#?#.post-ads:remove()
 ! [Nitter]
 bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.cloud,nitter.1d4.us,nitter.42l.fr,nitter.alefvanoon.xyz,nitter.autarkic.org,nitter.ca,nitter.eu,nitter.exonip.de,nitter.fdn.fr,nitter.fly.dev,nitter.grimneko.de,nitter.ir,nitter.it,nitter.koyu.space,nitter.mailstation.de,nitter.mstdn.social,nitter.namazso.eu,nitter.net,nitter.nixnet.services,nitter.pussthecat.org,nitter.sethforprivacy.com,nitter.unixfox.eu,nitter.vxempire.xyz,nitter.weiler.rocks,nttr.stream,twitter.076.ne.jp,twitter.censors.us#?#.inner-nav a[href*="liberapay"]:remove()
 
+! [Steam]
+! - Permanently remove game announcement in workshop
+steamcommunity.com#?#:matches-path(/(\/app\/\d+?)?\/workshop/).announcements_row:remove()
+
 ! [Twitter]
 ! - Some inline and/or side pane that tagged with `[aria-labelledby]` are useless, they often use for showing a pane to easily
 !   follow topics that they've zuckested by your activities that you might interest to..., so all of SNS nowadays are drived
 !   (and monetised) by user data and zuckestions!?
-twitter.com#?#div[data-testid="sidebarColumn"] section[aria-labelledby^="accessible-list"]:remove()
-twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label*="Carousel"]:has(div[role="tablist"]):upward(2):remove()
-twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:"] div[style] div[class] a[href^="//"]:upward(1):remove()
+twitter.com#?#div[data-testid="sidebarColumn" i] section[aria-labelledby^="accessible-list"]:remove()
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label*="Carousel" i]:has(div[role="tablist"]):upward(2):remove()
+twitter.com#?#section[aria-labelledby^="accessible-list"] div[aria-label^="Timeline:" i] div[style] div[class] a[href^="//"]:upward(1):remove()
 
 ! CSS Modification  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Steam]
+! - Simplified Workshop header to not show introduce message and background header, more focus for mods explorers!
+steamcommunity.com#?#.workshop_header:style(background: none transparent !important; height:44px !important)
 
 ! Specific requests filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
@@ -136,7 +150,7 @@ $doc,removeparam=~/^(ia[a-z]?|k([a-z0-9]+)?|q|uddg)/,domain=duckduckgo.com
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||google.*/ads/*$important
 ||liberapay.com/zedeus$document,important,domain=~accident_nitter_nav_prevention
-||twitter.com/i/api/*/timeline/home.json$important,domain=~tweetdeck.twitter.com|~to_make_sure_you_are_always_get_latest_tweets
+||twitter.com/i/api/*/timeline/home.json$important,domain=~tweetdeck.twitter.com|~to_make_sure_that_you_always_get_latest_tweets
 
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
@@ -226,7 +240,7 @@ steamcommunity.com,steampowered.com#?#+js(click-element, .cookiepreferences_popu
 !   I've set to auto-click checkbox is mean "Steam" will save preferences about that you want to ignore mature content warning
 !   for its games, so it's no go to do it!
 steamcommunity.com#?#+js(click-element, .adult_content_age_gate_buttons #age_gate_btn_continue)
-steamcommunity.com#?#+js(click-element, div[class^="partnereventshared_FlexRowContainer"][class*="communityagegate_ButtonRow"] div[class^="partnereventshared_Button_"])
+steamcommunity.com#?#+js(click-element, div[class^="partnereventshared_FlexRowContainer" i][class*="communityagegate_ButtonRow" i] div[class^="partnereventshared_Button_" i])
 
 ! [External scriptlets - uBlock-user]
 !   Older rules are deprecated by upstream scriptlets because they've already removed some functions.

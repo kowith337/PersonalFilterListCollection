@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202212262220
+! Version: 202301061922
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -129,8 +129,12 @@ steampowered.com#?#.queue_ctn .queue_controls_description
 ! - Hide "Also known as" while performing people search in community (aka. remove past IGN)
 steamcommunity.com#?#.community_search_results_container #search_results .search_row .search_match_info
 !
+! - Hide install game button in game page of your own profile (where it's also show which devices are running Steam client)
+steamcommunity.com#?#.gameListRowItem .clientConnItemBlock .clientConnItemIcon
+!
 ! - Hide playtimes
 steamcommunity.com#?#.games_list .hours_played
+steamcommunity.com#?#.gameListRowItem h5.ellipsis
 !
 ! - Hide mini-indicator to reveal past in-game nickname
 steamcommunity.com#?#.persona_name #NamePopup
@@ -171,19 +175,22 @@ steampowered.com#?##foryou_flyout .popup_menu .popup_menu_subheader:has(.popup_m
 steampowered.com#?##steam_curators_not_empty:has(.curator_recommendation_capsule)
 !
 ! [Community]
-! - If the games you've played are no longer drops card anymore, hide its text instead! (Work only "English" UI)
-steamcommunity.com#?#.badge_title_stats .progress_info_bold:has-text(/^No /)
+! - If the games you've played are no longer drops card anymore, hide its text instead!
+!   * This will detect the text section is it have any numbers or not, if it doesn't contain any numbers, it will hide those!
+steamcommunity.com#?#.badge_title_stats .progress_info_bold:not(:has-text(/\d+?/)):upward(.badge_title_stats)
 !
 ! - Hide "Your most played games" in the "How to create guide" section
 steamcommunity.com#?#.played_apps:matches-path(/guides)
 !
-! - Remove non-games badge progress info box! (e.g. Community actions, Seasonal sales, etc.)
-!   * Also include these numeric game card ID...
-!     - 2010 potato sack (Summer 2010)
-!     - Steam 3000 Clorthax (Summer 2022)
+! - Remove non-games badge progress info box! (e.g. Annual awards, Community actions, Seasonal sales, etc.)
+!   * Also include these numeric gamecards ID...
+!     - [335590]  GLaDOS Potato sack (Summer 2010 + Portal 2 launch event)
+!     - [2021850] Steam 3000 Clorthax (Summer 2022)
+!     - [2243720] Steam Awards (2022)
 steamcommunity.com#?#.badges_sheet .badge_row:has(a.badge_row_overlay:not([href*="gamecards"]))
 steamcommunity.com#?#.badges_sheet .badge_row:has(a.badge_row_overlay[href*="gamecards/335590"])
 steamcommunity.com#?#.badges_sheet .badge_row:has(a.badge_row_overlay[href*="gamecards/2021850"])
+steamcommunity.com#?#.badges_sheet .badge_row:has(a.badge_row_overlay[href*="gamecards/2243720"])
 
 ! Non-basic filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - Include `:upward()` rules for horizontal paging items that also remove leftover header.
@@ -199,7 +206,10 @@ steampowered.com#?#.review_box .vote_button_ctn a span:has(i.funny)
 steamcommunity.com#?#.badge_title_stats .badge_title_playgame:remove()
 steamcommunity.com#?#.badge_title_stats .badge_title_stats_playtime:remove()
 steamcommunity.com#?#.badge_title_stats .how_to_get_card_drops_ctn:remove()
+steamcommunity.com#?#.badge_title_stats .progress_info_bold:not(:has-text(/\d+?/)):upward(.badge_title_stats):remove()
 steamcommunity.com#?#.community_search_results_container #search_results .search_row .search_match_info:remove()
+steamcommunity.com#?#.gameListRowItem .clientConnItemBlock .clientConnItemIcon:remove()
+steamcommunity.com#?#.gameListRowItem h5.ellipsis:remove()
 steamcommunity.com#?#.persona_name #NamePopup:remove()
 steamcommunity.com#?#.persona_name .namehistory_link:remove()
 steampowered.com#?##live_streams_carousel:remove()
@@ -267,10 +277,12 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .pla
 !     set default value that  allowing `app_impressions` cookies to be set for certain pages via response data, e.g. viewing news
 !     events and announcements, regardless of injecting and/or override script values, so completely blocking those requests will
 !     fully get rid of that cookies, just for now until they've changed some script codes again, plus they even not know your
-!     data enough via that request to throw any zuckestions, but they will already know from another ways, however...
+!     data enough via that request to throw any zuckestions, but they will already know from another ways as long as you using
+!     and/or running Steam client, however...
 !   ** I give no response if you're using certain extensions that retrieve some data from Steam website and found this filter
 !      were blocked certain requests that necessary for those extensions, especially `dynamicstore` requests that it will expose
-!      "your numeric ID" to those extensions!
+!      "your numeric ID" to those extensions, in case if you trust those kind of extensions, you can copy the rules that blocked
+!      and add `,badfilter` behind `$` blocking type!
 ||steampowered.com/dynamicstore/userdata$important,~xmlhttprequest
 ||steampowered.com/dynamicstore/userdata$xmlhttprequest
 ||steampowered.com/explore/logfeedview$important,~xmlhttprequest
