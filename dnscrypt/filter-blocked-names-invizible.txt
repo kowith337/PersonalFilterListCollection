@@ -1,14 +1,17 @@
 # [dnscrypt-proxy 2.1.1]
-# Title: Blocked rules for DNSCrypt Proxy client (Uncommented for pDNSF compatibility)
+# Title: Blocked rules for DNSCrypt Proxy client (Invizible Edition)
 # Version: 202301101101
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Domain%20Lists%20and%20Wildcard
-# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/dnscrypt/filter-blocked-names-uncomment.txt
+# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/dnscrypt/filter-blocked-names-invizible.txt
+# Description: Another duplicated version of DNSCrypt blocklist designed for importing into Invizible App because import function
+#              isn't fully import everything, include commented with user choice, so this version will uncomment all rules and
+#              then let users decide which rules can re-enable for aggressive blocking or disable to reduce false positive.
 
 # Generic Blocklists
-#*-pa.googleapis.com
+*-pa.googleapis.com
 *-settings.services.*
 *telemetry*
 activations.mozilla.*
@@ -28,15 +31,15 @@ freebasics.com
 geo.opera.com
 getpocket*
 google
-#gvt[0-9]*.com
+gvt[0-9]*.com
 gvt[2-9]*.com
 gvtl.com
 id.google.*
-#in-addr.arpa
+in-addr.arpa
 incoming.telemetry.*
-#ip6.arpa
+ip6.arpa
 kaidee.com
-#l.google.com
+l.google.com
 lazada.*
 mozillademos.org
 mozillamessaging.com
@@ -47,7 +50,7 @@ services*moz*
 snippets.*
 ss[0-9]*.mobilelife.co.th
 t[0-9]*.gstatic.com
-#t[0-9]*.org
+t[0-9]*.org
 telemetry*
 ww[0-9]*.mobilelife.co.th
 

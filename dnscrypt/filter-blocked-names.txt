@@ -1,6 +1,6 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client
-# Version: 202211202032
+# Version: 202301101101
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -9,11 +9,6 @@
 
 # Generic Blocklists
 #*-pa.googleapis.com                   # This break most android features (uncomment this if paranoid)
-#gvt[0-9]*.com                         # Uncomment to block all Goolag 'GVT' subdomains, this also possibly to block Edge Chromium component updates!
-#in-addr.arpa                          # SimpleWall resolvers v4
-#ip6.arpa                              # SimpleWall resolvers v6 (Uncomment if you want to refuse all IPv6 resolves)
-#l.google.com                          # Same reason of Goolag `*-pa`, uncomment if needed!
-#t[0-9]*.org                           # pDNSF use for test DNS latency, but I've blocked it anyway.
 *-settings.services.*                  # SpyZilla settings upload/download?
 *telemetry*                            # Telemetry prevention
 activations.mozilla.*                  # SpyZilla activations
@@ -27,18 +22,21 @@ cliqz.com                              # Formerly Waterfox Android
 cloudflare-dns.com                     # Why not?
 detectportal.*                         # DetectPortal (SpyZilla, PaleMoon, Waterfox)
 doubleclick.*                          # Top notch of Goolag common ads
+edgedl.me.*                            # In case if users doesn't enable `gvt[0-9]*.com` this will prevent contacting Edge Chromium unneccessary!
 firebase*.*                            # Commonly use for track and make anon reports of apps problems, but Goolag also known its data, too!
 freebasics.com                         # FreeBasucks
 geo.opera.com                          # Not intent to block entire subs, see `filter-allowed-names.txt`
 getpocket*                             # SpyZilla BurntFox Pocket partnership
 google                                 # "*.google" TLD should be blocked for goods! (Block DNS, Wellbeing, etc.)
+#gvt[0-9]*.com                         # Uncomment to block all Goolag 'GVT' subdomains, this also possibly to block Edge Chromium component updates!
 gvt[2-9]*.com                          # Requests to Goolag that not GVT1 should be blocked, they've mostly used for beacons!
 gvtl.com                               # Is that GVT1 typo?
-i.org                                  # FreeBasucks shortened (Onavo)
 id.google.*                            # Goolag ID Tracking
+#in-addr.arpa                          # SimpleWall resolvers v4
 incoming.telemetry.*                   # SpyZilla BurntFox telemetry
-internet.org                           # FreeBasucks
+#ip6.arpa                              # SimpleWall resolvers v6 (Uncomment if you want to refuse all IPv6 resolves)
 kaidee.com                             # Promoted on Chrome
+#l.google.com                          # Same reason of Goolag `*-pa`, uncomment if needed!
 lazada.*                               # IDIOTICS ADVERTISING AND MARKETING! (FORCE OPEN APP OR DOWNLOAD FROM STORE IF YOU DON'T HAVE IT!!)
 mozillademos.org                       # SpyZilla demo endpoint
 mozillamessaging.com                   # SpyZilla MESSaging (probably notifications endpoint, similar to GCM [Goolag Firebase])
@@ -49,8 +47,25 @@ services*moz*                          # Another SpyZilla settings upload/downlo
 snippets.*                             # BurntFox browser snippets, e.g. preload regional top sites!
 ss[0-9]*.mobilelife.co.th              # AIS AOC Scam (Mobile operator specific)
 t[0-9]*.gstatic.com                    # Unknow use of GStatic, but it seems blocked by common blocklists!
+t[0-9]*.org                            # pDNSF use for test DNS latency, but I've blocked it anyway.
 telemetry*                             # Another telemetry prevention
 ww[0-9]*.mobilelife.co.th              # Another AIS AOC Scam (Mobile operator specific)
+
+# ZuckBook tracking prevention
+# Note: I've added this due to I'm always NOT USING ANY FACEBOOK APPS, however, certain apps and website are added Zuck's assets
+#       and Zuck use the SDK and embedded connections across websites to tracking you everywhere and everything, this is a great
+#       punishments agains it!
+# Hint: If you're still addicted to use ZuckBook, consider to use within browser that support DoH and use any resolvers to bypass
+#       blocking, for Firefox you may need to set `network.trr.mode` to 3 because it will strictly use DoH for resolve domains
+#       instead of use both generic and DoH together that may result of ZuckBook domains still blocked.
+discoverapp.com
+expresswifi.com
+facebook.com
+facebook.net
+fbpigeon.com
+i.org
+internet.org
+messenger.com
 
 # Less privacy instance block!
 604kph.xyz
