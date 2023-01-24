@@ -1,6 +1,6 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client (Uncommented for pDNSF compatibility)
-# Version: 202301101101
+# Version: 202301121852
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -11,6 +11,7 @@
 #*-pa.googleapis.com
 *-settings.services.*
 *telemetry*
+*today.line.*
 activations.mozilla.*
 admob.*
 adservice.google.*
@@ -24,7 +25,6 @@ detectportal.*
 doubleclick.*
 edgedl.me.*
 firebase*.*
-freebasics.com
 geo.opera.com
 getpocket*
 google
@@ -38,6 +38,7 @@ incoming.telemetry.*
 kaidee.com
 #l.google.com
 lazada.*
+me.gvt[0-9]*.com
 mozillademos.org
 mozillamessaging.com
 normandy*moz*
@@ -49,20 +50,16 @@ ss[0-9]*.mobilelife.co.th
 t[0-9]*.gstatic.com
 #t[0-9]*.org
 telemetry*
+today.line.*
 ww[0-9]*.mobilelife.co.th
 
 # ZuckBook tracking prevention
-# Note: I've added this due to I'm always NOT USING ANY FACEBOOK APPS, however, certain apps and website are added Zuck's assets
-#       and Zuck use the SDK and embedded connections across websites to tracking you everywhere and everything, this is a great
-#       punishments agains it!
-# Hint: If you're still addicted to use ZuckBook, consider to use within browser that support DoH and use any resolvers to bypass
-#       blocking, for Firefox you may need to set `network.trr.mode` to 3 because it will strictly use DoH for resolve domains
-#       instead of use both generic and DoH together that may result of ZuckBook domains still blocked.
 discoverapp.com
 expresswifi.com
 facebook.com
 facebook.net
 fbpigeon.com
+freebasics.com
 i.org
 internet.org
 messenger.com

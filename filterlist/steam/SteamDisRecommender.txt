@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202301061922
+! Version: 202301241853
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -23,6 +23,9 @@ steampowered.com#?#.home_content_ctn.content_more
 ! - Remove horizontal paging items because it's also include "Because you've played <GameName>"
 steampowered.com#?#.home_page_content .carousel_container.maincap
 !
+! - Remove "Recommended" from flyout menu
+steampowered.com#?##foryou_flyout .popup_menu_item[href*="recommended"]
+!
 ! - Remove "For You" text at flyout menu bar, leave only your mini avatar icon!
 steampowered.com#?##foryou_tab span.pulldown a.pulldown_desktop
 steampowered.com#?##foryou_tab span.pulldown a.pulldown_mobile
@@ -35,6 +38,9 @@ steampowered.com#?#.home_page_sign_in_ctn
 steampowered.com#?##foryou_flyout .popup_menu #foryou_yourtags
 steampowered.com#?##foryou_flyout .popup_menu .popup_menu_item[href*="/explore"]
 steampowered.com#?##foryou_flyout .popup_menu .popup_menu_item[href*="/recommender"]
+!
+! - Remove "Replay" from flyout menu
+steampowered.com#?##noteworthy_flyout .popup_menu_item[href*="replay"]
 !
 ! - Remove "Recommended" tab while browsing games by tags.
 steampowered.com#?#.page_content .tabarea .tag_browse_option[data-browseoption="recommended"]
@@ -146,6 +152,9 @@ steamcommunity.com#?#.profile_badges
 ! - Hide all metricator counting about how many games own, artworks, clips, screenshots and workshop items that posted.
 steamcommunity.com#?#.profile_count_link a span.profile_count_link_total
 !
+! - Steam now force preview "Replay" showcase if you didn't switch or include it, this will hide it! NO MATTER WHAT!!
+steamcommunity.com#?#.replay_showcase
+!
 ! - Hide yourself (and also all of peoples) about games that recently played.
 steamcommunity.com#?#.profile_recentgame_header
 steamcommunity.com#?#.recent_games
@@ -158,6 +167,13 @@ steamcommunity.com#?#.badge_title_stats .how_to_get_card_drops_ctn
 ! - On workshop details, remove rewarded lists under image preview
 !   * Don't worry, you can still give rewards, it's just hide all of rewards list that its workshop contents already got...
 steamcommunity.com#?##ItemControls .workshopItemRatings
+!
+! - Hide ineligible showcase pane selection from settings that you cannot choose
+steamcommunity.com#?##showcases.customization_edit_area .has_showcase select option[disabled]
+!
+! - Remove "Replay" showcase choice from profile settings due to punishment against force to preview its panel regardless of
+!   users choice!
+steamcommunity.com#?##showcases.customization_edit_area .has_showcase select option[value="24"]
 !
 ! - Hide "Steam Awards" voting (mostly appear in news articles) that inserted big banner distractions!
 steamcommunity.com#?#div[class^="nominationandvote"]
@@ -212,6 +228,8 @@ steamcommunity.com#?#.gameListRowItem .clientConnItemBlock .clientConnItemIcon:r
 steamcommunity.com#?#.gameListRowItem h5.ellipsis:remove()
 steamcommunity.com#?#.persona_name #NamePopup:remove()
 steamcommunity.com#?#.persona_name .namehistory_link:remove()
+steamcommunity.com#?#.replay_showcase:remove()
+steamcommunity.com#?##showcases.customization_edit_area .has_showcase select option[value="24"]:remove()
 steampowered.com#?##live_streams_carousel:remove()
 steampowered.com#?##promo_header_banner[class*="promotionDetailsBar"]:remove()
 steampowered.com#?#.cart_rightcol:remove()

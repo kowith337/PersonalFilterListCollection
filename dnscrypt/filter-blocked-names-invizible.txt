@@ -1,6 +1,6 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client (Invizible Edition)
-# Version: 202301101101
+# Version: 202301121852
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -8,12 +8,13 @@
 # Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/dnscrypt/filter-blocked-names-invizible.txt
 # Description: Another duplicated version of DNSCrypt blocklist designed for importing into Invizible App because import function
 #              isn't fully import everything, include commented with user choice, so this version will uncomment all rules and
-#              then let users decide which rules can re-enable for aggressive blocking or disable to reduce false positive.
+#              then let users decide which rules can re-disable to reduce false positive or leave it as is for aggressive filter.
 
 # Generic Blocklists
 *-pa.googleapis.com
 *-settings.services.*
 *telemetry*
+*today.line.*
 activations.mozilla.*
 admob.*
 adservice.google.*
@@ -25,9 +26,7 @@ cliqz.com
 cloudflare-dns.com
 detectportal.*
 doubleclick.*
-edgedl.me.*
 firebase*.*
-freebasics.com
 geo.opera.com
 getpocket*
 google
@@ -41,6 +40,7 @@ ip6.arpa
 kaidee.com
 l.google.com
 lazada.*
+me.gvt[0-9]*.com
 mozillademos.org
 mozillamessaging.com
 normandy*moz*
@@ -52,20 +52,22 @@ ss[0-9]*.mobilelife.co.th
 t[0-9]*.gstatic.com
 t[0-9]*.org
 telemetry*
+today.line.*
 ww[0-9]*.mobilelife.co.th
 
 # ZuckBook tracking prevention
 # Note: I've added this due to I'm always NOT USING ANY FACEBOOK APPS, however, certain apps and website are added Zuck's assets
-#       and Zuck use the SDK and embedded connections across websites to tracking you everywhere and everything, this is a great
-#       punishments agains it!
+#       and/or SDK that have lots of connections to ZuckBook across websites to tracking you everywhere and everything, this is a
+#       great punishments agains it!
 # Hint: If you're still addicted to use ZuckBook, consider to use within browser that support DoH and use any resolvers to bypass
-#       blocking, for Firefox you may need to set `network.trr.mode` to 3 because it will strictly use DoH for resolve domains
-#       instead of use both generic and DoH together that may result of ZuckBook domains still blocked.
+#       blocking, for Firefox-based you may need to set `network.trr.mode` to 3 because it will strictly use DoH for resolve
+#       domains instead of use both generic and DoH together that may result of ZuckBook domains still blocked.
 discoverapp.com
 expresswifi.com
 facebook.com
 facebook.net
 fbpigeon.com
+freebasics.com
 i.org
 internet.org
 messenger.com
