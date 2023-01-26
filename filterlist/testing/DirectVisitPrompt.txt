@@ -1,6 +1,6 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202210180930
+! Version: 202301261636
 ! Expires: 1 month
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -31,6 +31,9 @@
 ! Note: My opinion prefer instead of `LibReddit` because of lightweight and less eye-candy, e.g. colorise, material design, etc.
 ||reddit.com$document,important,domain=~are_you_sure_to_view_it_directly
 
+! [Quora > Quetre] https://github.com/zyachel/quetre
+||quora.com$document,important,domain=~are_you_sure_to_view_it_directly
+
 ! [TikTok > ProxiTok] https://github.com/pablouser1/ProxiTok/wiki/Public-instances
 ||tiktok.com$document,important,domain=~are_you_sure_to_view_it_directly
 
@@ -55,6 +58,7 @@
 ! Gathering from multiple sources that also give notice which servers are use `CrapFlare`, keep block them, even it was used in
 ! the past...
 ! - LibRedirect: It can update instances itself and have a text with red color to warn if its instance use `CrapFlare`
+! - FarSide (Compare between `service.json` and `service-full.json`): https://github.com/benbusby/farside
 ! - Bibliogram instances (Sad cat emoji = Crapflare): https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md
 ! - Invidious instances document: https://docs.invidious.io/instances
 ! - LibReddit instances: https://github.com/spikecodes/libreddit#instances
@@ -63,10 +67,13 @@
 ! - UntrackMe App - Latency lists: https://www.f-droid.org/en/packages/app.fedilab.nitterizeme
 ||604kph.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||actionsack.com$document,important,domain=~are_you_sure_to_view_on_this_instance
+||aeong.one$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||ahwx.org$document,important,domain=~are_you_sure_to_view_on_this_instance
+||albony.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||alefvanoon.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||bch.bar$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||beatbump.ml$document,important,domain=~are_you_sure_to_view_on_this_instance
+||cachyos.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||catalyst.sx$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||crewz.me$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||d420.de$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -76,9 +83,12 @@
 ||dothq.co$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||dr460nf1r3.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||drivet.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
+||efy.piped.pages.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||encrypted-data.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
+||epicsite.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||flux.industries$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||fprivacy.com$document,important,domain=~are_you_sure_to_view_on_this_instance
+||freedit.eu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||fuckthesacklers.network$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||garudalinux.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||ggc-project.de$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -86,16 +96,20 @@
 ||httpjames.space$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||jamiethalacker.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||kavin.rocks$document,important,domain=~are_you_sure_to_view_on_this_instance
+||leptons.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||libreddit.eu.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||libreddit.hu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||lunar.icu$document,important,domain=~are_you_sure_to_view_on_this_instance
+||marcopisco.com$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||mha.fi$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||moomoo.me$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||nautolan.racing$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||nitter.hu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||notabird.site$document,important,domain=~are_you_sure_to_view_on_this_instance
+||oelrichsgarcia.de$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||oversold.host$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||palash.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
+||piped.video$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||privacytools.io$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||r.nf$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||rawbit.ninja$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -110,10 +124,13 @@
 ||sneed.network$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||stilic.ml$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||tedd.it$document,important,domain=~are_you_sure_to_view_on_this_instance
+||tokhmi.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||trevorthalacker.com$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||twei.space$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||twitr.gq$document,important,domain=~are_you_sure_to_view_on_this_instance
+||ungovernable.men$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||waffle.wiki$document,important,domain=~are_you_sure_to_view_on_this_instance
+||walkx.fyi$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||walkx.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||wef.lol$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||whatever.social$document,important,domain=~are_you_sure_to_view_on_this_instance
