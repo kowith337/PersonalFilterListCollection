@@ -1,6 +1,6 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client (Invizible Edition)
-# Version: 202301292328
+# Version: 202302081853
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -24,6 +24,7 @@ beacon.*
 bigfun*
 cliqz.com
 cloudflare-dns.com
+cloudflareresearch.com
 detectportal.*
 doubleclick.*
 firebase*.*
@@ -56,12 +57,6 @@ today.line.*
 ww[0-9]*.mobilelife.co.th
 
 # ZuckBook tracking prevention
-# Note: I've added this due to I'm always NOT USING ANY FACEBOOK APPS, however, certain apps and website are added Zuck's assets
-#       and/or SDK that have lots of connections to ZuckBook across websites to tracking you everywhere and everything, this is a
-#       great punishments agains it!
-# Hint: If you're still addicted to use ZuckBook, consider to use within browser that support DoH and use any resolvers to bypass
-#       blocking, for Firefox-based you may need to set `network.trr.mode` to 3 because it will strictly use DoH for resolve
-#       domains instead of use both generic and DoH together that may result of ZuckBook domains still blocked.
 discoverapp.com
 expresswifi.com
 facebook.com

@@ -1,6 +1,6 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client (Uncommented for pDNSF compatibility)
-# Version: 202301292328
+# Version: 202302081853
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -21,6 +21,7 @@ beacon.*
 bigfun*
 cliqz.com
 cloudflare-dns.com
+cloudflareresearch.com
 detectportal.*
 doubleclick.*
 edgedl.me.*
