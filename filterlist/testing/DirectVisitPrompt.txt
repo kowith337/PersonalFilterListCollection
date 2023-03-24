@@ -1,17 +1,16 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202301292328
+! Version: 202303242048
 ! Expires: 1 month
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
-! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/testing/DirectVisitPrompt.txt
 ! Description: This list is good to use if you're using alternative instance viewer frequently instead of directly visiting to
 !              mainstream services and/or use browser extensions for redirect to privacy-friendly instances, maybe you're too
 !              paranoid and not trusting to view on main websites because of ads, tracking, profiling, fingerprinting, etc...
 !              Like ASTLW, the `document` rule blocking will be halt the connections until you press temporary/permanent allow,
-!              I create this because `LibRedirect` isn't officially upload their extension on `Chrome Store` yet, but I've found
-!              that even I've sideload extensions and later it was unloaded itself after another session, then cause the
-!              redirection failed unfortunately!
+!              I create this because `LibRedirect` isn't officially upload their extension on `Chrome Store` yet due to upcoming
+!              (FUCK)ManifestV3 changes, but I've found that even I've sideload extensions and later it was unloaded itself after
+!              another session, then cause the redirection failed unfortunately!
 !              All document blocking rules will based on...
 !              - Privacy Redirect (Multi-browsers extension, deprecated): https://github.com/SimonBrazell/privacy-redirect
 !              - LibRedirect (Firefox Extension, continuation of above): https://github.com/libredirect/libredirect
@@ -65,6 +64,7 @@
 ! - Nitter instances: https://github.com/zedeus/nitter/wiki/Instances
 ! - Teddit instances (Doesn't report who is using it!): https://codeberg.org/teddit/teddit#instances
 ! - UntrackMe App - Latency lists: https://www.f-droid.org/en/packages/app.fedilab.nitterizeme
+! - Whoogle: https://github.com/benbusby/whoogle-search#public-instances
 ||604kph.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||actionsack.com$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||aeong.one$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -73,6 +73,7 @@
 ||alefvanoon.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||bch.bar$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||beatbump.ml$document,important,domain=~are_you_sure_to_view_on_this_instance
+||billbert.co$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||cachyos.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||catalyst.sx$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||crewz.me$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -94,6 +95,7 @@
 ||ggc-project.de$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||govt.land$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||httpjames.space$document,important,domain=~are_you_sure_to_view_on_this_instance
+||hxvy0.gq$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||jamiethalacker.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||kavin.rocks$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||leptons.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -101,8 +103,11 @@
 ||libreddit.hu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||lunar.icu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||marcopisco.com$document,important,domain=~are_you_sure_to_view_on_this_instance
+||marsey.cat$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||mha.fi$document,important,domain=~are_you_sure_to_view_on_this_instance
+||moe.ngo$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||moomoo.me$document,important,domain=~are_you_sure_to_view_on_this_instance
+||namazso.eu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||nautolan.racing$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||nitter.hu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||notabird.site$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -124,6 +129,7 @@
 ||sneed.network$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||stilic.ml$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||tedd.it$document,important,domain=~are_you_sure_to_view_on_this_instance
+||tokhmi.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||trevorthalacker.com$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||twei.space$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||twitr.gq$document,important,domain=~are_you_sure_to_view_on_this_instance
