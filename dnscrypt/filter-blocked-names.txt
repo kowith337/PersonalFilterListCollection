@@ -1,6 +1,6 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client
-# Version: 202303242035
+# Version: 202303242037
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -100,17 +100,6 @@ tracedock.com
 webtrekk.net
 wizaly.com
 wt-eu02.net
-
-# ZuckBook tracking prevention
-discoverapp.com
-expresswifi.com
-facebook.com
-facebook.net
-fbpigeon.com
-freebasics.com
-i.org
-internet.org
-messenger.com
 
 # ZuckBook tracking prevention
 # Note: I've added this due to I'm always NOT USING ANY ZUCKBOOK APPS, the only way I use ZuckBook is via browser only, however,
