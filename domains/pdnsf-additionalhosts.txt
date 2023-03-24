@@ -1,11 +1,10 @@
 # [personalDNSFilter 1.50.35.1]
 # Title: kowith337's custom hosts for personalDNSFilter
-# Version: 202302081853
+# Version: 202303242035
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection/wiki/pDSNF-additionalHosts
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Domain%20Lists%20and%20Wildcard
-# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/domains/pdnsf-additionalhosts.txt
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # [Unneccessary protocol] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 EMPTY
@@ -111,20 +110,27 @@ yengo.*
 # [Domain-wide] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # Abusive DNS Cloaking (Don't forget to set 'checkCNAME = true' in 'DNSFilter.conf')
 # Credits: https://github.com/nextdns/cname-cloaking-blocklist/raw/master/domains
+0i0i0i0.com
 2o7.net
 a8.net
+actionlink.jp
 actonservice.com
 actonsoftware.com
+ad-cloud.jp
+adobedc.net
 affex.org
 at-o.net
 ati-host.net
+bnc.lt
 bp01.net
-#cloudapp.net
+branch.io
 data.adobedc.net
+dataunlocker.com
 dnsdelegation.io
 ebis.ne.jp
 eloqua.com
 eulerian.net
+fathomdns.com
 ghochv3eng.trafficmanager.net
 httpjames.space
 inscname.net
@@ -134,11 +140,11 @@ keyade.com
 oghub.io
 omtrdc.net
 pardot.com
-sc.adobedc.net
-sc.omtrdc.net
+plausible.io
 shrfbdg004.com
 storetail.io
 tagcommander.com
+tracedock.com
 webtrekk.net
 wizaly.com
 wt-eu02.net
@@ -159,7 +165,6 @@ booking.com
 bstatic.com
 cliqz.com
 csp.withgoogle.com
-#footprint.net # Conflict against Windows update (mostly UWP apps, just in case)
 hotspotshield.com
 mon-com-01.com
 nyctrl32.com
@@ -212,6 +217,7 @@ setup.services.mozilla.com
 #*-pa.googleapis.com
 #google
 #l.google.com
+#mtalk.google.com
 
 # Connectivity check block
 #connectivitycheck.android.com
@@ -257,7 +263,7 @@ http*-pa.googleapis.com
 id.google.*
 metric*google*
 metric*gstatic.com
-pagead-*.l.google.com
+pagead*.l.google.com
 recommender.*.google.com
 redirector.gvt*
 #safebrowsing.google*

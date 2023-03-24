@@ -1,27 +1,30 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client (Uncommented for pDNSF compatibility)
-# Version: 202302081853
+# Version: 202303242035
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Domain%20Lists%20and%20Wildcard
-# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/dnscrypt/filter-blocked-names-uncomment.txt
 
 # Generic Blocklists
 #*-pa.googleapis.com
 *-settings.services.*
+*oogl*ads*
+*oogl*analytic*
+*oogl*tag*
 *telemetry*
-*today.line.*
+*today.line*
 activations.mozilla.*
 admob.*
 adservice.google.*
 autoconfig*
-beacon*.*
-beacon.*
+beacon*
 bigfun*
 cliqz.com
 cloudflare-dns.com
+cloudflareinsights.com
 cloudflareresearch.com
+dartsearch*
 detectportal.*
 doubleclick.*
 edgedl.me.*
@@ -29,10 +32,11 @@ firebase*.*
 geo.opera.com
 getpocket*
 google
-#gvt[0-9]*.com
+#gvt1.com
 gvt[2-9]*.com
 gvtl.com
 id.google.*
+id.l.google.*
 #in-addr.arpa
 incoming.telemetry.*
 #ip6.arpa
@@ -40,6 +44,8 @@ kaidee.com
 #l.google.com
 lazada.*
 me.gvt[0-9]*.com
+metric*google*
+metric*gstatic*
 mozillademos.org
 mozillamessaging.com
 normandy*moz*
@@ -53,6 +59,58 @@ t[0-9]*.gstatic.com
 telemetry*
 today.line.*
 ww[0-9]*.mobilelife.co.th
+
+# Abusive DNS Cloaking (pDNSF additionalHosts copyback)
+# Credits: https://github.com/nextdns/cname-cloaking-blocklist/raw/master/domains
+0i0i0i0.com
+2o7.net
+a8.net
+actionlink.jp
+actonservice.com
+actonsoftware.com
+ad-cloud.jp
+adobedc.net
+affex.org
+at-o.net
+ati-host.net
+bnc.lt
+bp01.net
+branch.io
+data.adobedc.net
+dataunlocker.com
+dnsdelegation.io
+ebis.ne.jp
+eloqua.com
+eulerian.net
+fathomdns.com
+ghochv3eng.trafficmanager.net
+httpjames.space
+inscname.net
+intent.com
+intentmedia.net
+keyade.com
+oghub.io
+omtrdc.net
+pardot.com
+plausible.io
+shrfbdg004.com
+storetail.io
+tagcommander.com
+tracedock.com
+webtrekk.net
+wizaly.com
+wt-eu02.net
+
+# ZuckBook tracking prevention
+discoverapp.com
+expresswifi.com
+facebook.com
+facebook.net
+fbpigeon.com
+freebasics.com
+i.org
+internet.org
+messenger.com
 
 # ZuckBook tracking prevention
 discoverapp.com
@@ -95,6 +153,7 @@ garudalinux.org
 ggc-project.de
 govt.land
 httpjames.space
+hxvy0.gq
 jamiethalacker.dev
 kavin.rocks
 leptons.xyz
@@ -125,6 +184,7 @@ silkky.cloud
 sneed.network
 stilic.ml
 tedd.it
+tokhmi.xyz
 trevorthalacker.com
 twei.space
 twitr.gq

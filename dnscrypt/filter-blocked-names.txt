@@ -1,37 +1,42 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client
-# Version: 202302081853
+# Version: 202303242035
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Domain%20Lists%20and%20Wildcard
-# Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/dnscrypt/filter-blocked-names.txt
 
 # Generic Blocklists
 #*-pa.googleapis.com                   # This break most android features (uncomment this if paranoid)
 *-settings.services.*                  # SpyZilla settings upload/download?
+*oogl*ads*                             # Avoision of Goolag Ads
+*oogl*analytic*                        # Avoision of Goolag Analytics
+*oogl*tag*                             # Avoision of Goolag Tag (Coverage TagManager / TagService)
 *telemetry*                            # Telemetry prevention
-*today.line.*                          # BECAUSE READING NEWS ON NON-BROWSER IS BULLSHIT, LIKE OPEN ANY LINKS ON COMMON SNS VIA IN-APP BROWSER!
+*today.line*                           # BECAUSE READING NEWS ON NON-BROWSER IS BULLSHIT, LIKE OPEN ANY LINKS ON COMMON SNS VIA IN-APP BROWSER!
 activations.mozilla.*                  # SpyZilla activations
 admob.*                                # Goolag common ads
 adservice.google.*                     # Goolag AdService tracking
 autoconfig*                            # Possibility of SpyZilla AutoConfig (Retrieve OOB config)
-beacon*.*                              # Becaon prevention (GPlay)
-beacon.*                               # More becaon prevention (GPlay)
+beacon*                                # Becaon prevention (GPlay)
 bigfun*                                # True BigFun AOC SCAM
 cliqz.com                              # Formerly Waterfox Android
 cloudflare-dns.com                     # Why not?
+cloudflareinsights.com                 # CrapFlareInsights commonly use this for load beacon script!
 cloudflareresearch.com                 # SpyZilla BurntFox use this as DAP telemetry, so BurntFox aren't good privacy browser anymore?
+dartsearch*                            # This is an official adware that was distributed by Goolag, perhaps it's common during IE era that inject spy toolbars!
 detectportal.*                         # DetectPortal (SpyZilla, PaleMoon, Waterfox)
 doubleclick.*                          # Top notch of Goolag common ads
+edgedl.me.*                            # If you've allowed GVT1, this will block an attempt to update MS Edge components!
 firebase*.*                            # Commonly use for track and make anon reports of apps problems, but Goolag also known its data, too!
 geo.opera.com                          # Not intent to block entire subs, see `filter-allowed-names.txt`
 getpocket*                             # SpyZilla BurntFox Pocket partnership
 google                                 # "*.google" TLD should be blocked for goods! (Block DNS, Wellbeing, etc.)
-#gvt[0-9]*.com                         # Uncomment to block all Goolag 'GVT' subdomains, this also possibly to block Edge Chromium component updates!
+#gvt1.com                              # Uncomment to block Goolag 'GVT1' subdomains, this also possibly to block Edge Chromium component updates!
 gvt[2-9]*.com                          # Requests to Goolag that not GVT1 should be blocked, they've mostly used for beacons!
 gvtl.com                               # Is that GVT1 typo?
 id.google.*                            # Goolag ID Tracking
+id.l.google.*                          # Goolag ID Tracking (CNAME)
 #in-addr.arpa                          # SimpleWall resolvers v4
 incoming.telemetry.*                   # SpyZilla BurntFox telemetry
 #ip6.arpa                              # SimpleWall resolvers v6 (Uncomment if you want to refuse all IPv6 resolves)
@@ -39,6 +44,8 @@ kaidee.com                             # Promoted on Chrome
 #l.google.com                          # Same reason of Goolag `*-pa`, uncomment if needed!
 lazada.*                               # IDIOTICS ADVERTISING AND MARKETING! (FORCE OPEN APP OR DOWNLOAD FROM STORE IF YOU DON'T HAVE IT!!)
 me.gvt[0-9]*.com                       # In case if users doesn't enable `gvt[0-9]*.com` this will prevent contacting unneccessary to Edge Chromium!
+metric*google*                         # Goolag Metric (Common see when allow automatic DNS resolving within Chrome and Chromium-based browsers)
+metric*gstatic*                        # Another Goolag Metric (This use GStatic endpoint instead of main one)
 mozillademos.org                       # SpyZilla demo endpoint
 mozillamessaging.com                   # SpyZilla MESSaging (probably notifications endpoint, similar to GCM [Goolag Firebase])
 normandy*moz*                          # SpyZilla normandy
@@ -50,8 +57,60 @@ ss[0-9]*.mobilelife.co.th              # AIS AOC Scam (Mobile operator specific)
 t[0-9]*.gstatic.com                    # Unknow use of GStatic, but it seems blocked by common blocklists!
 t[0-9]*.org                            # pDNSF use for test DNS latency, but I've blocked it anyway.
 telemetry*                             # Another telemetry prevention
-today.line.*                           # MORE NOTE FOR LINE TODAY READERS: You can still open in browser that support DoH, of course!!
+today.line*                            # MORE NOTE FOR LINE TODAY READERS: You can still open in browser that support DoH, of course!!
 ww[0-9]*.mobilelife.co.th              # Another AIS AOC Scam (Mobile operator specific)
+
+# Abusive DNS Cloaking (pDNSF additionalHosts copyback)
+# Credits: https://github.com/nextdns/cname-cloaking-blocklist/raw/master/domains
+0i0i0i0.com
+2o7.net
+a8.net
+actionlink.jp
+actonservice.com
+actonsoftware.com
+ad-cloud.jp
+adobedc.net
+affex.org
+at-o.net
+ati-host.net
+bnc.lt
+bp01.net
+branch.io
+data.adobedc.net
+dataunlocker.com
+dnsdelegation.io
+ebis.ne.jp
+eloqua.com
+eulerian.net
+fathomdns.com
+ghochv3eng.trafficmanager.net
+httpjames.space
+inscname.net
+intent.com
+intentmedia.net
+keyade.com
+oghub.io
+omtrdc.net
+pardot.com
+plausible.io
+shrfbdg004.com
+storetail.io
+tagcommander.com
+tracedock.com
+webtrekk.net
+wizaly.com
+wt-eu02.net
+
+# ZuckBook tracking prevention
+discoverapp.com
+expresswifi.com
+facebook.com
+facebook.net
+fbpigeon.com
+freebasics.com
+i.org
+internet.org
+messenger.com
 
 # ZuckBook tracking prevention
 # Note: I've added this due to I'm always NOT USING ANY ZUCKBOOK APPS, the only way I use ZuckBook is via browser only, however,
@@ -67,7 +126,7 @@ expresswifi.com                        # Subset of "Free Basics" services to acc
 facebook.com
 facebook.net
 fbpigeon.com
-freebasics.com                         # "Free BaZucks"
+freebasics.com                         # It's their core domain
 i.org                                  # Shortened of "internet.org", seems sponsored by Onavo
 internet.org                           # Formerly (domain) name of "Free Basics"
 messenger.com
@@ -102,6 +161,7 @@ garudalinux.org
 ggc-project.de
 govt.land
 httpjames.space
+hxvy0.gq
 jamiethalacker.dev
 kavin.rocks
 leptons.xyz
@@ -132,6 +192,7 @@ silkky.cloud
 sneed.network
 stilic.ml
 tedd.it
+tokhmi.xyz
 trevorthalacker.com
 twei.space
 twitr.gq
@@ -144,3 +205,5 @@ whatever.social
 winscloud.net
 xanny.family
 yonalee.eu
+
+# [Cutoff for staging with your previous custom config] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
