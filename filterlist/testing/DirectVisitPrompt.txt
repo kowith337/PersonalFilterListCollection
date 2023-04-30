@@ -1,6 +1,6 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202303242048
+! Version: 202304301911
 ! Expires: 1 month
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -42,11 +42,11 @@
 ! [Wikipedia > Wikiless]
 ! Please note that somehow redirecting to `Wikiless` will not fully compatible, sometime you will get redirected to home page
 ! instead of actual Wiki contents...
-||wikipedia.com$document,important,domain=~are_you_sure_to_view_it_directly
+||wikipedia.org$document,important,domain=~are_you_sure_to_view_it_directly
 
 ! [YouTube > Invidious] / [YouTube Music > HyperPipe]
 ! Note: `Piped` is absolutely NOT RECOMMENDED! Most of Piped hosts are on `CrapFlare` and rely to multiple CDN servers to
-!       caching contents on multi-CF servers!
+!       caching contents on multi-CF servers before serving back to end users!
 ||youtube.com$document,important,domain=~studio.youtube.com|~are_you_sure_to_view_it_directly
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Not yet implemented currently - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !

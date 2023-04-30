@@ -1,6 +1,6 @@
 [uBlock Origin 1.45.0]
 ! Title: kowith337's Test List
-! Version: 202301060329
+! Version: 202304301926
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -64,6 +64,9 @@ pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(หล่อขวัญ))
 steamcommunity.com#?#:matches-path(/(\/app\/\d+?)?\/workshop/).announcements_row
 
 ! [Twitter]
+! - Remove "For you" tab
+twitter.com#?#div[data-testid="ScrollSnap-SwipeableList"] div[role="presentation"]:has(a[href="/home"] div span:has-text(/^For you/i)):remove()
+!
 ! - Aim to remove follow topics / related users / who to follow (aka. all of inline ZUCKESTIONS panes)
 !   * Please note: these rules are produce huge problematic, it's also hide all user lists that have "Follow" button, no matter
 !     about any state of user following! you can keep using this if you're not intent to follow other peoples too much!~
@@ -97,6 +100,9 @@ bird.trom.tf,birdsite.xanny.family,lu-nitter.resolv.ee,n.0x0.st,n.hyperborea.clo
 steamcommunity.com#?#:matches-path(/(\/app\/\d+?)?\/workshop/).announcements_row:remove()
 
 ! [Twitter]
+! - Force remove "For you" tab
+twitter.com#?#div[data-testid="ScrollSnap-SwipeableList"] div[role="presentation"]:has(a[href="/home"] div span:has-text(/^For you/i)):remove()
+!
 ! - Some inline and/or side pane that tagged with `[aria-labelledby]` are useless, they often use for showing a pane to easily
 !   follow topics that they've zuckested by your activities that you might interest to..., so all of SNS nowadays are drived
 !   (and monetised) by user data and zuckestions!?
@@ -150,8 +156,8 @@ $doc,removeparam=~/^(ia[a-z]?|k([a-z0-9]+)?|q|uddg)/,domain=duckduckgo.com
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||google.*/ads/*$important
 ||liberapay.com/zedeus$document,important,domain=~accident_nitter_nav_prevention
-||twitter.com/i/api/*/timeline/home.json$important,domain=~tweetdeck.twitter.com|~to_make_sure_that_you_always_get_latest_tweets
-
+||twitter.com/i/*/timeline/home.json$important,domain=~tweetdeck.twitter.com|~to_make_sure_that_you_always_get_latest_tweets
+||twitter.com/i/api/*/HomeTimeline$xhr,method=post,important,domain=~tweetdeck.twitter.com|~to_make_sure_that_you_always_get_tweets_from_followings_only
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
 ! HTML document filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
