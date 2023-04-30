@@ -1,6 +1,6 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client
-# Version: 202303242048
+# Version: 202303302027
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -167,6 +167,7 @@ namazso.eu
 nautolan.racing
 nitter.hu
 notabird.site
+odyssey346.dev                         # Donation link of this instance seems like it's add "Google Urchin UTMs" parameters, so I'll treated this instance as "Bad", even this server didn't use CrapFlare!
 oelrichsgarcia.de
 oversold.host
 palash.dev
