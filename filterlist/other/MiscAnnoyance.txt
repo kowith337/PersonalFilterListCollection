@@ -1,6 +1,6 @@
 [uBlock Origin 1.45.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202304301930
+! Version: 202305151313
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -105,10 +105,13 @@ twitter.com#?#.ep-Campaign .ep-Signup
 twitter.com#?#aside[aria-label="Who to follow"]
 twitter.com#?#section[aria-label="Sign up"]
 !
-! - Remove non-consumer things that not neccessary, such as blue, create ads, tweet performance (analytics), etc.
+! - Remove non-consumer things that not neccessary, such as blue, create ads, super followers, tweet performance (analytics), etc.
+twitter.com#?#article div[class] > a[href*="/analytics" i][role=link]
 twitter.com#?#div[role="menu"] div[class] > a[href*="ads.twitter.com"]
 twitter.com#?#div[role="menu"] div[class] > a[href*="analytics.twitter.com"]
+twitter.com#?#div[role="menu"] div[data-testid="Dropdown" i] a[role="menuitem"][href*="analytics" i]
 twitter.com#?#nav[role="navigation"] a[href*="twitter_blue"]
+twitter.com#?#section[aria-label*="details" i] div[class] a[href*="superfollows" i]
 
 ! [Twitter Old] (Deprecated, only appear when you're not logged in.)
 twitter.com#?##signin-dropdown
@@ -244,11 +247,17 @@ m.youtube.com#?#ytm-mealbar:has-text(privacy)
 m.youtube.com#?#ytm-compact-video-renderer .compact-media-item:has(.compact-media-item-metadata .subhead:has-text(/Recommended/i))
 
 ! [Twitter New]
+! - Remove view counts (Only English UI)
+twitter.com#?#article div[class] > div[dir]:has(span span:has-text(/View/i))
+!
 ! - Try remove any highlights that inject directly to notification lists (aka. In case that you've missed)
 twitter.com#?#div[aria-label^="Timeline:"] div > article[role="article"]:has(div[class] > svg g path[fill="#794BC4"])
 !
 ! - Remove new layout overlay notify popup
 twitter.com#?#div[data-reactroot] div[class] > div[data-focusable][tabindex][class] div[class]:has(div[class] > div[class][style] img[alt][src*="/twitter_shared_public/responsive-web"])
+!
+! - Remove "Blue" from account settings!
+twitter.com#?#section[aria-label*="navigation" i] div[role="tablist"] a[href*="twitter_blue" i]:upward(div[data-testid="activeRoute" i])
 
 ! [WallGif] Disable AdBlock...? HOW ABOUT NO!!
 wallgif.com#?##overlay:has(img[alt="Loader"])
@@ -301,8 +310,13 @@ twitter.com#?#div[role="menu"] div[class] a[href*="/i/newsletters"]
 ! - Remove onboarding cause
 twitter.com#?#div[aria-label] img[src*="/onboarding/"]:upward(div[style*="transform"])
 !
-! - Force remove "Blue" from navigation
+! - Force remove
+twitter.com#?#article div[class] > a[href*="/analytics" i][role=link]:remove()
+twitter.com#?#article div[class] > div[dir]:has(span span:has-text(/View/i)):remove()
+twitter.com#?#div[role="menu"] div[data-testid="Dropdown" i] a[role="menuitem"][href*="analytics" i]:remove()
 twitter.com#?#nav[role="navigation"] a[href*="twitter_blue"]:remove()
+twitter.com#?#section[aria-label*="details" i] div[class] a[href*="superfollows" i]:remove()
+twitter.com#?#section[aria-label*="navigation" i] div[role="tablist"] a[href*="twitter_blue" i]:upward(div[data-testid="activeRoute" i]):remove()
 
 ! [Line WebToons] Remove promoted comic overlay (include dimmed)
 m.webtoons.com#?#div[id^="layerNoticePopup"]:remove()
