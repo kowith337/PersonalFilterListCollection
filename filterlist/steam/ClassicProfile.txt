@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Classic Profile Appearance
-! Version: 202208131954
+! Version: 202305191257
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -43,10 +43,11 @@ steampowered.com#?#video:not(:matches-path(/^\/(app|points)\//))
 steampowered.com#?#video:matches-path(/^\/app\//):not(.highlight_player_area, .highlight_player_item .highlight_movie)
 
 ! [`:remove()` rules]
-steamcommunity.com,steampowered.com#?#.miniprofile_nameplatecontainer video.miniprofile_nameplate:remove()
-steamcommunity.com,steampowered.com#?#.playerAvatarAutoSizeInner,.playersection_avatar:has(img[src*=".gif"]):remove()
-!steamcommunity.com,steampowered.com#?#.playersection_avatar_frame img:remove()
 steamcommunity.com#?#.profile_animated_background:remove()
+steamcommunity.com,steampowered.com#?#.miniprofile_nameplatecontainer video.miniprofile_nameplate:remove()
+steamcommunity.com,steampowered.com#?#.playerAvatarAutoSizeInner:has(img[src*=".gif"]):remove()
+steamcommunity.com,steampowered.com#?#.playersection_avatar:has(img[src*=".gif"]):remove()
+!steamcommunity.com,steampowered.com#?#.playersection_avatar_frame img:remove()
 
 ! CSS Modifications - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - Return 2px thick border of online indicator in mini profile card instead of show only bottom line below player's avatar
