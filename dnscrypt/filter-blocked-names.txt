@@ -1,6 +1,6 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client
-# Version: 202303302027
+# Version: 202305191241
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -127,6 +127,7 @@ aeong.one
 ahwx.org
 albony.xyz
 alefvanoon.xyz
+altgr.xyz
 bch.bar
 beatbump.ml
 billbert.co
@@ -143,6 +144,7 @@ drivet.xyz
 efy.piped.pages.dev
 encrypted-data.xyz
 epicsite.xyz
+fascinated.cc
 flux.industries
 fprivacy.com
 freedit.eu
@@ -152,17 +154,22 @@ ggc-project.de
 govt.land
 httpjames.space
 hxvy0.gq
+instance.no
 jamiethalacker.dev
 kavin.rocks
+kozmik.studio
 leptons.xyz
+libb.pw
 libreddit.eu.org
 libreddit.hu
+lile.cl
 lunar.icu
 marcopisco.com
 marsey.cat
 mha.fi
 moe.ngo
 moomoo.me
+nachtalb.io
 namazso.eu
 nautolan.racing
 nitter.hu
@@ -173,6 +180,7 @@ oversold.host
 palash.dev
 piped.video
 privacytools.io
+quadtr.ee
 r.nf
 rawbit.ninja
 reddi.tk

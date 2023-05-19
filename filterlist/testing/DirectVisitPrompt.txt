@@ -1,6 +1,6 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202303302027
+! Version: 202305191241
 ! Expires: 1 month
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -71,6 +71,7 @@
 ||ahwx.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||albony.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||alefvanoon.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
+||altgr.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||bch.bar$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||beatbump.ml$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||billbert.co$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -87,6 +88,7 @@
 ||efy.piped.pages.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||encrypted-data.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||epicsite.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
+||fascinated.cc$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||flux.industries$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||fprivacy.com$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||freedit.eu$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -96,17 +98,22 @@
 ||govt.land$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||httpjames.space$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||hxvy0.gq$document,important,domain=~are_you_sure_to_view_on_this_instance
+||instance.no$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||jamiethalacker.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||kavin.rocks$document,important,domain=~are_you_sure_to_view_on_this_instance
+||kozmik.studio$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||leptons.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
+||libb.pw$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||libreddit.eu.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||libreddit.hu$document,important,domain=~are_you_sure_to_view_on_this_instance
+||lile.cl$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||lunar.icu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||marcopisco.com$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||marsey.cat$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||mha.fi$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||moe.ngo$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||moomoo.me$document,important,domain=~are_you_sure_to_view_on_this_instance
+||nachtalb.io$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||namazso.eu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||nautolan.racing$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||nitter.hu$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -117,6 +124,7 @@
 ||palash.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||piped.video$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||privacytools.io$document,important,domain=~are_you_sure_to_view_on_this_instance
+||quadtr.ee$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||r.nf$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||rawbit.ninja$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||reddi.tk$document,important,domain=~are_you_sure_to_view_on_this_instance
