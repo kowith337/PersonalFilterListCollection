@@ -1,0 +1,3 @@
+filterlist/*.txt    text diff=adb
+hosts/*.txt         text diff=hosts
+ruleset/*.txt       text
