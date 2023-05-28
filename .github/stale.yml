@@ -6,7 +6,7 @@ daysUntilClose: 15
 exemptLabels:
   - External
   - Rejected
-  - "Information/Research"
+  - Information/Research
 # Label to use when marking an issue as stale
 staleLabel: 
 # Comment to post when marking an issue as stale. Set to `false` to disable

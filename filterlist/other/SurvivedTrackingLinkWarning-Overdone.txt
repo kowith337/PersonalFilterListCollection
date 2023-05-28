@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202207051956
+! Version: 202305282200
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -85,6 +85,8 @@
 ||facebook.com/*&hc_*=$xmlhttprequest
 ||facebook.com/*&lst=$document,important,domain=~FacebookInternalTracking_LST
 ||facebook.com/*&lst=$xmlhttprequest
+||facebook.com/*&mibextid=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareLink
+||facebook.com/*&mibextid=$xmlhttprequest
 ||facebook.com/*&pn_*=$document,important,domain=~FacebookInternalTracking_PN-Wild
 ||facebook.com/*&pn_*=$xmlhttprequest
 ||facebook.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
@@ -131,6 +133,8 @@
 ||facebook.com/*?hc_*=$xmlhttprequest
 ||facebook.com/*?lst=$document,important,domain=~FacebookInternalTracking_LST
 ||facebook.com/*?lst=$xmlhttprequest
+||facebook.com/*?mibextid=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareLink
+||facebook.com/*?mibextid=$xmlhttprequest
 ||facebook.com/*?pn_*=$document,important,domain=~FacebookInternalTracking_PN-Wild
 ||facebook.com/*?pn_*=$xmlhttprequest
 ||facebook.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken

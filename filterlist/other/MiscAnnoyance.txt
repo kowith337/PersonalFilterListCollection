@@ -1,6 +1,6 @@
 [uBlock Origin 1.45.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202305151313
+! Version: 202305282147
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -9,6 +9,10 @@
 !              the specific site or category are have enough rules.
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! BiliBili Inter
+! - Remove anime zuckestion rows from search pane
+bilibili.tv#?#.bstar-header-search-recommend .bstar-header-search-top
+
 ! [ChocolateMinecraft] Remove ads-wrapped links
 chocolateminecraft.com#?##content table[style] td a[href*="adf.ly"]
 chocolateminecraft.com#?##content table[style] td a[href*="adfoc.us"]
@@ -39,7 +43,7 @@ gamingdose.com#?#a[onclick^="gtag"][onclick*="send_to"]
 github.com#?#.repository-content .protip
 github.com#?#div[class^="signup-prompt"]
 
-! [Google]
+! [Google] Switch to Whoogle is recommended! {https://farside.link/whoogle}
 ! - No reason to manually update location with precious method! (resolve location from network connection isn't enough, huh?)
 google.*#?##fbar #swml a#swml-upd
 google.*#?##fbar #swml a[data-ved]
@@ -311,6 +315,8 @@ twitter.com#?#div[role="menu"] div[class] a[href*="/i/newsletters"]
 twitter.com#?#div[aria-label] img[src*="/onboarding/"]:upward(div[style*="transform"])
 !
 ! - Force remove
+!   Note: I won't recommended to force remove any elements inside [^="Timeline:"], otherwise loading tweet streams will get stuck
+!         by "Something went wrong!"
 twitter.com#?#article div[class] > a[href*="/analytics" i][role=link]:remove()
 twitter.com#?#article div[class] > div[dir]:has(span span:has-text(/View/i)):remove()
 twitter.com#?#div[role="menu"] div[data-testid="Dropdown" i] a[role="menuitem"][href*="analytics" i]:remove()

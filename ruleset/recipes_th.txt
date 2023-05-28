@@ -1,11 +1,10 @@
 ! uMatrix: Ruleset recipes 1.4.1
 ! Title: Rulesets for Thai sites
-! Version: 202112102252
-! VersionNumber: 0.22.2
+! Version: 202305282136
+! VersionNumber: 0.23.0
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/ruleset/readme.md
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
-! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/ruleset/recipes_th.txt
 
 AdIntrend Live TV
   adintrend.tv *
@@ -29,6 +28,17 @@ Amarin TV
     _ 210.4.150.104 xhr
     _ amarin2.live14.com xhr
     _ ssl.p.jwpcdn.com script
+
+BiliBili (TH/Inter)
+  bilibili.tv *
+  ! 1. I'm not guarantee that it work on Firefox and forks
+  !    due to CNAME and probably referrer settings if you've
+  !    set config from `user.js`, CFG files, policies, etc.
+  ! 2. Spoof referrer will make certain requests forbidden!
+    referrer-spoof: _ false
+    _ bilivideo.com xhr
+    _ bstarstatic.com script
+    _ bstarstatic.com xhr
 
 Bugaboo TV (BBTV CH7)
   bugaboo.tv *
