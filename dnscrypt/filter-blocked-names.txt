@@ -1,6 +1,6 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client
-# Version: 202305191241
+# Version: 202306052317
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -43,7 +43,7 @@ incoming.telemetry.*                   # SpyZilla BurntFox telemetry
 kaidee.com                             # Promoted on Chrome
 #l.google.com                          # Same reason of Goolag `*-pa`, uncomment if needed!
 lazada.*                               # IDIOTICS ADVERTISING AND MARKETING! (FORCE OPEN APP OR DOWNLOAD FROM STORE IF YOU DON'T HAVE IT!!)
-me.gvt[0-9]*.com                       # In case if users doesn't enable `gvt[0-9]*.com` this will prevent contacting unneccessary to Edge Chromium!
+me.gvt[0-9]*.com                       # In case if users doesn't enable `gvt[0-9]*.com` this will prevent unneccessary contacting to Edge Chromium!
 metric*google*                         # Goolag Metric (Common see when allow automatic DNS resolving within Chrome and Chromium-based browsers)
 metric*gstatic*                        # Another Goolag Metric (This use GStatic endpoint instead of main one)
 mozillademos.org                       # SpyZilla demo endpoint
@@ -204,6 +204,7 @@ walkx.fyi
 walkx.org
 wef.lol
 whatever.social
+whateveritworks.org
 winscloud.net
 xanny.family
 yonalee.eu

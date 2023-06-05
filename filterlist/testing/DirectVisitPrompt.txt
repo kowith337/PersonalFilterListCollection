@@ -1,7 +1,7 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202305191241
-! Expires: 1 month
+! Version: 202306052317
+! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Description: This list is good to use if you're using alternative instance viewer frequently instead of directly visiting to
@@ -148,6 +148,7 @@
 ||walkx.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||wef.lol$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||whatever.social$document,important,domain=~are_you_sure_to_view_on_this_instance
+||whateveritworks.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||winscloud.net$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||xanny.family$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||yonalee.eu$document,important,domain=~are_you_sure_to_view_on_this_instance
