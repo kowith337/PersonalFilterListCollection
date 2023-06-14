@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202301241853
+! Version: 202306141136
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -245,6 +245,10 @@ steampowered.com#?#.home_ctn.marketingmessage_area:remove()
 steampowered.com#?#.newmodal_background:remove()
 steampowered.com#?#.newux_optin_banner:remove()
 steampowered.com#?#.recommendation_reasons .similar_recent_apps_container a:remove()
+!
+! - Special use just for curator/publisher page to ensure that micro trailers will permanently invisible while hover on the game
+!   in carousel reels!
+steampowered.com#?#[data-panel].setup_microtrailer .contents video:remove()
 
 ! CSS Modifications - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - Enforce remove all elements transition (e.g. slide panel animations)
@@ -273,9 +277,12 @@ steampowered.com#?#.home_ctn.marketingmessage_area:style(display: none !importan
 steampowered.com#?#.form_row #save_my_address_input label:style(color: red !important; font-size: 18px !important)
 !
 ! - When your perform "Search again without filtered" and you're barely see banner of filtered games because very low opacity,
-!   now I've increased it to 50% (old value is set to show only 5% of it's original opacy, that's too dark!!)
+!   also their hide those games names and price details too!
+! - now I've increased it to 50% (old value is set to show only 5% of it's original opacy, that's too dark!!)
+! - For game name and price details, increase opacity of text to 33% instead of none!
 steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .col.search_capsule:style(opacity: 0.5 !important)
 steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .platform_img:style(opacity: 0.5 !important)
+steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .responsive_search_name_combined:style(opacity: 0.33 !important)
 
 ! Requests Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! - Prevent using of "Broadcast" functions in store site!
@@ -350,6 +357,7 @@ steamcommunity.com,steampowered.com##+js(cookie-remover, browserid)
 steamcommunity.com,steampowered.com##+js(cookie-remover, deep_dive_carousel_focused_app)
 steamcommunity.com,steampowered.com##+js(cookie-remover, deep_dive_carousel_method)
 steamcommunity.com,steampowered.com##+js(cookie-remover, ga)
+steamcommunity.com,steampowered.com##+js(cookie-remover, gat)
 steamcommunity.com,steampowered.com##+js(cookie-remover, home_scroll)
 steamcommunity.com,steampowered.com##+js(cookie-remover, recentapps)
 steamcommunity.com,steampowered.com##+js(cookie-remover, recentlyVisitedAppHubs)

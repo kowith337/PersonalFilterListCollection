@@ -1,6 +1,6 @@
-[uBlock Origin 1.32.0]
+[uBlock Origin 1.50.0]
 ! Title: Steam Dis-Recommender Filters - Anti Impressions DLC
-! Version: 202112111828
+! Version: 202306141159
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -43,14 +43,15 @@
 ! - Ensure that you only navigate to the game browsing lists or proper specific games that you want to buy or save each game page
 !   that you've planned to checkout and then put into the cart one by one until you've got all of games that you really want to.
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Non-basic filtering]
+steampowered.com#?#*:remove-attr(app_impression_tracked)
+steampowered.com#?#*:remove-attr(data-ds-appid)
+steampowered.com#?#*:remove-class(app_impression_tracked)
+steampowered.com#?#*:remove-class(data-ds-appid)
+
 ! [Scriplet injector rules]
-!steampowered.com##+js(no-setTimeout-if, CheckVisibilityInternal)
-steampowered.com##+js(remove-attr, app_impression_tracked)
-steampowered.com##+js(remove-attr, data-ds-appid)
-steampowered.com##+js(remove-class, app_impression_tracked)
-steampowered.com##+js(remove-class, data-ds-appid)
-steampowered.com##+js(set, CAppearMonitor, noopFunc)
-!steampowered.com##+js(set, elTarget, null)
+steampowered.com#?#+js(set, CAppearMonitor, noopFunc)
+steampowered.com#?#+js(set, impression, noopFunc)
 
 ! [Fix and hide broken carousel and preview pane]
 ! Those elements already broken by scriptlet rules above since their carousel items require to load JavaScript functions that
@@ -64,7 +65,7 @@ steampowered.com#?#.home_ctn .carousel_container .carousel_thumbs
 steampowered.com#?#.tab_container .home_rightcol
 !
 ! - Explore View
-steampowered.com#?#.home_ctn .home_rightcol:matches-path(/explore)
+steampowered.com#?#.home_ctn .home_rightcol:matches-path(/^\/explore/)
 !
 ! - Category Hub
 steampowered.com#?#.page_contenthub_content #genre_large_cluster
