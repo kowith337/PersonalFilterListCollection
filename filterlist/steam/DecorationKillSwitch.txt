@@ -1,10 +1,9 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Decoration Killswitch (DO NOT SUBSCRIBE THIS UNLESS YOU KNOW WHAT YOU ARE DOING!)
-! Version: 202208131954
+! Version: 202306162019
 ! Expires: 2 days
 ! Author: kowith337
-! Homepage: https://github.com/kowith337/PersonalFilterListCollection
-! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/steam/DecorationKillSwitch.txt
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/steam
 ! Description: THIS FILTER WILL BE INTENT TO MANUALLY OPT-IN BY USERS ONLY, DO NOT SUBSCRIBE THIS LIST UNLESS YOU REALLY HATE STEAM SPECIAL PROFILE CUSTOMISATIONS THAT DRAMATICALLY DRAG YOUR WEB BROWSER PERFORMANCE DOWN TO HELL!!
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! WARNING: Once you using this filter, every resources of "Steam Points" for profile decoration will never be loaded, even in

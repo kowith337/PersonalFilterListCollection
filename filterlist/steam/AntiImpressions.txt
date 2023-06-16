@@ -1,10 +1,9 @@
 [uBlock Origin 1.50.0]
 ! Title: Steam Dis-Recommender Filters - Anti Impressions DLC
-! Version: 202306141159
+! Version: 202306162019
 ! Expires: 2 days
 ! Author: kowith337
-! Homepage: https://github.com/kowith337/PersonalFilterListCollection
-! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/steam/AntiImpressions.txt
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/steam
 ! Descriptions: This is a DLC list of "Steam Dis-recommender Filters" that will not bundle into the base list, unless you want an
 !               extreme privacy to prevent junkful impression tracking cookie and not mind about breaking steam websites, neither
 !               store or community!

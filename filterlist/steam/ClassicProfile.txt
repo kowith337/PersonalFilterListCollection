@@ -1,10 +1,9 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Classic Profile Appearance
-! Version: 202305191257
+! Version: 202306162019
 ! Expires: 2 days
 ! Author: kowith337
-! Homepage: https://github.com/kowith337/PersonalFilterListCollection
-! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/filterlist/steam/ClassicProfile.txt
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/steam
 ! Description: This is a spin-off from Steam Dis-Recommender filter that focused to bring back older appearance of Steam profile like a good old time that have none of frame decorations and animated (movie clips) backgrounds, even account level!
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! DOM Generic - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
