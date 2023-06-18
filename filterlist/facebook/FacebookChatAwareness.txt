@@ -1,6 +1,6 @@
 [uBlock Origin 1.28.0]
 ! Title: kowith337's Facebook Chat Awareness
-! Version: 202007041337
+! Version: 202306181214
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/facebook
@@ -34,14 +34,14 @@
 ! [MESSenger Desktop Web] ----------------------------------------------------------------------------------------------------- !
 ! Test Cookie Messing (Now it's caveat because scriptlet cannot remove cookies on the root domain {higher level + HTTP only})
 ! Remove referer cookie
-messenger.com##+js(cookie-remover, x-referer)
+!messenger.com##+js(cookie-remover, x-referer)
 
 ! This let Facebook forgot mobile carrier name that saved in the cookie (It will keep up to 3 days if you're not remove manually)
 ! The proper function is...
 ! 1. To make Facebook MESSenger forgot mobile carrier name!
 ! 2. Prevent Facebook system check and/or remember the "datr" value if mobile carrier that you're using are support "Free Basics"
 !    service!!
-messenger.com##+js(cookie-remover, datr)
+!messenger.com##+js(cookie-remover, datr)
 
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 

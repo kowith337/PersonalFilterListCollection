@@ -1,6 +1,6 @@
 [uBlock Origin 1.45.0]
 ! Title: kowith337's Test List
-! Version: 202304301926
+! Version: 202306181216
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -188,12 +188,12 @@ $3p,important,domain=greasyfork.org
 *##+js(refresh-defuser)
 !
 ! - Remove unnecessary cookies (Currently it's caveat due to scriptlets cannot modify or delete domain-level + HTTP only cookies)
-facebook.com,instagram.com,messenger.com##+js(cookie-remover, _js_datr)
-facebook.com,instagram.com,messenger.com##+js(cookie-remover, act)
-facebook.com,instagram.com,messenger.com##+js(cookie-remover, datr)
-facebook.com,instagram.com,messenger.com##+js(cookie-remover, noscript)
-facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-referer)
-facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-src)
+!facebook.com,instagram.com,messenger.com##+js(cookie-remover, _js_datr)
+!facebook.com,instagram.com,messenger.com##+js(cookie-remover, act)
+!facebook.com,instagram.com,messenger.com##+js(cookie-remover, datr)
+!facebook.com,instagram.com,messenger.com##+js(cookie-remover, noscript)
+!facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-referer)
+!facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-src)
 !
 ! - Often show alert dialog when users click to links, also when users trying to right-click.
 checkkorn.com##+js(alert-buster)
@@ -225,7 +225,7 @@ bangkokbiznews.com,khaosod.co.th,khaosodenglish.com,komchadluek.net,matichon.co.
 !   elements also maintained by...
 ! Raw: https://github.com/iam-py-test/my_filters_001/raw/main/scriptlets.js
 ! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
-facebook.com,instagram.com,messenger.com##+js(cookie-set, noscript, 0)
+!facebook.com,instagram.com,messenger.com##+js(cookie-set, noscript, 0)
 !
 ! Auto uncheck "Save credit card" in steam website while purchase or add funds in wallet.
 ! - It's recommended to not tied your cards with online accounts, better to manually fill by your own each time for safety and

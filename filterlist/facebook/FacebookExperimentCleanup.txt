@@ -1,6 +1,6 @@
 [uBlock Origin 1.45.0]
 ! Title: Facebook Experiment Cleanup (Beware breakage)
-! Version: 202211101651
+! Version: 202306181214
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
