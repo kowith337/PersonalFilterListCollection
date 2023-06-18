@@ -1,6 +1,6 @@
 [uBlock Origin 1.45.0]
 ! Title: kowith337's Test List
-! Version: 202306181216
+! Version: 202306181232
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -188,6 +188,7 @@ $3p,important,domain=greasyfork.org
 *##+js(refresh-defuser)
 !
 ! - Remove unnecessary cookies (Currently it's caveat due to scriptlets cannot modify or delete domain-level + HTTP only cookies)
+!   * It seems like `Meta` refuse scriptlets to delete `datr` cookies, so I think you may need to manual delete it periodically!
 !facebook.com,instagram.com,messenger.com##+js(cookie-remover, _js_datr)
 !facebook.com,instagram.com,messenger.com##+js(cookie-remover, act)
 !facebook.com,instagram.com,messenger.com##+js(cookie-remover, datr)
@@ -197,6 +198,11 @@ $3p,important,domain=greasyfork.org
 !
 ! - Often show alert dialog when users click to links, also when users trying to right-click.
 checkkorn.com##+js(alert-buster)
+!
+! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
+!   * Note that I don't know about `trusted sources`, perhaps this scriptlets possibly not work, you may need to copy this below
+!     and add to "My filters" pane by yourself instead.
+!facebook.com,instagram.com,messenger.com##+js(cookie-set, noscript, 0, /, 0)
 !
 ! - Goolag search currently abusing and keep track users by inseting tag sign with random ID strings of `bsht` in case if some
 !   users remove their tracked parameters, such as `ei`, `rlz`, `ved`, `vet`, etc., I'll disable script name functions who called
@@ -224,9 +230,6 @@ bangkokbiznews.com,khaosod.co.th,khaosodenglish.com,komchadluek.net,matichon.co.
 !   only `cookie-set` scriptlet functions from uAssets that was deprecated are resurrected, also additional proper auto-click
 !   elements also maintained by...
 ! Raw: https://github.com/iam-py-test/my_filters_001/raw/main/scriptlets.js
-! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
-!facebook.com,instagram.com,messenger.com##+js(cookie-set, noscript, 0)
-!
 ! Auto uncheck "Save credit card" in steam website while purchase or add funds in wallet.
 ! - It's recommended to not tied your cards with online accounts, better to manually fill by your own each time for safety and
 !   security of your money (either in the your actual bank accounts or you might pay later after spent some from credit card)

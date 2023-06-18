@@ -1,6 +1,6 @@
 [uBlock Origin 1.45.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202305282147
+! Version: 202306181230
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -531,6 +531,7 @@ $removeparam=atb,domain=duckduckgo.com,important
 ! Because they have `ved` parameter to obfuscase destination and also use for keep an eyes on you!!
 ! * Indeed, tracking you with reCaptcha + possibly also browser fingerprinting!!!
 ! This strict blocking will divide parameters and you may need to copy, then switch to another TLD, such as UK, JP, TH, etc.
+! Otherwise, I'll suggested to use "Whoogle" to use `Google` search without directly contact to them! ;)
 ||google.*/sorry/index?$document,important,domain=~Precaution_Google-Sorry-Spam-reCaptcha-Fingerprint
 
 ! [Mozilla AMO]
