@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202306162019
+! Version: 202306261354
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/steam
@@ -197,6 +197,9 @@ steamcommunity.com#?#.badge_title_stats .progress_info_bold:not(:has-text(/\d+?/
 ! - Hide "Your most played games" in the "How to create guide" section
 steamcommunity.com#?#.played_apps:matches-path(/guides)
 !
+! - Hide playtime (New type)
+steamcommunity.com#?#div[class^="gameslistitems"] [class^="gameslistitems_Playtime"] span:not(div[class^="gameslistitems_AchievementsProgress"] span)
+!
 ! - Remove non-games badge progress info box! (e.g. Annual awards, Community actions, Seasonal sales, etc.)
 !   * Also include these numeric gamecards ID...
 !     - [335590]  GLaDOS Potato sack (Summer 2010 + Portal 2 launch event)
@@ -218,6 +221,7 @@ steamcommunity.com#?#.review_box_content .control_block a:has(span i.funny)
 steampowered.com#?#.review_box .vote_button_ctn a span:has(i.funny)
 !
 ! - Make use of `:remove()` for delete unwanted DOM pane without leaving any nodes (require uB0 version 1.26.0 or above)
+steamcommunity.com#?##showcases.customization_edit_area .has_showcase select option[value="24"]:remove()
 steamcommunity.com#?#.badge_title_stats .badge_title_playgame:remove()
 steamcommunity.com#?#.badge_title_stats .badge_title_stats_playtime:remove()
 steamcommunity.com#?#.badge_title_stats .how_to_get_card_drops_ctn:remove()
@@ -228,7 +232,7 @@ steamcommunity.com#?#.gameListRowItem h5.ellipsis:remove()
 steamcommunity.com#?#.persona_name #NamePopup:remove()
 steamcommunity.com#?#.persona_name .namehistory_link:remove()
 steamcommunity.com#?#.replay_showcase:remove()
-steamcommunity.com#?##showcases.customization_edit_area .has_showcase select option[value="24"]:remove()
+steamcommunity.com#?#div[class^="gameslistitems"] [class^="gameslistitems_Playtime"] span:not(div[class^="gameslistitems_AchievementsProgress"] span):remove()
 steampowered.com#?##live_streams_carousel:remove()
 steampowered.com#?##promo_header_banner[class*="promotionDetailsBar"]:remove()
 steampowered.com#?#.cart_rightcol:remove()
