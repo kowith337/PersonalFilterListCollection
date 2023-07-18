@@ -1,6 +1,6 @@
 [uBlock Origin 1.48.0]
 ! Title: kowith337's Test List
-! Version: 202307182155
+! Version: 202307182202
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -169,17 +169,15 @@ facebook.com,instagram.com,messenger.com##^responseheader(x-zero-rml)
 pantip.com##^responseheader(etag)
 
 ! Strong third parties denied (with some exceptions)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! - This make use of `3p` to block everything that not come from its domain itself, however, `denyallow` rules may included if
-!   some other domains are necessary to loading with...
+! - This make use of `3p` to block everything that not come from its domain itself, however, `to` rules may included if some
+!   other domains are necessary to loading with...
 !   * Will be priority to CDNs, Captcha and some required resources, but maybe not fonts and social plugins, especially if that
 !     platform can track users and link back all off-site activities to its platform for determine users activities and show more
 !     related contents (and also zuckestions), such as all of Facebook plugins, Google Fonts, etc.
-$3p,to=google.com|gstatic.com|pantipmarket.com|ptcdn.info,from=pantip.com
-$3p,important,to=byteark.com,from=thairath.co.th
-$3p,important,to=disqus.com|disquscdn.com,from=chocolatey.org
+$3p,from=pantip.com,to=bloggang.com|google.com|gstatic.com|pantipmarket.com|ptcdn.info
+$3p,important,from=chocolatey.org,to=disqus.com|disquscdn.com
 $3p,important,from=greasyfork.org
-
-! Unbreak or Allowed only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+$3p,important,from=thairath.co.th,to=byteark.com
 
 ! Scriptlets Injection  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Legacy internal scriptlets]
@@ -268,5 +266,7 @@ steamcommunity.com#?#+js(click-element, div[class^="partnereventshared_FlexRowCo
 ! Raw: https://github.com/uBlock-user/uBO-Scriptlets/raw/master/scriptlets.js
 
 ! Platform specific - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+
+! Unbreak or Allowed only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
