@@ -1,6 +1,6 @@
 [uBlock Origin 1.48.0]
 ! Title: kowith337's Test List
-! Version: 202307182140
+! Version: 202307182155
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -122,7 +122,7 @@ steamcommunity.com#?#.workshop_header:style(background: none transparent !import
 ! Note: Only handling some query that not necessary to binding in for specific requests rather than `document`, this may conflict
 !       with "Anti survived tracking link warning" filterlist that strictly blocked page when shady parameters are binding with
 !       any URLs for keep tracking users, even you're visiting some sites off-of social platform.
-$domain=facebook.com|messenger.com,important,removeparam=/logging\_?data\[\d+?\]/
+$from=facebook.com|messenger.com,important,removeparam=/logging\_?data\[\d+?\]/
 ||facebook.com/*&entry*=$1p,xhr,important,removeparam=/^entry/
 ||facebook.com/*&privacy_*=$1p,xhr,removeparam=/^privacy_/
 ||facebook.com/*&__cft__*=$1p,removeparam=/^__cft__/
@@ -133,8 +133,8 @@ $domain=facebook.com|messenger.com,important,removeparam=/logging\_?data\[\d+?\]
 ||facebook.com/*?__cft__*=$1p,removeparam=/^__cft__/
 ||facebook.com/*?__tn__=$1p,xhr,important,removeparam=__tn__
 ||facebook.com/*?__xts__*=$1p,removeparam=/^__xts__/
-||fbcdn.net/*&_nc_*=$css,script,domain=facebook.com|messenger.com,removeparam=/^_nc_/
-||fbcdn.net/*?_nc_*=$css,script,domain=facebook.com|messenger.com,removeparam=/^_nc_/
+||fbcdn.net/*&_nc_*=$css,script,from=facebook.com|messenger.com,removeparam=/^_nc_/
+||fbcdn.net/*?_nc_*=$css,script,from=facebook.com|messenger.com,removeparam=/^_nc_/
 ||steampowered.com/*&curator_*=$removeparam=/^curator_/
 ||steampowered.com/*&ser=$removeparam=ser,important
 ||steampowered.com/*&snr=$removeparam=snr,important
@@ -146,7 +146,7 @@ $domain=facebook.com|messenger.com,important,removeparam=/logging\_?data\[\d+?\]
 
 ! Reverse removers
 ! - This will work like `removeparam` but what happened if the rules are reversed to exclude matched parameters only...?
-$doc,removeparam=~/^(ia[a-z]?|k([a-z0-9]+)?|q|uddg)/,domain=duckduckgo.com
+$doc,removeparam=~/^(ia[a-z]?|k([a-z0-9]+)?|q|uddg)/,from=duckduckgo.com
 ||adintrend.tv/hd/live/i.php$frame,removeparam=~/^((c(h|x)|s)id)/
 
 ! Aggressive removers
@@ -155,9 +155,9 @@ $doc,removeparam=~/^(ia[a-z]?|k([a-z0-9]+)?|q|uddg)/,domain=duckduckgo.com
 
 ! Strict Blocking - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ||google.*/ads/*$important
-||liberapay.com/zedeus$document,important,domain=~accident_nitter_nav_prevention
-||twitter.com/i/*/timeline/home.json$important,domain=~tweetdeck.twitter.com|~to_make_sure_that_you_always_get_latest_tweets
-||twitter.com/i/api/*/HomeTimeline$xhr,method=post,important,domain=~tweetdeck.twitter.com|~to_make_sure_that_you_always_get_tweets_from_followings_only
+||liberapay.com/zedeus$document,important,from=~accident_nitter_nav_prevention
+||twitter.com/i/*/timeline/home.json$important,from=~tweetdeck.twitter.com|~to_make_sure_that_you_always_get_latest_tweets
+||twitter.com/i/api/*/HomeTimeline$xhr,method=post,important,from=~tweetdeck.twitter.com|~to_make_sure_that_you_always_get_tweets_from_followings_only
 ! Resources Redirect  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
 ! HTML document filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -174,10 +174,10 @@ pantip.com##^responseheader(etag)
 !   * Will be priority to CDNs, Captcha and some required resources, but maybe not fonts and social plugins, especially if that
 !     platform can track users and link back all off-site activities to its platform for determine users activities and show more
 !     related contents (and also zuckestions), such as all of Facebook plugins, Google Fonts, etc.
-$3p,denyallow=google.com|gstatic.com|ptcdn.info,domain=pantip.com
-$3p,important,denyallow=byteark.com,domain=thairath.co.th
-$3p,important,denyallow=disqus.com|disquscdn.com,domain=chocolatey.org
-$3p,important,domain=greasyfork.org
+$3p,to=google.com|gstatic.com|pantipmarket.com|ptcdn.info,from=pantip.com
+$3p,important,to=byteark.com,from=thairath.co.th
+$3p,important,to=disqus.com|disquscdn.com,from=chocolatey.org
+$3p,important,from=greasyfork.org
 
 ! Unbreak or Allowed only - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 
