@@ -1,6 +1,6 @@
 [uBlock Origin 1.48.0]
 ! Title: kowith337's Test List
-! Version: 202307182206
+! Version: 202307182202
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -174,8 +174,8 @@ pantip.com##^responseheader(etag)
 !   * Will be priority to CDNs, Captcha and some required resources, but maybe not fonts and social plugins, especially if that
 !     platform can track users and link back all off-site activities to its platform for determine users activities and show more
 !     related contents (and also zuckestions), such as all of Facebook plugins, Google Fonts, etc.
-$3p,from=pantip.com,to=/^((f|p)?\.ptcdn\.info|(www\.)?(bloggang\.com|google\.com|gstatic\.com|pantipmarket\.com))/
-$3p,important,from=chocolatey.org,to=/(disqus(cdn)?\.com)/
+$3p,from=pantip.com,to=bloggang.com|google.com|gstatic.com|pantipmarket.com|ptcdn.info
+$3p,important,from=chocolatey.org,to=disqus.com|disquscdn.com
 $3p,important,from=greasyfork.org
 $3p,important,from=thairath.co.th,to=byteark.com
 
