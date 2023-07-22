@@ -1,6 +1,6 @@
 [uBlock Origin 1.48.0]
 ! Title: kowith337's Test List
-! Version: 202307182212
+! Version: 202307221013
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -218,7 +218,7 @@ t.me##+js(no-setTimeout-if, protoUrl)
 facebook.com,messenger.com#?#+js(href-sanitizer, a[href*="/l.php?"], ?u)
 google.*#?#+js(href-sanitizer, a[href*="/url?"], ?u)
 instagram.com,threads.net#?#+js(href-sanitizer, a[href*="l.instagram.com"], ?u)
-steamcommunity.com,store.steampowered.com#?#+js(href-sanitizer, a[href*="steamcommunity.com/linkfilter", ?url)
+steamcommunity.com,store.steampowered.com#?#+js(href-sanitizer, a[href*="steamcommunity.com/linkfilter"], ?url)
 youtube.com#?#+js(href-sanitizer, a[href*="/redirect?"], ?q)
 
 ! [External scriptlets from former NanoAdblocker]
