@@ -1,7 +1,7 @@
 ! uMatrix: Ruleset recipes 1.4.1
 ! Title: Self Custom Ruleset
-! Version: 202307250010
-! VersionNumber: 0.46.0
+! Version: 202307250017
+! VersionNumber: 0.46.1
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
@@ -108,16 +108,16 @@ Invidious [Global]
       _ googlevideo.com media
 
 Misskey
-  ! Only main instance of Misskey and any forks that include
-  ! contacting to 藍 domain, also "CrapFlareInsights" too!
-  ! If it doesn't have those domains, it seems fine to keep
-  ! forbid ServiceWorker, otherwise, you will get falsely
-  ! told from Misskey to disable content blockers...
-  !
-  ! Rule recommendations:
-  ! * cloudflareinsights.com * block
   * xn--931a.moe
-    no-workers: _ false
+    ! Only main instance of Misskey and any forks that include
+    ! contacting to 藍 domain, also "CrapFlareInsights" too!
+    ! If it doesn't have those domains, it seems fine to keep
+    ! forbid ServiceWorker, otherwise, you will get falsely
+    ! told from Misskey to disable content blockers...
+    !
+    ! Rule recommendations:
+    ! * cloudflareinsights.com * block
+      no-workers: _ false
 
 Netflix Fast Internet Test
   fast.com *
