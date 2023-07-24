@@ -1,11 +1,10 @@
 ! uMatrix: Ruleset recipes 1.4.1
 ! Title: Self Custom Ruleset
-! Version: 202207062203
-! VersionNumber: 0.45.2
+! Version: 202307250010
+! VersionNumber: 0.46.0
 ! Maintainer: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
 ! Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Ruleset%20Receipts
-! Mirror: https://gitlab.com/kowith337/PersonalFilterListCollection/raw/master/ruleset/recipes_custom.txt
 
 Bing Translator (Edge Internal)
   * edge.microsoft.com
@@ -96,7 +95,6 @@ Google Translate (NewTab method)
     _ translate.googleapis.com xhr
     _ www.gstatic.com script
 
-
 Invidious [Global]
   * googlevideo.com
     ! You can append `(?|&)local=1` parameter in your browser
@@ -108,6 +106,18 @@ Invidious [Global]
     ! due to server performance, storage limitations and
     ! specific reasons from owner of its instance...
       _ googlevideo.com media
+
+Misskey
+  ! Only main instance of Misskey and any forks that include
+  ! contacting to 藍 domain, also "CrapFlareInsights" too!
+  ! If it doesn't have those domains, it seems fine to keep
+  ! forbid ServiceWorker, otherwise, you will get falsely
+  ! told from Misskey to disable content blockers...
+  !
+  ! Rule recommendations:
+  ! * cloudflareinsights.com * block
+  * xn--931a.moe
+    no-workers: _ false
 
 Netflix Fast Internet Test
   fast.com *
