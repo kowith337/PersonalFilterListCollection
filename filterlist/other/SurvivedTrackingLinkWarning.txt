@@ -1,6 +1,6 @@
 [uBlock Origin 1.16.20]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning
-! Version: 202308052351
+! Version: 202308052354
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -67,7 +67,6 @@
 ||facebook.com/*&__xts__[0]=$document,important,domain=~FacebookInternalTracking_XTS
 ||facebook.com/*&acontext=$document,important,domain=~FacebookInternalTracking_AContext
 ||facebook.com/*&dti=$document,important,domain=~FacebookInternalTracking_DTI
-||facebook.com/*&eav=$document,important,domain=~FacebookInternalTracking_EAV
 ||facebook.com/*&eid=$document,important,domain=~FacebookInternalTracking_EID
 ||facebook.com/*&entry*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
 ||facebook.com/*&fb_dtsg=$document,important,domain=~m.facebook.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com|~FacebookInternalTracking_DTSG
@@ -90,7 +89,6 @@
 ||facebook.com/*?__xts__[0]=$document,important,domain=~FacebookInternalTracking_XTS
 ||facebook.com/*?acontext=$document,important,domain=~FacebookInternalTracking_AContext
 ||facebook.com/*?dti=$document,important,domain=~FacebookInternalTracking_DTI
-||facebook.com/*?eav=$document,important,domain=~FacebookInternalTracking_EAV
 ||facebook.com/*?eid=$document,important,domain=~FacebookInternalTracking_EID
 ||facebook.com/*?entry*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
 ||facebook.com/*?fb_dtsg=$document,important,domain=~m.facebook.com|~mtouch.facebook.com|~touch.facebook.com|~www.facebook.com|~FacebookInternalTracking_DTSG
