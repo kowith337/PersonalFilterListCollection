@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202308052338
+! Version: 202308052351
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -85,8 +85,6 @@
 ||facebook.com/*&fref=$xmlhttprequest
 ||facebook.com/*&hc_*=$document,important,domain=~FacebookInternalTracking_HC-Wild
 ||facebook.com/*&hc_*=$xmlhttprequest
-||facebook.com/*&lst=$document,important,domain=~FacebookInternalTracking_LST
-||facebook.com/*&lst=$xmlhttprequest
 ||facebook.com/*&mibextid=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareLink
 ||facebook.com/*&mibextid=$xmlhttprequest
 ||facebook.com/*&pn_*=$document,important,domain=~FacebookInternalTracking_PN-Wild
@@ -135,8 +133,6 @@
 ||facebook.com/*?fref=$xmlhttprequest
 ||facebook.com/*?hc_*=$document,important,domain=~FacebookInternalTracking_HC-Wild
 ||facebook.com/*?hc_*=$xmlhttprequest
-||facebook.com/*?lst=$document,important,domain=~FacebookInternalTracking_LST
-||facebook.com/*?lst=$xmlhttprequest
 ||facebook.com/*?mibextid=$document,important,domain=~FacebookInternalTracking_TrackbackExternalShareLink
 ||facebook.com/*?mibextid=$xmlhttprequest
 ||facebook.com/*?pn_*=$document,important,domain=~FacebookInternalTracking_PN-Wild
@@ -219,8 +215,6 @@
 ||messenger.com/*&fref=$xmlhttprequest
 ||messenger.com/*&hc_*=$document,important,domain=~FacebookInternalTracking_HC_Wild
 ||messenger.com/*&hc_*=$xmlhttprequest
-||messenger.com/*&lst=$document,important,domain=~FacebookInternalTracking_LST
-||messenger.com/*&lst=$xmlhttprequest
 ||messenger.com/*&pn_*=$document,important,domain=~FacebookInternalTracking_PN_Wild
 ||messenger.com/*&pn_*=$xmlhttprequest
 ||messenger.com/*&privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
@@ -263,8 +257,6 @@
 ||messenger.com/*?fref=$xmlhttprequest
 ||messenger.com/*?hc_*=$document,important,domain=~FacebookInternalTracking_HC_Wild
 ||messenger.com/*?hc_*=$xmlhttprequest
-||messenger.com/*?lst=$document,important,domain=~FacebookInternalTracking_LST
-||messenger.com/*?lst=$xmlhttprequest
 ||messenger.com/*?pn_*=$document,important,domain=~FacebookInternalTracking_PN_Wild
 ||messenger.com/*?pn_*=$xmlhttprequest
 ||messenger.com/*?privacy_mutation_token=$document,important,domain=~FacebookInternalTracking_FalsePrivacyToken
