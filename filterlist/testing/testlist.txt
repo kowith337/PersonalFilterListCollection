@@ -1,6 +1,6 @@
 [uBlock Origin 1.48.0]
 ! Title: kowith337's Test List
-! Version: 202307221013
+! Version: 202308052331
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -185,6 +185,9 @@ $3p,important,from=thairath.co.th,denyallow=byteark.com
 ! - Global Apply: Prevent use of auto-refresh, big companies mostly use for redirect to login page before viewing contents!
 *##+js(refresh-defuser)
 !
+! - Often show alert dialog when users click to links, also when users trying to right-click.
+checkkorn.com##+js(alert-buster)
+!
 ! - Remove unnecessary cookies (Currently it's caveat due to scriptlets cannot modify or delete domain-level + HTTP only cookies)
 !   * It seems like `Meta` refuse scriptlets to delete `datr` cookies, so I think you may need to manual delete it periodically!
 !facebook.com,instagram.com,messenger.com##+js(cookie-remover, _js_datr)
@@ -194,13 +197,18 @@ $3p,important,from=thairath.co.th,denyallow=byteark.com
 !facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-referer)
 !facebook.com,instagram.com,messenger.com##+js(cookie-remover, x-src)
 !
-! - Often show alert dialog when users click to links, also when users trying to right-click.
-checkkorn.com##+js(alert-buster)
-!
 ! - Regression from FZK list: Re-set NoScript cookie state to 'disable'
 !   * Note that I don't know about `trusted sources`, perhaps this scriptlets possibly not work, you may need to copy this below
 !     and add to "My filters" pane by yourself instead.
 !facebook.com,instagram.com,messenger.com##+js(cookie-set, noscript, 0, /, 0)
+!
+! - Sanitize tracked setting links to directly jump into actual each settings page instead of wandering in the `/xcs/` path that
+!   intent to logging your behavior!
+!   * Beware that there's many leftover parameters after sanitized those settings links, better to have remove unnecessary params
+!     or block `document` before it's load.
+!   ** I've notice that some settings aren't have the `redirect_uri` parameter, e.g. Reels, but I don't care because I'm always
+!      use basic site whenever I open FB!
+facebook.com#?#+js(href-sanitizer, a[href*="/privacy/xcs/action/logging"], ?redirect_uri)
 !
 ! - Goolag search currently abusing and keep track users by inseting tag sign with random ID strings of `bsht` in case if some
 !   users remove their tracked parameters, such as `ei`, `rlz`, `ved`, `vet`, etc., I'll disable script name functions who called
