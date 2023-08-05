@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: [Borrow Ability] Anti Survived Tracking Link Warning (Overdone Edition)
-! Version: 202305282200
+! Version: 202308052338
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/other
@@ -73,6 +73,8 @@
 ||facebook.com/*&acontext=$xmlhttprequest
 ||facebook.com/*&dti=$document,important,domain=~FacebookInternalTracking_DTI
 ||facebook.com/*&dti=$xmlhttprequest
+||facebook.com/*&eav=$document,important,domain=~FacebookInternalTracking_EAV
+||facebook.com/*&eav=$xmlhttprequest
 ||facebook.com/*&eid=$document,important,domain=~FacebookInternalTracking_EID
 ||facebook.com/*&eid=$xmlhttprequest
 ||facebook.com/*&entry*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
@@ -121,6 +123,8 @@
 ||facebook.com/*?acontext=$xmlhttprequest
 ||facebook.com/*?dti=$document,important,domain=~FacebookInternalTracking_DTI
 ||facebook.com/*?dti=$xmlhttprequest
+||facebook.com/*?eav=$document,important,domain=~FacebookInternalTracking_EAV
+||facebook.com/*?eav=$xmlhttprequest
 ||facebook.com/*?eid=$document,important,domain=~FacebookInternalTracking_EID
 ||facebook.com/*?eid=$xmlhttprequest
 ||facebook.com/*?entry*=$document,important,domain=~FacebookInternalTracking_Entry-Wild
