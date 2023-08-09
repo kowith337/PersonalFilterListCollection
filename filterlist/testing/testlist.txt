@@ -1,6 +1,6 @@
 [uBlock Origin 1.48.0]
 ! Title: kowith337's Test List
-! Version: 202308052331
+! Version: 202308092100
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -12,7 +12,7 @@
 steamcommunity.com#?#.workshop_header .browseAppDetails
 
 ! [Teddit] Remove subreddit links at top bar (wasteful space taking)
-teddit.net,i.opnxng.com,incogsnoo.com,rdt.trom.tf,reddit.lol,snoo.ioens.is,td.vern.cc,teddit.adminforge.de,teddit.bus-hit.me,teddit.froth.zone,teddit.namazso.eu,teddit.pussthecat.org,teddit.rawbit.ninja,teddit.sethforprivacy.com,teddit.tinfoil-hat.net,teddit.tokhmi.xyz,teddit.totaldarkness.net,teddit.zaggy.nl#?##topbar .top-links a[href^="/r/"], #topbar .top-links span.separator
+#?##topbar .top-links a[href^="/r/"], #topbar .top-links span.separator
 
 ! DOM Chaining  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Blognone]
@@ -46,13 +46,13 @@ youtube.com#?##masthead #end #buttons ytd-button-renderer:has(a[href*="/ServiceL
 ! - For unclear reason, because I have use touchscreen notebook and found that I've redirected to donation page unintentionally,
 !   even I just tap onto the blank space, probably navigation header placement issue that will be a short time while page loading
 !   will be see some icon enlarged, absolutely it's `Liberapay` logo are cover the page entirely at that moment!
-nitter.net,bird.habedieeh.re,bird.trom.tf,n.l5.ca,n.ramle.be,nitter.1d4.us,nitter.at,nitter.bird.froth.zone,nitter.bus-hit.me,nitter.ca,nitter.caioalonso.com,nitter.cutelab.space,nitter.cz,nitter.dcs0.hu,nitter.drivet.xyz,nitter.esmailelbob.xyz,nitter.evil.site,nitter.fdn.fr,nitter.fly.dev,nitter.foss.wtf,nitter.grimneko.de,nitter.hu,nitter.inpt.fr,nitter.ir,nitter.it,nitter.kavin.rocks,nitter.kylrth.com,nitter.lacontrevoie.fr,nitter.manasiwibi.com,nitter.mint.lgbt,nitter.moomoo.me,nitter.namazso.eu,nitter.nicfab.eu,nitter.nl,nitter.poast.org,nitter.priv.pw,nitter.privacy.com.de,nitter.privacydev.net,nitter.projectsegfau.lt,nitter.pussthecat.org,nitter.pw,nitter.qwik.space,nitter.sethforprivacy.com,nitter.slipfox.xyz,nitter.smnz.de,nitter.soopy.moe,nitter.spaceint.fr,nitter.tiekoetter.com,nitter.tokhmi.xyz,nitter.unixfox.eu,nitter.weiler.rocks,nt.vern.cc,nttr.stream,tw.artemislena.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.beparanoid.de,twitter.censors.us,twt.funami.tech,unofficialbird.com#?#.inner-nav a[href*="liberapay"]
+#?#.inner-nav a[href*="liberapay"]
 !
 ! - Remove unsupported card contents placeholder
 !   > Spaces: Remove empty box since it just a placeholder box that cannot show anything.
 !   > Broadcasts: Remove bottom card title, left only image preview.
-nitter.net,bird.habedieeh.re,bird.trom.tf,n.l5.ca,n.ramle.be,nitter.1d4.us,nitter.at,nitter.bird.froth.zone,nitter.bus-hit.me,nitter.ca,nitter.caioalonso.com,nitter.cutelab.space,nitter.cz,nitter.dcs0.hu,nitter.drivet.xyz,nitter.esmailelbob.xyz,nitter.evil.site,nitter.fdn.fr,nitter.fly.dev,nitter.foss.wtf,nitter.grimneko.de,nitter.hu,nitter.inpt.fr,nitter.ir,nitter.it,nitter.kavin.rocks,nitter.kylrth.com,nitter.lacontrevoie.fr,nitter.manasiwibi.com,nitter.mint.lgbt,nitter.moomoo.me,nitter.namazso.eu,nitter.nicfab.eu,nitter.nl,nitter.poast.org,nitter.priv.pw,nitter.privacy.com.de,nitter.privacydev.net,nitter.projectsegfau.lt,nitter.pussthecat.org,nitter.pw,nitter.qwik.space,nitter.sethforprivacy.com,nitter.slipfox.xyz,nitter.smnz.de,nitter.soopy.moe,nitter.spaceint.fr,nitter.tiekoetter.com,nitter.tokhmi.xyz,nitter.unixfox.eu,nitter.weiler.rocks,nt.vern.cc,nttr.stream,tw.artemislena.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.beparanoid.de,twitter.censors.us,twt.funami.tech,unofficialbird.com#?#.timeline-item .card-container[href*="/i/spaces/"]
-nitter.net,bird.habedieeh.re,bird.trom.tf,n.l5.ca,n.ramle.be,nitter.1d4.us,nitter.at,nitter.bird.froth.zone,nitter.bus-hit.me,nitter.ca,nitter.caioalonso.com,nitter.cutelab.space,nitter.cz,nitter.dcs0.hu,nitter.drivet.xyz,nitter.esmailelbob.xyz,nitter.evil.site,nitter.fdn.fr,nitter.fly.dev,nitter.foss.wtf,nitter.grimneko.de,nitter.hu,nitter.inpt.fr,nitter.ir,nitter.it,nitter.kavin.rocks,nitter.kylrth.com,nitter.lacontrevoie.fr,nitter.manasiwibi.com,nitter.mint.lgbt,nitter.moomoo.me,nitter.namazso.eu,nitter.nicfab.eu,nitter.nl,nitter.poast.org,nitter.priv.pw,nitter.privacy.com.de,nitter.privacydev.net,nitter.projectsegfau.lt,nitter.pussthecat.org,nitter.pw,nitter.qwik.space,nitter.sethforprivacy.com,nitter.slipfox.xyz,nitter.smnz.de,nitter.soopy.moe,nitter.spaceint.fr,nitter.tiekoetter.com,nitter.tokhmi.xyz,nitter.unixfox.eu,nitter.weiler.rocks,nt.vern.cc,nttr.stream,tw.artemislena.eu,tweet.lambda.dance,twitter.076.ne.jp,twitter.beparanoid.de,twitter.censors.us,twt.funami.tech,unofficialbird.com#?#.timeline-item .card-content-container[href*="/i/broadcasts/"] .card-content
+#?#.timeline-item .card-container[href*="/i/spaces/"]
+#?#.timeline-item .card-content-container[href*="/i/broadcasts/"] .card-content
 
 ! [Pantip] Explicit and spam topic name (Use Thai unicode characters because most language of this site are mainly in Thai)
 pantip.com#?#.pt-list .pt-list-item:has(h2 a:has-text(ตระกองขวัญ))
@@ -202,14 +202,6 @@ checkkorn.com##+js(alert-buster)
 !     and add to "My filters" pane by yourself instead.
 !facebook.com,instagram.com,messenger.com##+js(cookie-set, noscript, 0, /, 0)
 !
-! - Sanitize tracked setting links to directly jump into actual each settings page instead of wandering in the `/xcs/` path that
-!   intent to logging your behavior!
-!   * Beware that there's many leftover parameters after sanitized those settings links, better to have remove unnecessary params
-!     or block `document` before it's load.
-!   ** I've notice that some settings aren't have the `redirect_uri` parameter, e.g. Reels, but I don't care because I'm always
-!      use basic site whenever I open FB!
-facebook.com#?#+js(href-sanitizer, a[href*="/privacy/xcs/action/logging"], ?redirect_uri)
-!
 ! - Goolag search currently abusing and keep track users by inseting tag sign with random ID strings of `bsht` in case if some
 !   users remove their tracked parameters, such as `ei`, `rlz`, `ved`, `vet`, etc., I'll disable script name functions who called
 !   that, however, some regional domains (e.g. UK) doesn't have this thing appeared behind...
@@ -223,6 +215,7 @@ t.me##+js(no-setTimeout-if, protoUrl)
 !     legitimately used for good, while others aren't because they also added extra parameters for track users!
 !   ** Beware that you will directly visit external sites without any warning, consider to open in private mode first or send
 !      suspicious link into another browsers for isolate your browsing behavior!!
+facebook.com#?#+js(href-sanitizer, a[href*="/privacy/xcs/action/logging"], ?redirect_uri)
 facebook.com,messenger.com#?#+js(href-sanitizer, a[href*="/l.php?"], ?u)
 google.*#?#+js(href-sanitizer, a[href*="/url?"], ?u)
 instagram.com,threads.net#?#+js(href-sanitizer, a[href*="l.instagram.com"], ?u)
