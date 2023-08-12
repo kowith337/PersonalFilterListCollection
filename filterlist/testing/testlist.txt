@@ -1,6 +1,6 @@
 [uBlock Origin 1.48.0]
 ! Title: kowith337's Test List
-! Version: 202308092100
+! Version: 202308121849
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -123,6 +123,7 @@ steamcommunity.com#?#.workshop_header:style(background: none transparent !import
 !       with "Anti survived tracking link warning" filterlist that strictly blocked page when shady parameters are binding with
 !       any URLs for keep tracking users, even you're visiting some sites off-of social platform.
 $from=facebook.com|messenger.com,important,removeparam=/logging\_?data\[\d+?\]/
+$from=steamcommunity.com|steampowered.com,important,removeparam=outc
 ||facebook.com/*&entry*=$1p,xhr,important,removeparam=/^entry/
 ||facebook.com/*&privacy_*=$1p,xhr,removeparam=/^privacy_/
 ||facebook.com/*&__cft__*=$1p,removeparam=/^__cft__/
