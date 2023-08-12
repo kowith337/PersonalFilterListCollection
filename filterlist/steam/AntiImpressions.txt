@@ -1,6 +1,6 @@
 [uBlock Origin 1.50.0]
 ! Title: Steam Dis-Recommender Filters - Anti Impressions DLC
-! Version: 202306162019
+! Version: 202308121839
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/steam
@@ -43,10 +43,8 @@
 !   that you've planned to checkout and then put into the cart one by one until you've got all of games that you really want to.
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! [Non-basic filtering]
-steampowered.com#?#*:remove-attr(app_impression_tracked)
-steampowered.com#?#*:remove-attr(data-ds-appid)
-steampowered.com#?#*:remove-class(app_impression_tracked)
-steampowered.com#?#*:remove-class(data-ds-appid)
+steamcommunity.com,steampowered.com#?#*[data-ds-appid]:watch-attr(class):remove-class(app_impression_tracked)
+steamcommunity.com,steampowered.com#?#*[data-ds-packageid]:watch-attr(class):remove-class(app_impression_tracked)
 
 ! [Scriplet injector rules]
 steampowered.com#?#+js(set, CAppearMonitor, noopFunc)
