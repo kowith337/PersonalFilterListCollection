@@ -8,7 +8,7 @@ This repo will have some collection of filterlists that I've created, each list 
 
 Currently known have filterlist for
 
-- uBlock Origin / Nano Adblocker
+- uBlock Origin
   - APKMirror
   - Facebook (Mostly mobile layout)
   - Gelbooru [(Moved from this repo)](https://github.com/kowith337/gelbolube)

@@ -1,6 +1,6 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client
-# Version: 202306052317
+# Version: 202309071632
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -103,22 +103,27 @@ wt-eu02.net
 
 # ZuckBook tracking prevention
 # Note: I've added this due to I'm always NOT USING ANY ZUCKBOOK APPS, the only way I use ZuckBook is via browser only, however,
-#       certain apps and website are added Zuck's assets and/or SDK that have lots of connections to ZuckBook across websites to
+#       Zuck start to ban wrapper apps and raise false alarm to users who use those apps will be treated as unauthorised access,
+#       then you will get forced to open in their bloated official app or plain browser (no matter about desktop or mobile) for
+#       review all activities that you've done via wrapper apps, you will be oriented to delete those activities regardless of
+#       you exactly did it all of them!
+# Also: Certain apps and website are added Zuck's assets and/or SDK that have lots of connections to ZuckBook across websites to
 #       tracking you everywhere and everything just for determine interests of users for show targeted ads and zuckestions based
 #       on user actions and sites that users visited whenever users came back to ZuckBook, this is a great punishments agains it!
 # Hint: If you're still addicted to use ZuckBook, consider to use within browser that support DoH and use any resolvers to bypass
 #       blocking, for Firefox-based you may need to set `network.trr.mode` to 3 because it will strictly use DoH for resolve
 #       domains instead of use both generic and DoH together that may result of ZuckBook domains still blocked, while Chrome and
-#       Chromium will prioritize DoH if the websites are blocked locally!!
-discoverapp.com                        # Subset of "Free Basics" services to access free and/or sponsored contents, include regional-based popular websites
+#       Chromium will prioritize DoH if these domains below are blocked locally!!
+discoverapp.com                        # Subset of "Free Basics" services to access free and/or carrier-sponsored contents, include regional-based popular websites
 expresswifi.com                        # Subset of "Free Basics" services to access internet via Zuck's sponsored Wi-Fi
 facebook.com
 facebook.net
 fbpigeon.com
 freebasics.com                         # It's their core domain
-i.org                                  # Shortened of "internet.org", seems sponsored by Onavo
+i.org                                  # Shortened of "internet.org", sponsored by Onavo!
 internet.org                           # Formerly (domain) name of "Free Basics"
 messenger.com
+threads.net                            # Their new service (Twitter copycat, require Instagram but I've deleted long time ago, so I have no reasons to join!)
 
 # Less privacy instance block!
 604kph.xyz
@@ -179,7 +184,9 @@ oelrichsgarcia.de
 oversold.host
 palash.dev
 piped.video
+pistasjis.net                          # Be nice to throw donation links without UTM-ish, otherwise, I deemed to not trust this instance like `odyssey346` !
 privacytools.io
+projectsegfau.lt                       # I can't open Invidious, Nitter, etc. while use Tor (Invizible), they shove "Your IP is kinda shit ngl" text on screen, so this domain no longer welcome Tor users?
 quadtr.ee
 r.nf
 rawbit.ninja
