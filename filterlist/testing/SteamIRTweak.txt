@@ -1,0 +1,47 @@
+[uBlock Origin 1.32.0]
+! Title: Steam Interactive Recommender CSS Tweak (Testing)
+! Version: 202309071317
+! Expires: 2 days
+! Author: kowith337
+! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist
+! Descriptions: This is a CSS tweak rules for apply in "Steam Interactive Recommender" page
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Know tweak lists
+! - Permanenly show game name instead of require mouse hover to reveal (as well as "Exclude" text button), also enlarge text to
+!   12px and make it bold instead of regular 10px!
+! - Priority game banner among microtrailler in game lists since SDR lists permanently prevent microtrailers to be loaded!
+! - Remove duplicate and repetitive of your identity (e.g. avatar above of your game lists)
+! - Remove header descriptions to make you go straight for customise!
+! - Remove its banner of your game list if you've exclude it! (also make "Include" button transparent)
+! - Remove playtimes of all games that you've spent on. (and time since last played as well)
+!
+! Known issues
+! - Game lists are cutted and cannot scroll any furthur
+! - Long blank bottom space and its cut the game lists area
+! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Soft-remove
+steampowered.com#?#.game_title_area .saleEventBannerLink
+steampowered.com#?#[class^="interactiverecommender_Container"] [class^="interactiverecommender_TopSection"]
+steampowered.com#?#[class^="interactiverecommender_List"] [class*="interactiverecommender_Ignored"] a img
+steampowered.com#?#[class^="interactiverecommender_List"] [class^="interactiverecommender_PlaytimeInfo"] [class^="interactiverecommender_HoursPlayed"]
+steampowered.com#?#[class^="interactiverecommender_List"] [class^="interactiverecommender_PlaytimeInfo"] [class^="interactiverecommender_LastPlayed"]
+steampowered.com#?#[class^="interactiverecommender_PersonalInfo"] [class^="interactiverecommender_GameCount"]
+steampowered.com#?#[class^="interactiverecommender_PersonalInfo"] [class^="interactiverecommender_TotalTime"]
+steampowered.com#?#[class^="interactiverecommender_PlaytimeList"] [class^="interactiverecommender_Header"]
+steampowered.com#?#[class^="interactiverecommender_PlaytimeList"] [class^="interactiverecommender_IdentityBlock"]
+steampowered.com#?#[class^="interactiverecommender_RecommendationList"] [class^="interactiverecommender_Header"]
+
+! CSS Style override
+steampowered.com#?#[class^="interactiverecommender_List"] [class*="interactiverecommender_Ignored"] [class^="interactiverecommender_PlaytimeInfo"] [class^="interactiverecommender_IgnoreToggle"]:style(color: transparent !important)
+steampowered.com#?#[class^="interactiverecommender_List"] [class^="interactiverecommender_PlaytimeInfo"] [class^="interactiverecommender_IgnoreToggle"]:style(background: none transparent !important; display: block !important; text-align: left !important; width: fit-content !important)
+steampowered.com#?#[class^="interactiverecommender_List"] [class^="interactiverecommender_PlaytimeInfo"] [class^="interactiverecommender_Title"]:style(display: block !important; font-weight: bold)
+steampowered.com#?#[class^="interactiverecommender_List"] [class^="interactiverecommender_PlaytimeInfo"]:style(align-items: flex-start !important; justify-content: flex-start !important)
+steampowered.com#?#[class^="interactiverecommender_List"] [class^="interactiverecommender_RecommendationEntry"] [class^="interactiverecommender_LeftSection"] [class^="interactiverecommender_Logo"]:style(opacity: 1 !important)
+steampowered.com#?#[class^="interactiverecommender_PlaytimeList"] [class^="interactiverecommender_List"] *:style(font-size: 12px !important)
+
+! Hard-remove
+steampowered.com#?##points_shop_root .Panel div[class^="styles_PageHomeTop"]:remove()
+steampowered.com#?#[class^="interactiverecommender_List"] [class^="interactiverecommender_PlaytimeInfo"] [class^="interactiverecommender_HoursPlayed"]:remove()
+steampowered.com#?#[class^="interactiverecommender_List"] [class^="interactiverecommender_PlaytimeInfo"] [class^="interactiverecommender_LastPlayed"]:remove()
+steampowered.com#?#[class^="interactiverecommender_PersonalInfo"] [class^="interactiverecommender_GameCount"]:remove()
+steampowered.com#?#[class^="interactiverecommender_PersonalInfo"] [class^="interactiverecommender_TotalTime"]:remove()

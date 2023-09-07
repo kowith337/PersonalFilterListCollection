@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202306261354
+! Version: 202309071318
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/steam
@@ -67,6 +67,9 @@ steampowered.com#?#.search_labs_banner
 !   already put in your cart and ready to checkout at a later time!
 steampowered.com#?#.cart_rightcol
 !
+! - If the game that you're viewing currently participate to sale evnt (not seasonal and annual), remove those sale event banner!
+steampowered.com#?#.game_title_area .saleEventBannerLink
+!
 ! - Now you've already logged in, what then?
 steampowered.com#?#.home_content_ctn #content_loading
 steampowered.com#?#.home_content_ctn #content_more
@@ -123,6 +126,10 @@ steampowered.com#?##purchase_summary_area .remote_download_body
 steampowered.com#?#.queue_actions_ctn #nextInDiscoveryQueue
 steampowered.com#?#.queue_actions_ctn .queue_controls_description
 steampowered.com#?#.queue_ctn .queue_controls_description
+!
+! - Remove points shop header that show animated things, this make browser lagging too much, lagging by viewing animated items
+!   in lists is enough!
+steampowered.com#?##points_shop_root .Panel div[class^="styles_PageHomeTop"]:remove()
 
 ! [Faded community zone]
 ! WHAT COULD GO WRONG!?
@@ -240,6 +247,7 @@ steampowered.com#?#.contenthub_dailydeal_container:remove()
 steampowered.com#?#.contenthub_featured_item_spotlight:remove()
 steampowered.com#?#.contenthub_specials_ctn .contenthub_specials_grid:remove()
 steampowered.com#?#.contenthub_spotlight_container:remove()
+steampowered.com#?#.game_title_area .saleEventBannerLink:remove()
 steampowered.com#?#.home_content_ctn #content_more:remove()
 steampowered.com#?#.home_content_ctn #content_none:remove()
 steampowered.com#?#.home_content_ctn #content_out:remove()
@@ -258,7 +266,10 @@ steampowered.com#?#[data-panel].setup_microtrailer .contents video:remove()
 steamcommunity.com,steampowered.com#?#*:style(transition: none !important)
 !
 ! - Re-paint "Give award" icon to be grayscale instead of `yellow`
-steamcommunity.com,steampowered.com##img.reward_btn_icon:style(filter: grayscale(100%) !important)
+steamcommunity.com,steampowered.com#?#img.reward_btn_icon:style(filter: grayscale(100%) !important)
+!
+! - Make wallet balance text transparent instead of absolutlely show them!
+steamcommunity.com,steampowered.com#?##header_wallet_ctn #header_wallet_balance:style(color: transparent !important)
 !
 ! - In the community home, hide all shortcuts that show game lists that based on your playtime.
 steamcommunity.com#?#.community_home_app_shortcuts:style(visibility:hidden !important)

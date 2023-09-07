@@ -1,6 +1,6 @@
 [uBlock Origin 1.45.0]
 ! Title: Facebook Zuckestion Killer - Base
-! Version: 202211101651
+! Version: 202309071322
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/blob/master/filterlist/facebook
@@ -21,23 +21,28 @@
 ||*?fbclid=$important,removeparam=fbclid
 ||facebook.com/flx/*&h=$important,removeparam=h
 ||facebook.com/flx/*?h=$important,removeparam=h
-||facebook.com/l.php$document,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_PHP
-||l.facebook.com$document,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_DOMAIN
-||l.messenger.com$document,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_DOMAIN
-||lm.facebook.com$document,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_DOMAIN
-||lm.messenger.com$document,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_DOMAIN
-||messenger.com/l.php$document,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_PHP
+||facebook.com/l.php$doc,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_PHP
+||l.facebook.com$doc,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_DOMAIN
+||l.messenger.com$doc,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_DOMAIN
+||lm.facebook.com$doc,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_DOMAIN
+||lm.messenger.com$doc,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_DOMAIN
+||messenger.com/l.php$doc,xhr,important,domain=~TRACKING-OUTGOING_URL_REDIRECT_PHP
 !
 ! Page blocking
 ||facebook.com/gaming/browse/games/?s=SUGGESTED$important
 ||facebook.com/gaming/browse/games/?*&s=SUGGESTED$important
-||facebook.com/gaming/browse/games/?s=SUGGESTED$document,important,domain=~ZUCKESTED-GAMES_BROWSE_LISTS_SORTING
-||facebook.com/gaming/browse/games/?*&s=SUGGESTED$document,important,domain=~ZUCKESTED-GAMES_BROWSE_LISTS_SORTING
+||facebook.com/gaming/browse/games/?s=SUGGESTED$doc,important,domain=~ZUCKESTED-GAMES_BROWSE_LISTS_SORTING
+||facebook.com/gaming/browse/games/?*&s=SUGGESTED$doc,important,domain=~ZUCKESTED-GAMES_BROWSE_LISTS_SORTING
+||facebook.com/*?_ft_=encrypted_tracking_data.*$doc,important,domain=~BLOCK-PARAMETER-ENCRYPTED-TRACKING-DATA
+||facebook.com/*&_ft_=encrypted_tracking_data.*$doc,important,domain=~BLOCK-PARAMETER-ENCRYPTED-TRACKING-DATA
+!
+! Neutralise unwanted parameters
+||facebook.com/*?_ft_=encrypted_tracking_data.*$doc,xhr
+||facebook.com/*&_ft_=encrypted_tracking_data.*$doc,xhr
 
 ! Network Blocking
 ! to prevent sending requests to show related contents, determine user action about how users use Facebook, nasty redirect, etc.
 /PagesTimelineChainingPagelet$important,domain=facebook.com
-/qp/action/redirect$important,domain=facebook.com
 ||facebook.com/*/promotion_trigger_info$all,important
 ||facebook.com/ad_campaign/landing.php$important
 ||facebook.com/adnw_logging/$important
@@ -126,6 +131,7 @@
 ||facebook.com/pymk/$important,~xmlhttprequest
 ||facebook.com/pymk/$~xmlhttprequest
 ||facebook.com/pymk/funnel_logging$important
+||facebook.com/qp/action$doc,important
 ||facebook.com/qp/action/redirect$important
 ||facebook.com/related-application/$important
 ||facebook.com/relay/bootload/?component=AdsCMChromeRenderer$important
@@ -595,7 +601,7 @@ m.facebook.com,mtouch.facebook.com,touch.facebook.com#?##pages_msite_body_conten
 ||facebook.com/ads/$~document
 ||facebook.com/ascend_mr_no$important,~document
 ||facebook.com/ds/$~document
-||facebook.com/friends/center/suggestions$important,~document,~xmlhttprequest
+||facebook.com/friends/center/suggestions$important,~doc,~xhr
 ||facebook.com/goodwill/$important,~document
 ||facebook.com/sketch_results$important,~document
 !#endif
