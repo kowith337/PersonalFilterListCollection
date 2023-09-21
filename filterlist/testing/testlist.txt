@@ -1,6 +1,6 @@
 [uBlock Origin 1.48.0]
 ! Title: kowith337's Test List
-! Version: 202308121849
+! Version: 202309211243
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -164,7 +164,11 @@ $doc,removeparam=~/^(ia[a-z]?|k([a-z0-9]+)?|q|uddg)/,from=duckduckgo.com
 ! HTML document filtering - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Note: Require post-quantum of Firefox or any forks to read these rules, except for response header that it seems aim to support
 !       all platforms.
-facebook.com,instagram.com,messenger.com##^responseheader(set-cookie, /^datr/)
+!#if cap_html_filtering
+! Use CrapFlare beacon script on site = SHIT!
+*#?#^script[defer][data-cf-beacon]
+!#endif
+facebook.com,instagram.com,messenger.com##^responseheader(set-cookie, datr)
 facebook.com,instagram.com,messenger.com##^responseheader(x-zero-eh)
 facebook.com,instagram.com,messenger.com##^responseheader(x-zero-rml)
 pantip.com##^responseheader(etag)

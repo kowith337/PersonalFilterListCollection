@@ -1,6 +1,6 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client
-# Version: 202309091659
+# Version: 202309211241
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -184,7 +184,7 @@ oelrichsgarcia.de
 oversold.host
 palash.dev
 piped.video
-pistasjis.net                          # Be nice to throw donation links without UTM-ish, otherwise, I flagged to not trust this instance like `odyssey346` !
+pistasjis.net                          # Creator of this domain is formerly odyssey346, same reason that he still not clean UTM-ish out of donation link!
 privacytools.io
 quadtr.ee
 r.nf
@@ -200,7 +200,7 @@ silkky.cloud
 sneed.network
 stilic.ml
 tedd.it
-tokhmi.xyz
+tokhmi.xyz                             # Creator of this domain is formerly alefvanoon, and still host with CrapFlare CDN!
 trevorthalacker.com
 twei.space
 twitr.gq
