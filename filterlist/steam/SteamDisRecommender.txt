@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202309211239
+! Version: 202309241601
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/steam
@@ -11,6 +11,10 @@
 ! [Shared Both]
 ! - Remove a button to install its client (near to text link that clickable for login and/or change language)
 steamcommunity.com,steampowered.com#?#.header_installsteam_btn
+!
+! - Disable show wallet balance text! (You can access when click to your profile name drop-down)
+steamcommunity.com,steampowered.com#?##header_wallet_ctn #header_wallet_balance
+
 
 ! [Store Zone]
 ! - Remove annual "Awards" nominatim inside game details.
@@ -267,9 +271,6 @@ steamcommunity.com,steampowered.com#?#*:style(transition: none !important)
 !
 ! - Re-paint "Give award" icon to be grayscale instead of `yellow`
 steamcommunity.com,steampowered.com#?#img.reward_btn_icon:style(filter: grayscale(100%) !important)
-!
-! - Make wallet balance text transparent instead of absolutlely show them!
-steamcommunity.com,steampowered.com#?##header_wallet_ctn #header_wallet_balance:style(color: transparent !important)
 !
 ! - In the community home, hide all shortcuts that show game lists that based on your playtime.
 steamcommunity.com#?#.community_home_app_shortcuts:style(visibility:hidden !important)
