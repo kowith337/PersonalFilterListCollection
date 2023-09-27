@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202309241601
+! Version: 202309271754
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/steam
@@ -14,7 +14,10 @@ steamcommunity.com,steampowered.com#?#.header_installsteam_btn
 !
 ! - Disable show wallet balance text! (You can access when click to your profile name drop-down)
 steamcommunity.com,steampowered.com#?##header_wallet_ctn #header_wallet_balance
-
+!
+! - Remove heads up toast that zuckest to open on mobile app!
+steamcommunity.com,steampowered.com#?#.open_in_steam_container
+steamcommunity.com,steampowered.com#?#.open_in_steam_container:remove()
 
 ! [Store Zone]
 ! - Remove annual "Awards" nominatim inside game details.
@@ -71,7 +74,7 @@ steampowered.com#?#.search_labs_banner
 !   already put in your cart and ready to checkout at a later time!
 steampowered.com#?#.cart_rightcol
 !
-! - If the game that you're viewing currently participate to sale evnt (not seasonal and annual), remove those sale event banner!
+! - If the game that you're viewing currently participate to sale event (not seasonal and annual), remove those sale event banner!
 steampowered.com#?#.game_title_area .saleEventBannerLink
 !
 ! - Now you've already logged in, what then?
@@ -365,7 +368,7 @@ steampowered.com#?#.search_result_row.ds_flagged.ds_excluded_by_preferences .res
 !   for certain actions (e.g. when you've added to whsilist or start following its game) in case if the old impressions cookie
 !   were removed and also repeatedly prevented to create another one!
 ! - If you possible to subscribe "Anti-impression DLC" list, I'll consider recommend to use it!
-!   * Proof: https://nitter.net/i/status/1424267260403740675
+!   * I'm sorry because I've removed my DeadBird account, so my proof is no longer to access anymore...
 steamcommunity.com,steampowered.com##+js(cookie-remover, _gid)
 steamcommunity.com,steampowered.com##+js(cookie-remover, app_impressions)
 steamcommunity.com,steampowered.com##+js(cookie-remover, browserid)
@@ -398,7 +401,8 @@ steampowered.com##+js(addEventListener-defuser, $J, GetNavCookie)
 !     browsing as proper desktop site, while use your touchscreen control only for mouse click (tap) and page scrolling (flick).
 !   - In some case if you want to use touch mode, just resize browser window width lower than 2:5 ratio is enough!
 steamcommunity.com,steampowered.com##+js(addEventListener-defuser, touchstart)
-!
+
+! If only specific support...
 !#if cap_html_filtering
 ! Taking an advantage of Firefox (and any forks of) to remove inline scripts
 steamcommunity.com##^script:has-text(RecordAppImpression)
@@ -410,7 +414,7 @@ steamcommunity.com##^script:has-text(RecordAppImpression)
 ! etc. plus those EXEs are ruined my precious notebook performance too much like a potato chips, even I just run only the main
 ! steam client!
 ! I give no thanks for new UI that eat performance just for showing friends who customised their profile with (MP4/WebM)
-! backgrounds in mini card, animated avatar and frames and such, also FUCK THOSE EXPERIMENTAL LABS THAT MOSTLY DO TRACKING US FOR
+! backgrounds in mini card, animated avatar, frames and such, also FUCK THOSE EXPERIMENTAL LABS THAT MOSTLY DO TRACKING US FOR
 ! JUST OFFER PRECIOUS TARGETED AND IMPACT ZUCKESTIONS, AND WE CANNOT OPT OUT FROM THEM FOR SURE!!
 ! Now I've giving up to use their new UI and always launch steam client without activating any browsers modules from it!!!
 ! Anything that I need to do while playing games will ended to browsers (and sometime to rarely mobile app) only, include
