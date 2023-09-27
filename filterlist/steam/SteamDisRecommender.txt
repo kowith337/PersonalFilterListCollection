@@ -1,6 +1,6 @@
 [uBlock Origin 1.32.0]
 ! Title: Steam Dis-Recommender Filters - Base
-! Version: 202309271754
+! Version: 202309271758
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection/tree/master/filterlist/steam
@@ -17,7 +17,6 @@ steamcommunity.com,steampowered.com#?##header_wallet_ctn #header_wallet_balance
 !
 ! - Remove heads up toast that zuckest to open on mobile app!
 steamcommunity.com,steampowered.com#?#.open_in_steam_container
-steamcommunity.com,steampowered.com#?#.open_in_steam_container:remove()
 
 ! [Store Zone]
 ! - Remove annual "Awards" nominatim inside game details.
@@ -136,7 +135,7 @@ steampowered.com#?#.queue_ctn .queue_controls_description
 !
 ! - Remove points shop header that show animated things, this make browser lagging too much, lagging by viewing animated items
 !   in lists is enough!
-steampowered.com#?##points_shop_root .Panel div[class^="styles_PageHomeTop"]:remove()
+steampowered.com#?##points_shop_root .Panel div[class^="styles_PageHomeTop"]
 
 ! [Faded community zone]
 ! WHAT COULD GO WRONG!?
@@ -247,7 +246,11 @@ steamcommunity.com#?#.persona_name #NamePopup:remove()
 steamcommunity.com#?#.persona_name .namehistory_link:remove()
 steamcommunity.com#?#.replay_showcase:remove()
 steamcommunity.com#?#div[class^="gameslistitems"] [class^="gameslistitems_Playtime"] span:not(div[class^="gameslistitems_AchievementsProgress"] span):remove()
+steamcommunity.com,steampowered.com#?##header_wallet_ctn #header_wallet_balance
+steamcommunity.com,steampowered.com#?#.header_installsteam_btn
+steamcommunity.com,steampowered.com#?#.open_in_steam_container:remove()
 steampowered.com#?##live_streams_carousel:remove()
+steampowered.com#?##points_shop_root .Panel div[class^="styles_PageHomeTop"]:remove()
 steampowered.com#?##promo_header_banner[class*="promotionDetailsBar"]:remove()
 steampowered.com#?#.cart_rightcol:remove()
 steampowered.com#?#.contenthub_dailydeal_container:remove()
@@ -263,6 +266,7 @@ steampowered.com#?#.home_ctn.marketingmessage_area:remove()
 steampowered.com#?#.newmodal_background:remove()
 steampowered.com#?#.newux_optin_banner:remove()
 steampowered.com#?#.recommendation_reasons .similar_recent_apps_container a:remove()
+
 !
 ! - Special use just for curator/publisher page to ensure that micro trailers will permanently invisible while hover on the game
 !   in carousel reels!
