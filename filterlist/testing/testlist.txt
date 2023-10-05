@@ -1,6 +1,6 @@
 [uBlock Origin 1.48.0]
 ! Title: kowith337's Test List
-! Version: 202309271759
+! Version: 202310052113
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -215,12 +215,14 @@ google.*#?#+js(set-constant, s_LFn, noopFunc)
 ! - Prevent Telegram auto open its protocol to redirect into apps while viewing profile and/or group with browser.
 t.me##+js(no-setTimeout-if, protoUrl)
 !
-! - Sanitize external links without precautions and/or hidden tracked parameters
+! - Sanitize links without pre-redirect, cautions and/or hidden tracked parameters.
 !   * Please note that some certain sites are legitimately use to warn users before visiting external sites, only "Steam" is
 !     legitimately used for good, while others aren't because they also added extra parameters for track users!
 !   ** Beware that you will directly visit external sites without any warning, consider to open in private mode first or send
 !      suspicious link into another browsers for isolate your browsing behavior!!
+d.facebook.com,mbasic.facebook.com#?#+js(href-sanitizer, a[href*="/video_redirect/"], ?src)
 facebook.com#?#+js(href-sanitizer, a[href*="/privacy/xcs/action/logging"], ?redirect_uri)
+facebook.com#?#+js(href-sanitizer, a[href*="/qp/action/redirect"], ?qp_action_url)
 facebook.com,messenger.com#?#+js(href-sanitizer, a[href*="/l.php?"], ?u)
 google.*#?#+js(href-sanitizer, a[href*="/url?"], ?u)
 instagram.com,threads.net#?#+js(href-sanitizer, a[href*="l.instagram.com"], ?u)
