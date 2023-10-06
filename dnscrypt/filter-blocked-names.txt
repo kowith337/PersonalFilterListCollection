@@ -1,6 +1,6 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client
-# Version: 202309211241
+# Version: 202310061020
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -197,6 +197,7 @@ searx.org
 searx.run
 shimul.me
 silkky.cloud
+silly.computer
 sneed.network
 stilic.ml
 tedd.it

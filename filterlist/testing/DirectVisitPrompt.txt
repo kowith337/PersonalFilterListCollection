@@ -1,6 +1,6 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202306052317
+! Version: 202310061023
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -36,12 +36,16 @@
 ! [TikTok > ProxiTok] https://github.com/pablouser1/ProxiTok/wiki/Public-instances
 ||tiktok.com$document,important,domain=~are_you_sure_to_view_it_directly
 
-! [Twitter > Nitter]
+! [Twitch > SafeTwitch] https://codeberg.org/dragongoose/safetwitch
+||twitch.tv$document,important,domain=~are_you_sure_to_view_it_directly
+
+! [Twitter (X) > Nitter]
 ||twitter.com$document,important,domain=~tweetdeck.twitter.com|~are_you_sure_to_view_it_directly
+||x.com$document,important,domain=~are_you_sure_to_view_it_directly
 
 ! [Wikipedia > Wikiless]
 ! Please note that somehow redirecting to `Wikiless` will not fully compatible, sometime you will get redirected to home page
-! instead of actual Wiki contents...
+! instead of actual Wiki contents if `lang` parameter with two letters of country isn't specified.
 ||wikipedia.org$document,important,domain=~are_you_sure_to_view_it_directly
 
 ! [YouTube > Invidious] / [YouTube Music > HyperPipe]
@@ -123,6 +127,7 @@
 ||oversold.host$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||palash.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||piped.video$document,important,domain=~are_you_sure_to_view_on_this_instance
+||pistasjis.net$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||privacytools.io$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||quadtr.ee$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||r.nf$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -135,6 +140,7 @@
 ||searx.run$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||shimul.me$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||silkky.cloud$document,important,domain=~are_you_sure_to_view_on_this_instance
+||silly.computer$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||sneed.network$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||stilic.ml$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||tedd.it$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -143,6 +149,7 @@
 ||twei.space$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||twitr.gq$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||ungovernable.men$document,important,domain=~are_you_sure_to_view_on_this_instance
+||vern.cc$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||waffle.wiki$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||walkx.fyi$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||walkx.org$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -160,9 +167,9 @@
 ! Google Search: We knew that they've added shady parameters, such as `ei`, `ved`, `usg`, etc. to keep track all sessions,
 !                but completely blocking isn't good at all for many users, however, you might try tweak browser settings to
 !                search on another sites instead, my priority of search engine is...
-!                - `LibreX` and `SearX`: I go to SearX Neocities first for randomise, even though some instance are often show
-!                                        no results becaus of blocked by relay, e.g. `Google` mostly block by reCaptcha antibot!
+!                - `SearX` and `LibreX` or `LibreY`: I go to SearX Neocities first for randomise, even though some instance are
+!                  often show no results becaus of blocked by mainstream, e.g. `Google` mostly block crawlers with reCaptcha!
 !                - `DuckDuckGo`: Because of `improving` tracking, so I should step down to later choice...
 !                - `Google` should be the last as possible!
-! Note: Currently, I don't trust and use `Brave` until they've allow users who turn off `ServiceWorker` use its site properly!!
+! IMPORTANT: I NEVER TRUST AND USE `Brave`, PERIOD!!
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
