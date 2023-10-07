@@ -1,16 +1,14 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202310061023
+! Version: 202310071727
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
-! Description: This list is good to use if you're using alternative instance viewer frequently instead of directly visiting to
-!              mainstream services and/or use browser extensions for redirect to privacy-friendly instances, maybe you're too
-!              paranoid and not trusting to view on main websites because of ads, tracking, profiling, fingerprinting, etc...
-!              Like ASTLW, the `document` rule blocking will be halt the connections until you press temporary/permanent allow,
+! Description: This list is good to use if you're using alternative instance viewer frequently instead of directly visiting to mainstream services and/or use browser extensions for redirect to privacy-friendly instances, maybe you're too paranoid and not trusting to view on main websites because of ads, tracking, profiling, fingerprinting, etc.
+!              Like ASTLW, the `document` rule blocking will be halt the connections until you press temporary/permanent allow.
 !              I create this because `LibRedirect` isn't officially upload their extension on `Chrome Store` yet due to upcoming
 !              (FUCK)ManifestV3 changes, but I've found that even I've sideload extensions and later it was unloaded itself after
-!              another session, then cause the redirection failed unfortunately!
+!              another session, then cause the redirection failed unfortunately, so this is an another fallback line of defense!
 !              All document blocking rules will based on...
 !              - Privacy Redirect (Multi-browsers extension, deprecated): https://github.com/SimonBrazell/privacy-redirect
 !              - LibRedirect (Firefox Extension, continuation of above): https://github.com/libredirect/libredirect
@@ -28,12 +26,14 @@
 
 ! [Reddit > Teddit]
 ! Note: My opinion prefer instead of `LibReddit` because of lightweight and less eye-candy, e.g. colorise, material design, etc.
+!       Current issue is most instances may face `too many requests` error, you can try switching to another until you can reach
+!       instances that still survived, I recommend Farside to randomly jump around another instances pool.
 ||reddit.com$document,important,domain=~are_you_sure_to_view_it_directly
 
 ! [Quora > Quetre] https://github.com/zyachel/quetre
 ||quora.com$document,important,domain=~are_you_sure_to_view_it_directly
 
-! [TikTok > ProxiTok] https://github.com/pablouser1/ProxiTok/wiki/Public-instances
+! [TikTok > ProxiTok] https://github.com/pablouser1/ProxiTok
 ||tiktok.com$document,important,domain=~are_you_sure_to_view_it_directly
 
 ! [Twitch > SafeTwitch] https://codeberg.org/dragongoose/safetwitch
@@ -49,8 +49,8 @@
 ||wikipedia.org$document,important,domain=~are_you_sure_to_view_it_directly
 
 ! [YouTube > Invidious] / [YouTube Music > HyperPipe]
-! Note: `Piped` is absolutely NOT RECOMMENDED! Most of Piped hosts are on `CrapFlare` and rely to multiple CDN servers to
-!       caching contents on multi-CF servers before serving back to end users!
+! Note: `Piped` is absolutely **NOT RECOMMENDED!** Most of Piped hosts are on `CrapFlare` and rely to multiple CDN servers to
+!       caching contents on multi-CF CDN servers before serving back to end users!
 ||youtube.com$document,important,domain=~studio.youtube.com|~are_you_sure_to_view_it_directly
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Not yet implemented currently - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
@@ -58,8 +58,8 @@
 
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Unfriendly Instances Block  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Gathering from multiple sources that also give notice which servers are use `CrapFlare`, keep block them, even it was used in
-! the past...
+! Gathering from multiple sources that also give notice which servers are use `CrapFlare` and bad actions, include inserted
+! donation link that contains UTM-ish! Keep block them, even it was used in the past...
 ! - LibRedirect: It can update instances itself and have a text with red color to warn if its instance use `CrapFlare`
 ! - FarSide (Compare between `service.json` and `service-full.json`): https://github.com/benbusby/farside
 ! - Bibliogram instances (Sad cat emoji = Crapflare): https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md
@@ -82,6 +82,7 @@
 ||cachyos.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||catalyst.sx$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||crewz.me$document,important,domain=~are_you_sure_to_view_on_this_instance
+||cynic.moe$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||d420.de$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||dark.fail$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||database.red$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -93,10 +94,12 @@
 ||encrypted-data.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||epicsite.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||fascinated.cc$document,important,domain=~are_you_sure_to_view_on_this_instance
+||femboy.band$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||flux.industries$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||fprivacy.com$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||freedit.eu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||fuckthesacklers.network$document,important,domain=~are_you_sure_to_view_on_this_instance
+||fuk.world$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||garudalinux.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||ggc-project.de$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||govt.land$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -112,6 +115,7 @@
 ||libreddit.hu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||lile.cl$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||lunar.icu$document,important,domain=~are_you_sure_to_view_on_this_instance
+||makerlab.tech$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||marcopisco.com$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||marsey.cat$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||mha.fi$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -120,12 +124,16 @@
 ||nachtalb.io$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||namazso.eu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||nautolan.racing$document,important,domain=~are_you_sure_to_view_on_this_instance
+||neadond.space$document,important,domain=~are_you_sure_to_view_on_this_instance
+||nerdyfam.tech$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||nitter.hu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||notabird.site$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||odyssey346.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||oelrichsgarcia.de$document,important,domain=~are_you_sure_to_view_on_this_instance
+||onion.tube$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||oversold.host$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||palash.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
+||perennialte.ch$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||piped.video$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||pistasjis.net$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||privacytools.io$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -149,6 +157,7 @@
 ||twei.space$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||twitr.gq$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||ungovernable.men$document,important,domain=~are_you_sure_to_view_on_this_instance
+||uni-sonia.com$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||vern.cc$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||waffle.wiki$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||walkx.fyi$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -157,8 +166,10 @@
 ||whatever.social$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||whateveritworks.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||winscloud.net$document,important,domain=~are_you_sure_to_view_on_this_instance
+||x86-64-unknown-linux-gnu.zip$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||xanny.family$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||yonalee.eu$document,important,domain=~are_you_sure_to_view_on_this_instance
+||xbdm.fun
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Not implemented, and maybe no plan... - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Reuters: I don't support this since this inter news often defame my country too much!

@@ -1,6 +1,6 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client (Uncommented for pDNSF compatibility)
-# Version: 202310061020
+# Version: 202310071727
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -127,6 +127,7 @@ billbert.co
 cachyos.org
 catalyst.sx
 crewz.me
+cynic.moe
 d420.de
 dark.fail
 database.red
@@ -138,10 +139,12 @@ efy.piped.pages.dev
 encrypted-data.xyz
 epicsite.xyz
 fascinated.cc
+femboy.band
 flux.industries
 fprivacy.com
 freedit.eu
 fuckthesacklers.network
+fuk.world
 garudalinux.org
 ggc-project.de
 govt.land
@@ -157,6 +160,7 @@ libreddit.eu.org
 libreddit.hu
 lile.cl
 lunar.icu
+makerlab.tech
 marcopisco.com
 marsey.cat
 mha.fi
@@ -165,12 +169,16 @@ moomoo.me
 nachtalb.io
 namazso.eu
 nautolan.racing
+neadond.space
+nerdyfam.tech
 nitter.hu
 notabird.site
 odyssey346.dev
 oelrichsgarcia.de
+onion.tube
 oversold.host
 palash.dev
+perennialte.ch
 piped.video
 pistasjis.net
 privacytools.io
@@ -194,6 +202,7 @@ trevorthalacker.com
 twei.space
 twitr.gq
 ungovernable.men
+uni-sonia.com
 vern.cc
 waffle.wiki
 walkx.fyi
@@ -202,7 +211,9 @@ wef.lol
 whatever.social
 whateveritworks.org
 winscloud.net
+x86-64-unknown-linux-gnu.zip
 xanny.family
+xbdm.fun
 yonalee.eu
 
 # [Cutoff for staging with your previous custom config] - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #

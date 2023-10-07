@@ -1,13 +1,11 @@
 # [dnscrypt-proxy 2.1.1]
 # Title: Blocked rules for DNSCrypt Proxy client (Invizible Edition)
-# Version: 202310061020
+# Version: 202310071727
 # Author: kowith337
 # Expires: 2 days
 # Homepage: https://github.com/kowith337/PersonalFilterListCollection
 # Issues: https://github.com/kowith337/PersonalFilterListCollection/labels/Domain%20Lists%20and%20Wildcard
-# Description: Another duplicated version of DNSCrypt blocklist designed for importing into Invizible App because import function
-#              isn't fully import everything, include commented with user choice, so this version will uncomment all rules and
-#              then let users decide which rules can re-disable to reduce false positive or leave it as is for aggressive filter.
+# Description: Another duplicated version of DNSCrypt blocklist designed for importing into Invizible App because import function isn't fully import everything, include commented with user choice, so this version will uncomment all rules and then let users decide which rules can re-disable to reduce false positive or leave it as is for aggressive filter.
 
 # Generic Blocklists
 *-pa.googleapis.com
@@ -130,6 +128,7 @@ billbert.co
 cachyos.org
 catalyst.sx
 crewz.me
+cynic.moe
 d420.de
 dark.fail
 database.red
@@ -141,10 +140,12 @@ efy.piped.pages.dev
 encrypted-data.xyz
 epicsite.xyz
 fascinated.cc
+femboy.band
 flux.industries
 fprivacy.com
 freedit.eu
 fuckthesacklers.network
+fuk.world
 garudalinux.org
 ggc-project.de
 govt.land
@@ -160,6 +161,7 @@ libreddit.eu.org
 libreddit.hu
 lile.cl
 lunar.icu
+makerlab.tech
 marcopisco.com
 marsey.cat
 mha.fi
@@ -168,12 +170,16 @@ moomoo.me
 nachtalb.io
 namazso.eu
 nautolan.racing
+neadond.space
+nerdyfam.tech
 nitter.hu
 notabird.site
 odyssey346.dev
 oelrichsgarcia.de
+onion.tube
 oversold.host
 palash.dev
+perennialte.ch
 piped.video
 pistasjis.net
 privacytools.io
@@ -197,6 +203,7 @@ trevorthalacker.com
 twei.space
 twitr.gq
 ungovernable.men
+uni-sonia.com
 vern.cc
 waffle.wiki
 walkx.fyi
@@ -205,5 +212,7 @@ wef.lol
 whatever.social
 whateveritworks.org
 winscloud.net
+x86-64-unknown-linux-gnu.zip
 xanny.family
+xbdm.fun
 yonalee.eu
