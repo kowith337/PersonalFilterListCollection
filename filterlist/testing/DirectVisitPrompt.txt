@@ -1,6 +1,6 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202310071727
+! Version: 202310071729
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -169,7 +169,7 @@
 ||x86-64-unknown-linux-gnu.zip$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||xanny.family$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||yonalee.eu$document,important,domain=~are_you_sure_to_view_on_this_instance
-||xbdm.fun
+||xbdm.fun$document,important,domain=~are_you_sure_to_view_on_this_instance
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Not implemented, and maybe no plan... - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Reuters: I don't support this since this inter news often defame my country too much!
