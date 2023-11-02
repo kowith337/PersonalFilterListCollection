@@ -1,6 +1,6 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202310071729
+! Version: 202311021239
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -40,7 +40,7 @@
 ||twitch.tv$document,important,domain=~are_you_sure_to_view_it_directly
 
 ! [Twitter (X) > Nitter]
-||twitter.com$document,important,domain=~tweetdeck.twitter.com|~are_you_sure_to_view_it_directly
+||twitter.com$document,important,domain=~are_you_sure_to_view_it_directly
 ||x.com$document,important,domain=~are_you_sure_to_view_it_directly
 
 ! [Wikipedia > Wikiless]
@@ -48,26 +48,32 @@
 ! instead of actual Wiki contents if `lang` parameter with two letters of country isn't specified.
 ||wikipedia.org$document,important,domain=~are_you_sure_to_view_it_directly
 
-! [YouTube > Invidious] / [YouTube Music > HyperPipe]
+! [YouTube > Invidious] | [YouTube Music > HyperPipe]
 ! Note: `Piped` is absolutely **NOT RECOMMENDED!** Most of Piped hosts are on `CrapFlare` and rely to multiple CDN servers to
 !       caching contents on multi-CF CDN servers before serving back to end users!
 ||youtube.com$document,important,domain=~studio.youtube.com|~are_you_sure_to_view_it_directly
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Not yet implemented currently - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! However, I will enable if they have at least one instance that truly privacy-friendly!
-
+!
+! [Pixiv > vixiP] or pixivFE
+! Info: 076/owacon instance was shut down, lately know ActivityPub SNS from this server are mostly blocked by others, don't know
+!       what's happen, though.
+!||pixiv.net$document,important,domain=~are_you_sure_to_view_it_directly
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Unfriendly Instances Block  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Gathering from multiple sources that also give notice which servers are use `CrapFlare` and bad actions, include inserted
 ! donation link that contains UTM-ish! Keep block them, even it was used in the past...
 ! - LibRedirect: It can update instances itself and have a text with red color to warn if its instance use `CrapFlare`
 ! - FarSide (Compare between `service.json` and `service-full.json`): https://github.com/benbusby/farside
+! - UntrackMe App - Latency lists: https://www.f-droid.org/en/packages/app.fedilab.nitterizeme
+! - 4get: https://4get.ca/about#instances
 ! - Bibliogram instances (Sad cat emoji = Crapflare): https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Instances.md
 ! - Invidious instances document: https://docs.invidious.io/instances
 ! - LibReddit instances: https://github.com/spikecodes/libreddit#instances
 ! - Nitter instances: https://github.com/zedeus/nitter/wiki/Instances
+! - SafeTwitch: https://codeberg.org/dragongoose/safetwitch#instances
 ! - Teddit instances (Doesn't report who is using it!): https://codeberg.org/teddit/teddit#instances
-! - UntrackMe App - Latency lists: https://www.f-droid.org/en/packages/app.fedilab.nitterizeme
 ! - Whoogle: https://github.com/benbusby/whoogle-search#public-instances
 ||604kph.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||actionsack.com$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -91,6 +97,7 @@
 ||dr460nf1r3.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||drivet.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||efy.piped.pages.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
+||einfachzocken.eu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||encrypted-data.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||epicsite.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||fascinated.cc$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -109,11 +116,13 @@
 ||jamiethalacker.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||kavin.rocks$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||kozmik.studio$document,important,domain=~are_you_sure_to_view_on_this_instance
+||laserdisc.tokyo$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||leptons.xyz$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||libb.pw$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||libreddit.eu.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||libreddit.hu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||lile.cl$document,important,domain=~are_you_sure_to_view_on_this_instance
+||lingva.ml$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||lunar.icu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||makerlab.tech$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||marcopisco.com$document,important,domain=~are_you_sure_to_view_on_this_instance
@@ -168,8 +177,8 @@
 ||winscloud.net$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||x86-64-unknown-linux-gnu.zip$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||xanny.family$document,important,domain=~are_you_sure_to_view_on_this_instance
-||yonalee.eu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||xbdm.fun$document,important,domain=~are_you_sure_to_view_on_this_instance
+||yonalee.eu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Not implemented, and maybe no plan... - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Reuters: I don't support this since this inter news often defame my country too much!
