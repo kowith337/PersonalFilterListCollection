@@ -1,6 +1,6 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202311021239
+! Version: 202311111842
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -62,8 +62,8 @@
 !||pixiv.net$document,important,domain=~are_you_sure_to_view_it_directly
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Unfriendly Instances Block  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Gathering from multiple sources that also give notice which servers are use `CrapFlare` and bad actions, include inserted
-! donation link that contains UTM-ish! Keep block them, even it was used in the past...
+! Gathering from multiple sources that also give notice which servers are use `CrapFlare` and bad actions, include block visitors
+! who use Tor, insert donation link that contains UTM-ish! I will keep block them, even it was used in the past...
 ! - LibRedirect: It can update instances itself and have a text with red color to warn if its instance use `CrapFlare`
 ! - FarSide (Compare between `service.json` and `service-full.json`): https://github.com/benbusby/farside
 ! - UntrackMe App - Latency lists: https://www.f-droid.org/en/packages/app.fedilab.nitterizeme
@@ -145,6 +145,7 @@
 ||perennialte.ch$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||piped.video$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||pistasjis.net$document,important,domain=~are_you_sure_to_view_on_this_instance
+||poast.org$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||privacytools.io$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||quadtr.ee$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||r.nf$document,important,domain=~are_you_sure_to_view_on_this_instance
