@@ -1,6 +1,6 @@
 [uBlock Origin 1.45.0]
 ! Title: Miscellaneous Annoyance
-! Version: 202306181230
+! Version: 202501141942
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -297,6 +297,13 @@ google.*#?#.g:has(.exp-outline) div[jscontroller] h4:upward(4):remove()
 !   * Please note that I cannot handle scroll-down prevention...
 google.*#?##cnt.big div[class] span[jsslot] #cnsw:upward(4):remove()
 
+! [GreasyFork/SleazyFork]
+! - Those sites above seems completely run by ads now, due to heavily integrate with Goolag Ads+Tag and also EthicalAds, so I'll
+!   remove certain [data-] tag from script installation links because it seems not trusted to allowing them know your IP address
+!   and unique ping ID, I'm sure it will not only use for count up how many users installed scripts, but other parties will
+!   probably observe installation data, too!
+greasyfork.org,sleazyfork.org#?#.install-link:remove-attr(/^data\-(ip|ping)/)
+
 ! [Pantip]
 ! - Remove app promo pane inside drop-down menu
 pantip.com#?##pantipOthers #inOtherMenu .flexbox img[alt="Pantip Application"]:upward(2)
@@ -544,6 +551,9 @@ $removeparam=atb,domain=duckduckgo.com,important
 ||addons.mozilla.org/*/addon/*/developers$document,domain=~Precaution_Mozilla-AMO-addons-contribute-redirect
 
 ! Scriplets - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+greasyfork.org,sleazyfork.org#?#+js(acs, function, gtag)
+greasyfork.org,sleazyfork.org#?#+js(acs, switchToEaFallback)
+greasyfork.org,sleazyfork.org#?#+js(aeld, onerror, gtag)
 minecraftforge.net##+js(acs, _comscore)
 minecraftforge.net##+js(acs, window.factorem)
 randomnessthing.com##+js(aopr, Criteo)
