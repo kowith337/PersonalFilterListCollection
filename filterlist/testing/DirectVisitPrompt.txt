@@ -1,6 +1,6 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202311111842
+! Version: 202505282154
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -137,15 +137,15 @@
 ||nerdyfam.tech$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||nitter.hu$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||notabird.site$document,important,domain=~are_you_sure_to_view_on_this_instance
-||odyssey346.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
+||odyssey346.dev$document,important,domain=~are_you_sure_to_view_on_this_instance|~donation_link_contains_goolag_utm_tracking_parameters
 ||oelrichsgarcia.de$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||onion.tube$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||oversold.host$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||palash.dev$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||perennialte.ch$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||piped.video$document,important,domain=~are_you_sure_to_view_on_this_instance
-||pistasjis.net$document,important,domain=~are_you_sure_to_view_on_this_instance
-||poast.org$document,important,domain=~are_you_sure_to_view_on_this_instance
+||pistasjis.net$document,important,domain=~are_you_sure_to_view_on_this_instance|~donation_link_contains_goolag_utm_tracking_parameters
+||poast.org$document,important,domain=~are_you_sure_to_view_on_this_instance|~this_instance_block_tor_users
 ||privacytools.io$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||quadtr.ee$document,important,domain=~are_you_sure_to_view_on_this_instance
 ||r.nf$document,important,domain=~are_you_sure_to_view_on_this_instance
