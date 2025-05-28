@@ -1,6 +1,6 @@
 [uBlock Origin 1.42.4]
 ! Title: Direct Visit Prompt List (aka. Are you sure to view it directly?)
-! Version: 202505282154
+! Version: 202505282205
 ! Expires: 2 days
 ! Author: kowith337
 ! Homepage: https://github.com/kowith337/PersonalFilterListCollection
@@ -24,10 +24,10 @@
 ! [Medium > Scribe]
 ||medium.com$document,important,domain=~are_you_sure_to_view_it_directly
 
-! [Reddit > Teddit]
-! Note: My opinion prefer instead of `LibReddit` because of lightweight and less eye-candy, e.g. colorise, material design, etc.
-!       Current issue is most instances may face `too many requests` error, you can try switching to another until you can reach
-!       instances that still survived, I recommend Farside to randomly jump around another instances pool.
+! [Pixiv > pixivFE] https://codeberg.org/VnPower/pixivfe
+||pixiv.net$document,important,domain=~are_you_sure_to_view_it_directly
+
+! [Reddit > LibReddit or RedLib]
 ||reddit.com$document,important,domain=~are_you_sure_to_view_it_directly
 
 ! [Quora > Quetre] https://github.com/zyachel/quetre
@@ -53,13 +53,17 @@
 !       caching contents on multi-CF CDN servers before serving back to end users!
 ||youtube.com$document,important,domain=~studio.youtube.com|~are_you_sure_to_view_it_directly
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
-! Not yet implemented currently - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! Not yet implemented currently, please read reason and details - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
+! [Instagram > Proxigram]
+! You know that dealing with Zuck corp. (aka. META) is really pain, I'll recommend to stop using them entirely is best opinion!
+! [Tiktok > Proxitok]
+! Most of large scale want to suck unique data, not proxied or repetitive, also not every zoned regions are use same server, e.g.
+! CN and US have their own servers in their country, Europe and Asia possibly different both servers, apps and their marketing,
+! Also my country (TH) have the "Shop" things and seems like Proxitok won't focus other things than clips, for me? I didn't use
+! it at all, also!
+!
 ! However, I will enable if they have at least one instance that truly privacy-friendly!
 !
-! [Pixiv > vixiP] or pixivFE
-! Info: 076/owacon instance was shut down, lately know ActivityPub SNS from this server are mostly blocked by others, don't know
-!       what's happen, though.
-!||pixiv.net$document,important,domain=~are_you_sure_to_view_it_directly
 ! - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Unfriendly Instances Block  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - !
 ! Gathering from multiple sources that also give notice which servers are use `CrapFlare` and bad actions, include block visitors
